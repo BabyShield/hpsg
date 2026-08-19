@@ -34,6 +34,13 @@ export const site = {
     },
   ],
   paintingBrands: [] as { name: string; url: string }[], // [TBC: names/URLs]
+  directors: "[TBC: confirmed Companies House names]",
+  openingHours: "[TBC: opening hours]",
+  formEndpoint: null as string | null, // [TBC: form endpoint]
+  geo: {
+    latitude: 51.552879,
+    longitude: -0.18806,
+  }, // [VERIFY coords for 250 Finchley Road]
 } as const;
 
 export const addressSingleLine = `${site.address.line1}, ${site.address.line2}, ${site.address.city} ${site.address.postcode}`;
