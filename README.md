@@ -1,5 +1,7 @@
 # Hampstead Property Services Group — hpsg.co.uk
 
+Launch QA: [docs/launch-qa.md](docs/launch-qa.md).
+
 Static Next.js site for Hampstead Property Services Group Limited, deployed to Cloudflare Workers with the OpenNext adapter.
 
 ## Run locally
