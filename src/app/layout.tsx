@@ -3,7 +3,9 @@ import type { Metadata } from "next";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { MobileCallBar } from "@/components/layout/MobileCallBar";
+import { JsonLd } from "@/components/seo/JsonLd";
 import { site } from "@/data/site";
+import { organizationSchema } from "@/lib/schema";
 
 import "./globals.css";
 
@@ -14,6 +16,13 @@ export const metadata: Metadata = {
     template: `%s | ${site.tradingName}`,
   },
   description: "[TBC: default meta description to be refined]",
+  alternates: { canonical: site.url },
+  openGraph: {
+    type: "website",
+    locale: "en_GB",
+    siteName: site.tradingName,
+    url: site.url,
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
@@ -26,6 +35,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         >
           Skip to content
         </a>
+        <JsonLd data={organizationSchema()} />
         <Header />
         <div id="main">{children}</div>
         <Footer />

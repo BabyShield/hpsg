@@ -1,7 +1,7 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 
 import { FeaturedProjects } from "@/components/home/FeaturedProjects";
+import { JsonLd } from "@/components/seo/JsonLd";
 import { AreaLinkGrid } from "@/components/ui/AreaLinkGrid";
 import { Container } from "@/components/ui/Container";
 import { CtaBand } from "@/components/ui/CtaBand";
@@ -10,16 +10,20 @@ import { ServiceCard } from "@/components/ui/ServiceCard";
 import { homeFaqs, whyHpsg } from "@/data/home";
 import { services } from "@/data/services";
 import { site } from "@/data/site";
+import { pageMetadata } from "@/lib/metadata";
 import { tier1Areas, tier2Areas } from "@/lib/matrix";
+import { faqSchema } from "@/lib/schema";
 
-export const metadata: Metadata = {
-  title: { absolute: site.homeMetaTitle },
+export const metadata = pageMetadata({
+  title: site.homeMetaTitle,
   description: site.homeMetaDescription,
-};
+  path: "/",
+});
 
 export default function HomePage() {
   return (
     <>
+      <JsonLd data={faqSchema(homeFaqs)} />
       <section className="border-b border-grey-200">
         <Container className="py-20 sm:py-28">
           <p className="mb-6 h-px w-12 bg-gold" aria-hidden="true" />

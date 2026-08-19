@@ -1,8 +1,11 @@
 import Link from "next/link";
 
+import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
+import { JsonLd } from "@/components/seo/JsonLd";
 import { Container } from "@/components/ui/Container";
 import { CtaBand } from "@/components/ui/CtaBand";
 import { FaqAccordion } from "@/components/ui/FaqAccordion";
+import { faqSchema } from "@/lib/schema";
 import { areaHubContent } from "@/data/area-hub-content";
 import { services } from "@/data/services";
 import type { Area } from "@/data/types";
@@ -25,10 +28,18 @@ export function AreaHub({ area }: { area: Area }) {
   const nearby = getNearbyAreas(area);
   const combos = getCombosForArea(area.slug);
 
+  const crumbs = [
+    { name: "Home", href: "/" },
+    { name: "Areas", href: "/areas/" },
+    { name: area.name, href: `/areas/${area.slug}/` },
+  ];
+
   return (
     <>
+      <JsonLd data={faqSchema(content.faqs)} />
       <article>
         <Container className="py-16 sm:py-20">
+          <Breadcrumbs items={crumbs} />
           <p className="mb-6 h-px w-12 bg-gold" aria-hidden="true" />
           <h1 className="max-w-4xl text-4xl sm:text-5xl">
             Property Services in {area.name}, {area.postcode}

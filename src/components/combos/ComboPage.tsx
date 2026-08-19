@@ -1,8 +1,11 @@
 import Link from "next/link";
 
+import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
+import { JsonLd } from "@/components/seo/JsonLd";
 import { Container } from "@/components/ui/Container";
 import { CtaBand } from "@/components/ui/CtaBand";
 import { FaqAccordion } from "@/components/ui/FaqAccordion";
+import { absoluteUrl, faqSchema, serviceSchema } from "@/lib/schema";
 import type { ComboContent } from "@/data/types";
 import type { Combo } from "@/data/types";
 import { getNearbyAreas, isCombo } from "@/lib/matrix";
@@ -32,9 +35,19 @@ export function ComboPage({
   const serviceFaqs = combo.service.faqs.slice(0, 3);
   const faqs = [...serviceFaqs, ...content.localFaqs];
 
+  const crumbs = [
+    { name: "Home", href: "/" },
+    { name: combo.service.name, href: `/${combo.service.slug}/` },
+    {
+      name: combo.area.name,
+      href: `/${combo.service.slug}/${combo.area.slug}/`,
+    },
+  ];
+
   const intro = (
     <section key="intro" className="py-16 sm:py-20">
       <Container>
+        <Breadcrumbs items={crumbs} />
         <p className="mb-6 h-px w-12 bg-gold" aria-hidden="true" />
         <h1 className="max-w-4xl text-4xl sm:text-5xl">
           {combo.service.name} in {combo.area.name}, {combo.area.postcode}
@@ -103,6 +116,14 @@ export function ComboPage({
 
   return (
     <>
+      <JsonLd
+        data={serviceSchema({
+          name: combo.service.name,
+          url: absoluteUrl(`/${combo.service.slug}/${combo.area.slug}/`),
+          areaServed: `${combo.area.name}, ${combo.area.postcode}`,
+        })}
+      />
+      <JsonLd data={faqSchema(faqs)} />
       <article>
         {order}
         <section className="py-16">

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 
+import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { Container } from "@/components/ui/Container";
 import { areas } from "@/data/areas";
 import { services } from "@/data/services";
@@ -17,6 +18,12 @@ export default function ContactPage() {
 
   return (
     <Container className="py-16 sm:py-20">
+      <Breadcrumbs
+        items={[
+          { name: "Home", href: "/" },
+          { name: "Contact", href: "/contact/" },
+        ]}
+      />
       <p className="mb-6 h-px w-12 bg-gold" aria-hidden="true" />
       <h1 className="text-4xl sm:text-5xl">Contact</h1>
       <div className="mt-10 grid gap-12 lg:grid-cols-2">

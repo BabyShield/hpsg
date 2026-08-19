@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
+import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { Container } from "@/components/ui/Container";
 import { CtaBand } from "@/components/ui/CtaBand";
 import { getProject, projects } from "@/data/projects";
@@ -38,6 +39,13 @@ export default async function ProjectPage({
   return (
     <>
       <Container className="py-16 sm:py-20">
+        <Breadcrumbs
+          items={[
+            { name: "Home", href: "/" },
+            { name: "Projects", href: "/projects/" },
+            { name: project.title, href: `/projects/${project.slug}/` },
+          ]}
+        />
         <p className="mb-6 h-px w-12 bg-gold" aria-hidden="true" />
         <p className="text-sm uppercase tracking-[0.14em] text-grey-600">
           {project.serviceLabel} in {project.areaLabel} {project.postcode}

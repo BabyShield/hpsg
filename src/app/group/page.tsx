@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
+import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { Container } from "@/components/ui/Container";
 import { CtaBand } from "@/components/ui/CtaBand";
 import { site } from "@/data/site";
@@ -15,6 +16,12 @@ export default function GroupPage() {
   return (
     <>
       <Container className="py-16 sm:py-20">
+        <Breadcrumbs
+          items={[
+            { name: "Home", href: "/" },
+            { name: "Group", href: "/group/" },
+          ]}
+        />
         <p className="mb-6 h-px w-12 bg-gold" aria-hidden="true" />
         <h1 className="text-4xl sm:text-5xl">The Hampstead Property Services Group family</h1>
         <div className="mt-10 max-w-measure space-y-5 text-base text-grey-700">

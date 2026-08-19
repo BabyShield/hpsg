@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { ServiceHub } from "@/components/services/ServiceHub";
 import { services } from "@/data/services";
 import { getService, isServiceSlug } from "@/lib/matrix";
+import { pageMetadata } from "@/lib/metadata";
 
 export const dynamic = "force-static";
 export const dynamicParams = false;
@@ -20,10 +21,11 @@ export async function generateMetadata({
   const { service: slug } = await params;
   const service = getService(slug);
   if (!service) return {};
-  return {
-    title: { absolute: service.metaTitle },
+  return pageMetadata({
+    title: service.metaTitle,
     description: service.metaDescription,
-  };
+    path: `/${service.slug}/`,
+  });
 }
 
 export default async function ServiceHubPage({

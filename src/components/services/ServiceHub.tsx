@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
+import { JsonLd } from "@/components/seo/JsonLd";
 import { AreaLinkGrid } from "@/components/ui/AreaLinkGrid";
 import { Container } from "@/components/ui/Container";
 import { CtaBand } from "@/components/ui/CtaBand";
@@ -8,6 +10,7 @@ import { serviceHubContent } from "@/data/service-hub-content";
 import { services } from "@/data/services";
 import type { Service } from "@/data/types";
 import { getCombosForService, tier2Areas } from "@/lib/matrix";
+import { absoluteUrl, faqSchema, serviceSchema } from "@/lib/schema";
 
 export function ServiceHub({ service }: { service: Service }) {
   const content = serviceHubContent[service.slug];
@@ -16,10 +19,24 @@ export function ServiceHub({ service }: { service: Service }) {
   const others = services.filter((item) => item.slug !== service.slug);
   const hrReferral = service.slug === "light-refurbishment";
 
+  const crumbs = [
+    { name: "Home", href: "/" },
+    { name: service.name, href: `/${service.slug}/` },
+  ];
+
   return (
     <>
+      <JsonLd
+        data={serviceSchema({
+          name: service.name,
+          url: absoluteUrl(`/${service.slug}/`),
+          areaServed: "North West London",
+        })}
+      />
+      <JsonLd data={faqSchema(service.faqs)} />
       <article>
         <Container className="py-16 sm:py-20">
+          <Breadcrumbs items={crumbs} />
           <p className="mb-6 h-px w-12 bg-gold" aria-hidden="true" />
           <h1 className="max-w-4xl text-4xl sm:text-5xl">
             {service.name} in North West London

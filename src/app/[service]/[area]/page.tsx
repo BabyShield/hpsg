@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { ComboPage } from "@/components/combos/ComboPage";
 import { getComboContent } from "@/data/combo-content";
 import { getCombo, getCombos } from "@/lib/matrix";
+import { pageMetadata } from "@/lib/metadata";
 
 export const dynamic = "force-static";
 export const dynamicParams = false;
@@ -35,12 +36,11 @@ export async function generateMetadata({
   const combo = getCombo(serviceSlug, areaSlug);
   const content = getComboContent(serviceSlug, areaSlug);
   if (!combo || !content) return {};
-  return {
-    title: {
-      absolute: `${combo.service.name} ${combo.area.name} ${combo.area.postcode} | HPSG`,
-    },
+  return pageMetadata({
+    title: `${combo.service.name} ${combo.area.name} ${combo.area.postcode} | HPSG`,
     description: content.metaDescription,
-  };
+    path: `/${combo.service.slug}/${combo.area.slug}/`,
+  });
 }
 
 export default async function ServiceAreaPage({

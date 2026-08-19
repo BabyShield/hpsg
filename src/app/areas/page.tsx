@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 
+import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { AreaLinkGrid } from "@/components/ui/AreaLinkGrid";
 import { Container } from "@/components/ui/Container";
 import { CtaBand } from "@/components/ui/CtaBand";
@@ -15,6 +16,12 @@ export default function AreasIndexPage() {
   return (
     <>
       <Container className="py-16 sm:py-20">
+        <Breadcrumbs
+          items={[
+            { name: "Home", href: "/" },
+            { name: "Areas", href: "/areas/" },
+          ]}
+        />
         <p className="mb-6 h-px w-12 bg-gold" aria-hidden="true" />
         <h1 className="text-4xl">Areas we cover</h1>
         <p className="mt-6 max-w-measure text-lg text-grey-700">
