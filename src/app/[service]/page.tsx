@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
+import { ServiceHub } from "@/components/services/ServiceHub";
 import { services } from "@/data/services";
 import { getService, isServiceSlug } from "@/lib/matrix";
 
@@ -35,9 +36,5 @@ export default async function ServiceHubPage({
   const service = getService(slug);
   if (!service) notFound();
 
-  return (
-    <main>
-      <h1>{service.name} in North West London</h1>
-    </main>
-  );
+  return <ServiceHub service={service} />;
 }
