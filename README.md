@@ -32,6 +32,30 @@ npm run deploy
 
 The zone for `hpsg.co.uk` must already sit on Cloudflare before that first custom-domain deploy, or Wrangler will error. [VERIFY against current Wrangler custom-domain docs]
 
+Exact OpenNext commands (also the npm scripts):
+
+```bash
+npx opennextjs-cloudflare build
+npx opennextjs-cloudflare preview
+npx opennextjs-cloudflare deploy
+```
+
+Custom domain: `wrangler.jsonc` attaches `hpsg.co.uk` as a Workers custom domain.
+
+Also in the Cloudflare dashboard for the zone [VERIFY current UI names]:
+
+- SSL/TLS: Full (strict); Always Use HTTPS (http → https)
+- Redirect Rule: `www.hpsg.co.uk` → `https://hpsg.co.uk` (301, preserve path). The Next.js config repeats this host redirect if www ever hits the worker.
+- Do not attach `www` as a second content origin if the redirect rule is in place.
+
+Preview / staging: set Worker var `HPSG_NOINDEX=true` on preview deployments only. Production `wrangler.jsonc` sets `HPSG_NOINDEX=false`. Middleware then sends `X-Robots-Tag: noindex, nofollow` on preview and never on production.
+
+Project photographs: compress to about 1600px on the long edge, AVIF/WebP-friendly JPEG, before commit. Use `ProjectImage` (`next/image`, explicit width/height, `priority` on a hero only, lazy otherwise). Alt pattern: `{service} in {area} — {detail}`.
+
+Fonts are the system Helvetica stack in `@theme`; no webfont request, so no font layout shift from a downloaded face.
+
+Client JavaScript is limited to the FAQ accordion and the mobile menu.
+
 Generate Worker env types:
 
 ```bash
