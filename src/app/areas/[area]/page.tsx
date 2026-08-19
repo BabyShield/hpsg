@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
+import { AreaHub } from "@/components/areas/AreaHub";
+import { areaHubContent } from "@/data/area-hub-content";
 import { areas } from "@/data/areas";
 import { assertAreaGraph, getArea } from "@/lib/matrix";
 
@@ -9,6 +11,12 @@ export const dynamicParams = false;
 
 export function generateStaticParams() {
   assertAreaGraph();
+  const missing = areas.filter((area) => !areaHubContent[area.slug]);
+  if (missing.length > 0) {
+    throw new Error(
+      `Missing area hub content for: ${missing.map((area) => area.slug).join(", ")}`,
+    );
+  }
   return areas.map((area) => ({ area: area.slug }));
 }
 
@@ -23,7 +31,7 @@ export async function generateMetadata({
   const title = `Property Services ${area.name} ${area.postcode} | Kitchens, Bathrooms & Decorating | HPSG`;
   return {
     title: { absolute: title },
-    description: `Property services in ${area.name}, ${area.postcode}: kitchens, bathrooms, painting and light refurbishment. 020 7101 3168.`,
+    description: `Property services in ${area.name}, ${area.postcode}: kitchens, bathrooms, painting and light refurbishment. Hampstead Property Services Group. 020 7101 3168.`,
   };
 }
 
@@ -34,13 +42,7 @@ export default async function AreaHubPage({
 }) {
   const { area: slug } = await params;
   const area = getArea(slug);
-  if (!area) notFound();
+  if (!area || !areaHubContent[slug]) notFound();
 
-  return (
-    <main>
-      <h1>
-        Property Services in {area.name}, {area.postcode}
-      </h1>
-    </main>
-  );
+  return <AreaHub area={area} />;
 }
