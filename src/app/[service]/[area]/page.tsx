@@ -1,13 +1,26 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
+import { ComboPage } from "@/components/combos/ComboPage";
+import { getComboContent } from "@/data/combo-content";
 import { getCombo, getCombos } from "@/lib/matrix";
 
 export const dynamic = "force-static";
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return getCombos().map((combo) => ({
+  const combos = getCombos();
+  const missing = combos.filter(
+    (combo) => !getComboContent(combo.service.slug, combo.area.slug),
+  );
+  if (missing.length > 0) {
+    throw new Error(
+      `Missing combo content for: ${missing
+        .map((combo) => `${combo.service.slug}/${combo.area.slug}`)
+        .join(", ")}`,
+    );
+  }
+  return combos.map((combo) => ({
     service: combo.service.slug,
     area: combo.area.slug,
   }));
@@ -20,28 +33,25 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { service: serviceSlug, area: areaSlug } = await params;
   const combo = getCombo(serviceSlug, areaSlug);
-  if (!combo) return {};
-  const title = `${combo.service.name} ${combo.area.name} ${combo.area.postcode} | HPSG`;
+  const content = getComboContent(serviceSlug, areaSlug);
+  if (!combo || !content) return {};
   return {
-    title: { absolute: title },
-    description: `${combo.service.name} in ${combo.area.name}, ${combo.area.postcode}. Hampstead Property Services Group. 020 7101 3168.`,
+    title: {
+      absolute: `${combo.service.name} ${combo.area.name} ${combo.area.postcode} | HPSG`,
+    },
+    description: content.metaDescription,
   };
 }
 
-export default async function ComboPage({
+export default async function ServiceAreaPage({
   params,
 }: {
   params: Promise<{ service: string; area: string }>;
 }) {
   const { service: serviceSlug, area: areaSlug } = await params;
   const combo = getCombo(serviceSlug, areaSlug);
-  if (!combo) notFound();
+  const content = getComboContent(serviceSlug, areaSlug);
+  if (!combo || !content) notFound();
 
-  return (
-    <main>
-      <h1>
-        {combo.service.name} in {combo.area.name}, {combo.area.postcode}
-      </h1>
-    </main>
-  );
+  return <ComboPage combo={combo} content={content} />;
 }

@@ -49,3 +49,10 @@ export type Combo = {
   service: Service;
   area: Area;
 };
+
+export type ComboContent = {
+  intro: string;
+  localNote: string;
+  localFaqs: [Faq, Faq];
+  metaDescription: string;
+};
