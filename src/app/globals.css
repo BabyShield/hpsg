@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #16263f;
+  --color-gold: #b68a3e;
+  --color-bone: #f7f4ee;
+  --color-ink: #121820;
+
+  --color-grey-50: #f3f1ec;
+  --color-grey-100: #e6e2da;
+  --color-grey-200: #d0cbbf;
+  --color-grey-300: #b4afa3;
+  --color-grey-400: #8f8a80;
+  --color-grey-500: #6f6b63;
+  --color-grey-600: #54514b;
+  --color-grey-700: #3e3c38;
+  --color-grey-800: #2a2926;
+  --color-grey-900: #1a1917;
+
+  --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  --text-xs: 0.75rem;
+  --text-xs--line-height: 1.25rem;
+  --text-sm: 0.875rem;
+  --text-sm--line-height: 1.375rem;
+  --text-base: 1.0625rem;
+  --text-base--line-height: 1.75rem;
+  --text-lg: 1.1875rem;
+  --text-lg--line-height: 1.875rem;
+  --text-xl: 1.375rem;
+  --text-xl--line-height: 2rem;
+  --text-2xl: 1.625rem;
+  --text-2xl--line-height: 2.25rem;
+  --text-3xl: 2rem;
+  --text-3xl--line-height: 2.5rem;
+  --text-4xl: 2.5rem;
+  --text-4xl--line-height: 2.875rem;
+  --text-5xl: 3.125rem;
+  --text-5xl--line-height: 3.375rem;
+
+  --max-width-measure: 42rem;
+}
+
+html {
+  color-scheme: light;
+}
+
+body {
+  background-color: var(--color-bone);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: var(--text-base--line-height);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--color-navy);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+p,
+li {
+  max-width: var(--max-width-measure);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 3px;
+}
+
+::selection {
+  background-color: color-mix(in srgb, var(--color-gold) 35%, transparent);
+  color: var(--color-navy);
+}
