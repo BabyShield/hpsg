@@ -21,7 +21,7 @@ export function PageHero({
   return (
     <section className="relative min-h-[28rem] overflow-hidden text-bone md:min-h-[36rem]">
       {photo ? (
-        {/* eslint-disable-next-line @next/next/no-img-element -- full-bleed hero crop */}
+        // eslint-disable-next-line @next/next/no-img-element -- full-bleed hero crop
         <img
           src={photo.src}
           alt={photo.alt}
