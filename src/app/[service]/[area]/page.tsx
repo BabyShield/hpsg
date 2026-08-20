@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 
 import { ComboPage } from "@/components/combos/ComboPage";
 import { getComboContent } from "@/data/combo-content";
+import { servicePhotos } from "@/data/photos";
 import { getCombo, getCombos } from "@/lib/matrix";
 import { pageMetadata } from "@/lib/metadata";
 
@@ -36,10 +37,13 @@ export async function generateMetadata({
   const combo = getCombo(serviceSlug, areaSlug);
   const content = getComboContent(serviceSlug, areaSlug);
   if (!combo || !content) return {};
+  const photo = servicePhotos[combo.service.slug];
   return pageMetadata({
-    title: `${combo.service.name} ${combo.area.name} ${combo.area.postcode} | HPSG`,
+    title: `${combo.service.name} in ${combo.area.name} ${combo.area.postcode} | HPSG`,
     description: content.metaDescription,
     path: `/${combo.service.slug}/${combo.area.slug}/`,
+    image: photo.src,
+    imageAlt: photo.alt,
   });
 }
 

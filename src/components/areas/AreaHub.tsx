@@ -7,7 +7,7 @@ import { FaqAccordion } from "@/components/ui/FaqAccordion";
 import { PageHero } from "@/components/ui/PageHero";
 import { PhotoTile } from "@/components/ui/PhotoTile";
 import { ServiceCard } from "@/components/ui/ServiceCard";
-import { faqSchema } from "@/lib/schema";
+import { absoluteUrl, faqSchema, itemListSchema, serviceSchema } from "@/lib/schema";
 import { areaHubContent } from "@/data/area-hub-content";
 import { areaPhotos } from "@/data/photos";
 import { publicCopy } from "@/lib/public-copy";
@@ -40,19 +40,42 @@ export function AreaHub({ area }: { area: Area }) {
 
   return (
     <>
+      <JsonLd
+        data={serviceSchema({
+          name: `Property services in ${area.name}`,
+          url: absoluteUrl(`/areas/${area.slug}/`),
+          areaServed: `${area.name}, ${area.postcode}`,
+          description: `Kitchen renovation, bathroom renovation, painting and light refurbishment in ${area.name}, ${area.postcode}.`,
+          image: areaPhotos[area.slug]?.src,
+        })}
+      />
       <JsonLd data={faqSchema(content.faqs)} />
+      {area.tier === 1 ? (
+        <JsonLd
+          data={itemListSchema(
+            `Services in ${area.name}`,
+            services
+              .filter((service) => serviceHref(area, service.slug))
+              .map((service) => ({
+                name: `${service.name} in ${area.name}`,
+                url: absoluteUrl(`/${service.slug}/${area.slug}/`),
+              })),
+          )}
+        />
+      ) : null}
       <article>
         <PageHero
           photo={areaPhotos[area.slug]}
           crumbs={crumbs}
           kicker={area.postcode}
-          title={`Property services in ${area.name}`}
-          lede={`Kitchen, bathroom, painting and light refurbishment in ${area.name}.`}
+          title={`Kitchens, bathrooms and decorating in ${area.name}`}
+          lede={`Kitchen renovation, bathroom renovation, painting and light refurbishment in ${area.name}, ${area.postcode}.`}
         />
-        <Container className="py-20 sm:py-28">
-          <p className="max-w-measure text-lg leading-relaxed text-grey-700">
-            {publicCopy(content.intro)}
-          </p>
+        <Container className="grid gap-10 py-20 sm:py-28 lg:grid-cols-12">
+          <div className="space-y-5 text-base leading-relaxed text-grey-700 lg:col-span-7">
+            <p className="text-lg">{publicCopy(content.intro)}</p>
+            <p>{publicCopy(area.housingStock)}</p>
+          </div>
         </Container>
 
         <section className="border-y border-grey-200 py-20 sm:py-28">
@@ -89,10 +112,18 @@ export function AreaHub({ area }: { area: Area }) {
               })}
             </ul>
             {area.tier === 1 && combos.length > 0 ? (
-              <p className="mt-8 text-sm text-grey-600">
-                Combination pages for {area.name} are listed from each service
-                card above.
-              </p>
+              <ul className="mt-10 grid gap-2 sm:grid-cols-2">
+                {combos.map((combo) => (
+                  <li key={combo.service.slug}>
+                    <Link
+                      href={`/${combo.service.slug}/${area.slug}/`}
+                      className="text-base text-navy hover:text-gold"
+                    >
+                      {combo.service.name} in {area.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             ) : null}
           </Container>
         </section>
@@ -119,7 +150,7 @@ export function AreaHub({ area }: { area: Area }) {
                 <ul className="mt-8 flex flex-wrap gap-3 text-sm text-grey-600">
                   {area.landmarks.map((landmark) => (
                     <li key={landmark} className="border-b border-grey-200 pb-1">
-                      {landmark}
+                      {publicCopy(landmark)}
                     </li>
                   ))}
                 </ul>
@@ -163,7 +194,7 @@ export function AreaHub({ area }: { area: Area }) {
         <section className="py-20 sm:py-28">
           <Container className="grid gap-12 lg:grid-cols-12">
             <h2 className="font-display text-4xl font-medium sm:text-5xl lg:col-span-4">
-              Questions
+              Questions about {area.name}
             </h2>
             <div className="lg:col-span-8">
               <FaqAccordion items={content.faqs} />
@@ -171,7 +202,10 @@ export function AreaHub({ area }: { area: Area }) {
           </Container>
         </section>
       </article>
-      <CtaBand />
+      <CtaBand
+        title={`Request a quote for work in ${area.name}`}
+        text="Tell us the property and the rooms in scope. We visit before we write a proposal."
+      />
     </>
   );
 }

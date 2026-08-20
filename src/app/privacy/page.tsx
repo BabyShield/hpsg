@@ -1,14 +1,14 @@
-import type { Metadata } from "next";
-
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { Container } from "@/components/ui/Container";
 import { addressSingleLine, site } from "@/data/site";
+import { pageMetadata } from "@/lib/metadata";
 import { publicCopy } from "@/lib/public-copy";
 
-export const metadata: Metadata = {
-  title: "Privacy",
+export const metadata = pageMetadata({
+  title: "Privacy notice | HPSG",
   description: "Privacy notice for Hampstead Property Services Group Limited.",
-};
+  path: "/privacy/",
+});
 
 export default function PrivacyPage() {
   const purpose = publicCopy(

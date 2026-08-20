@@ -1,18 +1,18 @@
-import type { Metadata } from "next";
-
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { AreaLinkGrid } from "@/components/ui/AreaLinkGrid";
 import { Container } from "@/components/ui/Container";
 import { CtaBand } from "@/components/ui/CtaBand";
 import { PhotoTile } from "@/components/ui/PhotoTile";
 import { areaPhotos } from "@/data/photos";
+import { pageMetadata } from "@/lib/metadata";
 import { tier1Areas, tier2Areas } from "@/lib/matrix";
 
-export const metadata: Metadata = {
-  title: "Areas we cover in North West London",
+export const metadata = pageMetadata({
+  title: "Areas we cover in North West London | HPSG",
   description:
-    "Property services across North West London, from Hampstead, Belsize Park and St John's Wood to Highgate, Queen's Park and the wider list of areas. 020 7101 3168.",
-};
+    "Kitchen, bathroom, painting and light refurbishment across North West London, from Hampstead, Belsize Park and St John's Wood to Highgate, Queen's Park and the wider list. 020 7101 3168.",
+  path: "/areas/",
+});
 
 export default function AreasIndexPage() {
   const tier1 = tier1Areas();

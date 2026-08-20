@@ -1,19 +1,22 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { Container } from "@/components/ui/Container";
 import { CtaBand } from "@/components/ui/CtaBand";
 import { ServiceCard } from "@/components/ui/ServiceCard";
-import { photoCredit } from "@/data/photos";
+import { photoCredit, servicePhotos } from "@/data/photos";
 import { publishedProjects } from "@/data/projects";
 import { services } from "@/data/services";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "Projects",
+export const metadata = pageMetadata({
+  title: "Typical work | Hampstead Property Services Group",
   description:
-    "Case studies from Hampstead Property Services Group. Project write-ups are published from supplied summaries only.",
-};
+    "Typical kitchens, bathrooms and interiors from Hampstead Property Services Group. Named case studies are published from supplied summaries only.",
+  path: "/projects/",
+  image: servicePhotos["kitchen-renovation"].src,
+  imageAlt: servicePhotos["kitchen-renovation"].alt,
+});
 
 export default function ProjectsPage() {
   const live = publishedProjects();

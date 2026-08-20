@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import { ServiceHub } from "@/components/services/ServiceHub";
+import { servicePhotos } from "@/data/photos";
 import { services } from "@/data/services";
 import { getService, isServiceSlug } from "@/lib/matrix";
 import { pageMetadata } from "@/lib/metadata";
@@ -21,10 +22,13 @@ export async function generateMetadata({
   const { service: slug } = await params;
   const service = getService(slug);
   if (!service) return {};
+  const photo = servicePhotos[service.slug];
   return pageMetadata({
     title: service.metaTitle,
     description: service.metaDescription,
     path: `/${service.slug}/`,
+    image: photo.src,
+    imageAlt: photo.alt,
   });
 }
 

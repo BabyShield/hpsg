@@ -14,12 +14,14 @@ import { services } from "@/data/services";
 import { site } from "@/data/site";
 import { pageMetadata } from "@/lib/metadata";
 import { tier1Areas } from "@/lib/matrix";
-import { faqSchema } from "@/lib/schema";
+import { absoluteUrl, faqSchema, itemListSchema } from "@/lib/schema";
 
 export const metadata = pageMetadata({
   title: site.homeMetaTitle,
   description: site.homeMetaDescription,
   path: "/",
+  image: homeHero.src,
+  imageAlt: homeHero.alt,
 });
 
 const mosaicSlugs = [
@@ -47,6 +49,15 @@ export default function HomePage() {
   return (
     <>
       <JsonLd data={faqSchema(homeFaqs)} />
+      <JsonLd
+        data={itemListSchema(
+          "North West London property services",
+          services.map((service) => ({
+            name: service.name,
+            url: absoluteUrl(`/${service.slug}/`),
+          })),
+        )}
+      />
       <section className="relative min-h-[calc(100svh-4.5rem)] overflow-hidden text-bone">
         {/* eslint-disable-next-line @next/next/no-img-element -- wide hero crop is unreliable with next/image fill */}
         <img

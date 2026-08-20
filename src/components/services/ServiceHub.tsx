@@ -6,14 +6,15 @@ import { Container } from "@/components/ui/Container";
 import { CtaBand } from "@/components/ui/CtaBand";
 import { FaqAccordion } from "@/components/ui/FaqAccordion";
 import { PageHero } from "@/components/ui/PageHero";
+import { PhotoTile } from "@/components/ui/PhotoTile";
 import { ServiceCard } from "@/components/ui/ServiceCard";
-import { servicePhotos } from "@/data/photos";
+import { areaPhotos, servicePhotos } from "@/data/photos";
 import { serviceHubContent } from "@/data/service-hub-content";
 import { services } from "@/data/services";
 import type { Service } from "@/data/types";
 import { getCombosForService, tier2Areas } from "@/lib/matrix";
 import { publicCopy } from "@/lib/public-copy";
-import { absoluteUrl, faqSchema, serviceSchema } from "@/lib/schema";
+import { absoluteUrl, faqSchema, itemListSchema, serviceSchema } from "@/lib/schema";
 
 export function ServiceHub({ service }: { service: Service }) {
   const content = serviceHubContent[service.slug];
@@ -31,12 +32,23 @@ export function ServiceHub({ service }: { service: Service }) {
     <>
       <JsonLd
         data={serviceSchema({
-          name: service.name,
+          name: `${service.name} in North West London`,
           url: absoluteUrl(`/${service.slug}/`),
-          areaServed: "North West London",
+          areaServed: ["North West London", ...comboAreas.map((area) => `${area.name}, ${area.postcode}`)],
+          description: service.metaDescription,
+          image: servicePhotos[service.slug].src,
         })}
       />
       <JsonLd data={faqSchema(service.faqs)} />
+      <JsonLd
+        data={itemListSchema(
+          `${service.name} by neighbourhood`,
+          comboAreas.map((area) => ({
+            name: `${service.name} in ${area.name}`,
+            url: absoluteUrl(`/${service.slug}/${area.slug}/`),
+          })),
+        )}
+      />
       <article>
         <PageHero
           photo={servicePhotos[service.slug]}
@@ -73,6 +85,53 @@ export function ServiceHub({ service }: { service: Service }) {
             </div>
           </div>
         </Container>
+
+        {content.housing.length > 0 ? (
+          <section className="border-y border-grey-200 py-20 sm:py-28">
+            <Container>
+              <h2 className="font-display text-4xl font-medium sm:text-5xl">
+                {service.name} by housing type
+              </h2>
+              <ul className="mt-12 grid gap-12 lg:grid-cols-3">
+                {content.housing.map((section) => (
+                  <li key={section.title}>
+                    <h3 className="font-display text-2xl font-medium">{section.title}</h3>
+                    <p className="mt-4 text-base leading-relaxed text-grey-700">
+                      {publicCopy(section.text)}
+                    </p>
+                    <ul className="mt-5 flex flex-col gap-2 text-sm">
+                      {section.links.map((link) => (
+                        <li key={link.href}>
+                          <Link href={link.href} className="text-navy hover:text-gold">
+                            {link.label}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </li>
+                ))}
+              </ul>
+            </Container>
+          </section>
+        ) : null}
+
+        {content.permissions.length > 0 ? (
+          <section className="py-20 sm:py-28">
+            <Container className="grid gap-10 lg:grid-cols-12">
+              <h2 className="font-display text-4xl font-medium sm:text-5xl lg:col-span-4">
+                Consent, extract and the building
+              </h2>
+              <div className="space-y-5 text-base leading-relaxed text-grey-700 lg:col-span-8">
+                {content.permissions
+                  .map((paragraph) => publicCopy(paragraph))
+                  .filter(Boolean)
+                  .map((paragraph) => (
+                    <p key={paragraph.slice(0, 32)}>{paragraph}</p>
+                  ))}
+              </div>
+            </Container>
+          </section>
+        ) : null}
 
         <section className="border-y border-grey-200 py-20 sm:py-28">
           <Container>
@@ -124,31 +183,42 @@ export function ServiceHub({ service }: { service: Service }) {
 
         <section className="py-20 sm:py-28">
           <Container>
-            <h2 className="font-display text-4xl font-medium sm:text-5xl">Areas we cover</h2>
+            <h2 className="font-display text-4xl font-medium sm:text-5xl">
+              {service.name} in North West London neighbourhoods
+            </h2>
             <p className="mt-5 max-w-measure text-base leading-relaxed text-grey-700">
-              {content.areasIntro}
+              {publicCopy(content.areasIntro)}
             </p>
             {comboAreas.length > 0 ? (
-              <div className="mt-12">
-                <h3 className="mb-5 font-sans text-[0.68rem] font-medium uppercase tracking-[0.2em] text-grey-500">
-                  {service.name} by area
-                </h3>
-                <ul className="grid grid-cols-1 gap-x-8 gap-y-2 sm:grid-cols-2 lg:grid-cols-3">
-                  {comboAreas.map((area) => (
-                    <li key={area.slug}>
-                      <Link
-                        href={`/${service.slug}/${area.slug}/`}
-                        className="text-base text-navy hover:text-gold"
-                      >
-                        {service.name} in {area.name}
-                      </Link>
+              <ul className="mt-12 grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-5">
+                {comboAreas.map((area) => {
+                  const photo = areaPhotos[area.slug];
+                  return (
+                    <li key={area.slug} className="min-h-[10rem]">
+                      {photo ? (
+                        <PhotoTile
+                          photo={photo}
+                          href={`/${service.slug}/${area.slug}/`}
+                          title={area.name}
+                          caption={area.postcode}
+                          className="h-full min-h-[10rem]"
+                          sizes="(min-width: 1024px) 20vw, 50vw"
+                        />
+                      ) : (
+                        <Link
+                          href={`/${service.slug}/${area.slug}/`}
+                          className="text-base text-navy hover:text-gold"
+                        >
+                          {service.name} in {area.name}
+                        </Link>
+                      )}
                     </li>
-                  ))}
-                </ul>
-              </div>
+                  );
+                })}
+              </ul>
             ) : null}
             <div className="mt-12">
-              <AreaLinkGrid areas={tier2Areas()} heading="Tier 2 area hubs" />
+              <AreaLinkGrid areas={tier2Areas()} heading="Also covering" />
             </div>
           </Container>
         </section>
@@ -156,7 +226,7 @@ export function ServiceHub({ service }: { service: Service }) {
         <section className="border-y border-grey-200 py-20 sm:py-28">
           <Container className="grid gap-12 lg:grid-cols-12">
             <h2 className="font-display text-4xl font-medium sm:text-5xl lg:col-span-4">
-              Questions
+              {service.name} questions
             </h2>
             <div className="lg:col-span-8">
               <FaqAccordion items={service.faqs} />
@@ -177,7 +247,10 @@ export function ServiceHub({ service }: { service: Service }) {
           </Container>
         </section>
       </article>
-      <CtaBand />
+      <CtaBand
+        title={`Request a quote for ${service.navLabel.toLowerCase()} in North West London`}
+        text="Tell us the property and the rooms in scope. We visit before we write a proposal."
+      />
     </>
   );
 }

@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 
 import { Container } from "@/components/ui/Container";
@@ -7,13 +6,17 @@ import { CtaBand } from "@/components/ui/CtaBand";
 import { PageHero } from "@/components/ui/PageHero";
 import { officeNeighbourhood } from "@/data/photos";
 import { addressSingleLine, site } from "@/data/site";
+import { pageMetadata } from "@/lib/metadata";
 import { isDraftToken } from "@/lib/public-copy";
 
-export const metadata: Metadata = {
-  title: "About",
+export const metadata = pageMetadata({
+  title: "About Hampstead Property Services Group | HPSG",
   description:
     "Hampstead Property Services Group Limited is a North West London company for kitchen renovation, bathroom renovation, painting and light refurbishment. 020 7101 3168.",
-};
+  path: "/about/",
+  image: officeNeighbourhood.src,
+  imageAlt: officeNeighbourhood.alt,
+});
 
 export default function AboutPage() {
   return (

@@ -1,17 +1,18 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { Container } from "@/components/ui/Container";
 import { CtaBand } from "@/components/ui/CtaBand";
 import { site } from "@/data/site";
+import { pageMetadata } from "@/lib/metadata";
 import { publicCopy } from "@/lib/public-copy";
 
-export const metadata: Metadata = {
-  title: "The group",
+export const metadata = pageMetadata({
+  title: "The Hampstead Property Services Group family | HPSG",
   description:
-    "Hampstead Property Services Group Limited and the sister companies in the same family. 020 7101 3168.",
-};
+    "Hampstead Property Services Group Limited and the sister companies in the same family. Kitchen, bathroom and light refurbishment. 020 7101 3168.",
+  path: "/group/",
+});
 
 export default function GroupPage() {
   const onDemandUrl = site.sisterBrands[1]?.url;

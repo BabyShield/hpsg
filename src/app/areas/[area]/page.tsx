@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { AreaHub } from "@/components/areas/AreaHub";
 import { areaHubContent } from "@/data/area-hub-content";
 import { areas } from "@/data/areas";
+import { areaPhotos } from "@/data/photos";
 import { assertAreaGraph, getArea } from "@/lib/matrix";
 import { pageMetadata } from "@/lib/metadata";
 
@@ -29,10 +30,13 @@ export async function generateMetadata({
   const { area: slug } = await params;
   const area = getArea(slug);
   if (!area) return {};
+  const photo = areaPhotos[area.slug];
   return pageMetadata({
-    title: `Property Services ${area.name} ${area.postcode} | Kitchens, Bathrooms & Decorating | HPSG`,
-    description: `Property services in ${area.name}, ${area.postcode}: kitchens, bathrooms, painting and light refurbishment. Hampstead Property Services Group. 020 7101 3168.`,
+    title: `Kitchens, Bathrooms and Decorating in ${area.name} ${area.postcode} | HPSG`,
+    description: `Kitchen renovation, bathroom renovation, painting and light refurbishment in ${area.name}, ${area.postcode}. Hampstead Property Services Group. 020 7101 3168.`,
     path: `/areas/${area.slug}/`,
+    image: photo?.src,
+    imageAlt: photo?.alt,
   });
 }
 

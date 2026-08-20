@@ -1,8 +1,16 @@
 import type { ServiceSlug } from "./types";
 
+export type HubSection = {
+  title: string;
+  text: string;
+  links: { href: string; label: string }[];
+};
+
 export type ServiceHubContent = {
   intro: string[];
   forWhom: string[];
+  housing: HubSection[];
+  permissions: string[];
   specification: string[];
   areasIntro: string;
 };
@@ -20,13 +28,52 @@ export const serviceHubContent: Record<ServiceSlug, ServiceHubContent> = {
       "Leasehold flats usually need a licence to alter before cabinets come out. Freeholders and managing agents want drawings, a method statement and evidence of insurance. We can assemble that pack. Consent itself is granted by the building, not by us, and lead-in varies by agent [VERIFY typical timescales with the specific building].",
       "Where the kitchen shares an extract or a soil stack with flats above and below, the layout has to respect those routes. We will not promise an island, a range cooker or a relocated sink if the building cannot take them without work we do not do.",
     ],
+    housing: [
+      {
+        title: "Kitchen renovation in period conversions",
+        text:
+          "Converted Victorian and Edwardian houses are the bulk of the kitchen work in Hampstead, West Hampstead, Belsize Park and Kentish Town. Rear returns, chimney breasts and party walls decide the run. Layouts are galley or L-shape unless the existing envelope already allows more. We scribe cabinetry to walls that have moved rather than pretending the room is square.",
+        links: [
+          { href: "/kitchen-renovation/hampstead/", label: "Kitchen renovation in Hampstead" },
+          { href: "/kitchen-renovation/west-hampstead/", label: "Kitchen renovation in West Hampstead" },
+          { href: "/kitchen-renovation/belsize-park/", label: "Kitchen renovation in Belsize Park" },
+          { href: "/kitchen-renovation/kentish-town/", label: "Kitchen renovation in Kentish Town" },
+        ],
+      },
+      {
+        title: "Kitchen renovation in mansion blocks",
+        text:
+          "St John's Wood, Maida Vale and Swiss Cottage kitchens are typically compact rear rooms on original risers. Lifts often will not take a run of carcasses; the stair is the working assumption until we measure. Licence-to-alter packs are ordinary. We write the kitchen to the stacks that exist, not to a hope that the sink can move.",
+        links: [
+          { href: "/kitchen-renovation/st-johns-wood/", label: "Kitchen renovation in St John's Wood" },
+          { href: "/kitchen-renovation/maida-vale/", label: "Kitchen renovation in Maida Vale" },
+          { href: "/kitchen-renovation/swiss-cottage/", label: "Kitchen renovation in Swiss Cottage" },
+        ],
+      },
+      {
+        title: "Kitchen renovation in family houses",
+        text:
+          "Highgate, Muswell Hill, Golders Green and Hampstead Garden Suburb supply larger family rooms. Plots and rear windows are more generous than a Camden galley, but walls are still out of square and extract still has to respect the elevation. In the Suburb, Trust and Barnet rules sit on the outside of the house; the kitchen is an internal fit-out unless the envelope is involved.",
+        links: [
+          { href: "/kitchen-renovation/highgate/", label: "Kitchen renovation in Highgate" },
+          { href: "/kitchen-renovation/muswell-hill/", label: "Kitchen renovation in Muswell Hill" },
+          { href: "/kitchen-renovation/golders-green/", label: "Kitchen renovation in Golders Green" },
+          { href: "/kitchen-renovation/hampstead-garden-suburb/", label: "Kitchen renovation in Hampstead Garden Suburb" },
+        ],
+      },
+    ],
+    permissions: [
+      "Leasehold flats usually need a licence to alter before cabinets come out. We can prepare drawings and a method statement. Consent is granted by the freeholder or managing agent, not by us. [VERIFY the building's process.]",
+      "Conservation-area and listed buildings cannot always take a visible extract grille on the principal front. We plan the route at survey and will not punch a hole as a convenience. [VERIFY on listed fabric.]",
+      "Gas work is by a Gas Safe registered engineer. Electrical circuits added or altered are notified where the regulations require it. We do not form structural openings or kitchen-diners that remove a wall — that is a different class of project.",
+    ],
     specification: [
       "Cabinetry is scribed to walls that have moved. Worktops are specified in generic material categories — quartz or solid timber are typical — rather than as a branded partnership. Appliances are client-supplied or specified without exclusive manufacturer claims. Splashbacks, flooring within the kitchen envelope and decoration are part of the same sequence so the room is handed over as one.",
       "Extract is designed for the elevation you actually have. Conservation-area and listed buildings cannot always take a visible grille on the principal front; we will say so at survey [VERIFY on listed fabric]. Gas work is by a Gas Safe registered engineer. Electrical circuits added or altered are notified where the regulations require it.",
       "We do not specify structural steels, box-outs that conceal an opening we have formed, or kitchen-diner conversions that remove a wall. Those are a different class of project.",
     ],
     areasIntro:
-      "Kitchen combination pages for each Tier 1 neighbourhood sit below. Tier 2 areas are served from the area hubs and from this North West London page.",
+      "Local kitchen renovation pages for Hampstead, West Hampstead, Belsize Park, St John's Wood, Maida Vale and the wider North West London list sit below. Each page is written for that housing stock, council and conservation designation — not a renamed copy of this one.",
   },
   "bathroom-renovation": {
     intro: [
@@ -40,13 +87,51 @@ export const serviceHubContent: Record<ServiceSlug, ServiceHubContent> = {
       "Waterproofing on timber intermediate floors is not optional. We tank wet areas to a documented system. Paint-on afterthoughts over boarded floors are how the flat below gets involved.",
       "Freeholder consent applies to bathrooms as it does to kitchens where the lease requires a licence to alter — especially if wastes move or an extract is cut through a common void [VERIFY the lease and the building's process]. We will identify that at proposal stage.",
     ],
+    housing: [
+      {
+        title: "Bathroom renovation in conversions",
+        text:
+          "Timber intermediate floors, stacked half-landing bathrooms and long drainage runs are the ordinary conversion problem in Hampstead, West Hampstead, Belsize Park and Kentish Town. Waterproofing is a system, not a paint-on afterthought. A room that cannot reach a stack is not forced into an ensuite.",
+        links: [
+          { href: "/bathroom-renovation/hampstead/", label: "Bathroom renovation in Hampstead" },
+          { href: "/bathroom-renovation/west-hampstead/", label: "Bathroom renovation in West Hampstead" },
+          { href: "/bathroom-renovation/belsize-park/", label: "Bathroom renovation in Belsize Park" },
+          { href: "/bathroom-renovation/kentish-town/", label: "Bathroom renovation in Kentish Town" },
+        ],
+      },
+      {
+        title: "Bathroom renovation in mansion blocks",
+        text:
+          "St John's Wood, Maida Vale and Swiss Cottage bathrooms sit on original risers, often over a neighbour. Lifts are small; a bath crate is a stair problem. Licence to alter is ordinary where wastes or extract move. We isolate, test, and do not cut into another demise without the building's process.",
+        links: [
+          { href: "/bathroom-renovation/st-johns-wood/", label: "Bathroom renovation in St John's Wood" },
+          { href: "/bathroom-renovation/maida-vale/", label: "Bathroom renovation in Maida Vale" },
+          { href: "/bathroom-renovation/swiss-cottage/", label: "Bathroom renovation in Swiss Cottage" },
+        ],
+      },
+      {
+        title: "Bathroom renovation in family houses",
+        text:
+          "Highgate, Muswell Hill, Golders Green and Hampstead Garden Suburb take family bathrooms and occasional ensuites in existing rooms. Extract on a conservation or Trust elevation is checked before we open up. Internal bathrooms without a window need mechanical extract with a clear route to outside.",
+        links: [
+          { href: "/bathroom-renovation/highgate/", label: "Bathroom renovation in Highgate" },
+          { href: "/bathroom-renovation/primrose-hill/", label: "Bathroom renovation in Primrose Hill" },
+          { href: "/bathroom-renovation/hampstead-garden-suburb/", label: "Bathroom renovation in Hampstead Garden Suburb" },
+        ],
+      },
+    ],
+    permissions: [
+      "Freeholder consent applies where the lease requires a licence to alter — especially if wastes move or an extract is cut through a common void. [VERIFY the lease and the building's process.]",
+      "Mechanical extract is designed for the elevation you have. We will not punch an insensitive grille through a conservation front if another route exists. [VERIFY duct route on survey.]",
+      "Wet areas are waterproofed to a documented system, particularly on timber floors. Drainage stays on existing stacks wherever the building allows. Pumps are a last resort and are written into the proposal if they are the only way the layout works.",
+    ],
     specification: [
       "Sanitaryware and brassware are specified as products, not as partnerships. Concealed cisterns, thermostatic showers and tiled wet rooms are ordinary items; they still need a substrate that can take them. Underfloor heating, where used, is treated as an electrical and floor-build-up problem, not as a brochure extra.",
       "Mechanical extract is designed for internal rooms. We will not leave a bathroom dependent on a window that does not exist, and we will not punch an insensitive grille through a conservation elevation if another route exists [VERIFY duct route on survey].",
       "Drainage alterations stay within the existing stacks wherever the building allows. Pumps are a last resort and are written into the proposal if they are the only way the layout works. We do not form new external soil pipes on principal elevations as a convenience.",
     ],
     areasIntro:
-      "Bathroom combination pages for each Tier 1 neighbourhood sit below. Tier 2 coverage is via the area hubs and this North West London page.",
+      "Local bathroom renovation pages for Hampstead, St John's Wood, Maida Vale, Primrose Hill and the wider North West London list sit below. Each is written for that building type and council, not a renamed copy of this page.",
   },
   "painting-decorating": {
     intro: [
@@ -60,13 +145,50 @@ export const serviceHubContent: Record<ServiceSlug, ServiceHubContent> = {
       "Occupied-home working is planned room by room so a kitchen, a bathroom and a bedroom remain usable. In mansion blocks we also follow the building's hours. We will not run spray equipment in a furnished flat as a default method.",
       "Failed plaster, rising damp and timber decay are not decorating items. We isolate the cause and, where it sits inside a light refurbishment, include the repair rather than paint over it.",
     ],
+    housing: [
+      {
+        title: "Painting and decorating in period interiors",
+        text:
+          "Hampstead, Belsize Park and Primrose Hill interiors are lime plaster, original sashes and rooms that telegraph a thin fill. Colour is sampled on the wall in the light the room has. Sashes, shutters and picture rails are programmed as joinery, not as a cut-in.",
+        links: [
+          { href: "/painting-decorating/hampstead/", label: "Painting and decorating in Hampstead" },
+          { href: "/painting-decorating/belsize-park/", label: "Painting and decorating in Belsize Park" },
+          { href: "/painting-decorating/primrose-hill/", label: "Painting and decorating in Primrose Hill" },
+        ],
+      },
+      {
+        title: "Painting occupied conversions and mansion flats",
+        text:
+          "West Hampstead, Kentish Town, St John's Wood and Maida Vale are often occupied. We sequence rooms so a kitchen, a bathroom and a bedroom remain usable. Mansion common parts are a separate scope from the demise. Spray is not the default in a furnished flat.",
+        links: [
+          { href: "/painting-decorating/west-hampstead/", label: "Painting and decorating in West Hampstead" },
+          { href: "/painting-decorating/st-johns-wood/", label: "Painting and decorating in St John's Wood" },
+          { href: "/painting-decorating/maida-vale/", label: "Painting and decorating in Maida Vale" },
+        ],
+      },
+      {
+        title: "Painting in conservation areas and the Suburb",
+        text:
+          "External colour on a conservation-area or listed elevation is checked before it is quoted. In Hampstead Garden Suburb, internal decoration that does not change the elevation is ordinary work; a new outside colour is not. Highgate Village listing is checked on the address.",
+        links: [
+          { href: "/painting-decorating/hampstead-garden-suburb/", label: "Painting and decorating in Hampstead Garden Suburb" },
+          { href: "/painting-decorating/highgate/", label: "Painting and decorating in Highgate" },
+          { href: "/painting-decorating/swiss-cottage/", label: "Painting and decorating in Swiss Cottage" },
+        ],
+      },
+    ],
+    permissions: [
+      "Interior decoration within existing rooms is ordinary work. Listed and conservation constraints bite when coatings, windows or external joinery change. [VERIFY listing on the address.]",
+      "Failed plaster, rising damp and timber decay are not decorating items. We isolate the cause rather than paint over it.",
+      "Occupied-home working is planned room by room. In mansion blocks we also follow the building's hours.",
+    ],
     specification: [
       "Prep standard, product type, number of coats and sheen are written down. That is what we snag against, in daylight and with the lights on. Heritage colours are taken from established generic ranges; we do not claim an exclusive palette or manufacturer relationship.",
       "Sash windows in conservation areas often need more than a coat of paint. If cords, staff beads or putty have failed, we say so before we start [VERIFY listed-window constraints on the specific property]. Exterior work is programmed around weather, not around a calendar promise.",
       "Making-good after kitchens, bathrooms and flooring is part of a light-refurbishment programme. Decorating is then the last trade, not the first.",
     ],
     areasIntro:
-      "Where this site has a painting combination page for a neighbourhood, it is listed below. Where a group painting microsite already exists for an area, the area hub will link out to that specialist company instead. [TBC: painting microsite list].",
+      "Local painting and decorating pages for Hampstead, West Hampstead, Belsize Park, the Suburb and the wider North West London list sit below. Where a group painting microsite already exists for an area, the area hub will link out instead of duplicating that page.",
   },
   "light-refurbishment": {
     intro: [
@@ -80,12 +202,49 @@ export const serviceHubContent: Record<ServiceSlug, ServiceHubContent> = {
       "Moving out is often faster and cleaner for a whole-flat programme. A single kitchen or bathroom can usually be done around you. We will give an honest view after survey. Working hours are [TBC: confirm standard hours], and mansion blocks add their own rules.",
       "Unknowns in this housing stock — hidden damp, failed subfloors, redundant wiring — are listed as provisional items, not buried in a lump sum. When we open a wall and find something, we stop and write a variation before continuing.",
     ],
+    housing: [
+      {
+        title: "Light refurbishment of conversion flats",
+        text:
+          "West Hampstead, Kentish Town, Belsize Park and Kilburn conversions are the usual whole-flat brief: rear-return kitchen, half-landing bathroom, decoration and floors, with common-parts protection. One programme, wet trades first, paint last.",
+        links: [
+          { href: "/light-refurbishment/west-hampstead/", label: "Light refurbishment in West Hampstead" },
+          { href: "/light-refurbishment/kentish-town/", label: "Light refurbishment in Kentish Town" },
+          { href: "/light-refurbishment/belsize-park/", label: "Light refurbishment in Belsize Park" },
+        ],
+      },
+      {
+        title: "Light refurbishment of mansion-block apartments",
+        text:
+          "St John's Wood, Maida Vale and Swiss Cottage apartments stay as the plan is. The kitchen and bathroom are replaced, floors and decoration brought to one standard, and the building's hours and licence-to-alter process are followed. We do not alter the carcass.",
+        links: [
+          { href: "/light-refurbishment/st-johns-wood/", label: "Light refurbishment in St John's Wood" },
+          { href: "/light-refurbishment/maida-vale/", label: "Light refurbishment in Maida Vale" },
+          { href: "/light-refurbishment/swiss-cottage/", label: "Light refurbishment in Swiss Cottage" },
+        ],
+      },
+      {
+        title: "Light refurbishment of family houses",
+        text:
+          "Hampstead, Highgate, Muswell Hill and Hampstead Garden Suburb houses take a storey or a whole interior to one standard. Listed fabric and Trust rules are checked where the envelope is involved. Structural openings, lofts and extensions are not this service.",
+        links: [
+          { href: "/light-refurbishment/hampstead/", label: "Light refurbishment in Hampstead" },
+          { href: "/light-refurbishment/highgate/", label: "Light refurbishment in Highgate" },
+          { href: "/light-refurbishment/hampstead-garden-suburb/", label: "Light refurbishment in Hampstead Garden Suburb" },
+        ],
+      },
+    ],
+    permissions: [
+      "Light refurbishment does not include structural openings, loft conversions, extensions or basement works. For those, a single introduction to Hampstead Renovations.",
+      "Building-control and freeholder notices for the non-structural work that needs them are started in the lead-in. We do not strip rooms and then discover a licence was required.",
+      "Unknowns — hidden damp, failed subfloors, redundant wiring — are listed as provisional items. When we open a wall and find something, we stop and write a variation.",
+    ],
     specification: [
       "Decoration, flooring and joinery are specified as systems: prep standard, product type, board finish, ironmongery. Kitchens and bathrooms follow the specifications on those service pages. Rewiring or replumbing is of the rooms in scope, coordinated with the existing installation, not a speculative whole-house strip unless that is the written brief.",
       "Building-control and freeholder notices for the non-structural work that needs them are started in the lead-in. We do not strip rooms and then discover a licence was required.",
       "Explicitly excluded: structural openings, loft conversions, extensions, basement works, and design-and-build of a new envelope. For those, a single introduction to Hampstead Renovations.",
     ],
     areasIntro:
-      "Light-refurbishment combination pages for each Tier 1 neighbourhood sit below. Tier 2 areas are covered from the area hubs and from this page.",
+      "Local light-refurbishment pages for Hampstead, West Hampstead, St John's Wood and the wider North West London list sit below. Each page is the housing stock of that neighbourhood, not a renamed copy of this one.",
   },
 };

@@ -1,5 +1,3 @@
-import type { Metadata } from "next";
-
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { Container } from "@/components/ui/Container";
 import { ContentImage } from "@/components/ui/ContentImage";
@@ -7,12 +5,16 @@ import { areas } from "@/data/areas";
 import { officeNeighbourhood } from "@/data/photos";
 import { services } from "@/data/services";
 import { addressSingleLine, site } from "@/data/site";
+import { pageMetadata } from "@/lib/metadata";
 import { isDraftToken } from "@/lib/public-copy";
 
-export const metadata: Metadata = {
-  title: "Contact",
+export const metadata = pageMetadata({
+  title: "Contact Hampstead Property Services Group | HPSG",
   description: `Contact Hampstead Property Services Group. ${site.phoneDisplay}, ${site.email}, ${addressSingleLine}.`,
-};
+  path: "/contact/",
+  image: officeNeighbourhood.src,
+  imageAlt: officeNeighbourhood.alt,
+});
 
 const mapSrc = `https://www.openstreetmap.org/export/embed.html?bbox=${site.geo.longitude - 0.01}%2C${site.geo.latitude - 0.006}%2C${site.geo.longitude + 0.01}%2C${site.geo.latitude + 0.006}&layer=mapnik&marker=${site.geo.latitude}%2C${site.geo.longitude}`;
 

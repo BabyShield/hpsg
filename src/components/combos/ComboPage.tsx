@@ -6,6 +6,7 @@ import { ContentImage } from "@/components/ui/ContentImage";
 import { CtaBand } from "@/components/ui/CtaBand";
 import { FaqAccordion } from "@/components/ui/FaqAccordion";
 import { PageHero } from "@/components/ui/PageHero";
+import { PhotoTile } from "@/components/ui/PhotoTile";
 import { areaPhotos, servicePhotos } from "@/data/photos";
 import { services } from "@/data/services";
 import type { Combo, ComboContent } from "@/data/types";
@@ -54,9 +55,11 @@ export function ComboPage({
     <>
       <JsonLd
         data={serviceSchema({
-          name: combo.service.name,
+          name: `${combo.service.name} in ${combo.area.name}`,
           url: absoluteUrl(`/${combo.service.slug}/${combo.area.slug}/`),
-          areaServed: `${combo.area.name}, ${combo.area.postcode}`,
+          areaServed: [`${combo.area.name}, ${combo.area.postcode}`, "North West London"],
+          description: content.metaDescription,
+          image: servicePhotos[combo.service.slug].src,
         })}
       />
       <JsonLd data={faqSchema(faqs)} />
@@ -227,23 +230,39 @@ export function ComboPage({
               </ul>
             </div>
             <div>
-              <h2 className="font-display text-3xl font-medium">Nearby neighbourhoods</h2>
-              <ul className="mt-6 flex flex-col gap-3 text-base text-navy">
-                <li>
-                  <Link href={`/${combo.service.slug}/`} className="hover:text-gold">
-                    {combo.service.name} in North West London
-                  </Link>
-                </li>
-                {siblings.map((area) => (
-                  <li key={area.slug}>
-                    <Link
-                      href={`/${combo.service.slug}/${area.slug}/`}
-                      className="hover:text-gold"
-                    >
-                      {combo.service.name} in {area.name}
-                    </Link>
-                  </li>
-                ))}
+              <h2 className="font-display text-3xl font-medium">
+                {combo.service.name} nearby
+              </h2>
+              <p className="mt-4">
+                <Link href={`/${combo.service.slug}/`} className="text-navy hover:text-gold">
+                  {combo.service.name} in North West London
+                </Link>
+              </p>
+              <ul className="mt-6 grid grid-cols-2 gap-3">
+                {siblings.map((area) => {
+                  const photo = areaPhotos[area.slug];
+                  return (
+                    <li key={area.slug} className="min-h-[8rem]">
+                      {photo ? (
+                        <PhotoTile
+                          photo={photo}
+                          href={`/${combo.service.slug}/${area.slug}/`}
+                          title={area.name}
+                          caption={area.postcode}
+                          className="h-full min-h-[8rem]"
+                          sizes="(min-width: 1024px) 20vw, 50vw"
+                        />
+                      ) : (
+                        <Link
+                          href={`/${combo.service.slug}/${area.slug}/`}
+                          className="text-navy hover:text-gold"
+                        >
+                          {combo.service.name} in {area.name}
+                        </Link>
+                      )}
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           </Container>

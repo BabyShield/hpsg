@@ -81,9 +81,9 @@ export const services: Service[] = [
         a: "Gas work is carried out by a Gas Safe registered engineer. Building-control notification is arranged where the work falls within the current regulations — for example new electrical circuits or a change to drainage. We will identify that at proposal stage rather than after strip-out.",
       },
     ],
-    metaTitle: "Kitchen Renovation North West London | HPSG",
+    metaTitle: "Kitchen Renovation in North West London | HPSG",
     metaDescription:
-      "Kitchen renovation in North West London period flats, mansion blocks and family houses. Survey-led fit-out from Hampstead. 020 7101 3168.",
+      "Kitchen renovation in North West London: period conversions, mansion flats and family houses. Survey-led fit-out from Hampstead. 020 7101 3168.",
   },
   {
     slug: "bathroom-renovation",
@@ -165,9 +165,9 @@ export const services: Service[] = [
         a: "British and European sanitaryware is often available within ordinary merchant lead times; some brassware and tiles are longer. We programme strip-out after the critical items are dated, so the room is not left open waiting for a tap.",
       },
     ],
-    metaTitle: "Bathroom Renovation North West London | HPSG",
+    metaTitle: "Bathroom Renovation in North West London | HPSG",
     metaDescription:
-      "Bathroom renovation in North West London conversions and mansion blocks, with tanking, ventilation and compact layouts. Hampstead. 020 7101 3168.",
+      "Bathroom renovation in North West London conversions and mansion blocks: tanking, ventilation and compact layouts. From Hampstead. 020 7101 3168.",
   },
   {
     slug: "painting-decorating",
@@ -249,9 +249,9 @@ export const services: Service[] = [
         a: "Yes. Prep standard, number of coats, product type and sheen are written down. That is what we snag against.",
       },
     ],
-    metaTitle: "Painting & Decorating North West London | HPSG",
+    metaTitle: "Painting and Decorating in North West London | HPSG",
     metaDescription:
-      "Painting and decorating in North West London homes: preparation, heritage interiors, occupied-house working. Based in Hampstead. 020 7101 3168.",
+      "Painting and decorating in North West London: preparation, original joinery, occupied houses and conversions. Based in Hampstead. 020 7101 3168.",
   },
   {
     slug: "light-refurbishment",
@@ -333,9 +333,9 @@ export const services: Service[] = [
         a: "No. That work is carried out by our sister company, Hampstead Renovations (hampsteadrenovations.co.uk). We will introduce you rather than take a project we do not deliver.",
       },
     ],
-    metaTitle: "Light Refurbishment North West London | HPSG",
+    metaTitle: "Light Refurbishment in North West London | HPSG",
     metaDescription:
-      "Light refurbishment in North West London: decoration, flooring, kitchens and bathrooms, without structural work. Hampstead. 020 7101 3168.",
+      "Light refurbishment in North West London: kitchens, bathrooms, decoration and floors as one programme, without structural work. 020 7101 3168.",
   },
 ];
 

@@ -6,7 +6,7 @@ import { Header } from "@/components/layout/Header";
 import { MobileCallBar } from "@/components/layout/MobileCallBar";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { site } from "@/data/site";
-import { organizationSchema } from "@/lib/schema";
+import { organizationSchema, websiteSchema } from "@/lib/schema";
 
 import "./globals.css";
 
@@ -32,7 +32,6 @@ export const metadata: Metadata = {
     template: `%s | ${site.tradingName}`,
   },
   description: site.homeMetaDescription,
-  alternates: { canonical: site.url },
   openGraph: {
     type: "website",
     locale: "en_GB",
@@ -52,6 +51,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           Skip to content
         </a>
         <JsonLd data={organizationSchema()} />
+        <JsonLd data={websiteSchema()} />
         <Header />
         <div id="main">{children}</div>
         <Footer />
