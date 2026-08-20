@@ -50,7 +50,7 @@ export const areas: Area[] = [
     housingStock:
       "Belsize is defined by mid- and late-Victorian stucco and brick houses, many now laterally converted, together with mansion flats on the larger roads such as Belsize Avenue and Haverstock Hill. Ceiling heights are generous; kitchens and bathrooms have often been inserted into former bedrooms or service rooms. The Village streets are finer-grain; the avenues are broader and more likely to include purpose-built blocks.",
     conservationNotes:
-      "Belsize Park Conservation Area covers a large part of the neighbourhood. Stucco repair, window design and roofscape are common consent issues. [VERIFY CA boundary and listed status with Camden.]",
+      "Belsize Conservation Area (Camden) covers a large part of the neighbourhood, on the rising land between Chalk Farm / Haverstock Hill and South Hampstead. Stucco repair, window design and roofscape are common consent issues. Article 4 directions apply to parts of the area. [VERIFY CA boundary, Article 4 and listed status with Camden.]",
     localNotes:
       "Haverstock Hill is a busy corridor; side streets are CPZ [VERIFY which authority controls a given frontage]. Typical work: ensuites in conversions, kitchen layouts around chimney breasts, and decoration of high-ceilinged rooms that show every prep shortcut.",
     landmarks: [
@@ -69,7 +69,7 @@ export const areas: Area[] = [
     housingStock:
       "St John's Wood mixes detached and semi-detached villas on tree-lined streets with large late-Victorian and Edwardian mansion blocks, particularly toward Wellington Road and Prince Albert Road. Flats in those blocks have original service risers, compact kitchens and bathrooms stacked through the building, and common parts that managing agents protect closely. The villas and mews supply family houses with later interior alterations.",
     conservationNotes:
-      "The St John's Wood Conservation Area covers much of NW8's residential core. Westminster controls fenestration, front boundaries and roof alterations tightly. Many mansion blocks also sit behind freeholder design guides that are stricter than planning. [VERIFY CA and listed status; confirm any estate scheme of management.]",
+      "Westminster designated the St John's Wood Conservation Area in 1968; it covers much of NW8's residential core. Camden holds a smaller adjoining St John's Wood Conservation Area on its side of the borough boundary. Westminster controls fenestration, front boundaries and roof alterations tightly. Many mansion blocks also sit behind freeholder design guides that are stricter than planning. [VERIFY CA and listed status; confirm any estate scheme of management.]",
     localNotes:
       "Westminster scaffolding and skip licences, plus mansion-block working-hours clauses, drive the programme. Typical work is kitchen and bathroom replacement in mansion flats, licence-to-alter packs, and decoration of principal rooms. Lord's match days affect access on surrounding streets [VERIFY event restrictions with the building].",
     landmarks: [
@@ -108,7 +108,7 @@ export const areas: Area[] = [
     housingStock:
       "Swiss Cottage sits between Belsize and South Hampstead: mansion blocks and inter-war flats along Finchley Road and Avenue Road, with Victorian houses on the side streets toward Belsize and Frognal. Finchley Road itself is mixed-use; the better residential stock is a street back, where conversions and purpose-built blocks sit side by side. Ceiling heights and window sizes vary sharply between the Victorian houses and the later blocks.",
     conservationNotes:
-      "Adjoining conservation areas (Belsize, Swiss Cottage, South Hampstead) cover many of the residential streets [VERIFY which CA applies to the address]. Finchley Road frontages are less likely to be in a CA but may still need consent for extract on mixed-use buildings.",
+      "Camden renamed the Swiss Cottage Conservation Area to the South Hampstead Conservation Area; it still covers many of the residential streets off Finchley Road and Avenue Road. Belsize Conservation Area adjoins to the east. Finchley Road mixed-use frontages are less likely to be in a conservation area but extract on those buildings can still need consent. [VERIFY which CA applies to the address.]",
     localNotes:
       "Finchley Road is a major corridor; scaffolding and loading on the main road are a different process from the side streets [VERIFY the highway authority]. Typical work is mansion-block kitchens and bathrooms, decoration of conversions, and coordination with managing agents in the larger Avenue Road blocks. The HPSG office at 250 Finchley Road is in this neighbourhood.",
     landmarks: [
@@ -128,7 +128,7 @@ export const areas: Area[] = [
     housingStock:
       "Primrose Hill is Victorian terraces and larger houses facing the park, with later mansion blocks toward Regent's Park Road. Many houses remain single-family; others are split into garden and upper-floor flats with kitchens in rear closets or lower-ground rooms. Stock brick, stucco dressings and original sashes are characteristic. The streets are quieter than Camden Town to the east.",
     conservationNotes:
-      "Primrose Hill Conservation Area covers the core streets and the setting of the park. Rooflines, front gardens and windows are sensitive. Properties backing onto the park may have additional visibility from public open space [VERIFY].",
+      "Primrose Hill Conservation Area covers the core streets and the setting of the park. Camden has had an Article 4 direction here since 3 March 1983. Rooflines, front gardens and windows are sensitive. Properties backing onto the park may have additional visibility from public open space [VERIFY].",
     localNotes:
       "Narrow streets and weekend visitors around the park affect van access. Camden CPZ. Typical work: family-house decoration, kitchen replacements in lower-ground rooms (damp and extract to be solved properly), and bathrooms in split houses where drainage runs are long.",
     landmarks: [
@@ -148,7 +148,7 @@ export const areas: Area[] = [
     housingStock:
       "Highgate Village is Georgian and Victorian houses around Pond Square and Highgate High Street, with larger Victorian villas on the slopes toward the Heath and Archway. Later streets add Edwardian terraces and some inter-war houses. Converted houses and purpose-built mansion flats both appear; the Village itself is finer-grain and more listed. Woods and steep plots affect access and external works more than in the inner NW postcodes.",
     conservationNotes:
-      "Highgate Conservation Area is split across boroughs (Camden and Haringey, abutting Islington and Barnet CAs). Each council's appraisal and any Article 4 direction must be read for the actual address. [VERIFY which authority and which CA name apply.]",
+      "Highgate Conservation Area was designated on 21 December 1967 and is split between Camden and Haringey (Haringey later extended its side, including toward Archway). Islington and Barnet conservation areas abut the edges. Holly Lodge Estate is a separate designation. Each council's appraisal, and any Article 4, must be read for the actual address. [VERIFY which authority and which CA name apply.]",
     localNotes:
       "Steep roads, limited turning, and Village pedestrian traffic constrain vans and skips. Typical work: decoration of original interiors, kitchen replacements in villas and conversions, and bathrooms where stacks are a long way from the proposed ensuite. Tree constraints on Heath-facing plots are common [VERIFY TPO and CA tree notice with the correct borough].",
     landmarks: [
@@ -213,7 +213,7 @@ export const areas: Area[] = [
     housingStock:
       "Muswell Hill is Edwardian shopping parades on the Broadway with substantial Edwardian and late-Victorian houses on the slopes — many still family houses, others converted. Red brick, timber sash windows and generous halls are typical. Flats above the Broadway and later infill blocks add a smaller mansion-flat stock. Plots and rear gardens are larger than in inner Camden.",
     conservationNotes:
-      "Muswell Hill Conservation Area covers the Broadway and many of the surrounding residential streets. Shopfronts and residential fenestration are both sensitive. [VERIFY Haringey CA boundary and any Article 4.]",
+      "Muswell Hill Conservation Area was designated by Haringey on 1 March 1974 and covers the Broadway and many of the surrounding residential streets. Fortis Green Conservation Area (also 1 March 1974) sits on the north-west side. Shopfronts and residential fenestration are both sensitive. [VERIFY Haringey CA boundary and any Article 4.]",
     localNotes:
       "The hill affects material handling; some streets are steep and poorly suited to long-wheelbase vans. Haringey CPZ on many roads [VERIFY]. Typical work: family-house kitchens and bathrooms, whole-house decoration, and conversion flats above and behind the Broadway.",
     landmarks: [
@@ -232,7 +232,7 @@ export const areas: Area[] = [
     housingStock:
       "Crouch End is Victorian and Edwardian terraces and larger houses around the Broadway, with a strong conversion-flat market in the bigger properties. The clock tower marks the centre; residential streets climb toward Highgate and fall toward Hornsey. Original mouldings, tiled halls and rear additions (already built) are common. Purpose-built blocks are the exception, not the rule.",
     conservationNotes:
-      "Crouch End Conservation Area covers the Broadway and a ring of residential streets. [VERIFY Haringey CA map.] Unlisted terraces outside the CA still need ordinary planning for some window replacements.",
+      "Crouch End Conservation Area was designated by Haringey on 25 October 1974 and covers the Broadway and a ring of residential streets. [VERIFY Haringey CA map.] Unlisted terraces outside the CA still need ordinary planning for some window replacements.",
     localNotes:
       "The Broadway is busy; residential side streets are the practical loading points. Typical work: light refurbishment of converted houses, kitchen replacements in rear rooms, and occupied decorating. Parking is a mix of CPZ and less restricted streets [VERIFY street by street].",
     landmarks: [
@@ -290,7 +290,7 @@ export const areas: Area[] = [
     housingStock:
       "The Suburb is Arts and Crafts and later houses planned by Unwin and Lutyens: cottages, larger free-standing houses, and grouped compositions around greens and closes. Interiors vary from modest cottage rooms to substantial family houses. Kitchens and bathrooms have almost all been altered since the original build; the external appearance has not, which is the point of the Trust. Purpose-built mansion blocks are not the local type.",
     conservationNotes:
-      "Hampstead Garden Suburb Conservation Area (designated 1967) plus an Article 4 direction, plus the Hampstead Garden Suburb Trust's Scheme of Management under its own Act of Parliament. Most external works need Barnet planning permission and separate written Trust consent. The Trust boundary and the CA boundary are not identical. [VERIFY both maps and whether Trust consent is required for the specific property.]",
+      "Hampstead Garden Suburb Conservation Area was designated in 1967. An Article 4 direction has been in force since the 1970s. The Hampstead Garden Suburb Trust also runs a Scheme of Management under its own Act of Parliament. Most external works need Barnet planning permission and separate written Trust consent. The Trust boundary and the conservation-area boundary are not identical. [VERIFY both maps and whether Trust consent is required for the specific property.]",
     localNotes:
       "Do not assume permitted development. Even painting of previously painted surfaces, hedges and hardstandings can sit with the Trust [VERIFY the current Trust guidelines for the item of work]. Typical HPSG work is internal: kitchens, bathrooms, decoration and flooring that do not change the street elevation. Material deliveries on closes and greens need extra care.",
     landmarks: [

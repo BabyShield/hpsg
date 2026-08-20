@@ -51,8 +51,16 @@ export type Combo = {
 };
 
 export type ComboContent = {
-  intro: string;
-  localNote: string;
-  localFaqs: [Faq, Faq];
+  /** Short hero line. */
+  lede: string;
+  /** Opening paragraphs under the hero. */
+  intro: string[];
+  /** Typical room, plan and fabric for this service in this area. */
+  rooms: string;
+  /** Council, conservation, access and tenure as they affect this job. */
+  working: string[];
+  /** How the specification is written here — not a generic brochure. */
+  specification: string[];
+  localFaqs: Faq[];
   metaDescription: string;
 };

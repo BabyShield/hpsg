@@ -7,23 +7,17 @@ import { CtaBand } from "@/components/ui/CtaBand";
 import { FaqAccordion } from "@/components/ui/FaqAccordion";
 import { PageHero } from "@/components/ui/PageHero";
 import { areaPhotos, servicePhotos } from "@/data/photos";
-import { absoluteUrl, faqSchema, serviceSchema } from "@/lib/schema";
-import type { ComboContent } from "@/data/types";
-import type { Combo } from "@/data/types";
+import { services } from "@/data/services";
+import type { Combo, ComboContent } from "@/data/types";
 import { getNearbyAreas, isCombo } from "@/lib/matrix";
 import { publicCopy } from "@/lib/public-copy";
-
-function variantIndex(areaSlug: string): 0 | 1 | 2 {
-  const sum = [...areaSlug].reduce((acc, char) => acc + char.charCodeAt(0), 0);
-  return (sum % 3) as 0 | 1 | 2;
-}
+import { absoluteUrl, faqSchema, serviceSchema } from "@/lib/schema";
 
 function siblingCombos(combo: Combo) {
-  const nearby = getNearbyAreas(combo.area)
+  return getNearbyAreas(combo.area)
     .filter((area) => area.tier === 1)
     .filter((area) => isCombo(combo.service.slug, area.slug))
-    .slice(0, 3);
-  return nearby;
+    .slice(0, 4);
 }
 
 export function ComboPage({
@@ -33,10 +27,13 @@ export function ComboPage({
   combo: Combo;
   content: ComboContent;
 }) {
-  const variant = variantIndex(combo.area.slug);
   const siblings = siblingCombos(combo);
-  const serviceFaqs = combo.service.faqs.slice(0, 3);
-  const faqs = [...serviceFaqs, ...content.localFaqs];
+  const otherServices = services.filter((item) => item.slug !== combo.service.slug);
+  const faqs = [
+    ...content.localFaqs,
+    ...combo.service.faqs.slice(0, 3),
+  ].map((item) => ({ q: publicCopy(item.q), a: publicCopy(item.a) }))
+    .filter((item) => item.q && item.a);
 
   const crumbs = [
     { name: "Home", href: "/" },
@@ -47,87 +44,11 @@ export function ComboPage({
     },
   ];
 
-  const intro = (
-    <div key="intro">
-      <PageHero
-        photo={servicePhotos[combo.service.slug]}
-        crumbs={crumbs}
-        kicker={`${combo.area.name} ${combo.area.postcode}`}
-        title={`${combo.service.name} in ${combo.area.name}`}
-        lede={publicCopy(content.intro)}
-      />
-    </div>
-  );
-
-  const included = (
-    <section key="included" className="border-y border-grey-200 py-20 sm:py-28">
-      <Container>
-        <h2 className="font-display text-4xl font-medium sm:text-5xl">What is included</h2>
-        <ul className="mt-10 max-w-3xl divide-y divide-grey-200 border-y border-grey-200">
-          {combo.service.included.map((item) => publicCopy(item)).filter(Boolean).map((item) => (
-            <li key={item} className="flex gap-5 py-4 text-base leading-relaxed text-grey-700">
-              <span className="mt-3 h-px w-6 shrink-0 bg-gold" aria-hidden="true" />
-              <span>{item}</span>
-            </li>
-          ))}
-        </ul>
-      </Container>
-    </section>
-  );
-
-  const working = (
-    <section key="working" className="py-20 sm:py-28">
-      <Container className="grid items-start gap-12 lg:grid-cols-2 lg:gap-16">
-        <div>
-          <h2 className="font-display text-4xl font-medium sm:text-5xl">
-            Working in {combo.area.name}
-          </h2>
-          <div className="mt-8 max-w-measure space-y-5 text-base leading-relaxed text-grey-700">
-            <p>
-              <span className="font-medium text-navy">Council. </span>
-              {combo.area.council}
-            </p>
-            <p>{publicCopy(combo.area.conservationNotes)}</p>
-            <p>{publicCopy(content.localNote)}</p>
-            <p>{publicCopy(combo.area.localNotes)}</p>
-          </div>
-        </div>
-        {areaPhotos[combo.area.slug] ? (
-          <ContentImage
-            photo={areaPhotos[combo.area.slug]}
-            className="aspect-[4/3] w-full"
-            sizes="(min-width: 1024px) 50vw, 100vw"
-          />
-        ) : null}
-      </Container>
-    </section>
-  );
-
-  const process = (
-    <section key="process" className="border-y border-grey-200 py-20 sm:py-28">
-      <Container>
-        <h2 className="font-display text-4xl font-medium sm:text-5xl">How we work</h2>
-        <ol className="mt-12 grid gap-x-10 gap-y-12 md:grid-cols-2">
-          {combo.service.processSteps.map((step, index) => (
-            <li key={step.title}>
-              <p className="font-display text-3xl text-gold">
-                {String(index + 1).padStart(2, "0")}
-              </p>
-              <h3 className="mt-3 font-display text-2xl font-medium">{step.title}</h3>
-              <p className="mt-3 text-base leading-relaxed text-grey-700">{publicCopy(step.text)}</p>
-            </li>
-          ))}
-        </ol>
-      </Container>
-    </section>
-  );
-
-  const order =
-    variant === 0
-      ? [intro, included, working, process]
-      : variant === 1
-        ? [intro, working, included, process]
-        : [intro, process, working, included];
+  const introParas = content.intro.map((paragraph) => publicCopy(paragraph)).filter(Boolean);
+  const workingParas = content.working.map((paragraph) => publicCopy(paragraph)).filter(Boolean);
+  const specParas = content.specification.map((paragraph) => publicCopy(paragraph)).filter(Boolean);
+  const rooms = publicCopy(content.rooms);
+  const included = combo.service.included.map((item) => publicCopy(item)).filter(Boolean);
 
   return (
     <>
@@ -140,48 +61,198 @@ export function ComboPage({
       />
       <JsonLd data={faqSchema(faqs)} />
       <article>
-        {order}
+        <PageHero
+          photo={servicePhotos[combo.service.slug]}
+          crumbs={crumbs}
+          kicker={`${combo.area.name} ${combo.area.postcode}`}
+          title={`${combo.service.name} in ${combo.area.name}`}
+          lede={publicCopy(content.lede)}
+        />
+
+        <section className="py-20 sm:py-28">
+          <Container className="grid items-start gap-12 lg:grid-cols-12 lg:gap-16">
+            <div className="space-y-5 text-base leading-relaxed text-grey-700 lg:col-span-7">
+              {introParas.map((paragraph) => (
+                <p key={paragraph.slice(0, 48)}>{paragraph}</p>
+              ))}
+            </div>
+            {areaPhotos[combo.area.slug] ? (
+              <div className="lg:col-span-5">
+                <ContentImage
+                  photo={areaPhotos[combo.area.slug]}
+                  className="aspect-[4/5] w-full"
+                  sizes="(min-width: 1024px) 40vw, 100vw"
+                />
+                <p className="mt-3 text-sm text-grey-600">
+                  {combo.area.name}, {combo.area.postcode}
+                </p>
+              </div>
+            ) : null}
+          </Container>
+        </section>
+
+        {rooms ? (
+          <section className="border-y border-grey-200 py-20 sm:py-28">
+            <Container className="grid gap-10 lg:grid-cols-12">
+              <h2 className="font-display text-4xl font-medium sm:text-5xl lg:col-span-4">
+                Typical rooms in {combo.area.name}
+              </h2>
+              <p className="text-base leading-relaxed text-grey-700 lg:col-span-8">{rooms}</p>
+            </Container>
+          </section>
+        ) : null}
+
+        <section className="py-20 sm:py-28">
+          <Container>
+            <h2 className="font-display text-4xl font-medium sm:text-5xl">
+              Working in {combo.area.name}
+            </h2>
+            <p className="mt-6 text-sm text-grey-600">
+              {publicCopy(combo.area.council)}
+            </p>
+            <div className="mt-10 grid items-start gap-12 lg:grid-cols-2 lg:gap-16">
+              <div className="space-y-5 text-base leading-relaxed text-grey-700">
+                {workingParas.map((paragraph) => (
+                  <p key={paragraph.slice(0, 48)}>{paragraph}</p>
+                ))}
+                <p>{publicCopy(combo.area.conservationNotes)}</p>
+                <p>{publicCopy(combo.area.localNotes)}</p>
+              </div>
+              <ContentImage
+                photo={servicePhotos[combo.service.slug]}
+                className="aspect-[4/3] w-full"
+                sizes="(min-width: 1024px) 50vw, 100vw"
+              />
+            </div>
+            {combo.area.landmarks.length > 0 ? (
+              <ul className="mt-10 flex flex-wrap gap-x-6 gap-y-2 text-sm text-grey-600">
+                {combo.area.landmarks.map((landmark) => (
+                  <li key={landmark} className="border-b border-grey-200 pb-1">
+                    {publicCopy(landmark)}
+                  </li>
+                ))}
+              </ul>
+            ) : null}
+          </Container>
+        </section>
+
+        {specParas.length > 0 ? (
+          <section className="border-y border-grey-200 py-20 sm:py-28">
+            <Container className="grid gap-10 lg:grid-cols-12">
+              <h2 className="font-display text-4xl font-medium sm:text-5xl lg:col-span-4">
+                Specification in {combo.area.name}
+              </h2>
+              <div className="space-y-5 text-base leading-relaxed text-grey-700 lg:col-span-8">
+                {specParas.map((paragraph) => (
+                  <p key={paragraph.slice(0, 48)}>{paragraph}</p>
+                ))}
+              </div>
+            </Container>
+          </section>
+        ) : null}
+
+        <section className="py-20 sm:py-28">
+          <Container>
+            <h2 className="font-display text-4xl font-medium sm:text-5xl">What is included</h2>
+            <p className="mt-5 max-w-measure text-base leading-relaxed text-grey-700">
+              The list is the core of a typical {combo.service.name.toLowerCase()} in{" "}
+              {combo.area.name}. The written proposal after survey is the contract
+              scope.
+            </p>
+            <ul className="mt-10 max-w-3xl divide-y divide-grey-200 border-y border-grey-200">
+              {included.map((item) => (
+                <li key={item} className="flex gap-5 py-4 text-base leading-relaxed text-grey-700">
+                  <span className="mt-3 h-px w-6 shrink-0 bg-gold" aria-hidden="true" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </Container>
+        </section>
+
+        <section className="border-y border-grey-200 py-20 sm:py-28">
+          <Container>
+            <h2 className="font-display text-4xl font-medium sm:text-5xl">How we work</h2>
+            <ol className="mt-12 grid gap-x-10 gap-y-12 md:grid-cols-2">
+              {combo.service.processSteps.map((step, index) => (
+                <li key={step.title}>
+                  <p className="font-display text-3xl text-gold">
+                    {String(index + 1).padStart(2, "0")}
+                  </p>
+                  <h3 className="mt-3 font-display text-2xl font-medium">{step.title}</h3>
+                  <p className="mt-3 text-base leading-relaxed text-grey-700">
+                    {publicCopy(step.text)}
+                  </p>
+                </li>
+              ))}
+            </ol>
+          </Container>
+        </section>
+
         <section className="py-20 sm:py-28">
           <Container className="grid gap-12 lg:grid-cols-12">
             <h2 className="font-display text-4xl font-medium sm:text-5xl lg:col-span-4">
-              Questions
+              Questions about {combo.area.name}
             </h2>
             <div className="lg:col-span-8">
               <FaqAccordion items={faqs} />
             </div>
           </Container>
         </section>
+
         <section className="border-t border-grey-200 py-20 sm:py-28">
-          <Container>
-            <h2 className="font-display text-4xl font-medium sm:text-5xl">
-              Also in this neighbourhood
-            </h2>
-            <ul className="mt-8 flex flex-col gap-3 text-base text-navy">
-              <li>
-                <Link href={`/${combo.service.slug}/`} className="hover:text-gold">
-                  {combo.service.name} in North West London
-                </Link>
-              </li>
-              <li>
-                <Link href={`/areas/${combo.area.slug}/`} className="hover:text-gold">
-                  Property services in {combo.area.name}
-                </Link>
-              </li>
-              {siblings.map((area) => (
-                <li key={area.slug}>
-                  <Link
-                    href={`/${combo.service.slug}/${area.slug}/`}
-                    className="hover:text-gold"
-                  >
-                    {combo.service.name} in {area.name}
+          <Container className="grid gap-12 lg:grid-cols-2">
+            <div>
+              <h2 className="font-display text-3xl font-medium">
+                Other services in {combo.area.name}
+              </h2>
+              <ul className="mt-6 flex flex-col gap-3 text-base text-navy">
+                {otherServices.map((service) =>
+                  isCombo(service.slug, combo.area.slug) ? (
+                    <li key={service.slug}>
+                      <Link
+                        href={`/${service.slug}/${combo.area.slug}/`}
+                        className="hover:text-gold"
+                      >
+                        {service.name} in {combo.area.name}
+                      </Link>
+                    </li>
+                  ) : null,
+                )}
+                <li>
+                  <Link href={`/areas/${combo.area.slug}/`} className="hover:text-gold">
+                    All property services in {combo.area.name}
                   </Link>
                 </li>
-              ))}
-            </ul>
+              </ul>
+            </div>
+            <div>
+              <h2 className="font-display text-3xl font-medium">Nearby neighbourhoods</h2>
+              <ul className="mt-6 flex flex-col gap-3 text-base text-navy">
+                <li>
+                  <Link href={`/${combo.service.slug}/`} className="hover:text-gold">
+                    {combo.service.name} in North West London
+                  </Link>
+                </li>
+                {siblings.map((area) => (
+                  <li key={area.slug}>
+                    <Link
+                      href={`/${combo.service.slug}/${area.slug}/`}
+                      className="hover:text-gold"
+                    >
+                      {combo.service.name} in {area.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </Container>
         </section>
       </article>
-      <CtaBand />
+      <CtaBand
+        title={`Request a quote for ${combo.service.navLabel.toLowerCase()} in ${combo.area.name}`}
+        text="Tell us the property and the rooms in scope. We visit before we write a proposal."
+      />
     </>
   );
 }
