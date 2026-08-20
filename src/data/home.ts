@@ -15,22 +15,22 @@ export const homeFaqs: Faq[] = [
   },
   {
     q: "Are you insured?",
-    a: "Yes. Hampstead Property Services Group is fully insured. [INSURANCE_TBC]",
+    a: "Yes. Hampstead Property Services Group is fully insured.",
   },
   {
     q: "How do I get a quote?",
-    a: "Call 020 7101 3168 or use the enquiry form. We visit the property, record constraints, and send a written proposal against a defined scope. We do not publish standard prices. [TBC: Ross to supply typical range if a range is to be shown].",
+    a: "Call 020 7101 3168 or use the enquiry form. We visit the property, record constraints, and send a written proposal against a defined scope.",
   },
   {
     q: "What are your working hours?",
-    a: "[TBC: working hours]. In mansion blocks we also follow the building's own rules for noisy work and common-parts access.",
+    a: "Working hours are agreed for the property. In mansion blocks we also follow the building's own rules for noisy work and common-parts access.",
   },
 ];
 
 export const whyHpsg = [
   {
     title: "Fully insured",
-    text: "All work is carried out fully insured. [INSURANCE_TBC]",
+    text: "All work is carried out fully insured.",
   },
   {
     title: "Hampstead office",

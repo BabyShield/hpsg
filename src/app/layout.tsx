@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     default: site.tradingName,
     template: `%s | ${site.tradingName}`,
   },
-  description: "[TBC: default meta description to be refined]",
+  description: site.homeMetaDescription,
   alternates: { canonical: site.url },
   openGraph: {
     type: "website",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en-GB">
-      <body className="min-h-screen bg-bone font-sans text-ink antialiased">
+      <body className="min-h-screen bg-bone font-sans text-ink antialiased pb-14 lg:pb-0">
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:bg-gold focus:px-3 focus:py-2 focus:text-navy"

@@ -1,16 +1,17 @@
 import Link from "next/link";
 
-import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { Container } from "@/components/ui/Container";
 import { ContentImage } from "@/components/ui/ContentImage";
 import { CtaBand } from "@/components/ui/CtaBand";
 import { FaqAccordion } from "@/components/ui/FaqAccordion";
-import { areaPhotos, photoCredit, servicePhotos } from "@/data/photos";
+import { PageHero } from "@/components/ui/PageHero";
+import { areaPhotos, servicePhotos } from "@/data/photos";
 import { absoluteUrl, faqSchema, serviceSchema } from "@/lib/schema";
 import type { ComboContent } from "@/data/types";
 import type { Combo } from "@/data/types";
 import { getNearbyAreas, isCombo } from "@/lib/matrix";
+import { publicCopy } from "@/lib/public-copy";
 
 function variantIndex(areaSlug: string): 0 | 1 | 2 {
   const sum = [...areaSlug].reduce((acc, char) => acc + char.charCodeAt(0), 0);
@@ -47,37 +48,15 @@ export function ComboPage({
   ];
 
   const intro = (
-    <section key="intro" className="py-16 sm:py-20">
-      <Container>
-        <Breadcrumbs items={crumbs} />
-        <p className="mb-6 h-px w-12 bg-gold" aria-hidden="true" />
-        <h1 className="max-w-4xl text-4xl sm:text-5xl">
-          {combo.service.name} in {combo.area.name}, {combo.area.postcode}
-        </h1>
-        <div className="mt-8 max-w-measure space-y-5 text-base text-grey-700">
-          <p>{content.intro}</p>
-        </div>
-        <div className="mt-10 grid gap-4 md:grid-cols-2">
-          <div>
-            <ContentImage
-              photo={servicePhotos[combo.service.slug]}
-              className="aspect-[16/9] w-full"
-              sizes="(min-width: 768px) 50vw, 100vw"
-            />
-          </div>
-          {areaPhotos[combo.area.slug] ? (
-            <div>
-              <ContentImage
-                photo={areaPhotos[combo.area.slug]}
-                className="aspect-[16/9] w-full"
-                sizes="(min-width: 768px) 50vw, 100vw"
-              />
-            </div>
-          ) : null}
-        </div>
-        <p className="mt-3 text-xs text-grey-600">{photoCredit}</p>
-      </Container>
-    </section>
+    <div key="intro">
+      <PageHero
+        photo={servicePhotos[combo.service.slug]}
+        crumbs={crumbs}
+        kicker={`${combo.area.name} ${combo.area.postcode}`}
+        title={`${combo.service.name} in ${combo.area.name}`}
+        lede={content.intro}
+      />
+    </div>
   );
 
   const included = (
@@ -95,17 +74,26 @@ export function ComboPage({
 
   const working = (
     <section key="working" className="py-16">
-      <Container>
-        <h2 className="text-3xl">Working in {combo.area.name}</h2>
-        <div className="mt-8 max-w-measure space-y-5 text-base text-grey-700">
-          <p>
-            <span className="font-medium text-navy">Council. </span>
-            {combo.area.council}
-          </p>
-          <p>{combo.area.conservationNotes}</p>
-          <p>{content.localNote}</p>
-          <p>{combo.area.localNotes}</p>
+      <Container className="grid items-start gap-10 lg:grid-cols-2">
+        <div>
+          <h2 className="text-3xl">Working in {combo.area.name}</h2>
+          <div className="mt-8 max-w-measure space-y-5 text-base text-grey-700">
+            <p>
+              <span className="font-medium text-navy">Council. </span>
+              {combo.area.council}
+            </p>
+            <p>{publicCopy(combo.area.conservationNotes)}</p>
+            <p>{publicCopy(content.localNote)}</p>
+            <p>{publicCopy(combo.area.localNotes)}</p>
+          </div>
         </div>
+        {areaPhotos[combo.area.slug] ? (
+          <ContentImage
+            photo={areaPhotos[combo.area.slug]}
+            className="aspect-[4/3] w-full"
+            sizes="(min-width: 1024px) 50vw, 100vw"
+          />
+        ) : null}
       </Container>
     </section>
   );

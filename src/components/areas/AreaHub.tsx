@@ -1,14 +1,15 @@
 import Link from "next/link";
 
-import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { Container } from "@/components/ui/Container";
-import { ContentImage } from "@/components/ui/ContentImage";
 import { CtaBand } from "@/components/ui/CtaBand";
 import { FaqAccordion } from "@/components/ui/FaqAccordion";
+import { PageHero } from "@/components/ui/PageHero";
+import { ServiceCard } from "@/components/ui/ServiceCard";
 import { faqSchema } from "@/lib/schema";
 import { areaHubContent } from "@/data/area-hub-content";
-import { areaPhotos, photoCredit } from "@/data/photos";
+import { areaPhotos } from "@/data/photos";
+import { publicCopy } from "@/lib/public-copy";
 import { services } from "@/data/services";
 import type { Area } from "@/data/types";
 import {
@@ -40,58 +41,40 @@ export function AreaHub({ area }: { area: Area }) {
     <>
       <JsonLd data={faqSchema(content.faqs)} />
       <article>
-        <Container className="py-16 sm:py-20">
-          <Breadcrumbs items={crumbs} />
-          <p className="mb-6 h-px w-12 bg-gold" aria-hidden="true" />
-          <h1 className="max-w-4xl text-4xl sm:text-5xl">
-            Property Services in {area.name}, {area.postcode}
-          </h1>
-          <p className="mt-6 max-w-measure text-lg text-grey-700">
-            Kitchen renovation, bathroom renovation, painting and decorating, and
-            light refurbishment in {area.name}.
-          </p>
-          {areaPhotos[area.slug] ? (
-            <div className="mt-10">
-              <ContentImage
-                photo={areaPhotos[area.slug]}
-                className="w-full"
-                sizes="(min-width: 1024px) 72rem, 100vw"
-              />
-              <p className="mt-3 text-xs text-grey-600">{photoCredit}</p>
-            </div>
-          ) : null}
-          <div className="mt-10 max-w-measure space-y-5 text-base text-grey-700">
-            <p>{content.intro}</p>
-          </div>
+        <PageHero
+          photo={areaPhotos[area.slug]}
+          crumbs={crumbs}
+          kicker={area.postcode}
+          title={`Property services in ${area.name}`}
+          lede={`Kitchen, bathroom, painting and light refurbishment in ${area.name}.`}
+        />
+        <Container className="prose-measure py-16">
+          <p className="max-w-measure text-lg text-grey-700">{publicCopy(content.intro)}</p>
         </Container>
 
         <section className="border-y border-grey-200 py-16">
           <Container>
             <h2 className="text-3xl">Services in {area.name}</h2>
-            <ul className="mt-10 grid gap-6 md:grid-cols-2">
+            <ul className="mt-10 grid gap-4 md:grid-cols-2">
               {services.map((service) => {
                 const href = serviceHref(area, service.slug);
                 const paintingExcluded =
                   service.slug === "painting-decorating" &&
                   hasPaintingMicrosite(area.slug);
-                return (
-                  <li key={service.slug} className="border border-grey-200 p-8">
-                    <h3 className="text-2xl">{service.name}</h3>
-                    <p className="mt-3 text-base text-grey-700">{service.heroLine}</p>
-                    {paintingExcluded ? (
-                      <p className="mt-6 text-sm text-grey-700">
+                if (paintingExcluded) {
+                  return (
+                    <li key={service.slug} className="border border-grey-200 p-8">
+                      <h3 className="text-2xl">{service.name}</h3>
+                      <p className="mt-3 text-base text-grey-700">
                         Painting in {area.name} is handled by our specialist local
-                        painting company. [TBC: name and URL]
+                        painting company.
                       </p>
-                    ) : href ? (
-                      <p className="mt-6 text-sm font-medium tracking-wide text-navy">
-                        <Link href={href} className="hover:text-gold">
-                          {area.tier === 1
-                            ? `${service.name} in ${area.name}`
-                            : `Read about ${service.navLabel.toLowerCase()}`}
-                        </Link>
-                      </p>
-                    ) : null}
+                    </li>
+                  );
+                }
+                return (
+                  <li key={service.slug}>
+                    <ServiceCard service={service} href={href ?? undefined} />
                   </li>
                 );
               })}
@@ -115,10 +98,10 @@ export function AreaHub({ area }: { area: Area }) {
               </p>
               <p>
                 <span className="font-medium text-navy">Conservation. </span>
-                {area.conservationNotes}
+                {publicCopy(area.conservationNotes)}
               </p>
-              <p>{content.working}</p>
-              <p>{area.localNotes}</p>
+              <p>{publicCopy(content.working)}</p>
+              <p>{publicCopy(area.localNotes)}</p>
             </div>
             {area.landmarks.length > 0 ? (
               <ul className="mt-8 flex flex-wrap gap-3 text-sm text-grey-600">

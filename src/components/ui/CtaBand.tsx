@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import { site } from "@/data/site";
+
 import { Container } from "./Container";
 
 export function CtaBand({
@@ -12,23 +13,19 @@ export function CtaBand({
 }) {
   return (
     <section className="bg-navy text-bone">
-      <Container className="flex flex-col items-start gap-6 py-16 sm:flex-row sm:items-center sm:justify-between sm:py-20">
-        <div className="max-w-measure">
-          <p className="mb-3 h-px w-12 bg-gold" aria-hidden="true" />
-          <h2 className="text-3xl text-bone">{title}</h2>
-          <p className="mt-3 text-base text-bone/85">{text}</p>
+      <Container className="flex flex-col items-start justify-between gap-8 border-t border-gold/40 py-16 sm:flex-row sm:items-center sm:py-20">
+        <div className="max-w-xl">
+          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-gold">
+            Hampstead office
+          </p>
+          <h2 className="mt-3 text-3xl text-bone sm:text-4xl">{title}</h2>
+          <p className="mt-4 text-base text-bone/80">{text}</p>
         </div>
         <div className="flex flex-col gap-3 sm:flex-row">
-          <Link
-            href="/contact/"
-            className="inline-flex items-center justify-center bg-gold px-6 py-3 text-sm font-medium tracking-wide text-navy"
-          >
+          <Link href="/contact/" className="btn btn-gold">
             Request a quote
           </Link>
-          <a
-            href={`tel:${site.phoneTel}`}
-            className="inline-flex items-center justify-center border border-bone/40 px-6 py-3 text-sm font-medium tracking-wide text-bone"
-          >
+          <a href={`tel:${site.phoneTel}`} className="btn btn-ghost text-bone">
             {site.phoneDisplay}
           </a>
         </div>

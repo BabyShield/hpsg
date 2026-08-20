@@ -12,12 +12,12 @@ export function Header() {
   const dropdownAreas = tier1Areas().slice(0, 8);
 
   return (
-    <header className="border-b border-grey-200 bg-bone">
-      <Container className="flex items-start justify-between gap-8 py-6">
-        <Wordmark />
-        <div className="flex items-start gap-8">
+    <header className="sticky top-0 z-50 border-b border-navy/10 bg-bone/95 backdrop-blur-md">
+      <Container className="flex items-center justify-between gap-6 py-4">
+        <Wordmark compact />
+        <div className="flex items-center gap-6">
           <nav className="hidden lg:block" aria-label="Primary">
-            <ul className="flex flex-wrap items-center gap-x-6 gap-y-2 pt-1 text-sm tracking-wide text-navy">
+            <ul className="flex items-center gap-x-5 text-[0.8rem] font-medium uppercase tracking-[0.12em] text-navy">
               {services.map((service) => (
                 <li key={service.slug}>
                   <Link href={`/${service.slug}/`} className="hover:text-gold">
@@ -30,12 +30,12 @@ export function Header() {
                   <summary className="cursor-pointer list-none hover:text-gold [&::-webkit-details-marker]:hidden">
                     Areas
                   </summary>
-                  <ul className="absolute right-0 z-30 mt-3 w-56 border border-grey-200 bg-bone py-3 shadow-sm">
+                  <ul className="absolute right-0 z-30 mt-3 w-60 border border-grey-200 bg-bone py-3 shadow-lg">
                     {dropdownAreas.map((area) => (
                       <li key={area.slug}>
                         <Link
                           href={`/areas/${area.slug}/`}
-                          className="block px-4 py-1.5 hover:text-gold"
+                          className="block px-4 py-2 normal-case tracking-normal hover:bg-grey-50 hover:text-gold"
                         >
                           {area.name}
                         </Link>
@@ -44,7 +44,7 @@ export function Header() {
                     <li>
                       <Link
                         href="/areas/"
-                        className="block border-t border-grey-200 px-4 py-2 mt-2 hover:text-gold"
+                        className="mt-1 block border-t border-grey-200 px-4 py-2 normal-case tracking-normal hover:text-gold"
                       >
                         All areas
                       </Link>
@@ -54,7 +54,7 @@ export function Header() {
               </li>
               <li>
                 <Link href="/projects/" className="hover:text-gold">
-                  Projects
+                  Work
                 </Link>
               </li>
               <li>
@@ -69,12 +69,11 @@ export function Header() {
               </li>
             </ul>
           </nav>
-          <a
-            href={`tel:${site.phoneTel}`}
-            className="hidden shrink-0 bg-navy px-4 py-2 text-sm tracking-wide text-bone lg:inline-flex"
-          >
-            {site.phoneDisplay}
-          </a>
+          <span className="hidden lg:inline-flex">
+            <a href={`tel:${site.phoneTel}`} className="btn btn-primary">
+              {site.phoneDisplay}
+            </a>
+          </span>
           <MobileNav />
         </div>
       </Container>

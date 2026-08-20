@@ -24,25 +24,28 @@
   --text-sm: 0.875rem;
   --text-sm--line-height: 1.375rem;
   --text-base: 1.0625rem;
-  --text-base--line-height: 1.75rem;
+  --text-base--line-height: 1.7rem;
   --text-lg: 1.1875rem;
-  --text-lg--line-height: 1.875rem;
+  --text-lg--line-height: 1.85rem;
   --text-xl: 1.375rem;
-  --text-xl--line-height: 2rem;
-  --text-2xl: 1.625rem;
-  --text-2xl--line-height: 2.25rem;
-  --text-3xl: 2rem;
-  --text-3xl--line-height: 2.5rem;
-  --text-4xl: 2.5rem;
-  --text-4xl--line-height: 2.875rem;
-  --text-5xl: 3.125rem;
-  --text-5xl--line-height: 3.375rem;
+  --text-xl--line-height: 1.9rem;
+  --text-2xl: 1.75rem;
+  --text-2xl--line-height: 2.15rem;
+  --text-3xl: 2.25rem;
+  --text-3xl--line-height: 2.6rem;
+  --text-4xl: 2.75rem;
+  --text-4xl--line-height: 1.12;
+  --text-5xl: 3.5rem;
+  --text-5xl--line-height: 1.08;
+  --text-6xl: 4.25rem;
+  --text-6xl--line-height: 1.05;
 
-  --max-width-measure: 42rem;
+  --max-width-measure: 40rem;
 }
 
 html {
   color-scheme: light;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -59,12 +62,18 @@ h3,
 h4 {
   color: var(--color-navy);
   font-weight: 600;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
   text-wrap: balance;
 }
 
-p,
-li {
+h1.text-bone,
+h2.text-bone,
+h3.text-bone {
+  color: var(--color-bone);
+}
+
+.prose-measure p,
+.prose-measure li {
   max-width: var(--max-width-measure);
 }
 
@@ -76,4 +85,54 @@ li {
 ::selection {
   background-color: color-mix(in srgb, var(--color-gold) 35%, transparent);
   color: var(--color-navy);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 1.5rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: background-color 160ms ease, color 160ms ease, border-color 160ms ease;
+}
+
+.btn-primary {
+  background-color: var(--color-navy);
+  color: var(--color-bone);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-gold);
+  color: var(--color-navy);
+}
+
+.btn-gold {
+  background-color: var(--color-gold);
+  color: var(--color-navy);
+}
+
+.btn-gold:hover {
+  background-color: var(--color-bone);
+  color: var(--color-navy);
+}
+
+.btn-ghost {
+  border: 1px solid currentColor;
+  background: transparent;
+}
+
+.btn-ghost:hover {
+  background-color: color-mix(in srgb, currentColor 10%, transparent);
+}
+
+.img-zoom img {
+  transition: transform 700ms ease;
+}
+
+.group:hover .img-zoom img,
+.img-zoom:hover img {
+  transform: scale(1.05);
 }

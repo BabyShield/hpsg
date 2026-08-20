@@ -21,6 +21,7 @@ export function ContentImage({
         fill
         sizes={sizes}
         priority={priority}
+        unoptimized
         className="object-cover"
       />
     </div>

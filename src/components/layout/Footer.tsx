@@ -8,26 +8,24 @@ import { Container } from "../ui/Container";
 import { Wordmark } from "./Wordmark";
 
 export function Footer() {
-  const paintingNote =
-    site.paintingBrands.length === 0
-      ? "[TBC: names/URLs for local painting companies]"
-      : null;
-
   return (
-    <footer className="border-t border-grey-200 bg-bone pb-20 lg:pb-0">
+    <footer className="bg-navy pb-16 text-bone lg:pb-0">
       <Container className="grid gap-12 py-16 sm:grid-cols-2 lg:grid-cols-4">
         <div>
-          <Wordmark compact />
-          <p className="mt-6 text-sm text-grey-700">{site.tagline}</p>
+          <Wordmark compact inverted />
+          <p className="mt-6 max-w-xs text-sm text-bone/75">{site.tagline}</p>
+          <a href={`tel:${site.phoneTel}`} className="btn btn-gold mt-8">
+            {site.phoneDisplay}
+          </a>
         </div>
         <div>
-          <h2 className="text-sm font-medium uppercase tracking-[0.14em] text-grey-600">
+          <h2 className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">
             Services
           </h2>
-          <ul className="mt-4 flex flex-col gap-2 text-sm text-navy">
+          <ul className="mt-4 flex flex-col gap-2 text-sm">
             {services.map((service) => (
               <li key={service.slug}>
-                <Link href={`/${service.slug}/`} className="hover:text-gold">
+                <Link href={`/${service.slug}/`} className="text-bone/85 hover:text-gold">
                   {service.name}
                 </Link>
               </li>
@@ -35,13 +33,13 @@ export function Footer() {
           </ul>
         </div>
         <div>
-          <h2 className="text-sm font-medium uppercase tracking-[0.14em] text-grey-600">
+          <h2 className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">
             Areas
           </h2>
-          <ul className="mt-4 flex flex-col gap-2 text-sm text-navy">
+          <ul className="mt-4 columns-2 gap-6 text-sm">
             {tier1Areas().map((area) => (
-              <li key={area.slug}>
-                <Link href={`/areas/${area.slug}/`} className="hover:text-gold">
+              <li key={area.slug} className="mb-2 break-inside-avoid">
+                <Link href={`/areas/${area.slug}/`} className="text-bone/85 hover:text-gold">
                   {area.name}
                 </Link>
               </li>
@@ -49,44 +47,39 @@ export function Footer() {
           </ul>
         </div>
         <div>
-          <h2 className="text-sm font-medium uppercase tracking-[0.14em] text-grey-600">
+          <h2 className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">
             Company
           </h2>
-          <ul className="mt-4 flex flex-col gap-2 text-sm text-navy">
+          <ul className="mt-4 flex flex-col gap-2 text-sm">
             <li>
-              <Link href="/about/" className="hover:text-gold">
+              <Link href="/about/" className="text-bone/85 hover:text-gold">
                 About
               </Link>
             </li>
             <li>
-              <Link href="/projects/" className="hover:text-gold">
-                Projects
+              <Link href="/projects/" className="text-bone/85 hover:text-gold">
+                Work
               </Link>
             </li>
             <li>
-              <Link href="/group/" className="hover:text-gold">
+              <Link href="/group/" className="text-bone/85 hover:text-gold">
                 Group
               </Link>
             </li>
             <li>
-              <Link href="/contact/" className="hover:text-gold">
+              <Link href="/contact/" className="text-bone/85 hover:text-gold">
                 Contact
               </Link>
             </li>
             <li>
-              <Link href="/privacy/" className="hover:text-gold">
+              <Link href="/privacy/" className="text-bone/85 hover:text-gold">
                 Privacy
               </Link>
             </li>
           </ul>
-          <address className="mt-8 text-sm not-italic text-grey-700">
+          <address className="mt-8 text-sm not-italic text-bone/75">
             <p>
-              <a href={`tel:${site.phoneTel}`} className="text-navy hover:text-gold">
-                {site.phoneDisplay}
-              </a>
-            </p>
-            <p>
-              <a href={`mailto:${site.email}`} className="text-navy hover:text-gold">
+              <a href={`mailto:${site.email}`} className="hover:text-gold">
                 {site.email}
               </a>
             </p>
@@ -100,41 +93,22 @@ export function Footer() {
           </address>
         </div>
       </Container>
-      <div className="border-t border-grey-200">
-        <Container className="py-8">
-          <p className="text-sm text-grey-600">
-            Part of the Hampstead Property Services Group family
-          </p>
-          <ul className="mt-3 flex flex-wrap gap-x-6 gap-y-2 text-sm text-navy">
-            {site.sisterBrands.map((brand) => (
-              <li key={brand.name}>
-                {brand.url ? (
-                  <a href={brand.url} className="hover:text-gold">
-                    {brand.name}
-                  </a>
-                ) : (
-                  <span>
-                    {brand.name} [TBC: URL]
-                  </span>
-                )}
-              </li>
-            ))}
-            {site.paintingBrands.map((brand) => (
-              <li key={brand.name}>
-                <a href={brand.url} className="hover:text-gold">
-                  {brand.name}
+      <div className="border-t border-bone/15">
+        <Container className="flex flex-col gap-3 py-6 text-xs text-bone/60 sm:flex-row sm:items-center sm:justify-between">
+          <p>{site.footerLegal}</p>
+          <p>
+            <a href="https://hampsteadrenovations.co.uk" className="hover:text-gold">
+              Hampstead Renovations
+            </a>
+            {site.sisterBrands[1]?.url ? (
+              <>
+                {" · "}
+                <a href={site.sisterBrands[1].url} className="hover:text-gold">
+                  Hampstead On Demand
                 </a>
-              </li>
-            ))}
-          </ul>
-          {paintingNote ? (
-            <p className="mt-2 text-sm text-grey-600">{paintingNote}</p>
-          ) : null}
-        </Container>
-      </div>
-      <div className="border-t border-grey-200">
-        <Container className="py-6">
-          <p className="text-xs leading-5 text-grey-600">{site.footerLegal}</p>
+              </>
+            ) : null}
+          </p>
         </Container>
       </div>
     </footer>

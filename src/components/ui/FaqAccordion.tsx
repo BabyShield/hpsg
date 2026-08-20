@@ -3,14 +3,18 @@
 import { useId, useState } from "react";
 
 import type { Faq } from "@/data/types";
+import { publicCopy } from "@/lib/public-copy";
 
 export function FaqAccordion({ items }: { items: Faq[] }) {
   const baseId = useId();
   const [open, setOpen] = useState<Record<number, boolean>>({ 0: true });
+  const visible = items
+    .map((item) => ({ q: publicCopy(item.q), a: publicCopy(item.a) }))
+    .filter((item) => item.q && item.a);
 
   return (
     <div className="divide-y divide-grey-200 border-y border-grey-200">
-      {items.map((item, index) => {
+      {visible.map((item, index) => {
         const panelId = `${baseId}-panel-${index}`;
         const buttonId = `${baseId}-button-${index}`;
         const isOpen = Boolean(open[index]);
@@ -28,7 +32,7 @@ export function FaqAccordion({ items }: { items: Faq[] }) {
                 }
               >
                 <span>{item.q}</span>
-                <span aria-hidden="true" className="text-gold">
+                <span aria-hidden="true" className="font-light text-gold">
                   {isOpen ? "–" : "+"}
                 </span>
               </button>
@@ -40,7 +44,7 @@ export function FaqAccordion({ items }: { items: Faq[] }) {
               hidden={!isOpen}
               className="pb-5 text-base text-grey-700"
             >
-              <p>{item.a}</p>
+              <p className="max-w-measure">{item.a}</p>
             </div>
           </div>
         );

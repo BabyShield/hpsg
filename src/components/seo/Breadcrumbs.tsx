@@ -1,21 +1,32 @@
 import Link from "next/link";
 
-import { JsonLd } from "./JsonLd";
 import { breadcrumbSchema } from "@/lib/schema";
+
+import { JsonLd } from "./JsonLd";
 
 export type Crumb = { name: string; href: string };
 
-export function Breadcrumbs({ items }: { items: Crumb[] }) {
+export function Breadcrumbs({
+  items,
+  tone = "dark",
+}: {
+  items: Crumb[];
+  tone?: "dark" | "light";
+}) {
+  const light = tone === "light";
   return (
-    <nav aria-label="Breadcrumb" className="mb-8 text-sm text-grey-600">
+    <nav
+      aria-label="Breadcrumb"
+      className={`mb-6 text-xs uppercase tracking-[0.14em] ${light ? "text-bone/70" : "text-grey-600"}`}
+    >
       <JsonLd data={breadcrumbSchema(items)} />
       <ol className="flex flex-wrap gap-2">
         {items.map((item, index) => {
           const last = index === items.length - 1;
           return (
-            <li key={item.href} className="flex items-center gap-2">
+            <li key={`${item.href}-${item.name}`} className="flex items-center gap-2">
               {last ? (
-                <span className="text-navy">{item.name}</span>
+                <span className={light ? "text-bone" : "text-navy"}>{item.name}</span>
               ) : (
                 <Link href={item.href} className="hover:text-gold">
                   {item.name}

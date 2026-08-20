@@ -1,18 +1,22 @@
 import Link from "next/link";
 
-export function Wordmark({ compact = false }: { compact?: boolean }) {
+export function Wordmark({
+  compact = false,
+  inverted = false,
+}: {
+  compact?: boolean;
+  inverted?: boolean;
+}) {
+  const size = compact ? "text-[0.8rem] leading-4" : "text-[0.95rem] leading-[1.15]";
   return (
-    <Link href="/" className="block text-navy">
-      <span className={compact ? "block text-sm leading-5" : "block text-base leading-5"}>
-        Hampstead
-      </span>
-      <span className={compact ? "block text-sm leading-5" : "block text-base leading-5"}>
-        Property Services
-      </span>
-      <span className={compact ? "block text-sm leading-5" : "block text-base leading-5"}>
-        Group
-      </span>
-      <span className="mt-2 block h-px w-10 bg-gold" aria-hidden="true" />
+    <Link href="/" className={`block ${inverted ? "text-bone" : "text-navy"}`}>
+      <span className={`block font-semibold tracking-tight ${size}`}>Hampstead</span>
+      <span className={`block font-semibold tracking-tight ${size}`}>Property Services</span>
+      <span className={`block font-semibold tracking-tight ${size}`}>Group</span>
+      <span
+        className={`mt-2 block h-0.5 w-10 ${inverted ? "bg-gold" : "bg-gold"}`}
+        aria-hidden="true"
+      />
     </Link>
   );
 }

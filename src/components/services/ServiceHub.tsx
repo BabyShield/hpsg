@@ -1,13 +1,13 @@
 import Link from "next/link";
 
-import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { AreaLinkGrid } from "@/components/ui/AreaLinkGrid";
 import { Container } from "@/components/ui/Container";
-import { ContentImage } from "@/components/ui/ContentImage";
 import { CtaBand } from "@/components/ui/CtaBand";
 import { FaqAccordion } from "@/components/ui/FaqAccordion";
-import { photoCredit, servicePhotos } from "@/data/photos";
+import { PageHero } from "@/components/ui/PageHero";
+import { ServiceCard } from "@/components/ui/ServiceCard";
+import { servicePhotos } from "@/data/photos";
 import { serviceHubContent } from "@/data/service-hub-content";
 import { services } from "@/data/services";
 import type { Service } from "@/data/types";
@@ -37,22 +37,15 @@ export function ServiceHub({ service }: { service: Service }) {
       />
       <JsonLd data={faqSchema(service.faqs)} />
       <article>
-        <Container className="py-16 sm:py-20">
-          <Breadcrumbs items={crumbs} />
-          <p className="mb-6 h-px w-12 bg-gold" aria-hidden="true" />
-          <h1 className="max-w-4xl text-4xl sm:text-5xl">
-            {service.name} in North West London
-          </h1>
-          <p className="mt-6 max-w-measure text-lg text-grey-700">{service.heroLine}</p>
-          <div className="mt-10">
-            <ContentImage
-              photo={servicePhotos[service.slug]}
-              className="w-full"
-              sizes="(min-width: 1024px) 72rem, 100vw"
-            />
-            <p className="mt-3 text-xs text-grey-600">{photoCredit}</p>
-          </div>
-          <div className="mt-10 max-w-measure space-y-5 text-base text-grey-700">
+        <PageHero
+          photo={servicePhotos[service.slug]}
+          crumbs={crumbs}
+          kicker="North West London"
+          title={`${service.name} in North West London`}
+          lede={service.heroLine}
+        />
+        <Container className="prose-measure py-16 sm:py-20">
+          <div className="max-w-measure space-y-5 text-base text-grey-700">
             {content.intro.map((paragraph) => (
               <p key={paragraph.slice(0, 32)}>{paragraph}</p>
             ))}
@@ -169,15 +162,10 @@ export function ServiceHub({ service }: { service: Service }) {
         <section className="border-t border-grey-200 py-16">
           <Container>
             <h2 className="text-3xl">Related services</h2>
-            <ul className="mt-8 grid gap-6 md:grid-cols-3">
+            <ul className="mt-8 grid gap-4 md:grid-cols-3">
               {others.map((item) => (
-                <li key={item.slug} className="border border-grey-200 p-6">
-                  <h3 className="text-xl">
-                    <Link href={`/${item.slug}/`} className="hover:text-gold">
-                      {item.name}
-                    </Link>
-                  </h3>
-                  <p className="mt-3 text-sm text-grey-700">{item.heroLine}</p>
+                <li key={item.slug}>
+                  <ServiceCard service={item} />
                 </li>
               ))}
             </ul>

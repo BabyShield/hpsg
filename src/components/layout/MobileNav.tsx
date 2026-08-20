@@ -22,7 +22,7 @@ export function MobileNav() {
     <div className="lg:hidden">
       <button
         type="button"
-        className="text-sm font-medium tracking-wide text-navy"
+        className="text-xs font-semibold uppercase tracking-[0.16em] text-navy"
         aria-expanded={open}
         aria-controls="mobile-navigation"
         onClick={() => setOpen((value) => !value)}
@@ -32,7 +32,7 @@ export function MobileNav() {
       {open ? (
         <div
           id="mobile-navigation"
-          className="fixed inset-x-0 top-[5.5rem] bottom-16 z-40 overflow-y-auto border-t border-grey-200 bg-bone px-6 py-8"
+          className="fixed inset-x-0 top-[4.5rem] bottom-14 z-40 overflow-y-auto border-t border-grey-200 bg-bone px-6 py-8"
         >
           <nav aria-label="Mobile">
             <ul className="flex flex-col gap-4 text-lg text-navy">
