@@ -11,35 +11,35 @@ const wide = { width: 1600, height: 900 };
 
 export const homeHero: Photo = {
   src: "/images/home/hero.jpg",
-  alt: "Victorian terraces and a red-brick mansion block on a quiet North West London street",
+  alt: "A quiet cream-painted Hampstead mews in morning light, empty cobbles and clipped box",
   ...wide,
 };
 
 export const officeNeighbourhood: Photo = {
   src: "/images/about/office-neighbourhood.jpg",
-  alt: "Edwardian mansion block and shops on Finchley Road near the Hampstead office",
+  alt: "Edwardian red-brick mansion block with a quiet garden court near the Hampstead office",
   ...wide,
 };
 
 export const servicePhotos: Record<ServiceSlug, Photo> = {
   "kitchen-renovation": {
     src: "/images/services/kitchen-renovation.jpg",
-    alt: "Kitchen renovation in a London period conversion — galley layout, chimney breast and sash window",
+    alt: "A finished kitchen in a North West London period house — pale cabinetry, marble and a garden sash",
     ...wide,
   },
   "bathroom-renovation": {
     src: "/images/services/bathroom-renovation.jpg",
-    alt: "Bathroom renovation in a London conversion — tiled wet room, bath and shower",
+    alt: "A finished bathroom in a London conversion — stone bath, brass fittings and morning light",
     ...wide,
   },
   "painting-decorating": {
     src: "/images/services/painting-decorating.jpg",
-    alt: "Painting and decorating in an occupied North West London period sitting room",
+    alt: "A freshly decorated drawing room in a Hampstead period house — pale walls, cornicing and herringbone",
     ...wide,
   },
   "light-refurbishment": {
     src: "/images/services/light-refurbishment.jpg",
-    alt: "Light refurbishment of a London flat, looking from a reception into a compact kitchen",
+    alt: "A light refurbishment in a London mansion-flat, looking from a pale reception into a new kitchen",
     ...wide,
   },
 };
@@ -47,72 +47,72 @@ export const servicePhotos: Record<ServiceSlug, Photo> = {
 export const areaPhotos: Record<string, Photo> = {
   hampstead: {
     src: "/images/areas/hampstead.jpg",
-    alt: "Narrow brick and stucco lane typical of Hampstead village, NW3",
+    alt: "Cream and stock-brick cottages with wisteria, typical of Hampstead village, NW3",
     ...wide,
   },
   "west-hampstead": {
     src: "/images/areas/west-hampstead.jpg",
-    alt: "Victorian bay-fronted terraces typical of West Hampstead, NW6",
+    alt: "Cream stucco bays and hydrangeas, typical of West Hampstead, NW6",
     ...wide,
   },
   "belsize-park": {
     src: "/images/areas/belsize-park.jpg",
-    alt: "Tall stucco houses typical of Belsize Park, NW3",
+    alt: "Tall cream stucco houses and clipped yew, typical of Belsize Park, NW3",
     ...wide,
   },
   "st-johns-wood": {
     src: "/images/areas/st-johns-wood.jpg",
-    alt: "Tree-lined villas and a mansion block typical of St John's Wood, NW8",
+    alt: "A white stucco villa and empty gravel court, typical of St John's Wood, NW8",
     ...wide,
   },
   "maida-vale": {
     src: "/images/areas/maida-vale.jpg",
-    alt: "Red-brick and terracotta mansion blocks beside the canal in Maida Vale, W9",
+    alt: "Red-brick and terracotta mansion block with a quiet garden court, typical of Maida Vale, W9",
     ...wide,
   },
   "swiss-cottage": {
     src: "/images/areas/swiss-cottage.jpg",
-    alt: "Finchley Road mansion blocks typical of Swiss Cottage, NW3",
+    alt: "A red-brick mansion block and garden, typical of Swiss Cottage, NW3",
     ...wide,
   },
   "primrose-hill": {
     src: "/images/areas/primrose-hill.jpg",
-    alt: "Park-facing Victorian terraces typical of Primrose Hill, NW1",
+    alt: "Cream park-facing terraces and a quiet garden, typical of Primrose Hill, NW1",
     ...wide,
   },
   highgate: {
     src: "/images/areas/highgate.jpg",
-    alt: "Brick houses around a small square typical of Highgate Village, N6",
+    alt: "Brick houses around a paved square, typical of Highgate Village, N6",
     ...wide,
   },
   "golders-green": {
     src: "/images/areas/golders-green.jpg",
-    alt: "Inter-war family houses typical of Golders Green, NW11",
+    alt: "An inter-war house and rose garden, typical of Golders Green, NW11",
     ...wide,
   },
   "queens-park": {
     src: "/images/areas/queens-park.jpg",
-    alt: "Decorative brick cottages facing the park, typical of Queen's Park, NW6",
+    alt: "Decorative brick cottages and box gardens, typical of Queen's Park, NW6",
     ...wide,
   },
   "muswell-hill": {
     src: "/images/areas/muswell-hill.jpg",
-    alt: "Edwardian red-brick houses on a slope, typical of Muswell Hill, N10",
+    alt: "Edwardian red-brick houses with timber porches, typical of Muswell Hill, N10",
     ...wide,
   },
   "crouch-end": {
     src: "/images/areas/crouch-end.jpg",
-    alt: "Victorian terraces near the Broadway, typical of Crouch End, N8",
+    alt: "Victorian bay terraces in morning light, typical of Crouch End, N8",
     ...wide,
   },
   "kentish-town": {
     src: "/images/areas/kentish-town.jpg",
-    alt: "Dense stock-brick terraces typical of Kentish Town, NW5",
+    alt: "A quiet stock-brick mews, typical of Kentish Town, NW5",
     ...wide,
   },
   kilburn: {
     src: "/images/areas/kilburn.jpg",
-    alt: "Mixed Victorian terraces off a main road, typical of Kilburn, NW6",
+    alt: "Cream stucco bays and box hedges, typical of quieter Kilburn streets, NW6",
     ...wide,
   },
   "hampstead-garden-suburb": {
@@ -122,52 +122,52 @@ export const areaPhotos: Record<string, Photo> = {
   },
   "hampstead-heath": {
     src: "/images/areas/hampstead-heath.jpg",
-    alt: "Houses looking onto open grassland, typical of the Hampstead Heath edge, NW3",
+    alt: "A brick house looking onto grassland, typical of the Hampstead Heath edge, NW3",
     ...wide,
   },
   "regents-park": {
     src: "/images/areas/regents-park.jpg",
-    alt: "Cream stucco terrace beside the park, typical of the Regent's Park fringe, NW1",
+    alt: "A cream stucco terrace and garden, typical of the Regent's Park fringe, NW1",
     ...wide,
   },
   archway: {
     src: "/images/areas/archway.jpg",
-    alt: "Victorian terraces climbing away from a busy junction, typical of Archway, N19",
+    alt: "Stock-brick terraces on a slope, typical of Archway, N19",
     ...wide,
   },
   frognal: {
     src: "/images/areas/frognal.jpg",
-    alt: "Large Victorian and Edwardian houses on a hill, typical of Frognal, NW3",
+    alt: "A large Victorian villa and garden, typical of Frognal, NW3",
     ...wide,
   },
   "temple-fortune": {
     src: "/images/areas/temple-fortune.jpg",
-    alt: "Family houses typical of Temple Fortune and adjoining NW11 streets",
+    alt: "A family house and rose garden, typical of Temple Fortune, NW11",
     ...wide,
   },
   "dartmouth-park": {
     src: "/images/areas/dartmouth-park.jpg",
-    alt: "Wide sloping street of Victorian bays, typical of Dartmouth Park, NW5",
+    alt: "Wide Victorian bays in pale stone, typical of Dartmouth Park, NW5",
     ...wide,
   },
   "tufnell-park": {
     src: "/images/areas/tufnell-park.jpg",
-    alt: "Stock-brick conversion terraces typical of Tufnell Park, N19",
+    alt: "Stock-brick conversion terraces and fern gardens, typical of Tufnell Park, N19",
     ...wide,
   },
   "east-finchley": {
     src: "/images/areas/east-finchley.jpg",
-    alt: "Suburban high road and family houses typical of East Finchley, N2",
+    alt: "A suburban family house and magnolia, typical of East Finchley, N2",
     ...wide,
   },
   "kensal-rise": {
     src: "/images/areas/kensal-rise.jpg",
-    alt: "Victorian terraces by the railway bridge, typical of Kensal Rise, NW10",
+    alt: "Victorian bays and an empty flagged pavement, typical of Kensal Rise, NW10",
     ...wide,
   },
   "south-hampstead": {
     src: "/images/areas/south-hampstead.jpg",
-    alt: "Mixed stucco and brick houses beside the railway, typical of South Hampstead, NW6",
+    alt: "Mixed stucco and brick houses, typical of South Hampstead, NW6",
     ...wide,
   },
 };
