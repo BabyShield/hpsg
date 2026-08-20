@@ -20,12 +20,9 @@
       "service": "hpsg"
     }
   ],
-  "routes": [
-    {
-      "pattern": "hpsg.co.uk",
-      "custom_domain": true
-    }
-  ],
+  "workers_dev": true,
+  "preview_urls": true,
+  "routes": [],
   "vars": {
     "HPSG_NOINDEX": "false"
   }

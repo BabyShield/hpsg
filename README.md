@@ -32,7 +32,13 @@ Deploy the `hpsg` worker to Cloudflare (custom domain `hpsg.co.uk` is declared i
 npm run deploy
 ```
 
-The zone for `hpsg.co.uk` must already sit on Cloudflare before that first custom-domain deploy, or Wrangler will error. [VERIFY against current Wrangler custom-domain docs]
+Current live preview: https://hpsg.hampstead-renovation-group.workers.dev
+
+The `hpsg.co.uk` zone is not yet on this Cloudflare account, so custom-domain attach is deferred. When the zone is added, put this back in `wrangler.jsonc` and deploy:
+
+```jsonc
+"routes": [{ "pattern": "hpsg.co.uk", "custom_domain": true }]
+```
 
 Exact OpenNext commands (also the npm scripts):
 
