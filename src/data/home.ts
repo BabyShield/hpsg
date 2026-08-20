@@ -30,7 +30,7 @@ export const homeFaqs: Faq[] = [
 export const whyHpsg = [
   {
     title: "Fully insured",
-    text: "All work is carried out fully insured.",
+    text: "All work is carried out fully insured. We will not open up a kitchen, bathroom or occupied house without that in place.",
   },
   {
     title: "Hampstead office",

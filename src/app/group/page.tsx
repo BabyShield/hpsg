@@ -43,7 +43,9 @@ export default function GroupPage() {
           <p>
             The same family includes other companies for work that sits outside
             those four services. Each is a genuine business with its own site.
-            This page exists to explain the family, not to harvest links.
+            This page exists to explain the family, not to harvest links. If
+            the brief is a kitchen, a bathroom, decoration or a light
+            refurbishment of rooms that already exist, stay on this site.
           </p>
         </div>
         <ul className="mt-16 divide-y divide-grey-200 border-y border-grey-200">
@@ -54,7 +56,9 @@ export default function GroupPage() {
             <div className="max-w-measure text-base leading-relaxed text-grey-700 lg:col-span-8">
               <p>
                 Hampstead Renovations takes on major design-and-build work — the
-                projects that change the carcass of a house.
+                projects that change the carcass of a house: extensions, loft
+                conversions, structural openings and whole-house programmes that
+                sit outside light refurbishment on this site.
               </p>
               <p className="mt-4">
                 <a
@@ -71,7 +75,11 @@ export default function GroupPage() {
               Hampstead On Demand
             </h2>
             <div className="max-w-measure text-base leading-relaxed text-grey-700 lg:col-span-8">
-              <p>Hampstead On Demand is the on-demand trades company in the family.</p>
+              <p>
+                Hampstead On Demand is the on-demand trades company in the
+                family — day-to-day call-outs rather than a planned kitchen,
+                bathroom or light-refurbishment programme.
+              </p>
               {onDemandUrl ? (
                 <p className="mt-4">
                   <a href={onDemandUrl} className="btn-line text-navy">
@@ -102,6 +110,28 @@ export default function GroupPage() {
               </div>
             </li>
           ) : null}
+        </ul>
+        <ul className="mt-12 flex flex-col gap-2 text-navy">
+          <li>
+            <Link href="/kitchen-renovation/" className="hover:text-gold">
+              Kitchen renovation in North West London
+            </Link>
+          </li>
+          <li>
+            <Link href="/bathroom-renovation/" className="hover:text-gold">
+              Bathroom renovation in North West London
+            </Link>
+          </li>
+          <li>
+            <Link href="/painting-decorating/" className="hover:text-gold">
+              Painting and decorating in North West London
+            </Link>
+          </li>
+          <li>
+            <Link href="/light-refurbishment/" className="hover:text-gold">
+              Light refurbishment in North West London
+            </Link>
+          </li>
         </ul>
         <p className="mt-12 max-w-measure text-base leading-relaxed text-grey-700">
           For kitchens, bathrooms, painting (where we take it on) and light

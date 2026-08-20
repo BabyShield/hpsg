@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { Container } from "@/components/ui/Container";
 import { ContentImage } from "@/components/ui/ContentImage";
@@ -39,7 +41,8 @@ export default function ContactPage() {
           <h1 className="font-display text-5xl font-medium sm:text-6xl">Contact</h1>
           <p className="mt-6 max-w-measure text-base leading-relaxed text-grey-700">
             Tell us about the property and the rooms in scope. We visit before we
-            write a proposal.
+            write a proposal. The office is at {addressSingleLine}, a short run
+            from Hampstead, Belsize Park and Swiss Cottage.
           </p>
           <p className="mt-10 font-display text-4xl font-medium text-navy">
             <a href={`tel:${site.phoneTel}`} className="hover:text-gold">
@@ -138,6 +141,15 @@ export default function ContactPage() {
             Message
             <textarea required name="message" rows={5} className={fieldClass} />
           </label>
+          <p className="text-sm leading-relaxed text-grey-600">
+            After we receive the enquiry we will contact you to arrange a visit.
+            We do not send a price from photographs. Enquiry details are used
+            only to respond; see the{" "}
+            <Link href="/privacy/" className="underline decoration-gold underline-offset-4">
+              privacy notice
+            </Link>
+            .
+          </p>
           <button type="submit" className="btn btn-primary">
             Send enquiry
           </button>

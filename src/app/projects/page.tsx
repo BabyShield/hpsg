@@ -32,7 +32,11 @@ export default function ProjectsPage() {
         />
         <p className="mb-6 h-px w-12 bg-gold" aria-hidden="true" />
         <h1 className="font-display text-5xl font-medium sm:text-6xl">Work</h1>
-        <p className="mt-6 max-w-measure text-lg leading-relaxed text-grey-700">{photoCredit}</p>
+        <p className="mt-6 max-w-measure text-lg leading-relaxed text-grey-700">
+          {photoCredit} Kitchen renovation, bathroom renovation, painting and
+          light refurbishment pages carry the method. Named case studies will
+          be published here only from supplied summaries.
+        </p>
         <ul className="mt-14 grid gap-3 lg:grid-cols-12">
           {services.map((service, index) => {
             const mosaic = [

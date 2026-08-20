@@ -2,15 +2,15 @@ import Link from "next/link";
 
 import { JsonLd } from "@/components/seo/JsonLd";
 import { Container } from "@/components/ui/Container";
+import { ContentImage } from "@/components/ui/ContentImage";
 import { CtaBand } from "@/components/ui/CtaBand";
 import { FaqAccordion } from "@/components/ui/FaqAccordion";
 import { PageHero } from "@/components/ui/PageHero";
 import { PhotoTile } from "@/components/ui/PhotoTile";
 import { ServiceCard } from "@/components/ui/ServiceCard";
-import { absoluteUrl, faqSchema, itemListSchema, serviceSchema } from "@/lib/schema";
+import { getComboContent } from "@/data/combo-content";
 import { areaHubContent } from "@/data/area-hub-content";
 import { areaPhotos } from "@/data/photos";
-import { publicCopy } from "@/lib/public-copy";
 import { services } from "@/data/services";
 import type { Area } from "@/data/types";
 import {
@@ -18,6 +18,8 @@ import {
   getNearbyAreas,
   hasPaintingMicrosite,
 } from "@/lib/matrix";
+import { publicCopy } from "@/lib/public-copy";
+import { absoluteUrl, faqSchema, itemListSchema, serviceSchema } from "@/lib/schema";
 
 function serviceHref(area: Area, serviceSlug: string): string | null {
   if (area.tier === 2) return `/${serviceSlug}/`;
@@ -31,6 +33,7 @@ export function AreaHub({ area }: { area: Area }) {
   const content = areaHubContent[area.slug];
   const nearby = getNearbyAreas(area);
   const combos = getCombosForArea(area.slug);
+  const photo = areaPhotos[area.slug];
 
   const crumbs = [
     { name: "Home", href: "/" },
@@ -46,7 +49,7 @@ export function AreaHub({ area }: { area: Area }) {
           url: absoluteUrl(`/areas/${area.slug}/`),
           areaServed: `${area.name}, ${area.postcode}`,
           description: `Kitchen renovation, bathroom renovation, painting and light refurbishment in ${area.name}, ${area.postcode}.`,
-          image: areaPhotos[area.slug]?.src,
+          image: photo?.src,
         })}
       />
       <JsonLd data={faqSchema(content.faqs)} />
@@ -65,16 +68,17 @@ export function AreaHub({ area }: { area: Area }) {
       ) : null}
       <article>
         <PageHero
-          photo={areaPhotos[area.slug]}
+          photo={photo}
           crumbs={crumbs}
           kicker={area.postcode}
           title={`Kitchens, bathrooms and decorating in ${area.name}`}
           lede={`Kitchen renovation, bathroom renovation, painting and light refurbishment in ${area.name}, ${area.postcode}.`}
         />
-        <Container className="grid gap-10 py-20 sm:py-28 lg:grid-cols-12">
+        <Container className="grid items-start gap-12 py-20 sm:py-28 lg:grid-cols-12 lg:gap-16">
           <div className="space-y-5 text-base leading-relaxed text-grey-700 lg:col-span-7">
             <p className="text-lg">{publicCopy(content.intro)}</p>
             <p>{publicCopy(area.housingStock)}</p>
+            {content.typical ? <p>{publicCopy(content.typical)}</p> : null}
           </div>
         </Container>
 
@@ -83,12 +87,19 @@ export function AreaHub({ area }: { area: Area }) {
             <h2 className="font-display text-4xl font-medium sm:text-5xl">
               Services in {area.name}
             </h2>
-            <ul className="mt-12 grid gap-3 md:grid-cols-2">
+            <p className="mt-5 max-w-measure text-base leading-relaxed text-grey-700">
+              {area.tier === 1
+                ? `Local pages for kitchen renovation, bathroom renovation, painting and light refurbishment in ${area.name}. Each is written for this neighbourhood, not renamed from a generic template.`
+                : `${area.name} is covered from the North West London service pages. Kitchen, bathroom, painting and light refurbishment follow the same method as the rest of the list.`}
+            </p>
+            <ul className="mt-12 grid gap-8 md:grid-cols-2">
               {services.map((service) => {
                 const href = serviceHref(area, service.slug);
                 const paintingExcluded =
                   service.slug === "painting-decorating" &&
                   hasPaintingMicrosite(area.slug);
+                const local = getComboContent(service.slug, area.slug);
+                const caption = publicCopy(local?.lede ?? service.heroLine);
                 if (paintingExcluded) {
                   return (
                     <li key={service.slug} className="border-t border-grey-200 py-8">
@@ -101,18 +112,30 @@ export function AreaHub({ area }: { area: Area }) {
                   );
                 }
                 return (
-                  <li key={service.slug} className="min-h-[20rem]">
-                    <ServiceCard
-                      service={service}
-                      href={href ?? undefined}
-                      className="h-full min-h-[20rem]"
-                    />
+                  <li key={service.slug}>
+                    <div className="min-h-[18rem]">
+                      <ServiceCard
+                        service={service}
+                        href={href ?? undefined}
+                        className="h-full min-h-[18rem]"
+                      />
+                    </div>
+                    {caption ? (
+                      <p className="mt-4 text-base leading-relaxed text-grey-700">{caption}</p>
+                    ) : null}
+                    {href ? (
+                      <p className="mt-2">
+                        <Link href={href} className="btn-line text-navy">
+                          {service.name} in {area.tier === 1 ? area.name : "North West London"}
+                        </Link>
+                      </p>
+                    ) : null}
                   </li>
                 );
               })}
             </ul>
             {area.tier === 1 && combos.length > 0 ? (
-              <ul className="mt-10 grid gap-2 sm:grid-cols-2">
+              <ul className="mt-12 grid gap-2 sm:grid-cols-2">
                 {combos.map((combo) => (
                   <li key={combo.service.slug}>
                     <Link
@@ -129,15 +152,15 @@ export function AreaHub({ area }: { area: Area }) {
         </section>
 
         <section className="py-20 sm:py-28">
-          <Container className="grid gap-12 lg:grid-cols-12 lg:gap-16">
-            <div className="lg:col-span-7">
+          <Container className="grid items-start gap-12 lg:grid-cols-12 lg:gap-16">
+            <div className="lg:col-span-6">
               <h2 className="font-display text-4xl font-medium sm:text-5xl">
                 Working in {area.name}
               </h2>
               <div className="mt-8 space-y-5 text-base leading-relaxed text-grey-700">
                 <p>
                   <span className="font-medium text-navy">Council. </span>
-                  {area.council}
+                  {publicCopy(area.council)}
                 </p>
                 <p>
                   <span className="font-medium text-navy">Conservation. </span>
@@ -156,6 +179,18 @@ export function AreaHub({ area }: { area: Area }) {
                 </ul>
               ) : null}
             </div>
+            {photo ? (
+              <div className="lg:col-span-6">
+                <ContentImage
+                  photo={photo}
+                  className="aspect-[4/5] w-full"
+                  sizes="(min-width: 1024px) 45vw, 100vw"
+                />
+                <p className="mt-3 text-sm text-grey-600">
+                  {area.name}, {area.postcode}
+                </p>
+              </div>
+            ) : null}
           </Container>
         </section>
 
@@ -164,12 +199,12 @@ export function AreaHub({ area }: { area: Area }) {
             <h2 className="font-display text-4xl font-medium sm:text-5xl">Nearby areas</h2>
             <ul className="mt-10 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
               {nearby.map((item) => {
-                const photo = areaPhotos[item.slug];
+                const nearbyPhoto = areaPhotos[item.slug];
                 return (
                   <li key={item.slug} className="min-h-[12rem]">
-                    {photo ? (
+                    {nearbyPhoto ? (
                       <PhotoTile
-                        photo={photo}
+                        photo={nearbyPhoto}
                         href={`/areas/${item.slug}/`}
                         title={item.name}
                         caption={item.postcode}

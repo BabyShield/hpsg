@@ -31,9 +31,11 @@ export default function AreasIndexPage() {
         <p className="mb-6 h-px w-12 bg-gold" aria-hidden="true" />
         <h1 className="font-display text-5xl font-medium sm:text-6xl">Areas we cover</h1>
         <p className="mt-6 max-w-measure text-lg leading-relaxed text-grey-700">
-          Local pages for the neighbourhoods we work in. Service detail for
-          each Tier 1 area lives on the kitchen, bathroom, painting and
-          refurbishment combination pages.
+          We work from a Finchley Road office across North West London.
+          Neighbourhood pages sit here. Kitchen, bathroom, painting and light
+          refurbishment pages for Hampstead, West Hampstead, Belsize Park, St
+          John&apos;s Wood, Maida Vale and the rest of the main list sit under
+          each service.
         </p>
         {featured && featuredPhoto ? (
           <div className="mt-14 min-h-[22rem] lg:min-h-[32rem]">
