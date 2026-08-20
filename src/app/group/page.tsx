@@ -29,8 +29,8 @@ export default function GroupPage() {
             { name: "Group", href: "/group/" },
           ]}
         />
-        <p className="mb-6 h-px w-12 bg-gold" aria-hidden="true" />
-        <h1 className="max-w-3xl font-display text-4xl font-medium sm:text-6xl">
+        <p className="rule mb-8" aria-hidden="true" />
+        <h1 className="max-w-3xl font-display text-4xl font-light sm:text-6xl">
           The Hampstead Property Services Group family
         </h1>
         <div className="mt-10 max-w-measure space-y-5 text-base leading-relaxed text-grey-700">
@@ -50,7 +50,7 @@ export default function GroupPage() {
         </div>
         <ul className="mt-16 divide-y divide-grey-200 border-y border-grey-200">
           <li className="grid gap-4 py-10 lg:grid-cols-12">
-            <h2 className="font-display text-3xl font-medium text-navy lg:col-span-4">
+            <h2 className="font-display text-3xl font-normal text-navy lg:col-span-4">
               Hampstead Renovations
             </h2>
             <div className="max-w-measure text-base leading-relaxed text-grey-700 lg:col-span-8">
@@ -71,7 +71,7 @@ export default function GroupPage() {
             </div>
           </li>
           <li className="grid gap-4 py-10 lg:grid-cols-12">
-            <h2 className="font-display text-3xl font-medium text-navy lg:col-span-4">
+            <h2 className="font-display text-3xl font-normal text-navy lg:col-span-4">
               Hampstead On Demand
             </h2>
             <div className="max-w-measure text-base leading-relaxed text-grey-700 lg:col-span-8">
@@ -91,7 +91,7 @@ export default function GroupPage() {
           </li>
           {paintingNote ? (
             <li className="grid gap-4 py-10 lg:grid-cols-12">
-              <h2 className="font-display text-3xl font-medium text-navy lg:col-span-4">
+              <h2 className="font-display text-3xl font-normal text-navy lg:col-span-4">
                 Local painting companies
               </h2>
               <div className="max-w-measure text-base leading-relaxed text-grey-700 lg:col-span-8">
@@ -100,7 +100,7 @@ export default function GroupPage() {
                   <ul className="mt-4 space-y-2">
                     {site.paintingBrands.map((brand) => (
                       <li key={brand.name}>
-                        <a href={brand.url} className="text-navy hover:text-gold">
+                        <a href={brand.url} className="quiet-link text-navy">
                           {brand.name}
                         </a>
                       </li>
@@ -113,22 +113,22 @@ export default function GroupPage() {
         </ul>
         <ul className="mt-12 flex flex-col gap-2 text-navy">
           <li>
-            <Link href="/kitchen-renovation/" className="hover:text-gold">
+            <Link href="/kitchen-renovation/" className="quiet-link">
               Kitchen renovation in North West London
             </Link>
           </li>
           <li>
-            <Link href="/bathroom-renovation/" className="hover:text-gold">
+            <Link href="/bathroom-renovation/" className="quiet-link">
               Bathroom renovation in North West London
             </Link>
           </li>
           <li>
-            <Link href="/painting-decorating/" className="hover:text-gold">
+            <Link href="/painting-decorating/" className="quiet-link">
               Painting and decorating in North West London
             </Link>
           </li>
           <li>
-            <Link href="/light-refurbishment/" className="hover:text-gold">
+            <Link href="/light-refurbishment/" className="quiet-link">
               Light refurbishment in North West London
             </Link>
           </li>

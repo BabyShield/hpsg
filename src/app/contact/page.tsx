@@ -35,23 +35,21 @@ export default function ContactPage() {
           ]}
         />
       </Container>
-      <Container className="grid gap-12 pb-20 sm:pb-28 lg:grid-cols-12 lg:gap-16">
+      <Container className="grid gap-16 pb-24 sm:pb-32 lg:grid-cols-12 lg:gap-20">
         <div className="lg:col-span-5">
-          <p className="mb-5 h-px w-12 bg-gold" aria-hidden="true" />
-          <h1 className="font-display text-5xl font-medium sm:text-6xl">Contact</h1>
-          <p className="mt-6 max-w-measure text-base leading-relaxed text-grey-700">
+          <p className="rule mb-8" aria-hidden="true" />
+          <h1 className="font-display text-5xl font-light sm:text-6xl">Contact</h1>
+          <p className="lede mt-8 max-w-measure text-xl text-grey-600">
             Tell us about the property and the rooms in scope. We visit before we
             write a proposal. The office is at {addressSingleLine}, a short run
             from Hampstead, Belsize Park and Swiss Cottage.
           </p>
-          <p className="mt-10 font-display text-4xl font-medium text-navy">
-            <a href={`tel:${site.phoneTel}`} className="hover:text-gold">
-              {site.phoneDisplay}
-            </a>
+          <p className="mt-12 font-display text-4xl font-light text-navy sm:text-5xl">
+            <a href={`tel:${site.phoneTel}`}>{site.phoneDisplay}</a>
           </p>
           <address className="mt-8 text-base not-italic leading-relaxed text-grey-700">
             <p>
-              <a href={`mailto:${site.email}`} className="text-navy hover:text-gold">
+              <a href={`mailto:${site.email}`} className="quiet-link text-navy">
                 {site.email}
               </a>
             </p>
@@ -92,27 +90,27 @@ export default function ContactPage() {
         <form
           action={formAction}
           method={site.formEndpoint ? "post" : "get"}
-          className="space-y-7 lg:col-span-7 lg:pt-16"
+          className="space-y-8 lg:col-span-7 lg:pt-20"
         >
           <p className="text-sm text-grey-600">
             {site.formEndpoint
               ? "Send an enquiry."
               : "The form opens an email to contact@hpsg.co.uk."}
           </p>
-          <label className="block text-sm text-navy">
-            Name
+          <label className="block">
+            <span className="kicker text-navy">Name</span>
             <input required name="name" className={fieldClass} />
           </label>
-          <label className="block text-sm text-navy">
-            Email
+          <label className="block">
+            <span className="kicker text-navy">Email</span>
             <input required type="email" name="email" className={fieldClass} />
           </label>
-          <label className="block text-sm text-navy">
-            Phone
+          <label className="block">
+            <span className="kicker text-navy">Phone</span>
             <input name="phone" className={fieldClass} />
           </label>
-          <label className="block text-sm text-navy">
-            Area
+          <label className="block">
+            <span className="kicker text-navy">Area</span>
             <select name="area" className={fieldClass} defaultValue="">
               <option value="" disabled>
                 Select an area
@@ -124,8 +122,8 @@ export default function ContactPage() {
               ))}
             </select>
           </label>
-          <label className="block text-sm text-navy">
-            Service
+          <label className="block">
+            <span className="kicker text-navy">Service</span>
             <select name="service" className={fieldClass} defaultValue="">
               <option value="" disabled>
                 Select a service
@@ -137,8 +135,8 @@ export default function ContactPage() {
               ))}
             </select>
           </label>
-          <label className="block text-sm text-navy">
-            Message
+          <label className="block">
+            <span className="kicker text-navy">Message</span>
             <textarea required name="message" rows={5} className={fieldClass} />
           </label>
           <p className="text-sm leading-relaxed text-grey-600">

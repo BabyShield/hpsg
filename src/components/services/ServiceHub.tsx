@@ -57,14 +57,15 @@ export function ServiceHub({ service }: { service: Service }) {
           title={`${service.name} in North West London`}
           lede={publicCopy(service.heroLine)}
         />
-        <Container className="grid gap-12 py-20 sm:py-28 lg:grid-cols-12 lg:gap-16">
+        <Container className="grid gap-12 py-24 sm:py-32 lg:grid-cols-12 lg:gap-16">
           <div className="space-y-5 text-base leading-relaxed text-grey-700 lg:col-span-7">
             {content.intro.map((paragraph) => publicCopy(paragraph)).filter(Boolean).map((paragraph) => (
               <p key={paragraph.slice(0, 32)}>{paragraph}</p>
             ))}
           </div>
           <div className="lg:col-span-5">
-            <h2 className="font-display text-3xl font-medium">Who it is for</h2>
+            <p className="rule mb-6" aria-hidden="true" />
+            <h2 className="font-display text-3xl font-normal">Who it is for</h2>
             <div className="mt-6 space-y-5 text-base leading-relaxed text-grey-700">
               {content.forWhom.map((paragraph) => publicCopy(paragraph)).filter(Boolean).map((paragraph) => (
                 <p key={paragraph.slice(0, 32)}>{paragraph}</p>
@@ -75,7 +76,7 @@ export function ServiceHub({ service }: { service: Service }) {
                   openings, see{" "}
                   <a
                     href="https://hampsteadrenovations.co.uk"
-                    className="text-navy underline decoration-gold underline-offset-4 hover:text-gold"
+                    className="quiet-link text-navy"
                   >
                     Hampstead Renovations
                   </a>
@@ -87,22 +88,23 @@ export function ServiceHub({ service }: { service: Service }) {
         </Container>
 
         {content.housing.length > 0 ? (
-          <section className="border-y border-grey-200 py-20 sm:py-28">
+          <section className="border-y border-grey-200 py-24 sm:py-32">
             <Container>
-              <h2 className="font-display text-4xl font-medium sm:text-5xl">
+              <p className="rule mb-8" aria-hidden="true" />
+              <h2 className="font-display text-4xl font-normal sm:text-5xl">
                 {service.name} by housing type
               </h2>
-              <ul className="mt-12 grid gap-12 lg:grid-cols-3">
+              <ul className="mt-16 grid gap-12 lg:grid-cols-3">
                 {content.housing.map((section) => (
                   <li key={section.title}>
-                    <h3 className="font-display text-2xl font-medium">{section.title}</h3>
+                    <h3 className="font-display text-2xl font-normal">{section.title}</h3>
                     <p className="mt-4 text-base leading-relaxed text-grey-700">
                       {publicCopy(section.text)}
                     </p>
                     <ul className="mt-5 flex flex-col gap-2 text-sm">
                       {section.links.map((link) => (
                         <li key={link.href}>
-                          <Link href={link.href} className="text-navy hover:text-gold">
+                          <Link href={link.href} className="quiet-link text-navy">
                             {link.label}
                           </Link>
                         </li>
@@ -116,9 +118,9 @@ export function ServiceHub({ service }: { service: Service }) {
         ) : null}
 
         {content.permissions.length > 0 ? (
-          <section className="py-20 sm:py-28">
+          <section className="py-24 sm:py-32">
             <Container className="grid gap-10 lg:grid-cols-12">
-              <h2 className="font-display text-4xl font-medium sm:text-5xl lg:col-span-4">
+              <h2 className="font-display text-4xl font-normal sm:text-5xl lg:col-span-4">
                 Consent, extract and the building
               </h2>
               <div className="space-y-5 text-base leading-relaxed text-grey-700 lg:col-span-8">
@@ -133,9 +135,10 @@ export function ServiceHub({ service }: { service: Service }) {
           </section>
         ) : null}
 
-        <section className="border-y border-grey-200 py-20 sm:py-28">
+        <section className="border-y border-grey-200 py-24 sm:py-32">
           <Container>
-            <h2 className="font-display text-4xl font-medium sm:text-5xl">What is included</h2>
+            <p className="rule mb-8" aria-hidden="true" />
+            <h2 className="font-display text-4xl font-normal sm:text-5xl">What is included</h2>
             <p className="mt-5 max-w-measure text-base leading-relaxed text-grey-700">
               The list is the core of a typical instruction. The written proposal
               after survey is the contract scope.
@@ -151,16 +154,17 @@ export function ServiceHub({ service }: { service: Service }) {
           </Container>
         </section>
 
-        <section className="py-20 sm:py-28">
+        <section className="py-24 sm:py-32">
           <Container>
-            <h2 className="font-display text-4xl font-medium sm:text-5xl">How we work</h2>
-            <ol className="mt-12 grid gap-x-10 gap-y-12 md:grid-cols-2 lg:grid-cols-3">
+            <p className="rule mb-8" aria-hidden="true" />
+            <h2 className="font-display text-4xl font-normal sm:text-5xl">How we work</h2>
+            <ol className="mt-16 grid gap-x-10 gap-y-12 md:grid-cols-2 lg:grid-cols-3">
               {service.processSteps.map((step, index) => (
                 <li key={step.title}>
                   <p className="font-display text-3xl text-gold">
                     {String(index + 1).padStart(2, "0")}
                   </p>
-                  <h3 className="mt-3 font-display text-2xl font-medium">{step.title}</h3>
+                  <h3 className="mt-3 font-display text-2xl font-normal">{step.title}</h3>
                   <p className="mt-3 text-base leading-relaxed text-grey-700">{publicCopy(step.text)}</p>
                 </li>
               ))}
@@ -168,9 +172,9 @@ export function ServiceHub({ service }: { service: Service }) {
           </Container>
         </section>
 
-        <section className="border-y border-grey-200 py-20 sm:py-28">
+        <section className="border-y border-grey-200 py-24 sm:py-32">
           <Container className="grid gap-10 lg:grid-cols-12">
-            <h2 className="font-display text-4xl font-medium sm:text-5xl lg:col-span-4">
+            <h2 className="font-display text-4xl font-normal sm:text-5xl lg:col-span-4">
               Specification
             </h2>
             <div className="space-y-5 text-base leading-relaxed text-grey-700 lg:col-span-8">
@@ -181,16 +185,17 @@ export function ServiceHub({ service }: { service: Service }) {
           </Container>
         </section>
 
-        <section className="py-20 sm:py-28">
+        <section className="py-24 sm:py-32">
           <Container>
-            <h2 className="font-display text-4xl font-medium sm:text-5xl">
+            <p className="rule mb-8" aria-hidden="true" />
+            <h2 className="font-display text-4xl font-normal sm:text-5xl">
               {service.name} in North West London neighbourhoods
             </h2>
-            <p className="mt-5 max-w-measure text-base leading-relaxed text-grey-700">
+            <p className="lede mt-6 max-w-measure text-xl text-grey-600">
               {publicCopy(content.areasIntro)}
             </p>
             {comboAreas.length > 0 ? (
-              <ul className="mt-12 grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-5">
+              <ul className="mosaic mt-16 grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
                 {comboAreas.map((area) => {
                   const photo = areaPhotos[area.slug];
                   return (
@@ -207,7 +212,7 @@ export function ServiceHub({ service }: { service: Service }) {
                       ) : (
                         <Link
                           href={`/${service.slug}/${area.slug}/`}
-                          className="text-base text-navy hover:text-gold"
+                          className="quiet-link text-base text-navy"
                         >
                           {service.name} in {area.name}
                         </Link>
@@ -223,9 +228,9 @@ export function ServiceHub({ service }: { service: Service }) {
           </Container>
         </section>
 
-        <section className="border-y border-grey-200 py-20 sm:py-28">
+        <section className="border-y border-grey-200 py-24 sm:py-32">
           <Container className="grid gap-12 lg:grid-cols-12">
-            <h2 className="font-display text-4xl font-medium sm:text-5xl lg:col-span-4">
+            <h2 className="font-display text-4xl font-normal sm:text-5xl lg:col-span-4">
               {service.name} questions
             </h2>
             <div className="lg:col-span-8">
@@ -234,10 +239,11 @@ export function ServiceHub({ service }: { service: Service }) {
           </Container>
         </section>
 
-        <section className="py-20 sm:py-28">
+        <section className="py-24 sm:py-32">
           <Container>
-            <h2 className="font-display text-4xl font-medium sm:text-5xl">Related services</h2>
-            <ul className="mt-12 grid gap-3 md:grid-cols-3">
+            <p className="rule mb-8" aria-hidden="true" />
+            <h2 className="font-display text-4xl font-normal sm:text-5xl">Related services</h2>
+            <ul className="mosaic mt-16 md:grid-cols-3">
               {others.map((item) => (
                 <li key={item.slug} className="min-h-[20rem]">
                   <ServiceCard service={item} className="h-full min-h-[20rem]" />

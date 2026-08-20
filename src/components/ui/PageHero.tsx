@@ -31,20 +31,24 @@ export function PageHero({
   lede?: ReactNode;
 }) {
   return (
-    <section className="relative min-h-[28rem] overflow-hidden text-bone md:min-h-[38rem]">
+    <section className="relative min-h-[32rem] overflow-hidden text-bone md:min-h-[44rem]">
       {photo ? <HeroPhoto photo={photo} /> : <div className="absolute inset-0 bg-navy" />}
-      <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/40 to-navy/15" />
-      <Container className="relative flex min-h-[28rem] flex-col justify-end pb-12 pt-10 md:min-h-[38rem] md:pb-20">
+      <div className="absolute inset-0 bg-gradient-to-t from-navy/75 via-navy/28 to-navy/8" />
+      <Container className="relative flex min-h-[32rem] flex-col justify-end pb-16 pt-12 md:min-h-[44rem] md:pb-28">
         {crumbs ? <Breadcrumbs items={crumbs} tone="light" /> : null}
         {kicker ? (
-          <p className="mb-4 font-sans text-[0.68rem] font-medium uppercase tracking-[0.2em] text-bone/65">
-            {kicker}
-          </p>
-        ) : null}
-        <h1 className="max-w-4xl font-display text-4xl font-medium text-bone sm:text-5xl md:text-6xl">
+          <p className="caption hero-type mb-5 text-bone">{kicker}</p>
+        ) : (
+          <p className="rule mb-6" aria-hidden="true" />
+        )}
+        <h1 className="hero-type max-w-4xl font-display text-4xl font-light text-bone sm:text-6xl md:text-7xl">
           {title}
         </h1>
-        {lede ? <div className="mt-5 max-w-xl text-base leading-relaxed text-bone/85">{lede}</div> : null}
+        {lede ? (
+          <div className="lede hero-type mt-6 max-w-xl text-xl leading-relaxed text-bone/90 md:text-2xl">
+            {lede}
+          </div>
+        ) : null}
       </Container>
     </section>
   );

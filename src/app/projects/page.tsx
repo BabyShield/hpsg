@@ -23,21 +23,21 @@ export default function ProjectsPage() {
 
   return (
     <>
-      <Container className="py-16 sm:py-24">
+      <Container className="py-16 sm:py-28">
         <Breadcrumbs
           items={[
             { name: "Home", href: "/" },
             { name: "Projects", href: "/projects/" },
           ]}
         />
-        <p className="mb-6 h-px w-12 bg-gold" aria-hidden="true" />
-        <h1 className="font-display text-5xl font-medium sm:text-6xl">Work</h1>
-        <p className="mt-6 max-w-measure text-lg leading-relaxed text-grey-700">
+        <p className="rule mb-8" aria-hidden="true" />
+        <h1 className="font-display text-5xl font-light sm:text-6xl">Work</h1>
+        <p className="lede mt-8 max-w-measure text-xl text-grey-600">
           {photoCredit} Kitchen renovation, bathroom renovation, painting and
           light refurbishment pages carry the method. Named case studies will
           be published here only from supplied summaries.
         </p>
-        <ul className="mt-14 grid gap-3 lg:grid-cols-12">
+        <ul className="mosaic mt-16 lg:grid-cols-12">
           {services.map((service, index) => {
             const mosaic = [
               "min-h-[22rem] lg:col-span-7 lg:min-h-[32rem]",
@@ -60,11 +60,11 @@ export default function ProjectsPage() {
           <ul className="mt-16 grid gap-6 md:grid-cols-2">
             {live.map((project) => (
               <li key={project.slug}>
-                <Link href={`/projects/${project.slug}/`} className="block border-t border-grey-200 py-8 hover:text-gold">
-                  <p className="font-sans text-[0.68rem] font-medium uppercase tracking-[0.2em] text-grey-500">
+                <Link href={`/projects/${project.slug}/`} className="block border-t border-grey-200 py-8">
+                  <p className="kicker">
                     {project.serviceLabel} · {project.areaLabel}
                   </p>
-                  <h2 className="mt-3 font-display text-3xl font-medium">{project.title}</h2>
+                  <h2 className="mt-3 font-display text-3xl font-normal">{project.title}</h2>
                   <p className="mt-3 text-base leading-relaxed text-grey-700">{project.summary}</p>
                 </Link>
               </li>

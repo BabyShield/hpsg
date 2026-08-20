@@ -21,16 +21,16 @@ export default function AreasIndexPage() {
 
   return (
     <>
-      <Container className="py-16 sm:py-24">
+      <Container className="py-16 sm:py-28">
         <Breadcrumbs
           items={[
             { name: "Home", href: "/" },
             { name: "Areas", href: "/areas/" },
           ]}
         />
-        <p className="mb-6 h-px w-12 bg-gold" aria-hidden="true" />
-        <h1 className="font-display text-5xl font-medium sm:text-6xl">Areas we cover</h1>
-        <p className="mt-6 max-w-measure text-lg leading-relaxed text-grey-700">
+        <p className="rule mb-8" aria-hidden="true" />
+        <h1 className="font-display text-5xl font-light sm:text-6xl">Areas we cover</h1>
+        <p className="lede mt-8 max-w-measure text-xl text-grey-600">
           We work from a Finchley Road office across North West London.
           Neighbourhood pages sit here. Kitchen, bathroom, painting and light
           refurbishment pages for Hampstead, West Hampstead, Belsize Park, St
@@ -38,13 +38,13 @@ export default function AreasIndexPage() {
           each service.
         </p>
         {featured && featuredPhoto ? (
-          <div className="mt-14 min-h-[22rem] lg:min-h-[32rem]">
+          <div className="mt-16 min-h-[24rem] lg:min-h-[36rem]">
             <PhotoTile
               photo={featuredPhoto}
               href={`/areas/${featured.slug}/`}
               title={featured.name}
               caption={featured.postcode}
-              className="h-full min-h-[22rem] lg:min-h-[32rem]"
+              className="h-full min-h-[24rem] lg:min-h-[36rem]"
               sizes="100vw"
             />
           </div>

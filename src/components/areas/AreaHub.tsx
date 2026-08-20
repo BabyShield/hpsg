@@ -76,9 +76,9 @@ export function AreaHub({ area }: { area: Area }) {
           title={`Kitchens, bathrooms and decorating in ${area.name}`}
           lede={`Kitchen renovation, bathroom renovation, painting and light refurbishment in ${area.name}, ${area.postcode}.`}
         />
-        <Container className="grid items-start gap-12 py-20 sm:py-28 lg:grid-cols-12 lg:gap-16">
+        <Container className="grid items-start gap-12 py-24 sm:py-32 lg:grid-cols-12 lg:gap-16">
           <div className="space-y-5 text-base leading-relaxed text-grey-700 lg:col-span-7">
-            <p className="text-lg">{publicCopy(content.intro)}</p>
+            <p className="lede text-xl text-grey-700 md:text-2xl">{publicCopy(content.intro)}</p>
             <p>{publicCopy(area.housingStock)}</p>
             {content.typical ? <p>{publicCopy(content.typical)}</p> : null}
           </div>
@@ -86,17 +86,18 @@ export function AreaHub({ area }: { area: Area }) {
 
         <LocalFacts areaName={area.name} facts={getAreaFacts(area.slug)} />
 
-        <section className="border-y border-grey-200 py-20 sm:py-28">
+        <section className="border-y border-grey-200 py-24 sm:py-32">
           <Container>
-            <h2 className="font-display text-4xl font-medium sm:text-5xl">
+            <p className="rule mb-8" aria-hidden="true" />
+            <h2 className="font-display text-4xl font-normal sm:text-5xl">
               Services in {area.name}
             </h2>
-            <p className="mt-5 max-w-measure text-base leading-relaxed text-grey-700">
+            <p className="lede mt-6 max-w-measure text-xl text-grey-600">
               {area.tier === 1
                 ? `Local pages for kitchen renovation, bathroom renovation, painting and light refurbishment in ${area.name}. Each is written for this neighbourhood, not renamed from a generic template.`
                 : `${area.name} is covered from the North West London service pages. Kitchen, bathroom, painting and light refurbishment follow the same method as the rest of the list.`}
             </p>
-            <ul className="mt-12 grid gap-8 md:grid-cols-2">
+            <ul className="mt-16 grid gap-10 md:grid-cols-2">
               {services.map((service) => {
                 const href = serviceHref(area, service.slug);
                 const paintingExcluded =
@@ -107,7 +108,7 @@ export function AreaHub({ area }: { area: Area }) {
                 if (paintingExcluded) {
                   return (
                     <li key={service.slug} className="border-t border-grey-200 py-8">
-                      <h3 className="font-display text-3xl font-medium">{service.name}</h3>
+                      <h3 className="font-display text-3xl font-normal">{service.name}</h3>
                       <p className="mt-3 text-base leading-relaxed text-grey-700">
                         Painting in {area.name} is handled by our specialist local
                         painting company.
@@ -144,7 +145,7 @@ export function AreaHub({ area }: { area: Area }) {
                   <li key={combo.service.slug}>
                     <Link
                       href={`/${combo.service.slug}/${area.slug}/`}
-                      className="text-base text-navy hover:text-gold"
+                      className="quiet-link text-base text-navy"
                     >
                       {combo.service.name} in {area.name}
                     </Link>
@@ -155,10 +156,11 @@ export function AreaHub({ area }: { area: Area }) {
           </Container>
         </section>
 
-        <section className="py-20 sm:py-28">
+        <section className="py-24 sm:py-32">
           <Container className="grid items-start gap-12 lg:grid-cols-12 lg:gap-16">
             <div className="lg:col-span-6">
-              <h2 className="font-display text-4xl font-medium sm:text-5xl">
+              <p className="rule mb-8" aria-hidden="true" />
+              <h2 className="font-display text-4xl font-normal sm:text-5xl">
                 Working in {area.name}
               </h2>
               <div className="mt-8 space-y-5 text-base leading-relaxed text-grey-700">
@@ -190,7 +192,7 @@ export function AreaHub({ area }: { area: Area }) {
                   className="aspect-[4/5] w-full"
                   sizes="(min-width: 1024px) 45vw, 100vw"
                 />
-                <p className="mt-3 text-sm text-grey-600">
+                <p className="caption mt-3">
                   {area.name}, {area.postcode}
                 </p>
               </div>
@@ -198,10 +200,11 @@ export function AreaHub({ area }: { area: Area }) {
           </Container>
         </section>
 
-        <section className="border-y border-grey-200 py-20 sm:py-28">
+        <section className="border-y border-grey-200 py-24 sm:py-32">
           <Container>
-            <h2 className="font-display text-4xl font-medium sm:text-5xl">Nearby areas</h2>
-            <ul className="mt-10 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            <p className="rule mb-8" aria-hidden="true" />
+            <h2 className="font-display text-4xl font-normal sm:text-5xl">Nearby areas</h2>
+            <ul className="mosaic mt-12 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
               {nearby.map((item) => {
                 const nearbyPhoto = areaPhotos[item.slug];
                 return (
@@ -218,7 +221,7 @@ export function AreaHub({ area }: { area: Area }) {
                     ) : (
                       <Link
                         href={`/areas/${item.slug}/`}
-                        className="text-base text-navy hover:text-gold"
+                        className="quiet-link text-base text-navy"
                       >
                         Property services in {item.name}, {item.postcode}
                       </Link>
@@ -230,9 +233,9 @@ export function AreaHub({ area }: { area: Area }) {
           </Container>
         </section>
 
-        <section className="py-20 sm:py-28">
+        <section className="py-24 sm:py-32">
           <Container className="grid gap-12 lg:grid-cols-12">
-            <h2 className="font-display text-4xl font-medium sm:text-5xl lg:col-span-4">
+            <h2 className="font-display text-4xl font-normal sm:text-5xl lg:col-span-4">
               Questions about {area.name}
             </h2>
             <div className="lg:col-span-8">

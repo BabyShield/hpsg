@@ -18,14 +18,12 @@ export function AreaLinkGrid({
     return (
       <div>
         {heading ? (
-          <h3 className="mb-5 font-sans text-[0.68rem] font-medium uppercase tracking-[0.2em] text-grey-500">
-            {heading}
-          </h3>
+          <h3 className="kicker mb-6">{heading}</h3>
         ) : null}
         <ul className="grid grid-cols-1 gap-x-8 gap-y-2 sm:grid-cols-2 lg:grid-cols-3">
           {areas.map((area) => (
             <li key={area.slug}>
-              <Link href={`/areas/${area.slug}/`} className="text-base text-navy hover:text-gold">
+              <Link href={`/areas/${area.slug}/`} className="quiet-link text-base text-navy">
                 {area.name} {area.postcode}
               </Link>
             </li>
@@ -38,11 +36,9 @@ export function AreaLinkGrid({
   return (
     <div>
       {heading ? (
-        <h3 className="mb-5 font-sans text-[0.68rem] font-medium uppercase tracking-[0.2em] text-grey-500">
-          {heading}
-        </h3>
+        <h3 className="kicker mb-6">{heading}</h3>
       ) : null}
-      <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+      <ul className="mosaic grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
         {areas.map((area) => {
           const photo = areaPhotos[area.slug];
           return (
@@ -57,7 +53,7 @@ export function AreaLinkGrid({
                   sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                 />
               ) : (
-                <Link href={`/areas/${area.slug}/`} className="text-base text-navy hover:text-gold">
+                <Link href={`/areas/${area.slug}/`} className="quiet-link text-base text-navy">
                   {area.name} {area.postcode}
                 </Link>
               )}

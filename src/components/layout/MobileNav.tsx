@@ -41,7 +41,7 @@ export function MobileNav() {
           Close
         </button>
       </div>
-      <nav className="mt-10 pb-20" aria-label="Mobile">
+      <nav className="mt-10 pb-28" aria-label="Mobile">
         <ul className="flex flex-col gap-5">
           {services.map((service) => (
             <li key={service.slug}>
@@ -55,7 +55,7 @@ export function MobileNav() {
             </li>
           ))}
           <li className="pt-6">
-            <p className="text-[0.68rem] font-medium uppercase tracking-[0.2em] text-grey-500">
+            <p className="kicker">
               Areas
             </p>
             <ul className="mt-4 flex flex-col gap-2.5 text-base text-navy">

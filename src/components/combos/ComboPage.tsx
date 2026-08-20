@@ -74,7 +74,7 @@ export function ComboPage({
           lede={publicCopy(content.lede)}
         />
 
-        <section className="py-20 sm:py-28">
+        <section className="py-24 sm:py-32">
           <Container className="grid items-start gap-12 lg:grid-cols-12 lg:gap-16">
             <div className="space-y-5 text-base leading-relaxed text-grey-700 lg:col-span-7">
               {introParas.map((paragraph) => (
@@ -88,7 +88,7 @@ export function ComboPage({
                   className="aspect-[4/5] w-full"
                   sizes="(min-width: 1024px) 40vw, 100vw"
                 />
-                <p className="mt-3 text-sm text-grey-600">
+                <p className="caption mt-3">
                   {combo.area.name}, {combo.area.postcode}
                 </p>
               </div>
@@ -97,9 +97,9 @@ export function ComboPage({
         </section>
 
         {rooms ? (
-          <section className="border-y border-grey-200 py-20 sm:py-28">
+          <section className="border-y border-grey-200 py-24 sm:py-32">
             <Container className="grid gap-10 lg:grid-cols-12">
-              <h2 className="font-display text-4xl font-medium sm:text-5xl lg:col-span-4">
+              <h2 className="font-display text-4xl font-normal sm:text-5xl lg:col-span-4">
                 Typical rooms in {combo.area.name}
               </h2>
               <p className="text-base leading-relaxed text-grey-700 lg:col-span-8">{rooms}</p>
@@ -109,9 +109,10 @@ export function ComboPage({
 
         <LocalFacts areaName={combo.area.name} facts={getAreaFacts(combo.area.slug)} />
 
-        <section className="py-20 sm:py-28">
+        <section className="py-24 sm:py-32">
           <Container>
-            <h2 className="font-display text-4xl font-medium sm:text-5xl">
+            <p className="rule mb-8" aria-hidden="true" />
+            <h2 className="font-display text-4xl font-normal sm:text-5xl">
               Working in {combo.area.name}
             </h2>
             <p className="mt-6 text-sm text-grey-600">
@@ -144,9 +145,9 @@ export function ComboPage({
         </section>
 
         {specParas.length > 0 ? (
-          <section className="border-y border-grey-200 py-20 sm:py-28">
+          <section className="border-y border-grey-200 py-24 sm:py-32">
             <Container className="grid gap-10 lg:grid-cols-12">
-              <h2 className="font-display text-4xl font-medium sm:text-5xl lg:col-span-4">
+              <h2 className="font-display text-4xl font-normal sm:text-5xl lg:col-span-4">
                 Specification in {combo.area.name}
               </h2>
               <div className="space-y-5 text-base leading-relaxed text-grey-700 lg:col-span-8">
@@ -158,9 +159,10 @@ export function ComboPage({
           </section>
         ) : null}
 
-        <section className="py-20 sm:py-28">
+        <section className="py-24 sm:py-32">
           <Container>
-            <h2 className="font-display text-4xl font-medium sm:text-5xl">What is included</h2>
+            <p className="rule mb-8" aria-hidden="true" />
+            <h2 className="font-display text-4xl font-normal sm:text-5xl">What is included</h2>
             <p className="mt-5 max-w-measure text-base leading-relaxed text-grey-700">
               The list is the core of a typical {combo.service.name.toLowerCase()} in{" "}
               {combo.area.name}. The written proposal after survey is the contract
@@ -177,16 +179,17 @@ export function ComboPage({
           </Container>
         </section>
 
-        <section className="border-y border-grey-200 py-20 sm:py-28">
+        <section className="border-y border-grey-200 py-24 sm:py-32">
           <Container>
-            <h2 className="font-display text-4xl font-medium sm:text-5xl">How we work</h2>
-            <ol className="mt-12 grid gap-x-10 gap-y-12 md:grid-cols-2">
+            <p className="rule mb-8" aria-hidden="true" />
+            <h2 className="font-display text-4xl font-normal sm:text-5xl">How we work</h2>
+            <ol className="mt-16 grid gap-x-10 gap-y-12 md:grid-cols-2">
               {combo.service.processSteps.map((step, index) => (
                 <li key={step.title}>
                   <p className="font-display text-3xl text-gold">
                     {String(index + 1).padStart(2, "0")}
                   </p>
-                  <h3 className="mt-3 font-display text-2xl font-medium">{step.title}</h3>
+                  <h3 className="mt-3 font-display text-2xl font-normal">{step.title}</h3>
                   <p className="mt-3 text-base leading-relaxed text-grey-700">
                     {publicCopy(step.text)}
                   </p>
@@ -196,9 +199,9 @@ export function ComboPage({
           </Container>
         </section>
 
-        <section className="py-20 sm:py-28">
+        <section className="py-24 sm:py-32">
           <Container className="grid gap-12 lg:grid-cols-12">
-            <h2 className="font-display text-4xl font-medium sm:text-5xl lg:col-span-4">
+            <h2 className="font-display text-4xl font-normal sm:text-5xl lg:col-span-4">
               Questions about {combo.area.name}
             </h2>
             <div className="lg:col-span-8">
@@ -207,10 +210,10 @@ export function ComboPage({
           </Container>
         </section>
 
-        <section className="border-t border-grey-200 py-20 sm:py-28">
+        <section className="border-t border-grey-200 py-24 sm:py-32">
           <Container className="grid gap-12 lg:grid-cols-2">
             <div>
-              <h2 className="font-display text-3xl font-medium">
+              <h2 className="font-display text-3xl font-normal">
                 Other services in {combo.area.name}
               </h2>
               <ul className="mt-6 flex flex-col gap-3 text-base text-navy">
@@ -219,7 +222,7 @@ export function ComboPage({
                     <li key={service.slug}>
                       <Link
                         href={`/${service.slug}/${combo.area.slug}/`}
-                        className="hover:text-gold"
+                        className="quiet-link"
                       >
                         {service.name} in {combo.area.name}
                       </Link>
@@ -227,22 +230,22 @@ export function ComboPage({
                   ) : null,
                 )}
                 <li>
-                  <Link href={`/areas/${combo.area.slug}/`} className="hover:text-gold">
+                  <Link href={`/areas/${combo.area.slug}/`} className="quiet-link">
                     All property services in {combo.area.name}
                   </Link>
                 </li>
               </ul>
             </div>
             <div>
-              <h2 className="font-display text-3xl font-medium">
+              <h2 className="font-display text-3xl font-normal">
                 {combo.service.name} nearby
               </h2>
               <p className="mt-4">
-                <Link href={`/${combo.service.slug}/`} className="text-navy hover:text-gold">
+                <Link href={`/${combo.service.slug}/`} className="quiet-link text-navy">
                   {combo.service.name} in North West London
                 </Link>
               </p>
-              <ul className="mt-6 grid grid-cols-2 gap-3">
+              <ul className="mosaic mt-6 grid-cols-2">
                 {siblings.map((area) => {
                   const photo = areaPhotos[area.slug];
                   return (
@@ -259,7 +262,7 @@ export function ComboPage({
                       ) : (
                         <Link
                           href={`/${combo.service.slug}/${area.slug}/`}
-                          className="text-navy hover:text-gold"
+                          className="quiet-link text-navy"
                         >
                           {combo.service.name} in {area.name}
                         </Link>

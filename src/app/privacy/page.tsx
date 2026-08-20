@@ -29,30 +29,30 @@ export default function PrivacyPage() {
           { name: "Privacy", href: "/privacy/" },
         ]}
       />
-      <p className="mb-6 h-px w-12 bg-gold" aria-hidden="true" />
-      <h1 className="font-display text-5xl font-medium sm:text-6xl">Privacy notice</h1>
+      <p className="rule mb-8" aria-hidden="true" />
+      <h1 className="font-display text-5xl font-light sm:text-6xl">Privacy notice</h1>
       <div className="mt-10 max-w-measure space-y-5 text-base leading-relaxed text-grey-700">
         <p>
           This notice is for the enquiry form and contact details on {site.url}.
           The controller is {site.legalName}, {addressSingleLine}. Contact:{" "}
           {site.email}, {site.phoneDisplay}.
         </p>
-        <h2 className="pt-4 font-display text-3xl font-medium text-navy">Data we collect</h2>
+        <h2 className="pt-4 font-display text-3xl font-normal text-navy">Data we collect</h2>
         <p>
           If you send an enquiry we collect your name, email address, telephone
           number if given, the area and service you select, and the message
           you write. Server logs may record technical data such as IP address
           and browser type as part of hosting.
         </p>
-        <h2 className="pt-4 font-display text-3xl font-medium text-navy">
+        <h2 className="pt-4 font-display text-3xl font-normal text-navy">
           Purpose and legal basis
         </h2>
         <p>{purpose}</p>
-        <h2 className="pt-4 font-display text-3xl font-medium text-navy">Retention</h2>
+        <h2 className="pt-4 font-display text-3xl font-normal text-navy">Retention</h2>
         <p>{retention}</p>
-        <h2 className="pt-4 font-display text-3xl font-medium text-navy">Sharing</h2>
+        <h2 className="pt-4 font-display text-3xl font-normal text-navy">Sharing</h2>
         <p>{sharing}</p>
-        <h2 className="pt-4 font-display text-3xl font-medium text-navy">Your rights</h2>
+        <h2 className="pt-4 font-display text-3xl font-normal text-navy">Your rights</h2>
         <p>
           You may ask for a copy of your data, correction, erasure, restriction
           or objection, and you may complain to the Information

@@ -28,7 +28,7 @@ export function Breadcrumbs({
               {last ? (
                 <span className={light ? "text-bone" : "text-navy"}>{item.name}</span>
               ) : (
-                <Link href={item.href} className="hover:text-gold">
+                <Link href={item.href} className="quiet-link">
                   {item.name}
                 </Link>
               )}

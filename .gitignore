@@ -23,6 +23,7 @@
 
 # local captures
 .tmp-screenshots
+/tmp-screens
 
 # production
 /build

@@ -51,7 +51,7 @@ export default function AboutPage() {
         title="About Hampstead Property Services Group"
         lede={`Based at ${addressSingleLine}.`}
       />
-      <Container className="grid gap-12 py-20 sm:py-28 lg:grid-cols-12 lg:gap-16">
+      <Container className="grid gap-12 py-24 sm:py-32 lg:grid-cols-12 lg:gap-16">
         <div className="space-y-5 text-base leading-relaxed text-grey-700 lg:col-span-7">
           <p>
             Hampstead Property Services Group Limited is a company registered in
@@ -77,13 +77,14 @@ export default function AboutPage() {
             className="aspect-[4/5] w-full"
             sizes="(min-width: 1024px) 40vw, 100vw"
           />
-          <p className="mt-4 text-sm text-grey-600">{addressSingleLine}</p>
+          <p className="caption mt-4">{addressSingleLine}</p>
         </div>
       </Container>
 
-      <section className="border-y border-grey-200 py-20 sm:py-28">
+      <section className="border-y border-grey-200 py-24 sm:py-32">
         <Container>
-          <h2 className="font-display text-4xl font-medium sm:text-5xl">What we do</h2>
+          <p className="rule mb-8" aria-hidden="true" />
+          <h2 className="font-display text-4xl font-normal sm:text-5xl">What we do</h2>
           <p className="mt-5 max-w-measure text-base leading-relaxed text-grey-700">
             Four services, one office. Local pages sit under each service for
             the neighbourhoods we cover in detail.
@@ -91,8 +92,8 @@ export default function AboutPage() {
           <ul className="mt-12 grid gap-10 sm:grid-cols-2">
             {services.map((service) => (
               <li key={service.slug}>
-                <h3 className="font-display text-2xl font-medium">
-                  <Link href={`/${service.slug}/`} className="hover:text-gold">
+                <h3 className="font-display text-2xl font-normal">
+                  <Link href={`/${service.slug}/`} className="quiet-link">
                     {service.name}
                   </Link>
                 </h3>
@@ -103,16 +104,17 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      <section className="py-20 sm:py-28">
+      <section className="py-24 sm:py-32">
         <Container>
-          <h2 className="font-display text-4xl font-medium sm:text-5xl">How we work</h2>
-          <ol className="mt-12 grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+          <p className="rule mb-8" aria-hidden="true" />
+          <h2 className="font-display text-4xl font-normal sm:text-5xl">How we work</h2>
+          <ol className="mt-16 grid gap-10 md:grid-cols-2 lg:grid-cols-4">
             {steps.map((step, index) => (
               <li key={step.title}>
                 <p className="font-display text-3xl text-gold">
                   {String(index + 1).padStart(2, "0")}
                 </p>
-                <h3 className="mt-3 font-display text-2xl font-medium">{step.title}</h3>
+                <h3 className="mt-3 font-display text-2xl font-normal">{step.title}</h3>
                 <p className="mt-3 text-base leading-relaxed text-grey-700">{step.text}</p>
               </li>
             ))}
@@ -120,9 +122,9 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      <section className="border-t border-grey-200 py-20 sm:py-28">
+      <section className="border-t border-grey-200 py-24 sm:py-32">
         <Container className="grid gap-10 lg:grid-cols-12">
-          <h2 className="font-display text-4xl font-medium sm:text-5xl lg:col-span-4">
+          <h2 className="font-display text-4xl font-normal sm:text-5xl lg:col-span-4">
             What this site is not
           </h2>
           <div className="space-y-5 text-base leading-relaxed text-grey-700 lg:col-span-8">

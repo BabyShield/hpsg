@@ -12,21 +12,15 @@ export function SectionHeading({
   return (
     <div className="max-w-2xl">
       {kicker ? (
-        <p
-          className={`mb-4 font-sans text-[0.68rem] font-medium uppercase tracking-[0.2em] ${
-            light ? "text-gold" : "text-grey-500"
-          }`}
-        >
-          {kicker}
-        </p>
+        <p className={`kicker mb-5 ${light ? "text-gold" : ""}`}>{kicker}</p>
       ) : (
-        <p className="mb-5 h-px w-12 bg-gold" aria-hidden="true" />
+        <p className="rule mb-8" aria-hidden="true" />
       )}
-      <h2 className={`font-display text-4xl font-medium sm:text-5xl ${light ? "text-bone" : "text-navy"}`}>
+      <h2 className={`font-display text-4xl font-normal sm:text-5xl ${light ? "text-bone" : "text-navy"}`}>
         {title}
       </h2>
       {text ? (
-        <p className={`mt-5 text-base leading-relaxed ${light ? "text-bone/75" : "text-grey-700"}`}>
+        <p className={`lede mt-6 text-xl md:text-2xl ${light ? "text-bone/80" : "text-grey-600"}`}>
           {text}
         </p>
       ) : null}

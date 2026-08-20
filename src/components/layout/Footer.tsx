@@ -9,81 +9,59 @@ import { Wordmark } from "./Wordmark";
 
 export function Footer() {
   return (
-    <footer className="bg-navy pb-16 text-bone lg:pb-0">
-      <Container className="grid gap-14 py-20 sm:grid-cols-2 lg:grid-cols-4">
-        <div>
+    <footer className="band-navy pb-16 lg:pb-0">
+      <Container className="grid gap-16 py-24 sm:grid-cols-2 lg:grid-cols-12">
+        <div className="lg:col-span-4">
           <Wordmark inverted />
-          <p className="mt-6 max-w-xs text-sm leading-relaxed text-bone/70">{site.tagline}</p>
-          <a href={`tel:${site.phoneTel}`} className="btn-line mt-8 text-bone">
+          <p className="lede mt-8 max-w-xs text-xl text-bone/75">{site.tagline}</p>
+          <a href={`tel:${site.phoneTel}`} className="btn-line mt-10 text-bone">
             {site.phoneDisplay}
           </a>
         </div>
-        <div>
-          <h2 className="font-sans text-[0.68rem] font-medium uppercase tracking-[0.2em] text-bone/45">
-            Services
-          </h2>
-          <ul className="mt-5 flex flex-col gap-2.5 text-sm">
+        <div className="lg:col-span-2">
+          <h2 className="kicker text-bone/45">Services</h2>
+          <ul className="mt-6 flex flex-col gap-3 text-sm text-bone/85">
             {services.map((service) => (
               <li key={service.slug}>
-                <Link href={`/${service.slug}/`} className="text-bone/85 hover:text-gold">
-                  {service.name}
-                </Link>
+                <Link href={`/${service.slug}/`}>{service.name}</Link>
               </li>
             ))}
           </ul>
         </div>
-        <div>
-          <h2 className="font-sans text-[0.68rem] font-medium uppercase tracking-[0.2em] text-bone/45">
-            Areas
-          </h2>
-          <ul className="mt-5 columns-2 gap-6 text-sm">
+        <div className="lg:col-span-3">
+          <h2 className="kicker text-bone/45">Areas</h2>
+          <ul className="mt-6 columns-2 gap-8 text-sm text-bone/85">
             {tier1Areas().map((area) => (
-              <li key={area.slug} className="mb-2.5 break-inside-avoid">
-                <Link href={`/areas/${area.slug}/`} className="text-bone/85 hover:text-gold">
-                  {area.name}
-                </Link>
+              <li key={area.slug} className="mb-3 break-inside-avoid">
+                <Link href={`/areas/${area.slug}/`}>{area.name}</Link>
               </li>
             ))}
           </ul>
         </div>
-        <div>
-          <h2 className="font-sans text-[0.68rem] font-medium uppercase tracking-[0.2em] text-bone/45">
-            Company
-          </h2>
-          <ul className="mt-5 flex flex-col gap-2.5 text-sm">
+        <div className="lg:col-span-3">
+          <h2 className="kicker text-bone/45">Company</h2>
+          <ul className="mt-6 flex flex-col gap-3 text-sm text-bone/85">
             <li>
-              <Link href="/about/" className="text-bone/85 hover:text-gold">
-                About
-              </Link>
+              <Link href="/about/">About</Link>
             </li>
             <li>
-              <Link href="/projects/" className="text-bone/85 hover:text-gold">
-                Work
-              </Link>
+              <Link href="/projects/">Work</Link>
             </li>
             <li>
-              <Link href="/group/" className="text-bone/85 hover:text-gold">
-                Group
-              </Link>
+              <Link href="/group/">Group</Link>
             </li>
             <li>
-              <Link href="/contact/" className="text-bone/85 hover:text-gold">
-                Contact
-              </Link>
+              <Link href="/contact/">Contact</Link>
             </li>
             <li>
-              <Link href="/privacy/" className="text-bone/85 hover:text-gold">
-                Privacy
-              </Link>
+              <Link href="/privacy/">Privacy</Link>
             </li>
           </ul>
-          <address className="mt-8 text-sm not-italic leading-relaxed text-bone/70">
+          <address className="mt-10 text-sm not-italic leading-relaxed text-bone/70">
             <p>
-              <a href={`mailto:${site.email}`} className="hover:text-gold">
-                {site.email}
-              </a>
+              <a href={`mailto:${site.email}`}>{site.email}</a>
             </p>
-            <p className="mt-3">
+            <p className="mt-4">
               {site.address.line1}
               <br />
               {site.address.line2}
@@ -94,18 +72,14 @@ export function Footer() {
         </div>
       </Container>
       <div className="border-t border-bone/10">
-        <Container className="flex flex-col gap-3 py-6 text-xs text-bone/50 sm:flex-row sm:items-center sm:justify-between">
+        <Container className="flex flex-col gap-3 py-7 text-xs tracking-wide text-bone/45 sm:flex-row sm:items-center sm:justify-between">
           <p>{site.footerLegal}</p>
           <p>
-            <a href="https://hampsteadrenovations.co.uk" className="hover:text-gold">
-              Hampstead Renovations
-            </a>
+            <a href="https://hampsteadrenovations.co.uk">Hampstead Renovations</a>
             {site.sisterBrands[1]?.url ? (
               <>
                 {" · "}
-                <a href={site.sisterBrands[1].url} className="hover:text-gold">
-                  Hampstead On Demand
-                </a>
+                <a href={site.sisterBrands[1].url}>Hampstead On Demand</a>
               </>
             ) : null}
           </p>

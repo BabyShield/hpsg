@@ -3,19 +3,19 @@
 @theme {
   --color-navy: #16263f;
   --color-gold: #b68a3e;
-  --color-bone: #f7f4ee;
-  --color-ink: #121820;
+  --color-bone: #f6f1e8;
+  --color-ink: #16130f;
 
-  --color-grey-50: #f3f1ec;
-  --color-grey-100: #e6e2da;
-  --color-grey-200: #d0cbbf;
-  --color-grey-300: #b4afa3;
-  --color-grey-400: #8f8a80;
-  --color-grey-500: #6f6b63;
-  --color-grey-600: #54514b;
-  --color-grey-700: #3e3c38;
-  --color-grey-800: #2a2926;
-  --color-grey-900: #1a1917;
+  --color-grey-50: #f1ece3;
+  --color-grey-100: #e4ddd2;
+  --color-grey-200: #d0c8ba;
+  --color-grey-300: #b4ab9c;
+  --color-grey-400: #8f877a;
+  --color-grey-500: #6e675c;
+  --color-grey-600: #524c44;
+  --color-grey-700: #3c3832;
+  --color-grey-800: #282622;
+  --color-grey-900: #181714;
 
   --font-sans: var(--font-body), "Source Sans 3", ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-serif), "Cormorant Garamond", Georgia, "Times New Roman", serif;
@@ -23,27 +23,27 @@
   --text-xs: 0.75rem;
   --text-xs--line-height: 1.25rem;
   --text-sm: 0.875rem;
-  --text-sm--line-height: 1.375rem;
+  --text-sm--line-height: 1.45rem;
   --text-base: 1.0625rem;
-  --text-base--line-height: 1.7rem;
-  --text-lg: 1.1875rem;
-  --text-lg--line-height: 1.85rem;
+  --text-base--line-height: 1.75rem;
+  --text-lg: 1.25rem;
+  --text-lg--line-height: 1.9rem;
   --text-xl: 1.375rem;
-  --text-xl--line-height: 1.9rem;
-  --text-2xl: 1.75rem;
-  --text-2xl--line-height: 2.15rem;
-  --text-3xl: 2.25rem;
-  --text-3xl--line-height: 2.55rem;
-  --text-4xl: 2.85rem;
-  --text-4xl--line-height: 1.12;
-  --text-5xl: 3.65rem;
-  --text-5xl--line-height: 1.08;
-  --text-6xl: 4.75rem;
-  --text-6xl--line-height: 1.04;
-  --text-7xl: 5.75rem;
-  --text-7xl--line-height: 1.02;
+  --text-xl--line-height: 1.95rem;
+  --text-2xl: 1.85rem;
+  --text-2xl--line-height: 2.2rem;
+  --text-3xl: 2.35rem;
+  --text-3xl--line-height: 1.15;
+  --text-4xl: 3.05rem;
+  --text-4xl--line-height: 1.08;
+  --text-5xl: 3.9rem;
+  --text-5xl--line-height: 1.05;
+  --text-6xl: 5.15rem;
+  --text-6xl--line-height: 0.98;
+  --text-7xl: 6.25rem;
+  --text-7xl--line-height: 0.96;
 
-  --max-width-measure: 40rem;
+  --max-width-measure: 38rem;
 }
 
 html {
@@ -58,6 +58,7 @@ body {
   font-family: var(--font-sans);
   font-size: var(--text-base);
   line-height: var(--text-base--line-height);
+  letter-spacing: 0.005em;
 }
 
 h1,
@@ -66,9 +67,13 @@ h3,
 h4 {
   color: var(--color-navy);
   font-family: var(--font-display);
-  font-weight: 500;
-  letter-spacing: -0.02em;
+  font-weight: 400;
+  letter-spacing: -0.028em;
   text-wrap: balance;
+}
+
+h1 {
+  font-weight: 300;
 }
 
 h1.text-bone,
@@ -83,27 +88,81 @@ h3.text-bone {
 }
 
 :focus-visible {
-  outline: 2px solid var(--color-gold);
-  outline-offset: 3px;
+  outline: 1px solid var(--color-gold);
+  outline-offset: 4px;
 }
 
 ::selection {
-  background-color: color-mix(in srgb, var(--color-gold) 35%, transparent);
+  background-color: color-mix(in srgb, var(--color-gold) 32%, transparent);
   color: var(--color-navy);
+}
+
+.rule {
+  display: block;
+  width: 2.75rem;
+  height: 1px;
+  background: var(--color-gold);
+}
+
+.caption,
+.kicker {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+:where(.caption, .kicker) {
+  color: var(--color-grey-500);
+}
+
+.lede {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -0.015em;
+}
+
+.hero-type {
+  text-shadow: 0 2px 28px rgb(22 38 63 / 0.55);
+}
+
+.nav-link {
+  position: relative;
+  padding-bottom: 0.15rem;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--color-gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 280ms ease;
+}
+
+.nav-link:hover::after,
+.nav-link:focus-visible::after {
+  transform: scaleX(1);
 }
 
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.9rem 1.7rem;
-  font-size: 0.9375rem;
+  padding: 1rem 1.85rem;
+  font-size: 0.8125rem;
   font-weight: 500;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
   transition:
-    background-color 180ms ease,
-    color 180ms ease,
-    border-color 180ms ease;
+    background-color 220ms ease,
+    color 220ms ease,
+    border-color 220ms ease;
 }
 
 .btn-primary {
@@ -112,8 +171,8 @@ h3.text-bone {
 }
 
 .btn-primary:hover {
-  background-color: var(--color-gold);
-  color: var(--color-navy);
+  background-color: #1d3254;
+  color: var(--color-bone);
 }
 
 .btn-gold {
@@ -122,8 +181,8 @@ h3.text-bone {
 }
 
 .btn-gold:hover {
-  background-color: var(--color-bone);
-  color: var(--color-navy);
+  background-color: var(--color-navy);
+  color: var(--color-bone);
 }
 
 .btn-ghost {
@@ -132,17 +191,19 @@ h3.text-bone {
 }
 
 .btn-ghost:hover {
-  background-color: color-mix(in srgb, currentColor 10%, transparent);
+  background-color: color-mix(in srgb, currentColor 8%, transparent);
 }
 
 .btn-line {
   display: inline-flex;
   align-items: center;
-  padding: 0.35rem 0;
-  font-size: 0.9375rem;
+  padding: 0.2rem 0 0.35rem;
+  font-size: 0.8125rem;
   font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
   border-bottom: 1px solid var(--color-gold);
-  transition: color 180ms ease;
+  transition: color 220ms ease, border-color 220ms ease;
 }
 
 .btn-line:hover {
@@ -150,21 +211,21 @@ h3.text-bone {
 }
 
 .img-zoom img {
-  transition: transform 1.1s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: transform 1.4s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .group:hover .img-zoom img,
 .img-zoom:hover img {
-  transform: scale(1.045);
+  transform: scale(1.035);
 }
 
 .field {
   width: 100%;
-  margin-top: 0.35rem;
+  margin-top: 0.4rem;
   border: 0;
   border-bottom: 1px solid var(--color-grey-300);
   background: transparent;
-  padding: 0.7rem 0;
+  padding: 0.85rem 0;
   font-size: 1.0625rem;
   color: var(--color-ink);
   outline: none;
@@ -173,4 +234,44 @@ h3.text-bone {
 
 .field:focus {
   border-bottom-color: var(--color-gold);
+}
+
+.mosaic {
+  display: grid;
+  gap: 1px;
+  background-color: var(--color-navy);
+}
+
+.mosaic-light {
+  background-color: color-mix(in srgb, var(--color-bone) 22%, transparent);
+}
+
+.band-navy {
+  background-color: var(--color-navy);
+  color: var(--color-bone);
+  box-shadow: inset 0 1px 0 color-mix(in srgb, var(--color-gold) 50%, transparent);
+}
+
+.quiet-link {
+  text-underline-offset: 0.28em;
+  text-decoration-thickness: 1px;
+  text-decoration-color: transparent;
+  transition:
+    color 220ms ease,
+    text-decoration-color 220ms ease;
+}
+
+.quiet-link:hover,
+.quiet-link:focus-visible {
+  text-decoration-line: underline;
+  text-decoration-color: var(--color-gold);
+}
+
+footer a {
+  transition: color 220ms ease;
+}
+
+footer a:hover,
+footer a:focus-visible {
+  color: var(--color-bone);
 }

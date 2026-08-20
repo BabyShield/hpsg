@@ -54,23 +54,23 @@ export default async function ProjectPage({
             { name: title, href: `/projects/${project.slug}/` },
           ]}
         />
-        <p className="mb-6 h-px w-12 bg-gold" aria-hidden="true" />
-        <p className="font-sans text-[0.68rem] font-medium uppercase tracking-[0.2em] text-grey-500">
+        <p className="rule mb-8" aria-hidden="true" />
+        <p className="kicker">
           {publicCopy(project.serviceLabel)} in {publicCopy(project.areaLabel)}{" "}
           {publicCopy(project.postcode)}
         </p>
-        <h1 className="mt-4 font-display text-4xl font-medium sm:text-6xl">{title}</h1>
+        <h1 className="mt-4 font-display text-4xl font-light sm:text-6xl">{title}</h1>
         <div className="mt-10 max-w-measure space-y-5 text-base leading-relaxed text-grey-700">
           <p>{summary}</p>
           {approach ? (
             <>
-              <h2 className="pt-4 font-display text-3xl font-medium text-navy">Approach</h2>
+              <h2 className="pt-4 font-display text-3xl font-normal text-navy">Approach</h2>
               <p>{approach}</p>
             </>
           ) : null}
           {highlights.length > 0 ? (
             <>
-              <h2 className="pt-4 font-display text-3xl font-medium text-navy">Specification</h2>
+              <h2 className="pt-4 font-display text-3xl font-normal text-navy">Specification</h2>
               <ul className="space-y-3">
                 {highlights.map((item) => (
                   <li key={item} className="flex gap-4">

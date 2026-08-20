@@ -13,19 +13,19 @@ export function LocalFacts({
   if (visible.length === 0) return null;
 
   return (
-    <section className="border-y border-grey-200 py-20 sm:py-28">
+    <section className="border-y border-grey-200 py-24 sm:py-32">
       <Container>
-        <h2 className="font-display text-4xl font-medium sm:text-5xl">
+        <p className="rule mb-8" aria-hidden="true" />
+        <h2 className="font-display text-4xl font-normal sm:text-5xl">
           Ten facts about {areaName}
         </h2>
-        <p className="mt-5 max-w-measure text-base leading-relaxed text-grey-700">
-          Checkable local facts that shape access, conservation and the building
-          — not marketing copy.
+        <p className="lede mt-6 max-w-xl text-xl text-grey-600 md:text-2xl">
+          Checkable local facts that shape access, conservation and the building.
         </p>
-        <ol className="mt-12 divide-y divide-grey-200 border-y border-grey-200">
+        <ol className="mt-16 grid gap-x-20 gap-y-12 md:grid-cols-2">
           {visible.map((fact, index) => (
-            <li key={fact} className="grid grid-cols-[auto_1fr] gap-6 py-5 sm:gap-10">
-              <span className="font-display text-2xl text-gold">
+            <li key={fact} className="grid grid-cols-[auto_1fr] items-start gap-5">
+              <span className="font-display text-3xl leading-none text-gold">
                 {String(index + 1).padStart(2, "0")}
               </span>
               <p className="text-base leading-relaxed text-grey-700">{fact}</p>
