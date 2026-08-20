@@ -5,8 +5,10 @@ import { Container } from "@/components/ui/Container";
 import { ContentImage } from "@/components/ui/ContentImage";
 import { CtaBand } from "@/components/ui/CtaBand";
 import { FaqAccordion } from "@/components/ui/FaqAccordion";
+import { LocalFacts } from "@/components/ui/LocalFacts";
 import { PageHero } from "@/components/ui/PageHero";
 import { PhotoTile } from "@/components/ui/PhotoTile";
+import { getAreaFacts } from "@/data/area-facts";
 import { areaPhotos, servicePhotos } from "@/data/photos";
 import { services } from "@/data/services";
 import type { Combo, ComboContent } from "@/data/types";
@@ -104,6 +106,8 @@ export function ComboPage({
             </Container>
           </section>
         ) : null}
+
+        <LocalFacts areaName={combo.area.name} facts={getAreaFacts(combo.area.slug)} />
 
         <section className="py-20 sm:py-28">
           <Container>

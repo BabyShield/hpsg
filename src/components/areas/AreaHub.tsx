@@ -5,8 +5,10 @@ import { Container } from "@/components/ui/Container";
 import { ContentImage } from "@/components/ui/ContentImage";
 import { CtaBand } from "@/components/ui/CtaBand";
 import { FaqAccordion } from "@/components/ui/FaqAccordion";
+import { LocalFacts } from "@/components/ui/LocalFacts";
 import { PageHero } from "@/components/ui/PageHero";
 import { PhotoTile } from "@/components/ui/PhotoTile";
+import { getAreaFacts } from "@/data/area-facts";
 import { ServiceCard } from "@/components/ui/ServiceCard";
 import { getComboContent } from "@/data/combo-content";
 import { areaHubContent } from "@/data/area-hub-content";
@@ -81,6 +83,8 @@ export function AreaHub({ area }: { area: Area }) {
             {content.typical ? <p>{publicCopy(content.typical)}</p> : null}
           </div>
         </Container>
+
+        <LocalFacts areaName={area.name} facts={getAreaFacts(area.slug)} />
 
         <section className="border-y border-grey-200 py-20 sm:py-28">
           <Container>
