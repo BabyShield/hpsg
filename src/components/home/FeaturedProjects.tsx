@@ -1,35 +1,44 @@
 import Link from "next/link";
 
-import { servicePhotos } from "@/data/photos";
 import { services } from "@/data/services";
 
 import { Container } from "../ui/Container";
-import { ContentImage } from "../ui/ContentImage";
-import { SectionHeading } from "../ui/SectionHeading";
+import { ServiceCard } from "../ui/ServiceCard";
 
 export function FeaturedProjects() {
+  const featured = services.slice(0, 3);
+
   return (
-    <section className="py-16 sm:py-24">
+    <section className="py-20 sm:py-28">
       <Container>
-        <SectionHeading
-          kicker="Interiors"
-          title="Typical work"
-          text="Photographs show the kind of rooms and housing we take on. Named case studies will follow from supplied summaries."
-        />
-        <ul className="mt-10 grid gap-4 md:grid-cols-3">
-          {services.slice(0, 3).map((service) => (
-            <li key={service.slug}>
-              <Link href={`/${service.slug}/`} className="group block">
-                <ContentImage
-                  photo={servicePhotos[service.slug]}
-                  className="img-zoom aspect-[4/5] w-full"
-                  sizes="(min-width: 768px) 33vw, 100vw"
-                />
-                <p className="mt-4 text-xs font-semibold uppercase tracking-[0.18em] text-gold">
-                  {service.navLabel}
-                </p>
-                <h3 className="mt-2 text-xl">{service.name}</h3>
-              </Link>
+        <div className="flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-end">
+          <div className="max-w-2xl">
+            <p className="mb-5 h-px w-12 bg-gold" aria-hidden="true" />
+            <h2 className="font-display text-4xl font-medium sm:text-5xl">Typical work</h2>
+            <p className="mt-5 max-w-measure text-base leading-relaxed text-grey-700">
+              Photographs show the kind of rooms and housing we take on. Named
+              case studies will follow from supplied summaries.
+            </p>
+          </div>
+          <Link href="/projects/" className="btn-line text-navy">
+            All work
+          </Link>
+        </div>
+        <ul className="mt-12 grid gap-3 lg:grid-cols-12">
+          {featured.map((service, index) => (
+            <li
+              key={service.slug}
+              className={
+                index === 0
+                  ? "min-h-[22rem] lg:col-span-8 lg:row-span-2 lg:min-h-[36rem]"
+                  : "min-h-[16rem] lg:col-span-4 lg:min-h-[17.5rem]"
+              }
+            >
+              <ServiceCard
+                service={service}
+                className="h-full"
+                sizes={index === 0 ? "(min-width: 1024px) 66vw, 100vw" : "(min-width: 1024px) 33vw, 100vw"}
+              />
             </li>
           ))}
         </ul>

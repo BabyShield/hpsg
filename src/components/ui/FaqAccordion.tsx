@@ -24,7 +24,7 @@ export function FaqAccordion({ items }: { items: Faq[] }) {
               <button
                 id={buttonId}
                 type="button"
-                className="flex w-full items-baseline justify-between gap-6 py-5 text-left text-lg text-navy"
+                className="flex w-full items-baseline justify-between gap-6 py-6 text-left font-display text-xl font-medium text-navy md:text-2xl"
                 aria-expanded={isOpen}
                 aria-controls={panelId}
                 onClick={() =>
@@ -32,7 +32,7 @@ export function FaqAccordion({ items }: { items: Faq[] }) {
                 }
               >
                 <span>{item.q}</span>
-                <span aria-hidden="true" className="font-light text-gold">
+                <span aria-hidden="true" className="font-sans text-lg font-light text-gold">
                   {isOpen ? "–" : "+"}
                 </span>
               </button>
@@ -42,9 +42,9 @@ export function FaqAccordion({ items }: { items: Faq[] }) {
               role="region"
               aria-labelledby={buttonId}
               hidden={!isOpen}
-              className="pb-5 text-base text-grey-700"
+              className="pb-6 font-sans text-base text-grey-700"
             >
-              <p className="max-w-measure">{item.a}</p>
+              <p className="max-w-measure leading-relaxed">{item.a}</p>
             </div>
           </div>
         );

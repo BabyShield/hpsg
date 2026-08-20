@@ -23,10 +23,19 @@ const grey = {
 };
 
 const fontSans = [
-  '"Helvetica Neue"',
-  "Helvetica",
-  "Arial",
+  "var(--font-body)",
+  '"Source Sans 3"',
+  "ui-sans-serif",
+  "system-ui",
   "sans-serif",
+] as const;
+
+const fontDisplay = [
+  "var(--font-serif)",
+  '"Cormorant Garamond"',
+  "Georgia",
+  '"Times New Roman"',
+  "serif",
 ] as const;
 
 /** Type scale sized for long-form service and area pages. */
@@ -54,6 +63,7 @@ const config = {
       },
       fontFamily: {
         sans: [...fontSans],
+        display: [...fontDisplay],
       },
       fontSize,
       maxWidth: {
@@ -64,4 +74,4 @@ const config = {
 };
 
 export default config;
-export { navy, gold, bone, ink, grey, fontSans, fontSize };
+export { navy, gold, bone, ink, grey, fontSans, fontDisplay, fontSize };

@@ -12,6 +12,7 @@ import { serviceHubContent } from "@/data/service-hub-content";
 import { services } from "@/data/services";
 import type { Service } from "@/data/types";
 import { getCombosForService, tier2Areas } from "@/lib/matrix";
+import { publicCopy } from "@/lib/public-copy";
 import { absoluteUrl, faqSchema, serviceSchema } from "@/lib/schema";
 
 export function ServiceHub({ service }: { service: Service }) {
@@ -42,21 +43,18 @@ export function ServiceHub({ service }: { service: Service }) {
           crumbs={crumbs}
           kicker="North West London"
           title={`${service.name} in North West London`}
-          lede={service.heroLine}
+          lede={publicCopy(service.heroLine)}
         />
-        <Container className="prose-measure py-16 sm:py-20">
-          <div className="max-w-measure space-y-5 text-base text-grey-700">
-            {content.intro.map((paragraph) => (
+        <Container className="grid gap-12 py-20 sm:py-28 lg:grid-cols-12 lg:gap-16">
+          <div className="space-y-5 text-base leading-relaxed text-grey-700 lg:col-span-7">
+            {content.intro.map((paragraph) => publicCopy(paragraph)).filter(Boolean).map((paragraph) => (
               <p key={paragraph.slice(0, 32)}>{paragraph}</p>
             ))}
           </div>
-        </Container>
-
-        <section className="border-y border-grey-200 py-16">
-          <Container>
-            <h2 className="text-3xl">Who it is for</h2>
-            <div className="mt-8 max-w-measure space-y-5 text-base text-grey-700">
-              {content.forWhom.map((paragraph) => (
+          <div className="lg:col-span-5">
+            <h2 className="font-display text-3xl font-medium">Who it is for</h2>
+            <div className="mt-6 space-y-5 text-base leading-relaxed text-grey-700">
+              {content.forWhom.map((paragraph) => publicCopy(paragraph)).filter(Boolean).map((paragraph) => (
                 <p key={paragraph.slice(0, 32)}>{paragraph}</p>
               ))}
               {hrReferral ? (
@@ -73,61 +71,66 @@ export function ServiceHub({ service }: { service: Service }) {
                 </p>
               ) : null}
             </div>
-          </Container>
-        </section>
+          </div>
+        </Container>
 
-        <section className="py-16">
+        <section className="border-y border-grey-200 py-20 sm:py-28">
           <Container>
-            <h2 className="text-3xl">What is included</h2>
-            <p className="mt-4 max-w-measure text-base text-grey-700">
+            <h2 className="font-display text-4xl font-medium sm:text-5xl">What is included</h2>
+            <p className="mt-5 max-w-measure text-base leading-relaxed text-grey-700">
               The list is the core of a typical instruction. The written proposal
               after survey is the contract scope.
             </p>
-            <ul className="mt-8 max-w-3xl list-disc space-y-3 pl-5 text-base text-grey-700">
-              {service.included.map((item) => (
-                <li key={item}>{item}</li>
+            <ul className="mt-10 max-w-3xl divide-y divide-grey-200 border-y border-grey-200">
+              {service.included.map((item) => publicCopy(item)).filter(Boolean).map((item) => (
+                <li key={item} className="flex gap-5 py-4 text-base leading-relaxed text-grey-700">
+                  <span className="mt-3 h-px w-6 shrink-0 bg-gold" aria-hidden="true" />
+                  <span>{item}</span>
+                </li>
               ))}
             </ul>
           </Container>
         </section>
 
-        <section className="border-y border-grey-200 py-16">
+        <section className="py-20 sm:py-28">
           <Container>
-            <h2 className="text-3xl">How we work</h2>
-            <ol className="mt-10 grid gap-8 md:grid-cols-2">
+            <h2 className="font-display text-4xl font-medium sm:text-5xl">How we work</h2>
+            <ol className="mt-12 grid gap-x-10 gap-y-12 md:grid-cols-2 lg:grid-cols-3">
               {service.processSteps.map((step, index) => (
                 <li key={step.title}>
-                  <p className="text-sm uppercase tracking-[0.14em] text-gold">
+                  <p className="font-display text-3xl text-gold">
                     {String(index + 1).padStart(2, "0")}
                   </p>
-                  <h3 className="mt-2 text-xl">{step.title}</h3>
-                  <p className="mt-3 text-base text-grey-700">{step.text}</p>
+                  <h3 className="mt-3 font-display text-2xl font-medium">{step.title}</h3>
+                  <p className="mt-3 text-base leading-relaxed text-grey-700">{publicCopy(step.text)}</p>
                 </li>
               ))}
             </ol>
           </Container>
         </section>
 
-        <section className="py-16">
-          <Container>
-            <h2 className="text-3xl">Specification</h2>
-            <div className="mt-8 max-w-measure space-y-5 text-base text-grey-700">
-              {content.specification.map((paragraph) => (
+        <section className="border-y border-grey-200 py-20 sm:py-28">
+          <Container className="grid gap-10 lg:grid-cols-12">
+            <h2 className="font-display text-4xl font-medium sm:text-5xl lg:col-span-4">
+              Specification
+            </h2>
+            <div className="space-y-5 text-base leading-relaxed text-grey-700 lg:col-span-8">
+              {content.specification.map((paragraph) => publicCopy(paragraph)).filter(Boolean).map((paragraph) => (
                 <p key={paragraph.slice(0, 32)}>{paragraph}</p>
               ))}
             </div>
           </Container>
         </section>
 
-        <section className="border-y border-grey-200 py-16">
+        <section className="py-20 sm:py-28">
           <Container>
-            <h2 className="text-3xl">Areas we cover</h2>
-            <p className="mt-4 max-w-measure text-base text-grey-700">
+            <h2 className="font-display text-4xl font-medium sm:text-5xl">Areas we cover</h2>
+            <p className="mt-5 max-w-measure text-base leading-relaxed text-grey-700">
               {content.areasIntro}
             </p>
             {comboAreas.length > 0 ? (
-              <div className="mt-10">
-                <h3 className="mb-4 text-sm font-medium uppercase tracking-[0.14em] text-grey-600">
+              <div className="mt-12">
+                <h3 className="mb-5 font-sans text-[0.68rem] font-medium uppercase tracking-[0.2em] text-grey-500">
                   {service.name} by area
                 </h3>
                 <ul className="grid grid-cols-1 gap-x-8 gap-y-2 sm:grid-cols-2 lg:grid-cols-3">
@@ -144,28 +147,30 @@ export function ServiceHub({ service }: { service: Service }) {
                 </ul>
               </div>
             ) : null}
-            <div className="mt-10">
+            <div className="mt-12">
               <AreaLinkGrid areas={tier2Areas()} heading="Tier 2 area hubs" />
             </div>
           </Container>
         </section>
 
-        <section className="py-16">
-          <Container>
-            <h2 className="text-3xl">Questions</h2>
-            <div className="mt-10 max-w-3xl">
+        <section className="border-y border-grey-200 py-20 sm:py-28">
+          <Container className="grid gap-12 lg:grid-cols-12">
+            <h2 className="font-display text-4xl font-medium sm:text-5xl lg:col-span-4">
+              Questions
+            </h2>
+            <div className="lg:col-span-8">
               <FaqAccordion items={service.faqs} />
             </div>
           </Container>
         </section>
 
-        <section className="border-t border-grey-200 py-16">
+        <section className="py-20 sm:py-28">
           <Container>
-            <h2 className="text-3xl">Related services</h2>
-            <ul className="mt-8 grid gap-4 md:grid-cols-3">
+            <h2 className="font-display text-4xl font-medium sm:text-5xl">Related services</h2>
+            <ul className="mt-12 grid gap-3 md:grid-cols-3">
               {others.map((item) => (
-                <li key={item.slug}>
-                  <ServiceCard service={item} />
+                <li key={item.slug} className="min-h-[20rem]">
+                  <ServiceCard service={item} className="h-full min-h-[20rem]" />
                 </li>
               ))}
             </ul>

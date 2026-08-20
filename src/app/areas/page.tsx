@@ -4,6 +4,8 @@ import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { AreaLinkGrid } from "@/components/ui/AreaLinkGrid";
 import { Container } from "@/components/ui/Container";
 import { CtaBand } from "@/components/ui/CtaBand";
+import { PhotoTile } from "@/components/ui/PhotoTile";
+import { areaPhotos } from "@/data/photos";
 import { tier1Areas, tier2Areas } from "@/lib/matrix";
 
 export const metadata: Metadata = {
@@ -13,9 +15,13 @@ export const metadata: Metadata = {
 };
 
 export default function AreasIndexPage() {
+  const tier1 = tier1Areas();
+  const [featured, ...rest] = tier1;
+  const featuredPhoto = featured ? areaPhotos[featured.slug] : undefined;
+
   return (
     <>
-      <Container className="py-16 sm:py-20">
+      <Container className="py-16 sm:py-24">
         <Breadcrumbs
           items={[
             { name: "Home", href: "/" },
@@ -23,14 +29,26 @@ export default function AreasIndexPage() {
           ]}
         />
         <p className="mb-6 h-px w-12 bg-gold" aria-hidden="true" />
-        <h1 className="text-4xl">Areas we cover</h1>
-        <p className="mt-6 max-w-measure text-lg text-grey-700">
+        <h1 className="font-display text-5xl font-medium sm:text-6xl">Areas we cover</h1>
+        <p className="mt-6 max-w-measure text-lg leading-relaxed text-grey-700">
           Local pages for the neighbourhoods we work in. Service detail for
           each Tier 1 area lives on the kitchen, bathroom, painting and
           refurbishment combination pages.
         </p>
-        <div className="mt-12 space-y-12">
-          <AreaLinkGrid areas={tier1Areas()} heading="Tier 1" withPhotos />
+        {featured && featuredPhoto ? (
+          <div className="mt-14 min-h-[22rem] lg:min-h-[32rem]">
+            <PhotoTile
+              photo={featuredPhoto}
+              href={`/areas/${featured.slug}/`}
+              title={featured.name}
+              caption={featured.postcode}
+              className="h-full min-h-[22rem] lg:min-h-[32rem]"
+              sizes="100vw"
+            />
+          </div>
+        ) : null}
+        <div className="mt-12 space-y-16">
+          <AreaLinkGrid areas={rest} heading="North West London" withPhotos />
           <AreaLinkGrid areas={tier2Areas()} heading="Also covering" withPhotos />
         </div>
       </Container>

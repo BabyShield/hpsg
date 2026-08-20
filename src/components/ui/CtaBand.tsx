@@ -13,19 +13,17 @@ export function CtaBand({
 }) {
   return (
     <section className="bg-navy text-bone">
-      <Container className="flex flex-col items-start justify-between gap-8 border-t border-gold/40 py-16 sm:flex-row sm:items-center sm:py-20">
+      <Container className="flex flex-col items-start justify-between gap-10 py-20 sm:py-28 lg:flex-row lg:items-end">
         <div className="max-w-xl">
-          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-gold">
-            Hampstead office
-          </p>
-          <h2 className="mt-3 text-3xl text-bone sm:text-4xl">{title}</h2>
-          <p className="mt-4 text-base text-bone/80">{text}</p>
+          <p className="mb-6 h-px w-12 bg-gold" aria-hidden="true" />
+          <h2 className="font-display text-4xl font-medium text-bone sm:text-5xl">{title}</h2>
+          <p className="mt-5 text-base leading-relaxed text-bone/75">{text}</p>
         </div>
-        <div className="flex flex-col gap-3 sm:flex-row">
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
           <Link href="/contact/" className="btn btn-gold">
             Request a quote
           </Link>
-          <a href={`tel:${site.phoneTel}`} className="btn btn-ghost text-bone">
+          <a href={`tel:${site.phoneTel}`} className="btn-line text-bone">
             {site.phoneDisplay}
           </a>
         </div>

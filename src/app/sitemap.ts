@@ -1,4 +1,4 @@
-import { projects } from "@/data/projects";
+import { publishedProjects } from "@/data/projects";
 import { services } from "@/data/services";
 import { areas } from "@/data/areas";
 import { getCombos } from "@/lib/matrix";
@@ -21,7 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const comboPaths = getCombos().map(
     (combo) => `/${combo.service.slug}/${combo.area.slug}/`,
   );
-  const projectPaths = projects.map((project) => `/projects/${project.slug}/`);
+  const projectPaths = publishedProjects().map((project) => `/projects/${project.slug}/`);
 
   return [...staticPaths, ...servicePaths, ...areaPaths, ...comboPaths, ...projectPaths].map(
     (path) => ({

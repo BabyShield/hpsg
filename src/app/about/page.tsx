@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import { Container } from "@/components/ui/Container";
+import { ContentImage } from "@/components/ui/ContentImage";
 import { CtaBand } from "@/components/ui/CtaBand";
 import { PageHero } from "@/components/ui/PageHero";
 import { officeNeighbourhood } from "@/data/photos";
@@ -27,8 +28,8 @@ export default function AboutPage() {
         title="About Hampstead Property Services Group"
         lede={`Based at ${addressSingleLine}.`}
       />
-      <Container className="prose-measure py-16 sm:py-20">
-        <div className="max-w-measure space-y-5 text-base text-grey-700">
+      <Container className="grid gap-12 py-20 sm:py-28 lg:grid-cols-12 lg:gap-16">
+        <div className="space-y-5 text-base leading-relaxed text-grey-700 lg:col-span-7">
           <p>
             Hampstead Property Services Group Limited is a company registered in
             England and Wales (company no. {site.companyNumber}). It brings the
@@ -41,7 +42,7 @@ export default function AboutPage() {
             Email {site.email}.
           </p>
           {isDraftToken(site.directors) ? null : <p>Director(s): {site.directors}.</p>}
-          <h2 className="pt-4 text-2xl text-navy">How we work</h2>
+          <h2 className="pt-6 font-display text-3xl font-medium text-navy">How we work</h2>
           <p>
             Enquiry, visit, written proposal, then a single programme for the
             rooms in scope. We do not quote from photographs. Work is fully
@@ -56,6 +57,14 @@ export default function AboutPage() {
             </Link>{" "}
             page.
           </p>
+        </div>
+        <div className="lg:col-span-5">
+          <ContentImage
+            photo={officeNeighbourhood}
+            className="aspect-[4/5] w-full"
+            sizes="(min-width: 1024px) 40vw, 100vw"
+          />
+          <p className="mt-4 text-sm text-grey-600">{addressSingleLine}</p>
         </div>
       </Container>
       <CtaBand />

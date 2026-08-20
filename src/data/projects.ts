@@ -1,3 +1,5 @@
+import { isDraftToken } from "@/lib/public-copy";
+
 export type Project = {
   slug: string;
   title: string;
@@ -87,4 +89,8 @@ export const projects: Project[] = [
 
 export function getProject(slug: string): Project | undefined {
   return projects.find((project) => project.slug === slug);
+}
+
+export function publishedProjects(): Project[] {
+  return projects.filter((project) => !isDraftToken(project.title));
 }

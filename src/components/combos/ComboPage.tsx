@@ -54,18 +54,21 @@ export function ComboPage({
         crumbs={crumbs}
         kicker={`${combo.area.name} ${combo.area.postcode}`}
         title={`${combo.service.name} in ${combo.area.name}`}
-        lede={content.intro}
+        lede={publicCopy(content.intro)}
       />
     </div>
   );
 
   const included = (
-    <section key="included" className="border-y border-grey-200 py-16">
+    <section key="included" className="border-y border-grey-200 py-20 sm:py-28">
       <Container>
-        <h2 className="text-3xl">What is included</h2>
-        <ul className="mt-8 max-w-3xl list-disc space-y-3 pl-5 text-base text-grey-700">
-          {combo.service.included.map((item) => (
-            <li key={item}>{item}</li>
+        <h2 className="font-display text-4xl font-medium sm:text-5xl">What is included</h2>
+        <ul className="mt-10 max-w-3xl divide-y divide-grey-200 border-y border-grey-200">
+          {combo.service.included.map((item) => publicCopy(item)).filter(Boolean).map((item) => (
+            <li key={item} className="flex gap-5 py-4 text-base leading-relaxed text-grey-700">
+              <span className="mt-3 h-px w-6 shrink-0 bg-gold" aria-hidden="true" />
+              <span>{item}</span>
+            </li>
           ))}
         </ul>
       </Container>
@@ -73,11 +76,13 @@ export function ComboPage({
   );
 
   const working = (
-    <section key="working" className="py-16">
-      <Container className="grid items-start gap-10 lg:grid-cols-2">
+    <section key="working" className="py-20 sm:py-28">
+      <Container className="grid items-start gap-12 lg:grid-cols-2 lg:gap-16">
         <div>
-          <h2 className="text-3xl">Working in {combo.area.name}</h2>
-          <div className="mt-8 max-w-measure space-y-5 text-base text-grey-700">
+          <h2 className="font-display text-4xl font-medium sm:text-5xl">
+            Working in {combo.area.name}
+          </h2>
+          <div className="mt-8 max-w-measure space-y-5 text-base leading-relaxed text-grey-700">
             <p>
               <span className="font-medium text-navy">Council. </span>
               {combo.area.council}
@@ -99,16 +104,17 @@ export function ComboPage({
   );
 
   const process = (
-    <section key="process" className="border-y border-grey-200 py-16">
+    <section key="process" className="border-y border-grey-200 py-20 sm:py-28">
       <Container>
-        <h2 className="text-3xl">How we work</h2>
-        <ol className="mt-8 max-w-measure space-y-6">
+        <h2 className="font-display text-4xl font-medium sm:text-5xl">How we work</h2>
+        <ol className="mt-12 grid gap-x-10 gap-y-12 md:grid-cols-2">
           {combo.service.processSteps.map((step, index) => (
             <li key={step.title}>
-              <h3 className="text-xl">
-                {index + 1}. {step.title}
-              </h3>
-              <p className="mt-2 text-base text-grey-700">{step.text}</p>
+              <p className="font-display text-3xl text-gold">
+                {String(index + 1).padStart(2, "0")}
+              </p>
+              <h3 className="mt-3 font-display text-2xl font-medium">{step.title}</h3>
+              <p className="mt-3 text-base leading-relaxed text-grey-700">{publicCopy(step.text)}</p>
             </li>
           ))}
         </ol>
@@ -135,18 +141,22 @@ export function ComboPage({
       <JsonLd data={faqSchema(faqs)} />
       <article>
         {order}
-        <section className="py-16">
-          <Container>
-            <h2 className="text-3xl">Questions</h2>
-            <div className="mt-10 max-w-3xl">
+        <section className="py-20 sm:py-28">
+          <Container className="grid gap-12 lg:grid-cols-12">
+            <h2 className="font-display text-4xl font-medium sm:text-5xl lg:col-span-4">
+              Questions
+            </h2>
+            <div className="lg:col-span-8">
               <FaqAccordion items={faqs} />
             </div>
           </Container>
         </section>
-        <section className="border-t border-grey-200 py-16">
+        <section className="border-t border-grey-200 py-20 sm:py-28">
           <Container>
-            <h2 className="text-3xl">Also in this neighbourhood</h2>
-            <ul className="mt-6 flex flex-col gap-2 text-base text-navy">
+            <h2 className="font-display text-4xl font-medium sm:text-5xl">
+              Also in this neighbourhood
+            </h2>
+            <ul className="mt-8 flex flex-col gap-3 text-base text-navy">
               <li>
                 <Link href={`/${combo.service.slug}/`} className="hover:text-gold">
                   {combo.service.name} in North West London

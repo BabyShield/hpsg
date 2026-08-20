@@ -3,10 +3,10 @@ import Link from "next/link";
 
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { Container } from "@/components/ui/Container";
-import { ContentImage } from "@/components/ui/ContentImage";
 import { CtaBand } from "@/components/ui/CtaBand";
-import { photoCredit, servicePhotos } from "@/data/photos";
-import { projects } from "@/data/projects";
+import { ServiceCard } from "@/components/ui/ServiceCard";
+import { photoCredit } from "@/data/photos";
+import { publishedProjects } from "@/data/projects";
 import { services } from "@/data/services";
 
 export const metadata: Metadata = {
@@ -16,9 +16,11 @@ export const metadata: Metadata = {
 };
 
 export default function ProjectsPage() {
+  const live = publishedProjects();
+
   return (
     <>
-      <Container className="py-16 sm:py-20">
+      <Container className="py-16 sm:py-24">
         <Breadcrumbs
           items={[
             { name: "Home", href: "/" },
@@ -26,42 +28,42 @@ export default function ProjectsPage() {
           ]}
         />
         <p className="mb-6 h-px w-12 bg-gold" aria-hidden="true" />
-        <h1 className="text-4xl sm:text-5xl">Projects</h1>
-        <p className="mt-6 max-w-measure text-lg text-grey-700">
-          {photoCredit} Named case studies will be published from supplied
-          summaries, rewritten in this site&apos;s voice. [TBC: 6 HR project
-          summaries]
-        </p>
-        <ul className="mt-10 grid gap-6 md:grid-cols-2">
-          {services.map((service) => (
-            <li key={service.slug}>
-              <Link href={`/${service.slug}/`} className="block">
-                <ContentImage
-                  photo={servicePhotos[service.slug]}
-                  className="aspect-[16/9] w-full"
-                  sizes="(min-width: 768px) 50vw, 100vw"
+        <h1 className="font-display text-5xl font-medium sm:text-6xl">Work</h1>
+        <p className="mt-6 max-w-measure text-lg leading-relaxed text-grey-700">{photoCredit}</p>
+        <ul className="mt-14 grid gap-3 lg:grid-cols-12">
+          {services.map((service, index) => {
+            const mosaic = [
+              "min-h-[22rem] lg:col-span-7 lg:min-h-[32rem]",
+              "min-h-[16rem] lg:col-span-5 lg:min-h-[32rem]",
+              "min-h-[16rem] lg:col-span-5 lg:min-h-[22rem]",
+              "min-h-[16rem] lg:col-span-7 lg:min-h-[22rem]",
+            ] as const;
+            return (
+              <li key={service.slug} className={mosaic[index]}>
+                <ServiceCard
+                  service={service}
+                  className="h-full"
+                  sizes="(min-width: 1024px) 55vw, 100vw"
                 />
-                <h2 className="mt-3 text-xl">{service.name}</h2>
-              </Link>
-            </li>
-          ))}
+              </li>
+            );
+          })}
         </ul>
-        <ul className="mt-12 grid gap-6 md:grid-cols-2">
-          {projects.map((project) => (
-            <li key={project.slug}>
-              <Link
-                href={`/projects/${project.slug}/`}
-                className="block border border-grey-200 p-8 hover:border-gold"
-              >
-                <p className="text-sm uppercase tracking-[0.14em] text-grey-600">
-                  {project.serviceLabel} · {project.areaLabel}
-                </p>
-                <h2 className="mt-3 text-2xl">{project.title}</h2>
-                <p className="mt-3 text-base text-grey-700">{project.summary}</p>
-              </Link>
-            </li>
-          ))}
-        </ul>
+        {live.length > 0 ? (
+          <ul className="mt-16 grid gap-6 md:grid-cols-2">
+            {live.map((project) => (
+              <li key={project.slug}>
+                <Link href={`/projects/${project.slug}/`} className="block border-t border-grey-200 py-8 hover:text-gold">
+                  <p className="font-sans text-[0.68rem] font-medium uppercase tracking-[0.2em] text-grey-500">
+                    {project.serviceLabel} · {project.areaLabel}
+                  </p>
+                  <h2 className="mt-3 font-display text-3xl font-medium">{project.title}</h2>
+                  <p className="mt-3 text-base leading-relaxed text-grey-700">{project.summary}</p>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        ) : null}
       </Container>
       <CtaBand />
     </>

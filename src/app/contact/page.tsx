@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 
+import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { Container } from "@/components/ui/Container";
-import { PageHero } from "@/components/ui/PageHero";
+import { ContentImage } from "@/components/ui/ContentImage";
 import { areas } from "@/data/areas";
 import { officeNeighbourhood } from "@/data/photos";
 import { services } from "@/data/services";
@@ -15,30 +16,35 @@ export const metadata: Metadata = {
 
 const mapSrc = `https://www.openstreetmap.org/export/embed.html?bbox=${site.geo.longitude - 0.01}%2C${site.geo.latitude - 0.006}%2C${site.geo.longitude + 0.01}%2C${site.geo.latitude + 0.006}&layer=mapnik&marker=${site.geo.latitude}%2C${site.geo.longitude}`;
 
+const fieldClass = "field";
+
 export default function ContactPage() {
   const formAction = site.formEndpoint ?? `mailto:${site.email}`;
 
   return (
     <>
-      <PageHero
-        photo={officeNeighbourhood}
-        crumbs={[
-          { name: "Home", href: "/" },
-          { name: "Contact", href: "/contact/" },
-        ]}
-        kicker={site.phoneDisplay}
-        title="Contact"
-        lede={addressSingleLine}
-      />
-    <Container className="py-16 sm:py-20">
-      <div className="grid gap-12 lg:grid-cols-2">
-        <div>
-          <address className="max-w-measure text-base not-italic text-grey-700">
-            <p>
-              <a href={`tel:${site.phoneTel}`} className="text-navy hover:text-gold">
-                {site.phoneDisplay}
-              </a>
-            </p>
+      <Container className="pt-10">
+        <Breadcrumbs
+          items={[
+            { name: "Home", href: "/" },
+            { name: "Contact", href: "/contact/" },
+          ]}
+        />
+      </Container>
+      <Container className="grid gap-12 pb-20 sm:pb-28 lg:grid-cols-12 lg:gap-16">
+        <div className="lg:col-span-5">
+          <p className="mb-5 h-px w-12 bg-gold" aria-hidden="true" />
+          <h1 className="font-display text-5xl font-medium sm:text-6xl">Contact</h1>
+          <p className="mt-6 max-w-measure text-base leading-relaxed text-grey-700">
+            Tell us about the property and the rooms in scope. We visit before we
+            write a proposal.
+          </p>
+          <p className="mt-10 font-display text-4xl font-medium text-navy">
+            <a href={`tel:${site.phoneTel}`} className="hover:text-gold">
+              {site.phoneDisplay}
+            </a>
+          </p>
+          <address className="mt-8 text-base not-italic leading-relaxed text-grey-700">
             <p>
               <a href={`mailto:${site.email}`} className="text-navy hover:text-gold">
                 {site.email}
@@ -55,7 +61,12 @@ export default function ContactPage() {
               <p className="mt-4">Opening hours: {site.openingHours}</p>
             )}
           </address>
-          <div className="mt-8 aspect-[4/3] w-full border border-grey-200">
+          <ContentImage
+            photo={officeNeighbourhood}
+            className="mt-10 aspect-[4/3] w-full"
+            sizes="(min-width: 1024px) 40vw, 100vw"
+          />
+          <div className="mt-3 aspect-[16/9] w-full overflow-hidden bg-grey-100">
             <iframe
               title="Map of Unit 3 Palace Court, 250 Finchley Road, London NW3 6DN"
               src={mapSrc}
@@ -67,13 +78,17 @@ export default function ContactPage() {
             Map of {site.address.postcode}.{" "}
             <a
               href={`https://www.openstreetmap.org/?mlat=${site.geo.latitude}&mlon=${site.geo.longitude}#map=17/${site.geo.latitude}/${site.geo.longitude}`}
-              className="underline"
+              className="underline decoration-gold underline-offset-4"
             >
               View larger map
             </a>
           </p>
         </div>
-        <form action={formAction} method={site.formEndpoint ? "post" : "get"} className="space-y-4">
+        <form
+          action={formAction}
+          method={site.formEndpoint ? "post" : "get"}
+          className="space-y-7 lg:col-span-7 lg:pt-16"
+        >
           <p className="text-sm text-grey-600">
             {site.formEndpoint
               ? "Send an enquiry."
@@ -81,35 +96,19 @@ export default function ContactPage() {
           </p>
           <label className="block text-sm text-navy">
             Name
-            <input
-              required
-              name="name"
-              className="mt-1 w-full border border-grey-300 bg-bone px-3 py-2 text-base text-ink"
-            />
+            <input required name="name" className={fieldClass} />
           </label>
           <label className="block text-sm text-navy">
             Email
-            <input
-              required
-              type="email"
-              name="email"
-              className="mt-1 w-full border border-grey-300 bg-bone px-3 py-2 text-base text-ink"
-            />
+            <input required type="email" name="email" className={fieldClass} />
           </label>
           <label className="block text-sm text-navy">
             Phone
-            <input
-              name="phone"
-              className="mt-1 w-full border border-grey-300 bg-bone px-3 py-2 text-base text-ink"
-            />
+            <input name="phone" className={fieldClass} />
           </label>
           <label className="block text-sm text-navy">
             Area
-            <select
-              name="area"
-              className="mt-1 w-full border border-grey-300 bg-bone px-3 py-2 text-base text-ink"
-              defaultValue=""
-            >
+            <select name="area" className={fieldClass} defaultValue="">
               <option value="" disabled>
                 Select an area
               </option>
@@ -122,11 +121,7 @@ export default function ContactPage() {
           </label>
           <label className="block text-sm text-navy">
             Service
-            <select
-              name="service"
-              className="mt-1 w-full border border-grey-300 bg-bone px-3 py-2 text-base text-ink"
-              defaultValue=""
-            >
+            <select name="service" className={fieldClass} defaultValue="">
               <option value="" disabled>
                 Select a service
               </option>
@@ -139,19 +134,13 @@ export default function ContactPage() {
           </label>
           <label className="block text-sm text-navy">
             Message
-            <textarea
-              required
-              name="message"
-              rows={6}
-              className="mt-1 w-full border border-grey-300 bg-bone px-3 py-2 text-base text-ink"
-            />
+            <textarea required name="message" rows={5} className={fieldClass} />
           </label>
           <button type="submit" className="btn btn-primary">
             Send enquiry
           </button>
         </form>
-      </div>
-    </Container>
+      </Container>
     </>
   );
 }
