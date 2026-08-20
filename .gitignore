@@ -21,6 +21,9 @@
 .open-next
 .wrangler
 
+# local captures
+.tmp-screenshots
+
 # production
 /build
 

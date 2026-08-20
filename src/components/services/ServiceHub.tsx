@@ -4,8 +4,10 @@ import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { AreaLinkGrid } from "@/components/ui/AreaLinkGrid";
 import { Container } from "@/components/ui/Container";
+import { ContentImage } from "@/components/ui/ContentImage";
 import { CtaBand } from "@/components/ui/CtaBand";
 import { FaqAccordion } from "@/components/ui/FaqAccordion";
+import { photoCredit, servicePhotos } from "@/data/photos";
 import { serviceHubContent } from "@/data/service-hub-content";
 import { services } from "@/data/services";
 import type { Service } from "@/data/types";
@@ -42,6 +44,14 @@ export function ServiceHub({ service }: { service: Service }) {
             {service.name} in North West London
           </h1>
           <p className="mt-6 max-w-measure text-lg text-grey-700">{service.heroLine}</p>
+          <div className="mt-10">
+            <ContentImage
+              photo={servicePhotos[service.slug]}
+              className="w-full"
+              sizes="(min-width: 1024px) 72rem, 100vw"
+            />
+            <p className="mt-3 text-xs text-grey-600">{photoCredit}</p>
+          </div>
           <div className="mt-10 max-w-measure space-y-5 text-base text-grey-700">
             {content.intro.map((paragraph) => (
               <p key={paragraph.slice(0, 32)}>{paragraph}</p>

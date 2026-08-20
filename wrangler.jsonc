@@ -20,17 +20,12 @@
       "service": "hpsg"
     }
   ],
-  // Custom domain for the hpsg worker. The zone must already sit on Cloudflare
-  // before the first deploy that uses this route, or Wrangler will error.
-  // [VERIFY against current Wrangler custom-domain docs]
   "routes": [
     {
       "pattern": "hpsg.co.uk",
       "custom_domain": true
     }
   ],
-  // Production must never set HPSG_NOINDEX. Preview / staging deployments
-  // set HPSG_NOINDEX=true so X-Robots-Tag: noindex, nofollow is emitted.
   "vars": {
     "HPSG_NOINDEX": "false"
   }

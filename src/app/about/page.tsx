@@ -3,7 +3,9 @@ import Link from "next/link";
 
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { Container } from "@/components/ui/Container";
+import { ContentImage } from "@/components/ui/ContentImage";
 import { CtaBand } from "@/components/ui/CtaBand";
+import { officeNeighbourhood, photoCredit } from "@/data/photos";
 import { addressSingleLine, site } from "@/data/site";
 
 export const metadata: Metadata = {
@@ -24,6 +26,14 @@ export default function AboutPage() {
         />
         <p className="mb-6 h-px w-12 bg-gold" aria-hidden="true" />
         <h1 className="text-4xl sm:text-5xl">About Hampstead Property Services Group</h1>
+        <div className="mt-10">
+          <ContentImage
+            photo={officeNeighbourhood}
+            className="w-full"
+            sizes="(min-width: 1024px) 72rem, 100vw"
+          />
+          <p className="mt-3 text-xs text-grey-600">{photoCredit}</p>
+        </div>
         <div className="mt-10 max-w-measure space-y-5 text-base text-grey-700">
           <p>
             Hampstead Property Services Group Limited is a company registered in

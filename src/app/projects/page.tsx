@@ -3,8 +3,11 @@ import Link from "next/link";
 
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { Container } from "@/components/ui/Container";
+import { ContentImage } from "@/components/ui/ContentImage";
 import { CtaBand } from "@/components/ui/CtaBand";
+import { photoCredit, servicePhotos } from "@/data/photos";
 import { projects } from "@/data/projects";
+import { services } from "@/data/services";
 
 export const metadata: Metadata = {
   title: "Projects",
@@ -25,10 +28,24 @@ export default function ProjectsPage() {
         <p className="mb-6 h-px w-12 bg-gold" aria-hidden="true" />
         <h1 className="text-4xl sm:text-5xl">Projects</h1>
         <p className="mt-6 max-w-measure text-lg text-grey-700">
-          Write-ups will be published from supplied project summaries, rewritten
-          in this site&apos;s voice. We do not invent clients, addresses or
-          outcomes. [TBC: 6 HR project summaries and photographs]
+          {photoCredit} Named case studies will be published from supplied
+          summaries, rewritten in this site&apos;s voice. [TBC: 6 HR project
+          summaries]
         </p>
+        <ul className="mt-10 grid gap-6 md:grid-cols-2">
+          {services.map((service) => (
+            <li key={service.slug}>
+              <Link href={`/${service.slug}/`} className="block">
+                <ContentImage
+                  photo={servicePhotos[service.slug]}
+                  className="aspect-[16/9] w-full"
+                  sizes="(min-width: 768px) 50vw, 100vw"
+                />
+                <h2 className="mt-3 text-xl">{service.name}</h2>
+              </Link>
+            </li>
+          ))}
+        </ul>
         <ul className="mt-12 grid gap-6 md:grid-cols-2">
           {projects.map((project) => (
             <li key={project.slug}>

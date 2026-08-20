@@ -4,10 +4,12 @@ import { FeaturedProjects } from "@/components/home/FeaturedProjects";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { AreaLinkGrid } from "@/components/ui/AreaLinkGrid";
 import { Container } from "@/components/ui/Container";
+import { ContentImage } from "@/components/ui/ContentImage";
 import { CtaBand } from "@/components/ui/CtaBand";
 import { FaqAccordion } from "@/components/ui/FaqAccordion";
 import { ServiceCard } from "@/components/ui/ServiceCard";
 import { homeFaqs, whyHpsg } from "@/data/home";
+import { homeHero, photoCredit } from "@/data/photos";
 import { services } from "@/data/services";
 import { site } from "@/data/site";
 import { pageMetadata } from "@/lib/metadata";
@@ -25,7 +27,14 @@ export default function HomePage() {
     <>
       <JsonLd data={faqSchema(homeFaqs)} />
       <section className="border-b border-grey-200">
-        <Container className="py-20 sm:py-28">
+        <ContentImage
+          photo={homeHero}
+          priority
+          className="aspect-[16/9] max-h-[70vh] w-full"
+          sizes="100vw"
+        />
+        <Container className="py-16 sm:py-24">
+          <p className="mb-4 text-xs tracking-wide text-grey-600">{photoCredit}</p>
           <p className="mb-6 h-px w-12 bg-gold" aria-hidden="true" />
           <h1 className="max-w-4xl text-4xl sm:text-5xl">{site.homeH1}</h1>
           <p className="mt-6 max-w-measure text-lg text-grey-700">

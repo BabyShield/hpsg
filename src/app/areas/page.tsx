@@ -30,8 +30,8 @@ export default function AreasIndexPage() {
           refurbishment combination pages.
         </p>
         <div className="mt-12 space-y-12">
-          <AreaLinkGrid areas={tier1Areas()} heading="Tier 1" />
-          <AreaLinkGrid areas={tier2Areas()} heading="Also covering" />
+          <AreaLinkGrid areas={tier1Areas()} heading="Tier 1" withPhotos />
+          <AreaLinkGrid areas={tier2Areas()} heading="Also covering" withPhotos />
         </div>
       </Container>
       <CtaBand />

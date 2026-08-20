@@ -3,8 +3,10 @@ import Link from "next/link";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { Container } from "@/components/ui/Container";
+import { ContentImage } from "@/components/ui/ContentImage";
 import { CtaBand } from "@/components/ui/CtaBand";
 import { FaqAccordion } from "@/components/ui/FaqAccordion";
+import { areaPhotos, photoCredit, servicePhotos } from "@/data/photos";
 import { absoluteUrl, faqSchema, serviceSchema } from "@/lib/schema";
 import type { ComboContent } from "@/data/types";
 import type { Combo } from "@/data/types";
@@ -55,6 +57,25 @@ export function ComboPage({
         <div className="mt-8 max-w-measure space-y-5 text-base text-grey-700">
           <p>{content.intro}</p>
         </div>
+        <div className="mt-10 grid gap-4 md:grid-cols-2">
+          <div>
+            <ContentImage
+              photo={servicePhotos[combo.service.slug]}
+              className="aspect-[16/9] w-full"
+              sizes="(min-width: 768px) 50vw, 100vw"
+            />
+          </div>
+          {areaPhotos[combo.area.slug] ? (
+            <div>
+              <ContentImage
+                photo={areaPhotos[combo.area.slug]}
+                className="aspect-[16/9] w-full"
+                sizes="(min-width: 768px) 50vw, 100vw"
+              />
+            </div>
+          ) : null}
+        </div>
+        <p className="mt-3 text-xs text-grey-600">{photoCredit}</p>
       </Container>
     </section>
   );

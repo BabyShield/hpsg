@@ -33,8 +33,8 @@ export function organizationSchema() {
       longitude: site.geo.longitude,
     },
     areaServed: areas.map((area) => area.name),
-    image: absoluteUrl("/opengraph-image"),
-    logo: absoluteUrl("/opengraph-image"),
+    image: absoluteUrl("/images/home/hero.jpg"),
+    logo: absoluteUrl("/images/about/office-neighbourhood.jpg"),
   };
 }
 

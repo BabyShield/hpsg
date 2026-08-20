@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { Container } from "@/components/ui/Container";
+import { ContentImage } from "@/components/ui/ContentImage";
 import { areas } from "@/data/areas";
+import { officeNeighbourhood, photoCredit } from "@/data/photos";
 import { services } from "@/data/services";
 import { addressSingleLine, site } from "@/data/site";
 
@@ -48,6 +50,14 @@ export default function ContactPage() {
             </p>
             <p className="mt-4">Opening hours: {site.openingHours}</p>
           </address>
+          <div className="mt-8">
+            <ContentImage
+              photo={officeNeighbourhood}
+              className="w-full"
+              sizes="(min-width: 1024px) 50vw, 100vw"
+            />
+            <p className="mt-2 text-xs text-grey-600">{photoCredit}</p>
+          </div>
           <div className="mt-8 aspect-[4/3] w-full border border-grey-200">
             <iframe
               title="Map of Unit 3 Palace Court, 250 Finchley Road, London NW3 6DN"

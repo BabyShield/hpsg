@@ -3,10 +3,12 @@ import Link from "next/link";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { Container } from "@/components/ui/Container";
+import { ContentImage } from "@/components/ui/ContentImage";
 import { CtaBand } from "@/components/ui/CtaBand";
 import { FaqAccordion } from "@/components/ui/FaqAccordion";
 import { faqSchema } from "@/lib/schema";
 import { areaHubContent } from "@/data/area-hub-content";
+import { areaPhotos, photoCredit } from "@/data/photos";
 import { services } from "@/data/services";
 import type { Area } from "@/data/types";
 import {
@@ -48,6 +50,16 @@ export function AreaHub({ area }: { area: Area }) {
             Kitchen renovation, bathroom renovation, painting and decorating, and
             light refurbishment in {area.name}.
           </p>
+          {areaPhotos[area.slug] ? (
+            <div className="mt-10">
+              <ContentImage
+                photo={areaPhotos[area.slug]}
+                className="w-full"
+                sizes="(min-width: 1024px) 72rem, 100vw"
+              />
+              <p className="mt-3 text-xs text-grey-600">{photoCredit}</p>
+            </div>
+          ) : null}
           <div className="mt-10 max-w-measure space-y-5 text-base text-grey-700">
             <p>{content.intro}</p>
           </div>
