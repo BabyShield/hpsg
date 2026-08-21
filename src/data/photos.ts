@@ -11,7 +11,7 @@ const wide = { width: 1600, height: 900 };
 
 export const homeHero: Photo = {
   src: "/images/home/hero.jpg",
-  alt: "A quiet cream-painted Hampstead mews in morning light, empty cobbles and clipped box",
+  alt: "A cream-stucco North West London house and private garden in morning light, empty lawn and clipped box",
   ...wide,
 };
 
