@@ -233,9 +233,10 @@ export const services: Service[] = [
     slug: "painting-decorating",
     name: "Painting & Decorating",
     navLabel: "Painting",
-    heroLine: "Painting and decorating with proper preparation, for occupied homes and heritage interiors in North West London.",
+    heroLine:
+      "Painting and decorating in North West London period houses and mansion flats — preparation, original joinery and occupied homes, from a Hampstead office.",
     summary:
-      "Decorating in this part of London is mostly preparation: filling, rubbing down, lining where the plaster has moved, and choosing a finish that suits original joinery and lime or gypsum backgrounds. We work in occupied houses and flats, with dust control and a sequence that lets you live around the work where the programme allows.",
+      "Painting and decorating in Hampstead, Belsize Park, Highgate and North West London. Preparation, lime and gypsum backgrounds, sashes and occupied houses — a written prep specification, not a quick refresh.",
     included: [
       "Room-by-room survey of substrates, previous coatings, damp staining and joinery condition",
       "Protection of floors, furniture and common parts; dust control in occupied homes",
@@ -252,15 +253,15 @@ export const services: Service[] = [
     processSteps: [
       {
         title: "Survey and specification",
-        text: "We look at the plaster, the joinery and the previous coating, then write a prep specification. A cheap paint on unprepared walls is not the work.",
+        text: "We look at the plaster, the joinery and the previous coating, then write a prep specification. Samples are painted on the wall. A cheap paint on unprepared walls is not the work.",
       },
       {
         title: "Programme for an occupied home",
-        text: "Rooms are sequenced so you can keep a kitchen, a bathroom and a bedroom. Furniture is moved or covered by agreement, not as an afterthought on the first morning.",
+        text: "Rooms are sequenced so you can keep a kitchen, a bathroom and a bedroom. Furniture is moved or covered by agreement, not as an afterthought on the first morning. In mansion blocks we follow the building's hours.",
       },
       {
         title: "Preparation",
-        text: "Filling, lining, knotting, priming and rubbing down take the majority of the time. We will not undercoat over defects we have not addressed.",
+        text: "Washing down, filling, lining, knotting, priming and rubbing down take the majority of the time. We will not undercoat over defects we have not addressed. Failed plaster and damp are isolated, not painted over.",
       },
       {
         title: "Decoration",
@@ -306,12 +307,28 @@ export const services: Service[] = [
       },
       {
         q: "Do you work to a painting-and-decorating specification?",
-        a: "Yes. Prep standard, number of coats, product type and sheen are written down. That is what we snag against.",
+        a: "Yes. Prep standard, number of coats, product type and sheen are written down. That is what we snag against, in daylight and with the lights on.",
+      },
+      {
+        q: "What does painting and decorating in North West London cost?",
+        a: "We do not publish a price list. A Hampstead drawing room with original joinery, an occupied West Hampstead conversion and a Maida Vale mansion flat are different jobs. We visit, then write a proposal against a defined prep specification. 020 7101 3168.",
+      },
+      {
+        q: "Do I need permission to change exterior colour?",
+        a: "In a conservation area or on a listed building, often yes. In Hampstead Garden Suburb a new outside colour is not assumed. Internal decoration that does not change the elevation is ordinary work. We check the address before we quote the elevation.",
+      },
+      {
+        q: "Will you decorate common parts in a mansion block?",
+        a: "Yes, as a separate scope from the demise, and to the building's hours and specification. We will not treat the stair as an extension of the flat.",
+      },
+      {
+        q: "Can colour be decided from a chart?",
+        a: "Charts are a starting point. Samples are painted on the wall, in the light the room has. North-facing Hampstead rooms and west-facing mansion flats do not read the same emulsion in the same way.",
       },
     ],
     metaTitle: "Painting and Decorating in North West London | Hampstead period houses | HPSG",
     metaDescription:
-      "Painting and decorating in Hampstead, Belsize Park, Highgate and North West London. Preparation, original joinery, occupied houses and conversions. 020 7101 3168.",
+      "Painting and decorating in Hampstead, Belsize Park, Highgate and North West London. Preparation, original joinery, occupied houses and conversions. Survey-led. 020 7101 3168.",
   },
   {
     slug: "light-refurbishment",

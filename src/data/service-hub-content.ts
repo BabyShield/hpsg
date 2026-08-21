@@ -1,4 +1,10 @@
-import { bathroomRoomPhotos, kitchenRoomPhotos, servicePhotos, type Photo } from "./photos";
+import {
+  bathroomRoomPhotos,
+  kitchenRoomPhotos,
+  paintingRoomPhotos,
+  servicePhotos,
+  type Photo,
+} from "./photos";
 import type { ServiceSlug } from "./types";
 
 export type HubSection = {
@@ -288,15 +294,80 @@ export const serviceHubContent: Record<ServiceSlug, ServiceHubContent> = {
   },
   "painting-decorating": {
     intro: [
-      "Decorating in North West London is mostly preparation. Lime and gypsum backgrounds, original joinery, previous coatings of unknown type, and hairline movement in converted houses will telegraph through any finish that is applied too soon. The work is washing down, filling, lining where it is needed, and a coating system that suits the substrate — not a quick refresh with a fashionable colour.",
-      "Hampstead Property Services Group paints and decorates occupied houses and flats as well as empty ones. Dust control, room sequencing and a written prep specification matter more here than in a vacant new-build. A family still living in a West Hampstead terrace, or a mansion-flat owner who cannot decant, is a normal brief.",
-      "Heritage interiors — picture rails, shutters, sash windows, original doors — are joinery as much as they are painting. They are programmed and priced as such. Spray is used where it is the cleaner method for an empty room; brush and roller remain the default around furnished, original fabric.",
-      "We do not sell a house style. Colour is sampled on the wall, in the light the room actually has. North-facing Hampstead rooms and west-facing Maida Vale mansion flats do not read the same emulsion in the same way.",
+      "Painting and decorating in North West London is mostly preparation. Lime and gypsum backgrounds, original joinery, previous coatings of unknown type, and hairline movement in converted houses will telegraph through any finish that is applied too soon. The work is washing down, filling, lining where it is needed, and a coating system that suits the substrate — not a quick refresh with a fashionable colour.",
+      "Hampstead Property Services Group paints and decorates occupied houses and flats as well as empty ones, from a Finchley Road office. Dust control, room sequencing and a written prep specification matter more here than in a vacant new-build. A family still living in a West Hampstead terrace, or a mansion-flat owner in St John's Wood who cannot decant, is a normal brief.",
+      "Heritage interiors in Hampstead, Belsize Park, Primrose Hill and Highgate — picture rails, shutters, sash windows, original doors — are joinery as much as they are painting. They are programmed and priced as such. Spray is used where it is the cleaner method for an empty room; brush and roller remain the default around furnished, original fabric.",
+      "We do not sell a house style. Colour is sampled on the wall, in the light the room actually has. A north-facing Hampstead drawing room and a west-facing Maida Vale mansion flat do not read the same emulsion in the same way. Heritage colours are taken from established generic ranges; we do not claim an exclusive palette or manufacturer relationship.",
+      "Failed plaster, rising damp and timber decay are not decorating items. We isolate the cause and, where it sits inside a light refurbishment, include the repair rather than paint over it. Exterior colour on a conservation-area or listed elevation, and any new outside colour in Hampstead Garden Suburb, is checked before it is quoted.",
     ],
     forWhom: [
-      "The work is for people who want the plaster and the joinery treated properly: whole-house decoration, a floor of a conversion, common-parts making-good after other trades, or exterior painting of previously painted windows and joinery where access and weather allow.",
+      "The work is for owner-occupiers and landlords who want the plaster and the joinery treated properly: whole-house decoration, a floor of a conversion, a mansion-flat reception, common-parts making-good after other trades, or exterior painting of previously painted windows and joinery where access and weather allow.",
       "Occupied-home working is planned room by room so a kitchen, a bathroom and a bedroom remain usable. In mansion blocks we also follow the building's hours. We will not run spray equipment in a furnished flat as a default method.",
-      "Failed plaster, rising damp and timber decay are not decorating items. We isolate the cause and, where it sits inside a light refurbishment, include the repair rather than paint over it.",
+      "Making-good after kitchens, bathrooms and flooring is part of a light-refurbishment programme. Decorating is then the last trade, not the first. We will not paint a room that a plumber still has to open.",
+    ],
+    failuresHeading: "What has to be right before the colour",
+    failuresLede:
+      "Painting in this housing stock fails from the substrate, the joinery and the sequence — not from the choice of emulsion.",
+    failures: [
+      {
+        title: "Preparation",
+        text:
+          "Washing down, filling, lining and rubbing down take the majority of the time. A cheap paint on unprepared walls is not the work. Prep standard, number of coats and sheen are written down. That is what we snag against.",
+      },
+      {
+        title: "The substrate",
+        text:
+          "Lime, gypsum, previous coatings of unknown type, and hairline movement in conversions will telegraph through a finish applied too soon. Failed plaster, damp and timber decay are isolated, not painted over.",
+      },
+      {
+        title: "Joinery",
+        text:
+          "Sashes, shutters, picture rails and original doors are programmed as joinery, not as a cut-in. Conservation-area and listed windows often need more than a coat of paint. If cords, staff beads or putty have failed, we say so before we start.",
+      },
+      {
+        title: "The household",
+        text:
+          "Occupied houses and flats are sequenced so you keep a kitchen, a bathroom and a bedroom. Spray is for empty rooms. In a furnished period interior, brush and roller remain the default. Mansion blocks add their own hours.",
+      },
+    ],
+    roomsHeading: "Typical interiors we decorate",
+    roomsLede:
+      "Period drawing rooms, sashes and shutters, mansion-flat receptions, occupied conversions and conservation joinery — each written to the building it sits in.",
+    typicalRooms: [
+      {
+        title: "Period drawing rooms",
+        text:
+          "Hampstead, Belsize Park, Primrose Hill and Highgate interiors with cornicing, picture rails and lime plaster. Colour is sampled on the wall in the light the room has. A thin fill will show. High ceilings are access as well as decoration.",
+        photo: servicePhotos["painting-decorating"],
+      },
+      {
+        title: "Sashes, shutters and joinery",
+        text:
+          "Box frames, staff beads and original doors need more than a cut-in. Conservation-area and listed windows are checked before they are quoted. If the timber or the cords have failed, that is joinery, not a coat of paint.",
+        photo: paintingRoomPhotos.sashes,
+      },
+      {
+        title: "Mansion-flat interiors",
+        text:
+          "St John's Wood, Maida Vale and Swiss Cottage receptions: high rooms, original doors, common parts that are a separate scope from the demise. Working hours are the building's. Spray is not the default in a furnished flat.",
+        photo: paintingRoomPhotos.flat,
+      },
+      {
+        title: "Empty period rooms",
+        text:
+          "A vacant house or a cleared floor is where spray can be the cleaner method. Prep is still the majority of the time. We will not undercoat over defects we have not addressed.",
+        photo: paintingRoomPhotos.drawing,
+      },
+      {
+        title: "Occupied conversions",
+        text:
+          "West Hampstead, Kentish Town and Kilburn terraces where the household stays. Rooms are sequenced. Furniture is moved or covered by agreement, not as an afterthought on the first morning.",
+      },
+      {
+        title: "Conservation exteriors and the Suburb",
+        text:
+          "Previously painted windows, doors and joinery where access and weather allow. A new outside colour in a conservation area or under the Suburb Trust is not assumed. Internal decoration that does not change the elevation is ordinary work.",
+      },
     ],
     housing: [
       {
@@ -307,6 +378,7 @@ export const serviceHubContent: Record<ServiceSlug, ServiceHubContent> = {
           { href: "/painting-decorating/hampstead/", label: "Painting and decorating in Hampstead" },
           { href: "/painting-decorating/belsize-park/", label: "Painting and decorating in Belsize Park" },
           { href: "/painting-decorating/primrose-hill/", label: "Painting and decorating in Primrose Hill" },
+          { href: "/painting-decorating/muswell-hill/", label: "Painting and decorating in Muswell Hill" },
         ],
       },
       {
@@ -317,6 +389,7 @@ export const serviceHubContent: Record<ServiceSlug, ServiceHubContent> = {
           { href: "/painting-decorating/west-hampstead/", label: "Painting and decorating in West Hampstead" },
           { href: "/painting-decorating/st-johns-wood/", label: "Painting and decorating in St John's Wood" },
           { href: "/painting-decorating/maida-vale/", label: "Painting and decorating in Maida Vale" },
+          { href: "/painting-decorating/kentish-town/", label: "Painting and decorating in Kentish Town" },
         ],
       },
       {
@@ -327,21 +400,23 @@ export const serviceHubContent: Record<ServiceSlug, ServiceHubContent> = {
           { href: "/painting-decorating/hampstead-garden-suburb/", label: "Painting and decorating in Hampstead Garden Suburb" },
           { href: "/painting-decorating/highgate/", label: "Painting and decorating in Highgate" },
           { href: "/painting-decorating/swiss-cottage/", label: "Painting and decorating in Swiss Cottage" },
+          { href: "/painting-decorating/crouch-end/", label: "Painting and decorating in Crouch End" },
         ],
       },
     ],
     permissions: [
-      "Interior decoration within existing rooms is ordinary work. Listed and conservation constraints bite when coatings, windows or external joinery change. [VERIFY listing on the address.]",
-      "Failed plaster, rising damp and timber decay are not decorating items. We isolate the cause rather than paint over it.",
-      "Occupied-home working is planned room by room. In mansion blocks we also follow the building's hours.",
+      "Interior decoration within existing rooms is ordinary work. Listed and conservation constraints bite when coatings, windows or external joinery change. We check listing on the address before we quote an elevation. [VERIFY listing and conservation-area colour rules.]",
+      "In Hampstead Garden Suburb, internal decoration that does not change the elevation is ordinary work. A new outside colour is not. Trust consent and Barnet planning are separate. [VERIFY both maps for the property.]",
+      "Failed plaster, rising damp and timber decay are not decorating items. We isolate the cause rather than paint over it. Where the repair sits inside a light refurbishment, it is written into the proposal.",
+      "Occupied-home working is planned room by room. In mansion blocks we also follow the building's hours. Common parts are a separate scope from the demise.",
     ],
     specification: [
-      "Prep standard, product type, number of coats and sheen are written down. That is what we snag against, in daylight and with the lights on. Heritage colours are taken from established generic ranges; we do not claim an exclusive palette or manufacturer relationship.",
+      "Prep standard, product type, number of coats and sheen are written down. That is what we snag against, in daylight and with the lights on. Heritage colours are taken from established generic ranges; we do not claim an exclusive palette or manufacturer relationship. Samples are painted on the wall.",
       "Sash windows in conservation areas often need more than a coat of paint. If cords, staff beads or putty have failed, we say so before we start [VERIFY listed-window constraints on the specific property]. Exterior work is programmed around weather, not around a calendar promise.",
-      "Making-good after kitchens, bathrooms and flooring is part of a light-refurbishment programme. Decorating is then the last trade, not the first.",
+      "Spray is specified per room, not as a house rule. Empty, large rooms can take it. Furnished period interiors usually cannot. Making-good after kitchens, bathrooms and flooring is part of a light-refurbishment programme; decorating is then the last trade, not the first.",
     ],
     areasIntro:
-      "Local painting and decorating pages for Hampstead, West Hampstead, Belsize Park, the Suburb and the wider North West London list sit below. Where a group painting microsite already exists for an area, the area hub will link out instead of duplicating that page.",
+      "Local painting and decorating pages for Hampstead, West Hampstead, Belsize Park, St John's Wood, Maida Vale, Highgate, the Suburb and the wider North West London list sit below. Each is written for that housing stock and conservation designation. Where a group painting microsite already exists for an area, the area hub will link out instead of duplicating that page.",
   },
   "light-refurbishment": {
     intro: [

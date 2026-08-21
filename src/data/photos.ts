@@ -34,7 +34,7 @@ export const servicePhotos: Record<ServiceSlug, Photo> = {
   },
   "painting-decorating": {
     src: "/images/services/painting-decorating.jpg",
-    alt: "A freshly decorated drawing room in a Hampstead period house — pale walls, cornicing and herringbone",
+    alt: "Painting and decorating in a Hampstead period drawing room — pale walls, cornicing and herringbone",
     ...wide,
   },
   "light-refurbishment": {
@@ -58,6 +58,24 @@ export const kitchenRoomPhotos = {
   chimney: {
     src: "/images/services/kitchen-chimney.jpg",
     alt: "A kitchen scribed around an original chimney breast in a North West London period house",
+    ...wide,
+  },
+} as const satisfies Record<string, Photo>;
+
+export const paintingRoomPhotos = {
+  drawing: {
+    src: "/images/services/painting-drawing.jpg",
+    alt: "A decorated period drawing room in North West London — pale walls, cornicing and morning light",
+    ...wide,
+  },
+  sashes: {
+    src: "/images/services/painting-sashes.jpg",
+    alt: "Freshly painted sash windows and shutters in a Hampstead period interior",
+    ...wide,
+  },
+  flat: {
+    src: "/images/services/painting-flat.jpg",
+    alt: "A decorated mansion-flat reception in North West London — pale walls, original door and a lightwell sash",
     ...wide,
   },
 } as const satisfies Record<string, Photo>;
