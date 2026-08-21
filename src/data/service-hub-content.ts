@@ -2,6 +2,7 @@ import {
   bathroomRoomPhotos,
   kitchenRoomPhotos,
   paintingRoomPhotos,
+  refurbRoomPhotos,
   servicePhotos,
   type Photo,
 } from "./photos";
@@ -420,15 +421,80 @@ export const serviceHubContent: Record<ServiceSlug, ServiceHubContent> = {
   },
   "light-refurbishment": {
     intro: [
-      "Light refurbishment is the coordinated refresh of a flat or house: decoration, flooring, joinery, kitchen and bathroom replacements, and the plumbing and electrical work those rooms need. It is one programme and one account. It is not structural alteration, not an extension, and not a loft conversion.",
-      "In North West London that usually means a mansion-block apartment or a converted house where the plan stays as it is and the rooms are brought up to a single standard. The kitchen and bathroom are replaced, floors are refinished or renewed, joinery is repaired, and the whole is decorated. Occupied or empty, the sequence is the same: wet and dusty trades first, finishes last.",
-      "Hampstead Property Services Group takes that instruction from a Hampstead office, with the four trades on this site held in one programme. If you need walls moved, a loft converted or an extension, that is a different company in the same family: Hampstead Renovations. We will say so at the first visit rather than stretch the word refurbishment to cover work we do not deliver.",
-      "The value of a light-refurbishment instruction is coordination. A kitchen that is decorated before the plumber has finished, or a floor laid before the bathroom is watertight, is how programmes slip and finishes get damaged. We write the order down.",
+      "Light refurbishment in North West London is the coordinated refresh of a flat or house: kitchen and bathroom replacements, decoration, flooring, joinery, and the plumbing and electrical work those rooms need. It is one programme and one account. It is not structural alteration, not an extension, and not a loft conversion.",
+      "In Hampstead, West Hampstead, St John's Wood and Maida Vale that usually means a mansion-block apartment or a converted house where the plan stays as it is and the rooms are brought up to a single standard. The kitchen and bathroom are replaced, floors are refinished or renewed, joinery is repaired, and the whole is decorated. Occupied or empty, the sequence is the same: wet and dusty trades first, finishes last.",
+      "Hampstead Property Services Group takes that instruction from a Finchley Road office, with the four trades on this site held in one programme. If you need walls moved, a loft converted or an extension, that is a different company in the same family: Hampstead Renovations. We will say so at the first visit rather than stretch the word refurbishment to cover work we do not deliver.",
+      "The value of the instruction is coordination. A kitchen that is decorated before the plumber has finished, or a floor laid before the bathroom is watertight, is how programmes slip and finishes get damaged. We write the order down. A typical conversion flat — rear-return kitchen, half-landing bathroom, decoration and floors, with common-parts protection — is core work. So is a mansion-flat apartment where the lease allows internal replacement but not alteration of the carcass.",
+      "We visit before we write a proposal. Unknowns in this housing stock — hidden damp, failed subfloors, redundant wiring — are listed as provisional items, not buried in a lump sum. When we open a wall and find something, we stop and write a variation before continuing.",
     ],
     forWhom: [
-      "The work is for owners who want a flat or house brought to a consistent standard without changing its structure: buy-to-let refresh, a home after years of piecemeal work, or a mansion-block apartment where the lease and the building rules allow internal replacement but not alteration of the carcass.",
-      "Moving out is often faster and cleaner for a whole-flat programme. A single kitchen or bathroom can usually be done around you. We will give an honest view after survey. Working hours are [TBC: confirm standard hours], and mansion blocks add their own rules.",
-      "Unknowns in this housing stock — hidden damp, failed subfloors, redundant wiring — are listed as provisional items, not buried in a lump sum. When we open a wall and find something, we stop and write a variation before continuing.",
+      "The work is for owner-occupiers and landlords who want a flat or house brought to a consistent standard without changing its structure: a buy-to-let refresh, a home after years of piecemeal work, or a mansion-block apartment where the building's rules allow internal replacement but not a new envelope.",
+      "Moving out is often faster and cleaner for a whole-flat programme. A single kitchen or bathroom can usually be done around you. We will give an honest view after survey. Mansion blocks add their own hours and, often, a licence to alter for the wet rooms.",
+      "Leasehold notices and building-control for the non-structural work that needs them are started in the lead-in. We do not strip rooms and then discover a licence was required.",
+    ],
+    failuresHeading: "What has to be right before the programme",
+    failuresLede:
+      "Light refurbishment in this housing stock fails from the envelope, the sequence and the unknowns — not from the choice of paint.",
+    failures: [
+      {
+        title: "The envelope",
+        text:
+          "The plan stays as it is. We do not form structural openings, loft conversions, extensions or basements. If that is the brief, a single introduction to Hampstead Renovations. Light refurbishment is the rooms that already exist.",
+      },
+      {
+        title: "Sequence",
+        text:
+          "Kitchens and bathrooms first, then floors and joinery, decoration last. Paint before the plumber has finished is how finishes get destroyed. The order is written into the programme.",
+      },
+      {
+        title: "The building",
+        text:
+          "Licence to alter, mansion-block hours and common-parts protection are ordinary. Building-control for the non-structural work that needs it is started in the lead-in, not after strip-out.",
+      },
+      {
+        title: "Unknowns",
+        text:
+          "Hidden damp, failed subfloors and redundant wiring are listed as provisional items. When we open a wall and find something, we stop, show you, and write a variation. They are not used as a blank cheque.",
+      },
+    ],
+    roomsHeading: "Typical programmes we take on",
+    roomsLede:
+      "Mansion-flat apartments, conversion flats, a storey of a family house — kitchen, bathroom, floors and decoration as one account, without changing the structure.",
+    typicalRooms: [
+      {
+        title: "Mansion-flat apartments",
+        text:
+          "St John's Wood, Maida Vale and Swiss Cottage: the plan stays as it is. Kitchen and bathroom replaced, floors and decoration brought to one standard, the building's hours and licence-to-alter process followed. We do not alter the carcass.",
+        photo: servicePhotos["light-refurbishment"],
+      },
+      {
+        title: "Conversion flats",
+        text:
+          "West Hampstead, Belsize Park, Kentish Town and Kilburn: rear-return kitchen, stacked bathroom, decoration and floors, with common-parts protection. One programme, wet trades first, paint last.",
+        photo: refurbRoomPhotos.hall,
+      },
+      {
+        title: "Family-house interiors",
+        text:
+          "Hampstead, Highgate, Primrose Hill and the Suburb: a storey or a whole interior to one standard. Listed fabric and Trust rules are checked where the envelope is involved. Structural openings are not this service.",
+        photo: refurbRoomPhotos.sitting,
+      },
+      {
+        title: "Kitchen in the programme",
+        text:
+          "A replacement within the existing room, as on the kitchen renovation pages: galleys, chimney breasts, compact mansion-flat kitchens. Specified and sequenced with the bathrooms and the decoration, not as a separate contractor.",
+        photo: servicePhotos["kitchen-renovation"],
+      },
+      {
+        title: "Bathroom in the programme",
+        text:
+          "Tanking, extract and compact layouts, as on the bathroom renovation pages. Finished and tested before floors and decoration close around them.",
+      },
+      {
+        title: "What we do not do",
+        text:
+          "Loft conversions, extensions, basement works, structural openings and design-and-build of a new envelope. For those, Hampstead Renovations. We will say so at the first visit.",
+      },
     ],
     housing: [
       {
@@ -439,6 +505,7 @@ export const serviceHubContent: Record<ServiceSlug, ServiceHubContent> = {
           { href: "/light-refurbishment/west-hampstead/", label: "Light refurbishment in West Hampstead" },
           { href: "/light-refurbishment/kentish-town/", label: "Light refurbishment in Kentish Town" },
           { href: "/light-refurbishment/belsize-park/", label: "Light refurbishment in Belsize Park" },
+          { href: "/light-refurbishment/kilburn/", label: "Light refurbishment in Kilburn" },
         ],
       },
       {
@@ -458,21 +525,23 @@ export const serviceHubContent: Record<ServiceSlug, ServiceHubContent> = {
         links: [
           { href: "/light-refurbishment/hampstead/", label: "Light refurbishment in Hampstead" },
           { href: "/light-refurbishment/highgate/", label: "Light refurbishment in Highgate" },
+          { href: "/light-refurbishment/primrose-hill/", label: "Light refurbishment in Primrose Hill" },
           { href: "/light-refurbishment/hampstead-garden-suburb/", label: "Light refurbishment in Hampstead Garden Suburb" },
         ],
       },
     ],
     permissions: [
-      "Light refurbishment does not include structural openings, loft conversions, extensions or basement works. For those, a single introduction to Hampstead Renovations.",
-      "Building-control and freeholder notices for the non-structural work that needs them are started in the lead-in. We do not strip rooms and then discover a licence was required.",
-      "Unknowns — hidden damp, failed subfloors, redundant wiring — are listed as provisional items. When we open a wall and find something, we stop and write a variation.",
+      "Light refurbishment does not include structural openings, loft conversions, extensions or basement works. For those, a single introduction to Hampstead Renovations. We will say so at the first visit rather than stretch the word to cover work we do not deliver.",
+      "Leasehold flats usually need a licence to alter for kitchen or bathroom replacement. We can prepare drawings and a method statement. Consent is granted by the freeholder or agent, not by us. Building-control for the non-structural work that needs it is started in the lead-in.",
+      "Unknowns — hidden damp, failed subfloors, redundant wiring — are listed as provisional items. When we open a wall and find something, we stop and write a variation. They are not used as a blank cheque.",
+      "Occupied homes and mansion-block hours are written into the programme. Common-parts protection is part of the method, not a courtesy.",
     ],
     specification: [
       "Decoration, flooring and joinery are specified as systems: prep standard, product type, board finish, ironmongery. Kitchens and bathrooms follow the specifications on those service pages. Rewiring or replumbing is of the rooms in scope, coordinated with the existing installation, not a speculative whole-house strip unless that is the written brief.",
-      "Building-control and freeholder notices for the non-structural work that needs them are started in the lead-in. We do not strip rooms and then discover a licence was required.",
+      "The sequence is written: wet rooms and first fix, then floors and joinery, decoration last. A single snag and a single account close the programme, not room by room in isolation.",
       "Explicitly excluded: structural openings, loft conversions, extensions, basement works, and design-and-build of a new envelope. For those, a single introduction to Hampstead Renovations.",
     ],
     areasIntro:
-      "Local light-refurbishment pages for Hampstead, West Hampstead, St John's Wood and the wider North West London list sit below. Each page is the housing stock of that neighbourhood, not a renamed copy of this one.",
+      "Local light-refurbishment pages for Hampstead, West Hampstead, Belsize Park, St John's Wood, Maida Vale, Swiss Cottage, Highgate and the wider North West London list sit below. Each page is the housing stock of that neighbourhood, not a renamed copy of this one.",
   },
 };

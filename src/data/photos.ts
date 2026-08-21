@@ -39,7 +39,7 @@ export const servicePhotos: Record<ServiceSlug, Photo> = {
   },
   "light-refurbishment": {
     src: "/images/services/light-refurbishment.jpg",
-    alt: "A light refurbishment in a London mansion-flat, looking from a pale reception into a new kitchen",
+    alt: "Light refurbishment in a London mansion flat — looking from a pale reception into a new kitchen",
     ...wide,
   },
 };
@@ -58,6 +58,19 @@ export const kitchenRoomPhotos = {
   chimney: {
     src: "/images/services/kitchen-chimney.jpg",
     alt: "A kitchen scribed around an original chimney breast in a North West London period house",
+    ...wide,
+  },
+} as const satisfies Record<string, Photo>;
+
+export const refurbRoomPhotos = {
+  sitting: {
+    src: "/images/services/refurb-sitting.jpg",
+    alt: "A period sitting room after light refurbishment — pale walls, marble chimneypiece and refinished boards",
+    ...wide,
+  },
+  hall: {
+    src: "/images/services/refurb-hall.jpg",
+    alt: "A conversion-flat hallway after light refurbishment — original doors, pale walls and timber floor",
     ...wide,
   },
 } as const satisfies Record<string, Photo>;

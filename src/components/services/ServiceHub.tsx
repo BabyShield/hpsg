@@ -221,7 +221,9 @@ export function ServiceHub({ service }: { service: Service }) {
                     ? "Licence, extract and the building"
                     : service.slug === "painting-decorating"
                       ? "Conservation, joinery and occupied homes"
-                      : "Consent, extract and the building"}
+                      : service.slug === "light-refurbishment"
+                        ? "What this service is not"
+                        : "Consent, extract and the building"}
               </h2>
               <div className="space-y-5 text-base leading-relaxed text-grey-700 lg:col-span-8">
                 {content.permissions
@@ -341,7 +343,9 @@ export function ServiceHub({ service }: { service: Service }) {
                   ? "Kitchen renovation questions"
                   : service.slug === "painting-decorating"
                     ? "Painting and decorating questions"
-                    : `${service.name} questions`}
+                    : service.slug === "light-refurbishment"
+                      ? "Light refurbishment questions"
+                      : `${service.name} questions`}
             </h2>
             <div className="lg:col-span-8">
               <FaqAccordion items={faqs} />

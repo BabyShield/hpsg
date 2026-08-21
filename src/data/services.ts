@@ -334,9 +334,10 @@ export const services: Service[] = [
     slug: "light-refurbishment",
     name: "Light Refurbishment",
     navLabel: "Refurbishment",
-    heroLine: "Light refurbishment — redecoration, flooring, joinery and kitchen or bathroom swaps — without structural work.",
+    heroLine:
+      "Light refurbishment in North West London flats and houses — kitchen, bathroom, decoration and floors as one programme, without structural work.",
     summary:
-      "Light refurbishment is the coordinated refresh of a flat or house: decoration, flooring, joinery, kitchen and bathroom replacements, and the plumbing and electrical work those rooms need. It is not structural alteration, not an extension, and not a loft conversion. Those belong with our sister company, Hampstead Renovations.",
+      "Light refurbishment in Hampstead, Maida Vale and North West London: kitchens, bathrooms, decoration and floors coordinated as one account. Not an extension, loft or structural opening — that sits with Hampstead Renovations.",
     included: [
       "A single programme covering the rooms in scope, with one point of contact",
       "Redecoration to a written prep and coating specification",
@@ -353,11 +354,11 @@ export const services: Service[] = [
     processSteps: [
       {
         title: "Scope",
-        text: "We walk the property and write down what is in and what is out. If the brief is actually a structural project, we will say so and point you to Hampstead Renovations rather than stretch 'light refurbishment' to cover it.",
+        text: "We walk the property and write down what is in and what is out. If the brief is actually a structural project, we will say so and point you to Hampstead Renovations rather than stretch light refurbishment to cover it.",
       },
       {
         title: "Survey and proposal",
-        text: "Room-by-room specification, programme and a single price for the defined scope. Unknowns (hidden services, failed subfloors) are listed as provisional, not buried.",
+        text: "Room-by-room specification, programme and a single price for the defined scope. Unknowns (hidden services, failed subfloors) are listed as provisional, not buried. We do not quote from photographs.",
       },
       {
         title: "Lead-in and notices",
@@ -409,10 +410,26 @@ export const services: Service[] = [
         q: "Do you do loft conversions or extensions?",
         a: "No. That work is carried out by our sister company, Hampstead Renovations (hampsteadrenovations.co.uk). We will introduce you rather than take a project we do not deliver.",
       },
+      {
+        q: "What does light refurbishment in North West London cost?",
+        a: "We do not publish a price list. A West Hampstead conversion flat, a Maida Vale mansion apartment and a storey of a Highgate house are different jobs. We visit, then write a proposal against a defined scope. 020 7101 3168.",
+      },
+      {
+        q: "Is a licence to alter needed?",
+        a: "Often, for kitchen or bathroom replacement in a leasehold flat. We can prepare drawings and a method statement. Consent is the freeholder's or agent's, not ours. Notices are started in the lead-in, not after strip-out.",
+      },
+      {
+        q: "Can you do a kitchen and bathroom in the same programme?",
+        a: "Yes. That is the point of the instruction. Wet rooms run first; decoration closes the house. Separate contractors sequencing themselves is how finishes get damaged.",
+      },
+      {
+        q: "Do you sand existing floors?",
+        a: "Where the boards will take it. Failed subfloors, previous bitumen and boards too thin to sand are listed at survey. New timber, engineered or stone finishes are specified in generic categories, not as brand partnerships.",
+      },
     ],
     metaTitle: "Light Refurbishment in North West London | Flats and houses | HPSG",
     metaDescription:
-      "Light refurbishment in Hampstead, Maida Vale and North West London: kitchens, bathrooms, decoration and floors as one programme, without structural work. 020 7101 3168.",
+      "Light refurbishment in Hampstead, St John's Wood, Maida Vale and North West London: kitchens, bathrooms, decoration and floors as one programme, without structural work. 020 7101 3168.",
   },
 ];
 
