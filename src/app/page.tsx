@@ -8,8 +8,9 @@ import { CtaBand } from "@/components/ui/CtaBand";
 import { FaqAccordion } from "@/components/ui/FaqAccordion";
 import { PhotoTile } from "@/components/ui/PhotoTile";
 import { ServiceCard } from "@/components/ui/ServiceCard";
+import { StatementBand } from "@/components/ui/StatementBand";
 import { homeFaqs, homeMethod, whyHpsg } from "@/data/home";
-import { areaPhotos, homeHero, officeNeighbourhood } from "@/data/photos";
+import { areaPhotos, homeHero, officeNeighbourhood, servicePhotos } from "@/data/photos";
 import { services } from "@/data/services";
 import { addressSingleLine, site } from "@/data/site";
 import { pageMetadata } from "@/lib/metadata";
@@ -82,9 +83,9 @@ export default function HomePage() {
           alt={homeHero.alt}
           className="absolute inset-0 h-full w-full object-cover object-[center_70%]"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-navy/82 via-navy/18 to-navy/10" />
-        <Container className="relative flex min-h-svh flex-col justify-end pb-24 pt-28 md:pb-28">
-          <p className="rule mb-8" aria-hidden="true" />
+        <div className="absolute inset-0 bg-gradient-to-t from-navy/72 via-navy/18 to-transparent" />
+        <Container className="relative flex min-h-svh flex-col justify-end pb-24 pt-28 md:pb-32">
+          <p className="kicker hero-type mb-7 text-gold">Hampstead · Finchley Road</p>
           <h1 className="hero-type max-w-5xl font-display text-[2.35rem] font-light leading-[1.08] text-bone sm:text-6xl md:text-7xl">
             Kitchen, Bathroom & Refurbishment
             <span className="block">Specialists in North West London</span>
@@ -106,27 +107,50 @@ export default function HomePage() {
       </section>
 
       <section className="py-24 sm:py-32">
-        <Container>
-          <p className="kicker mb-8">The method</p>
-          <p className="lede max-w-4xl text-3xl text-navy md:text-5xl">
-            One visit, one written proposal, one programme — kitchens, bathrooms,
-            decoration and floors sequenced together.
-          </p>
-          <ol className="mt-20 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
-            {homeMethod.map((step, index) => (
-              <li key={step.title}>
-                <p className="font-display text-3xl text-gold">
-                  {String(index + 1).padStart(2, "0")}
-                </p>
-                <h2 className="mt-4 font-display text-2xl font-normal">{step.title}</h2>
-                <p className="mt-3 text-base leading-relaxed text-grey-700">{step.text}</p>
-              </li>
-            ))}
-          </ol>
+        <Container className="grid items-center gap-16 lg:grid-cols-12 lg:gap-20">
+          <div className="lg:col-span-5">
+            <ContentImage
+              photo={servicePhotos["kitchen-renovation"]}
+              className="aspect-[4/5] w-full"
+              sizes="(min-width: 1024px) 40vw, 100vw"
+            />
+          </div>
+          <div className="lg:col-span-7">
+            <p className="kicker mb-8">The method</p>
+            <h2 className="lede max-w-xl text-3xl text-navy md:text-5xl">
+              One visit, one written proposal, one programme — kitchens, bathrooms,
+              decoration and floors sequenced together.
+            </h2>
+            <ol className="mt-14">
+              {homeMethod.map((step, index) => (
+                <li
+                  key={step.title}
+                  className="grid grid-cols-[auto_1fr] gap-6 border-t border-grey-200 py-7 last:border-b"
+                >
+                  <span className="font-display text-3xl leading-none text-gold">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <div>
+                    <h3 className="font-display text-2xl font-normal">{step.title}</h3>
+                    <p className="mt-2 max-w-measure text-base leading-relaxed text-grey-700">
+                      {step.text}
+                    </p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </div>
         </Container>
       </section>
 
-      <section className="pb-24 sm:pb-32">
+      <StatementBand
+        photo={servicePhotos["painting-decorating"]}
+        kicker="How we start"
+        title="We visit before we write a proposal."
+        text="Tell us the property and the rooms in scope. A survey in the room is the difference between a programme that holds and a strip-out that stops on day two."
+      />
+
+      <section className="py-24 sm:py-32">
         <Container className="mb-12 grid items-end gap-10 lg:grid-cols-12">
           <div className="lg:col-span-7">
             <p className="kicker mb-6">Services</p>
@@ -270,7 +294,7 @@ export default function HomePage() {
         </Container>
       </section>
 
-      <CtaBand photo={officeNeighbourhood} />
+      <CtaBand />
     </>
   );
 }

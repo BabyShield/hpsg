@@ -1,7 +1,9 @@
+import Link from "next/link";
 import type { ReactNode } from "react";
 
 import { Breadcrumbs, type Crumb } from "@/components/seo/Breadcrumbs";
 import type { Photo } from "@/data/photos";
+import { site } from "@/data/site";
 
 import { Container } from "./Container";
 
@@ -23,21 +25,23 @@ export function PageHero({
   kicker,
   title,
   lede,
+  showCta = true,
 }: {
   photo?: Photo;
   crumbs?: Crumb[];
   kicker?: string;
   title: string;
   lede?: ReactNode;
+  showCta?: boolean;
 }) {
   return (
-    <section className="relative min-h-[32rem] overflow-hidden text-bone md:min-h-[44rem]">
+    <section className="relative min-h-[36rem] overflow-hidden text-bone md:min-h-[50rem]">
       {photo ? <HeroPhoto photo={photo} /> : <div className="absolute inset-0 bg-navy" />}
-      <div className="absolute inset-0 bg-gradient-to-t from-navy/75 via-navy/28 to-navy/8" />
-      <Container className="relative flex min-h-[32rem] flex-col justify-end pb-16 pt-12 md:min-h-[44rem] md:pb-28">
+      <div className="absolute inset-0 bg-gradient-to-t from-navy/70 via-navy/22 to-navy/5" />
+      <Container className="relative flex min-h-[36rem] flex-col justify-end pb-16 pt-14 md:min-h-[50rem] md:pb-28">
         {crumbs ? <Breadcrumbs items={crumbs} tone="light" /> : null}
         {kicker ? (
-          <p className="caption hero-type mb-5 text-bone">{kicker}</p>
+          <p className="kicker hero-type mb-6 text-gold">{kicker}</p>
         ) : (
           <p className="rule mb-6" aria-hidden="true" />
         )}
@@ -47,6 +51,16 @@ export function PageHero({
         {lede ? (
           <div className="lede hero-type mt-6 max-w-xl text-xl leading-relaxed text-bone/90 md:text-2xl">
             {lede}
+          </div>
+        ) : null}
+        {showCta ? (
+          <div className="mt-10 flex flex-col items-start gap-5 sm:flex-row sm:items-center">
+            <Link href="/contact/" className="btn btn-gold">
+              Request a quote
+            </Link>
+            <a href={`tel:${site.phoneTel}`} className="btn-line text-bone">
+              {site.phoneDisplay}
+            </a>
           </div>
         ) : null}
       </Container>

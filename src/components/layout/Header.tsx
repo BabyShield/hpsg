@@ -33,8 +33,8 @@ export function Header() {
           : "sticky top-0 z-50 border-b border-navy/6 bg-bone/85 backdrop-blur-md"
       }
     >
-      <div className="h-[2px] bg-gold" aria-hidden="true" />
-      <Container className="flex items-center justify-between gap-6 py-3.5">
+      <div className="h-px bg-gold" aria-hidden="true" />
+      <Container className="flex items-center justify-between gap-6 py-4">
         <Wordmark compact />
         <div className="flex items-center gap-8">
           <nav className="hidden lg:block" aria-label="Primary">
@@ -97,7 +97,7 @@ export function Header() {
             {site.phoneDisplay}
           </a>
           <span className="hidden lg:inline-flex">
-            <Link href="/contact/" className="btn btn-primary py-2.5 px-4 text-[0.7rem]">
+            <Link href="/contact/" className="btn btn-primary min-w-0 px-5 py-2.5 text-[0.68rem]">
               Request a quote
             </Link>
           </span>

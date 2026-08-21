@@ -10,8 +10,8 @@ export function Wordmark({
   return (
     <Link href="/" className={`block ${inverted ? "text-bone" : "text-navy"}`}>
       <span
-        className={`block font-display font-normal tracking-tight ${
-          compact ? "text-[1.7rem] leading-none" : "text-[2.85rem] leading-none"
+        className={`block font-display font-light tracking-tight ${
+          compact ? "text-[1.85rem] leading-none" : "text-[2.85rem] leading-none"
         }`}
       >
         HPSG

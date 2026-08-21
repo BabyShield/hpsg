@@ -37,7 +37,7 @@ export function FeaturedProjects() {
         <div className="flex flex-col items-start justify-between gap-10 lg:flex-row lg:items-end">
           <div className="max-w-2xl">
             <p className="kicker mb-5">Work</p>
-            <h2 className="font-display text-4xl font-normal sm:text-5xl">Typical rooms</h2>
+            <h2 className="font-display text-4xl font-light sm:text-5xl">Typical rooms</h2>
             <p className="lede mt-6 max-w-measure text-xl text-grey-600">
               Photographs show the kind of kitchens, bathrooms and interiors we
               take on. Named case studies will follow from supplied summaries.

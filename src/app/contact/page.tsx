@@ -92,8 +92,9 @@ export default function ContactPage() {
         <form
           action={formAction}
           method={site.formEndpoint ? "post" : "get"}
-          className="space-y-8 lg:col-span-7 lg:pt-20"
+          className="space-y-8 border-t border-gold/50 pt-10 lg:col-span-7 lg:border-t-0 lg:border-l lg:border-gold/40 lg:pl-14 lg:pt-20"
         >
+          <p className="kicker">Enquiry</p>
           <p className="text-sm text-grey-600">
             {site.formEndpoint
               ? "Send an enquiry."

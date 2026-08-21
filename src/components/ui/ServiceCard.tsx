@@ -23,9 +23,10 @@ export function ServiceCard({
     <article className={`group relative min-h-[18rem] overflow-hidden bg-navy ${className}`.trim()}>
       <Link href={to} className="absolute inset-0 block">
         <ContentImage photo={photo} fillParent className="img-zoom" sizes={sizes} />
-        <div className="absolute inset-0 bg-gradient-to-t from-navy/60 via-navy/5 to-transparent transition-opacity duration-700 group-hover:from-navy/70" />
+        <div className="absolute inset-0 bg-gradient-to-t from-navy/58 via-navy/8 to-transparent transition-opacity duration-700 group-hover:from-navy/72" />
         <div className="absolute inset-x-0 bottom-0 p-6 text-bone md:p-8">
-          <h3 className="font-display text-2xl font-normal text-bone md:text-3xl">{service.name}</h3>
+          <p className="rule mb-4" aria-hidden="true" />
+          <h3 className="font-display text-2xl font-normal text-bone md:text-4xl">{service.name}</h3>
         </div>
       </Link>
     </article>

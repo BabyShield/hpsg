@@ -22,10 +22,11 @@ export function PhotoTile({
   return (
     <Link href={href} className={`group relative block overflow-hidden bg-navy ${className}`.trim()}>
       <ContentImage photo={photo} fillParent className="img-zoom" sizes={sizes} />
-      <div className="absolute inset-0 bg-gradient-to-t from-navy/55 via-transparent to-transparent transition-colors duration-700 group-hover:from-navy/70" />
-      <div className="absolute inset-x-0 bottom-0 p-4 md:p-6">
+      <div className="absolute inset-0 bg-gradient-to-t from-navy/58 via-transparent to-transparent transition-colors duration-700 group-hover:from-navy/72" />
+      <div className="absolute inset-x-0 bottom-0 p-5 md:p-7">
+        <p className="rule mb-3" aria-hidden="true" />
         <p className="font-display text-xl font-normal text-bone md:text-2xl">{title}</p>
-        {caption ? <p className="caption mt-1 text-bone/55">{caption}</p> : null}
+        {caption ? <p className="caption mt-1.5 text-bone/60">{caption}</p> : null}
       </div>
     </Link>
   );

@@ -23,8 +23,8 @@ export function CtaBand({
         aria-hidden="true"
         className="absolute inset-0 h-full w-full object-cover object-[center_70%]"
       />
-      <div className="absolute inset-0 bg-navy/78" />
-      <Container className="relative flex flex-col items-start justify-between gap-12 py-28 sm:py-36 lg:flex-row lg:items-end">
+      <div className="absolute inset-0 bg-gradient-to-r from-navy/84 via-navy/58 to-navy/38" />
+      <Container className="relative flex flex-col items-start justify-between gap-12 py-32 sm:py-40 lg:flex-row lg:items-end">
         <div className="max-w-2xl">
           <p className="rule mb-8" aria-hidden="true" />
           <h2 className="font-display text-4xl font-light text-bone sm:text-6xl">{title}</h2>
