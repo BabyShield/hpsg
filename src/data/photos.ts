@@ -24,7 +24,7 @@ export const officeNeighbourhood: Photo = {
 export const servicePhotos: Record<ServiceSlug, Photo> = {
   "kitchen-renovation": {
     src: "/images/services/kitchen-renovation.jpg",
-    alt: "A finished kitchen in a North West London period house — pale cabinetry, marble and a garden sash",
+    alt: "Kitchen renovation in a North West London period house — pale cabinetry, marble and a garden sash",
     ...wide,
   },
   "bathroom-renovation": {
@@ -43,6 +43,24 @@ export const servicePhotos: Record<ServiceSlug, Photo> = {
     ...wide,
   },
 };
+
+export const kitchenRoomPhotos = {
+  galley: {
+    src: "/images/services/kitchen-galley.jpg",
+    alt: "A rear-return galley kitchen in a North West London conversion — cream cabinets, marble and a sash",
+    ...wide,
+  },
+  compact: {
+    src: "/images/services/kitchen-compact.jpg",
+    alt: "A compact kitchen in a London mansion flat — short runs, marble worktops and a lightwell sash",
+    ...wide,
+  },
+  chimney: {
+    src: "/images/services/kitchen-chimney.jpg",
+    alt: "A kitchen scribed around an original chimney breast in a North West London period house",
+    ...wide,
+  },
+} as const satisfies Record<string, Photo>;
 
 export const bathroomRoomPhotos = {
   compact: {

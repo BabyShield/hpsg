@@ -1,4 +1,4 @@
-import { bathroomRoomPhotos, servicePhotos, type Photo } from "./photos";
+import { bathroomRoomPhotos, kitchenRoomPhotos, servicePhotos, type Photo } from "./photos";
 import type { ServiceSlug } from "./types";
 
 export type HubSection = {
@@ -21,21 +21,90 @@ export type ServiceHubContent = {
   specification: string[];
   areasIntro: string;
   failures?: HubNote[];
+  failuresHeading?: string;
+  failuresLede?: string;
   typicalRooms?: HubNote[];
+  roomsHeading?: string;
+  roomsLede?: string;
 };
 
 export const serviceHubContent: Record<ServiceSlug, ServiceHubContent> = {
   "kitchen-renovation": {
     intro: [
-      "A kitchen renovation in North West London is usually a problem of the building, not of the catalogue. Period conversions, mansion-block apartments and family houses in Hampstead, Belsize Park, St John's Wood and Maida Vale were not drawn around a modern run of units. Chimney breasts, shared extracts, stacked drainage and walls that are out of square decide the layout before a worktop is chosen.",
-      "Hampstead Property Services Group plans and fits kitchens in that stock. The work is a coordinated fit-out: measured survey, layout, first and second fix, cabinetry, worktops, appliances and a clean handover. We do not treat the kitchen as a product drop-in. The room stays as the building planned it; we do not form new openings to make a kitchen-diner.",
-      "The typical instruction is a replacement within the existing room, sometimes with a modest change of layout that the services will actually support. In a mansion flat the kitchen is often a compact rear room on original risers. In a Victorian conversion it may be a rear return with a single window and a neighbour the other side of the party wall. Both can be excellent kitchens if the extract, the lighting and the working triangle are solved honestly.",
-      "We visit before we write a proposal. Photographs flatten levels, conceal failed floors and miss the managing agent's rules for the common parts. A survey in the room is the difference between a programme that holds and a strip-out that stops on day two.",
+      "Kitchen renovation in North West London is a problem of the building, not of the catalogue. Period conversions in Hampstead, West Hampstead and Belsize Park, mansion flats in St John's Wood, Maida Vale and Swiss Cottage, and family houses in Highgate and the Suburb were not drawn around a modern run of units. Chimney breasts, shared extracts, stacked drainage and walls that are out of square decide the layout before a worktop is chosen.",
+      "Hampstead Property Services Group plans and fits kitchens from a Finchley Road office. The work is a coordinated fit-out: measured survey, layout, first and second fix, cabinetry scribed to the room, worktops, appliances and a clean handover. We do not drop in a catalogue kitchen. The room stays as the building planned it. We do not form new openings to make a kitchen-diner — that is a different class of project.",
+      "The typical instruction is a replacement within the existing envelope, sometimes with a modest change of layout that the services will actually support. In a mansion flat the kitchen is often a compact rear room on original risers. In a Victorian conversion it is often a rear-return galley: one window, a party wall, a door that swings into the run. In a family house the room may wrap a chimney breast. All three can be excellent kitchens if extract, lighting and the working triangle are solved honestly.",
+      "Islands, range cookers and relocated sinks are specified only where the drainage, the extract and the floor will take them. A St John's Wood lift will often not take a run of carcasses; the stair is the working assumption until we measure. We will not promise a suburban layout in a room that cannot accept it.",
+      "We visit before we write a proposal. Photographs flatten levels, conceal failed floors and miss the managing agent's rules for the common parts. A survey in the room is the difference between a programme that holds and a strip-out that stops on day two. We do not quote kitchen renovation in Hampstead or anywhere else from photographs.",
     ],
     forWhom: [
-      "The work is for owner-occupiers and landlords in North West London housing: converted flats in Hampstead, West Hampstead and Kentish Town; mansion blocks in St John's Wood, Maida Vale and Swiss Cottage; family houses in Highgate, Muswell Hill and Hampstead Garden Suburb. The common thread is original fabric and limited service routes, not a new-build envelope.",
+      "The work is for owner-occupiers and landlords in North West London housing: converted flats in Hampstead, West Hampstead, Belsize Park and Kentish Town; mansion blocks in St John's Wood, Maida Vale and Swiss Cottage; family houses in Highgate, Primrose Hill, Muswell Hill, Golders Green and Hampstead Garden Suburb. The common thread is original fabric and limited service routes, not a new-build envelope.",
       "Leasehold flats usually need a licence to alter before cabinets come out. Freeholders and managing agents want drawings, a method statement and evidence of insurance. We can assemble that pack. Consent itself is granted by the building, not by us, and lead-in varies by agent [VERIFY typical timescales with the specific building].",
-      "Where the kitchen shares an extract or a soil stack with flats above and below, the layout has to respect those routes. We will not promise an island, a range cooker or a relocated sink if the building cannot take them without work we do not do.",
+      "Where the kitchen shares an extract or a soil stack with flats above and below, the layout has to respect those routes. Occupied homes are ordinary: we will say at survey whether a second sink, a temporary set-up or a short decant is the cleaner route. We will not promise an island, a range cooker or a relocated sink if the building cannot take them without work we do not do.",
+    ],
+    failuresHeading: "What has to be right before the cabinets",
+    failuresLede:
+      "Kitchen renovation in this housing stock fails from the envelope, the extract and the stacks — not from the choice of worktop.",
+    failures: [
+      {
+        title: "The envelope",
+        text:
+          "The kitchen stays in the room that exists. We do not form structural openings or kitchen-diners that remove a wall. If the brief is to change the carcass of the house, that sits with Hampstead Renovations, not on this site.",
+      },
+      {
+        title: "Extract",
+        text:
+          "Conservation-area and listed elevations in Hampstead, Highgate and the Suburb cannot always take a visible grille on the principal front. The route is planned at survey. We will not punch a hole as a convenience.",
+      },
+      {
+        title: "Services",
+        text:
+          "Layout follows the stacks and risers that exist. Relocating a sink is only possible if the drainage will serve the new position without cutting into another demise. Gas work is by a Gas Safe registered engineer.",
+      },
+      {
+        title: "Access",
+        text:
+          "Lifts in mansion blocks often will not take a run of carcasses. Village lanes were not drawn for a kitchen delivery. We measure the stair, the lift and the drop point before units are ordered.",
+      },
+    ],
+    roomsHeading: "Typical kitchens we renovate",
+    roomsLede:
+      "Rear-return galleys, compact mansion-flat rooms, chimney-breast L-shapes and family kitchens — each written to the building it sits in.",
+    typicalRooms: [
+      {
+        title: "Family kitchens",
+        text:
+          "Larger rooms in village houses and family houses toward the Heath, Highgate, Muswell Hill and the Suburb. More generous than a Camden galley, but walls are still out of square and extract still has to respect the elevation. Islands only where the footprint and the services will take them.",
+        photo: servicePhotos["kitchen-renovation"],
+      },
+      {
+        title: "Rear-return galleys",
+        text:
+          "The West Hampstead and conversion type: one window, a party wall, a door that swings into the run. Layout follows the window, the stack and the door, not a catalogue island. Units are scribed to walls that have moved.",
+        photo: kitchenRoomPhotos.galley,
+      },
+      {
+        title: "Compact mansion-flat kitchens",
+        text:
+          "Original rear rooms on risers in St John's Wood, Maida Vale and Swiss Cottage. A short L or a galley, not an island. Licence-to-alter packs are ordinary. Carcasses often go up the stair until we measure the lift.",
+        photo: kitchenRoomPhotos.compact,
+      },
+      {
+        title: "Chimney-breast kitchens",
+        text:
+          "Inserted or original rooms in Hampstead, Belsize Park and Frognal conversions where the breast is in the wrong place for a showroom run. We scribe cabinetry to it rather than pretending the wall is square.",
+        photo: kitchenRoomPhotos.chimney,
+      },
+      {
+        title: "Inserted kitchens in conversions",
+        text:
+          "Former bedrooms or service rooms, often with a high ceiling that then shows every joint. Extract and drainage come first. Highgate and Belsize Village streets add access constraints; the avenues more often have a managing agent.",
+      },
+      {
+        title: "Suburb and Trust interiors",
+        text:
+          "Hampstead Garden Suburb kitchens are internal fit-outs. The Trust and Barnet sit on the outside of the house. An extract grille or a window change is not a casual extra. Permitted development is not the working assumption.",
+      },
     ],
     housing: [
       {
@@ -47,6 +116,7 @@ export const serviceHubContent: Record<ServiceSlug, ServiceHubContent> = {
           { href: "/kitchen-renovation/west-hampstead/", label: "Kitchen renovation in West Hampstead" },
           { href: "/kitchen-renovation/belsize-park/", label: "Kitchen renovation in Belsize Park" },
           { href: "/kitchen-renovation/kentish-town/", label: "Kitchen renovation in Kentish Town" },
+          { href: "/kitchen-renovation/kilburn/", label: "Kitchen renovation in Kilburn" },
         ],
       },
       {
@@ -57,6 +127,7 @@ export const serviceHubContent: Record<ServiceSlug, ServiceHubContent> = {
           { href: "/kitchen-renovation/st-johns-wood/", label: "Kitchen renovation in St John's Wood" },
           { href: "/kitchen-renovation/maida-vale/", label: "Kitchen renovation in Maida Vale" },
           { href: "/kitchen-renovation/swiss-cottage/", label: "Kitchen renovation in Swiss Cottage" },
+          { href: "/kitchen-renovation/queens-park/", label: "Kitchen renovation in Queen's Park" },
         ],
       },
       {
@@ -65,6 +136,7 @@ export const serviceHubContent: Record<ServiceSlug, ServiceHubContent> = {
           "Highgate, Muswell Hill, Golders Green and Hampstead Garden Suburb supply larger family rooms. Plots and rear windows are more generous than a Camden galley, but walls are still out of square and extract still has to respect the elevation. In the Suburb, Trust and Barnet rules sit on the outside of the house; the kitchen is an internal fit-out unless the envelope is involved.",
         links: [
           { href: "/kitchen-renovation/highgate/", label: "Kitchen renovation in Highgate" },
+          { href: "/kitchen-renovation/primrose-hill/", label: "Kitchen renovation in Primrose Hill" },
           { href: "/kitchen-renovation/muswell-hill/", label: "Kitchen renovation in Muswell Hill" },
           { href: "/kitchen-renovation/golders-green/", label: "Kitchen renovation in Golders Green" },
           { href: "/kitchen-renovation/hampstead-garden-suburb/", label: "Kitchen renovation in Hampstead Garden Suburb" },
@@ -72,17 +144,18 @@ export const serviceHubContent: Record<ServiceSlug, ServiceHubContent> = {
       },
     ],
     permissions: [
-      "Leasehold flats usually need a licence to alter before cabinets come out. We can prepare drawings and a method statement. Consent is granted by the freeholder or managing agent, not by us. [VERIFY the building's process.]",
-      "Conservation-area and listed buildings cannot always take a visible extract grille on the principal front. We plan the route at survey and will not punch a hole as a convenience. [VERIFY on listed fabric.]",
-      "Gas work is by a Gas Safe registered engineer. Electrical circuits added or altered are notified where the regulations require it. We do not form structural openings or kitchen-diners that remove a wall — that is a different class of project.",
+      "Leasehold flats usually need a licence to alter before cabinets come out. We can prepare drawings and a method statement. Consent is granted by the freeholder or managing agent, not by us. Lead-in varies by building [VERIFY the building's process].",
+      "Conservation-area and listed buildings in Hampstead, Highgate, Primrose Hill and the Suburb cannot always take a visible extract grille on the principal front. We plan the route at survey and will not punch a hole as a convenience. [VERIFY on listed fabric.]",
+      "Gas work is by a Gas Safe registered engineer. Electrical circuits added or altered are notified where the regulations require it. Building-control is identified at proposal stage, not after strip-out.",
+      "We do not form structural openings or kitchen-diners that remove a wall. If the brief is to change the carcass of the house, that sits with Hampstead Renovations.",
     ],
     specification: [
-      "Cabinetry is scribed to walls that have moved. Worktops are specified in generic material categories — quartz or solid timber are typical — rather than as a branded partnership. Appliances are client-supplied or specified without exclusive manufacturer claims. Splashbacks, flooring within the kitchen envelope and decoration are part of the same sequence so the room is handed over as one.",
-      "Extract is designed for the elevation you actually have. Conservation-area and listed buildings cannot always take a visible grille on the principal front; we will say so at survey [VERIFY on listed fabric]. Gas work is by a Gas Safe registered engineer. Electrical circuits added or altered are notified where the regulations require it.",
-      "We do not specify structural steels, box-outs that conceal an opening we have formed, or kitchen-diner conversions that remove a wall. Those are a different class of project.",
+      "Cabinetry is scribed to walls that have moved and to original chimney breasts. Worktops are specified in generic material categories — quartz or solid timber are typical — rather than as a branded partnership. Appliances are client-supplied or specified without exclusive manufacturer claims.",
+      "Splashbacks, flooring within the kitchen envelope and decoration are part of the same sequence so the room is handed over as one. Extract is designed for the elevation you actually have. Conservation-area and listed buildings cannot always take a visible grille on the principal front; we will say so at survey [VERIFY on listed fabric].",
+      "Units are ordered only once lift, stair and room dimensions are confirmed on site. We do not specify structural steels, box-outs that conceal an opening we have formed, or kitchen-diner conversions that remove a wall. Those are a different class of project.",
     ],
     areasIntro:
-      "Local kitchen renovation pages for Hampstead, West Hampstead, Belsize Park, St John's Wood, Maida Vale and the wider North West London list sit below. Each page is written for that housing stock, council and conservation designation — not a renamed copy of this one.",
+      "Local kitchen renovation pages for Hampstead, West Hampstead, Belsize Park, St John's Wood, Maida Vale, Swiss Cottage, Highgate and the wider North West London list sit below. Each page is written for that housing stock, council and conservation designation — not a renamed copy of this one.",
   },
   "bathroom-renovation": {
     intro: [
@@ -97,6 +170,9 @@ export const serviceHubContent: Record<ServiceSlug, ServiceHubContent> = {
       "Waterproofing on timber intermediate floors is not optional. We tank wet areas to a documented system. Paint-on afterthoughts over boarded floors are how the flat below gets involved. In a mansion block we isolate, test, and do not cut into another demise without the building's process.",
       "Leasehold flats usually need a licence to alter if wastes move or an extract is cut through a common void. We can prepare drawings and a method statement. Consent is granted by the freeholder or managing agent, not by us [VERIFY the lease and the building's process]. Occupied homes are ordinary: we will say at survey whether a second bathroom or a short decant is the cleaner route.",
     ],
+    failuresHeading: "What has to be right before the tiles",
+    failuresLede:
+      "Bathroom renovation in this housing stock fails from water, air and the stack — not from the choice of brassware.",
     failures: [
       {
         title: "Waterproofing",
@@ -119,6 +195,9 @@ export const serviceHubContent: Record<ServiceSlug, ServiceHubContent> = {
           "Door swings, chimney breasts, half-landings and out-of-square walls decide whether a bath, a shower or both will fit. We survey before we specify sanitaryware. Concealed leaks and failed trays only show in the room.",
       },
     ],
+    roomsHeading: "Typical bathrooms we renovate",
+    roomsLede:
+      "Family bathrooms, compact mansion-flat rooms, shower rooms, ensuites and half-landing stacks — each written to the building it sits in.",
     typicalRooms: [
       {
         title: "Family bathrooms",

@@ -122,12 +122,13 @@ export function ServiceHub({ service }: { service: Service }) {
             <Container>
               <p className="rule mb-8" aria-hidden="true" />
               <h2 className="font-display text-4xl font-normal sm:text-5xl">
-                What has to be right before the tiles
+                {content.failuresHeading ?? "What has to be right"}
               </h2>
-              <p className="lede mt-6 max-w-measure text-xl text-grey-600">
-                Bathroom renovation in this housing stock fails from water, air
-                and the stack — not from the choice of brassware.
-              </p>
+              {content.failuresLede ? (
+                <p className="lede mt-6 max-w-measure text-xl text-grey-600">
+                  {content.failuresLede}
+                </p>
+              ) : null}
               <ol className="mt-16 grid gap-10 md:grid-cols-2 lg:grid-cols-4">
                 {content.failures.map((item, index) => (
                   <li key={item.title}>
@@ -150,13 +151,13 @@ export function ServiceHub({ service }: { service: Service }) {
             <Container>
               <p className="rule mb-8" aria-hidden="true" />
               <h2 className="font-display text-4xl font-normal sm:text-5xl">
-                Typical bathrooms we renovate
+                {content.roomsHeading ?? `Typical ${service.navLabel.toLowerCase()} we take on`}
               </h2>
-              <p className="lede mt-6 max-w-measure text-xl text-grey-600">
-                Family bathrooms, compact mansion-flat rooms, shower rooms,
-                ensuites and half-landing stacks — each written to the building
-                it sits in.
-              </p>
+              {content.roomsLede ? (
+                <p className="lede mt-6 max-w-measure text-xl text-grey-600">
+                  {content.roomsLede}
+                </p>
+              ) : null}
               <ul className="mt-16 grid gap-x-8 gap-y-14 md:grid-cols-2 lg:grid-cols-3">
                 {content.typicalRooms.map((room) => (
                   <li key={room.title}>
@@ -216,7 +217,9 @@ export function ServiceHub({ service }: { service: Service }) {
               <h2 className="font-display text-4xl font-normal sm:text-5xl lg:col-span-4">
                 {service.slug === "bathroom-renovation"
                   ? "Licence, building control and extract"
-                  : "Consent, extract and the building"}
+                  : service.slug === "kitchen-renovation"
+                    ? "Licence, extract and the building"
+                    : "Consent, extract and the building"}
               </h2>
               <div className="space-y-5 text-base leading-relaxed text-grey-700 lg:col-span-8">
                 {content.permissions
@@ -332,7 +335,9 @@ export function ServiceHub({ service }: { service: Service }) {
             <h2 className="font-display text-4xl font-normal sm:text-5xl lg:col-span-4">
               {service.slug === "bathroom-renovation"
                 ? "Bathroom renovation questions"
-                : `${service.name} questions`}
+                : service.slug === "kitchen-renovation"
+                  ? "Kitchen renovation questions"
+                  : `${service.name} questions`}
             </h2>
             <div className="lg:col-span-8">
               <FaqAccordion items={faqs} />

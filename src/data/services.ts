@@ -5,9 +5,10 @@ export const services: Service[] = [
     slug: "kitchen-renovation",
     name: "Kitchen Renovation",
     navLabel: "Kitchens",
-    heroLine: "Kitchen renovation for period flats, mansion blocks and family houses in North West London.",
+    heroLine:
+      "Kitchen renovation in North West London conversions and mansion flats — galleys, chimney breasts and extract planned for the building, from a Hampstead office.",
     summary:
-      "We plan and fit kitchens in the housing stock that defines North West London: converted Victorian and Edwardian houses, mansion-block apartments, and family homes where the kitchen has to work around original fabric, shared services and limited access. The work is a coordinated fit-out — layout, services, cabinetry and finishes — not a catalogue drop-in.",
+      "Kitchen renovation in Hampstead, St John's Wood, Maida Vale and North West London. Rear-return galleys, compact mansion-flat rooms and family kitchens fitted as a coordinated survey-led programme — not a catalogue drop-in.",
     included: [
       "Measured survey of the existing kitchen, services, extract routes and structural openings as found",
       "Layout options for galley, L-shape and island arrangements within period and mansion-block footprints",
@@ -20,6 +21,7 @@ export const services: Service[] = [
       "Extract and ventilation routes that respect conservation-area external appearance [VERIFY on listed fabric]",
       "Waste removal and a documented snagging pass",
       "Liaison with freeholders, managing agents and building control where a licence to alter or notice is required [VERIFY phrasing for the specific tenure]",
+      "A written snagging pass and care notes for worktops, cabinetry and appliances",
     ],
     processSteps: [
       {
@@ -88,10 +90,30 @@ export const services: Service[] = [
         q: "Do you fit kitchens, or only supply them?",
         a: "We plan and fit the kitchen as a coordinated renovation: measured survey, first and second fix, cabinetry, worktops, appliances and handover. We do not drop in a catalogue kitchen without seeing the building.",
       },
+      {
+        q: "Can you put an island in a conversion kitchen?",
+        a: "Only if the room and the services support it. Rear-return galleys and mansion-flat kitchens usually will not. We will not draw an island that the stack, the extract and the floor cannot serve.",
+      },
+      {
+        q: "Do you open the kitchen into the next room?",
+        a: "No. Removing a wall or forming a kitchen-diner is not kitchen renovation on this site. That work sits with Hampstead Renovations. We fit the kitchen in the envelope that exists.",
+      },
+      {
+        q: "Will a conservation area stop a new extract?",
+        a: "It can restrict where the grille sits. We will not assume a hole in the principal elevation. The route is planned at survey, particularly in Hampstead, Highgate, Primrose Hill and the Suburb.",
+      },
+      {
+        q: "Do units go in the lift in a mansion block?",
+        a: "Often they do not. We measure the lift and the stair before we order carcasses. The stair is the working assumption until we know.",
+      },
+      {
+        q: "Can you scribe cabinets to a chimney breast?",
+        a: "Yes. Period walls in Hampstead and Belsize Park are rarely square. We scribe the run to the breast rather than boxing it out as a convenience.",
+      },
     ],
-    metaTitle: "Kitchen Renovation in North West London | Hampstead, NW3, NW8 | HPSG",
+    metaTitle: "Kitchen Renovation in North West London | Hampstead, NW8, W9 | HPSG",
     metaDescription:
-      "Kitchen renovation in Hampstead, St John's Wood, Maida Vale and North West London. Period conversions, mansion flats and family houses. Survey-led. 020 7101 3168.",
+      "Kitchen renovation in Hampstead, St John's Wood, Maida Vale and North West London. Galleys, chimney breasts and compact mansion-flat kitchens. Survey-led. 020 7101 3168.",
   },
   {
     slug: "bathroom-renovation",
