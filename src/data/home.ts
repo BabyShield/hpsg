@@ -43,6 +43,25 @@ export const homeFaqs: Faq[] = [
   },
 ];
 
+export const homeMethod = [
+  {
+    title: "Visit",
+    text: "We record the rooms, the stacks, access and the building’s rules. We do not quote from photographs.",
+  },
+  {
+    title: "Written proposal",
+    text: "A specification, a programme and a price against that scope — not a verbal estimate.",
+  },
+  {
+    title: "One programme",
+    text: "Kitchen, bathroom, decoration and floors sequenced together, with one point of contact.",
+  },
+  {
+    title: "Handover",
+    text: "A snagging pass against the written specification, then a clean set of rooms.",
+  },
+] as const;
+
 export const whyHpsg = [
   {
     title: "Fully insured",

@@ -1,4 +1,8 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
 import { services } from "@/data/services";
 import { site } from "@/data/site";
@@ -9,10 +13,26 @@ import { MobileNav } from "./MobileNav";
 import { Wordmark } from "./Wordmark";
 
 export function Header() {
+  const pathname = usePathname();
+  const [scrolled, setScrolled] = useState(false);
   const dropdownAreas = tier1Areas().slice(0, 8);
+  const overlay = pathname === "/" && !scrolled;
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 40);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-navy/6 bg-bone/85 backdrop-blur-md">
+    <header
+      className={
+        overlay
+          ? "absolute inset-x-0 top-0 z-50 bg-gradient-to-b from-bone/90 via-bone/55 to-transparent"
+          : "sticky top-0 z-50 border-b border-navy/6 bg-bone/85 backdrop-blur-md"
+      }
+    >
       <div className="h-[2px] bg-gold" aria-hidden="true" />
       <Container className="flex items-center justify-between gap-6 py-3.5">
         <Wordmark compact />
@@ -31,7 +51,7 @@ export function Header() {
                   <summary className="nav-link cursor-pointer list-none [&::-webkit-details-marker]:hidden">
                     Areas
                   </summary>
-                  <ul className="absolute right-0 z-30 mt-3 w-56 border border-grey-200 bg-bone py-2">
+                  <ul className="absolute right-0 z-30 mt-3 w-56 border border-grey-200 bg-bone py-2 text-navy">
                     {dropdownAreas.map((area) => (
                       <li key={area.slug}>
                         <Link
@@ -81,7 +101,9 @@ export function Header() {
               Request a quote
             </Link>
           </span>
-          <MobileNav />
+          <div className="text-navy">
+            <MobileNav />
+          </div>
         </div>
       </Container>
     </header>

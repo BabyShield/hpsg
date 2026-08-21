@@ -8,10 +8,10 @@ import { CtaBand } from "@/components/ui/CtaBand";
 import { FaqAccordion } from "@/components/ui/FaqAccordion";
 import { PhotoTile } from "@/components/ui/PhotoTile";
 import { ServiceCard } from "@/components/ui/ServiceCard";
-import { homeFaqs, whyHpsg } from "@/data/home";
+import { homeFaqs, homeMethod, whyHpsg } from "@/data/home";
 import { areaPhotos, homeHero, officeNeighbourhood } from "@/data/photos";
 import { services } from "@/data/services";
-import { site } from "@/data/site";
+import { addressSingleLine, site } from "@/data/site";
 import { pageMetadata } from "@/lib/metadata";
 import { tier1Areas } from "@/lib/matrix";
 import { absoluteUrl, faqSchema, itemListSchema, webPageSchema } from "@/lib/schema";
@@ -34,17 +34,25 @@ const mosaicSlugs = [
 ] as const;
 
 const serviceMosaic = [
-  "lg:col-span-7 lg:min-h-[40rem]",
-  "lg:col-span-5 lg:min-h-[40rem]",
-  "lg:col-span-5 lg:min-h-[26rem]",
-  "lg:col-span-7 lg:min-h-[26rem]",
+  "min-h-[22rem] lg:col-span-7 lg:min-h-[46rem]",
+  "min-h-[22rem] lg:col-span-5 lg:min-h-[46rem]",
+  "min-h-[18rem] lg:col-span-5 lg:min-h-[28rem]",
+  "min-h-[18rem] lg:col-span-7 lg:min-h-[28rem]",
+] as const;
+
+const areaMosaic = [
+  "min-h-[22rem] md:col-span-2 lg:col-span-7 lg:min-h-[36rem]",
+  "min-h-[16rem] lg:col-span-5 lg:min-h-[36rem]",
+  "min-h-[14rem] lg:col-span-3 lg:min-h-[18rem]",
+  "min-h-[14rem] lg:col-span-3 lg:min-h-[18rem]",
+  "min-h-[14rem] lg:col-span-3 lg:min-h-[18rem]",
+  "min-h-[14rem] lg:col-span-3 lg:min-h-[18rem]",
 ] as const;
 
 export default function HomePage() {
   const mosaic = mosaicSlugs
     .map((slug) => tier1Areas().find((area) => area.slug === slug))
     .filter((area): area is NonNullable<typeof area> => Boolean(area));
-  const [featuredArea, ...otherAreas] = mosaic;
 
   return (
     <>
@@ -66,26 +74,26 @@ export default function HomePage() {
           })),
         )}
       />
-      <section className="relative min-h-[calc(100svh-4.25rem)] overflow-hidden text-bone">
+
+      <section className="relative min-h-svh overflow-hidden text-bone">
         {/* eslint-disable-next-line @next/next/no-img-element -- wide hero crop is unreliable with next/image fill */}
         <img
           src={homeHero.src}
           alt={homeHero.alt}
-          className="absolute inset-0 h-full w-full object-cover object-[center_80%]"
+          className="absolute inset-0 h-full w-full object-cover object-[center_70%]"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-navy/78 via-navy/28 to-navy/10" />
-        <Container className="relative flex min-h-[calc(100svh-4.25rem)] flex-col justify-end pb-28 pt-16 md:pb-28">
-          <p className="rule mb-6" aria-hidden="true" />
-          <h1 className="hero-type max-w-5xl font-display text-3xl font-light text-bone sm:text-6xl md:text-7xl">
-            {site.homeH1}
+        <div className="absolute inset-0 bg-gradient-to-t from-navy/82 via-navy/18 to-navy/10" />
+        <Container className="relative flex min-h-svh flex-col justify-end pb-24 pt-28 md:pb-28">
+          <p className="rule mb-8" aria-hidden="true" />
+          <h1 className="hero-type max-w-5xl font-display text-[2.35rem] font-light leading-[1.08] text-bone sm:text-6xl md:text-7xl">
+            Kitchen, Bathroom & Refurbishment
+            <span className="block">Specialists in North West London</span>
           </h1>
-          <p className="lede hero-type mt-5 max-w-xl text-lg leading-relaxed text-bone/90 sm:mt-8 sm:text-xl md:text-2xl">
-            Kitchen renovation, bathroom renovation, painting and decorating, and
-            light refurbishment in Hampstead, St John&apos;s Wood, Maida Vale and
-            North West London — period houses, conversions and mansion flats,
-            from a Finchley Road office.
+          <p className="lede hero-type mt-6 max-w-lg text-xl text-bone/90 md:mt-8 md:text-2xl">
+            Period houses, conversions and mansion flats — survey-led, from a
+            Finchley Road office.
           </p>
-          <div className="mt-8 flex flex-col items-start gap-5 sm:mt-12 sm:flex-row sm:items-center">
+          <div className="mt-10 flex flex-col items-start gap-5 sm:flex-row sm:items-center">
             <Link href="/contact/" className="btn btn-gold">
               Request a quote
             </Link>
@@ -93,135 +101,135 @@ export default function HomePage() {
               {site.phoneDisplay}
             </a>
           </div>
+          <p className="caption mt-14 text-bone/55">{addressSingleLine}</p>
         </Container>
       </section>
 
       <section className="py-24 sm:py-32">
-        <Container className="grid items-end gap-12 lg:grid-cols-12">
-          <div className="lg:col-span-7">
-            <p className="rule mb-8" aria-hidden="true" />
-            <h2 className="max-w-xl font-display text-4xl font-normal sm:text-5xl">
-              Kitchen, bathroom, painting and light refurbishment in North West London.
-            </h2>
-          </div>
-          <p className="lede max-w-md text-xl text-grey-600 lg:col-span-5">
-            We take on kitchens, bathrooms, decoration and light refurbishment as
-            one programme — not a collection of separate trades. The work is in
-            the housing around our Finchley Road office: period conversions,
-            mansion flats and family houses in Hampstead, Belsize Park, St
-            John&apos;s Wood, Maida Vale and the wider North West London list.
-          </p>
-        </Container>
-        <div className="mt-16">
-          <Container>
-            <ul className="mosaic grid-cols-1 lg:grid-cols-12">
-              {services.map((service, index) => (
-                <li key={service.slug} className={serviceMosaic[index]}>
-                  <ServiceCard
-                    service={service}
-                    className="h-full min-h-[22rem]"
-                    sizes="(min-width: 1024px) 55vw, 100vw"
-                  />
-                </li>
-              ))}
-            </ul>
-            <p className="mt-10 max-w-3xl text-base leading-relaxed text-grey-700">
-              Local pages include{" "}
-              <Link href="/kitchen-renovation/hampstead/" className="quiet-link text-navy">
-                kitchen renovation in Hampstead
-              </Link>
-              ,{" "}
-              <Link href="/bathroom-renovation/st-johns-wood/" className="quiet-link text-navy">
-                bathroom renovation in St John&apos;s Wood
-              </Link>
-              ,{" "}
-              <Link href="/kitchen-renovation/maida-vale/" className="quiet-link text-navy">
-                kitchen renovation in Maida Vale
-              </Link>
-              ,{" "}
-              <Link href="/painting-decorating/highgate/" className="quiet-link text-navy">
-                painting and decorating in Highgate
-              </Link>{" "}
-              and{" "}
-              <Link href="/light-refurbishment/swiss-cottage/" className="quiet-link text-navy">
-                light refurbishment in Swiss Cottage
-              </Link>
-              .
-            </p>
-          </Container>
-        </div>
-      </section>
-
-      <section className="border-y border-grey-200 py-24 sm:py-32">
         <Container>
+          <p className="kicker mb-8">The method</p>
           <p className="lede max-w-4xl text-3xl text-navy md:text-5xl">
             One visit, one written proposal, one programme — kitchens, bathrooms,
             decoration and floors sequenced together.
           </p>
+          <ol className="mt-20 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+            {homeMethod.map((step, index) => (
+              <li key={step.title}>
+                <p className="font-display text-3xl text-gold">
+                  {String(index + 1).padStart(2, "0")}
+                </p>
+                <h2 className="mt-4 font-display text-2xl font-normal">{step.title}</h2>
+                <p className="mt-3 text-base leading-relaxed text-grey-700">{step.text}</p>
+              </li>
+            ))}
+          </ol>
         </Container>
       </section>
 
-      <section className="band-navy py-24 sm:py-32">
-        <Container>
-          <div className="grid items-end gap-12 lg:grid-cols-12">
-            <div className="lg:col-span-5">
-              <p className="rule mb-8" aria-hidden="true" />
-              <h2 className="font-display text-4xl font-normal text-bone sm:text-5xl">
-                North West London neighbourhoods
-              </h2>
-              <p className="lede mt-6 max-w-md text-xl text-bone/80">
-                From Hampstead and Belsize Park to St John&apos;s Wood, Maida Vale,
-                Highgate and the wider list of areas on this site.
-              </p>
-              <Link href="/areas/" className="btn-line mt-10 text-bone">
-                All areas
-              </Link>
-            </div>
-            {featuredArea && areaPhotos[featuredArea.slug] ? (
-              <div className="min-h-[24rem] lg:col-span-7 lg:min-h-[34rem]">
-                <PhotoTile
-                  photo={areaPhotos[featuredArea.slug]}
-                  href={`/areas/${featuredArea.slug}/`}
-                  title={featuredArea.name}
-                  caption={featuredArea.postcode}
-                  className="h-full min-h-[24rem] lg:min-h-[34rem]"
+      <section className="pb-24 sm:pb-32">
+        <Container className="mb-12 grid items-end gap-10 lg:grid-cols-12">
+          <div className="lg:col-span-7">
+            <p className="kicker mb-6">Services</p>
+            <h2 className="max-w-xl font-display text-4xl font-normal sm:text-5xl">
+              Four services, from a Hampstead office.
+            </h2>
+          </div>
+          <p className="lede max-w-md text-xl text-grey-600 lg:col-span-5">
+            Kitchen renovation, bathroom renovation, painting and light
+            refurbishment as one programme — in the conversions, mansion flats
+            and family houses around Finchley Road.
+          </p>
+        </Container>
+        <div className="bleed">
+          <ul className="mosaic grid-cols-1 lg:grid-cols-12">
+            {services.map((service, index) => (
+              <li key={service.slug} className={serviceMosaic[index]}>
+                <ServiceCard
+                  service={service}
+                  className="h-full min-h-[18rem]"
                   sizes="(min-width: 1024px) 55vw, 100vw"
                 />
-              </div>
-            ) : null}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <Container>
+          <p className="mt-10 max-w-3xl text-sm leading-relaxed text-grey-600">
+            Local pages include{" "}
+            <Link href="/kitchen-renovation/hampstead/" className="quiet-link text-navy">
+              kitchen renovation in Hampstead
+            </Link>
+            ,{" "}
+            <Link href="/bathroom-renovation/st-johns-wood/" className="quiet-link text-navy">
+              bathroom renovation in St John&apos;s Wood
+            </Link>
+            ,{" "}
+            <Link href="/kitchen-renovation/maida-vale/" className="quiet-link text-navy">
+              kitchen renovation in Maida Vale
+            </Link>{" "}
+            and{" "}
+            <Link href="/painting-decorating/highgate/" className="quiet-link text-navy">
+              painting in Highgate
+            </Link>
+            .
+          </p>
+        </Container>
+      </section>
+
+      <section className="pb-24 sm:pb-32">
+        <Container className="mb-12 flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-end">
+          <div>
+            <p className="kicker mb-6">Areas</p>
+            <h2 className="font-display text-4xl font-normal sm:text-5xl">
+              North West London neighbourhoods
+            </h2>
+            <p className="lede mt-6 max-w-xl text-xl text-grey-600">
+              From Hampstead and Belsize Park to St John&apos;s Wood, Maida Vale,
+              Highgate and the wider list.
+            </p>
           </div>
-          <ul className="mosaic mosaic-light mt-px grid-cols-2 md:grid-cols-5">
-            {otherAreas.map((area) => {
+          <Link href="/areas/" className="btn-line text-navy">
+            All areas
+          </Link>
+        </Container>
+        <div className="bleed">
+          <ul className="mosaic grid-cols-2 lg:grid-cols-12">
+            {mosaic.map((area, index) => {
               const photo = areaPhotos[area.slug];
               if (!photo) return null;
               return (
-                <li key={area.slug} className="min-h-[11rem] md:min-h-[16rem]">
+                <li key={area.slug} className={areaMosaic[index]}>
                   <PhotoTile
                     photo={photo}
                     href={`/areas/${area.slug}/`}
                     title={area.name}
                     caption={area.postcode}
-                    className="h-full min-h-[11rem] md:min-h-[16rem]"
-                    sizes="(min-width: 768px) 20vw, 50vw"
+                    className="h-full min-h-[14rem] lg:min-h-full"
+                    sizes={
+                      index < 2
+                        ? "(min-width: 1024px) 50vw, 100vw"
+                        : "(min-width: 1024px) 25vw, 50vw"
+                    }
                   />
                 </li>
               );
             })}
           </ul>
-        </Container>
+        </div>
       </section>
 
-      <section className="py-24 sm:py-32">
-        <Container className="grid items-center gap-16 lg:grid-cols-12">
+      <section className="border-y border-grey-200 py-24 sm:py-32">
+        <Container className="grid items-start gap-16 lg:grid-cols-12">
           <div className="lg:col-span-5">
             <ContentImage
               photo={officeNeighbourhood}
               className="aspect-[4/5] w-full"
               sizes="(min-width: 1024px) 40vw, 100vw"
             />
+            <p className="caption mt-4">{addressSingleLine}</p>
           </div>
           <div className="lg:col-span-7">
-            <p className="rule mb-8" aria-hidden="true" />
+            <p className="kicker mb-6">The office</p>
             <h2 className="font-display text-4xl font-normal sm:text-5xl">Why HPSG</h2>
             <ul className="mt-12">
               {whyHpsg.map((item, index) => (
@@ -241,21 +249,20 @@ export default function HomePage() {
                 </li>
               ))}
             </ul>
+            <Link href="/about/" className="btn-line mt-10 text-navy">
+              About the company
+            </Link>
           </div>
         </Container>
       </section>
 
-      <div className="bg-grey-50">
-        <FeaturedProjects />
-      </div>
+      <FeaturedProjects />
 
-      <section className="py-24 sm:py-32">
+      <section className="border-t border-grey-200 py-24 sm:py-32">
         <Container className="grid gap-16 lg:grid-cols-12">
           <div className="lg:col-span-4">
-            <p className="rule mb-8" aria-hidden="true" />
-            <h2 className="font-display text-4xl font-normal sm:text-5xl">
-              Kitchen and bathroom questions in North West London
-            </h2>
+            <p className="kicker mb-6">Enquiry</p>
+            <h2 className="font-display text-4xl font-normal sm:text-5xl">Questions</h2>
           </div>
           <div className="lg:col-span-8">
             <FaqAccordion items={homeFaqs} />
@@ -263,7 +270,7 @@ export default function HomePage() {
         </Container>
       </section>
 
-      <CtaBand />
+      <CtaBand photo={officeNeighbourhood} />
     </>
   );
 }

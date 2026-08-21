@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { homeHero } from "@/data/photos";
+import { homeHero, type Photo } from "@/data/photos";
 import { site } from "@/data/site";
 
 import { Container } from "./Container";
@@ -8,15 +8,17 @@ import { Container } from "./Container";
 export function CtaBand({
   title = "Request a quote",
   text = "Tell us about the property and the rooms in scope. We visit before we write a proposal.",
+  photo = homeHero,
 }: {
   title?: string;
   text?: string;
+  photo?: Photo;
 }) {
   return (
     <section className="relative overflow-hidden text-bone">
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
-        src={homeHero.src}
+        src={photo.src}
         alt=""
         aria-hidden="true"
         className="absolute inset-0 h-full w-full object-cover object-[center_70%]"

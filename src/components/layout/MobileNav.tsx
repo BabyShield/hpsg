@@ -100,7 +100,7 @@ export function MobileNav() {
     <div className="lg:hidden">
       <button
         type="button"
-        className="text-sm font-medium text-navy"
+        className="text-sm font-medium"
         aria-expanded={open}
         aria-controls="mobile-navigation"
         onClick={() => setOpen((value) => !value)}
