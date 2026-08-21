@@ -11,9 +11,9 @@ import { pageMetadata } from "@/lib/metadata";
 import { isDraftToken } from "@/lib/public-copy";
 
 export const metadata = pageMetadata({
-  title: "About Hampstead Property Services Group | HPSG",
+  title: "About Hampstead Property Services Group | Kitchen and bathroom renovation | HPSG",
   description:
-    "Hampstead Property Services Group Limited is a North West London company for kitchen renovation, bathroom renovation, painting and light refurbishment. 020 7101 3168.",
+    "Hampstead Property Services Group Limited (17404557) carries out kitchen renovation, bathroom renovation, painting and light refurbishment in Hampstead and North West London. 020 7101 3168.",
   path: "/about/",
   image: officeNeighbourhood.src,
   imageAlt: officeNeighbourhood.alt,
@@ -57,9 +57,10 @@ export default function AboutPage() {
             Hampstead Property Services Group Limited is a company registered in
             England and Wales (company no. {site.companyNumber}). This site is
             the place for kitchen renovation, bathroom renovation, painting and
-            decorating, and light refurbishment in North West London — period
-            conversions, mansion flats and family houses around a Hampstead
-            office.
+            decorating, and light refurbishment in Hampstead, West Hampstead,
+            Belsize Park, St John&apos;s Wood, Maida Vale, Highgate and the
+            wider North West London list — period conversions, mansion flats and
+            family houses around a Finchley Road office.
           </p>
           <p>
             The office is at {addressSingleLine}. Telephone {site.phoneDisplay}.
@@ -84,10 +85,13 @@ export default function AboutPage() {
       <section className="border-y border-grey-200 py-24 sm:py-32">
         <Container>
           <p className="rule mb-8" aria-hidden="true" />
-          <h2 className="font-display text-4xl font-normal sm:text-5xl">What we do</h2>
+          <h2 className="font-display text-4xl font-normal sm:text-5xl">
+            Kitchen, bathroom, painting and light refurbishment
+          </h2>
           <p className="mt-5 max-w-measure text-base leading-relaxed text-grey-700">
-            Four services, one office. Local pages sit under each service for
-            the neighbourhoods we cover in detail.
+            Four services, one office in NW3. Local pages sit under each service
+            for Hampstead, St John&apos;s Wood, Maida Vale and the neighbourhoods
+            we cover in detail.
           </p>
           <ul className="mt-12 grid gap-10 sm:grid-cols-2">
             {services.map((service) => (

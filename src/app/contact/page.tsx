@@ -11,8 +11,8 @@ import { pageMetadata } from "@/lib/metadata";
 import { isDraftToken } from "@/lib/public-copy";
 
 export const metadata = pageMetadata({
-  title: "Contact Hampstead Property Services Group | HPSG",
-  description: `Contact Hampstead Property Services Group. ${site.phoneDisplay}, ${site.email}, ${addressSingleLine}.`,
+  title: "Contact HPSG | Kitchen and bathroom quotes in North West London",
+  description: `Request a quote for kitchen renovation, bathroom renovation, painting or light refurbishment in Hampstead and North West London. ${site.phoneDisplay}. ${addressSingleLine}.`,
   path: "/contact/",
   image: officeNeighbourhood.src,
   imageAlt: officeNeighbourhood.alt,
@@ -40,9 +40,11 @@ export default function ContactPage() {
           <p className="rule mb-8" aria-hidden="true" />
           <h1 className="font-display text-5xl font-light sm:text-6xl">Contact</h1>
           <p className="lede mt-8 max-w-measure text-xl text-grey-600">
-            Tell us about the property and the rooms in scope. We visit before we
-            write a proposal. The office is at {addressSingleLine}, a short run
-            from Hampstead, Belsize Park and Swiss Cottage.
+            Request a quote for kitchen renovation, bathroom renovation, painting
+            or light refurbishment in Hampstead and North West London. Tell us
+            the property and the rooms in scope. We visit before we write a
+            proposal. The office is at {addressSingleLine}, a short run from
+            Hampstead, Belsize Park and Swiss Cottage.
           </p>
           <p className="mt-12 font-display text-4xl font-light text-navy sm:text-5xl">
             <a href={`tel:${site.phoneTel}`}>{site.phoneDisplay}</a>

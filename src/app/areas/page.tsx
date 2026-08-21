@@ -8,9 +8,9 @@ import { pageMetadata } from "@/lib/metadata";
 import { tier1Areas, tier2Areas } from "@/lib/matrix";
 
 export const metadata = pageMetadata({
-  title: "Areas we cover in North West London | HPSG",
+  title: "North West London areas | Kitchens, bathrooms and decorating | HPSG",
   description:
-    "Kitchen, bathroom, painting and light refurbishment across North West London, from Hampstead, Belsize Park and St John's Wood to Highgate, Queen's Park and the wider list. 020 7101 3168.",
+    "Kitchen renovation, bathroom renovation, painting and light refurbishment in Hampstead, West Hampstead, Belsize Park, St John's Wood, Maida Vale, Highgate and 25 North West London neighbourhoods. 020 7101 3168.",
   path: "/areas/",
 });
 
@@ -29,13 +29,15 @@ export default function AreasIndexPage() {
           ]}
         />
         <p className="rule mb-8" aria-hidden="true" />
-        <h1 className="font-display text-5xl font-light sm:text-6xl">Areas we cover</h1>
+        <h1 className="font-display text-5xl font-light sm:text-6xl">
+          North West London areas we cover
+        </h1>
         <p className="lede mt-8 max-w-measure text-xl text-grey-600">
-          We work from a Finchley Road office across North West London.
-          Neighbourhood pages sit here. Kitchen, bathroom, painting and light
-          refurbishment pages for Hampstead, West Hampstead, Belsize Park, St
-          John&apos;s Wood, Maida Vale and the rest of the main list sit under
-          each service.
+          Kitchen renovation, bathroom renovation, painting and light
+          refurbishment from a Finchley Road office across North West London.
+          Neighbourhood pages sit here. Local service pages for Hampstead, West
+          Hampstead, Belsize Park, St John&apos;s Wood, Maida Vale, Highgate and
+          the rest of the main list sit under each service.
         </p>
         {featured && featuredPhoto ? (
           <div className="mt-16 min-h-[24rem] lg:min-h-[36rem]">

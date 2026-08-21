@@ -20,16 +20,22 @@ export function organizationSchema() {
     "@id": BUSINESS_ID,
     name: site.tradingName,
     legalName: site.legalName,
+    alternateName: site.shortName,
     url: site.url,
     telephone: site.phoneTel,
     email: site.email,
     description: site.homeMetaDescription,
+    identifier: {
+      "@type": "PropertyValue",
+      name: "Company Number",
+      value: site.companyNumber,
+    },
     address: {
       "@type": "PostalAddress",
       streetAddress: `${site.address.line1}, ${site.address.line2}`,
       addressLocality: site.address.city,
       postalCode: site.address.postcode,
-      addressRegion: "England",
+      addressRegion: "Greater London",
       addressCountry: "GB",
     },
     geo: {
@@ -37,10 +43,36 @@ export function organizationSchema() {
       latitude: site.geo.latitude,
       longitude: site.geo.longitude,
     },
-    areaServed: areas.map((area) => ({
-      "@type": "Place",
-      name: `${area.name}, ${area.postcode}`,
-    })),
+    hasMap: `https://www.openstreetmap.org/?mlat=${site.geo.latitude}&mlon=${site.geo.longitude}#map=17/${site.geo.latitude}/${site.geo.longitude}`,
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: site.phoneTel,
+      email: site.email,
+      contactType: "customer service",
+      areaServed: "GB",
+      availableLanguage: "English",
+    },
+    areaServed: [
+      { "@type": "AdministrativeArea", name: "North West London" },
+      { "@type": "AdministrativeArea", name: "London Borough of Camden" },
+      { "@type": "AdministrativeArea", name: "City of Westminster" },
+      { "@type": "AdministrativeArea", name: "London Borough of Barnet" },
+      { "@type": "AdministrativeArea", name: "London Borough of Haringey" },
+      ...areas.map((area) => ({
+        "@type": "Place",
+        name: `${area.name}, ${area.postcode}`,
+      })),
+    ],
+    knowsAbout: [
+      "Kitchen renovation",
+      "Bathroom renovation",
+      "Painting and decorating",
+      "Light refurbishment",
+      "Period conversions",
+      "Mansion flats",
+      "Conservation areas",
+      "Licence to alter",
+    ],
     image: [
       absoluteUrl("/images/home/hero.jpg"),
       absoluteUrl("/images/about/office-neighbourhood.jpg"),
@@ -71,6 +103,77 @@ export function websiteSchema() {
     name: site.tradingName,
     inLanguage: "en-GB",
     publisher: { "@id": BUSINESS_ID },
+    about: { "@id": BUSINESS_ID },
+  };
+}
+
+export function webPageSchema({
+  name,
+  url,
+  description,
+  image,
+}: {
+  name: string;
+  url: string;
+  description?: string;
+  image?: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${url}#webpage`,
+    url,
+    name,
+    description: description ? publicCopy(description) : undefined,
+    inLanguage: "en-GB",
+    isPartOf: { "@id": WEBSITE_ID },
+    about: { "@id": BUSINESS_ID },
+    primaryImageOfPage: image ? absoluteUrl(image) : undefined,
+  };
+}
+
+export function placeSchema(name: string, postcode: string) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    name: `${name}, ${postcode}`,
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: name,
+      postalCode: postcode,
+      addressRegion: "Greater London",
+      addressCountry: "GB",
+    },
+  };
+}
+
+export function howToSchema({
+  name,
+  description,
+  steps,
+}: {
+  name: string;
+  description: string;
+  steps: { title: string; text: string }[];
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name,
+    description: publicCopy(description),
+    inLanguage: "en-GB",
+    step: steps
+      .map((step) => ({
+        title: publicCopy(step.title),
+        text: publicCopy(step.text),
+      }))
+      .filter((step) => step.title && step.text)
+      .map((step, index) => ({
+        "@type": "HowToStep",
+        position: index + 1,
+        name: step.title,
+        text: step.text,
+      })),
   };
 }
 
@@ -100,7 +203,9 @@ export function serviceSchema({
     description: description ? publicCopy(description) : undefined,
     image: image ? absoluteUrl(image) : undefined,
     provider: { "@id": BUSINESS_ID },
+    brand: { "@id": BUSINESS_ID },
     areaServed: places,
+    mainEntityOfPage: url,
   };
 }
 

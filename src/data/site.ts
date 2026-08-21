@@ -22,7 +22,7 @@ export const site = {
   homeMetaTitle:
     "Kitchen, Bathroom and Refurbishment Specialists in North West London | HPSG",
   homeMetaDescription:
-    "Kitchen renovation, bathroom renovation, painting and light refurbishment in Hampstead and North West London. Survey-led, from a Finchley Road office. 020 7101 3168.",
+    "Kitchen renovation, bathroom renovation, painting and light refurbishment in Hampstead, St John's Wood, Maida Vale and North West London. Survey-led, from Finchley Road. 020 7101 3168.",
   sisterBrands: [
     {
       name: "Hampstead Renovations",

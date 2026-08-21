@@ -7,6 +7,7 @@ import { areas } from "@/data/areas";
 import { areaPhotos } from "@/data/photos";
 import { assertAreaGraph, getArea } from "@/lib/matrix";
 import { pageMetadata } from "@/lib/metadata";
+import { areaMetaDescription, areaMetaTitle } from "@/lib/seo-copy";
 
 export const dynamic = "force-static";
 export const dynamicParams = false;
@@ -32,8 +33,8 @@ export async function generateMetadata({
   if (!area) return {};
   const photo = areaPhotos[area.slug];
   return pageMetadata({
-    title: `Kitchens, Bathrooms and Decorating in ${area.name} ${area.postcode} | HPSG`,
-    description: `Kitchen renovation, bathroom renovation, painting and light refurbishment in ${area.name}, ${area.postcode}. Hampstead Property Services Group. 020 7101 3168.`,
+    title: areaMetaTitle(area),
+    description: areaMetaDescription(area),
     path: `/areas/${area.slug}/`,
     image: photo?.src,
     imageAlt: photo?.alt,

@@ -37,7 +37,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       return {
         url: absoluteUrl(path),
         lastModified,
-        changeFrequency: "monthly" as const,
+        changeFrequency: path === "/" || servicePaths.includes(path) ? ("weekly" as const) : ("monthly" as const),
         priority,
       };
     },

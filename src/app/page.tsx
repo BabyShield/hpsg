@@ -14,7 +14,7 @@ import { services } from "@/data/services";
 import { site } from "@/data/site";
 import { pageMetadata } from "@/lib/metadata";
 import { tier1Areas } from "@/lib/matrix";
-import { absoluteUrl, faqSchema, itemListSchema } from "@/lib/schema";
+import { absoluteUrl, faqSchema, itemListSchema, webPageSchema } from "@/lib/schema";
 
 export const metadata = pageMetadata({
   title: site.homeMetaTitle,
@@ -48,6 +48,14 @@ export default function HomePage() {
 
   return (
     <>
+      <JsonLd
+        data={webPageSchema({
+          name: site.homeMetaTitle,
+          url: absoluteUrl("/"),
+          description: site.homeMetaDescription,
+          image: homeHero.src,
+        })}
+      />
       <JsonLd data={faqSchema(homeFaqs)} />
       <JsonLd
         data={itemListSchema(
@@ -73,8 +81,9 @@ export default function HomePage() {
           </h1>
           <p className="lede hero-type mt-5 max-w-xl text-lg leading-relaxed text-bone/90 sm:mt-8 sm:text-xl md:text-2xl">
             Kitchen renovation, bathroom renovation, painting and decorating, and
-            light refurbishment for period houses, conversions and mansion
-            flats — from a Hampstead office.
+            light refurbishment in Hampstead, St John&apos;s Wood, Maida Vale and
+            North West London — period houses, conversions and mansion flats,
+            from a Finchley Road office.
           </p>
           <div className="mt-8 flex flex-col items-start gap-5 sm:mt-12 sm:flex-row sm:items-center">
             <Link href="/contact/" className="btn btn-gold">
@@ -92,14 +101,15 @@ export default function HomePage() {
           <div className="lg:col-span-7">
             <p className="rule mb-8" aria-hidden="true" />
             <h2 className="max-w-xl font-display text-4xl font-normal sm:text-5xl">
-              Four services, from a Hampstead office.
+              Kitchen, bathroom, painting and light refurbishment in North West London.
             </h2>
           </div>
           <p className="lede max-w-md text-xl text-grey-600 lg:col-span-5">
             We take on kitchens, bathrooms, decoration and light refurbishment as
             one programme — not a collection of separate trades. The work is in
-            the housing around our office: period conversions, mansion flats and
-            family houses in North West London.
+            the housing around our Finchley Road office: period conversions,
+            mansion flats and family houses in Hampstead, Belsize Park, St
+            John&apos;s Wood, Maida Vale and the wider North West London list.
           </p>
         </Container>
         <div className="mt-16">
@@ -115,6 +125,29 @@ export default function HomePage() {
                 </li>
               ))}
             </ul>
+            <p className="mt-10 max-w-3xl text-base leading-relaxed text-grey-700">
+              Local pages include{" "}
+              <Link href="/kitchen-renovation/hampstead/" className="quiet-link text-navy">
+                kitchen renovation in Hampstead
+              </Link>
+              ,{" "}
+              <Link href="/bathroom-renovation/st-johns-wood/" className="quiet-link text-navy">
+                bathroom renovation in St John&apos;s Wood
+              </Link>
+              ,{" "}
+              <Link href="/kitchen-renovation/maida-vale/" className="quiet-link text-navy">
+                kitchen renovation in Maida Vale
+              </Link>
+              ,{" "}
+              <Link href="/painting-decorating/highgate/" className="quiet-link text-navy">
+                painting and decorating in Highgate
+              </Link>{" "}
+              and{" "}
+              <Link href="/light-refurbishment/swiss-cottage/" className="quiet-link text-navy">
+                light refurbishment in Swiss Cottage
+              </Link>
+              .
+            </p>
           </Container>
         </div>
       </section>
@@ -220,7 +253,9 @@ export default function HomePage() {
         <Container className="grid gap-16 lg:grid-cols-12">
           <div className="lg:col-span-4">
             <p className="rule mb-8" aria-hidden="true" />
-            <h2 className="font-display text-4xl font-normal sm:text-5xl">Questions</h2>
+            <h2 className="font-display text-4xl font-normal sm:text-5xl">
+              Kitchen and bathroom questions in North West London
+            </h2>
           </div>
           <div className="lg:col-span-8">
             <FaqAccordion items={homeFaqs} />

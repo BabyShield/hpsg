@@ -14,7 +14,15 @@ import { services } from "@/data/services";
 import type { Service } from "@/data/types";
 import { getCombosForService, tier2Areas } from "@/lib/matrix";
 import { publicCopy } from "@/lib/public-copy";
-import { absoluteUrl, faqSchema, itemListSchema, serviceSchema } from "@/lib/schema";
+import {
+  absoluteUrl,
+  faqSchema,
+  howToSchema,
+  itemListSchema,
+  serviceSchema,
+  webPageSchema,
+} from "@/lib/schema";
+import { serviceSearchFaqs } from "@/lib/seo-copy";
 
 export function ServiceHub({ service }: { service: Service }) {
   const content = serviceHubContent[service.slug];
@@ -25,21 +33,40 @@ export function ServiceHub({ service }: { service: Service }) {
 
   const crumbs = [
     { name: "Home", href: "/" },
-    { name: service.name, href: `/${service.slug}/` },
+    { name: `${service.name} in North West London`, href: `/${service.slug}/` },
   ];
+  const pageUrl = absoluteUrl(`/${service.slug}/`);
+  const faqs = [...serviceSearchFaqs(service), ...service.faqs]
+    .map((item) => ({ q: publicCopy(item.q), a: publicCopy(item.a) }))
+    .filter((item) => item.q && item.a);
 
   return (
     <>
       <JsonLd
         data={serviceSchema({
           name: `${service.name} in North West London`,
-          url: absoluteUrl(`/${service.slug}/`),
+          url: pageUrl,
           areaServed: ["North West London", ...comboAreas.map((area) => `${area.name}, ${area.postcode}`)],
           description: service.metaDescription,
           image: servicePhotos[service.slug].src,
         })}
       />
-      <JsonLd data={faqSchema(service.faqs)} />
+      <JsonLd
+        data={webPageSchema({
+          name: `${service.name} in North West London`,
+          url: pageUrl,
+          description: service.metaDescription,
+          image: servicePhotos[service.slug].src,
+        })}
+      />
+      <JsonLd
+        data={howToSchema({
+          name: `How we carry out ${service.name.toLowerCase()} in North West London`,
+          description: service.summary,
+          steps: service.processSteps,
+        })}
+      />
+      <JsonLd data={faqSchema(faqs)} />
       <JsonLd
         data={itemListSchema(
           `${service.name} by neighbourhood`,
@@ -65,7 +92,9 @@ export function ServiceHub({ service }: { service: Service }) {
           </div>
           <div className="lg:col-span-5">
             <p className="rule mb-6" aria-hidden="true" />
-            <h2 className="font-display text-3xl font-normal">Who it is for</h2>
+            <h2 className="font-display text-3xl font-normal">
+              {service.name} for North West London houses and flats
+            </h2>
             <div className="mt-6 space-y-5 text-base leading-relaxed text-grey-700">
               {content.forWhom.map((paragraph) => publicCopy(paragraph)).filter(Boolean).map((paragraph) => (
                 <p key={paragraph.slice(0, 32)}>{paragraph}</p>
@@ -138,7 +167,9 @@ export function ServiceHub({ service }: { service: Service }) {
         <section className="border-y border-grey-200 py-24 sm:py-32">
           <Container>
             <p className="rule mb-8" aria-hidden="true" />
-            <h2 className="font-display text-4xl font-normal sm:text-5xl">What is included</h2>
+            <h2 className="font-display text-4xl font-normal sm:text-5xl">
+              What {service.name.toLowerCase()} in North West London includes
+            </h2>
             <p className="mt-5 max-w-measure text-base leading-relaxed text-grey-700">
               The list is the core of a typical instruction. The written proposal
               after survey is the contract scope.
@@ -157,7 +188,9 @@ export function ServiceHub({ service }: { service: Service }) {
         <section className="py-24 sm:py-32">
           <Container>
             <p className="rule mb-8" aria-hidden="true" />
-            <h2 className="font-display text-4xl font-normal sm:text-5xl">How we work</h2>
+            <h2 className="font-display text-4xl font-normal sm:text-5xl">
+              How we carry out {service.name.toLowerCase()} in North West London
+            </h2>
             <ol className="mt-16 grid gap-x-10 gap-y-12 md:grid-cols-2 lg:grid-cols-3">
               {service.processSteps.map((step, index) => (
                 <li key={step.title}>
@@ -175,7 +208,7 @@ export function ServiceHub({ service }: { service: Service }) {
         <section className="border-y border-grey-200 py-24 sm:py-32">
           <Container className="grid gap-10 lg:grid-cols-12">
             <h2 className="font-display text-4xl font-normal sm:text-5xl lg:col-span-4">
-              Specification
+              {service.name} specification
             </h2>
             <div className="space-y-5 text-base leading-relaxed text-grey-700 lg:col-span-8">
               {content.specification.map((paragraph) => publicCopy(paragraph)).filter(Boolean).map((paragraph) => (
@@ -234,7 +267,7 @@ export function ServiceHub({ service }: { service: Service }) {
               {service.name} questions
             </h2>
             <div className="lg:col-span-8">
-              <FaqAccordion items={service.faqs} />
+              <FaqAccordion items={faqs} />
             </div>
           </Container>
         </section>

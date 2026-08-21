@@ -10,7 +10,7 @@ import { publicCopy } from "@/lib/public-copy";
 export const metadata = pageMetadata({
   title: "The Hampstead Property Services Group family | HPSG",
   description:
-    "Hampstead Property Services Group Limited and the sister companies in the same family. Kitchen, bathroom and light refurbishment. 020 7101 3168.",
+    "Hampstead Property Services Group Limited (17404557) for kitchen, bathroom, painting and light refurbishment in North West London, and the sister companies in the same family. 020 7101 3168.",
   path: "/group/",
 });
 

@@ -80,10 +80,18 @@ export const services: Service[] = [
         q: "What about gas and building control?",
         a: "Gas work is carried out by a Gas Safe registered engineer. Building-control notification is arranged where the work falls within the current regulations — for example new electrical circuits or a change to drainage. We will identify that at proposal stage rather than after strip-out.",
       },
+      {
+        q: "What does a kitchen renovation in North West London cost?",
+        a: "We do not publish a price list. A Hampstead conversion galley, a St John's Wood mansion-flat kitchen and a family room in Highgate are different jobs. We visit, then write a proposal against a defined scope. 020 7101 3168.",
+      },
+      {
+        q: "Do you fit kitchens, or only supply them?",
+        a: "We plan and fit the kitchen as a coordinated renovation: measured survey, first and second fix, cabinetry, worktops, appliances and handover. We do not drop in a catalogue kitchen without seeing the building.",
+      },
     ],
-    metaTitle: "Kitchen Renovation in North West London | HPSG",
+    metaTitle: "Kitchen Renovation in North West London | Hampstead, NW3, NW8 | HPSG",
     metaDescription:
-      "Kitchen renovation in North West London: period conversions, mansion flats and family houses. Survey-led fit-out from Hampstead. 020 7101 3168.",
+      "Kitchen renovation in Hampstead, St John's Wood, Maida Vale and North West London. Period conversions, mansion flats and family houses. Survey-led. 020 7101 3168.",
   },
   {
     slug: "bathroom-renovation",
@@ -164,10 +172,14 @@ export const services: Service[] = [
         q: "What timescales should I allow for materials?",
         a: "British and European sanitaryware is often available within ordinary merchant lead times; some brassware and tiles are longer. We programme strip-out after the critical items are dated, so the room is not left open waiting for a tap.",
       },
+      {
+        q: "What does a bathroom renovation in North West London cost?",
+        a: "We do not publish a price list. Timber floors in a Hampstead conversion, a stacked mansion-flat bathroom in Maida Vale, and a family bathroom in Highgate are different jobs. We visit, then write a proposal. 020 7101 3168.",
+      },
     ],
-    metaTitle: "Bathroom Renovation in North West London | HPSG",
+    metaTitle: "Bathroom Renovation in North West London | Hampstead, NW8, W9 | HPSG",
     metaDescription:
-      "Bathroom renovation in North West London conversions and mansion blocks: tanking, ventilation and compact layouts. From Hampstead. 020 7101 3168.",
+      "Bathroom renovation in Hampstead, St John's Wood, Maida Vale and North West London. Tanking, ventilation and compact layouts in conversions and mansion flats. 020 7101 3168.",
   },
   {
     slug: "painting-decorating",
@@ -249,9 +261,9 @@ export const services: Service[] = [
         a: "Yes. Prep standard, number of coats, product type and sheen are written down. That is what we snag against.",
       },
     ],
-    metaTitle: "Painting and Decorating in North West London | HPSG",
+    metaTitle: "Painting and Decorating in North West London | Hampstead period houses | HPSG",
     metaDescription:
-      "Painting and decorating in North West London: preparation, original joinery, occupied houses and conversions. Based in Hampstead. 020 7101 3168.",
+      "Painting and decorating in Hampstead, Belsize Park, Highgate and North West London. Preparation, original joinery, occupied houses and conversions. 020 7101 3168.",
   },
   {
     slug: "light-refurbishment",
@@ -333,9 +345,9 @@ export const services: Service[] = [
         a: "No. That work is carried out by our sister company, Hampstead Renovations (hampsteadrenovations.co.uk). We will introduce you rather than take a project we do not deliver.",
       },
     ],
-    metaTitle: "Light Refurbishment in North West London | HPSG",
+    metaTitle: "Light Refurbishment in North West London | Flats and houses | HPSG",
     metaDescription:
-      "Light refurbishment in North West London: kitchens, bathrooms, decoration and floors as one programme, without structural work. 020 7101 3168.",
+      "Light refurbishment in Hampstead, Maida Vale and North West London: kitchens, bathrooms, decoration and floors as one programme, without structural work. 020 7101 3168.",
   },
 ];
 

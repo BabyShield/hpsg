@@ -25,6 +25,22 @@ export const homeFaqs: Faq[] = [
     q: "What are your working hours?",
     a: "Working hours are agreed for the property. In mansion blocks we also follow the building's own rules for noisy work and common-parts access.",
   },
+  {
+    q: "How much does a kitchen or bathroom renovation in Hampstead cost?",
+    a: "We do not publish a price list. A Hampstead conversion, a St John's Wood mansion flat and a Maida Vale rear kitchen are different jobs. We visit, then send a written proposal against a defined scope. Telephone 020 7101 3168.",
+  },
+  {
+    q: "Do I need planning permission to renovate a kitchen or bathroom in North West London?",
+    a: "Internal work within existing rooms often sits outside planning permission. Conservation areas, listed buildings, Article 4 directions and freeholder licences can still control extract, windows and elevations. We check the address rather than assuming permitted development.",
+  },
+  {
+    q: "Are you kitchen fitters or a renovation company?",
+    a: "We plan and fit kitchens, bathrooms, painting and light refurbishment as coordinated programmes in North West London housing. We are not a catalogue kitchen showroom, and we are not a structural design-and-build contractor. Extensions and loft conversions sit with Hampstead Renovations.",
+  },
+  {
+    q: "Do you work in mansion blocks and conservation areas?",
+    a: "Yes. Compact kitchens on original risers, licence-to-alter packs, and extract that a conservation elevation will actually accept are ordinary work. Hampstead, St John's Wood, Maida Vale, Highgate and Hampstead Garden Suburb each have their own rules; we check the address.",
+  },
 ];
 
 export const whyHpsg = [

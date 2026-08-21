@@ -20,8 +20,10 @@ import {
   getNearbyAreas,
   hasPaintingMicrosite,
 } from "@/lib/matrix";
+import { addressSingleLine } from "@/data/site";
 import { publicCopy } from "@/lib/public-copy";
-import { absoluteUrl, faqSchema, itemListSchema, serviceSchema } from "@/lib/schema";
+import { absoluteUrl, faqSchema, itemListSchema, placeSchema, serviceSchema, webPageSchema } from "@/lib/schema";
+import { areaHook, areaSearchFaqs } from "@/lib/seo-copy";
 
 function serviceHref(area: Area, serviceSlug: string): string | null {
   if (area.tier === 2) return `/${serviceSlug}/`;
@@ -40,21 +42,35 @@ export function AreaHub({ area }: { area: Area }) {
   const crumbs = [
     { name: "Home", href: "/" },
     { name: "Areas", href: "/areas/" },
-    { name: area.name, href: `/areas/${area.slug}/` },
+    { name: `${area.name} ${area.postcode}`, href: `/areas/${area.slug}/` },
   ];
+  const pageUrl = absoluteUrl(`/areas/${area.slug}/`);
+  const faqs = [...content.faqs, ...areaSearchFaqs(area)]
+    .map((item) => ({ q: publicCopy(item.q), a: publicCopy(item.a) }))
+    .filter((item) => item.q && item.a);
+  const description = `Kitchen renovation, bathroom renovation, painting and light refurbishment in ${area.name}, ${area.postcode}.`;
 
   return (
     <>
       <JsonLd
         data={serviceSchema({
           name: `Property services in ${area.name}`,
-          url: absoluteUrl(`/areas/${area.slug}/`),
+          url: pageUrl,
           areaServed: `${area.name}, ${area.postcode}`,
-          description: `Kitchen renovation, bathroom renovation, painting and light refurbishment in ${area.name}, ${area.postcode}.`,
+          description,
           image: photo?.src,
         })}
       />
-      <JsonLd data={faqSchema(content.faqs)} />
+      <JsonLd
+        data={webPageSchema({
+          name: `Kitchens, bathrooms and painting in ${area.name} ${area.postcode}`,
+          url: pageUrl,
+          description,
+          image: photo?.src,
+        })}
+      />
+      <JsonLd data={placeSchema(area.name, area.postcode)} />
+      <JsonLd data={faqSchema(faqs)} />
       {area.tier === 1 ? (
         <JsonLd
           data={itemListSchema(
@@ -74,13 +90,32 @@ export function AreaHub({ area }: { area: Area }) {
           crumbs={crumbs}
           kicker={area.postcode}
           title={`Kitchens, bathrooms and decorating in ${area.name}`}
-          lede={`Kitchen renovation, bathroom renovation, painting and light refurbishment in ${area.name}, ${area.postcode}.`}
+          lede={`Kitchen renovation, bathroom renovation, painting and light refurbishment in ${area.name}, ${area.postcode} — ${areaHook(area)}.`}
         />
         <Container className="grid items-start gap-12 py-24 sm:py-32 lg:grid-cols-12 lg:gap-16">
           <div className="space-y-5 text-base leading-relaxed text-grey-700 lg:col-span-7">
+            <p>
+              Kitchen renovation, bathroom renovation, painting and decorating, and
+              light refurbishment in {area.name} ({area.postcode}) is{" "}
+              {areaHook(area)}, carried out from {addressSingleLine}. The council
+              is {publicCopy(area.council)}.
+            </p>
             <p className="lede text-xl text-grey-700 md:text-2xl">{publicCopy(content.intro)}</p>
             <p>{publicCopy(area.housingStock)}</p>
             {content.typical ? <p>{publicCopy(content.typical)}</p> : null}
+            <ul className="flex flex-col gap-2 text-navy">
+              {services.map((service) => {
+                const href = serviceHref(area, service.slug);
+                if (!href) return null;
+                return (
+                  <li key={service.slug}>
+                    <Link href={href} className="quiet-link">
+                      {service.name} in {area.tier === 1 ? area.name : "North West London"}
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
           </div>
         </Container>
 
@@ -90,7 +125,7 @@ export function AreaHub({ area }: { area: Area }) {
           <Container>
             <p className="rule mb-8" aria-hidden="true" />
             <h2 className="font-display text-4xl font-normal sm:text-5xl">
-              Services in {area.name}
+              Kitchen, bathroom, painting and refurbishment in {area.name}
             </h2>
             <p className="lede mt-6 max-w-measure text-xl text-grey-600">
               {area.tier === 1
@@ -161,7 +196,7 @@ export function AreaHub({ area }: { area: Area }) {
             <div className="lg:col-span-6">
               <p className="rule mb-8" aria-hidden="true" />
               <h2 className="font-display text-4xl font-normal sm:text-5xl">
-                Working in {area.name}
+                Council, conservation and access in {area.name}
               </h2>
               <div className="mt-8 space-y-5 text-base leading-relaxed text-grey-700">
                 <p>
@@ -239,7 +274,7 @@ export function AreaHub({ area }: { area: Area }) {
               Questions about {area.name}
             </h2>
             <div className="lg:col-span-8">
-              <FaqAccordion items={content.faqs} />
+              <FaqAccordion items={faqs} />
             </div>
           </Container>
         </section>

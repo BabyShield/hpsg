@@ -23,7 +23,10 @@ export function pageMetadata({
   return {
     title: absoluteTitle ? { absolute: title } : title,
     description,
-    alternates: { canonical: url },
+    alternates: {
+      canonical: url,
+      languages: { "en-GB": url },
+    },
     robots: {
       index: true,
       follow: true,

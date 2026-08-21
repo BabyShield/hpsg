@@ -10,9 +10,9 @@ import { services } from "@/data/services";
 import { pageMetadata } from "@/lib/metadata";
 
 export const metadata = pageMetadata({
-  title: "Typical work | Hampstead Property Services Group",
+  title: "Typical kitchens, bathrooms and interiors in North West London | HPSG",
   description:
-    "Typical kitchens, bathrooms and interiors from Hampstead Property Services Group. Named case studies are published from supplied summaries only.",
+    "Typical kitchen renovation, bathroom renovation and interiors in Hampstead and North West London. Named case studies are published from supplied summaries only. 020 7101 3168.",
   path: "/projects/",
   image: servicePhotos["kitchen-renovation"].src,
   imageAlt: servicePhotos["kitchen-renovation"].alt,
