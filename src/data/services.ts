@@ -426,6 +426,14 @@ export const services: Service[] = [
         q: "Do you sand existing floors?",
         a: "Where the boards will take it. Failed subfloors, previous bitumen and boards too thin to sand are listed at survey. New timber, engineered or stone finishes are specified in generic categories, not as brand partnerships.",
       },
+      {
+        q: "How long is a whole-flat programme on site?",
+        a: "A conversion flat — kitchen, bathroom, decoration and floors — is commonly a matter of weeks once materials are dated, not a day-rate that drifts. A storey of a family house, or a mansion apartment waiting on a licence to alter, takes longer. The written programme follows the survey.",
+      },
+      {
+        q: "Do you take empty rental flats between tenancies?",
+        a: "Yes. An empty conversion or mansion-flat apartment between lets is ordinary work: kitchen and bathroom if they need it, decoration and floors to one standard, one programme and one account. We will not pad a refresh into a structural project.",
+      },
     ],
     metaTitle: "Light Refurbishment in North West London | Flats and houses | HPSG",
     metaDescription:

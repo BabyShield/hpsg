@@ -18,6 +18,8 @@ export type HubNote = {
   title: string;
   text: string;
   photo?: Photo;
+  href?: string;
+  linkLabel?: string;
 };
 
 export type ServiceHubContent = {
@@ -482,18 +484,26 @@ export const serviceHubContent: Record<ServiceSlug, ServiceHubContent> = {
       {
         title: "Kitchen in the programme",
         text:
-          "A replacement within the existing room, as on the kitchen renovation pages: galleys, chimney breasts, compact mansion-flat kitchens. Specified and sequenced with the bathrooms and the decoration, not as a separate contractor.",
+          "A replacement within the existing room: galleys, chimney breasts, compact mansion-flat kitchens. Specified and sequenced with the bathrooms and the decoration, not as a separate contractor.",
         photo: servicePhotos["kitchen-renovation"],
+        href: "/kitchen-renovation/",
+        linkLabel: "Kitchen renovation in North West London",
       },
       {
         title: "Bathroom in the programme",
         text:
-          "Tanking, extract and compact layouts, as on the bathroom renovation pages. Finished and tested before floors and decoration close around them.",
+          "Tanking, extract and compact layouts. Finished and tested before floors and decoration close around them, so a late plumber is not destroying paint.",
+        photo: servicePhotos["bathroom-renovation"],
+        href: "/bathroom-renovation/",
+        linkLabel: "Bathroom renovation in North West London",
       },
       {
-        title: "What we do not do",
+        title: "Floors, joinery and decoration",
         text:
-          "Loft conversions, extensions, basement works, structural openings and design-and-build of a new envelope. For those, Hampstead Renovations. We will say so at the first visit.",
+          "Sanded boards where they will take it, joinery repaired, then decoration last. Prep, coating and sequence follow the painting pages. Decorating is the close of the programme, not the first trade on site.",
+        photo: refurbRoomPhotos.bedroom,
+        href: "/painting-decorating/",
+        linkLabel: "Painting and decorating in North West London",
       },
     ],
     housing: [
@@ -542,6 +552,6 @@ export const serviceHubContent: Record<ServiceSlug, ServiceHubContent> = {
       "Explicitly excluded: structural openings, loft conversions, extensions, basement works, and design-and-build of a new envelope. For those, a single introduction to Hampstead Renovations.",
     ],
     areasIntro:
-      "Local light-refurbishment pages for Hampstead, West Hampstead, Belsize Park, St John's Wood, Maida Vale, Swiss Cottage, Highgate and the wider North West London list sit below. Each page is the housing stock of that neighbourhood, not a renamed copy of this one.",
+      "Local light-refurbishment pages for Hampstead, West Hampstead, Belsize Park, Kentish Town, Kilburn, St John's Wood, Maida Vale, Swiss Cottage, Primrose Hill, Highgate and the wider North West London list sit below. Each page is the housing stock of that neighbourhood, not a renamed copy of this one.",
   },
 };

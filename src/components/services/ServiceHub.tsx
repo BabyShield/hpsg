@@ -37,9 +37,16 @@ export function ServiceHub({ service }: { service: Service }) {
     { name: `${service.name} in North West London`, href: `/${service.slug}/` },
   ];
   const pageUrl = absoluteUrl(`/${service.slug}/`);
-  const faqs = [...serviceSearchFaqs(service), ...service.faqs]
+  const localFaqs = service.faqs
     .map((item) => ({ q: publicCopy(item.q), a: publicCopy(item.a) }))
     .filter((item) => item.q && item.a);
+  const localQuestions = new Set(localFaqs.map((item) => item.q));
+  const faqs = [
+    ...serviceSearchFaqs(service)
+      .map((item) => ({ q: publicCopy(item.q), a: publicCopy(item.a) }))
+      .filter((item) => item.q && item.a && !localQuestions.has(item.q)),
+    ...localFaqs,
+  ];
 
   return (
     <>
@@ -174,6 +181,13 @@ export function ServiceHub({ service }: { service: Service }) {
                     <p className="mt-3 text-base leading-relaxed text-grey-700">
                       {publicCopy(room.text)}
                     </p>
+                    {room.href && room.linkLabel ? (
+                      <p className="mt-4">
+                        <Link href={room.href} className="quiet-link text-navy">
+                          {room.linkLabel}
+                        </Link>
+                      </p>
+                    ) : null}
                   </li>
                 ))}
               </ul>
@@ -222,7 +236,7 @@ export function ServiceHub({ service }: { service: Service }) {
                     : service.slug === "painting-decorating"
                       ? "Conservation, joinery and occupied homes"
                       : service.slug === "light-refurbishment"
-                        ? "What this service is not"
+                        ? "Licence, sequence and the envelope"
                         : "Consent, extract and the building"}
               </h2>
               <div className="space-y-5 text-base leading-relaxed text-grey-700 lg:col-span-8">
@@ -369,7 +383,12 @@ export function ServiceHub({ service }: { service: Service }) {
       </article>
       <CtaBand
         title={`Request a quote for ${service.navLabel.toLowerCase()} in North West London`}
-        text="Tell us the property and the rooms in scope. We visit before we write a proposal."
+        text={
+          hrReferral
+            ? "Tell us the property and whether kitchen, bathroom, decoration and floors sit in one programme. We visit before we write a proposal."
+            : "Tell us the property and the rooms in scope. We visit before we write a proposal."
+        }
+        photo={servicePhotos[service.slug]}
       />
     </>
   );

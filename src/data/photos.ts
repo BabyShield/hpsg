@@ -73,6 +73,11 @@ export const refurbRoomPhotos = {
     alt: "A conversion-flat hallway after light refurbishment — original doors, pale walls and timber floor",
     ...wide,
   },
+  bedroom: {
+    src: "/images/services/refurb-bedroom.jpg",
+    alt: "A period bedroom after light refurbishment — pale walls, original door, marble chimneypiece and sanded boards",
+    ...wide,
+  },
 } as const satisfies Record<string, Photo>;
 
 export const paintingRoomPhotos = {
