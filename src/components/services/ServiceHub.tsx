@@ -3,6 +3,7 @@ import Link from "next/link";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { AreaLinkGrid } from "@/components/ui/AreaLinkGrid";
 import { Container } from "@/components/ui/Container";
+import { ContentImage } from "@/components/ui/ContentImage";
 import { CtaBand } from "@/components/ui/CtaBand";
 import { FaqAccordion } from "@/components/ui/FaqAccordion";
 import { PageHero } from "@/components/ui/PageHero";
@@ -116,6 +117,69 @@ export function ServiceHub({ service }: { service: Service }) {
           </div>
         </Container>
 
+        {content.failures && content.failures.length > 0 ? (
+          <section className="border-y border-grey-200 py-24 sm:py-32">
+            <Container>
+              <p className="rule mb-8" aria-hidden="true" />
+              <h2 className="font-display text-4xl font-normal sm:text-5xl">
+                What has to be right before the tiles
+              </h2>
+              <p className="lede mt-6 max-w-measure text-xl text-grey-600">
+                Bathroom renovation in this housing stock fails from water, air
+                and the stack — not from the choice of brassware.
+              </p>
+              <ol className="mt-16 grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+                {content.failures.map((item, index) => (
+                  <li key={item.title}>
+                    <p className="font-display text-3xl text-gold">
+                      {String(index + 1).padStart(2, "0")}
+                    </p>
+                    <h3 className="mt-3 font-display text-2xl font-normal">{item.title}</h3>
+                    <p className="mt-3 text-base leading-relaxed text-grey-700">
+                      {publicCopy(item.text)}
+                    </p>
+                  </li>
+                ))}
+              </ol>
+            </Container>
+          </section>
+        ) : null}
+
+        {content.typicalRooms && content.typicalRooms.length > 0 ? (
+          <section className="py-24 sm:py-32">
+            <Container>
+              <p className="rule mb-8" aria-hidden="true" />
+              <h2 className="font-display text-4xl font-normal sm:text-5xl">
+                Typical bathrooms we renovate
+              </h2>
+              <p className="lede mt-6 max-w-measure text-xl text-grey-600">
+                Family bathrooms, compact mansion-flat rooms, shower rooms,
+                ensuites and half-landing stacks — each written to the building
+                it sits in.
+              </p>
+              <ul className="mt-16 grid gap-x-8 gap-y-14 md:grid-cols-2 lg:grid-cols-3">
+                {content.typicalRooms.map((room) => (
+                  <li key={room.title}>
+                    {room.photo ? (
+                      <ContentImage
+                        photo={room.photo}
+                        className="aspect-[4/3] w-full"
+                        sizes="(min-width: 1024px) 30vw, (min-width: 768px) 50vw, 100vw"
+                      />
+                    ) : (
+                      <p className="rule mb-6" aria-hidden="true" />
+                    )}
+                    <h3 className="mt-6 font-display text-2xl font-normal">{room.title}</h3>
+                    <p className="mt-3 text-base leading-relaxed text-grey-700">
+                      {publicCopy(room.text)}
+                    </p>
+                  </li>
+                ))}
+              </ul>
+            </Container>
+          </section>
+        ) : null}
+
         {content.housing.length > 0 ? (
           <section className="border-y border-grey-200 py-24 sm:py-32">
             <Container>
@@ -150,7 +214,9 @@ export function ServiceHub({ service }: { service: Service }) {
           <section className="py-24 sm:py-32">
             <Container className="grid gap-10 lg:grid-cols-12">
               <h2 className="font-display text-4xl font-normal sm:text-5xl lg:col-span-4">
-                Consent, extract and the building
+                {service.slug === "bathroom-renovation"
+                  ? "Licence, building control and extract"
+                  : "Consent, extract and the building"}
               </h2>
               <div className="space-y-5 text-base leading-relaxed text-grey-700 lg:col-span-8">
                 {content.permissions
@@ -264,7 +330,9 @@ export function ServiceHub({ service }: { service: Service }) {
         <section className="border-y border-grey-200 py-24 sm:py-32">
           <Container className="grid gap-12 lg:grid-cols-12">
             <h2 className="font-display text-4xl font-normal sm:text-5xl lg:col-span-4">
-              {service.name} questions
+              {service.slug === "bathroom-renovation"
+                ? "Bathroom renovation questions"
+                : `${service.name} questions`}
             </h2>
             <div className="lg:col-span-8">
               <FaqAccordion items={faqs} />

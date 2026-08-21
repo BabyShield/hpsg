@@ -97,46 +97,48 @@ export const services: Service[] = [
     slug: "bathroom-renovation",
     name: "Bathroom Renovation",
     navLabel: "Bathrooms",
-    heroLine: "Bathroom renovation with proper waterproofing, ventilation and compact layouts for North West London homes.",
+    heroLine:
+      "Bathroom renovation in North West London conversions and mansion flats — tanking, extract and compact layouts, from a Hampstead office.",
     summary:
-      "Bathrooms in converted houses and mansion blocks fail when waterproofing, falls and extract are treated as afterthoughts. We renovate family bathrooms, shower rooms and ensuites with tanking, ventilation and pipework planned for the building they sit in — including compact footprints and stacked drainage in purpose-built blocks.",
+      "Bathroom renovation in Hampstead, St John's Wood, Maida Vale and North West London. Family bathrooms, shower rooms and ensuites with tanking, ventilation and drainage planned for timber floors, stacked stacks and conservation elevations — not a catalogue suite dropped onto the room as found.",
     included: [
-      "Survey of existing sanitaryware, drainage, extract and waterproofing as found",
-      "Layout for family bathrooms, shower rooms and compact ensuites, including door swings and access",
-      "Strip-out, protection of floors and common parts, and waste removal",
-      "Tanking / waterproofing to wet areas to a documented system, not a paint-on afterthought",
-      "Drainage alterations, trapped wastes and falls to existing stacks where the building allows",
-      "First- and second-fix plumbing, including concealed cisterns and thermostatic showers",
-      "Electrical work for lighting, extract, underfloor heating circuits and shaver supplies, notified where required",
-      "Tiling, flooring, sanitaryware and brassware installation",
-      "Mechanical extract designed for internal bathrooms typical of conversions [VERIFY duct route on survey]",
-      "Decoration, seals, and a watertightness check before handover",
-      "Coordination with neighbours in mansion blocks where drainage or extract is shared",
+      "Measured survey of the existing bathroom, soil stack, extract route, floor build-up and waterproofing as found",
+      "Layout for family bathrooms, shower rooms, compact ensuites and internal rooms, including door swings and access",
+      "Strip-out, protection of floors and common parts, and licensed waste removal",
+      "Tanking and waterproofing to wet areas to a documented system, not a paint-on afterthought, especially on timber intermediate floors",
+      "Falls, trapped wastes and drainage alterations to existing stacks where the building allows",
+      "First- and second-fix plumbing, including concealed cisterns, thermostatic showers and client-supplied sanitaryware",
+      "Electrical work for lighting, extract, shaver supplies and underfloor heating circuits, notified where the regulations require it",
+      "Tiling, flooring within the bathroom envelope, and installation of sanitaryware and brassware specified as products, not brand partnerships",
+      "Mechanical extract designed for internal bathrooms typical of conversions, with the duct route agreed before strip-out [VERIFY on survey]",
+      "Decoration of the envelope, seals, and a watertightness check before handover",
+      "Coordination with neighbours, freeholders and managing agents in mansion blocks where drainage or extract is shared",
+      "A written snagging pass and care notes for seals, stone and coatings",
     ],
     processSteps: [
       {
         title: "Survey",
-        text: "We record the existing bathroom, the stack position, extract route and any listed or conservation constraints on external grilles. In a conversion we also look at floor build-up, because falls and tanking need somewhere to go.",
+        text: "We record the existing bathroom, the stack position, extract route, floor build-up and any listed or conservation constraints on external grilles. Concealed wastes and previous leaks are looked for, not assumed away. No layout is started from photographs.",
       },
       {
         title: "Layout and specification",
-        text: "You get a layout that fits the room you have, a specification for sanitaryware, brassware and finishes, and a note of anything that needs the freeholder or building control.",
+        text: "You get a layout that fits the room you have, a specification for sanitaryware, brassware and finishes, and a note of anything that needs the freeholder, building control or a pump. Items that the stack cannot serve are taken out of the drawing, not left as a hope.",
       },
       {
         title: "Lead-in",
-        text: "Sanitaryware and tiles are ordered against the approved layout. We do not start strip-out until long-lead items have confirmed dates.",
+        text: "Sanitaryware, tiles and any stone are ordered against the approved layout. We do not start strip-out until long-lead items have confirmed dates, so the room is not left open waiting for a tap.",
       },
       {
         title: "Strip-out, tanking and first fix",
-        text: "The room is stripped, substrates prepared, waterproofing installed, and plumbing and electrics first-fixed. This is the stage that determines whether the bathroom lasts.",
+        text: "The room is stripped, substrates prepared, waterproofing installed to a documented system, and plumbing and electrics first-fixed. In mansion blocks we agree hours and common-parts protection with the building in advance. This is the stage that determines whether the bathroom lasts.",
       },
       {
         title: "Second fix and finishes",
-        text: "Tiling, sanitaryware, brassware, glass and decoration follow in sequence. We test wastes and showers before the room is signed off.",
+        text: "Tiling, sanitaryware, brassware, glass and decoration follow in sequence. Wastes and showers are tested before the room is signed off. Variations are written, not verbal.",
       },
       {
         title: "Handover",
-        text: "A snagging walk-through, care instructions for seals and finishes, and a clean room. Outstanding items are listed in writing.",
+        text: "A snagging walk-through, care instructions for seals, stone and coatings, and a clean room. Outstanding items are listed in writing. Final account follows the agreed specification.",
       },
     ],
     faqs: [
@@ -176,10 +178,34 @@ export const services: Service[] = [
         q: "What does a bathroom renovation in North West London cost?",
         a: "We do not publish a price list. Timber floors in a Hampstead conversion, a stacked mansion-flat bathroom in Maida Vale, and a family bathroom in Highgate are different jobs. We visit, then write a proposal. 020 7101 3168.",
       },
+      {
+        q: "Can you do a wet room in a Victorian conversion?",
+        a: "Only where the floor depth and the waterproofing system will take the fall. A conversion rarely has the build-up of a new-build slab. We will not draw a level-access wet room onto joists that cannot accept it.",
+      },
+      {
+        q: "Do I need building regulations for a bathroom renovation?",
+        a: "New electrical circuits, a change to drainage and some heating work need notification. We identify that at proposal stage. Gas work, if it arises, is by a Gas Safe registered engineer.",
+      },
+      {
+        q: "Can I stay in the property while the bathroom is done?",
+        a: "Often, if there is a second bathroom or a short arrangement for washing. A single bathroom in a one-bathroom flat is usually cleaner if you decant for the programme. We will say which, after we have seen the plan.",
+      },
+      {
+        q: "Can you move the WC or add an ensuite?",
+        a: "Where the stack will serve the new position without cutting into another demise. Moving a WC a long way is often the item that is not possible. Ensuites in former dressing rooms are ordinary where drainage and extract can be routed honestly.",
+      },
+      {
+        q: "Do you tile over existing tiles?",
+        a: "Not as a default. Failed adhesive and trapped moisture in this housing stock make it a false economy. We strip to a substrate we can waterproof.",
+      },
+      {
+        q: "Is underfloor heating possible in a conversion bathroom?",
+        a: "Sometimes. Available floor depth decides it. We treat it as an electrical circuit and a build-up problem, not as a brochure extra, and we will say at survey if the room cannot take it without thinning insulation.",
+      },
     ],
     metaTitle: "Bathroom Renovation in North West London | Hampstead, NW8, W9 | HPSG",
     metaDescription:
-      "Bathroom renovation in Hampstead, St John's Wood, Maida Vale and North West London. Tanking, ventilation and compact layouts in conversions and mansion flats. 020 7101 3168.",
+      "Bathroom renovation in Hampstead, St John's Wood, Maida Vale and North West London. Tanking, extract and compact layouts in conversions and mansion flats. Survey-led. 020 7101 3168.",
   },
   {
     slug: "painting-decorating",

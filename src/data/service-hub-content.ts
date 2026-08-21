@@ -1,9 +1,16 @@
+import { bathroomRoomPhotos, servicePhotos, type Photo } from "./photos";
 import type { ServiceSlug } from "./types";
 
 export type HubSection = {
   title: string;
   text: string;
   links: { href: string; label: string }[];
+};
+
+export type HubNote = {
+  title: string;
+  text: string;
+  photo?: Photo;
 };
 
 export type ServiceHubContent = {
@@ -13,6 +20,8 @@ export type ServiceHubContent = {
   permissions: string[];
   specification: string[];
   areasIntro: string;
+  failures?: HubNote[];
+  typicalRooms?: HubNote[];
 };
 
 export const serviceHubContent: Record<ServiceSlug, ServiceHubContent> = {
@@ -77,15 +86,74 @@ export const serviceHubContent: Record<ServiceSlug, ServiceHubContent> = {
   },
   "bathroom-renovation": {
     intro: [
-      "Bathrooms in North West London fail from water, not from taste. Converted houses have timber floors, uneven joists and stacks that are a long way from the room you want as an ensuite. Mansion blocks have shared drainage, compact footprints and neighbours below the waste. A renovation that does not treat waterproofing, falls and extract as the first decisions will leak, stain or stay damp.",
-      "We renovate family bathrooms, shower rooms and ensuites with tanking, ventilation and pipework planned for the building they sit in. The finish — tiling, sanitaryware, brassware — is the last part of the sequence, not the brief.",
-      "Internal bathrooms in conversions are common: no window, a long duct run, and a door that opens the wrong way for a shower. Compact ensuites in mansion flats have the opposite problem — a window onto a lightwell, but no space for a bath and a basin without losing the door swing. Both are ordinary work for us, provided the drainage can reach a stack without cutting through another demise.",
-      "As with kitchens, we survey in the room. Concealed wastes, previous leaks and failed plywood under a tray only show when you look. A written layout and specification follow the visit; strip-out does not start until long-lead sanitaryware is dated.",
+      "Bathroom renovation in North West London is a water problem before it is a finishes problem. Converted Victorian and Edwardian houses have timber intermediate floors, uneven joists and soil stacks that sit a long way from the room you want as an ensuite. Purpose-built mansion flats in St John's Wood, Maida Vale and Swiss Cottage have shared drainage, compact footprints and a neighbour below the waste. A renovation that treats tanking, falls and extract as afterthoughts will leak, stain or stay damp — whatever the tiles cost.",
+      "Hampstead Property Services Group renovates family bathrooms, shower rooms and ensuites from a Finchley Road office. The work is a coordinated fit-out: measured survey, layout, waterproofing to a documented system, first and second fix, tiling, sanitaryware, mechanical extract and a watertightness check before handover. We do not drop in a catalogue suite. The room stays as the building planned it unless the stack and the extract will honestly support a change.",
+      "Internal bathrooms in Hampstead, West Hampstead, Belsize Park and Kentish Town conversions are ordinary: no window, a long duct run, a door that opens the wrong way for a shower. Compact ensuites in mansion flats have the opposite problem — a sash onto a lightwell, but no space for a bath and a basin without losing the door swing. Half-landing bathrooms in terraces are a third type: the stack is on the party wall and the room is whatever is left. All three can be excellent bathrooms if waterproofing, ventilation and drainage are solved in that order.",
+      "Wet rooms are specified only where the floor depth and the waterproofing system will take them. A Victorian conversion rarely has the build-up of a new-build slab. We will not draw a level-access wet room onto joists that cannot accept the fall. A pump is a last resort, written into the proposal if it is the only way the layout works, not hidden as a day-two extra.",
+      "We survey in the room. Concealed wastes, previous leaks, failed plywood under a tray and extract that dies in a void only show when you look. A written layout and specification follow the visit. Strip-out does not start until long-lead sanitaryware and tiles are dated. We do not quote bathroom renovation in Hampstead or anywhere else from photographs.",
     ],
     forWhom: [
-      "The work is in the same North West London stock as our kitchens: period conversions, mansion blocks and family houses. Typical instructions are a single family bathroom, a shower room replacing a failed suite, or an ensuite formed in a former dressing room or box room where the building will accept it.",
-      "Waterproofing on timber intermediate floors is not optional. We tank wet areas to a documented system. Paint-on afterthoughts over boarded floors are how the flat below gets involved.",
-      "Freeholder consent applies to bathrooms as it does to kitchens where the lease requires a licence to alter — especially if wastes move or an extract is cut through a common void [VERIFY the lease and the building's process]. We will identify that at proposal stage.",
+      "The work is for owner-occupiers and landlords in the same North West London stock as our kitchens: converted flats, mansion blocks and family houses. Typical instructions are a single family bathroom, a shower room replacing a failed suite, an ensuite in a former dressing room or box room where the building will accept it, or two bathrooms in one programme so the house is not opened twice.",
+      "Waterproofing on timber intermediate floors is not optional. We tank wet areas to a documented system. Paint-on afterthoughts over boarded floors are how the flat below gets involved. In a mansion block we isolate, test, and do not cut into another demise without the building's process.",
+      "Leasehold flats usually need a licence to alter if wastes move or an extract is cut through a common void. We can prepare drawings and a method statement. Consent is granted by the freeholder or managing agent, not by us [VERIFY the lease and the building's process]. Occupied homes are ordinary: we will say at survey whether a second bathroom or a short decant is the cleaner route.",
+    ],
+    failures: [
+      {
+        title: "Waterproofing",
+        text:
+          "Timber floors in conversions and stacked mansion flats need tanking as a system, with falls that actually drain. A coat of tanking paint over boarded floor is not a system. This is the decision that protects the room below.",
+      },
+      {
+        title: "Extract",
+        text:
+          "Internal bathrooms cannot rely on a window that does not exist. Duct routes through common parts, roof voids or a conservation elevation are agreed before we open up. We will not punch an insensitive grille through a principal front as a convenience.",
+      },
+      {
+        title: "Drainage",
+        text:
+          "Layout follows the stack that exists. Moving a WC a long way, or forming an ensuite that cannot reach a soil pipe without cutting another demise, is often the item that is not possible. Pumps are last resort, written down if needed.",
+      },
+      {
+        title: "The room as found",
+        text:
+          "Door swings, chimney breasts, half-landings and out-of-square walls decide whether a bath, a shower or both will fit. We survey before we specify sanitaryware. Concealed leaks and failed trays only show in the room.",
+      },
+    ],
+    typicalRooms: [
+      {
+        title: "Family bathrooms",
+        text:
+          "A bath, a separate shower where the plan allows, a basin and a WC in village houses and family houses toward the Heath, Highgate, Muswell Hill and the Suburb. Weight, floor build-up and extract on the elevation are recorded before a stone bath is ordered.",
+        photo: servicePhotos["bathroom-renovation"],
+      },
+      {
+        title: "Compact mansion-flat bathrooms",
+        text:
+          "Original rear rooms on risers in St John's Wood, Maida Vale and Swiss Cottage. A short bath or a shower, a basin, a sash onto a lightwell. Lifts often will not take a bath crate; the stair is the working assumption until we measure. Licence to alter is ordinary if wastes or extract move.",
+        photo: bathroomRoomPhotos.compact,
+      },
+      {
+        title: "Shower rooms",
+        text:
+          "A replacement for a failed suite, or a second room where a bath is not needed. Frameless screens and stone trays still need a substrate and a fall. We do not treat a shower as a simpler bathroom; the waterproofing is the same work.",
+        photo: bathroomRoomPhotos.shower,
+      },
+      {
+        title: "Ensuites in conversions",
+        text:
+          "Former dressing rooms and box rooms in Hampstead, Belsize Park and West Hampstead houses. Possible where drainage can reach a stack without damaging a principal room, and extract can be routed without an insensitive grille. Some rooms cannot take a shower without a pump; we will say so at survey.",
+        photo: bathroomRoomPhotos.wetWall,
+      },
+      {
+        title: "Internal bathrooms",
+        text:
+          "No window, a long duct, a door that fights the shower tray. Common in conversions. Mechanical extract with a clear route to outside is not optional. We will not leave the room dependent on a fan that dumps into a void.",
+      },
+      {
+        title: "Half-landing stacked bathrooms",
+        text:
+          "The West Hampstead and Kentish Town type: the soil stack is on the party wall and the room is the remainder. Layout follows the stack. Moving the WC a long way is often the item that is not possible without work we do not do.",
+      },
     ],
     housing: [
       {
@@ -97,6 +165,7 @@ export const serviceHubContent: Record<ServiceSlug, ServiceHubContent> = {
           { href: "/bathroom-renovation/west-hampstead/", label: "Bathroom renovation in West Hampstead" },
           { href: "/bathroom-renovation/belsize-park/", label: "Bathroom renovation in Belsize Park" },
           { href: "/bathroom-renovation/kentish-town/", label: "Bathroom renovation in Kentish Town" },
+          { href: "/bathroom-renovation/kilburn/", label: "Bathroom renovation in Kilburn" },
         ],
       },
       {
@@ -107,31 +176,36 @@ export const serviceHubContent: Record<ServiceSlug, ServiceHubContent> = {
           { href: "/bathroom-renovation/st-johns-wood/", label: "Bathroom renovation in St John's Wood" },
           { href: "/bathroom-renovation/maida-vale/", label: "Bathroom renovation in Maida Vale" },
           { href: "/bathroom-renovation/swiss-cottage/", label: "Bathroom renovation in Swiss Cottage" },
+          { href: "/bathroom-renovation/queens-park/", label: "Bathroom renovation in Queen's Park" },
         ],
       },
       {
         title: "Bathroom renovation in family houses",
         text:
-          "Highgate, Muswell Hill, Golders Green and Hampstead Garden Suburb take family bathrooms and occasional ensuites in existing rooms. Extract on a conservation or Trust elevation is checked before we open up. Internal bathrooms without a window need mechanical extract with a clear route to outside.",
+          "Highgate, Primrose Hill, Muswell Hill, Golders Green and Hampstead Garden Suburb take family bathrooms and occasional ensuites in existing rooms. Extract on a conservation or Trust elevation is checked before we open up. Internal bathrooms without a window need mechanical extract with a clear route to outside.",
         links: [
           { href: "/bathroom-renovation/highgate/", label: "Bathroom renovation in Highgate" },
           { href: "/bathroom-renovation/primrose-hill/", label: "Bathroom renovation in Primrose Hill" },
+          { href: "/bathroom-renovation/muswell-hill/", label: "Bathroom renovation in Muswell Hill" },
           { href: "/bathroom-renovation/hampstead-garden-suburb/", label: "Bathroom renovation in Hampstead Garden Suburb" },
+          { href: "/bathroom-renovation/golders-green/", label: "Bathroom renovation in Golders Green" },
         ],
       },
     ],
     permissions: [
-      "Freeholder consent applies where the lease requires a licence to alter — especially if wastes move or an extract is cut through a common void. [VERIFY the lease and the building's process.]",
-      "Mechanical extract is designed for the elevation you have. We will not punch an insensitive grille through a conservation front if another route exists. [VERIFY duct route on survey.]",
-      "Wet areas are waterproofed to a documented system, particularly on timber floors. Drainage stays on existing stacks wherever the building allows. Pumps are a last resort and are written into the proposal if they are the only way the layout works.",
+      "Leasehold flats usually need a licence to alter if wastes move, a soil stack is altered, or an extract is cut through a common void. We can prepare drawings and a method statement. Consent is granted by the freeholder or managing agent, not by us. Lead-in varies by building [VERIFY the lease and the agent's process].",
+      "Building-control notification is arranged where the work falls within the current regulations — new electrical circuits, a change to drainage, or extra-low-voltage underfloor heating. We identify that at proposal stage, not after strip-out. Gas work, if a boiler or a fire shares the room or the flue, is by a Gas Safe registered engineer.",
+      "Mechanical extract is designed for the elevation you have. Conservation-area and listed buildings in Hampstead, Highgate, Primrose Hill and the Suburb cannot always take a visible grille on the principal front. We plan the route at survey. [VERIFY duct route and listing on the address.]",
+      "Wet areas are waterproofed to a documented system, particularly on timber floors. Drainage stays on existing stacks wherever the building allows. We do not form new external soil pipes on principal elevations as a convenience.",
     ],
     specification: [
-      "Sanitaryware and brassware are specified as products, not as partnerships. Concealed cisterns, thermostatic showers and tiled wet rooms are ordinary items; they still need a substrate that can take them. Underfloor heating, where used, is treated as an electrical and floor-build-up problem, not as a brochure extra.",
-      "Mechanical extract is designed for internal rooms. We will not leave a bathroom dependent on a window that does not exist, and we will not punch an insensitive grille through a conservation elevation if another route exists [VERIFY duct route on survey].",
-      "Drainage alterations stay within the existing stacks wherever the building allows. Pumps are a last resort and are written into the proposal if they are the only way the layout works. We do not form new external soil pipes on principal elevations as a convenience.",
+      "Sanitaryware and brassware are specified as products, not as brand partnerships. Concealed cisterns, thermostatic showers, stone or ceramic trays and tiled wet walls are ordinary items; they still need a substrate that can take them. A stone bath is a weight and access problem in a conversion stair as much as it is a finishes choice.",
+      "Underfloor heating, where used, is treated as an electrical circuit and a floor-build-up problem, not as a brochure extra. In a conversion the available depth often decides whether it belongs. We will say so at survey rather than thin the insulation to make it fit.",
+      "Mechanical extract is designed for internal rooms. We will not leave a bathroom dependent on a window that does not exist, and we will not punch an insensitive grille through a conservation elevation if another route exists [VERIFY duct route on survey]. Decoration of the envelope, seals and a watertightness check close the room.",
+      "Drainage alterations stay within the existing stacks wherever the building allows. Pumps are a last resort and are written into the proposal if they are the only way the layout works. Tiling over existing tiles is not the default; failed adhesive and trapped moisture in this housing stock make it a false economy.",
     ],
     areasIntro:
-      "Local bathroom renovation pages for Hampstead, St John's Wood, Maida Vale, Primrose Hill and the wider North West London list sit below. Each is written for that building type and council, not a renamed copy of this page.",
+      "Local bathroom renovation pages for Hampstead, West Hampstead, Belsize Park, St John's Wood, Maida Vale, Swiss Cottage, Primrose Hill, Highgate and the wider North West London list sit below. Each is written for that building type, council and conservation designation — not a renamed copy of this page.",
   },
   "painting-decorating": {
     intro: [

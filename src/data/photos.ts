@@ -29,7 +29,7 @@ export const servicePhotos: Record<ServiceSlug, Photo> = {
   },
   "bathroom-renovation": {
     src: "/images/services/bathroom-renovation.jpg",
-    alt: "A finished bathroom in a London conversion — stone bath, brass fittings and morning light",
+    alt: "Bathroom renovation in a North West London house — stone bath, brass fittings and morning light",
     ...wide,
   },
   "painting-decorating": {
@@ -43,6 +43,24 @@ export const servicePhotos: Record<ServiceSlug, Photo> = {
     ...wide,
   },
 };
+
+export const bathroomRoomPhotos = {
+  compact: {
+    src: "/images/services/bathroom-compact.jpg",
+    alt: "A compact ensuite in a London mansion flat — stone basin, brass taps and a sash onto a lightwell",
+    ...wide,
+  },
+  shower: {
+    src: "/images/services/bathroom-shower.jpg",
+    alt: "A walk-in shower in a North West London conversion — stone tiles, brass fittings and a garden sash",
+    ...wide,
+  },
+  wetWall: {
+    src: "/images/services/bathroom-wet-wall.jpg",
+    alt: "A tiled shower wall with a brass niche in a period North West London bathroom",
+    ...wide,
+  },
+} as const satisfies Record<string, Photo>;
 
 export const areaPhotos: Record<string, Photo> = {
   hampstead: {
