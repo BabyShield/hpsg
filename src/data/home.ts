@@ -1,3 +1,8 @@
+import {
+  kitchenRoomPhotos,
+  paintingRoomPhotos,
+  type Photo,
+} from "./photos";
 import type { Faq } from "./types";
 
 export const homeFaqs: Faq[] = [
@@ -12,6 +17,14 @@ export const homeFaqs: Faq[] = [
   {
     q: "How do you work?",
     a: "Enquiry, visit, written proposal, then a single programme with one point of contact. We do not quote from photographs. Kitchens, bathrooms, decoration and flooring are coordinated so trades are not left sequencing themselves.",
+  },
+  {
+    q: "Can I stay in the property while you work?",
+    a: "A single kitchen or bathroom can often be done around you. Occupied decorating is ordinary. A whole-flat light refurbishment is usually cleaner if you decant. We will say which, after we have seen the plan.",
+  },
+  {
+    q: "Do you do extensions, lofts or structural openings?",
+    a: "No. Those sit with Hampstead Renovations (hampsteadrenovations.co.uk). Kitchen renovation, bathroom renovation, painting and light refurbishment on this site stay inside the rooms that exist. We will say so at the first visit rather than stretch the brief.",
   },
   {
     q: "Are you insured?",
@@ -46,37 +59,88 @@ export const homeFaqs: Faq[] = [
 export const homeMethod = [
   {
     title: "Visit",
-    text: "We record the rooms, the stacks, access and the building’s rules. We do not quote from photographs.",
+    text: "We record the rooms, the stacks, access and the building’s rules. Period walls are rarely square. We do not quote from photographs.",
   },
   {
     title: "Written proposal",
-    text: "A specification, a programme and a price against that scope — not a verbal estimate.",
+    text: "A specification, a programme and a price against that scope — including extract, licence and what is out, not a verbal estimate.",
   },
   {
     title: "One programme",
-    text: "Kitchen, bathroom, decoration and floors sequenced together, with one point of contact.",
+    text: "Kitchen, bathroom, decoration and floors sequenced together. Wet rooms first, paint last, one point of contact.",
   },
   {
     title: "Handover",
-    text: "A snagging pass against the written specification, then a clean set of rooms.",
+    text: "A snagging pass against the written specification, in daylight and with the lights on, then a clean set of rooms.",
   },
 ] as const;
 
 export const whyHpsg = [
   {
-    title: "Fully insured",
-    text: "All work is carried out fully insured. We will not open up a kitchen, bathroom or occupied house without that in place.",
-  },
-  {
     title: "Hampstead office",
     text: "We are based at Unit 3 Palace Court, 250 Finchley Road, London NW3 6DN. Hampstead, Belsize Park, Swiss Cottage and West Hampstead are a short run; St John's Wood, Maida Vale, Primrose Hill and Highgate are ordinary working territory from that office.",
-  },
-  {
-    title: "Part of an established London property group",
-    text: "Hampstead Property Services Group sits alongside sister companies in the same family. Kitchens, bathrooms, painting and light refurbishment stay on this site. Extensions and lofts sit with Hampstead Renovations. The family is explained on the Group page.",
   },
   {
     title: "Dedicated project management",
     text: "One programme and one point of contact for the rooms in scope, rather than a collection of separate trades to coordinate yourself. Wet rooms first, decoration last, a snag against the written specification.",
   },
+  {
+    title: "Part of an established London property group",
+    text: "Hampstead Property Services Group sits alongside sister companies in the same family. Kitchens, bathrooms, painting and light refurbishment stay on this site. Extensions and lofts sit with Hampstead Renovations.",
+  },
+  {
+    title: "Fully insured",
+    text: "All work is carried out fully insured. We will not open up a kitchen, bathroom or occupied house without that in place.",
+  },
+] as const;
+
+export const homeHousing: {
+  title: string;
+  text: string;
+  href: string;
+  linkLabel: string;
+  photo: Photo;
+  caption: string;
+}[] = [
+  {
+    title: "Conversion flats",
+    text: "Rear-return kitchens, half-landing bathrooms, shared stairs and party-wall hours. The usual brief in West Hampstead, Belsize Park, Kentish Town, Kilburn and Crouch End.",
+    href: "/light-refurbishment/west-hampstead/",
+    linkLabel: "Light refurbishment in West Hampstead",
+    photo: kitchenRoomPhotos.galley,
+    caption: "Rear-return galley",
+  },
+  {
+    title: "Mansion apartments",
+    text: "Compact rooms on original risers, a licence to alter, and materials up the stair until the lift is measured. Ordinary work in St John's Wood, Maida Vale and Swiss Cottage.",
+    href: "/kitchen-renovation/st-johns-wood/",
+    linkLabel: "Kitchen renovation in St John's Wood",
+    photo: kitchenRoomPhotos.compact,
+    caption: "Mansion-flat kitchen",
+  },
+  {
+    title: "Family houses",
+    text: "A storey or a whole interior brought to one standard, with listed fabric and Trust rules checked where the envelope is involved. Hampstead, Highgate, Primrose Hill and the Suburb.",
+    href: "/painting-decorating/hampstead/",
+    linkLabel: "Painting and decorating in Hampstead",
+    photo: paintingRoomPhotos.drawing,
+    caption: "Period drawing room",
+  },
+];
+
+export const homeServiceLines: Record<string, string> = {
+  "kitchen-renovation": "Galleys, chimney breasts, compact mansion-flat rooms",
+  "bathroom-renovation": "Tanking, extract, stacked and family rooms",
+  "painting-decorating": "Occupied houses, original joinery, written prep",
+  "light-refurbishment": "Kitchen, bathroom, floors and decoration as one programme",
+};
+
+export const homeMoreAreas = [
+  { slug: "swiss-cottage", name: "Swiss Cottage" },
+  { slug: "queens-park", name: "Queen's Park" },
+  { slug: "golders-green", name: "Golders Green" },
+  { slug: "muswell-hill", name: "Muswell Hill" },
+  { slug: "crouch-end", name: "Crouch End" },
+  { slug: "kentish-town", name: "Kentish Town" },
+  { slug: "kilburn", name: "Kilburn" },
 ] as const;
