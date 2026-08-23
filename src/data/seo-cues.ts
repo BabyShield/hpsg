@@ -246,7 +246,7 @@ const refurb: Record<string, ServiceAreaCue> = {
       "Hampstead light refurbishment is a conversion or village-house interior: kitchen, bathroom, floors and decoration, without opening the carcass.",
   },
   "west-hampstead": {
-    title: "Conversion flats",
+    title: "Rear-return conversions",
     opening:
       "West Hampstead light refurbishment is the conversion-flat brief: rear-return kitchen, stacked bathroom, decoration and floors as one programme.",
   },
@@ -256,12 +256,12 @@ const refurb: Record<string, ServiceAreaCue> = {
       "Belsize Park light refurbishment is a stucco conversion brought to one standard; inserted kitchens and ensuites stay in the rooms that exist.",
   },
   "st-johns-wood": {
-    title: "Mansion apartments",
+    title: "Licence-to-alter apartments",
     opening:
       "St John's Wood light refurbishment is a mansion apartment as the plan is: kitchen and bathroom replaced, floors and decoration to one standard.",
   },
   "maida-vale": {
-    title: "Mansion apartments",
+    title: "1890s mansion flats",
     opening:
       "Maida Vale light refurbishment is a mansion-block apartment: wet rooms first, decoration last, the building's hours and licence process followed.",
   },
@@ -271,7 +271,7 @@ const refurb: Record<string, ServiceAreaCue> = {
       "Swiss Cottage light refurbishment is a mansion flat or conversion on the Finchley Road corridor, sequenced as one account from the office nearby.",
   },
   "primrose-hill": {
-    title: "Terrace interiors",
+    title: "Park-terrace interiors",
     opening:
       "Primrose Hill light refurbishment is a terrace interior to one standard; Article 4 and listed fabric are checked where the envelope is involved.",
   },
@@ -286,7 +286,7 @@ const refurb: Record<string, ServiceAreaCue> = {
       "Golders Green light refurbishment is a family-house interior brought to one standard, without forming a new envelope.",
   },
   "queens-park": {
-    title: "Terrace interiors",
+    title: "Estate cottages and terraces",
     opening:
       "Queen's Park light refurbishment is a terrace or Estate cottage interior: kitchen, bathroom, decoration and floors as one programme.",
   },
@@ -301,7 +301,7 @@ const refurb: Record<string, ServiceAreaCue> = {
       "Crouch End light refurbishment is a Victorian conversion around the Broadway: wet rooms first, paint last, the stair protected.",
   },
   "kentish-town": {
-    title: "Conversion flats",
+    title: "Half-landing conversions",
     opening:
       "Kentish Town light refurbishment is a Victorian conversion flat: kitchen, half-landing bathroom, decoration and floors as one account.",
   },

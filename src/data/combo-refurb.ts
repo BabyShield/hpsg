@@ -37,6 +37,14 @@ export const refurbCombos: Record<string, ComboContent> = {
         q: "How do deliveries work off Heath Street for a multi-room job?",
         a: "They are timed. Village lanes are not loading bays, and a whole-flat strip needs more drops than a single room. The survey records the vehicle and the drop point.",
       },
+      {
+        q: "Can you sand original boards in a Hampstead conversion?",
+        a: "Where the boards will take it. Failed subfloors and boards too thin to sand are listed at survey. We will not pretend a worn village floor is a new oak finish.",
+      },
+      {
+        q: "Is a village-house storey in Hampstead still light refurbishment if we stay?",
+        a: "If the work stays inside kitchen, bathroom, decoration and floors, yes. Occupied sequencing is slower than an empty conversion. A structural opening, loft or extension is still not this service, occupied or empty.",
+      },
     ],
     metaDescription:
       "Light refurbishment in Hampstead NW3 conversions and village houses. Kitchen, bathroom, decoration, floors. 020 7101 3168.",
@@ -76,6 +84,14 @@ export const refurbCombos: Record<string, ComboContent> = {
       {
         q: "Is Fortune Green in a conservation area?",
         a: "Some streets toward Fortune Green are. We check the map for the address rather than treating all of West Hampstead as one designation. [VERIFY.]",
+      },
+      {
+        q: "Does a whole-flat strip off West End Lane need a skip on the high street?",
+        a: "No. We licence a residential side street. A whole-flat strip produces more waste than a kitchen-only job, so the drop is programmed, not hoped for on West End Lane.",
+      },
+      {
+        q: "Do party walls change a West Hampstead whole-flat programme?",
+        a: "They change the hours and the protection of the shared stair. The rooms still sit in one programme: rear-return kitchen, half-landing bathroom, decoration and floors. We do not treat neighbour notice as optional.",
       },
     ],
     metaDescription:
@@ -117,6 +133,14 @@ export const refurbCombos: Record<string, ComboContent> = {
         q: "Is Belsize Conservation Area the same as Hampstead?",
         a: "No. It is a separate Camden designation covering a large part of this neighbourhood. [VERIFY the map for the address.]",
       },
+      {
+        q: "Can conversion common parts sit in a Belsize light-refurbishment brief?",
+        a: "Only if the freeholder is the client. The demise is one programme. The stair is a separate instruction unless that is the written scope.",
+      },
+      {
+        q: "Does a Belsize mansion-flat licence to alter cover kitchen and bathroom together?",
+        a: "Usually the pack covers the wet rooms that touch shared stacks, and often flooring. We can prepare drawings and a method statement for the whole interior. Consent is still the agent's, not ours.",
+      },
     ],
     metaDescription:
       "Light refurbishment in Belsize Park NW3 conversions and mansion flats. Coordinated interior refresh. 020 7101 3168.",
@@ -156,6 +180,14 @@ export const refurbCombos: Record<string, ComboContent> = {
       {
         q: "Should we move out of a mansion flat?",
         a: "For a whole-flat programme, usually yes. Living in dust in a compact apartment costs more time than it saves.",
+      },
+      {
+        q: "How long is a St John's Wood mansion-flat programme including the licence?",
+        a: "The on-site weeks still follow the rooms. The licence sits in the lead-in. We do not strip kitchen and bathroom while the agent's pack is outstanding.",
+      },
+      {
+        q: "Can a St John's Wood villa take the same interior programme as a mansion flat?",
+        a: "The definition is the same: kitchen, bathroom, decoration and floors, carcass left. The rooms are larger and the access is a street, not a lift. Lord's match days can still restrict surrounding streets. [VERIFY.]",
       },
     ],
     metaDescription:
@@ -197,6 +229,14 @@ export const refurbCombos: Record<string, ComboContent> = {
         q: "Is the canal a planning issue for interior work?",
         a: "On some frontages, Canal & River Trust questions can arise if anything touches the elevation or the water. We do not assume they apply to every W9 address. [VERIFY.]",
       },
+      {
+        q: "Do you sand original boards in a 1890s Maida Vale mansion flat?",
+        a: "Where they will take it. Failed subfloors and previous bitumen are common in this stock. We list that at survey rather than promising a sanded finish from a photograph.",
+      },
+      {
+        q: "Does a compact Maida Vale kitchen stay at the back of the flat?",
+        a: "Usually. Stacks and corridors stay. Relocating a wet room is only possible if the drainage will serve the new position without cutting into another demise. We will say at survey rather than redraw the 1890s plan.",
+      },
     ],
     metaDescription:
       "Light refurbishment in Maida Vale W9 mansion flats. Coordinated kitchen, bathroom and decoration. 020 7101 3168.",
@@ -236,6 +276,10 @@ export const refurbCombos: Record<string, ComboContent> = {
       {
         q: "Can you load a whole-flat strip on Finchley Road?",
         a: "It is a major corridor. We treat it as a different process from a side street, and we plan the drop at survey.",
+      },
+      {
+        q: "Does being next to the office shorten a Swiss Cottage light-refurbishment programme?",
+        a: "It shortens the visit. Avenue Road blocks still need a licence to alter for kitchen and bathroom; conversions still need party-wall hours and a protected stair. We do not skip the survey because the office is on Finchley Road.",
       },
     ],
     metaDescription:
@@ -277,6 +321,10 @@ export const refurbCombos: Record<string, ComboContent> = {
         q: "Does the park affect a whole-house programme?",
         a: "It affects access. We plan drops away from peak visitor hours where we can.",
       },
+      {
+        q: "Can a Primrose Hill lower-ground kitchen and bathroom sit in one light-refurbishment brief?",
+        a: "Yes, if moisture and extract are in the specification before units go on the wall or paint goes on plaster. A wet lower-ground is not a decorating job. We isolate damp first, then run kitchen and bathroom as one programme.",
+      },
     ],
     metaDescription:
       "Light refurbishment in Primrose Hill NW1 houses and splits. Interior refresh, conservation-aware. 020 7101 3168.",
@@ -316,6 +364,10 @@ export const refurbCombos: Record<string, ComboContent> = {
       {
         q: "Do trees stop a light refurbishment?",
         a: "They can constrain access and any work that touches the elevation or the ground. Internal fit-out still needs a drop point that respects the plot. [VERIFY TPO.]",
+      },
+      {
+        q: "Can a Highgate slope villa take a whole-interior programme without a structural opening?",
+        a: "Yes. Kitchen, bathrooms, decoration and floors inside the rooms that exist is ordinary Highgate work. A new storey, a loft or a wall taken out is not this service; that sits with Hampstead Renovations.",
       },
     ],
     metaDescription:
@@ -357,6 +409,10 @@ export const refurbCombos: Record<string, ComboContent> = {
         q: "Is off-street parking useful for a multi-room job?",
         a: "Often, yes. It eases material drops compared with a Camden conversion. We still write a drop point at survey.",
       },
+      {
+        q: "Do pebbledash Golders Green houses take the same interior programme as a Camden conversion?",
+        a: "The definition is the same: kitchen, bathrooms, decoration and floors, walls left where they are. The rooms are larger and occupancy is more often sequenced around a family still in the house. We still survey; pebbledash hides out-of-square walls as readily as a conversion.",
+      },
     ],
     metaDescription:
       "Light refurbishment in Golders Green NW11 family houses. Coordinated interior refresh. 020 7101 3168.",
@@ -396,6 +452,10 @@ export const refurbCombos: Record<string, ComboContent> = {
       {
         q: "Is Salusbury Road usable for a whole-flat delivery?",
         a: "It is a busy spine. We plan a drop on a residential street unless the building forces otherwise.",
+      },
+      {
+        q: "Does it matter which side of Queen's Park a light-refurbishment sits on?",
+        a: "Yes. Brent and Westminster issue different skip and scaffolding licences, and the two conservation areas are separate maps. Terrace conversions and Estate cottages also take different joinery. We confirm the council from the address before we write the method.",
       },
     ],
     metaDescription:
@@ -437,6 +497,10 @@ export const refurbCombos: Record<string, ComboContent> = {
         q: "Is the hill a real issue for a multi-room delivery?",
         a: "For long-wheelbase vans, yes. We plan vehicle and drop point at survey.",
       },
+      {
+        q: "Can a Muswell Hill family house stay occupied during a light-refurbishment programme?",
+        a: "Often, if a kitchen and a bedroom can be kept. A whole-house strip on the slope is usually cleaner empty. A Broadway flat is tighter still. We will say which, after survey.",
+      },
     ],
     metaDescription:
       "Light refurbishment in Muswell Hill N10 Edwardian houses and Broadway flats. 020 7101 3168.",
@@ -476,6 +540,10 @@ export const refurbCombos: Record<string, ComboContent> = {
       {
         q: "Rear additions already there?",
         a: "We can renovate rooms that exist. Building a new one is not this service.",
+      },
+      {
+        q: "Can original halls and tiled floors stay outside a Crouch End light-refurbishment envelope?",
+        a: "Yes, where they are sound. The usual brief is the demise we are given: kitchen, bathroom, decoration and floors, with the original hall protected rather than treated as a site path. Common parts still need the freeholder.",
       },
     ],
     metaDescription:
@@ -517,6 +585,10 @@ export const refurbCombos: Record<string, ComboContent> = {
         q: "Are there conservation areas here?",
         a: "Coverage is by street, including toward Dartmouth Park. We check the map for the address. [VERIFY.]",
       },
+      {
+        q: "Is a landlord conversion refresh the same as a whole-flat light refurbishment in Kentish Town?",
+        a: "Often, if the plan stays as it is: rear-return kitchen and bathroom if they need it, decoration and floors to one standard, one programme and one account. We write the scope; we do not invent a package price. Lower-ground moisture is still a survey item, not a decorating surprise.",
+      },
     ],
     metaDescription:
       "Light refurbishment in Kentish Town NW5 conversions. Kitchen, bathroom, decoration. 020 7101 3168.",
@@ -557,6 +629,10 @@ export const refurbCombos: Record<string, ComboContent> = {
         q: "Is all of Kilburn in a conservation area?",
         a: "No. Coverage is by street. [VERIFY Camden and Brent maps.]",
       },
+      {
+        q: "Does a Kilburn shop-flat need a different programme from a conversion toward West Hampstead?",
+        a: "The rooms still decide the layout; the stair and extract decide the method. A shop-flat is a narrow stair, extract as a real constraint, and a method statement where the route is through a shop. A conversion toward West Hampstead is party-wall hours and a protected hallway. We measure both before we promise a kitchen.",
+      },
     ],
     metaDescription:
       "Light refurbishment in Kilburn NW6, Camden and Brent. Conversion and shop-flat interiors. 020 7101 3168.",
@@ -596,6 +672,10 @@ export const refurbCombos: Record<string, ComboContent> = {
       {
         q: "When was the conservation area designated?",
         a: "In 1967. An Article 4 direction has been in force since the 1970s.",
+      },
+      {
+        q: "Can extract sit in a Suburb light-refurbishment without Trust consent?",
+        a: "Internal kitchens, bathrooms, decoration and floors often sit outside Trust consent. An extract grille, soil pipe or window that breaks the envelope does not. We check the elevation, the Trust boundary and Barnet planning before we open the wet rooms. [VERIFY.]",
       },
     ],
     metaDescription:

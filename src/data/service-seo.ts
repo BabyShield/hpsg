@@ -45,12 +45,12 @@ export function comboHeadings(slug: ServiceSlug, area: string) {
       };
     case "light-refurbishment":
       return {
-        rooms: `Typical programmes in ${area}`,
+        rooms: `Kitchen, bathroom, floors and decoration in ${area}`,
         working: `Licence, sequence and access in ${area}`,
         spec: `How a ${area} programme is specified`,
-        includes: "What a typical programme includes",
+        includes: "What a typical light-refurbishment instruction includes",
         process: "How a light-refurbishment programme runs",
-        questions: `Refurbishment questions in ${area}`,
+        questions: `Light refurbishment questions in ${area}`,
         facts: `Local facts that shape a ${area} programme`,
       };
   }
@@ -146,6 +146,14 @@ export const serviceSeo: Record<ServiceSlug, ServiceSeo> = {
       {
         q: "Is a buy-to-let refresh a light refurbishment?",
         a: "Often, if the plan stays as it is: kitchen and bathroom if they need it, decoration and floors to one standard, one programme and one account.",
+      },
+      {
+        q: "Do you rewire or replumb as part of a light-refurbishment programme?",
+        a: "Of the rooms in scope, yes — coordinated with the existing installation. A speculative whole-house strip is not assumed. Hidden services are listed as provisional items after survey.",
+      },
+      {
+        q: "Do you protect common parts in conversion and mansion-block programmes?",
+        a: "Yes. Shared stairs and hallways are written into the method. The demise is one programme; the stair is a separate instruction unless the freeholder is the client.",
       },
     ],
   },

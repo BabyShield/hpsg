@@ -510,12 +510,14 @@ export const serviceHubContent: Record<ServiceSlug, ServiceHubContent> = {
       {
         title: "Light refurbishment of conversion flats",
         text:
-          "West Hampstead, Kentish Town, Belsize Park and Kilburn conversions are the usual whole-flat brief: rear-return kitchen, half-landing bathroom, decoration and floors, with common-parts protection. One programme, wet trades first, paint last.",
+          "West Hampstead, Kentish Town, Belsize Park, Kilburn, Crouch End and Queen's Park conversions are the usual whole-flat brief: rear-return kitchen, half-landing bathroom, decoration and floors, with common-parts protection. One programme, wet trades first, paint last.",
         links: [
           { href: "/light-refurbishment/west-hampstead/", label: "Light refurbishment in West Hampstead" },
           { href: "/light-refurbishment/kentish-town/", label: "Light refurbishment in Kentish Town" },
           { href: "/light-refurbishment/belsize-park/", label: "Light refurbishment in Belsize Park" },
           { href: "/light-refurbishment/kilburn/", label: "Light refurbishment in Kilburn" },
+          { href: "/light-refurbishment/crouch-end/", label: "Light refurbishment in Crouch End" },
+          { href: "/light-refurbishment/queens-park/", label: "Light refurbishment in Queen's Park" },
         ],
       },
       {
@@ -531,12 +533,14 @@ export const serviceHubContent: Record<ServiceSlug, ServiceHubContent> = {
       {
         title: "Light refurbishment of family houses",
         text:
-          "Hampstead, Highgate, Muswell Hill and Hampstead Garden Suburb houses take a storey or a whole interior to one standard. Listed fabric and Trust rules are checked where the envelope is involved. Structural openings, lofts and extensions are not this service.",
+          "Hampstead, Highgate, Primrose Hill, Golders Green, Muswell Hill and Hampstead Garden Suburb houses take a storey or a whole interior to one standard. Listed fabric and Trust rules are checked where the envelope is involved. Structural openings, lofts and extensions are not this service.",
         links: [
           { href: "/light-refurbishment/hampstead/", label: "Light refurbishment in Hampstead" },
           { href: "/light-refurbishment/highgate/", label: "Light refurbishment in Highgate" },
           { href: "/light-refurbishment/primrose-hill/", label: "Light refurbishment in Primrose Hill" },
           { href: "/light-refurbishment/hampstead-garden-suburb/", label: "Light refurbishment in Hampstead Garden Suburb" },
+          { href: "/light-refurbishment/golders-green/", label: "Light refurbishment in Golders Green" },
+          { href: "/light-refurbishment/muswell-hill/", label: "Light refurbishment in Muswell Hill" },
         ],
       },
     ],

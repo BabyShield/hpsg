@@ -190,6 +190,22 @@ export function comboSearchFaqs(combo: Combo): Faq[] {
       q: `Can you refurbish a whole flat in ${area}?`,
       a: `Yes, if the work stays within kitchens, bathrooms, decoration, flooring and joinery in the existing rooms. A ${area} project that removes walls, drops a floor or adds a storey is not light refurbishment; that sits with Hampstead Renovations.`,
     });
+    extras.push({
+      q: `How long does light refurbishment in ${area} take?`,
+      a: `A conversion flat — kitchen, bathroom, decoration and floors — is commonly a matter of weeks on site once materials are dated. A storey of a family house, or a mansion apartment waiting on a licence to alter in ${area}, takes longer. The written programme follows the survey.`,
+    });
+    extras.push({
+      q: `Do you sand existing floors as part of light refurbishment in ${area}?`,
+      a: `Where the boards will take it. Failed subfloors, previous bitumen and boards too thin to sand are listed at survey in ${area} ${postcode}. New timber, engineered or stone finishes are specified in generic categories, not as brand partnerships.`,
+    });
+    extras.push({
+      q: `Do you rewire or replumb as part of light refurbishment in ${area}?`,
+      a: `Of the rooms in scope, yes — coordinated with the existing installation in ${area} ${postcode}. A speculative whole-house strip is not assumed. Hidden services are listed as provisional items after survey, not buried in a lump sum.`,
+    });
+    extras.push({
+      q: `Do you protect common parts during light refurbishment in ${area}?`,
+      a: `Yes. Shared stairs and hallways in ${area} conversions and mansion blocks are written into the method. The demise is one programme; the stair is a separate instruction unless the freeholder is the client.`,
+    });
   }
 
   return extras;
