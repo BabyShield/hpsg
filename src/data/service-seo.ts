@@ -35,12 +35,12 @@ export function comboHeadings(slug: ServiceSlug, area: string) {
       };
     case "painting-decorating":
       return {
-        rooms: `Typical interiors we decorate in ${area}`,
-        working: `Conservation, joinery and occupied homes in ${area}`,
+        rooms: `Occupied houses, sashes and original joinery in ${area}`,
+        working: `Prep, conservation and occupied homes in ${area}`,
         spec: `How decorating is specified in ${area}`,
         includes: "What a typical decorating instruction includes",
         process: "How a decorating programme runs",
-        questions: `Decorating questions in ${area}`,
+        questions: `Painting and decorating questions in ${area}`,
         facts: `Local facts that shape decorating in ${area}`,
       };
     case "light-refurbishment":
@@ -123,6 +123,14 @@ export const serviceSeo: Record<ServiceSlug, ServiceSeo> = {
       {
         q: "Is a quick refresh the same as a specified decorate?",
         a: "No. Preparation takes the majority of the time. Failed plaster, lime backgrounds and original sashes are specified as joinery and substrate, not as a cheap emulsion over defects.",
+      },
+      {
+        q: "Do you specify lining paper in conversion interiors?",
+        a: "Where movement would telegraph through paint, yes. It is written into the proposal, not slipped in on the day. Mixed later patches in West Hampstead, Kentish Town and Crouch End conversions are the usual reason.",
+      },
+      {
+        q: "Do you paint original sash windows as joinery?",
+        a: "Yes, where they are in scope. Failed cords, staff beads or putty are not a paint item; we say so before we start. Conservation-area and listed windows are checked on the address.",
       },
     ],
   },

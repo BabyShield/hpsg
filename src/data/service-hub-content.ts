@@ -376,23 +376,26 @@ export const serviceHubContent: Record<ServiceSlug, ServiceHubContent> = {
       {
         title: "Painting and decorating in period interiors",
         text:
-          "Hampstead, Belsize Park and Primrose Hill interiors are lime plaster, original sashes and rooms that telegraph a thin fill. Colour is sampled on the wall in the light the room has. Sashes, shutters and picture rails are programmed as joinery, not as a cut-in.",
+          "Hampstead, Belsize Park, Primrose Hill, Muswell Hill and Golders Green interiors are lime plaster, original sashes and rooms that telegraph a thin fill. Colour is sampled on the wall in the light the room has. Sashes, shutters and picture rails are programmed as joinery, not as a cut-in.",
         links: [
           { href: "/painting-decorating/hampstead/", label: "Painting and decorating in Hampstead" },
           { href: "/painting-decorating/belsize-park/", label: "Painting and decorating in Belsize Park" },
           { href: "/painting-decorating/primrose-hill/", label: "Painting and decorating in Primrose Hill" },
           { href: "/painting-decorating/muswell-hill/", label: "Painting and decorating in Muswell Hill" },
+          { href: "/painting-decorating/golders-green/", label: "Painting and decorating in Golders Green" },
         ],
       },
       {
         title: "Painting occupied conversions and mansion flats",
         text:
-          "West Hampstead, Kentish Town, St John's Wood and Maida Vale are often occupied. We sequence rooms so a kitchen, a bathroom and a bedroom remain usable. Mansion common parts are a separate scope from the demise. Spray is not the default in a furnished flat.",
+          "West Hampstead, Kentish Town, Kilburn, Queen's Park, St John's Wood and Maida Vale are often occupied. We sequence rooms so a kitchen, a bathroom and a bedroom remain usable. Mansion common parts are a separate scope from the demise. Spray is not the default in a furnished flat.",
         links: [
           { href: "/painting-decorating/west-hampstead/", label: "Painting and decorating in West Hampstead" },
           { href: "/painting-decorating/st-johns-wood/", label: "Painting and decorating in St John's Wood" },
           { href: "/painting-decorating/maida-vale/", label: "Painting and decorating in Maida Vale" },
           { href: "/painting-decorating/kentish-town/", label: "Painting and decorating in Kentish Town" },
+          { href: "/painting-decorating/kilburn/", label: "Painting and decorating in Kilburn" },
+          { href: "/painting-decorating/queens-park/", label: "Painting and decorating in Queen's Park" },
         ],
       },
       {

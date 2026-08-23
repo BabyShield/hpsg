@@ -151,10 +151,17 @@ export function comboSearchFaqs(combo: Combo): Faq[] {
     });
   }
 
-  extras.push({
-    q: `Can I stay in the property during ${bare} in ${area}?`,
-    a: `A single kitchen or bathroom in ${area} can often be done around you. A whole-flat programme is usually cleaner if you decant. We will say which, after we have seen the plan.`,
-  });
+  if (combo.service.slug === "painting-decorating") {
+    extras.push({
+      q: `Can I stay in the property during painting and decorating in ${area}?`,
+      a: `Yes. Occupied ${area} houses and conversion flats are ordinary decorating work. Rooms are sequenced so a kitchen, a bathroom and a bedroom remain usable. Empty is faster; occupied is the usual brief.`,
+    });
+  } else {
+    extras.push({
+      q: `Can I stay in the property during ${bare} in ${area}?`,
+      a: `A single kitchen or bathroom in ${area} can often be done around you. A whole-flat programme is usually cleaner if you decant. We will say which, after we have seen the plan.`,
+    });
+  }
 
   if (combo.service.slug === "kitchen-renovation") {
     extras.push({
@@ -182,6 +189,22 @@ export function comboSearchFaqs(combo: Combo): Faq[] {
     extras.push({
       q: `Do you decorate occupied houses in ${area}?`,
       a: `Yes. Occupied ${area} houses and conversion flats are ordinary painting work. Prep, protection of joinery and a written coating specification come before colour. We do not treat a period room as a new-build wall.`,
+    });
+    extras.push({
+      q: `How long does painting and decorating in ${area} take?`,
+      a: `A conversion flat in ${area} ${postcode} can be a matter of days or a small number of weeks depending on prep. A family house, empty, is typically measured in weeks; occupied, longer, because rooms are sequenced around you. The survey produces the programme.`,
+    });
+    extras.push({
+      q: `Do you paint original sash windows in ${area}?`,
+      a: `Yes, where they are in scope, as joinery rather than as a cut-in. Failed cords, staff beads or putty in ${area} ${postcode} are not a paint item. Conservation-area and listed windows are checked on the address before we quote.`,
+    });
+    extras.push({
+      q: `Do you specify lining paper when decorating in ${area}?`,
+      a: `Where movement would telegraph through paint, yes. Conversion plaster and later patches in ${area} are the usual reason. Lining is written into the proposal, not slipped in on the day.`,
+    });
+    extras.push({
+      q: `Do you spray or brush when decorating in ${area}?`,
+      a: `Per room. Empty ${area} rooms can take spray where it is cleaner. Furnished period interiors, occupied conversions and mansion flats usually take brush and roller around original joinery. We do not run one method as a house slogan.`,
     });
   }
 

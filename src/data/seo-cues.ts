@@ -208,7 +208,7 @@ const painting: Record<string, ServiceAreaCue> = {
       "Golders Green decorating is Edwardian and inter-war family interiors; occupied sequencing is ordinary, not an extra.",
   },
   "queens-park": {
-    title: "Terrace interiors",
+    title: "Estate cottages and terraces",
     opening:
       "Queen's Park decorating is terrace interiors and Estate cottages; party-wall hours and shared stairs belong in the programme.",
   },
@@ -223,7 +223,7 @@ const painting: Record<string, ServiceAreaCue> = {
       "Crouch End decorating is Victorian conversion interiors around the Broadway; occupied flats and shared stairs are the default.",
   },
   "kentish-town": {
-    title: "Conversion interiors",
+    title: "Mixed-plaster conversions",
     opening:
       "Kentish Town decorating is Victorian conversion interiors; common-parts protection is part of the method, not a courtesy.",
   },

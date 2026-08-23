@@ -37,6 +37,10 @@ export const paintingCombos: Record<string, ComboContent> = {
         q: "How do deliveries work off Heath Street?",
         a: "They are timed. Village lanes are not loading bays. The survey records the vehicle and the drop point.",
       },
+      {
+        q: "Can colour for a Hampstead village room be decided from a chart?",
+        a: "Charts are a starting point. Samples are painted on the wall, in village light. A north-facing room off Heath Street and a Heath-edge drawing room do not read the same emulsion.",
+      },
     ],
     metaDescription:
       "Painting and decorating in Hampstead NW3 village houses and conversions. Lime plaster, original sashes. 020 7101 3168.",
@@ -76,6 +80,10 @@ export const paintingCombos: Record<string, ComboContent> = {
       {
         q: "Is Fortune Green in a conservation area?",
         a: "Some streets toward Fortune Green are. We check the map for the address rather than treating all of West Hampstead as one designation. [VERIFY.]",
+      },
+      {
+        q: "Does a shared West Hampstead stair sit in the decorating brief?",
+        a: "Only if the freeholder is the client. The demise is one instruction. The hall is a separate scope unless that is written. Common-parts protection is still in the method when we only paint the flat.",
       },
     ],
     metaDescription:
@@ -117,6 +125,10 @@ export const paintingCombos: Record<string, ComboContent> = {
         q: "Common parts in a conversion?",
         a: "If instructed, with the freeholder's rules. Hall decoration is a separate scope from the flat.",
       },
+      {
+        q: "Do high Belsize rooms need lining as well as filling?",
+        a: "Where later patches would telegraph through a modern coating, lining is specified on the proposal, not slipped in on the day. High ceilings also change access. Both belong in the programme.",
+      },
     ],
     metaDescription:
       "Painting and decorating in Belsize Park NW3, including high-ceilinged conversions. 020 7101 3168.",
@@ -156,6 +168,10 @@ export const paintingCombos: Record<string, ComboContent> = {
       {
         q: "Do Lord's match days stop the work?",
         a: "They can restrict access on surrounding streets. We check with the building rather than assuming a clear run. [VERIFY.]",
+      },
+      {
+        q: "Is hall decoration in a St John's Wood mansion block part of the flat?",
+        a: "No. Common parts are a separate scope, to the agent's hours and specification. We will not treat the stair as an extension of the demise.",
       },
     ],
     metaDescription:
@@ -197,6 +213,10 @@ export const paintingCombos: Record<string, ComboContent> = {
         q: "Is the canal a planning issue for painting?",
         a: "On some frontages, Canal & River Trust questions can arise for external work. We do not assume they apply to every W9 address. [VERIFY.]",
       },
+      {
+        q: "Will you spray a furnished Maida Vale mansion flat?",
+        a: "Rarely. A furnished mansion flat is not a spray shop. Brush and roller remain the default around original joinery. Empty rooms can take spray where the building allows it.",
+      },
     ],
     metaDescription:
       "Painting and decorating in Maida Vale W9 mansion flats and Little Venice houses. 020 7101 3168.",
@@ -236,6 +256,10 @@ export const paintingCombos: Record<string, ComboContent> = {
       {
         q: "Can you load on Finchley Road?",
         a: "It is a major corridor. We treat it as a different process from a side street, and we plan the drop at survey.",
+      },
+      {
+        q: "Does being next to the office shorten a Swiss Cottage decorate?",
+        a: "It shortens the visit. Inter-war blocks and Victorian conversions still need a room-by-room survey of substrate and joinery. We do not skip the specification because the office is on Finchley Road.",
       },
     ],
     metaDescription:
@@ -277,6 +301,10 @@ export const paintingCombos: Record<string, ComboContent> = {
         q: "Does the park affect the programme?",
         a: "It affects access. We plan drops away from peak visitor hours where we can.",
       },
+      {
+        q: "Does Article 4 stop a Primrose Hill interior decorate?",
+        a: "Interior decoration within existing rooms is ordinary work. Article 4 bites on windows and elevations. A park-facing colour change is a consent question; a drawing-room emulsion is not. [VERIFY.]",
+      },
     ],
     metaDescription:
       "Painting and decorating in Primrose Hill NW1 houses and splits. Preparation first. 020 7101 3168.",
@@ -316,6 +344,10 @@ export const paintingCombos: Record<string, ComboContent> = {
       {
         q: "Do trees stop a decorate?",
         a: "They can constrain access and any scaffold that touches the ground or the elevation. Internal decoration still needs a drop point that respects the plot. [VERIFY TPO.]",
+      },
+      {
+        q: "Do you decorate Highgate Village interiors without changing the elevation?",
+        a: "Yes. Interior decoration within existing rooms is ordinary work once listing is checked. External colour on a Village elevation is a consent question, not a weekend extra. [VERIFY.]",
       },
     ],
     metaDescription:
@@ -357,6 +389,10 @@ export const paintingCombos: Record<string, ComboContent> = {
         q: "Is off-street parking useful for decorating?",
         a: "Often, yes. It eases material drops compared with a Camden conversion. We still write a drop point at survey.",
       },
+      {
+        q: "Do pebbledash Golders Green houses take the same interior decorate as a Camden conversion?",
+        a: "The method is the same: survey, written prep specification, colour sampled on the wall. The rooms are larger and occupancy is more often sequenced around a family still in the house. Pebbledash outside is a masonry specification, not a wall emulsion.",
+      },
     ],
     metaDescription:
       "Painting and decorating in Golders Green NW11 family houses. Barnet. 020 7101 3168.",
@@ -396,6 +432,10 @@ export const paintingCombos: Record<string, ComboContent> = {
       {
         q: "Is Salusbury Road usable for deliveries?",
         a: "It is a busy spine. We plan a drop on a residential street unless the building forces otherwise.",
+      },
+      {
+        q: "Do you paint original tiled dados in a Queen's Park Estate cottage?",
+        a: "Not as a default. Original joinery and tiled surfaces on the Estate are specified after survey, not boxed in or painted as a convenience.",
       },
     ],
     metaDescription:
@@ -437,6 +477,10 @@ export const paintingCombos: Record<string, ComboContent> = {
         q: "Is the hill a real issue for decorating deliveries?",
         a: "For long-wheelbase vans, yes. We plan vehicle and drop point at survey.",
       },
+      {
+        q: "Do high Edwardian rooms in Muswell Hill change access as well as prep?",
+        a: "Yes. Cornice height, picture rails and original joinery scale both. We write access into the programme rather than discovering it on a ladder.",
+      },
     ],
     metaDescription:
       "Painting and decorating in Muswell Hill N10 Edwardian houses and Broadway flats. 020 7101 3168.",
@@ -476,6 +520,10 @@ export const paintingCombos: Record<string, ComboContent> = {
       {
         q: "Can a skip sit on the Broadway?",
         a: "That is not the working assumption. We licence a residential side street.",
+      },
+      {
+        q: "Are original Crouch End mouldings painted as a wall?",
+        a: "No. If they are in scope they are specified as plaster and joinery, not as a quick emulsion. Tiled halls stay unless the brief says otherwise.",
       },
     ],
     metaDescription:
@@ -517,6 +565,10 @@ export const paintingCombos: Record<string, ComboContent> = {
         q: "Are there conservation areas here?",
         a: "Coverage is by street, including toward Dartmouth Park. We check the map for the address. [VERIFY.]",
       },
+      {
+        q: "Can you load decorating materials on Kentish Town Road?",
+        a: "It is a corridor. We use side streets. Neighbour proximity in terraces still belongs in the hours, whatever the drop.",
+      },
     ],
     metaDescription:
       "Painting and decorating in Kentish Town NW5 conversions and terraces. 020 7101 3168.",
@@ -557,6 +609,10 @@ export const paintingCombos: Record<string, ComboContent> = {
         q: "Is all of Kilburn in a conservation area?",
         a: "No. Coverage is by street. [VERIFY Camden and Brent maps.]",
       },
+      {
+        q: "Does a Kilburn shop-flat need a different decorating method from a conversion toward West Hampstead?",
+        a: "The wall still decides the system. A shop-flat is a narrow stair, dust into the shop, and a method statement. A conversion toward West Hampstead is party-wall hours and a protected hallway. We measure both before we bring materials in.",
+      },
     ],
     metaDescription:
       "Painting and decorating in Kilburn NW6, Camden and Brent sides of the High Road. 020 7101 3168.",
@@ -596,6 +652,10 @@ export const paintingCombos: Record<string, ComboContent> = {
       {
         q: "When was the conservation area designated?",
         a: "In 1967. An Article 4 direction has been in force since the 1970s.",
+      },
+      {
+        q: "Do original Suburb doors and sashes get treated as joinery?",
+        a: "Yes. Cottage-scale joinery is programmed and priced as joinery, not as a cut-in. External colour on those frames is where Trust and Barnet arrive. [VERIFY.]",
       },
     ],
     metaDescription:
