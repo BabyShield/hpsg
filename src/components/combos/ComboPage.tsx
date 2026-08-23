@@ -34,13 +34,18 @@ export function ComboPage({
 }) {
   const siblings = siblingCombos(combo);
   const otherServices = services.filter((item) => item.slug !== combo.service.slug);
+  const seenFaqs = new Set<string>();
   const faqs = [
     ...content.localFaqs,
     ...comboSearchFaqs(combo),
     ...combo.service.faqs.slice(0, 3).map((faq) => localizeServiceFaq(faq, combo)),
   ]
     .map((item) => ({ q: publicCopy(item.q), a: publicCopy(item.a) }))
-    .filter((item) => item.q && item.a);
+    .filter((item) => {
+      if (!item.q || !item.a || seenFaqs.has(item.q)) return false;
+      seenFaqs.add(item.q);
+      return true;
+    });
 
   const crumbs = [
     { name: "Home", href: "/" },

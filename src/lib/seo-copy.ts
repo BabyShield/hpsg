@@ -43,6 +43,13 @@ export function areaHook(area: Area): string {
   return AREA_HOOKS[area.slug] ?? `work in the housing stock of ${area.name} ${area.postcode}`;
 }
 
+function serviceSearchName(service: Service): string {
+  if (service.slug === "kitchen-renovation") return "a kitchen renovation";
+  if (service.slug === "bathroom-renovation") return "a bathroom renovation";
+  if (service.slug === "painting-decorating") return "painting and decorating";
+  return service.name.toLowerCase();
+}
+
 export function comboOpening(combo: Combo): string {
   return `${combo.service.name} in ${combo.area.name} (${combo.area.postcode}) is ${areaHook(combo.area)}, carried out from ${addressSingleLine}. Addresses here sit with ${publicCopy(combo.area.council)}. We visit the property before we write a proposal; we do not quote from photographs.`;
 }
@@ -65,24 +72,25 @@ export function areaMetaDescription(area: Area): string {
 }
 
 export function comboSearchFaqs(combo: Combo): Faq[] {
-  const service = combo.service.name.toLowerCase();
+  const name = serviceSearchName(combo.service);
+  const bare = name.replace(/^a /, "");
   const { name: area, postcode } = combo.area;
   const council = publicCopy(combo.area.council);
   const extras: Faq[] = [];
 
   extras.push({
-    q: `What does ${service} in ${area} cost?`,
-    a: `We do not publish a price list for ${service} in ${area}. The room as found, access, extract, tenure and any conservation or freeholder process in ${postcode} change the figure. We visit, then send a written proposal against a defined scope. Telephone ${site.phoneDisplay}.`,
+    q: `What does ${name} in ${area} cost?`,
+    a: `We do not publish a price list for ${bare} in ${area}. The room as found, access, extract, tenure and any conservation or freeholder process in ${postcode} change the figure. We visit, then send a written proposal against a defined scope. Telephone ${site.phoneDisplay}.`,
   });
 
   extras.push({
-    q: `Do I need planning permission for ${service} in ${area}?`,
-    a: `Internal ${service} within existing rooms often sits outside planning permission. ${area} is ${council}. Conservation-area, listed-building, Article 4 and freeholder rules can still control extract, windows and elevations. We check the address rather than assuming permitted development.`,
+    q: `Do I need planning permission for ${name} in ${area}?`,
+    a: `Internal ${bare} within existing rooms often sits outside planning permission. ${area} is ${council}. Conservation-area, listed-building, Article 4 and freeholder rules can still control extract, windows and elevations. We check the address rather than assuming permitted development.`,
   });
 
   extras.push({
-    q: `Who carries out ${service} in ${area}?`,
-    a: `${site.legalName} (company no. ${site.companyNumber}) carries out ${service} in ${area} from ${addressSingleLine}. The work is survey-led and fully insured. We do not quote from photographs.`,
+    q: `Who carries out ${name} in ${area}?`,
+    a: `${site.legalName} (company no. ${site.companyNumber}) carries out ${bare} in ${area} from ${addressSingleLine}. The work is survey-led and fully insured. We do not quote from photographs.`,
   });
 
   if (combo.service.slug === "kitchen-renovation") {
@@ -149,7 +157,7 @@ export function areaSearchFaqs(area: Area): Faq[] {
 }
 
 export function serviceSearchFaqs(service: Service): Faq[] {
-  const name = service.name.toLowerCase();
+  const name = serviceSearchName(service);
   return [
     {
       q: `What does ${name} in North West London cost?`,
@@ -157,10 +165,10 @@ export function serviceSearchFaqs(service: Service): Faq[] {
     },
     {
       q: `Do I need planning permission for ${name} in a conservation area?`,
-      a: `Internal ${name} within existing rooms often does not need planning permission. Conservation-area, listed-building, Article 4 and freeholder rules still apply to extract, windows and elevations. We check the address. We do not assume permitted development in Hampstead, Highgate or Hampstead Garden Suburb.`,
+      a: `Internal ${name.replace(/^a /, "")} within existing rooms often does not need planning permission. Conservation-area, listed-building, Article 4 and freeholder rules still apply to extract, windows and elevations. We check the address. We do not assume permitted development in Hampstead, Highgate or Hampstead Garden Suburb.`,
     },
     {
-      q: `Which North West London neighbourhoods do you cover for ${name}?`,
+      q: `Which North West London neighbourhoods do you cover for ${name.replace(/^a /, "")}?`,
       a: `${service.name} pages on this site cover Hampstead, West Hampstead, Belsize Park, St John's Wood, Maida Vale, Swiss Cottage, Primrose Hill, Highgate and the wider list. If the property sits just outside those pages, contact us and we will say whether we can take it on.`,
     },
   ];

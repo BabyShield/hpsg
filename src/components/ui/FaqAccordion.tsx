@@ -19,7 +19,7 @@ export function FaqAccordion({ items }: { items: Faq[] }) {
         const buttonId = `${baseId}-button-${index}`;
         const isOpen = Boolean(open[index]);
         return (
-          <div key={item.q}>
+          <div key={`${index}-${item.q}`}>
             <h3>
               <button
                 id={buttonId}
