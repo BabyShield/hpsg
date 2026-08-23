@@ -11,6 +11,7 @@ import { PhotoTile } from "@/components/ui/PhotoTile";
 import { ServiceCard } from "@/components/ui/ServiceCard";
 import { areaPhotos, servicePhotos } from "@/data/photos";
 import { serviceHubContent } from "@/data/service-hub-content";
+import { serviceSeo } from "@/data/service-seo";
 import { services } from "@/data/services";
 import type { Service } from "@/data/types";
 import { getCombosForService, tier2Areas } from "@/lib/matrix";
@@ -32,13 +33,14 @@ export function ServiceHub({ service }: { service: Service }) {
   const others = services.filter((item) => item.slug !== service.slug);
   const hrReferral = service.slug === "light-refurbishment";
   const heading = servicePlainName(service);
+  const seo = serviceSeo[service.slug];
 
   const crumbs = [
     { name: "Home", href: "/" },
     { name: `${heading} in North West London`, href: `/${service.slug}/` },
   ];
   const pageUrl = absoluteUrl(`/${service.slug}/`);
-  const localFaqs = service.faqs
+  const localFaqs = [...seo.extraFaqs, ...service.faqs]
     .map((item) => ({ q: publicCopy(item.q), a: publicCopy(item.a) }))
     .filter((item) => item.q && item.a);
   const localQuestions = new Set(localFaqs.map((item) => item.q));
@@ -56,8 +58,9 @@ export function ServiceHub({ service }: { service: Service }) {
           name: `${heading} in North West London`,
           url: pageUrl,
           areaServed: ["North West London", ...comboAreas.map((area) => `${area.name}, ${area.postcode}`)],
-          description: service.metaDescription,
+          description: service.summary,
           image: servicePhotos[service.slug].src,
+          serviceType: heading,
         })}
       />
       <JsonLd
@@ -70,7 +73,7 @@ export function ServiceHub({ service }: { service: Service }) {
       />
       <JsonLd
         data={howToSchema({
-          name: `How we carry out ${heading.toLowerCase()} in North West London`,
+          name: seo.processH2,
           description: service.summary,
           steps: service.processSteps,
         })}
@@ -98,11 +101,12 @@ export function ServiceHub({ service }: { service: Service }) {
             {content.intro.map((paragraph) => publicCopy(paragraph)).filter(Boolean).map((paragraph) => (
               <p key={paragraph.slice(0, 32)}>{paragraph}</p>
             ))}
+            <p>{seo.who}</p>
           </div>
           <div className="lg:col-span-5">
             <p className="rule mb-6" aria-hidden="true" />
             <h2 className="font-display text-3xl font-normal">
-              {heading} for North West London houses and flats
+              {seo.audienceH2}
             </h2>
             <div className="mt-6 space-y-5 text-base leading-relaxed text-grey-700">
               {content.forWhom.map((paragraph) => publicCopy(paragraph)).filter(Boolean).map((paragraph) => (
@@ -201,7 +205,7 @@ export function ServiceHub({ service }: { service: Service }) {
             <Container>
               <p className="rule mb-8" aria-hidden="true" />
               <h2 className="font-display text-4xl font-normal sm:text-5xl">
-                {heading} by housing type
+                {seo.housingH2}
               </h2>
               <ul className="mt-16 grid gap-12 lg:grid-cols-3">
                 {content.housing.map((section) => (
@@ -256,7 +260,7 @@ export function ServiceHub({ service }: { service: Service }) {
           <Container>
             <p className="rule mb-8" aria-hidden="true" />
             <h2 className="font-display text-4xl font-normal sm:text-5xl">
-              What {heading.toLowerCase()} in North West London includes
+              {seo.includesH2}
             </h2>
             <p className="mt-5 max-w-measure text-base leading-relaxed text-grey-700">
               The list is the core of a typical instruction. The written proposal
@@ -277,7 +281,7 @@ export function ServiceHub({ service }: { service: Service }) {
           <Container>
             <p className="rule mb-8" aria-hidden="true" />
             <h2 className="font-display text-4xl font-normal sm:text-5xl">
-              How we carry out {heading.toLowerCase()} in North West London
+              {seo.processH2}
             </h2>
             <ol className="mt-16 grid gap-x-10 gap-y-12 md:grid-cols-2 lg:grid-cols-3">
               {service.processSteps.map((step, index) => (
@@ -296,7 +300,7 @@ export function ServiceHub({ service }: { service: Service }) {
         <section className="border-y border-grey-200 py-24 sm:py-32">
           <Container className="grid gap-10 lg:grid-cols-12">
             <h2 className="font-display text-4xl font-normal sm:text-5xl lg:col-span-4">
-              {heading} specification
+              {seo.specH2}
             </h2>
             <div className="space-y-5 text-base leading-relaxed text-grey-700 lg:col-span-8">
               {content.specification.map((paragraph) => publicCopy(paragraph)).filter(Boolean).map((paragraph) => (
@@ -310,7 +314,7 @@ export function ServiceHub({ service }: { service: Service }) {
           <Container>
             <p className="rule mb-8" aria-hidden="true" />
             <h2 className="font-display text-4xl font-normal sm:text-5xl">
-              {heading} in North West London neighbourhoods
+              {seo.areasH2}
             </h2>
             <p className="lede mt-6 max-w-measure text-xl text-grey-600">
               {publicCopy(content.areasIntro)}

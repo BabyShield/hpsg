@@ -183,12 +183,14 @@ export function serviceSchema({
   areaServed,
   description,
   image,
+  serviceType,
 }: {
   name: string;
   url: string;
   areaServed: string | string[];
   description?: string;
   image?: string;
+  serviceType?: string;
 }) {
   const places = (Array.isArray(areaServed) ? areaServed : [areaServed]).map((place) => ({
     "@type": "Place",
@@ -198,14 +200,28 @@ export function serviceSchema({
     "@context": "https://schema.org",
     "@type": "Service",
     name,
-    serviceType: name,
+    serviceType: serviceType ?? name,
     url,
     description: description ? publicCopy(description) : undefined,
     image: image ? absoluteUrl(image) : undefined,
     provider: { "@id": BUSINESS_ID },
     brand: { "@id": BUSINESS_ID },
     areaServed: places,
-    mainEntityOfPage: url,
+    audience: {
+      "@type": "Audience",
+      geographicArea: places,
+    },
+    offers: {
+      "@type": "Offer",
+      url,
+      availability: "https://schema.org/InStock",
+      description: "Written proposal after a visit. We do not quote from photographs.",
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `${url}#webpage`,
+      url,
+    },
   };
 }
 

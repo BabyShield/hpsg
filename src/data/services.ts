@@ -111,9 +111,9 @@ export const services: Service[] = [
         a: "Yes. Period walls in Hampstead and Belsize Park are rarely square. We scribe the run to the breast rather than boxing it out as a convenience.",
       },
     ],
-    metaTitle: "Kitchen Renovation in North West London | Hampstead, NW8, W9 | HPSG",
+    metaTitle: "Kitchen renovation in North West London | Conversions and mansion flats | HPSG",
     metaDescription:
-      "Kitchen renovation in Hampstead, St John's Wood, Maida Vale and North West London. Galleys, chimney breasts and compact mansion-flat kitchens. Survey-led. 020 7101 3168.",
+      "Galleys, chimney breasts and compact mansion-flat kitchens in Hampstead, St John's Wood and Maida Vale. Survey-led fit-out from Finchley Road. 020 7101 3168.",
   },
   {
     slug: "bathroom-renovation",
@@ -225,9 +225,9 @@ export const services: Service[] = [
         a: "Sometimes. Available floor depth decides it. We treat it as an electrical circuit and a build-up problem, not as a brochure extra, and we will say at survey if the room cannot take it without thinning insulation.",
       },
     ],
-    metaTitle: "Bathroom Renovation in North West London | Hampstead, NW8, W9 | HPSG",
+    metaTitle: "Bathroom renovation in North West London | Tanking and extract | HPSG",
     metaDescription:
-      "Bathroom renovation in Hampstead, St John's Wood, Maida Vale and North West London. Tanking, extract and compact layouts in conversions and mansion flats. Survey-led. 020 7101 3168.",
+      "Tanking, extract and compact layouts in Hampstead conversions and St John's Wood mansion flats. Timber floors and shared wastes. Survey-led. 020 7101 3168.",
   },
   {
     slug: "painting-decorating",
@@ -326,9 +326,9 @@ export const services: Service[] = [
         a: "Charts are a starting point. Samples are painted on the wall, in the light the room has. North-facing Hampstead rooms and west-facing mansion flats do not read the same emulsion in the same way.",
       },
     ],
-    metaTitle: "Painting and Decorating in North West London | Hampstead period houses | HPSG",
+    metaTitle: "Painting and decorating in North West London | Occupied period houses | HPSG",
     metaDescription:
-      "Painting and decorating in Hampstead, Belsize Park, Highgate and North West London. Preparation, original joinery, occupied houses and conversions. Survey-led. 020 7101 3168.",
+      "Preparation, original joinery and occupied houses in Hampstead, Belsize Park and Highgate. A written prep specification, not a quick refresh. 020 7101 3168.",
   },
   {
     slug: "light-refurbishment",
@@ -435,9 +435,9 @@ export const services: Service[] = [
         a: "Yes. An empty conversion or mansion-flat apartment between lets is ordinary work: kitchen and bathroom if they need it, decoration and floors to one standard, one programme and one account. We will not pad a refresh into a structural project.",
       },
     ],
-    metaTitle: "Light Refurbishment in North West London | Flats and houses | HPSG",
+    metaTitle: "Light refurbishment in North West London | Kitchen, bathroom and floors | HPSG",
     metaDescription:
-      "Light refurbishment in Hampstead, St John's Wood, Maida Vale and North West London: kitchens, bathrooms, decoration and floors as one programme, without structural work. 020 7101 3168.",
+      "Kitchen, bathroom, decoration and floors as one programme in Hampstead conversions and mansion flats. Not a loft or extension. Survey-led. 020 7101 3168.",
   },
 ];
 
