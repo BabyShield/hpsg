@@ -11,7 +11,7 @@ const wide = { width: 1600, height: 900 };
 
 export const homeHero: Photo = {
   src: "/images/home/hero.jpg",
-  alt: "A cream-stucco North West London house and private garden in morning light, empty lawn and clipped box",
+  alt: "A cream-stucco Hampstead house with a magnolia, York stone path and tidy lawn",
   ...wide,
 };
 
@@ -24,22 +24,22 @@ export const officeNeighbourhood: Photo = {
 export const servicePhotos: Record<ServiceSlug, Photo> = {
   "kitchen-renovation": {
     src: "/images/services/kitchen-renovation.jpg",
-    alt: "Kitchen renovation in a North West London period house — pale cabinetry, marble and a garden sash",
+    alt: "A family kitchen in a Hampstead house — Hague Blue cabinets, oak worktops and a black Aga",
     ...wide,
   },
   "bathroom-renovation": {
     src: "/images/services/bathroom-renovation.jpg",
-    alt: "Bathroom renovation in a North West London house — stone bath, brass fittings and morning light",
+    alt: "A family bathroom in a Hampstead house — porcelain bath, sage zellige and brass taps",
     ...wide,
   },
   "painting-decorating": {
     src: "/images/services/painting-decorating.jpg",
-    alt: "Painting and decorating in a Hampstead period drawing room — pale walls, cornicing and herringbone",
+    alt: "A decorated Hampstead drawing room — olive walls, cornicing, herringbone and a linen sofa",
     ...wide,
   },
   "light-refurbishment": {
     src: "/images/services/light-refurbishment.jpg",
-    alt: "Light refurbishment in a London mansion flat — looking from a pale reception into a new kitchen",
+    alt: "Looking from a mansion-flat reception through original doors into a new oak kitchen",
     ...wide,
   },
 };
@@ -47,22 +47,22 @@ export const servicePhotos: Record<ServiceSlug, Photo> = {
 export const kitchenRoomPhotos = {
   galley: {
     src: "/images/services/kitchen-galley.jpg",
-    alt: "A rear-return galley kitchen in a North West London conversion — cream cabinets, marble and a sash",
+    alt: "A rear-return galley in a London conversion — sage cabinets, metro tiles and a garden sash",
     ...wide,
   },
   compact: {
     src: "/images/services/kitchen-compact.jpg",
-    alt: "A compact kitchen in a London mansion flat — short runs, marble worktops and a lightwell sash",
+    alt: "A compact mansion-flat kitchen — walnut cabinets, stone worktop and a lightwell sash",
     ...wide,
   },
   chimney: {
     src: "/images/services/kitchen-chimney.jpg",
-    alt: "A kitchen scribed around an original chimney breast in a North West London period house",
+    alt: "A kitchen scribed around a chimney breast with a black range in a Hampstead house",
     ...wide,
   },
   suburb: {
     src: "/images/services/kitchen-suburb.jpg",
-    alt: "A finished kitchen in an Arts and Crafts Hampstead Garden Suburb house — cream cabinets, tiled splash and a garden casement",
+    alt: "An Arts and Crafts Hampstead Garden Suburb kitchen — cream cabinets, green tiles and a leaded casement",
     ...wide,
   },
 } as const satisfies Record<string, Photo>;
@@ -70,12 +70,12 @@ export const kitchenRoomPhotos = {
 export const refurbRoomPhotos = {
   sitting: {
     src: "/images/services/refurb-sitting.jpg",
-    alt: "A period sitting room after light refurbishment — pale walls, marble chimneypiece and refinished boards",
+    alt: "A period sitting room after light refurbishment — blue-grey walls, marble chimneypiece and a linen sofa",
     ...wide,
   },
   hall: {
     src: "/images/services/refurb-hall.jpg",
-    alt: "A conversion-flat hallway after light refurbishment — original doors, pale walls and timber floor",
+    alt: "A conversion-flat hallway after light refurbishment — original doors, oak boards and a bedroom beyond",
     ...wide,
   },
   bedroom: {
@@ -88,17 +88,17 @@ export const refurbRoomPhotos = {
 export const paintingRoomPhotos = {
   drawing: {
     src: "/images/services/painting-drawing.jpg",
-    alt: "A decorated period drawing room in North West London — pale walls, cornicing and morning light",
+    alt: "A decorated Hampstead drawing room — Setting Plaster walls, marble chimneypiece and sanded boards",
     ...wide,
   },
   sashes: {
     src: "/images/services/painting-sashes.jpg",
-    alt: "Freshly painted sash windows and shutters in a Hampstead period interior",
+    alt: "Freshly painted sash windows and shutters against grey-green walls in a Hampstead bay",
     ...wide,
   },
   flat: {
     src: "/images/services/painting-flat.jpg",
-    alt: "A decorated mansion-flat reception in North West London — pale walls, original door and a lightwell sash",
+    alt: "A decorated mansion-flat reception — pale grey walls, parquet, a green armchair and a lightwell sash",
     ...wide,
   },
 } as const satisfies Record<string, Photo>;
@@ -106,17 +106,17 @@ export const paintingRoomPhotos = {
 export const bathroomRoomPhotos = {
   compact: {
     src: "/images/services/bathroom-compact.jpg",
-    alt: "A compact ensuite in a London mansion flat — stone basin, brass taps and a sash onto a lightwell",
+    alt: "A compact ensuite in a London mansion flat — dark limestone, chrome taps and a lightwell sash",
     ...wide,
   },
   shower: {
     src: "/images/services/bathroom-shower.jpg",
-    alt: "A walk-in shower in a North West London conversion — stone tiles, brass fittings and a garden sash",
+    alt: "A walk-in shower in a North West London conversion — limestone tiles, chrome fittings and a garden sash",
     ...wide,
   },
   wetWall: {
     src: "/images/services/bathroom-wet-wall.jpg",
-    alt: "A tiled shower wall with a brass niche in a period North West London bathroom",
+    alt: "A shower wall of handmade blue-green metro tiles with a brass niche",
     ...wide,
   },
 } as const satisfies Record<string, Photo>;
