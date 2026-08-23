@@ -6,10 +6,12 @@ export function LocalFacts({
   areaName,
   facts,
   heading,
+  lede,
 }: {
   areaName: string;
   facts: string[];
   heading?: string;
+  lede?: string;
 }) {
   const visible = facts.map((fact) => publicCopy(fact)).filter(Boolean);
   if (visible.length === 0) return null;
@@ -22,7 +24,7 @@ export function LocalFacts({
           {heading ?? `Ten facts about ${areaName}`}
         </h2>
         <p className="lede mt-6 max-w-xl text-xl text-grey-600 md:text-2xl">
-          Checkable local facts that shape access, conservation and the building.
+          {lede ?? "Checkable local facts that shape access, conservation and the building."}
         </p>
         <ol className="mt-16 grid gap-x-20 gap-y-12 md:grid-cols-2">
           {visible.map((fact, index) => (

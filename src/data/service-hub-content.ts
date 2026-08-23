@@ -108,11 +108,13 @@ export const serviceHubContent: Record<ServiceSlug, ServiceHubContent> = {
         title: "Inserted kitchens in conversions",
         text:
           "Former bedrooms or service rooms, often with a high ceiling that then shows every joint. Extract and drainage come first. Highgate and Belsize Village streets add access constraints; the avenues more often have a managing agent.",
+        photo: kitchenRoomPhotos.galley,
       },
       {
         title: "Suburb and Trust interiors",
         text:
           "Hampstead Garden Suburb kitchens are internal fit-outs. The Trust and Barnet sit on the outside of the house. An extract grille or a window change is not a casual extra. Permitted development is not the working assumption.",
+        photo: paintingRoomPhotos.drawing,
       },
     ],
     housing: [
@@ -237,24 +239,27 @@ export const serviceHubContent: Record<ServiceSlug, ServiceHubContent> = {
         title: "Internal bathrooms",
         text:
           "No window, a long duct, a door that fights the shower tray. Common in conversions. Mechanical extract with a clear route to outside is not optional. We will not leave the room dependent on a fan that dumps into a void.",
+        photo: bathroomRoomPhotos.compact,
       },
       {
         title: "Half-landing stacked bathrooms",
         text:
           "The West Hampstead and Kentish Town type: the soil stack is on the party wall and the room is the remainder. Layout follows the stack. Moving the WC a long way is often the item that is not possible without work we do not do.",
+        photo: bathroomRoomPhotos.shower,
       },
     ],
     housing: [
       {
         title: "Bathroom renovation in conversions",
         text:
-          "Timber intermediate floors, stacked half-landing bathrooms and long drainage runs are the ordinary conversion problem in Hampstead, West Hampstead, Belsize Park and Kentish Town. Waterproofing is a system, not a paint-on afterthought. A room that cannot reach a stack is not forced into an ensuite.",
+          "Timber intermediate floors, stacked half-landing bathrooms and long drainage runs are the ordinary conversion problem in Hampstead, West Hampstead, Belsize Park, Kentish Town, Kilburn and Crouch End. Waterproofing is a system, not a paint-on afterthought. A room that cannot reach a stack is not forced into an ensuite.",
         links: [
           { href: "/bathroom-renovation/hampstead/", label: "Bathroom renovation in Hampstead" },
           { href: "/bathroom-renovation/west-hampstead/", label: "Bathroom renovation in West Hampstead" },
           { href: "/bathroom-renovation/belsize-park/", label: "Bathroom renovation in Belsize Park" },
           { href: "/bathroom-renovation/kentish-town/", label: "Bathroom renovation in Kentish Town" },
           { href: "/bathroom-renovation/kilburn/", label: "Bathroom renovation in Kilburn" },
+          { href: "/bathroom-renovation/crouch-end/", label: "Bathroom renovation in Crouch End" },
         ],
       },
       {
@@ -366,11 +371,13 @@ export const serviceHubContent: Record<ServiceSlug, ServiceHubContent> = {
         title: "Occupied conversions",
         text:
           "West Hampstead, Kentish Town and Kilburn terraces where the household stays. Rooms are sequenced. Furniture is moved or covered by agreement, not as an afterthought on the first morning.",
+        photo: paintingRoomPhotos.flat,
       },
       {
         title: "Conservation exteriors and the Suburb",
         text:
           "Previously painted windows, doors and joinery where access and weather allow. A new outside colour in a conservation area or under the Suburb Trust is not assumed. Internal decoration that does not change the elevation is ordinary work.",
+        photo: paintingRoomPhotos.sashes,
       },
     ],
     housing: [

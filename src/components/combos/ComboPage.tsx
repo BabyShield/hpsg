@@ -8,7 +8,7 @@ import { FaqAccordion } from "@/components/ui/FaqAccordion";
 import { LocalFacts } from "@/components/ui/LocalFacts";
 import { PageHero } from "@/components/ui/PageHero";
 import { PhotoTile } from "@/components/ui/PhotoTile";
-import { getAreaFacts } from "@/data/area-facts";
+import { getServiceAreaFacts } from "@/data/service-area-facts";
 import { areaPhotos, servicePhotos } from "@/data/photos";
 import { services } from "@/data/services";
 import type { Combo, ComboContent } from "@/data/types";
@@ -160,8 +160,9 @@ export function ComboPage({
 
         <LocalFacts
           areaName={combo.area.name}
-          facts={getAreaFacts(combo.area.slug)}
+          facts={getServiceAreaFacts(combo.service.slug, combo.area.slug)}
           heading={headings.facts}
+          lede={`Checkable facts that shape ${serviceName.toLowerCase()} in ${combo.area.name} ${combo.area.postcode} — housing, council and the room as found.`}
         />
 
         <section className="py-24 sm:py-32">

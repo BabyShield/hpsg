@@ -6,11 +6,13 @@ import { Container } from "@/components/ui/Container";
 import { ContentImage } from "@/components/ui/ContentImage";
 import { CtaBand } from "@/components/ui/CtaBand";
 import { FaqAccordion } from "@/components/ui/FaqAccordion";
+import { LocalFacts } from "@/components/ui/LocalFacts";
 import { PageHero } from "@/components/ui/PageHero";
 import { PhotoTile } from "@/components/ui/PhotoTile";
 import { ServiceCard } from "@/components/ui/ServiceCard";
 import { areaPhotos, servicePhotos } from "@/data/photos";
 import { serviceHubContent } from "@/data/service-hub-content";
+import { getServiceHubFacts } from "@/data/service-area-facts";
 import { serviceSeo } from "@/data/service-seo";
 import { services } from "@/data/services";
 import type { Service } from "@/data/types";
@@ -129,6 +131,13 @@ export function ServiceHub({ service }: { service: Service }) {
             </div>
           </div>
         </Container>
+
+        <LocalFacts
+          areaName="North West London"
+          facts={getServiceHubFacts(service.slug)}
+          heading={`Facts that shape ${heading.toLowerCase()} in North West London`}
+          lede="Checkable facts — office, councils, conservation dates and the housing stock — not a brochure."
+        />
 
         {content.failures && content.failures.length > 0 ? (
           <section className="border-y border-grey-200 py-24 sm:py-32">
