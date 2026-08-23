@@ -23,7 +23,7 @@ import {
   serviceSchema,
   webPageSchema,
 } from "@/lib/schema";
-import { serviceSearchFaqs } from "@/lib/seo-copy";
+import { servicePlainName, serviceSearchFaqs } from "@/lib/seo-copy";
 
 export function ServiceHub({ service }: { service: Service }) {
   const content = serviceHubContent[service.slug];
@@ -31,10 +31,11 @@ export function ServiceHub({ service }: { service: Service }) {
   const comboAreas = combos.map((combo) => combo.area);
   const others = services.filter((item) => item.slug !== service.slug);
   const hrReferral = service.slug === "light-refurbishment";
+  const heading = servicePlainName(service);
 
   const crumbs = [
     { name: "Home", href: "/" },
-    { name: `${service.name} in North West London`, href: `/${service.slug}/` },
+    { name: `${heading} in North West London`, href: `/${service.slug}/` },
   ];
   const pageUrl = absoluteUrl(`/${service.slug}/`);
   const localFaqs = service.faqs
@@ -52,7 +53,7 @@ export function ServiceHub({ service }: { service: Service }) {
     <>
       <JsonLd
         data={serviceSchema({
-          name: `${service.name} in North West London`,
+          name: `${heading} in North West London`,
           url: pageUrl,
           areaServed: ["North West London", ...comboAreas.map((area) => `${area.name}, ${area.postcode}`)],
           description: service.metaDescription,
@@ -61,7 +62,7 @@ export function ServiceHub({ service }: { service: Service }) {
       />
       <JsonLd
         data={webPageSchema({
-          name: `${service.name} in North West London`,
+          name: `${heading} in North West London`,
           url: pageUrl,
           description: service.metaDescription,
           image: servicePhotos[service.slug].src,
@@ -69,7 +70,7 @@ export function ServiceHub({ service }: { service: Service }) {
       />
       <JsonLd
         data={howToSchema({
-          name: `How we carry out ${service.name.toLowerCase()} in North West London`,
+          name: `How we carry out ${heading.toLowerCase()} in North West London`,
           description: service.summary,
           steps: service.processSteps,
         })}
@@ -77,9 +78,9 @@ export function ServiceHub({ service }: { service: Service }) {
       <JsonLd data={faqSchema(faqs)} />
       <JsonLd
         data={itemListSchema(
-          `${service.name} by neighbourhood`,
+          `${heading} by neighbourhood`,
           comboAreas.map((area) => ({
-            name: `${service.name} in ${area.name}`,
+            name: `${heading} in ${area.name}`,
             url: absoluteUrl(`/${service.slug}/${area.slug}/`),
           })),
         )}
@@ -89,7 +90,7 @@ export function ServiceHub({ service }: { service: Service }) {
           photo={servicePhotos[service.slug]}
           crumbs={crumbs}
           kicker="North West London"
-          title={`${service.name} in North West London`}
+          title={`${heading} in North West London`}
           lede={publicCopy(service.heroLine)}
         />
         <Container className="grid gap-12 py-24 sm:py-32 lg:grid-cols-12 lg:gap-16">
@@ -101,7 +102,7 @@ export function ServiceHub({ service }: { service: Service }) {
           <div className="lg:col-span-5">
             <p className="rule mb-6" aria-hidden="true" />
             <h2 className="font-display text-3xl font-normal">
-              {service.name} for North West London houses and flats
+              {heading} for North West London houses and flats
             </h2>
             <div className="mt-6 space-y-5 text-base leading-relaxed text-grey-700">
               {content.forWhom.map((paragraph) => publicCopy(paragraph)).filter(Boolean).map((paragraph) => (
@@ -200,7 +201,7 @@ export function ServiceHub({ service }: { service: Service }) {
             <Container>
               <p className="rule mb-8" aria-hidden="true" />
               <h2 className="font-display text-4xl font-normal sm:text-5xl">
-                {service.name} by housing type
+                {heading} by housing type
               </h2>
               <ul className="mt-16 grid gap-12 lg:grid-cols-3">
                 {content.housing.map((section) => (
@@ -255,7 +256,7 @@ export function ServiceHub({ service }: { service: Service }) {
           <Container>
             <p className="rule mb-8" aria-hidden="true" />
             <h2 className="font-display text-4xl font-normal sm:text-5xl">
-              What {service.name.toLowerCase()} in North West London includes
+              What {heading.toLowerCase()} in North West London includes
             </h2>
             <p className="mt-5 max-w-measure text-base leading-relaxed text-grey-700">
               The list is the core of a typical instruction. The written proposal
@@ -276,7 +277,7 @@ export function ServiceHub({ service }: { service: Service }) {
           <Container>
             <p className="rule mb-8" aria-hidden="true" />
             <h2 className="font-display text-4xl font-normal sm:text-5xl">
-              How we carry out {service.name.toLowerCase()} in North West London
+              How we carry out {heading.toLowerCase()} in North West London
             </h2>
             <ol className="mt-16 grid gap-x-10 gap-y-12 md:grid-cols-2 lg:grid-cols-3">
               {service.processSteps.map((step, index) => (
@@ -295,7 +296,7 @@ export function ServiceHub({ service }: { service: Service }) {
         <section className="border-y border-grey-200 py-24 sm:py-32">
           <Container className="grid gap-10 lg:grid-cols-12">
             <h2 className="font-display text-4xl font-normal sm:text-5xl lg:col-span-4">
-              {service.name} specification
+              {heading} specification
             </h2>
             <div className="space-y-5 text-base leading-relaxed text-grey-700 lg:col-span-8">
               {content.specification.map((paragraph) => publicCopy(paragraph)).filter(Boolean).map((paragraph) => (
@@ -309,7 +310,7 @@ export function ServiceHub({ service }: { service: Service }) {
           <Container>
             <p className="rule mb-8" aria-hidden="true" />
             <h2 className="font-display text-4xl font-normal sm:text-5xl">
-              {service.name} in North West London neighbourhoods
+              {heading} in North West London neighbourhoods
             </h2>
             <p className="lede mt-6 max-w-measure text-xl text-grey-600">
               {publicCopy(content.areasIntro)}
@@ -334,7 +335,7 @@ export function ServiceHub({ service }: { service: Service }) {
                           href={`/${service.slug}/${area.slug}/`}
                           className="quiet-link text-base text-navy"
                         >
-                          {service.name} in {area.name}
+                          {heading} in {area.name}
                         </Link>
                       )}
                     </li>
@@ -359,7 +360,7 @@ export function ServiceHub({ service }: { service: Service }) {
                     ? "Painting and decorating questions"
                     : service.slug === "light-refurbishment"
                       ? "Light refurbishment questions"
-                      : `${service.name} questions`}
+                      : `${heading} questions`}
             </h2>
             <div className="lg:col-span-8">
               <FaqAccordion items={faqs} />

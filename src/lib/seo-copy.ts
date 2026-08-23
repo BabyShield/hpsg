@@ -1,3 +1,4 @@
+import { areaTitleCue, serviceAreaCue } from "@/data/seo-cues";
 import { addressSingleLine, site } from "@/data/site";
 import type { Area, Combo, Faq, Service } from "@/data/types";
 
@@ -5,10 +6,10 @@ import { publicCopy } from "./public-copy";
 
 const AREA_HOOKS: Record<string, string> = {
   hampstead: "conversion, village-house and listed-fabric work",
-  "west-hampstead": "rear-return kitchens and conversion flats off West End Lane",
-  "belsize-park": "inserted kitchens in stucco conversions and avenue mansion flats",
-  "st-johns-wood": "compact mansion-flat rooms on original risers",
-  "maida-vale": "1890s mansion-block rear kitchens and canal-side houses",
+  "west-hampstead": "rear-return conversions off West End Lane",
+  "belsize-park": "stucco conversions and avenue mansion flats",
+  "st-johns-wood": "mansion-flat apartments on original risers",
+  "maida-vale": "1890s mansion blocks and canal-side houses",
   "swiss-cottage": "mansion flats and conversions on the Finchley Road corridor",
   "primrose-hill": "park-facing terraces, lower-ground kitchens and Article 4 streets",
   highgate: "village houses, slope conversions and split-borough conservation fabric",
@@ -50,16 +51,43 @@ function serviceSearchName(service: Service): string {
   return service.name.toLowerCase();
 }
 
+export function servicePlainName(service: Service): string {
+  if (service.slug === "kitchen-renovation") return "Kitchen renovation";
+  if (service.slug === "bathroom-renovation") return "Bathroom renovation";
+  if (service.slug === "painting-decorating") return "Painting and decorating";
+  return "Light refurbishment";
+}
+
 export function comboOpening(combo: Combo): string {
-  return `${combo.service.name} in ${combo.area.name} (${combo.area.postcode}) is ${areaHook(combo.area)}, carried out from ${addressSingleLine}. Addresses here sit with ${publicCopy(combo.area.council)}. We visit the property before we write a proposal; we do not quote from photographs.`;
+  const cue = serviceAreaCue(combo.service.slug, combo.area.slug);
+  const council = publicCopy(combo.area.council);
+  if (cue) {
+    return `${cue.opening} Addresses sit with ${council}. We visit from ${addressSingleLine}; we do not quote from photographs.`;
+  }
+  return `${servicePlainName(combo.service)} in ${combo.area.name} follows the housing as found. Addresses sit with ${council}. We visit from ${addressSingleLine}; we do not quote from photographs.`;
 }
 
 export function comboMetaTitle(combo: Combo): string {
-  return `${combo.service.name} in ${combo.area.name} ${combo.area.postcode} | HPSG`;
+  const name = servicePlainName(combo.service);
+  const cue = serviceAreaCue(combo.service.slug, combo.area.slug)?.title;
+  const base = `${name} in ${combo.area.name} ${combo.area.postcode}`;
+  if (cue) return `${base} | ${cue} | HPSG`;
+  return `${base} | HPSG`;
+}
+
+export function comboMetaDescription(lede: string, stored: string): string {
+  const clean = publicCopy(lede).replace(/\s+/g, " ").trim();
+  if (clean.length >= 120) return clipMeta(clean, 160);
+  const storedClean = publicCopy(stored).replace(/\s+/g, " ").trim();
+  if (storedClean) return clipMeta(storedClean, 160);
+  return clipMeta(`${clean.replace(/\.$/, "")}. ${site.phoneDisplay}.`, 160);
 }
 
 export function areaMetaTitle(area: Area): string {
-  return `Kitchens, bathrooms and painting in ${area.name} ${area.postcode} | HPSG`;
+  const cue = areaTitleCue[area.slug];
+  const base = `Kitchens and bathrooms in ${area.name} ${area.postcode}`;
+  if (cue) return `${base} | ${cue} | HPSG`;
+  return `${base} | HPSG`;
 }
 
 export function areaMetaDescription(area: Area): string {
@@ -122,13 +150,6 @@ export function comboSearchFaqs(combo: Combo): Faq[] {
   }
 
   return extras;
-}
-
-export function localizeServiceFaq(faq: Faq, combo: Combo): Faq {
-  return {
-    q: faq.q,
-    a: `${publicCopy(faq.a)} In ${combo.area.name} (${combo.area.postcode}) that is read against ${publicCopy(combo.area.council)} and the building as found.`,
-  };
 }
 
 export function areaSearchFaqs(area: Area): Faq[] {

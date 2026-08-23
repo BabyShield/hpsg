@@ -6,7 +6,7 @@ import { getComboContent } from "@/data/combo-content";
 import { servicePhotos } from "@/data/photos";
 import { getCombo, getCombos } from "@/lib/matrix";
 import { pageMetadata } from "@/lib/metadata";
-import { clipMeta, comboMetaTitle } from "@/lib/seo-copy";
+import { comboMetaDescription, comboMetaTitle } from "@/lib/seo-copy";
 
 export const dynamic = "force-static";
 export const dynamicParams = false;
@@ -41,7 +41,7 @@ export async function generateMetadata({
   const photo = servicePhotos[combo.service.slug];
   return pageMetadata({
     title: comboMetaTitle(combo),
-    description: clipMeta(content.metaDescription),
+    description: comboMetaDescription(content.lede, content.metaDescription),
     path: `/${combo.service.slug}/${combo.area.slug}/`,
     image: photo.src,
     imageAlt: photo.alt,
