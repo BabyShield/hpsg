@@ -168,6 +168,22 @@ export function comboSearchFaqs(combo: Combo): Faq[] {
       q: `Do you fit kitchens in ${area}, or only design them?`,
       a: `We plan and fit the kitchen as one renovation: measured survey, first and second fix, cabinetry, worktops, appliances and handover in ${area} ${postcode}. We do not drop in a catalogue kitchen without seeing the building.`,
     });
+    extras.push({
+      q: `How long does a kitchen renovation in ${area} take?`,
+      a: `A compact conversion galley in ${area} ${postcode} with services in the right place is commonly a small number of weeks on site. A family-house kitchen, a new extract run, or a licence to alter takes longer. The written programme follows the survey.`,
+    });
+    extras.push({
+      q: `Do you plan extract as part of a kitchen renovation in ${area}?`,
+      a: `Yes. The route is agreed at survey, not as a hole of convenience. Conservation-area and listed elevations in ${area} ${postcode} cannot always take a visible grille on the principal front. We will say so before cabinets come out.`,
+    });
+    extras.push({
+      q: `Can you fit an island in a ${area} kitchen?`,
+      a: `Only if the room and the services support it. Rear-return galleys and mansion-flat kitchens in ${area} usually will not. We will not draw an island that the stack, the extract and the floor cannot serve.`,
+    });
+    extras.push({
+      q: `Do you scribe cabinets to chimney breasts in ${area}?`,
+      a: `Yes. Period walls in ${area} ${postcode} are rarely square. We scribe the run to the breast rather than boxing it out as a convenience. Inserted kitchens in former bedrooms are laid out around the fabric that exists.`,
+    });
   }
 
   if (combo.service.slug === "bathroom-renovation") {

@@ -119,13 +119,14 @@ export const serviceHubContent: Record<ServiceSlug, ServiceHubContent> = {
       {
         title: "Kitchen renovation in period conversions",
         text:
-          "Converted Victorian and Edwardian houses are the bulk of the kitchen work in Hampstead, West Hampstead, Belsize Park and Kentish Town. Rear returns, chimney breasts and party walls decide the run. Layouts are galley or L-shape unless the existing envelope already allows more. We scribe cabinetry to walls that have moved rather than pretending the room is square.",
+          "Converted Victorian and Edwardian houses are the bulk of the kitchen work in Hampstead, West Hampstead, Belsize Park, Kentish Town, Kilburn and Crouch End. Rear returns, chimney breasts and party walls decide the run. Layouts are galley or L-shape unless the existing envelope already allows more. We scribe cabinetry to walls that have moved rather than pretending the room is square.",
         links: [
           { href: "/kitchen-renovation/hampstead/", label: "Kitchen renovation in Hampstead" },
           { href: "/kitchen-renovation/west-hampstead/", label: "Kitchen renovation in West Hampstead" },
           { href: "/kitchen-renovation/belsize-park/", label: "Kitchen renovation in Belsize Park" },
           { href: "/kitchen-renovation/kentish-town/", label: "Kitchen renovation in Kentish Town" },
           { href: "/kitchen-renovation/kilburn/", label: "Kitchen renovation in Kilburn" },
+          { href: "/kitchen-renovation/crouch-end/", label: "Kitchen renovation in Crouch End" },
         ],
       },
       {

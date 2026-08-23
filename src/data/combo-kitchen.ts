@@ -37,6 +37,10 @@ export const kitchenCombos: Record<string, ComboContent> = {
         q: "How do deliveries work off Heath Street?",
         a: "They are timed. Village lanes are not loading bays. The survey records the vehicle and the drop point.",
       },
+      {
+        q: "Is a Hampstead village-house kitchen the same job as a conversion galley?",
+        a: "The definition is the same: a fit-out of the room that exists, scribed to chimney breasts and extract planned for the elevation. The rooms are larger in a village house and the lanes are tighter. We do not form a kitchen-diner as this service in either stock.",
+      },
     ],
     metaDescription:
       "Kitchen renovation in Hampstead NW3 conversions and village houses. Survey-led fit-out from Finchley Road. 020 7101 3168.",
@@ -76,6 +80,10 @@ export const kitchenCombos: Record<string, ComboContent> = {
       {
         q: "Is Fortune Green in a conservation area?",
         a: "Some streets toward Fortune Green are. We check the map for the address rather than treating all of West Hampstead as one designation. [VERIFY.]",
+      },
+      {
+        q: "Does a kitchen strip off West End Lane need a skip on the high street?",
+        a: "No. We licence a residential side street, timed around the interchange. A kitchen strip produces more waste than a decorate, so the drop is programmed, not hoped for on West End Lane.",
       },
     ],
     metaDescription:
@@ -117,6 +125,10 @@ export const kitchenCombos: Record<string, ComboContent> = {
         q: "Do high ceilings change the kitchen?",
         a: "They change prep and access if the ceiling is in the envelope. The plan of the room is still set by the stack and the chimney breast.",
       },
+      {
+        q: "Will extract through Belsize stucco need consent?",
+        a: "On a principal or conservation elevation, often yes. Inserted kitchens in former bedrooms still need a route the elevation will accept. We plan extract at survey rather than punching a grille as a convenience. [VERIFY.]",
+      },
     ],
     metaDescription:
       "Kitchen renovation in Belsize Park NW3 conversions and mansion flats. Survey-led, conservation-aware. 020 7101 3168.",
@@ -156,6 +168,10 @@ export const kitchenCombos: Record<string, ComboContent> = {
       {
         q: "Do Lord's match days stop the work?",
         a: "They can restrict access on surrounding streets. We check with the building rather than assuming a clear run. [VERIFY.]",
+      },
+      {
+        q: "How long is a St John's Wood kitchen if a licence to alter is needed?",
+        a: "The on-site weeks still follow the room. The licence sits in the lead-in. We do not strip cabinets while the agent's pack is outstanding.",
       },
     ],
     metaDescription:
@@ -197,6 +213,10 @@ export const kitchenCombos: Record<string, ComboContent> = {
         q: "Is the canal a planning issue?",
         a: "On some frontages, Canal & River Trust questions can arise. We do not assume they apply to every W9 address. [VERIFY.]",
       },
+      {
+        q: "Does a compact Maida Vale kitchen stay at the back of the flat?",
+        a: "Usually. Stacks and corridors stay. Relocating a sink is only possible if the drainage will serve the new position without cutting into another demise. We will say at survey rather than redraw the 1890s plan.",
+      },
     ],
     metaDescription:
       "Kitchen renovation in Maida Vale W9 mansion blocks and Little Venice houses. Compact layouts, survey-led. 020 7101 3168.",
@@ -236,6 +256,10 @@ export const kitchenCombos: Record<string, ComboContent> = {
       {
         q: "Can you load on Finchley Road?",
         a: "It is a major corridor. We treat it as a different process from a side street, and we plan the drop at survey.",
+      },
+      {
+        q: "Does being next to the office shorten a Swiss Cottage kitchen?",
+        a: "It shortens the visit. Avenue Road blocks still need a licence to alter; conversions still need a chimney breast and a party wall surveyed. We do not skip the measured survey because the office is on Finchley Road.",
       },
     ],
     metaDescription:
@@ -277,6 +301,10 @@ export const kitchenCombos: Record<string, ComboContent> = {
         q: "Do you form new rear kitchens?",
         a: "No. Kitchen renovation on this site is a fit-out of rooms that exist. Forming a new envelope is not this service.",
       },
+      {
+        q: "Does Article 4 stop a Primrose Hill interior kitchen?",
+        a: "Interior fit-out within existing rooms is ordinary work. Article 4 bites on windows and elevations. A park-facing extract grille is a consent question; a galley scribed to the room that exists is not. [VERIFY.]",
+      },
     ],
     metaDescription:
       "Kitchen renovation in Primrose Hill NW1 terraces and lower-ground rooms. Conservation-aware fit-out. 020 7101 3168.",
@@ -316,6 +344,10 @@ export const kitchenCombos: Record<string, ComboContent> = {
       {
         q: "Do trees stop a kitchen renovation?",
         a: "They can constrain access and any work that touches the elevation or the ground. Internal fit-out still needs a drop point that respects the plot. [VERIFY TPO.]",
+      },
+      {
+        q: "Can a Highgate slope villa take a family kitchen without a structural opening?",
+        a: "Yes. A larger family kitchen in an existing rear room is ordinary Highgate work. A wall taken out, a loft or a new envelope is not this service; that sits with Hampstead Renovations.",
       },
     ],
     metaDescription:
@@ -357,6 +389,10 @@ export const kitchenCombos: Record<string, ComboContent> = {
         q: "Do pebbledash houses need a different kitchen?",
         a: "They need a survey. Walls and later partitions are as out of square as anywhere else.",
       },
+      {
+        q: "Do pebbledash Golders Green houses take the same kitchen programme as a Camden galley?",
+        a: "The method is the same: measured survey, scribed cabinetry, extract planned for the elevation. The rooms are larger and occupancy is more often sequenced around a family still in the house. We still survey; pebbledash hides out-of-square walls as readily as a conversion.",
+      },
     ],
     metaDescription:
       "Kitchen renovation in Golders Green NW11 family houses and mansion flats. Barnet, survey-led. 020 7101 3168.",
@@ -396,6 +432,10 @@ export const kitchenCombos: Record<string, ComboContent> = {
       {
         q: "Is Salusbury Road usable for deliveries?",
         a: "It is a busy spine. We plan a drop on a residential street unless the building forces otherwise.",
+      },
+      {
+        q: "Do Estate cottage kitchens need original joinery kept?",
+        a: "Yes, treated as joinery rather than boxed in as a convenience. Cottage-scale rooms on the Westminster Estate are a different grain from a Brent terrace rear-return. Extract on an Estate elevation is still a consent question.",
       },
     ],
     metaDescription:
@@ -437,6 +477,10 @@ export const kitchenCombos: Record<string, ComboContent> = {
         q: "Do you work above the Broadway shops?",
         a: "Yes, where access and extract can be solved. Those flats are a different construction from a house on the slope.",
       },
+      {
+        q: "Can a Muswell Hill family house stay occupied during a kitchen renovation?",
+        a: "Often, if a temporary arrangement for cooking can be kept. Empty is faster. A Broadway flat is tighter still. We will say which, after survey.",
+      },
     ],
     metaDescription:
       "Kitchen renovation in Muswell Hill N10 Edwardian houses and Broadway flats. Haringey. 020 7101 3168.",
@@ -476,6 +520,10 @@ export const kitchenCombos: Record<string, ComboContent> = {
       {
         q: "Is this mansion-block work?",
         a: "Rarely. Converted houses are the local type. Purpose-built blocks are the exception.",
+      },
+      {
+        q: "Do rear-room kitchens in Crouch End conversions stay where they are?",
+        a: "Yes. We re-fit the rear room that exists. Forming a new rear addition is not this service. Original halls and tiled floors outside the envelope are protected, not treated as a site path.",
       },
     ],
     metaDescription:
@@ -517,6 +565,10 @@ export const kitchenCombos: Record<string, ComboContent> = {
         q: "Are there conservation areas here?",
         a: "Coverage is by street, including toward Dartmouth Park. We check the map for the address. [VERIFY.]",
       },
+      {
+        q: "Is a landlord kitchen refresh the same as a kitchen renovation in Kentish Town?",
+        a: "Often, if the plan stays as it is: a rear-return galley re-fitted to a written scope, extract honest, one programme. We will not hang units on a wet lower-ground wall, and we do not invent a package price.",
+      },
     ],
     metaDescription:
       "Kitchen renovation in Kentish Town NW5 conversions and rear returns. Camden, survey-led. 020 7101 3168.",
@@ -557,6 +609,10 @@ export const kitchenCombos: Record<string, ComboContent> = {
         q: "Is all of Kilburn in a conservation area?",
         a: "No. Coverage is by street. [VERIFY Camden and Brent maps.]",
       },
+      {
+        q: "Does a Kilburn shop-flat kitchen need a different method from a conversion toward West Hampstead?",
+        a: "The room still decides the layout. A shop-flat is a narrow stair, extract as a real constraint, and a method statement where the route is through a shop. A conversion toward West Hampstead is party-wall hours and a protected hallway. We measure both before we order carcasses.",
+      },
     ],
     metaDescription:
       "Kitchen renovation in Kilburn NW6 conversions and flats above shops. Camden and Brent addresses. 020 7101 3168.",
@@ -596,6 +652,10 @@ export const kitchenCombos: Record<string, ComboContent> = {
       {
         q: "When was the conservation area designated?",
         a: "In 1967. An Article 4 direction has been in force since the 1970s.",
+      },
+      {
+        q: "Can extract sit in a Suburb kitchen without Trust consent?",
+        a: "Internal replacement of the kitchen often sits outside Trust consent. An extract grille, soil pipe or window that breaks the envelope does not. We check the elevation, the Trust boundary and Barnet planning before we open the room. [VERIFY.]",
       },
     ],
     metaDescription:

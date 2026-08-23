@@ -15,12 +15,12 @@ export function comboHeadings(slug: ServiceSlug, area: string) {
   switch (slug) {
     case "kitchen-renovation":
       return {
-        rooms: `Typical kitchens in ${area}`,
+        rooms: `Galleys, chimney breasts and compact kitchens in ${area}`,
         working: `Extract, licence and access in ${area}`,
         spec: `How a ${area} kitchen is specified`,
         includes: "What a typical kitchen instruction includes",
         process: "How a kitchen programme runs",
-        questions: `Kitchen questions in ${area}`,
+        questions: `Kitchen renovation questions in ${area}`,
         facts: `Local facts that shape a ${area} kitchen`,
       };
     case "bathroom-renovation":
@@ -77,6 +77,14 @@ export const serviceSeo: Record<ServiceSlug, ServiceSeo> = {
       {
         q: "Is a catalogue kitchen dropped into a conversion?",
         a: "No. The run is scribed to the room as found: chimney breast, stack, extract and the stair. We do not quote a showroom layout from photographs.",
+      },
+      {
+        q: "Do you plan extract before cabinets come out?",
+        a: "Yes. The route is agreed at survey, particularly in conservation areas and listed fabric. We will not assume a grille on a principal elevation in Hampstead, Highgate, Primrose Hill or the Suburb.",
+      },
+      {
+        q: "Do you order kitchen units before measuring the stair?",
+        a: "No. Units are ordered only once lift, stair and room dimensions are confirmed on site. In St John's Wood and Maida Vale mansion blocks the stair is the working assumption until we measure.",
       },
     ],
   },
