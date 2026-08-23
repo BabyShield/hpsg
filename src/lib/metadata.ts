@@ -25,7 +25,7 @@ export function pageMetadata({
     description,
     alternates: {
       canonical: url,
-      languages: { "en-GB": url },
+      languages: { "en-GB": url, "x-default": url },
     },
     robots: {
       index: true,

@@ -18,7 +18,13 @@ import { addressSingleLine, site } from "@/data/site";
 import { getNearbyAreas, isCombo } from "@/lib/matrix";
 import { publicCopy } from "@/lib/public-copy";
 import { absoluteUrl, faqSchema, placeSchema, serviceSchema, webPageSchema } from "@/lib/schema";
-import { comboOpening, comboSearchFaqs, servicePlainName } from "@/lib/seo-copy";
+import {
+  comboIncludesLede,
+  comboOpening,
+  comboProcessLede,
+  comboSearchFaqs,
+  servicePlainName,
+} from "@/lib/seo-copy";
 
 function siblingCombos(combo: Combo) {
   return getNearbyAreas(combo.area)
@@ -89,6 +95,7 @@ export function ComboPage({
           url: pageUrl,
           description: content.lede,
           image: servicePhotos[combo.service.slug].src,
+          imageAlt: heroPhoto.alt,
         })}
       />
       <JsonLd data={placeSchema(combo.area.name, combo.area.postcode)} />
@@ -214,9 +221,7 @@ export function ComboPage({
               {headings.includes}
             </h2>
             <p className="mt-5 max-w-measure text-base leading-relaxed text-grey-700">
-              The list is the core of a typical instruction in {combo.area.name}{" "}
-              {combo.area.postcode}. The written proposal after survey is the
-              contract scope.
+              {comboIncludesLede(combo)}
             </p>
             <ul className="mt-10 max-w-3xl divide-y divide-grey-200 border-y border-grey-200">
               {included.map((item) => (
@@ -235,6 +240,9 @@ export function ComboPage({
             <h2 className="font-display text-4xl font-normal sm:text-5xl">
               {headings.process}
             </h2>
+            <p className="mt-5 max-w-measure text-base leading-relaxed text-grey-700">
+              {comboProcessLede(combo)}
+            </p>
             <ol className="mt-16 grid gap-x-10 gap-y-12 md:grid-cols-2">
               {combo.service.processSteps.map((step, index) => (
                 <li key={step.title}>

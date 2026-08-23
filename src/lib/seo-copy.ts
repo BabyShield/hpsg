@@ -67,6 +67,19 @@ export function comboOpening(combo: Combo): string {
   return `${servicePlainName(combo.service)} in ${combo.area.name} follows the housing as found. Addresses sit with ${council}. We visit from ${addressSingleLine}; we do not quote from photographs.`;
 }
 
+export function comboIncludesLede(combo: Combo): string {
+  const cue = serviceAreaCue(combo.service.slug, combo.area.slug);
+  const typical = cue ? cue.title.toLowerCase() : areaHook(combo.area);
+  return `The list is the core of a typical instruction. In ${combo.area.name} ${combo.area.postcode} that usually means ${typical}. The written proposal after survey is the contract scope.`;
+}
+
+export function comboProcessLede(combo: Combo): string {
+  const cue = serviceAreaCue(combo.service.slug, combo.area.slug);
+  const council = publicCopy(combo.area.council);
+  const typical = cue ? cue.title.toLowerCase() : `the housing of ${combo.area.name}`;
+  return `Visit, written proposal, then the rooms in order. In ${combo.area.name} that order has to absorb ${typical} and ${council} process. We do not start from photographs.`;
+}
+
 export function comboMetaTitle(combo: Combo): string {
   const name = servicePlainName(combo.service);
   const cue = serviceAreaCue(combo.service.slug, combo.area.slug)?.title;
@@ -124,6 +137,11 @@ export function comboSearchFaqs(combo: Combo): Faq[] {
   extras.push({
     q: `How do I get a quote for ${name} in ${area}?`,
     a: `Call ${site.phoneDisplay} or use the enquiry form. Tell us the ${area} ${postcode} property and the rooms in scope. We visit before we write a proposal.`,
+  });
+
+  extras.push({
+    q: `Which council covers ${area}?`,
+    a: `${area} ${postcode} sits with ${council}. Skip licences, scaffolding and conservation process follow that authority. We check the address rather than assuming one set of rules for North West London.`,
   });
 
   if (combo.service.slug !== "painting-decorating") {

@@ -69,6 +69,7 @@ export function ServiceHub({ service }: { service: Service }) {
           url: pageUrl,
           description: service.metaDescription,
           image: servicePhotos[service.slug].src,
+          imageAlt: servicePhotos[service.slug].alt,
         })}
       />
       <JsonLd

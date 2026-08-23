@@ -20,10 +20,11 @@ import {
   getNearbyAreas,
   hasPaintingMicrosite,
 } from "@/lib/matrix";
+import { areaTitleCue } from "@/data/seo-cues";
 import { addressSingleLine } from "@/data/site";
 import { publicCopy } from "@/lib/public-copy";
 import { absoluteUrl, faqSchema, itemListSchema, placeSchema, serviceSchema, webPageSchema } from "@/lib/schema";
-import { areaHook, areaSearchFaqs } from "@/lib/seo-copy";
+import { areaHook, areaMetaDescription, areaSearchFaqs, servicePlainName } from "@/lib/seo-copy";
 
 function serviceHref(area: Area, serviceSlug: string): string | null {
   if (area.tier === 2) return `/${serviceSlug}/`;
@@ -38,6 +39,15 @@ export function AreaHub({ area }: { area: Area }) {
   const nearby = getNearbyAreas(area);
   const combos = getCombosForArea(area.slug);
   const photo = areaPhotos[area.slug];
+  const cue = areaTitleCue[area.slug];
+  const heroPhoto = photo
+    ? {
+        ...photo,
+        alt: cue
+          ? `${area.name} ${area.postcode} — ${cue.toLowerCase()}`
+          : photo.alt,
+      }
+    : undefined;
 
   const crumbs = [
     { name: "Home", href: "/" },
@@ -55,7 +65,7 @@ export function AreaHub({ area }: { area: Area }) {
       .filter((item) => item.q && item.a && !localQuestions.has(item.q.toLowerCase())),
     ...localFaqs,
   ];
-  const description = `Kitchen renovation, bathroom renovation, painting and light refurbishment in ${area.name}, ${area.postcode}.`;
+  const description = areaMetaDescription(area);
 
   return (
     <>
@@ -65,15 +75,16 @@ export function AreaHub({ area }: { area: Area }) {
           url: pageUrl,
           areaServed: `${area.name}, ${area.postcode}`,
           description,
-          image: photo?.src,
+          image: heroPhoto?.src,
         })}
       />
       <JsonLd
         data={webPageSchema({
-          name: `Kitchens, bathrooms and painting in ${area.name} ${area.postcode}`,
+          name: `Kitchens and bathrooms in ${area.name} ${area.postcode}`,
           url: pageUrl,
           description,
-          image: photo?.src,
+          image: heroPhoto?.src,
+          imageAlt: heroPhoto?.alt,
         })}
       />
       <JsonLd data={placeSchema(area.name, area.postcode)} />
@@ -85,7 +96,7 @@ export function AreaHub({ area }: { area: Area }) {
             services
               .filter((service) => serviceHref(area, service.slug))
               .map((service) => ({
-                name: `${service.name} in ${area.name}`,
+                name: `${servicePlainName(service)} in ${area.name}`,
                 url: absoluteUrl(`/${service.slug}/${area.slug}/`),
               })),
           )}
@@ -93,11 +104,11 @@ export function AreaHub({ area }: { area: Area }) {
       ) : null}
       <article>
         <PageHero
-          photo={photo}
+          photo={heroPhoto}
           crumbs={crumbs}
           kicker={area.postcode}
           title={`Kitchens, bathrooms and decorating in ${area.name}`}
-          lede={`Kitchen renovation, bathroom renovation, painting and light refurbishment in ${area.name}, ${area.postcode} — ${areaHook(area)}.`}
+          lede={`${area.name} ${area.postcode} is ${areaHook(area)}. Kitchen, bathroom, painting and light refurbishment from Finchley Road.`}
         />
         <Container className="grid items-start gap-12 py-24 sm:py-32 lg:grid-cols-12 lg:gap-16">
           <div className="space-y-5 text-base leading-relaxed text-grey-700 lg:col-span-7">
@@ -116,7 +127,7 @@ export function AreaHub({ area }: { area: Area }) {
                 return (
                   <li key={service.slug}>
                     <Link href={href} className="quiet-link">
-                      {service.name} in {area.tier === 1 ? area.name : "North West London"}
+                      {servicePlainName(service)} in {area.tier === 1 ? area.name : "North West London"}
                     </Link>
                   </li>
                 );
@@ -125,13 +136,17 @@ export function AreaHub({ area }: { area: Area }) {
           </div>
         </Container>
 
-        <LocalFacts areaName={area.name} facts={getAreaFacts(area.slug)} />
+        <LocalFacts
+          areaName={area.name}
+          facts={getAreaFacts(area.slug)}
+          heading={`Ten facts about ${area.name}`}
+        />
 
         <section className="border-y border-grey-200 py-24 sm:py-32">
           <Container>
             <p className="rule mb-8" aria-hidden="true" />
             <h2 className="font-display text-4xl font-normal sm:text-5xl">
-              Kitchen, bathroom, painting and refurbishment in {area.name}
+              Work we take on in {area.name}
             </h2>
             <p className="lede mt-6 max-w-measure text-xl text-grey-600">
               {area.tier === 1
@@ -149,7 +164,9 @@ export function AreaHub({ area }: { area: Area }) {
                 if (paintingExcluded) {
                   return (
                     <li key={service.slug} className="border-t border-grey-200 py-8">
-                      <h3 className="font-display text-3xl font-normal">{service.name}</h3>
+                      <h3 className="font-display text-3xl font-normal">
+                        {servicePlainName(service)}
+                      </h3>
                       <p className="mt-3 text-base leading-relaxed text-grey-700">
                         Painting in {area.name} is handled by our specialist local
                         painting company.
@@ -172,7 +189,8 @@ export function AreaHub({ area }: { area: Area }) {
                     {href ? (
                       <p className="mt-2">
                         <Link href={href} className="btn-line text-navy">
-                          {service.name} in {area.tier === 1 ? area.name : "North West London"}
+                          {servicePlainName(service)} in{" "}
+                          {area.tier === 1 ? area.name : "North West London"}
                         </Link>
                       </p>
                     ) : null}
@@ -188,7 +206,7 @@ export function AreaHub({ area }: { area: Area }) {
                       href={`/${combo.service.slug}/${area.slug}/`}
                       className="quiet-link text-base text-navy"
                     >
-                      {combo.service.name} in {area.name}
+                      {servicePlainName(combo.service)} in {area.name}
                     </Link>
                   </li>
                 ))}
@@ -244,7 +262,9 @@ export function AreaHub({ area }: { area: Area }) {
         <section className="border-y border-grey-200 py-24 sm:py-32">
           <Container>
             <p className="rule mb-8" aria-hidden="true" />
-            <h2 className="font-display text-4xl font-normal sm:text-5xl">Nearby areas</h2>
+            <h2 className="font-display text-4xl font-normal sm:text-5xl">
+              Near {area.name}
+            </h2>
             <ul className="mosaic mt-12 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
               {nearby.map((item) => {
                 const nearbyPhoto = areaPhotos[item.slug];

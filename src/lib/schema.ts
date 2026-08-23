@@ -63,6 +63,8 @@ export function organizationSchema() {
         name: `${area.name}, ${area.postcode}`,
       })),
     ],
+    slogan: site.tagline,
+    sameAs: ["https://hampsteadrenovations.co.uk"],
     knowsAbout: [
       "Kitchen renovation",
       "Bathroom renovation",
@@ -85,7 +87,14 @@ export function organizationSchema() {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: service.name,
+          name:
+            service.slug === "painting-decorating"
+              ? "Painting and decorating"
+              : service.slug === "kitchen-renovation"
+                ? "Kitchen renovation"
+                : service.slug === "bathroom-renovation"
+                  ? "Bathroom renovation"
+                  : "Light refurbishment",
           url: absoluteUrl(`/${service.slug}/`),
         },
         position: index + 1,
@@ -104,6 +113,11 @@ export function websiteSchema() {
     inLanguage: "en-GB",
     publisher: { "@id": BUSINESS_ID },
     about: { "@id": BUSINESS_ID },
+    potentialAction: {
+      "@type": "ContactAction",
+      name: "Request a quote",
+      target: absoluteUrl("/contact/"),
+    },
   };
 }
 
@@ -112,11 +126,13 @@ export function webPageSchema({
   url,
   description,
   image,
+  imageAlt,
 }: {
   name: string;
   url: string;
   description?: string;
   image?: string;
+  imageAlt?: string;
 }) {
   return {
     "@context": "https://schema.org",
@@ -128,7 +144,13 @@ export function webPageSchema({
     inLanguage: "en-GB",
     isPartOf: { "@id": WEBSITE_ID },
     about: { "@id": BUSINESS_ID },
-    primaryImageOfPage: image ? absoluteUrl(image) : undefined,
+    primaryImageOfPage: image
+      ? {
+          "@type": "ImageObject",
+          url: absoluteUrl(image),
+          caption: imageAlt ?? name,
+        }
+      : undefined,
   };
 }
 
@@ -143,6 +165,10 @@ export function placeSchema(name: string, postcode: string) {
       postalCode: postcode,
       addressRegion: "Greater London",
       addressCountry: "GB",
+    },
+    containedInPlace: {
+      "@type": "AdministrativeArea",
+      name: "North West London",
     },
   };
 }
@@ -203,7 +229,12 @@ export function serviceSchema({
     serviceType: serviceType ?? name,
     url,
     description: description ? publicCopy(description) : undefined,
-    image: image ? absoluteUrl(image) : undefined,
+    image: image
+      ? {
+          "@type": "ImageObject",
+          url: absoluteUrl(image),
+        }
+      : undefined,
     provider: { "@id": BUSINESS_ID },
     brand: { "@id": BUSINESS_ID },
     areaServed: places,
