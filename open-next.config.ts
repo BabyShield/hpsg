@@ -1,8 +1,9 @@
 import { defineCloudflareConfig } from "@opennextjs/cloudflare";
+import staticAssetsIncrementalCache from "@opennextjs/cloudflare/overrides/incremental-cache/static-assets-incremental-cache";
 
-// Default worker cache. Optional R2 incremental cache can be added later:
-// import r2IncrementalCache from "@opennextjs/cloudflare/overrides/incremental-cache/r2-incremental-cache";
-// export default defineCloudflareConfig({ incrementalCache: r2IncrementalCache });
-// Requires an R2 bucket bound as NEXT_INC_CACHE_R2_BUCKET.
-// [VERIFY against current OpenNext Cloudflare caching docs]
-export default defineCloudflareConfig();
+// Fully static site: serve prerendered SSG routes from Workers Static Assets.
+// Dummy cache left prerendered [service] and [area] pages 404 on the Worker.
+export default defineCloudflareConfig({
+  incrementalCache: staticAssetsIncrementalCache,
+  enableCacheInterception: true,
+});
