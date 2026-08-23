@@ -41,11 +41,21 @@ export default function ContactPage() {
           <h1 className="font-display text-5xl font-light sm:text-6xl">Contact</h1>
           <p className="lede mt-8 max-w-measure text-xl text-grey-600">
             Request a quote for kitchen renovation, bathroom renovation, painting
-            or light refurbishment in Hampstead and North West London. Tell us
-            the property and the rooms in scope. We visit before we write a
-            proposal. The office is at {addressSingleLine}, a short run from
-            Hampstead, Belsize Park and Swiss Cottage.
+            or light refurbishment in Hampstead and North West London.
           </p>
+          <div className="mt-6 max-w-measure space-y-5 text-base leading-relaxed text-grey-700">
+            <p>
+              Tell us the property and the rooms in scope. We visit before we
+              write a proposal. Photographs help us prepare; they are not a
+              quotation. The office is at {addressSingleLine}, a short run from
+              Hampstead, Belsize Park and Swiss Cottage.
+            </p>
+            <p>
+              Useful in the message: the address, whether it is a conversion,
+              mansion flat or house, kitchen and/or bathroom, whether you are
+              staying, and whether a managing agent or freeholder is involved.
+            </p>
+          </div>
           <p className="mt-12 font-display text-4xl font-light text-navy sm:text-5xl">
             <a href={`tel:${site.phoneTel}`}>{site.phoneDisplay}</a>
           </p>

@@ -137,6 +137,14 @@ export function areaSearchFaqs(area: Area): Faq[] {
       q: `Is ${area.name} covered from the Hampstead office?`,
       a: `Yes. ${site.legalName} is based at ${addressSingleLine}. ${area.name} ${area.postcode} is on the North West London list we work from that office.`,
     },
+    {
+      q: `Can you do a kitchen and bathroom in the same programme in ${area.name}?`,
+      a: `Yes. That is ordinary ${area.name} work: wet rooms first, decoration last, one account. Separate contractors sequencing themselves is how finishes get damaged.`,
+    },
+    {
+      q: `Do I need to move out for work in ${area.name}?`,
+      a: `A single kitchen or bathroom in ${area.name} can often be done around you. A whole-flat light refurbishment is usually cleaner if you decant. We will say which, after we have seen the plan.`,
+    },
   ];
 }
 

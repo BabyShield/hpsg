@@ -69,14 +69,14 @@ export const whyHpsg = [
   },
   {
     title: "Hampstead office",
-    text: "We are based at Unit 3 Palace Court, 250 Finchley Road, London NW3 6DN, and the work is in the neighbourhoods around that office.",
+    text: "We are based at Unit 3 Palace Court, 250 Finchley Road, London NW3 6DN. Hampstead, Belsize Park, Swiss Cottage and West Hampstead are a short run; St John's Wood, Maida Vale, Primrose Hill and Highgate are ordinary working territory from that office.",
   },
   {
     title: "Part of an established London property group",
-    text: "Hampstead Property Services Group sits alongside sister companies in the same family. The group is introduced on the Group page.",
+    text: "Hampstead Property Services Group sits alongside sister companies in the same family. Kitchens, bathrooms, painting and light refurbishment stay on this site. Extensions and lofts sit with Hampstead Renovations. The family is explained on the Group page.",
   },
   {
     title: "Dedicated project management",
-    text: "One programme and one point of contact for the rooms in scope, rather than a collection of separate trades to coordinate yourself.",
+    text: "One programme and one point of contact for the rooms in scope, rather than a collection of separate trades to coordinate yourself. Wet rooms first, decoration last, a snag against the written specification.",
   },
 ] as const;

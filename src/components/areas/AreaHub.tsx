@@ -45,9 +45,16 @@ export function AreaHub({ area }: { area: Area }) {
     { name: `${area.name} ${area.postcode}`, href: `/areas/${area.slug}/` },
   ];
   const pageUrl = absoluteUrl(`/areas/${area.slug}/`);
-  const faqs = [...content.faqs, ...areaSearchFaqs(area)]
+  const localFaqs = content.faqs
     .map((item) => ({ q: publicCopy(item.q), a: publicCopy(item.a) }))
     .filter((item) => item.q && item.a);
+  const localQuestions = new Set(localFaqs.map((item) => item.q.toLowerCase()));
+  const faqs = [
+    ...areaSearchFaqs(area)
+      .map((item) => ({ q: publicCopy(item.q), a: publicCopy(item.a) }))
+      .filter((item) => item.q && item.a && !localQuestions.has(item.q.toLowerCase())),
+    ...localFaqs,
+  ];
   const description = `Kitchen renovation, bathroom renovation, painting and light refurbishment in ${area.name}, ${area.postcode}.`;
 
   return (
@@ -94,15 +101,14 @@ export function AreaHub({ area }: { area: Area }) {
         />
         <Container className="grid items-start gap-12 py-24 sm:py-32 lg:grid-cols-12 lg:gap-16">
           <div className="space-y-5 text-base leading-relaxed text-grey-700 lg:col-span-7">
-            <p>
-              Kitchen renovation, bathroom renovation, painting and decorating, and
-              light refurbishment in {area.name} ({area.postcode}) is{" "}
-              {areaHook(area)}, carried out from {addressSingleLine}. The council
-              is {publicCopy(area.council)}.
-            </p>
             <p className="lede text-xl text-grey-700 md:text-2xl">{publicCopy(content.intro)}</p>
             <p>{publicCopy(area.housingStock)}</p>
             {content.typical ? <p>{publicCopy(content.typical)}</p> : null}
+            <p>
+              The council is {publicCopy(area.council)}. Work is carried out from{" "}
+              {addressSingleLine}. We visit the {area.name} property before we
+              write a proposal; we do not quote from photographs.
+            </p>
             <ul className="flex flex-col gap-2 text-navy">
               {services.map((service) => {
                 const href = serviceHref(area, service.slug);

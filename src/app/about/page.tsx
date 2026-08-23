@@ -1,46 +1,52 @@
 import Link from "next/link";
 
+import { JsonLd } from "@/components/seo/JsonLd";
 import { Container } from "@/components/ui/Container";
 import { ContentImage } from "@/components/ui/ContentImage";
 import { CtaBand } from "@/components/ui/CtaBand";
+import { FaqAccordion } from "@/components/ui/FaqAccordion";
 import { PageHero } from "@/components/ui/PageHero";
-import { officeNeighbourhood } from "@/data/photos";
+import { ServiceCard } from "@/components/ui/ServiceCard";
+import {
+  aboutFaqs,
+  aboutForWhom,
+  aboutHousing,
+  aboutIntro,
+  aboutSteps,
+} from "@/data/about";
+import { officeNeighbourhood, servicePhotos } from "@/data/photos";
 import { services } from "@/data/services";
 import { addressSingleLine, site } from "@/data/site";
 import { pageMetadata } from "@/lib/metadata";
-import { isDraftToken } from "@/lib/public-copy";
+import { isDraftToken, publicCopy } from "@/lib/public-copy";
+import { absoluteUrl, faqSchema, webPageSchema } from "@/lib/schema";
 
 export const metadata = pageMetadata({
   title: "About Hampstead Property Services Group | Kitchen and bathroom renovation | HPSG",
   description:
-    "Hampstead Property Services Group Limited (17404557) carries out kitchen renovation, bathroom renovation, painting and light refurbishment in Hampstead and North West London. 020 7101 3168.",
+    "Hampstead Property Services Group Limited (17404557) carries out kitchen renovation, bathroom renovation, painting and light refurbishment in Hampstead and North West London. Survey-led, from Finchley Road. 020 7101 3168.",
   path: "/about/",
   image: officeNeighbourhood.src,
   imageAlt: officeNeighbourhood.alt,
 });
 
-const steps = [
-  {
-    title: "Enquiry",
-    text: "Call, email or use the form. Tell us the property, the rooms in scope, and whether the building has a managing agent.",
-  },
-  {
-    title: "Visit",
-    text: "We visit before we write a proposal. Period walls, stacks and access are rarely as photographs suggest.",
-  },
-  {
-    title: "Written proposal",
-    text: "A specification, a programme and a price against that scope. Variations later are written, not verbal.",
-  },
-  {
-    title: "One programme",
-    text: "Kitchen, bathroom, decoration and floors are sequenced so trades are not left coordinating themselves.",
-  },
-];
+const faqs = aboutFaqs
+  .map((item) => ({ q: publicCopy(item.q), a: publicCopy(item.a) }))
+  .filter((item) => item.q && item.a);
 
 export default function AboutPage() {
   return (
     <>
+      <JsonLd
+        data={webPageSchema({
+          name: "About Hampstead Property Services Group",
+          url: absoluteUrl("/about/"),
+          description:
+            "Hampstead Property Services Group Limited (17404557) carries out kitchen renovation, bathroom renovation, painting and light refurbishment in Hampstead and North West London.",
+          image: officeNeighbourhood.src,
+        })}
+      />
+      <JsonLd data={faqSchema(faqs)} />
       <PageHero
         photo={officeNeighbourhood}
         crumbs={[
@@ -49,59 +55,44 @@ export default function AboutPage() {
         ]}
         kicker="The company"
         title="About Hampstead Property Services Group"
-        lede={`Based at ${addressSingleLine}.`}
+        lede={`Kitchen, bathroom, painting and light refurbishment from ${addressSingleLine}.`}
       />
       <Container className="grid gap-12 py-24 sm:py-32 lg:grid-cols-12 lg:gap-16">
         <div className="space-y-5 text-base leading-relaxed text-grey-700 lg:col-span-7">
-          <p>
-            Hampstead Property Services Group Limited is a company registered in
-            England and Wales (company no. {site.companyNumber}). This site is
-            the place for kitchen renovation, bathroom renovation, painting and
-            decorating, and light refurbishment in Hampstead, West Hampstead,
-            Belsize Park, St John&apos;s Wood, Maida Vale, Highgate and the
-            wider North West London list — period conversions, mansion flats and
-            family houses around a Finchley Road office.
-          </p>
-          <p>
-            The office is at {addressSingleLine}. Telephone {site.phoneDisplay}.
-            Email {site.email}.
-          </p>
+          {aboutIntro.map((paragraph) => (
+            <p key={paragraph.slice(0, 40)}>{paragraph}</p>
+          ))}
           {isDraftToken(site.directors) ? null : <p>Director(s): {site.directors}.</p>}
           <p>
-            Work is fully insured. We do not quote from photographs. We do not
-            invent reviews, prices or case studies on this site.
+            Telephone {site.phoneDisplay}. Email{" "}
+            <a href={`mailto:${site.email}`} className="quiet-link text-navy">
+              {site.email}
+            </a>
+            .
           </p>
         </div>
         <div className="lg:col-span-5">
-          <ContentImage
-            photo={officeNeighbourhood}
-            className="aspect-[4/5] w-full"
-            sizes="(min-width: 1024px) 40vw, 100vw"
-          />
-          <p className="caption mt-4">{addressSingleLine}</p>
+          <p className="rule mb-6" aria-hidden="true" />
+          <h2 className="font-display text-3xl font-normal">Who the work is for</h2>
+          <div className="mt-6 space-y-5 text-base leading-relaxed text-grey-700">
+            {aboutForWhom.map((paragraph) => (
+              <p key={paragraph.slice(0, 40)}>{paragraph}</p>
+            ))}
+          </div>
         </div>
       </Container>
 
       <section className="border-y border-grey-200 py-24 sm:py-32">
         <Container>
           <p className="rule mb-8" aria-hidden="true" />
-          <h2 className="font-display text-4xl font-normal sm:text-5xl">
-            Kitchen, bathroom, painting and light refurbishment
+          <h2 className="font-display text-4xl font-light sm:text-5xl">
+            Housing we take on in North West London
           </h2>
-          <p className="mt-5 max-w-measure text-base leading-relaxed text-grey-700">
-            Four services, one office in NW3. Local pages sit under each service
-            for Hampstead, St John&apos;s Wood, Maida Vale and the neighbourhoods
-            we cover in detail.
-          </p>
-          <ul className="mt-12 grid gap-10 sm:grid-cols-2">
-            {services.map((service) => (
-              <li key={service.slug}>
-                <h3 className="font-display text-2xl font-normal">
-                  <Link href={`/${service.slug}/`} className="quiet-link">
-                    {service.name}
-                  </Link>
-                </h3>
-                <p className="mt-3 text-base leading-relaxed text-grey-700">{service.heroLine}</p>
+          <ul className="mt-16 grid gap-12 lg:grid-cols-3">
+            {aboutHousing.map((item) => (
+              <li key={item.title}>
+                <h3 className="font-display text-2xl font-normal">{item.title}</h3>
+                <p className="mt-4 text-base leading-relaxed text-grey-700">{item.text}</p>
               </li>
             ))}
           </ul>
@@ -110,26 +101,64 @@ export default function AboutPage() {
 
       <section className="py-24 sm:py-32">
         <Container>
-          <p className="rule mb-8" aria-hidden="true" />
-          <h2 className="font-display text-4xl font-normal sm:text-5xl">How we work</h2>
-          <ol className="mt-16 grid gap-10 md:grid-cols-2 lg:grid-cols-4">
-            {steps.map((step, index) => (
-              <li key={step.title}>
-                <p className="font-display text-3xl text-gold">
-                  {String(index + 1).padStart(2, "0")}
-                </p>
-                <h3 className="mt-3 font-display text-2xl font-normal">{step.title}</h3>
-                <p className="mt-3 text-base leading-relaxed text-grey-700">{step.text}</p>
+          <p className="kicker mb-8">Services</p>
+          <h2 className="font-display text-4xl font-light sm:text-5xl">
+            Four services, one Finchley Road office
+          </h2>
+          <p className="lede mt-6 max-w-measure text-xl text-grey-600">
+            Local pages sit under each service for Hampstead, St John&apos;s Wood,
+            Maida Vale and the neighbourhoods we cover in detail.
+          </p>
+          <ul className="mosaic mt-16 grid-cols-1 sm:grid-cols-2">
+            {services.map((service) => (
+              <li key={service.slug} className="min-h-[16rem]">
+                <ServiceCard service={service} className="h-full min-h-[16rem]" />
               </li>
             ))}
-          </ol>
+          </ul>
         </Container>
       </section>
 
-      <section className="border-t border-grey-200 py-24 sm:py-32">
+      <section className="border-y border-grey-200 py-24 sm:py-32">
+        <Container className="grid items-center gap-16 lg:grid-cols-12">
+          <div className="lg:col-span-5">
+            <ContentImage
+              photo={servicePhotos["kitchen-renovation"]}
+              className="aspect-[4/5] w-full"
+              sizes="(min-width: 1024px) 40vw, 100vw"
+            />
+          </div>
+          <div className="lg:col-span-7">
+            <p className="kicker mb-8">How we work</p>
+            <h2 className="font-display text-4xl font-light sm:text-5xl">
+              Enquiry, visit, written proposal, one programme
+            </h2>
+            <ol className="mt-12">
+              {aboutSteps.map((step, index) => (
+                <li
+                  key={step.title}
+                  className="grid grid-cols-[auto_1fr] gap-6 border-t border-grey-200 py-7 last:border-b"
+                >
+                  <span className="font-display text-3xl leading-none text-gold">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <div>
+                    <h3 className="font-display text-2xl font-normal">{step.title}</h3>
+                    <p className="mt-2 max-w-measure text-base leading-relaxed text-grey-700">
+                      {step.text}
+                    </p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </Container>
+      </section>
+
+      <section className="py-24 sm:py-32">
         <Container className="grid gap-10 lg:grid-cols-12">
-          <h2 className="font-display text-4xl font-normal sm:text-5xl lg:col-span-4">
-            What this site is not
+          <h2 className="font-display text-4xl font-light sm:text-5xl lg:col-span-4">
+            What this company is not
           </h2>
           <div className="space-y-5 text-base leading-relaxed text-grey-700 lg:col-span-8">
             <p>
@@ -138,7 +167,7 @@ export default function AboutPage() {
               openings. That work sits with{" "}
               <a
                 href="https://hampsteadrenovations.co.uk"
-                className="text-navy underline decoration-gold underline-offset-4"
+                className="quiet-link text-navy"
               >
                 Hampstead Renovations
               </a>
@@ -147,12 +176,23 @@ export default function AboutPage() {
             <p>
               Day-to-day on-demand trades sit with Hampstead On Demand. The
               family is explained on the{" "}
-              <Link href="/group/" className="text-navy underline decoration-gold underline-offset-4">
+              <Link href="/group/" className="quiet-link text-navy">
                 Group
               </Link>{" "}
               page. For kitchens, bathrooms, painting and light refurbishment,
               stay on this site.
             </p>
+          </div>
+        </Container>
+      </section>
+
+      <section className="border-t border-grey-200 py-24 sm:py-32">
+        <Container className="grid gap-12 lg:grid-cols-12">
+          <h2 className="font-display text-4xl font-light sm:text-5xl lg:col-span-4">
+            Company questions
+          </h2>
+          <div className="lg:col-span-8">
+            <FaqAccordion items={faqs} />
           </div>
         </Container>
       </section>
