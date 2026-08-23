@@ -11,6 +11,51 @@ export type ServiceSeo = {
   extraFaqs: Faq[];
 };
 
+export function comboHeadings(slug: ServiceSlug, area: string) {
+  switch (slug) {
+    case "kitchen-renovation":
+      return {
+        rooms: `Typical kitchens in ${area}`,
+        working: `Extract, licence and access in ${area}`,
+        spec: `How a ${area} kitchen is specified`,
+        includes: "What a typical kitchen instruction includes",
+        process: "How a kitchen programme runs",
+        questions: `Kitchen questions in ${area}`,
+        facts: `Local facts that shape a ${area} kitchen`,
+      };
+    case "bathroom-renovation":
+      return {
+        rooms: `Typical bathrooms in ${area}`,
+        working: `Drainage, extract and the building in ${area}`,
+        spec: `How a ${area} bathroom is specified`,
+        includes: "What a typical bathroom instruction includes",
+        process: "How a bathroom programme runs",
+        questions: `Bathroom questions in ${area}`,
+        facts: `Local facts that shape a ${area} bathroom`,
+      };
+    case "painting-decorating":
+      return {
+        rooms: `Typical interiors we decorate in ${area}`,
+        working: `Conservation, joinery and occupied homes in ${area}`,
+        spec: `How decorating is specified in ${area}`,
+        includes: "What a typical decorating instruction includes",
+        process: "How a decorating programme runs",
+        questions: `Decorating questions in ${area}`,
+        facts: `Local facts that shape decorating in ${area}`,
+      };
+    case "light-refurbishment":
+      return {
+        rooms: `Typical programmes in ${area}`,
+        working: `Licence, sequence and access in ${area}`,
+        spec: `How a ${area} programme is specified`,
+        includes: "What a typical programme includes",
+        process: "How a light-refurbishment programme runs",
+        questions: `Refurbishment questions in ${area}`,
+        facts: `Local facts that shape a ${area} programme`,
+      };
+  }
+}
+
 export const serviceSeo: Record<ServiceSlug, ServiceSeo> = {
   "kitchen-renovation": {
     audienceH2: "Who this kitchen work is for",

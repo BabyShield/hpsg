@@ -5,9 +5,11 @@ import { Container } from "./Container";
 export function LocalFacts({
   areaName,
   facts,
+  heading,
 }: {
   areaName: string;
   facts: string[];
+  heading?: string;
 }) {
   const visible = facts.map((fact) => publicCopy(fact)).filter(Boolean);
   if (visible.length === 0) return null;
@@ -17,7 +19,7 @@ export function LocalFacts({
       <Container>
         <p className="rule mb-8" aria-hidden="true" />
         <h2 className="font-display text-4xl font-normal sm:text-5xl">
-          Ten facts about {areaName}
+          {heading ?? `Ten facts about ${areaName}`}
         </h2>
         <p className="lede mt-6 max-w-xl text-xl text-grey-600 md:text-2xl">
           Checkable local facts that shape access, conservation and the building.

@@ -12,7 +12,9 @@ import { getAreaFacts } from "@/data/area-facts";
 import { areaPhotos, servicePhotos } from "@/data/photos";
 import { services } from "@/data/services";
 import type { Combo, ComboContent } from "@/data/types";
-import { addressSingleLine } from "@/data/site";
+import { comboHeadings } from "@/data/service-seo";
+import { serviceAreaCue } from "@/data/seo-cues";
+import { addressSingleLine, site } from "@/data/site";
 import { getNearbyAreas, isCombo } from "@/lib/matrix";
 import { publicCopy } from "@/lib/public-copy";
 import { absoluteUrl, faqSchema, placeSchema, serviceSchema, webPageSchema } from "@/lib/schema";
@@ -44,6 +46,14 @@ export function ComboPage({
     });
 
   const serviceName = servicePlainName(combo.service);
+  const headings = comboHeadings(combo.service.slug, combo.area.name);
+  const cue = serviceAreaCue(combo.service.slug, combo.area.slug);
+  const heroPhoto = {
+    ...servicePhotos[combo.service.slug],
+    alt: cue
+      ? `${serviceName} in ${combo.area.name} — ${cue.title.toLowerCase()}`
+      : `${servicePhotos[combo.service.slug].alt} — ${combo.area.name} ${combo.area.postcode}`,
+  };
   const crumbs = [
     { name: "Home", href: "/" },
     { name: serviceName, href: `/${combo.service.slug}/` },
@@ -70,6 +80,7 @@ export function ComboPage({
           areaServed: [`${combo.area.name}, ${combo.area.postcode}`, "North West London"],
           description: content.lede,
           image: servicePhotos[combo.service.slug].src,
+          serviceType: serviceName,
         })}
       />
       <JsonLd
@@ -84,7 +95,7 @@ export function ComboPage({
       <JsonLd data={faqSchema(faqs)} />
       <article>
         <PageHero
-          photo={servicePhotos[combo.service.slug]}
+          photo={heroPhoto}
           crumbs={crumbs}
           kicker={`${combo.area.name} ${combo.area.postcode}`}
           title={`${serviceName} in ${combo.area.name}`}
@@ -99,6 +110,10 @@ export function ComboPage({
                 <p key={paragraph.slice(0, 48)}>{paragraph}</p>
               ))}
               <p>
+                {site.legalName} (company no. {site.companyNumber}) carries out
+                this work in {combo.area.name} from {addressSingleLine}.
+              </p>
+              <p>
                 See also{" "}
                 <Link href={`/${combo.service.slug}/`} className="quiet-link text-navy">
                   {serviceName.toLowerCase()} in North West London
@@ -107,7 +122,7 @@ export function ComboPage({
                 <Link href={`/areas/${combo.area.slug}/`} className="quiet-link text-navy">
                   kitchens, bathrooms and decorating in {combo.area.name}
                 </Link>
-                . The office is at {addressSingleLine}.
+                .
               </p>
             </div>
             {areaPhotos[combo.area.slug] ? (
@@ -129,20 +144,24 @@ export function ComboPage({
           <section className="border-y border-grey-200 py-24 sm:py-32">
             <Container className="grid gap-10 lg:grid-cols-12">
               <h2 className="font-display text-4xl font-normal sm:text-5xl lg:col-span-4">
-                {serviceName} rooms in {combo.area.name}
+                {headings.rooms}
               </h2>
               <p className="text-base leading-relaxed text-grey-700 lg:col-span-8">{rooms}</p>
             </Container>
           </section>
         ) : null}
 
-        <LocalFacts areaName={combo.area.name} facts={getAreaFacts(combo.area.slug)} />
+        <LocalFacts
+          areaName={combo.area.name}
+          facts={getAreaFacts(combo.area.slug)}
+          heading={headings.facts}
+        />
 
         <section className="py-24 sm:py-32">
           <Container>
             <p className="rule mb-8" aria-hidden="true" />
             <h2 className="font-display text-4xl font-normal sm:text-5xl">
-              Council, conservation and access in {combo.area.name}
+              {headings.working}
             </h2>
             <p className="mt-6 text-sm text-grey-600">
               {publicCopy(combo.area.council)}
@@ -177,7 +196,7 @@ export function ComboPage({
           <section className="border-y border-grey-200 py-24 sm:py-32">
             <Container className="grid gap-10 lg:grid-cols-12">
               <h2 className="font-display text-4xl font-normal sm:text-5xl lg:col-span-4">
-                {serviceName} specification in {combo.area.name}
+                {headings.spec}
               </h2>
               <div className="space-y-5 text-base leading-relaxed text-grey-700 lg:col-span-8">
                 {specParas.map((paragraph) => (
@@ -192,12 +211,12 @@ export function ComboPage({
           <Container>
             <p className="rule mb-8" aria-hidden="true" />
             <h2 className="font-display text-4xl font-normal sm:text-5xl">
-              What {serviceName.toLowerCase()} in {combo.area.name} includes
+              {headings.includes}
             </h2>
             <p className="mt-5 max-w-measure text-base leading-relaxed text-grey-700">
-              The list is the core of a typical {serviceName.toLowerCase()} in{" "}
-              {combo.area.name} {combo.area.postcode}. The written proposal after
-              survey is the contract scope.
+              The list is the core of a typical instruction in {combo.area.name}{" "}
+              {combo.area.postcode}. The written proposal after survey is the
+              contract scope.
             </p>
             <ul className="mt-10 max-w-3xl divide-y divide-grey-200 border-y border-grey-200">
               {included.map((item) => (
@@ -214,7 +233,7 @@ export function ComboPage({
           <Container>
             <p className="rule mb-8" aria-hidden="true" />
             <h2 className="font-display text-4xl font-normal sm:text-5xl">
-              How {serviceName.toLowerCase()} in {combo.area.name} is carried out
+              {headings.process}
             </h2>
             <ol className="mt-16 grid gap-x-10 gap-y-12 md:grid-cols-2">
               {combo.service.processSteps.map((step, index) => (
@@ -235,7 +254,7 @@ export function ComboPage({
         <section className="py-24 sm:py-32">
           <Container className="grid gap-12 lg:grid-cols-12">
             <h2 className="font-display text-4xl font-normal sm:text-5xl lg:col-span-4">
-              {serviceName} questions in {combo.area.name}
+              {headings.questions}
             </h2>
             <div className="lg:col-span-8">
               <FaqAccordion items={faqs} />

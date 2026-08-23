@@ -77,10 +77,10 @@ export function comboMetaTitle(combo: Combo): string {
 
 export function comboMetaDescription(lede: string, stored: string): string {
   const clean = publicCopy(lede).replace(/\s+/g, " ").trim();
-  if (clean.length >= 120) return clipMeta(clean, 160);
   const storedClean = publicCopy(stored).replace(/\s+/g, " ").trim();
-  if (storedClean) return clipMeta(storedClean, 160);
-  return clipMeta(`${clean.replace(/\.$/, "")}. ${site.phoneDisplay}.`, 160);
+  const base = clean.length >= 80 ? clean : storedClean || clean;
+  if (base.includes(site.phoneDisplay)) return clipMeta(base, 160);
+  return clipMeta(`${base.replace(/\.$/, "")}. ${site.phoneDisplay}.`, 160);
 }
 
 export function areaMetaTitle(area: Area): string {
@@ -119,6 +119,23 @@ export function comboSearchFaqs(combo: Combo): Faq[] {
   extras.push({
     q: `Who carries out ${name} in ${area}?`,
     a: `${site.legalName} (company no. ${site.companyNumber}) carries out ${bare} in ${area} from ${addressSingleLine}. The work is survey-led and fully insured. We do not quote from photographs.`,
+  });
+
+  extras.push({
+    q: `How do I get a quote for ${name} in ${area}?`,
+    a: `Call ${site.phoneDisplay} or use the enquiry form. Tell us the ${area} ${postcode} property and the rooms in scope. We visit before we write a proposal.`,
+  });
+
+  if (combo.service.slug !== "painting-decorating") {
+    extras.push({
+      q: `Is a licence to alter needed for ${bare} in ${area}?`,
+      a: `Often, for kitchen or bathroom replacement in a leasehold ${area} flat. We can prepare drawings and a method statement. Consent is the freeholder's or agent's, not ours. Notices start in the lead-in, not after strip-out.`,
+    });
+  }
+
+  extras.push({
+    q: `Can I stay in the property during ${bare} in ${area}?`,
+    a: `A single kitchen or bathroom in ${area} can often be done around you. A whole-flat programme is usually cleaner if you decant. We will say which, after we have seen the plan.`,
   });
 
   if (combo.service.slug === "kitchen-renovation") {
