@@ -60,6 +60,11 @@ export const kitchenRoomPhotos = {
     alt: "A kitchen scribed around an original chimney breast in a North West London period house",
     ...wide,
   },
+  suburb: {
+    src: "/images/services/kitchen-suburb.jpg",
+    alt: "A finished kitchen in an Arts and Crafts Hampstead Garden Suburb house — cream cabinets, tiled splash and a garden casement",
+    ...wide,
+  },
 } as const satisfies Record<string, Photo>;
 
 export const refurbRoomPhotos = {

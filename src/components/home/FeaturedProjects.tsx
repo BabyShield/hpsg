@@ -18,7 +18,7 @@ const tiles = [
     href: "/bathroom-renovation/",
     photo: bathroomRoomPhotos.shower,
     title: "Bathroom renovation",
-    caption: "Walk-in shower, timber floor tanked",
+    caption: "Walk-in shower in stone",
     className: "min-h-[18rem] lg:col-span-6 lg:min-h-[28rem]",
     sizes: "(min-width: 1024px) 50vw, 100vw",
   },

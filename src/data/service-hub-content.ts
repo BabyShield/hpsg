@@ -114,7 +114,7 @@ export const serviceHubContent: Record<ServiceSlug, ServiceHubContent> = {
         title: "Suburb and Trust interiors",
         text:
           "Hampstead Garden Suburb kitchens are internal fit-outs. The Trust and Barnet sit on the outside of the house. An extract grille or a window change is not a casual extra. Permitted development is not the working assumption.",
-        photo: paintingRoomPhotos.drawing,
+        photo: kitchenRoomPhotos.suburb,
       },
     ],
     housing: [
