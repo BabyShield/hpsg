@@ -25,8 +25,8 @@ export function comboHeadings(slug: ServiceSlug, area: string) {
       };
     case "bathroom-renovation":
       return {
-        rooms: `Typical bathrooms in ${area}`,
-        working: `Drainage, extract and the building in ${area}`,
+        rooms: `Family bathrooms, ensuites and shower rooms in ${area}`,
+        working: `Tanking, extract and licence in ${area}`,
         spec: `How a ${area} bathroom is specified`,
         includes: "What a typical bathroom instruction includes",
         process: "How a bathroom programme runs",

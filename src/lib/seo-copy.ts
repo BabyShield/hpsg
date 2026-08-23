@@ -168,6 +168,14 @@ export function comboSearchFaqs(combo: Combo): Faq[] {
       q: `Do you renovate ensuites and shower rooms in ${area}?`,
       a: `Yes, where drainage can reach a stack and extract can be routed without an insensitive grille. Compact ensuites and internal bathrooms are ordinary ${area} work. A room that cannot drain honestly is not forced into a shower.`,
     });
+    extras.push({
+      q: `Do you tank bathrooms in ${area} as standard?`,
+      a: `Wet areas are waterproofed to a documented system. In ${area} ${postcode} that usually means timber floors, a conversion half-landing, or a stacked mansion-flat bathroom over a neighbour. We do not treat tanking as optional in a shower or around a bath.`,
+    });
+    extras.push({
+      q: `How long does a bathroom renovation in ${area} take?`,
+      a: `A single bathroom with drainage in the right place is commonly a small number of weeks on site. Two bathrooms, a new extract run, or a licence to alter in ${area} takes longer. The written programme follows the survey.`,
+    });
   }
 
   if (combo.service.slug === "painting-decorating") {

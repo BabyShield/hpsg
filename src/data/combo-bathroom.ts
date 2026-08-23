@@ -37,6 +37,10 @@ export const bathroomCombos: Record<string, ComboContent> = {
         q: "How do you get a bath into a village house?",
         a: "By measuring the stair and the lane, then timing the drop. Village lanes are not loading bays. The survey records the vehicle and the carry.",
       },
+      {
+        q: "Can a Hampstead conversion bathroom become a wet room?",
+        a: "Only where the timber floor has the depth for a fall and a documented waterproofing system. A village conversion is not a new-build slab. We will say so at survey rather than draw a level-access room onto joists that cannot take it.",
+      },
     ],
     metaDescription:
       "Bathroom renovation in Hampstead NW3 conversions and village houses, with tanking and extract planned. 020 7101 3168.",
@@ -76,6 +80,10 @@ export const bathroomCombos: Record<string, ComboContent> = {
       {
         q: "Is Fortune Green in a conservation area?",
         a: "Some streets toward Fortune Green are. We check the map for the address rather than treating all of West Hampstead as one designation. [VERIFY.]",
+      },
+      {
+        q: "Can you form a wet room on a West Hampstead half-landing?",
+        a: "Only if the floor depth and the tanking system will take the fall. Half-landings are short of build-up. We will not draw a level-access wet room onto joists that cannot accept it.",
       },
     ],
     metaDescription:
@@ -117,6 +125,10 @@ export const bathroomCombos: Record<string, ComboContent> = {
         q: "Are mansion-block bathrooms different?",
         a: "Shared drainage and a managing agent usually, yes. The tanking standard on timber floors is the same.",
       },
+      {
+        q: "Will extract through Belsize stucco need consent?",
+        a: "Often, if the grille lands on a principal or conservation elevation. We plan the route at survey. We will not punch a hole in stucco as a convenience. [VERIFY on the address.]",
+      },
     ],
     metaDescription:
       "Bathroom renovation in Belsize Park NW3 conversions and mansion flats. Tanking, extract, compact layouts. 020 7101 3168.",
@@ -156,6 +168,10 @@ export const bathroomCombos: Record<string, ComboContent> = {
       {
         q: "Do Lord's match days stop the work?",
         a: "They can restrict access on surrounding streets. We check with the building rather than assuming a clear run. [VERIFY.]",
+      },
+      {
+        q: "How long is a St John's Wood bathroom if a licence to alter is needed?",
+        a: "The on-site weeks are still a small number once materials are dated. The licence sits in the lead-in. We do not strip the room while the agent's pack is outstanding.",
       },
     ],
     metaDescription:
@@ -197,6 +213,10 @@ export const bathroomCombos: Record<string, ComboContent> = {
         q: "Is the canal a planning issue?",
         a: "On some frontages, Canal & River Trust questions can arise. We do not assume they apply to every W9 address. [VERIFY.]",
       },
+      {
+        q: "How are wastes tested so the flat below is protected?",
+        a: "We isolate, tank, and test before tiling closes the floor. A leak in a 1890s mansion flat is a neighbour problem. Testing is part of the method, not a courtesy at handover.",
+      },
     ],
     metaDescription:
       "Bathroom renovation in Maida Vale W9 mansion blocks, with tanking on timber floors. 020 7101 3168.",
@@ -236,6 +256,10 @@ export const bathroomCombos: Record<string, ComboContent> = {
       {
         q: "Can you load on Finchley Road?",
         a: "It is a major corridor. We treat it as a different process from a side street, and we plan the drop at survey.",
+      },
+      {
+        q: "Does being next to the office shorten a Swiss Cottage bathroom?",
+        a: "It shortens the visit. The room still needs tanking, extract and, in the Avenue Road blocks, a licence to alter. We do not skip the survey because the office is on Finchley Road.",
       },
     ],
     metaDescription:
@@ -277,6 +301,10 @@ export const bathroomCombos: Record<string, ComboContent> = {
         q: "Do you form new rear bathrooms?",
         a: "No. Bathroom renovation on this site is a fit-out of rooms that exist. Forming a new envelope is not this service.",
       },
+      {
+        q: "Can a Primrose Hill lower-ground bathroom become a wet room?",
+        a: "Only after moisture is solved and only if the floor depth will take a fall. We will not tank a wet structure or draw a level-access room onto a damp lower-ground.",
+      },
     ],
     metaDescription:
       "Bathroom renovation in Primrose Hill NW1 houses and splits, with drainage and extract surveyed. 020 7101 3168.",
@@ -316,6 +344,10 @@ export const bathroomCombos: Record<string, ComboContent> = {
       {
         q: "Do trees stop a bathroom renovation?",
         a: "They can constrain access and any work that touches the elevation or the ground. Internal fit-out still needs a drop point that respects the plot. [VERIFY TPO.]",
+      },
+      {
+        q: "Can a Highgate slope villa take a wet room?",
+        a: "Where the floor depth and the waterproofing will take a fall. Slope villas are not automatically deeper than a conversion. We survey the build-up rather than assuming a new-build slab.",
       },
     ],
     metaDescription:
@@ -357,6 +389,10 @@ export const bathroomCombos: Record<string, ComboContent> = {
         q: "Do pebbledash houses need a different bathroom?",
         a: "They need a survey. Walls, later partitions and timber floors are as out of square as anywhere else.",
       },
+      {
+        q: "Can an Edwardian family bathroom in Golders Green become a wet room?",
+        a: "Sometimes, if the floor has the depth. A larger family room is not the same as a slab. We will not specify a wet room that the joists cannot take.",
+      },
     ],
     metaDescription:
       "Bathroom renovation in Golders Green NW11 family houses and flats. Barnet, tanking as standard. 020 7101 3168.",
@@ -396,6 +432,10 @@ export const bathroomCombos: Record<string, ComboContent> = {
       {
         q: "Is Salusbury Road usable for deliveries?",
         a: "It is a busy spine. We plan a drop on a residential street unless the building forces otherwise.",
+      },
+      {
+        q: "Do you tank Estate cottage bathrooms the same as terrace conversions?",
+        a: "The tanking standard is the same on timber floors. The joinery and the conservation character of the Estate are not. We do not box in original cottage fabric to make a wet room look suburban.",
       },
     ],
     metaDescription:
@@ -437,6 +477,10 @@ export const bathroomCombos: Record<string, ComboContent> = {
         q: "Do you work above the Broadway shops?",
         a: "Yes, where access and extract can be solved. Those flats are a different construction from a house on the slope.",
       },
+      {
+        q: "Can a Muswell Hill Edwardian bathroom become a wet room?",
+        a: "Where the floor depth will take a fall. The hill is a delivery problem; the joists are a waterproofing problem. We survey both.",
+      },
     ],
     metaDescription:
       "Bathroom renovation in Muswell Hill N10 Edwardian houses and Broadway flats. Haringey. 020 7101 3168.",
@@ -476,6 +520,10 @@ export const bathroomCombos: Record<string, ComboContent> = {
       {
         q: "Is this mansion-block work?",
         a: "Rarely. Converted houses are the local type. Purpose-built blocks are the exception.",
+      },
+      {
+        q: "Can a Crouch End conversion bathroom become a wet room?",
+        a: "Only if the timber floor has the depth. Converted houses around the Broadway are not a new-build slab. We will say so at survey.",
       },
     ],
     metaDescription:
@@ -517,6 +565,10 @@ export const bathroomCombos: Record<string, ComboContent> = {
         q: "Are there conservation areas here?",
         a: "Coverage is by street, including toward Dartmouth Park. We check the map for the address. [VERIFY.]",
       },
+      {
+        q: "Can a Kentish Town lower-ground bathroom become a wet room?",
+        a: "Only after moisture is solved and only if the floor will take a fall. Waterproofing a wet lower-ground is not a finish.",
+      },
     ],
     metaDescription:
       "Bathroom renovation in Kentish Town NW5 conversions. Tanking, Camden terraces. 020 7101 3168.",
@@ -557,6 +609,10 @@ export const bathroomCombos: Record<string, ComboContent> = {
         q: "Is all of Kilburn in a conservation area?",
         a: "No. Coverage is by street. [VERIFY Camden and Brent maps.]",
       },
+      {
+        q: "Can a Kilburn shop-flat bathroom take a wet room?",
+        a: "Rarely. Floor depth, extract through a shopfront or a rear wall, and a narrow stair all constrain it. We will not force a wet room into a room that cannot drain or ventilate honestly.",
+      },
     ],
     metaDescription:
       "Bathroom renovation in Kilburn NW6, both Camden and Brent sides of the High Road. 020 7101 3168.",
@@ -596,6 +652,10 @@ export const bathroomCombos: Record<string, ComboContent> = {
       {
         q: "When was the conservation area designated?",
         a: "In 1967. An Article 4 direction has been in force since the 1970s.",
+      },
+      {
+        q: "Can a Suburb bathroom become a wet room without touching the elevation?",
+        a: "Internally, sometimes, if the floor will take it. The Trust and Barnet arrive when extract, a soil pipe or a window is involved. We will not assume a grille on a Trust elevation.",
       },
     ],
     metaDescription:
