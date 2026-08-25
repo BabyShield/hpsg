@@ -12,6 +12,7 @@ import { getAreaFacts } from "@/data/area-facts";
 import { ServiceCard } from "@/components/ui/ServiceCard";
 import { getComboContent } from "@/data/combo-content";
 import { areaHubContent } from "@/data/area-hub-content";
+import { areaDetail } from "@/data/area-detail";
 import { areaPhotos, getComboPhotos } from "@/data/photos";
 import { services } from "@/data/services";
 import type { Area } from "@/data/types";
@@ -43,6 +44,10 @@ export function AreaHub({ area }: { area: Area }) {
   // carries the street view, so this must not repeat it.
   const insetPhoto = getComboPhotos("light-refurbishment", area.slug).hero;
   const landmarks = area.landmarks.map((item) => publicCopy(item)).filter(Boolean);
+  const detail = areaDetail[area.slug];
+  const streets = publicCopy(detail?.streets ?? "");
+  const buildings = publicCopy(detail?.buildings ?? "");
+  const accessNote = publicCopy(detail?.access ?? "");
   const cue = areaTitleCue[area.slug];
   const heroPhoto = photo
     ? {
@@ -59,7 +64,7 @@ export function AreaHub({ area }: { area: Area }) {
     { name: `${area.name} ${area.postcode}`, href: `/areas/${area.slug}/` },
   ];
   const pageUrl = absoluteUrl(`/areas/${area.slug}/`);
-  const localFaqs = content.faqs
+  const localFaqs = [...content.faqs, ...(areaDetail[area.slug]?.extraFaqs ?? [])]
     .map((item) => ({ q: publicCopy(item.q), a: publicCopy(item.a) }))
     .filter((item) => item.q && item.a);
   // The five generated area FAQs duplicated hero, body and home-page copy on
@@ -166,6 +171,33 @@ export function AreaHub({ area }: { area: Area }) {
           </aside>
         </Container>
 
+        {streets || buildings ? (
+          <section className="bg-grey-50/60 py-20 sm:py-24">
+            <Container className="grid gap-12 lg:grid-cols-12 lg:gap-16">
+              <div className="lg:col-span-4">
+                <p className="rule mb-8" aria-hidden="true" />
+                <h2 className="font-display text-4xl font-normal sm:text-5xl">
+                  The housing in {area.name}
+                </h2>
+              </div>
+              <div className="space-y-10 lg:col-span-8">
+                {streets ? (
+                  <div>
+                    <h3 className="caption text-grey-500">Streets and sub-areas</h3>
+                    <p className="mt-3 text-base leading-relaxed text-grey-700">{streets}</p>
+                  </div>
+                ) : null}
+                {buildings ? (
+                  <div>
+                    <h3 className="caption text-grey-500">Building stock, from the inside</h3>
+                    <p className="mt-3 text-base leading-relaxed text-grey-700">{buildings}</p>
+                  </div>
+                ) : null}
+              </div>
+            </Container>
+          </section>
+        ) : null}
+
         <LocalFacts
           areaName={area.name}
           facts={getAreaFacts(area.slug)}
@@ -259,6 +291,12 @@ export function AreaHub({ area }: { area: Area }) {
                 </p>
                 <p>{publicCopy(content.working)}</p>
                 <p>{publicCopy(area.localNotes)}</p>
+                {accessNote ? (
+                  <p>
+                    <span className="font-medium text-navy">Access. </span>
+                    {accessNote}
+                  </p>
+                ) : null}
               </div>
             </div>
             <div className="lg:col-span-6">

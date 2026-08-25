@@ -4,6 +4,12 @@ export type AreaHubContent = {
   intro: string;
   typical: string;
   working: string;
+  /** Named streets and sub-neighbourhoods, and the stock on them. */
+  streets?: string;
+  /** Recurring building types and what they mean for interior work. */
+  buildings?: string;
+  /** Parking, loading, skips and access specifics. */
+  access?: string;
   faqs: Faq[];
 };
 
