@@ -570,10 +570,16 @@ export function getServiceHubFacts(slug: ServiceSlug): string[] {
   return serviceHubFacts[slug] ?? [];
 }
 
+/**
+ * The six service-specific facts for this area, and only those.
+ *
+ * These used to be padded to ten with civic facts from area-facts.ts, which
+ * meant four of the ten on every combo page were copied verbatim from the area
+ * hub and repeated across that area's four combos. The area hub remains the
+ * single place the civic ten are listed.
+ */
 export function getServiceAreaFacts(service: ServiceSlug, areaSlug: string): string[] {
-  const overlay = byService[service]?.[areaSlug] ?? [];
-  const civic = areaFacts[areaSlug] ?? [];
-  return uniqueFacts([...overlay, ...civic]).slice(0, 10);
+  return uniqueFacts(byService[service]?.[areaSlug] ?? []);
 }
 
 for (const slug of SERVICE_SLUGS) {
@@ -585,8 +591,8 @@ for (const slug of SERVICE_SLUGS) {
     if (overlay !== 6) {
       throw new Error(`${slug}/${areaSlug} has ${overlay} overlay facts; 6 required`);
     }
-    if (getServiceAreaFacts(slug, areaSlug).length !== 10) {
-      throw new Error(`${slug}/${areaSlug} merged facts are not 10`);
+    if (getServiceAreaFacts(slug, areaSlug).length !== 6) {
+      throw new Error(`${slug}/${areaSlug} resolved facts are not 6`);
     }
   }
 }

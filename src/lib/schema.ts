@@ -322,3 +322,18 @@ export function itemListSchema(
     })),
   };
 }
+
+export function contactPageSchema(url: string, name: string, description: string) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "@id": `${url}#webpage`,
+    url,
+    name,
+    description: publicCopy(description),
+    inLanguage: "en-GB",
+    isPartOf: { "@id": WEBSITE_ID },
+    about: { "@id": BUSINESS_ID },
+    mainEntity: { "@id": BUSINESS_ID },
+  };
+}
