@@ -17,7 +17,7 @@ export function Breadcrumbs({
   return (
     <nav
       aria-label="Breadcrumb"
-      className={`mb-6 text-xs ${light ? "text-bone/65" : "text-grey-600"}`}
+      className={`mb-6 text-xs ${light ? "text-bone/80" : "text-grey-600"}`}
     >
       <JsonLd data={breadcrumbSchema(items)} />
       <ol className="flex flex-wrap gap-2">

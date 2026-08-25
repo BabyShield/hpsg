@@ -248,7 +248,7 @@ export function ComboPage({
             <ol className="mt-16 grid gap-x-10 gap-y-12 md:grid-cols-2">
               {combo.service.processSteps.map((step, index) => (
                 <li key={step.title}>
-                  <p className="font-display text-3xl text-gold">
+                  <p className="font-display text-3xl text-gold-deep">
                     {String(index + 1).padStart(2, "0")}
                   </p>
                   <h3 className="mt-3 font-display text-2xl font-normal">{step.title}</h3>

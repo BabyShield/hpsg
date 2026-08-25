@@ -119,7 +119,7 @@ export default function HomePage() {
               {site.phoneDisplay}
             </a>
           </div>
-          <p className="mt-10 max-w-xl text-sm leading-relaxed text-bone/60">
+          <p className="mt-10 max-w-xl text-sm leading-relaxed text-bone/80">
             {addressSingleLine}. Structural openings, lofts and extensions sit
             with Hampstead Renovations.
           </p>
@@ -146,7 +146,7 @@ export default function HomePage() {
           <ol className="mt-16 grid gap-x-10 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
             {homeMethod.map((step, index) => (
               <li key={step.title}>
-                <p className="font-display text-3xl text-gold">
+                <p className="font-display text-3xl text-gold-deep">
                   {String(index + 1).padStart(2, "0")}
                 </p>
                 <h3 className="mt-4 font-display text-2xl font-normal">{step.title}</h3>

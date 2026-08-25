@@ -154,7 +154,7 @@ export function ServiceHub({ service }: { service: Service }) {
               <ol className="mt-16 grid gap-10 md:grid-cols-2 lg:grid-cols-4">
                 {content.failures.map((item, index) => (
                   <li key={item.title}>
-                    <p className="font-display text-3xl text-gold">
+                    <p className="font-display text-3xl text-gold-deep">
                       {String(index + 1).padStart(2, "0")}
                     </p>
                     <h3 className="mt-3 font-display text-2xl font-normal">{item.title}</h3>
@@ -296,7 +296,7 @@ export function ServiceHub({ service }: { service: Service }) {
             <ol className="mt-16 grid gap-x-10 gap-y-12 md:grid-cols-2 lg:grid-cols-3">
               {service.processSteps.map((step, index) => (
                 <li key={step.title}>
-                  <p className="font-display text-3xl text-gold">
+                  <p className="font-display text-3xl text-gold-deep">
                     {String(index + 1).padStart(2, "0")}
                   </p>
                   <h3 className="mt-3 font-display text-2xl font-normal">{step.title}</h3>

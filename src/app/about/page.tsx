@@ -139,7 +139,7 @@ export default function AboutPage() {
                   key={step.title}
                   className="grid grid-cols-[auto_1fr] gap-6 border-t border-grey-200 py-7 last:border-b"
                 >
-                  <span className="font-display text-3xl leading-none text-gold">
+                  <span className="font-display text-3xl leading-none text-gold-deep">
                     {String(index + 1).padStart(2, "0")}
                   </span>
                   <div>

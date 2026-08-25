@@ -32,7 +32,7 @@ export function FaqAccordion({ items }: { items: Faq[] }) {
                 }
               >
                 <span>{item.q}</span>
-                <span aria-hidden="true" className="font-sans text-lg font-light text-gold">
+                <span aria-hidden="true" className="font-sans text-lg font-light text-gold-deep">
                   {isOpen ? "–" : "+"}
                 </span>
               </button>

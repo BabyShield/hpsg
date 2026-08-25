@@ -3,7 +3,10 @@
 @theme {
   --color-navy: #16263f;
   --color-gold: #b68a3e;
-  --color-bone: #f6f1e8;
+  /* #b68a3e is 2.9:1 on bone and fails AA as text. gold-deep is 5.0:1 on
+     bone; keep --color-gold for rules, borders and text on navy (4.8:1). */
+  --color-gold-deep: #836427;
+  --color-bone: #f7f4ee;
   --color-ink: #16130f;
 
   --color-grey-50: #f1ece3;
@@ -90,8 +93,15 @@ h3.text-bone {
 }
 
 :focus-visible {
-  outline: 1px solid var(--color-gold);
-  outline-offset: 4px;
+  outline: 2px solid var(--color-navy);
+  outline-offset: 3px;
+}
+
+.band-navy :focus-visible,
+footer :focus-visible,
+.hero-type:focus-visible,
+[class*="bg-navy"] :focus-visible {
+  outline-color: var(--color-bone);
 }
 
 ::selection {
@@ -119,7 +129,7 @@ h3.text-bone {
 }
 
 :where(.kicker) {
-  color: var(--color-gold);
+  color: var(--color-gold-deep);
 }
 
 .lede {
@@ -235,7 +245,6 @@ h3.text-bone {
   padding: 0.85rem 0;
   font-size: 1.0625rem;
   color: var(--color-ink);
-  outline: none;
   border-radius: 0;
 }
 
@@ -287,4 +296,25 @@ footer a {
 footer a:hover,
 footer a:focus-visible {
   color: var(--color-bone);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .img-zoom img,
+  .group:hover .img-zoom img,
+  .img-zoom:hover img {
+    transition: none;
+    transform: none;
+  }
+
+  .nav-link::after,
+  .btn,
+  .btn-line,
+  .quiet-link,
+  footer a {
+    transition: none;
+  }
 }

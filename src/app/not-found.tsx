@@ -8,7 +8,7 @@ import { tier1Areas } from "@/lib/matrix";
 export default function NotFound() {
   return (
     <Container className="py-20 sm:py-28">
-      <p className="font-display text-7xl font-light text-gold">404</p>
+      <p className="font-display text-7xl font-light text-gold-deep">404</p>
       <h1 className="mt-4 font-display text-4xl font-light sm:text-6xl">Page not found</h1>
       <p className="mt-6 max-w-measure text-lg leading-relaxed text-grey-700">
         That address is not a page on hpsg.co.uk. These are the services we

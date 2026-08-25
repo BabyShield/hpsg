@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import { services } from "@/data/services";
 import { site } from "@/data/site";
@@ -15,8 +15,19 @@ import { Wordmark } from "./Wordmark";
 export function Header() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
+  const [areasOpen, setAreasOpen] = useState(false);
+  const [menuPath, setMenuPath] = useState(pathname);
+  const areasRef = useRef<HTMLLIElement>(null);
   const dropdownAreas = tier1Areas().slice(0, 8);
-  const overlay = pathname === "/" && !scrolled;
+  const home = pathname === "/";
+  const overlay = home && !scrolled;
+
+  // Navigating closes the Areas menu. Derived during render rather than in an
+  // effect, which would cascade an extra render.
+  if (menuPath !== pathname) {
+    setMenuPath(pathname);
+    if (areasOpen) setAreasOpen(false);
+  }
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -25,13 +36,34 @@ export function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Escape and outside-click close the Areas menu.
+  useEffect(() => {
+    if (!areasOpen) return;
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setAreasOpen(false);
+    };
+    const onPointer = (event: PointerEvent) => {
+      if (!areasRef.current?.contains(event.target as Node)) setAreasOpen(false);
+    };
+    document.addEventListener("keydown", onKey);
+    document.addEventListener("pointerdown", onPointer);
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.removeEventListener("pointerdown", onPointer);
+    };
+  }, [areasOpen]);
+
   return (
     <header
-      className={
+      className={[
+        // Fixed in both states on the home page: switching between absolute and
+        // sticky put the header in and out of flow and shifted the document.
+        home ? "fixed" : "sticky",
+        "inset-x-0 top-0 z-50 transition-colors duration-300",
         overlay
-          ? "absolute inset-x-0 top-0 z-50 bg-gradient-to-b from-bone/90 via-bone/55 to-transparent"
-          : "sticky top-0 z-50 border-b border-navy/6 bg-bone/85 backdrop-blur-md"
-      }
+          ? "bg-gradient-to-b from-bone/90 via-bone/55 to-transparent"
+          : "border-b border-navy/6 bg-bone/85 backdrop-blur-md",
+      ].join(" ")}
     >
       <div className="h-px bg-gold" aria-hidden="true" />
       <Container className="flex items-center justify-between gap-6 py-4">
@@ -46,12 +78,21 @@ export function Header() {
                   </Link>
                 </li>
               ))}
-              <li className="relative">
-                <details className="group">
-                  <summary className="nav-link cursor-pointer list-none [&::-webkit-details-marker]:hidden">
-                    Areas
-                  </summary>
-                  <ul className="absolute right-0 z-30 mt-3 w-56 border border-grey-200 bg-bone py-2 text-navy">
+              <li className="relative" ref={areasRef}>
+                <button
+                  type="button"
+                  className="nav-link cursor-pointer"
+                  aria-expanded={areasOpen}
+                  aria-controls="areas-menu"
+                  onClick={() => setAreasOpen((value) => !value)}
+                >
+                  Areas
+                </button>
+                {areasOpen ? (
+                  <ul
+                    id="areas-menu"
+                    className="absolute right-0 z-30 mt-3 w-56 border border-grey-200 bg-bone py-2 text-navy"
+                  >
                     {dropdownAreas.map((area) => (
                       <li key={area.slug}>
                         <Link
@@ -71,12 +112,7 @@ export function Header() {
                       </Link>
                     </li>
                   </ul>
-                </details>
-              </li>
-              <li>
-                <Link href="/projects/" className="nav-link">
-                  Work
-                </Link>
+                ) : null}
               </li>
               <li>
                 <Link href="/about/" className="nav-link">

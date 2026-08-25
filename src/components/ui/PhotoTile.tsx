@@ -26,7 +26,7 @@ export function PhotoTile({
       <div className="absolute inset-x-0 bottom-0 p-5 md:p-7">
         <p className="rule mb-3" aria-hidden="true" />
         <p className="font-display text-xl font-normal text-bone md:text-2xl">{title}</p>
-        {caption ? <p className="caption mt-1.5 text-bone/60">{caption}</p> : null}
+        {caption ? <p className="caption mt-1.5 text-bone/80">{caption}</p> : null}
       </div>
     </Link>
   );

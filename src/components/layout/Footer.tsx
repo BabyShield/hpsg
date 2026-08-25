@@ -19,7 +19,7 @@ export function Footer() {
           </a>
         </div>
         <div className="lg:col-span-2">
-          <h2 className="kicker text-bone/45">Services</h2>
+          <h2 className="kicker text-bone/70">Services</h2>
           <ul className="mt-6 flex flex-col gap-3 text-sm text-bone/85">
             {services.map((service) => (
               <li key={service.slug}>
@@ -29,7 +29,7 @@ export function Footer() {
           </ul>
         </div>
         <div className="lg:col-span-3">
-          <h2 className="kicker text-bone/45">Areas</h2>
+          <h2 className="kicker text-bone/70">Areas</h2>
           <ul className="mt-6 columns-2 gap-8 text-sm text-bone/85">
             {tier1Areas().map((area) => (
               <li key={area.slug} className="mb-3 break-inside-avoid">
@@ -39,7 +39,7 @@ export function Footer() {
           </ul>
         </div>
         <div className="lg:col-span-3">
-          <h2 className="kicker text-bone/45">Company</h2>
+          <h2 className="kicker text-bone/70">Company</h2>
           <ul className="mt-6 flex flex-col gap-3 text-sm text-bone/85">
             <li>
               <Link href="/about/">About</Link>
@@ -72,7 +72,7 @@ export function Footer() {
         </div>
       </Container>
       <div className="border-t border-bone/10">
-        <Container className="flex flex-col gap-3 py-7 text-xs tracking-wide text-bone/45 sm:flex-row sm:items-center sm:justify-between">
+        <Container className="flex flex-col gap-3 py-7 text-xs tracking-wide text-bone/70 sm:flex-row sm:items-center sm:justify-between">
           <p>{site.footerLegal}</p>
           <p>
             <a href="https://hampsteadrenovations.co.uk">Hampstead Renovations</a>
