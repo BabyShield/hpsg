@@ -21,7 +21,7 @@ import {
   hasPaintingMicrosite,
 } from "@/lib/matrix";
 import { areaTitleCue } from "@/data/seo-cues";
-import { addressSingleLine } from "@/data/site";
+import { addressSingleLine, site } from "@/data/site";
 import { publicCopy } from "@/lib/public-copy";
 import { absoluteUrl, faqSchema, itemListSchema, placeSchema, serviceSchema, webPageSchema } from "@/lib/schema";
 import { areaHook, areaMetaDescription, areaSearchFaqs, servicePlainName } from "@/lib/seo-copy";
@@ -42,6 +42,7 @@ export function AreaHub({ area }: { area: Area }) {
   // A room from the area's dominant housing character — the hero already
   // carries the street view, so this must not repeat it.
   const insetPhoto = getComboPhotos("light-refurbishment", area.slug).hero;
+  const landmarks = area.landmarks.map((item) => publicCopy(item)).filter(Boolean);
   const cue = areaTitleCue[area.slug];
   const heroPhoto = photo
     ? {
@@ -113,8 +114,8 @@ export function AreaHub({ area }: { area: Area }) {
           title={`Kitchens, bathrooms and decorating in ${area.name}`}
           lede={`${area.name} ${area.postcode} is ${areaHook(area)}. Kitchen, bathroom, painting and light refurbishment from Finchley Road.`}
         />
-        <Container className="grid items-start gap-12 py-24 sm:py-32 lg:grid-cols-12 lg:gap-16">
-          <div className="space-y-5 text-base leading-relaxed text-grey-700 lg:col-span-7">
+        <Container className="grid items-start gap-12 py-20 sm:py-24 lg:grid-cols-12 lg:gap-16">
+          <div className="prose-measure space-y-5 text-base leading-relaxed text-grey-700 lg:col-span-7">
             <p className="lede text-xl text-grey-700 md:text-2xl">{publicCopy(content.intro)}</p>
             <p>{publicCopy(area.housingStock)}</p>
             {content.typical ? <p>{publicCopy(content.typical)}</p> : null}
@@ -137,6 +138,36 @@ export function AreaHub({ area }: { area: Area }) {
               })}
             </ul>
           </div>
+          <aside className="band-navy p-8 lg:col-span-5 lg:p-10">
+            <p className="kicker text-gold">At a glance</p>
+            <dl className="mt-8 space-y-6">
+              <div className="border-t border-bone/15 pt-5">
+                <dt className="caption text-bone/70">Postcode</dt>
+                <dd className="mt-2 font-display text-3xl font-normal text-bone">
+                  {area.postcode}
+                </dd>
+              </div>
+              <div className="border-t border-bone/15 pt-5">
+                <dt className="caption text-bone/70">Council</dt>
+                <dd className="mt-2 text-base leading-relaxed text-bone/85">
+                  {publicCopy(area.council)}
+                </dd>
+              </div>
+              <div className="border-t border-bone/15 pt-5">
+                <dt className="caption text-bone/70">Worked from</dt>
+                <dd className="mt-2 text-base leading-relaxed text-bone/85">
+                  {site.address.line1}, {site.address.line2}, {site.address.postcode}
+                </dd>
+              </div>
+            </dl>
+            {landmarks.length > 0 ? (
+              <ul className="mt-8 flex flex-wrap gap-x-5 gap-y-2 border-t border-bone/15 pt-6 text-sm text-bone/75">
+                {landmarks.map((landmark) => (
+                  <li key={landmark}>{landmark}</li>
+                ))}
+              </ul>
+            ) : null}
+          </aside>
         </Container>
 
         <LocalFacts
@@ -227,25 +258,12 @@ export function AreaHub({ area }: { area: Area }) {
               </h2>
               <div className="mt-8 space-y-5 text-base leading-relaxed text-grey-700">
                 <p>
-                  <span className="font-medium text-navy">Council. </span>
-                  {publicCopy(area.council)}
-                </p>
-                <p>
                   <span className="font-medium text-navy">Conservation. </span>
                   {publicCopy(area.conservationNotes)}
                 </p>
                 <p>{publicCopy(content.working)}</p>
                 <p>{publicCopy(area.localNotes)}</p>
               </div>
-              {area.landmarks.length > 0 ? (
-                <ul className="mt-8 flex flex-wrap gap-3 text-sm text-grey-600">
-                  {area.landmarks.map((landmark) => (
-                    <li key={landmark} className="border-b border-grey-200 pb-1">
-                      {publicCopy(landmark)}
-                    </li>
-                  ))}
-                </ul>
-              ) : null}
             </div>
             <div className="lg:col-span-6">
               <ContentImage

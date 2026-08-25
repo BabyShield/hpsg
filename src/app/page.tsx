@@ -8,6 +8,7 @@ import { Container } from "@/components/ui/Container";
 import { ContentImage } from "@/components/ui/ContentImage";
 import { CtaBand } from "@/components/ui/CtaBand";
 import { FaqAccordion } from "@/components/ui/FaqAccordion";
+import { NumberedList } from "@/components/ui/NumberedList";
 import { PhotoTile } from "@/components/ui/PhotoTile";
 import { ServiceCard } from "@/components/ui/ServiceCard";
 import {
@@ -97,7 +98,8 @@ export default function HomePage() {
           sizes="100vw"
           className="object-cover object-[center_70%]"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/22 to-navy/8" />
+        <div className="absolute inset-0 bg-gradient-to-t from-navy/88 via-navy/40 to-navy/15" />
+        <div className="absolute inset-0 bg-gradient-to-r from-navy/45 via-transparent to-transparent" />
         <Container className="relative flex min-h-svh flex-col justify-end pb-28 pt-28 md:pb-28">
           <p className="kicker hero-type mb-6 text-gold">Hampstead · Finchley Road</p>
           <p className="rule mb-7" aria-hidden="true" />
@@ -143,17 +145,7 @@ export default function HomePage() {
               photographs.
             </p>
           </div>
-          <ol className="mt-16 grid gap-x-10 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
-            {homeMethod.map((step, index) => (
-              <li key={step.title}>
-                <p className="font-display text-3xl text-gold-deep">
-                  {String(index + 1).padStart(2, "0")}
-                </p>
-                <h3 className="mt-4 font-display text-2xl font-normal">{step.title}</h3>
-                <p className="mt-3 text-base leading-relaxed text-grey-700">{step.text}</p>
-              </li>
-            ))}
-          </ol>
+          <NumberedList items={homeMethod.map((step) => ({ title: step.title, text: step.text }))} />
         </Container>
         <div className="bleed mt-20">
           <ContentImage

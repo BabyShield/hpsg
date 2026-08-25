@@ -40,7 +40,8 @@ export function PageHero({
   return (
     <section className="relative min-h-[36rem] overflow-hidden text-bone md:min-h-[50rem]">
       {photo ? <HeroPhoto photo={photo} /> : <div className="absolute inset-0 bg-navy" />}
-      <div className="absolute inset-0 bg-gradient-to-t from-navy/70 via-navy/22 to-navy/5" />
+      <div className="absolute inset-0 bg-gradient-to-t from-navy/88 via-navy/45 to-navy/20" />
+      <div className="absolute inset-0 bg-gradient-to-r from-navy/55 via-navy/10 to-transparent" />
       <Container className="relative flex min-h-[36rem] flex-col justify-end pb-16 pt-14 md:min-h-[50rem] md:pb-28">
         {crumbs ? <Breadcrumbs items={crumbs} tone="light" /> : null}
         {kicker ? (

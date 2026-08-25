@@ -6,6 +6,7 @@ import { ContentImage } from "@/components/ui/ContentImage";
 import { CtaBand } from "@/components/ui/CtaBand";
 import { FaqAccordion } from "@/components/ui/FaqAccordion";
 import { LocalFacts } from "@/components/ui/LocalFacts";
+import { NumberedList } from "@/components/ui/NumberedList";
 import { PageHero } from "@/components/ui/PageHero";
 import { PhotoTile } from "@/components/ui/PhotoTile";
 import { getServiceAreaFacts } from "@/data/service-area-facts";
@@ -237,27 +238,25 @@ export function ComboPage({
         </section>
 
         <section className="border-y border-grey-200 py-24 sm:py-32">
-          <Container>
-            <p className="rule mb-8" aria-hidden="true" />
-            <h2 className="font-display text-4xl font-normal sm:text-5xl">
-              {headings.process}
-            </h2>
-            <p className="mt-5 max-w-measure text-base leading-relaxed text-grey-700">
-              {comboProcessLede(combo)}
-            </p>
-            <ol className="mt-16 grid gap-x-10 gap-y-12 md:grid-cols-2">
-              {combo.service.processSteps.map((step, index) => (
-                <li key={step.title}>
-                  <p className="font-display text-3xl text-gold-deep">
-                    {String(index + 1).padStart(2, "0")}
-                  </p>
-                  <h3 className="mt-3 font-display text-2xl font-normal">{step.title}</h3>
-                  <p className="mt-3 text-base leading-relaxed text-grey-700">
-                    {publicCopy(step.text)}
-                  </p>
-                </li>
-              ))}
-            </ol>
+          <Container className="grid gap-10 lg:grid-cols-12 lg:gap-16">
+            <div className="lg:col-span-4">
+              <p className="rule mb-8" aria-hidden="true" />
+              <h2 className="font-display text-4xl font-normal sm:text-5xl">
+                {headings.process}
+              </h2>
+              <p className="mt-6 text-base leading-relaxed text-grey-700">
+                {comboProcessLede(combo)}
+              </p>
+            </div>
+            <div className="lg:col-span-8">
+              <NumberedList
+                variant="timeline"
+                items={combo.service.processSteps.map((step) => ({
+                  title: step.title,
+                  text: publicCopy(step.text),
+                }))}
+              />
+            </div>
           </Container>
         </section>
 

@@ -1,6 +1,7 @@
 import { publicCopy } from "@/lib/public-copy";
 
 import { Container } from "./Container";
+import { NumberedList } from "./NumberedList";
 
 export function LocalFacts({
   areaName,
@@ -26,16 +27,7 @@ export function LocalFacts({
         <p className="lede mt-6 max-w-xl text-xl text-grey-600 md:text-2xl">
           {lede ?? "Checkable local facts that shape access, conservation and the building."}
         </p>
-        <ol className="mt-16 grid gap-x-20 gap-y-12 md:grid-cols-2">
-          {visible.map((fact, index) => (
-            <li key={fact} className="grid grid-cols-[auto_1fr] items-start gap-5">
-              <span className="font-display text-3xl leading-none text-gold-deep">
-                {String(index + 1).padStart(2, "0")}
-              </span>
-              <p className="text-base leading-relaxed text-grey-700">{fact}</p>
-            </li>
-          ))}
-        </ol>
+        <NumberedList variant="facts" items={visible.map((fact) => ({ text: fact }))} />
       </Container>
     </section>
   );

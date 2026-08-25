@@ -7,6 +7,7 @@ import { ContentImage } from "@/components/ui/ContentImage";
 import { CtaBand } from "@/components/ui/CtaBand";
 import { FaqAccordion } from "@/components/ui/FaqAccordion";
 import { LocalFacts } from "@/components/ui/LocalFacts";
+import { NumberedList } from "@/components/ui/NumberedList";
 import { PageHero } from "@/components/ui/PageHero";
 import { PhotoTile } from "@/components/ui/PhotoTile";
 import { ServiceCard } from "@/components/ui/ServiceCard";
@@ -140,30 +141,25 @@ export function ServiceHub({ service }: { service: Service }) {
         />
 
         {content.failures && content.failures.length > 0 ? (
-          <section className="border-y border-grey-200 py-24 sm:py-32">
+          <section className="band-navy py-24 sm:py-32">
             <Container>
               <p className="rule mb-8" aria-hidden="true" />
-              <h2 className="font-display text-4xl font-normal sm:text-5xl">
+              <h2 className="font-display text-4xl font-normal text-bone sm:text-5xl">
                 {content.failuresHeading ?? "What has to be right"}
               </h2>
               {content.failuresLede ? (
-                <p className="lede mt-6 max-w-measure text-xl text-grey-600">
+                <p className="lede mt-6 max-w-measure text-xl text-bone/80">
                   {content.failuresLede}
                 </p>
               ) : null}
-              <ol className="mt-16 grid gap-10 md:grid-cols-2 lg:grid-cols-4">
-                {content.failures.map((item, index) => (
-                  <li key={item.title}>
-                    <p className="font-display text-3xl text-gold-deep">
-                      {String(index + 1).padStart(2, "0")}
-                    </p>
-                    <h3 className="mt-3 font-display text-2xl font-normal">{item.title}</h3>
-                    <p className="mt-3 text-base leading-relaxed text-grey-700">
-                      {publicCopy(item.text)}
-                    </p>
-                  </li>
-                ))}
-              </ol>
+              <NumberedList
+                tone="dark"
+                columns={4}
+                items={content.failures.map((item) => ({
+                  title: item.title,
+                  text: publicCopy(item.text),
+                }))}
+              />
             </Container>
           </section>
         ) : null}
@@ -293,17 +289,13 @@ export function ServiceHub({ service }: { service: Service }) {
             <h2 className="font-display text-4xl font-normal sm:text-5xl">
               {seo.processH2}
             </h2>
-            <ol className="mt-16 grid gap-x-10 gap-y-12 md:grid-cols-2 lg:grid-cols-3">
-              {service.processSteps.map((step, index) => (
-                <li key={step.title}>
-                  <p className="font-display text-3xl text-gold-deep">
-                    {String(index + 1).padStart(2, "0")}
-                  </p>
-                  <h3 className="mt-3 font-display text-2xl font-normal">{step.title}</h3>
-                  <p className="mt-3 text-base leading-relaxed text-grey-700">{publicCopy(step.text)}</p>
-                </li>
-              ))}
-            </ol>
+            <NumberedList
+              columns={3}
+              items={service.processSteps.map((step) => ({
+                title: step.title,
+                text: publicCopy(step.text),
+              }))}
+            />
           </Container>
         </section>
 
