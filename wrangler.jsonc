@@ -11,6 +11,11 @@
     "directory": ".open-next/assets",
     "binding": "ASSETS"
   },
+  // Cloudflare Images transforms for /_next/image. Without this binding the
+  // OpenNext handler passes originals through untransformed.
+  "images": {
+    "binding": "IMAGES"
+  },
   "observability": {
     "enabled": true
   },

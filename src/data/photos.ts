@@ -251,3 +251,140 @@ export const areaPhotos: Record<string, Photo> = {
 
 export const photoCredit =
   "Photographs illustrate typical North West London housing and interiors. They are not named case studies and do not show a specific client or address.";
+
+/**
+ * Room photography per service, ordered so index 0 is the general hero.
+ * Used by getComboPhotos() to give every service-in-area page its own pairing.
+ */
+const roomSets: Record<ServiceSlug, Photo[]> = {
+  "kitchen-renovation": [
+    kitchenRoomPhotos.galley,
+    kitchenRoomPhotos.compact,
+    kitchenRoomPhotos.chimney,
+    kitchenRoomPhotos.suburb,
+    servicePhotos["kitchen-renovation"],
+  ],
+  "bathroom-renovation": [
+    bathroomRoomPhotos.compact,
+    bathroomRoomPhotos.shower,
+    bathroomRoomPhotos.wetWall,
+    servicePhotos["bathroom-renovation"],
+  ],
+  "painting-decorating": [
+    paintingRoomPhotos.drawing,
+    paintingRoomPhotos.sashes,
+    paintingRoomPhotos.flat,
+    servicePhotos["painting-decorating"],
+  ],
+  "light-refurbishment": [
+    refurbRoomPhotos.sitting,
+    refurbRoomPhotos.hall,
+    refurbRoomPhotos.bedroom,
+    servicePhotos["light-refurbishment"],
+  ],
+};
+
+/**
+ * Which room photograph honestly represents each area's housing character.
+ * Keyed to the housing type described in the page copy (see seo-cues.ts), so
+ * the image agrees with the text rather than being decoration.
+ */
+const comboRoomIndex: Record<ServiceSlug, Record<string, number>> = {
+  // 0 galley · 1 compact (mansion flat) · 2 chimney (village house) · 3 suburb · 4 general
+  "kitchen-renovation": {
+    "west-hampstead": 0,
+    kilburn: 0,
+    "kentish-town": 0,
+    "crouch-end": 0,
+    "queens-park": 0,
+    "st-johns-wood": 1,
+    "maida-vale": 1,
+    "swiss-cottage": 1,
+    "primrose-hill": 1,
+    hampstead: 2,
+    highgate: 2,
+    "belsize-park": 2,
+    "hampstead-garden-suburb": 3,
+    "golders-green": 3,
+    "muswell-hill": 3,
+  },
+  // 0 compact ensuite · 1 walk-in shower · 2 tiled wet wall · 3 general
+  "bathroom-renovation": {
+    "st-johns-wood": 0,
+    "maida-vale": 0,
+    "swiss-cottage": 0,
+    "kentish-town": 0,
+    hampstead: 1,
+    highgate: 1,
+    "belsize-park": 1,
+    "hampstead-garden-suburb": 1,
+    "west-hampstead": 2,
+    kilburn: 2,
+    "queens-park": 2,
+    "crouch-end": 2,
+    "primrose-hill": 3,
+    "golders-green": 3,
+    "muswell-hill": 3,
+  },
+  // 0 drawing room · 1 sashes · 2 mansion-flat reception · 3 general
+  "painting-decorating": {
+    hampstead: 0,
+    "belsize-park": 0,
+    highgate: 0,
+    "primrose-hill": 0,
+    "muswell-hill": 1,
+    "crouch-end": 1,
+    "queens-park": 1,
+    "hampstead-garden-suburb": 1,
+    "st-johns-wood": 2,
+    "maida-vale": 2,
+    "swiss-cottage": 2,
+    kilburn: 2,
+    "west-hampstead": 3,
+    "kentish-town": 3,
+    "golders-green": 3,
+  },
+  // 0 sitting room · 1 hall · 2 bedroom · 3 general
+  "light-refurbishment": {
+    hampstead: 0,
+    "belsize-park": 0,
+    highgate: 0,
+    "golders-green": 0,
+    "west-hampstead": 1,
+    "kentish-town": 1,
+    kilburn: 1,
+    "crouch-end": 1,
+    "st-johns-wood": 2,
+    "maida-vale": 2,
+    "swiss-cottage": 2,
+    "queens-park": 2,
+    "primrose-hill": 3,
+    "muswell-hill": 3,
+    "hampstead-garden-suburb": 3,
+  },
+};
+
+/** Stable fallback so an unmapped area still gets a deterministic photo. */
+function slugIndex(slug: string, length: number): number {
+  let hash = 0;
+  for (let i = 0; i < slug.length; i += 1) hash = (hash * 31 + slug.charCodeAt(i)) % 100000;
+  return hash % length;
+}
+
+/**
+ * The three photographs for a service-in-area page: the room (hero), a second
+ * room from the same set, and the street. No two of the three repeat.
+ */
+export function getComboPhotos(
+  service: ServiceSlug,
+  areaSlug: string,
+): { hero: Photo; secondary: Photo; area: Photo | undefined } {
+  const set = roomSets[service];
+  const mapped = comboRoomIndex[service][areaSlug];
+  const heroIndex = mapped ?? slugIndex(areaSlug, set.length);
+  return {
+    hero: set[heroIndex],
+    secondary: set[(heroIndex + 1) % set.length],
+    area: areaPhotos[areaSlug],
+  };
+}

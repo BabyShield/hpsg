@@ -9,7 +9,7 @@ import { LocalFacts } from "@/components/ui/LocalFacts";
 import { PageHero } from "@/components/ui/PageHero";
 import { PhotoTile } from "@/components/ui/PhotoTile";
 import { getServiceAreaFacts } from "@/data/service-area-facts";
-import { areaPhotos, servicePhotos } from "@/data/photos";
+import { areaPhotos, getComboPhotos } from "@/data/photos";
 import { services } from "@/data/services";
 import type { Combo, ComboContent } from "@/data/types";
 import { comboHeadings } from "@/data/service-seo";
@@ -54,11 +54,12 @@ export function ComboPage({
   const serviceName = servicePlainName(combo.service);
   const headings = comboHeadings(combo.service.slug, combo.area.name);
   const cue = serviceAreaCue(combo.service.slug, combo.area.slug);
+  const comboPhotos = getComboPhotos(combo.service.slug, combo.area.slug);
   const heroPhoto = {
-    ...servicePhotos[combo.service.slug],
+    ...comboPhotos.hero,
     alt: cue
       ? `${serviceName} in ${combo.area.name} — ${cue.title.toLowerCase()}`
-      : `${servicePhotos[combo.service.slug].alt} — ${combo.area.name} ${combo.area.postcode}`,
+      : `${comboPhotos.hero.alt} — ${combo.area.name} ${combo.area.postcode}`,
   };
   const crumbs = [
     { name: "Home", href: "/" },
@@ -85,7 +86,7 @@ export function ComboPage({
           url: pageUrl,
           areaServed: [`${combo.area.name}, ${combo.area.postcode}`, "North West London"],
           description: content.lede,
-          image: servicePhotos[combo.service.slug].src,
+          image: heroPhoto.src,
           serviceType: serviceName,
         })}
       />
@@ -94,7 +95,7 @@ export function ComboPage({
           name: `${serviceName} in ${combo.area.name} ${combo.area.postcode}`,
           url: pageUrl,
           description: content.lede,
-          image: servicePhotos[combo.service.slug].src,
+          image: heroPhoto.src,
           imageAlt: heroPhoto.alt,
         })}
       />
@@ -183,7 +184,7 @@ export function ComboPage({
                 <p>{publicCopy(combo.area.localNotes)}</p>
               </div>
               <ContentImage
-                photo={servicePhotos[combo.service.slug]}
+                photo={comboPhotos.secondary}
                 className="aspect-[4/3] w-full"
                 sizes="(min-width: 1024px) 50vw, 100vw"
               />
@@ -339,6 +340,7 @@ export function ComboPage({
       <CtaBand
         title={`Request a quote for ${combo.service.navLabel.toLowerCase()} in ${combo.area.name}`}
         text="Tell us the property and the rooms in scope. We visit before we write a proposal."
+        photo={comboPhotos.area}
       />
     </>
   );

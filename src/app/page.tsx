@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 import { FeaturedProjects } from "@/components/home/FeaturedProjects";
@@ -88,11 +89,13 @@ export default function HomePage() {
       />
 
       <section className="relative min-h-svh overflow-hidden text-bone">
-        {/* eslint-disable-next-line @next/next/no-img-element -- wide hero crop is unreliable with next/image fill */}
-        <img
+        <Image
           src={homeHero.src}
           alt={homeHero.alt}
-          className="absolute inset-0 h-full w-full object-cover object-[center_70%]"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-[center_70%]"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/22 to-navy/8" />
         <Container className="relative flex min-h-svh flex-col justify-end pb-28 pt-28 md:pb-28">

@@ -496,7 +496,7 @@ export const serviceHubContent: Record<ServiceSlug, ServiceHubContent> = {
         title: "Kitchen in the programme",
         text:
           "A replacement within the existing room: galleys, chimney breasts, compact mansion-flat kitchens. Specified and sequenced with the bathrooms and the decoration, not as a separate contractor.",
-        photo: servicePhotos["kitchen-renovation"],
+        photo: kitchenRoomPhotos.compact,
         href: "/kitchen-renovation/",
         linkLabel: "Kitchen renovation in North West London",
       },
@@ -504,7 +504,7 @@ export const serviceHubContent: Record<ServiceSlug, ServiceHubContent> = {
         title: "Bathroom in the programme",
         text:
           "Tanking, extract and compact layouts. Finished and tested before floors and decoration close around them, so a late plumber is not destroying paint.",
-        photo: servicePhotos["bathroom-renovation"],
+        photo: bathroomRoomPhotos.shower,
         href: "/bathroom-renovation/",
         linkLabel: "Bathroom renovation in North West London",
       },

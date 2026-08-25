@@ -1,21 +1,13 @@
-import type { Photo } from "@/data/photos";
+import Image from "next/image";
 
-function Photo({ photo, imageClassName = "" }: { photo: Photo; imageClassName?: string }) {
-  // Native img: next/image fill reports height 0 inside overlay tiles.
-  // eslint-disable-next-line @next/next/no-img-element
-  return (
-    <img
-      src={photo.src}
-      alt={photo.alt}
-      className={`absolute inset-0 h-full w-full object-cover ${imageClassName}`.trim()}
-    />
-  );
-}
+import type { Photo } from "@/data/photos";
 
 export function ContentImage({
   photo,
+  priority = false,
   className = "",
   imageClassName = "",
+  sizes = "100vw",
   fillParent = false,
 }: {
   photo: Photo;
@@ -29,7 +21,14 @@ export function ContentImage({
     <div
       className={`${fillParent ? "absolute inset-0" : "relative"} overflow-hidden bg-grey-100 ${className}`.trim()}
     >
-      <Photo photo={photo} imageClassName={imageClassName} />
+      <Image
+        src={photo.src}
+        alt={photo.alt}
+        fill
+        sizes={sizes}
+        priority={priority}
+        className={`object-cover ${imageClassName}`.trim()}
+      />
     </div>
   );
 }

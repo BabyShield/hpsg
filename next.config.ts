@@ -4,6 +4,10 @@ const nextConfig: NextConfig = {
   trailingSlash: true,
   images: {
     formats: ["image/avif", "image/webp"],
+    // Sources are 1280x720; nothing wider is useful and each extra width is
+    // another Cloudflare transform.
+    deviceSizes: [640, 768, 1024, 1280],
+    imageSizes: [256, 384, 512],
   },
   async redirects() {
     return [

@@ -12,7 +12,7 @@ import { getAreaFacts } from "@/data/area-facts";
 import { ServiceCard } from "@/components/ui/ServiceCard";
 import { getComboContent } from "@/data/combo-content";
 import { areaHubContent } from "@/data/area-hub-content";
-import { areaPhotos } from "@/data/photos";
+import { areaPhotos, getComboPhotos } from "@/data/photos";
 import { services } from "@/data/services";
 import type { Area } from "@/data/types";
 import {
@@ -39,6 +39,9 @@ export function AreaHub({ area }: { area: Area }) {
   const nearby = getNearbyAreas(area);
   const combos = getCombosForArea(area.slug);
   const photo = areaPhotos[area.slug];
+  // A room from the area's dominant housing character — the hero already
+  // carries the street view, so this must not repeat it.
+  const insetPhoto = getComboPhotos("light-refurbishment", area.slug).hero;
   const cue = areaTitleCue[area.slug];
   const heroPhoto = photo
     ? {
@@ -244,18 +247,14 @@ export function AreaHub({ area }: { area: Area }) {
                 </ul>
               ) : null}
             </div>
-            {photo ? (
-              <div className="lg:col-span-6">
-                <ContentImage
-                  photo={photo}
-                  className="aspect-[4/5] w-full"
-                  sizes="(min-width: 1024px) 45vw, 100vw"
-                />
-                <p className="caption mt-3">
-                  {area.name}, {area.postcode}
-                </p>
-              </div>
-            ) : null}
+            <div className="lg:col-span-6">
+              <ContentImage
+                photo={insetPhoto}
+                className="aspect-[4/5] w-full"
+                sizes="(min-width: 1024px) 45vw, 100vw"
+              />
+              <p className="caption mt-3">{insetPhoto.alt}</p>
+            </div>
           </Container>
         </section>
 

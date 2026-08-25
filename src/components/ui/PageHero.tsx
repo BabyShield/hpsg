@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
 
@@ -8,13 +9,15 @@ import { site } from "@/data/site";
 import { Container } from "./Container";
 
 function HeroPhoto({ photo }: { photo: Photo }) {
-  // Native img: next/image fill crops unreliably on full-bleed heroes.
-  // eslint-disable-next-line @next/next/no-img-element
+  // The LCP element on photo-led pages: preload + fetchpriority via `priority`.
   return (
-    <img
+    <Image
       src={photo.src}
       alt={photo.alt}
-      className="absolute inset-0 h-full w-full object-cover object-[center_65%]"
+      fill
+      priority
+      sizes="100vw"
+      className="object-cover object-[center_65%]"
     />
   );
 }
