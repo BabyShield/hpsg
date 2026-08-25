@@ -20,10 +20,26 @@
       "service": "hpsg"
     }
   ],
+  // Pre-launch: the only live host is *.workers.dev, so the whole site is
+  // served with X-Robots-Tag noindex (src/middleware.ts) to stop the preview
+  // host being indexed against canonicals that point at hpsg.co.uk.
+  //
+  // Launch flip, once the hpsg.co.uk zone is on this Cloudflare account
+  // (nameserver move from Hostinger — see README):
+  //   1. "routes": [{ "pattern": "hpsg.co.uk", "custom_domain": true }]
+  //   2. "workers_dev": false, "preview_urls": false
+  //   3. "vars": { "HPSG_NOINDEX": "false" }
   "workers_dev": true,
   "preview_urls": true,
   "routes": [],
   "vars": {
-    "HPSG_NOINDEX": "false"
+    "HPSG_NOINDEX": "true"
+  },
+  "env": {
+    "preview": {
+      "vars": {
+        "HPSG_NOINDEX": "true"
+      }
+    }
   }
 }

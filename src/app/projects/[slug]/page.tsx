@@ -5,6 +5,8 @@ import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { Container } from "@/components/ui/Container";
 import { CtaBand } from "@/components/ui/CtaBand";
 import { getProject, publishedProjects } from "@/data/projects";
+import { site } from "@/data/site";
+import { pageMetadata } from "@/lib/metadata";
 import { isDraftToken, publicCopy } from "@/lib/public-copy";
 
 export const dynamic = "force-static";
@@ -22,10 +24,11 @@ export async function generateMetadata({
   const { slug } = await params;
   const project = getProject(slug);
   if (!project || isDraftToken(project.title)) return {};
-  return {
-    title: publicCopy(project.title),
+  return pageMetadata({
+    title: `${publicCopy(project.title)} | ${site.shortName}`,
     description: publicCopy(project.summary),
-  };
+    path: `/projects/${project.slug}/`,
+  });
 }
 
 export default async function ProjectPage({

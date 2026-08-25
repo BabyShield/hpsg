@@ -11,8 +11,8 @@ import { pageMetadata } from "@/lib/metadata";
 import { isDraftToken } from "@/lib/public-copy";
 
 export const metadata = pageMetadata({
-  title: "Contact HPSG | Kitchen and bathroom quotes in North West London",
-  description: `Request a quote for kitchen renovation, bathroom renovation, painting or light refurbishment in Hampstead and North West London. ${site.phoneDisplay}. ${addressSingleLine}.`,
+  title: "Contact HPSG | Quotes in North West London",
+  description: `Request a quote for kitchen, bathroom, painting or light refurbishment work in North West London. ${site.phoneDisplay}. Finchley Road, NW3.`,
   path: "/contact/",
   image: officeNeighbourhood.src,
   imageAlt: officeNeighbourhood.alt,

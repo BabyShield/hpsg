@@ -13,6 +13,19 @@ export function absoluteUrl(path: string): string {
   return `${site.url}${normalised}`;
 }
 
+/**
+ * Absolute URL for a static asset (image, file). Unlike page URLs, asset URLs
+ * must NOT carry a trailing slash — Workers Static Assets 404s on
+ * "/images/foo.jpg/". Asserts at build time that the path looks like a file.
+ */
+export function assetUrl(path: string): string {
+  const last = path.split("/").pop() ?? "";
+  if (!last.includes(".")) {
+    throw new Error(`assetUrl expects a file path (got "${path}") — use absoluteUrl for pages`);
+  }
+  return `${site.url}${path.startsWith("/") ? path : `/${path}`}`;
+}
+
 export function organizationSchema() {
   return {
     "@context": "https://schema.org",
@@ -76,10 +89,15 @@ export function organizationSchema() {
       "Licence to alter",
     ],
     image: [
-      absoluteUrl("/images/home/hero.jpg"),
-      absoluteUrl("/images/about/office-neighbourhood.jpg"),
+      assetUrl("/images/home/hero.jpg"),
+      assetUrl("/images/about/office-neighbourhood.jpg"),
     ],
-    logo: absoluteUrl("/images/about/office-neighbourhood.jpg"),
+    logo: {
+      "@type": "ImageObject",
+      url: assetUrl("/images/logo.png"),
+      width: 512,
+      height: 512,
+    },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "North West London property services",
@@ -147,7 +165,7 @@ export function webPageSchema({
     primaryImageOfPage: image
       ? {
           "@type": "ImageObject",
-          url: absoluteUrl(image),
+          url: assetUrl(image),
           caption: imageAlt ?? name,
         }
       : undefined,
@@ -232,7 +250,7 @@ export function serviceSchema({
     image: image
       ? {
           "@type": "ImageObject",
-          url: absoluteUrl(image),
+          url: assetUrl(image),
         }
       : undefined,
     provider: { "@id": BUSINESS_ID },

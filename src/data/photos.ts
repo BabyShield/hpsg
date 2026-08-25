@@ -7,7 +7,7 @@ export type Photo = {
   height: number;
 };
 
-const wide = { width: 1600, height: 900 };
+const wide = { width: 1280, height: 720 };
 
 export const homeHero: Photo = {
   src: "/images/home/hero.jpg",

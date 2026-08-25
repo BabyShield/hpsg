@@ -22,9 +22,9 @@ import { isDraftToken, publicCopy } from "@/lib/public-copy";
 import { absoluteUrl, faqSchema, webPageSchema } from "@/lib/schema";
 
 export const metadata = pageMetadata({
-  title: "About Hampstead Property Services Group | Kitchen and bathroom renovation | HPSG",
+  title: "About Hampstead Property Services Group | HPSG",
   description:
-    "Hampstead Property Services Group Limited (17404557) carries out kitchen renovation, bathroom renovation, painting and light refurbishment in Hampstead and North West London. Survey-led, from Finchley Road. 020 7101 3168.",
+    "Hampstead Property Services Group Limited: kitchen, bathroom, painting and light refurbishment in North West London. Survey-led, from Finchley Road. 020 7101 3168.",
   path: "/about/",
   image: officeNeighbourhood.src,
   imageAlt: officeNeighbourhood.alt,

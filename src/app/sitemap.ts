@@ -5,7 +5,7 @@ import { areaPhotos, servicePhotos } from "@/data/photos";
 import { publishedProjects } from "@/data/projects";
 import { services } from "@/data/services";
 import { getCombos } from "@/lib/matrix";
-import { absoluteUrl } from "@/lib/schema";
+import { absoluteUrl, assetUrl } from "@/lib/schema";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
@@ -15,7 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified,
     changeFrequency: "weekly",
     priority: 1,
-    images: [absoluteUrl("/images/home/hero.jpg")],
+    images: [assetUrl("/images/home/hero.jpg")],
   };
 
   const staticPages: MetadataRoute.Sitemap = [
@@ -30,7 +30,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified,
     changeFrequency: "monthly" as const,
     priority,
-    ...(image ? { images: [absoluteUrl(image)] } : {}),
+    ...(image ? { images: [assetUrl(image)] } : {}),
   }));
 
   const servicePages: MetadataRoute.Sitemap = services.map((service) => ({
@@ -38,7 +38,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified,
     changeFrequency: "weekly",
     priority: 0.9,
-    images: [absoluteUrl(servicePhotos[service.slug].src)],
+    images: [assetUrl(servicePhotos[service.slug].src)],
   }));
 
   const areaPages: MetadataRoute.Sitemap = areas.map((area) => ({
@@ -46,7 +46,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified,
     changeFrequency: "monthly",
     priority: area.tier === 1 ? 0.7 : 0.55,
-    images: areaPhotos[area.slug] ? [absoluteUrl(areaPhotos[area.slug].src)] : undefined,
+    images: areaPhotos[area.slug] ? [assetUrl(areaPhotos[area.slug].src)] : undefined,
   }));
 
   const comboPages: MetadataRoute.Sitemap = getCombos().map((combo) => ({
@@ -55,8 +55,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: "weekly",
     priority: 0.8,
     images: [
-      absoluteUrl(servicePhotos[combo.service.slug].src),
-      ...(areaPhotos[combo.area.slug] ? [absoluteUrl(areaPhotos[combo.area.slug].src)] : []),
+      assetUrl(servicePhotos[combo.service.slug].src),
+      ...(areaPhotos[combo.area.slug] ? [assetUrl(areaPhotos[combo.area.slug].src)] : []),
     ],
   }));
 

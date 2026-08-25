@@ -1,4 +1,4 @@
-import { areaTitleCue, serviceAreaCue } from "@/data/seo-cues";
+import { serviceAreaCue } from "@/data/seo-cues";
 import { addressSingleLine, site } from "@/data/site";
 import type { Area, Combo, Faq, Service } from "@/data/types";
 
@@ -32,13 +32,21 @@ const AREA_HOOKS: Record<string, string> = {
   "south-hampstead": "mansion flats and the South Hampstead Conservation Area",
 };
 
-export function clipMeta(text: string, max = 158): string {
+/**
+ * Trim copy to a meta-description budget without an ellipsis: prefer a
+ * sentence boundary, fall back to a word boundary, always end on a full stop.
+ */
+export function trimMeta(text: string, max = 158): string {
   const clean = publicCopy(text).replace(/\s+/g, " ").trim();
   if (clean.length <= max) return clean;
-  const slice = clean.slice(0, max - 1);
-  const breakAt = slice.lastIndexOf(" ");
-  return `${slice.slice(0, breakAt > 80 ? breakAt : max - 1)}…`;
+  const slice = clean.slice(0, max);
+  const sentence = slice.lastIndexOf(". ");
+  if (sentence > max * 0.6) return slice.slice(0, sentence + 1);
+  const word = slice.lastIndexOf(" ");
+  return `${slice.slice(0, word).replace(/[,;:]$/, "")}.`;
 }
+
+const PHONE_TAIL = ` ${site.phoneDisplay}.`;
 
 export function areaHook(area: Area): string {
   return AREA_HOOKS[area.slug] ?? `work in the housing stock of ${area.name} ${area.postcode}`;
@@ -56,6 +64,12 @@ export function servicePlainName(service: Service): string {
   if (service.slug === "bathroom-renovation") return "Bathroom renovation";
   if (service.slug === "painting-decorating") return "Painting and decorating";
   return "Light refurbishment";
+}
+
+/** Title-bar variant: ampersand keeps the longest titles inside ~60 chars. */
+function serviceTitleName(service: Service): string {
+  if (service.slug === "painting-decorating") return "Painting & decorating";
+  return servicePlainName(service);
 }
 
 export function comboOpening(combo: Combo): string {
@@ -81,35 +95,27 @@ export function comboProcessLede(combo: Combo): string {
 }
 
 export function comboMetaTitle(combo: Combo): string {
-  const name = servicePlainName(combo.service);
-  const cue = serviceAreaCue(combo.service.slug, combo.area.slug)?.title;
-  const base = `${name} in ${combo.area.name} ${combo.area.postcode}`;
-  if (cue) return `${base} | ${cue} | HPSG`;
-  return `${base} | HPSG`;
+  return `${serviceTitleName(combo.service)} in ${combo.area.name} ${combo.area.postcode} | ${site.shortName}`;
 }
 
 export function comboMetaDescription(lede: string, stored: string): string {
-  const clean = publicCopy(lede).replace(/\s+/g, " ").trim();
   const storedClean = publicCopy(stored).replace(/\s+/g, " ").trim();
-  const base = clean.length >= 80 ? clean : storedClean || clean;
-  if (base.includes(site.phoneDisplay)) return clipMeta(base, 160);
-  return clipMeta(`${base.replace(/\.$/, "")}. ${site.phoneDisplay}.`, 160);
+  const base = storedClean || publicCopy(lede).replace(/\s+/g, " ").trim();
+  if (base.includes(site.phoneDisplay)) return trimMeta(base, 158);
+  const body = trimMeta(base, 155 - PHONE_TAIL.length).replace(/\.$/, "");
+  return `${body}.${PHONE_TAIL}`;
 }
 
 export function areaMetaTitle(area: Area): string {
-  const cue = areaTitleCue[area.slug];
-  const base = `Kitchens and bathrooms in ${area.name} ${area.postcode}`;
-  if (cue) return `${base} | ${cue} | HPSG`;
-  return `${base} | HPSG`;
+  return `Kitchens & Bathrooms in ${area.name} ${area.postcode} | ${site.shortName}`;
 }
 
 export function areaMetaDescription(area: Area): string {
   const hook = areaHook(area);
   const hooked = hook.charAt(0).toUpperCase() + hook.slice(1);
-  return clipMeta(
-    `${area.name} ${area.postcode}: kitchen renovation, bathroom renovation, painting and light refurbishment. ${hooked}. ${site.phoneDisplay}.`,
-    180,
-  );
+  const lead = `${area.name} ${area.postcode}: kitchen renovation, bathroom renovation, painting and light refurbishment.`;
+  const body = trimMeta(`${lead} ${hooked}.`, 160 - PHONE_TAIL.length).replace(/\.$/, "");
+  return `${body}.${PHONE_TAIL}`;
 }
 
 export function comboSearchFaqs(combo: Combo): Faq[] {

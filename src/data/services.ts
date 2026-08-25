@@ -111,7 +111,7 @@ export const services: Service[] = [
         a: "Yes. Period walls in Hampstead and Belsize Park are rarely square. We scribe the run to the breast rather than boxing it out as a convenience.",
       },
     ],
-    metaTitle: "Kitchen renovation in North West London | Conversions and mansion flats | HPSG",
+    metaTitle: "Kitchen renovation in North West London | HPSG",
     metaDescription:
       "Galleys, chimney breasts and compact mansion-flat kitchens in Hampstead, St John's Wood and Maida Vale. Survey-led fit-out from Finchley Road. 020 7101 3168.",
   },
@@ -225,7 +225,7 @@ export const services: Service[] = [
         a: "Sometimes. Available floor depth decides it. We treat it as an electrical circuit and a build-up problem, not as a brochure extra, and we will say at survey if the room cannot take it without thinning insulation.",
       },
     ],
-    metaTitle: "Bathroom renovation in North West London | Tanking and extract | HPSG",
+    metaTitle: "Bathroom renovation in North West London | HPSG",
     metaDescription:
       "Tanking, extract and compact layouts in Hampstead conversions and St John's Wood mansion flats. Timber floors and shared wastes. Survey-led. 020 7101 3168.",
   },
@@ -326,7 +326,7 @@ export const services: Service[] = [
         a: "Charts are a starting point. Samples are painted on the wall, in the light the room has. North-facing Hampstead rooms and west-facing mansion flats do not read the same emulsion in the same way.",
       },
     ],
-    metaTitle: "Painting and decorating in North West London | Occupied period houses | HPSG",
+    metaTitle: "Painting & decorating in North West London | HPSG",
     metaDescription:
       "Preparation, original joinery and occupied houses in Hampstead, Belsize Park and Highgate. A written prep specification, not a quick refresh. 020 7101 3168.",
   },
@@ -435,7 +435,7 @@ export const services: Service[] = [
         a: "Yes. An empty conversion or mansion-flat apartment between lets is ordinary work: kitchen and bathroom if they need it, decoration and floors to one standard, one programme and one account. We will not pad a refresh into a structural project.",
       },
     ],
-    metaTitle: "Light refurbishment in North West London | Kitchen, bathroom and floors | HPSG",
+    metaTitle: "Light refurbishment in North West London | HPSG",
     metaDescription:
       "Kitchen, bathroom, decoration and floors as one programme in Hampstead conversions and mansion flats. Not a loft or extension. Survey-led. 020 7101 3168.",
   },

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 import { site } from "@/data/site";
-import { absoluteUrl } from "./schema";
+import { absoluteUrl, assetUrl } from "./schema";
 
 export function pageMetadata({
   title,
@@ -19,7 +19,7 @@ export function pageMetadata({
   imageAlt?: string;
 }): Metadata {
   const url = absoluteUrl(path);
-  const ogImage = image ? absoluteUrl(image) : absoluteUrl("/opengraph-image");
+  const ogImage = image ? assetUrl(image) : absoluteUrl("/opengraph-image");
   return {
     title: absoluteTitle ? { absolute: title } : title,
     description,
