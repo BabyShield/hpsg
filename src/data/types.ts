@@ -61,6 +61,16 @@ export type ComboContent = {
   working: string[];
   /** How the specification is written here — not a generic brochure. */
   specification: string[];
+  /**
+   * What a typical instruction covers in THIS area's stock, and what it
+   * deliberately excludes. Replaces the service-wide included[] list, which
+   * rendered verbatim on the hub and all fifteen of its combo pages.
+   */
+  scopeNotes?: string[];
+  /** How the standard sequence actually runs here (licence lead-in, access). */
+  processNote?: string;
+  /** Conservation, tenure and consent as they bear on THIS service here. */
+  consent?: string;
   localFaqs: Faq[];
   metaDescription: string;
 };

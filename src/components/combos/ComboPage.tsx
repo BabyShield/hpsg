@@ -23,7 +23,6 @@ import {
   comboIncludesLede,
   comboOpening,
   comboProcessLede,
-  comboSearchFaqs,
   servicePlainName,
 } from "@/lib/seo-copy";
 
@@ -44,7 +43,7 @@ export function ComboPage({
   const siblings = siblingCombos(combo);
   const otherServices = services.filter((item) => item.slug !== combo.service.slug);
   const seenFaqs = new Set<string>();
-  const faqs = [...content.localFaqs, ...comboSearchFaqs(combo)]
+  const faqs = [...content.localFaqs]
     .map((item) => ({ q: publicCopy(item.q), a: publicCopy(item.a) }))
     .filter((item) => {
       if (!item.q || !item.a || seenFaqs.has(item.q)) return false;
@@ -77,7 +76,9 @@ export function ComboPage({
   const workingParas = content.working.map((paragraph) => publicCopy(paragraph)).filter(Boolean);
   const specParas = content.specification.map((paragraph) => publicCopy(paragraph)).filter(Boolean);
   const rooms = publicCopy(content.rooms);
-  const included = combo.service.included.map((item) => publicCopy(item)).filter(Boolean);
+  const scopeNotes = (content.scopeNotes ?? []).map((item) => publicCopy(item)).filter(Boolean);
+  const processNote = publicCopy(content.processNote ?? "");
+  const consent = publicCopy(content.consent ?? "");
 
   return (
     <>
@@ -181,8 +182,20 @@ export function ComboPage({
                 {workingParas.map((paragraph) => (
                   <p key={paragraph.slice(0, 48)}>{paragraph}</p>
                 ))}
-                <p>{publicCopy(combo.area.conservationNotes)}</p>
-                <p>{publicCopy(combo.area.localNotes)}</p>
+                {consent ? (
+                  <p>{consent}</p>
+                ) : (
+                  <>
+                    <p>{publicCopy(combo.area.conservationNotes)}</p>
+                    <p>{publicCopy(combo.area.localNotes)}</p>
+                  </>
+                )}
+                <p>
+                  <Link href={`/areas/${combo.area.slug}/`} className="quiet-link text-navy">
+                    Council, conservation and access in {combo.area.name}
+                  </Link>
+                  .
+                </p>
               </div>
               <ContentImage
                 photo={comboPhotos.secondary}
@@ -223,17 +236,24 @@ export function ComboPage({
             <h2 className="font-display text-4xl font-normal sm:text-5xl">
               {headings.includes}
             </h2>
-            <p className="mt-5 max-w-measure text-base leading-relaxed text-grey-700">
-              {comboIncludesLede(combo)}
+            {scopeNotes.length > 0 ? (
+              <div className="mt-8 max-w-measure space-y-5 text-base leading-relaxed text-grey-700">
+                {scopeNotes.map((paragraph) => (
+                  <p key={paragraph.slice(0, 48)}>{paragraph}</p>
+                ))}
+              </div>
+            ) : (
+              <p className="mt-5 max-w-measure text-base leading-relaxed text-grey-700">
+                {comboIncludesLede(combo)}
+              </p>
+            )}
+            <p className="mt-8 text-base leading-relaxed text-grey-700">
+              <Link href={`/${combo.service.slug}/`} className="quiet-link text-navy">
+                The full inclusion list is on the {serviceName.toLowerCase()} in North West
+                London page
+              </Link>
+              .
             </p>
-            <ul className="mt-10 max-w-3xl divide-y divide-grey-200 border-y border-grey-200">
-              {included.map((item) => (
-                <li key={item} className="flex gap-5 py-4 text-base leading-relaxed text-grey-700">
-                  <span className="mt-3 h-px w-6 shrink-0 bg-gold" aria-hidden="true" />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
           </Container>
         </section>
 
@@ -245,7 +265,13 @@ export function ComboPage({
                 {headings.process}
               </h2>
               <p className="mt-6 text-base leading-relaxed text-grey-700">
-                {comboProcessLede(combo)}
+                {processNote || comboProcessLede(combo)}
+              </p>
+              <p className="mt-6 text-base leading-relaxed text-grey-700">
+                <Link href={`/${combo.service.slug}/`} className="quiet-link text-navy">
+                  Each step in full
+                </Link>
+                .
               </p>
             </div>
             <div className="lg:col-span-8">
@@ -253,7 +279,6 @@ export function ComboPage({
                 variant="timeline"
                 items={combo.service.processSteps.map((step) => ({
                   title: step.title,
-                  text: publicCopy(step.text),
                 }))}
               />
             </div>

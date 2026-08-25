@@ -24,7 +24,7 @@ import { areaTitleCue } from "@/data/seo-cues";
 import { addressSingleLine, site } from "@/data/site";
 import { publicCopy } from "@/lib/public-copy";
 import { absoluteUrl, faqSchema, itemListSchema, placeSchema, serviceSchema, webPageSchema } from "@/lib/schema";
-import { areaHook, areaMetaDescription, areaSearchFaqs, servicePlainName } from "@/lib/seo-copy";
+import { areaHook, areaMetaDescription, servicePlainName } from "@/lib/seo-copy";
 
 function serviceHref(area: Area, serviceSlug: string): string | null {
   if (area.tier === 2) return `/${serviceSlug}/`;
@@ -62,13 +62,9 @@ export function AreaHub({ area }: { area: Area }) {
   const localFaqs = content.faqs
     .map((item) => ({ q: publicCopy(item.q), a: publicCopy(item.a) }))
     .filter((item) => item.q && item.a);
-  const localQuestions = new Set(localFaqs.map((item) => item.q.toLowerCase()));
-  const faqs = [
-    ...areaSearchFaqs(area)
-      .map((item) => ({ q: publicCopy(item.q), a: publicCopy(item.a) }))
-      .filter((item) => item.q && item.a && !localQuestions.has(item.q.toLowerCase())),
-    ...localFaqs,
-  ];
+  // The five generated area FAQs duplicated hero, body and home-page copy on
+  // all 25 hubs; the hand-written set carries the page.
+  const faqs = localFaqs;
   const description = areaMetaDescription(area);
 
   return (

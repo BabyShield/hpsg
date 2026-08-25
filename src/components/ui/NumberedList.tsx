@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 
 export type NumberedItem = {
   title?: string;
-  text: ReactNode;
+  text?: ReactNode;
 };
 
 /**
@@ -51,9 +51,11 @@ export function NumberedList({
             {item.title ? (
               <h3 className={`font-display text-2xl font-normal ${heading}`}>{item.title}</h3>
             ) : null}
-            <div className={`mt-2 max-w-measure text-base leading-relaxed ${body}`}>
-              {item.text}
-            </div>
+            {item.text ? (
+              <div className={`mt-2 max-w-measure text-base leading-relaxed ${body}`}>
+                {item.text}
+              </div>
+            ) : null}
           </li>
         ))}
       </ol>
@@ -91,7 +93,9 @@ export function NumberedList({
           {item.title ? (
             <h3 className={`mt-4 font-display text-2xl font-normal ${heading}`}>{item.title}</h3>
           ) : null}
-          <div className={`mt-3 text-base leading-relaxed ${body}`}>{item.text}</div>
+          {item.text ? (
+            <div className={`mt-3 text-base leading-relaxed ${body}`}>{item.text}</div>
+          ) : null}
         </li>
       ))}
     </ol>
