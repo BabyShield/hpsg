@@ -17,7 +17,7 @@ export function comboHeadings(slug: ServiceSlug, area: string) {
       return {
         rooms: `Galleys, chimney breasts and compact kitchens in ${area}`,
         working: `Extract, licence and access in ${area}`,
-        spec: `How a ${area} kitchen is specified`,
+        spec: `How a ${area} kitchen renovation is specified`,
         includes: "What a typical kitchen instruction includes",
         process: "How a kitchen programme runs",
         questions: `Kitchen renovation questions in ${area}`,
@@ -26,7 +26,7 @@ export function comboHeadings(slug: ServiceSlug, area: string) {
     case "bathroom-renovation":
       return {
         rooms: `Family bathrooms, ensuites and shower rooms in ${area}`,
-        working: `Tanking, extract and licence in ${area}`,
+        working: `Bathroom tanking, extract and licence in ${area}`,
         spec: `How a ${area} bathroom is specified`,
         includes: "What a typical bathroom instruction includes",
         process: "How a bathroom programme runs",
@@ -36,7 +36,7 @@ export function comboHeadings(slug: ServiceSlug, area: string) {
     case "painting-decorating":
       return {
         rooms: `Occupied houses, sashes and original joinery in ${area}`,
-        working: `Prep, conservation and occupied homes in ${area}`,
+        working: `Painters and decorators in ${area}: prep, conservation and occupied homes`,
         spec: `How decorating is specified in ${area}`,
         includes: "What a typical decorating instruction includes",
         process: "How a decorating programme runs",
@@ -45,8 +45,8 @@ export function comboHeadings(slug: ServiceSlug, area: string) {
       };
     case "light-refurbishment":
       return {
-        rooms: `Kitchen, bathroom, floors and decoration in ${area}`,
-        working: `Licence, sequence and access in ${area}`,
+        rooms: `Flat refurbishment in ${area}: kitchen, bathroom, floors and decoration`,
+        working: `Licence, sequence and access for ${area} refurbishment`,
         spec: `How a ${area} programme is specified`,
         includes: "What a typical light-refurbishment instruction includes",
         process: "How a light-refurbishment programme runs",

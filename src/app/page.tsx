@@ -51,6 +51,26 @@ const serviceMosaic = [
   "min-h-[18rem] lg:col-span-7 lg:min-h-[26rem]",
 ] as const;
 
+/**
+ * Deep links from the homepage into the service-in-area pages, every service
+ * covered at least twice. These are commercial landing pages and the homepage
+ * is the strongest internal link on the site.
+ */
+const homeLocalPages = [
+  { href: "/kitchen-renovation/hampstead/", label: "Kitchen renovation in Hampstead NW3" },
+  { href: "/bathroom-renovation/st-johns-wood/", label: "Bathroom renovation in St John's Wood NW8" },
+  { href: "/painting-decorating/belsize-park/", label: "Painting & decorating in Belsize Park NW3" },
+  { href: "/light-refurbishment/west-hampstead/", label: "Light refurbishment in West Hampstead NW6" },
+  { href: "/kitchen-renovation/maida-vale/", label: "Kitchen renovation in Maida Vale W9" },
+  { href: "/bathroom-renovation/kentish-town/", label: "Bathroom renovation in Kentish Town NW5" },
+  { href: "/painting-decorating/highgate/", label: "Painting & decorating in Highgate N6" },
+  { href: "/light-refurbishment/swiss-cottage/", label: "Light refurbishment in Swiss Cottage NW3" },
+  { href: "/kitchen-renovation/hampstead-garden-suburb/", label: "Kitchen renovation in Hampstead Garden Suburb NW11" },
+  { href: "/bathroom-renovation/belsize-park/", label: "Bathroom renovation in Belsize Park NW3" },
+  { href: "/painting-decorating/queens-park/", label: "Painting & decorating in Queen's Park NW6" },
+  { href: "/light-refurbishment/kentish-town/", label: "Light refurbishment in Kentish Town NW5" },
+] as const;
+
 const areaMosaic = [
   "min-h-[20rem] md:col-span-2 lg:col-span-6 lg:min-h-[32rem]",
   "min-h-[16rem] lg:col-span-6 lg:min-h-[32rem]",
@@ -185,29 +205,18 @@ export default function HomePage() {
           </ul>
         </div>
         <Container>
-          <p className="mt-10 max-w-3xl text-sm leading-relaxed text-grey-600">
-            Local pages include{" "}
-            <Link href="/kitchen-renovation/hampstead/" className="quiet-link text-navy">
-              kitchen renovation in Hampstead
-            </Link>
-            ,{" "}
-            <Link href="/bathroom-renovation/st-johns-wood/" className="quiet-link text-navy">
-              bathroom renovation in St John&apos;s Wood
-            </Link>
-            ,{" "}
-            <Link href="/kitchen-renovation/maida-vale/" className="quiet-link text-navy">
-              kitchen renovation in Maida Vale
-            </Link>
-            ,{" "}
-            <Link href="/painting-decorating/highgate/" className="quiet-link text-navy">
-              painting in Highgate
-            </Link>{" "}
-            and{" "}
-            <Link href="/light-refurbishment/west-hampstead/" className="quiet-link text-navy">
-              light refurbishment in West Hampstead
-            </Link>
-            .
-          </p>
+          <div className="mt-12">
+            <h3 className="caption text-grey-500">Local pages</h3>
+            <ul className="mt-5 grid max-w-5xl gap-x-10 gap-y-2.5 text-sm sm:grid-cols-2 lg:grid-cols-3">
+              {homeLocalPages.map((item) => (
+                <li key={item.href}>
+                  <Link href={item.href} className="quiet-link text-navy">
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         </Container>
       </section>
 

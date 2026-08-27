@@ -68,15 +68,23 @@ export default function ProjectsPage() {
         <div className="mt-8 max-w-measure space-y-5 text-base leading-relaxed text-grey-700">
           <p className="lede text-xl text-grey-600 md:text-2xl">
             Typical kitchens, bathrooms and interiors in the housing stock we
-            take on. Named case studies are published only from supplied
-            summaries.
+            take on.
+          </p>
+          <p>
+            Named case studies are published only from completed instructions,
+            with the client&apos;s agreement. None are published yet, so nothing
+            on this page is presented as a particular job at a particular
+            address.
           </p>
           <p>{photoCredit}</p>
           <p>
-            Kitchen renovation, bathroom renovation, painting and light
-            refurbishment pages carry the method, the housing types and the
-            local pages. This page is a way into that work, not a gallery of
-            invented projects.
+            The service pages carry the method and the housing types, the
+            neighbourhood pages carry the local constraints, and the{" "}
+            <Link href="/guides/" className="quiet-link text-navy">
+              guides
+            </Link>{" "}
+            set out how consent, tenure and sequence actually work. This page is
+            a way into that work rather than a gallery.
           </p>
         </div>
 

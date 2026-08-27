@@ -109,7 +109,7 @@ export function ComboPage({
           photo={heroPhoto}
           crumbs={crumbs}
           kicker={`${combo.area.name} ${combo.area.postcode}`}
-          title={`${serviceName} in ${combo.area.name}`}
+          title={`${serviceName} in ${combo.area.name}, ${combo.area.postcode}`}
           lede={publicCopy(content.lede)}
         />
 

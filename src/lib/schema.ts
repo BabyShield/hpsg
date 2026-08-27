@@ -77,7 +77,9 @@ export function organizationSchema() {
       })),
     ],
     slogan: site.tagline,
-    sameAs: ["https://hampsteadrenovations.co.uk"],
+    // sameAs would go here once verified profiles for this company exist.
+    // It is not for sister brands: those are separate legal entities.
+    // [TBC: Google Business Profile and any social profiles]
     knowsAbout: [
       "Kitchen renovation",
       "Bathroom renovation",
