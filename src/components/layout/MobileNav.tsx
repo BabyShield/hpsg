@@ -99,6 +99,11 @@ export function MobileNav() {
             </ul>
           </li>
           <li>
+            <Link href="/guides/" className="text-lg text-navy" onClick={close}>
+              Guides
+            </Link>
+          </li>
+          <li>
             <Link href="/about/" className="text-lg text-navy" onClick={close}>
               About
             </Link>

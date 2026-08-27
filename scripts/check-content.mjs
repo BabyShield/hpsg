@@ -169,9 +169,15 @@ function overlapReport(label, group) {
 }
 
 console.log("\nDuplication (normalised 8-gram overlap)");
+const SERVICE_SLUGS = [
+  "kitchen-renovation",
+  "bathroom-renovation",
+  "painting-decorating",
+  "light-refurbishment",
+];
 const combos = files.filter((f) => {
   const parts = rel(f).split("/");
-  return parts.length === 2 && parts[0] !== "areas" && !parts[0].startsWith("_");
+  return parts.length === 2 && SERVICE_SLUGS.includes(parts[0]);
 });
 const areaHubs = files.filter((f) => rel(f).startsWith("areas/"));
 overlapReport("all 60 combos", combos);

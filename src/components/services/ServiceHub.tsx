@@ -12,6 +12,7 @@ import { PageHero } from "@/components/ui/PageHero";
 import { PhotoTile } from "@/components/ui/PhotoTile";
 import { ServiceCard } from "@/components/ui/ServiceCard";
 import { areaPhotos, servicePhotos } from "@/data/photos";
+import { guidesForService } from "@/data/guides";
 import { serviceHubContent } from "@/data/service-hub-content";
 import { getServiceHubFacts } from "@/data/service-area-facts";
 import { serviceSeo } from "@/data/service-seo";
@@ -36,6 +37,7 @@ export function ServiceHub({ service }: { service: Service }) {
   const hrReferral = service.slug === "light-refurbishment";
   const heading = servicePlainName(service);
   const seo = serviceSeo[service.slug];
+  const relatedGuides = guidesForService(service.slug);
 
   const crumbs = [
     { name: "Home", href: "/" },
@@ -363,6 +365,37 @@ export function ServiceHub({ service }: { service: Service }) {
             </div>
           </Container>
         </section>
+
+        {relatedGuides.length > 0 ? (
+          <section className="py-20 sm:py-24">
+            <Container className="grid gap-10 lg:grid-cols-12 lg:gap-16">
+              <div className="lg:col-span-4">
+                <p className="rule mb-8" aria-hidden="true" />
+                <h2 className="font-display text-4xl font-normal sm:text-5xl">
+                  Guides
+                </h2>
+                <p className="mt-6 text-base leading-relaxed text-grey-700">
+                  How consent, tenure and sequence work on this kind of job.
+                </p>
+              </div>
+              <ul className="grid gap-8 lg:col-span-8 sm:grid-cols-2">
+                {relatedGuides.map((guide) => (
+                  <li key={guide.slug} className="border-t border-grey-200 pt-5">
+                    <Link
+                      href={`/guides/${guide.slug}/`}
+                      className="font-display text-2xl font-normal text-navy"
+                    >
+                      {guide.title}
+                    </Link>
+                    <p className="mt-2 text-base leading-relaxed text-grey-700">
+                      {publicCopy(guide.lede)}
+                    </p>
+                  </li>
+                ))}
+              </ul>
+            </Container>
+          </section>
+        ) : null}
 
         <section className="border-y border-grey-200 py-24 sm:py-32">
           <Container className="grid gap-12 lg:grid-cols-12">

@@ -115,6 +115,11 @@ export function Header() {
                 ) : null}
               </li>
               <li>
+                <Link href="/guides/" className="nav-link">
+                  Guides
+                </Link>
+              </li>
+              <li>
                 <Link href="/about/" className="nav-link">
                   About
                 </Link>

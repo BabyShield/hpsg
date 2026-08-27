@@ -9,6 +9,7 @@ import { LocalFacts } from "@/components/ui/LocalFacts";
 import { NumberedList } from "@/components/ui/NumberedList";
 import { PageHero } from "@/components/ui/PageHero";
 import { PhotoTile } from "@/components/ui/PhotoTile";
+import { guidesForCombo } from "@/data/guides";
 import { getServiceAreaFacts } from "@/data/service-area-facts";
 import { areaPhotos, getComboPhotos } from "@/data/photos";
 import { services } from "@/data/services";
@@ -79,6 +80,7 @@ export function ComboPage({
   const scopeNotes = (content.scopeNotes ?? []).map((item) => publicCopy(item)).filter(Boolean);
   const processNote = publicCopy(content.processNote ?? "");
   const consent = publicCopy(content.consent ?? "");
+  const comboGuides = guidesForCombo(combo.service.slug, combo.area.slug).slice(0, 2);
 
   return (
     <>
@@ -195,6 +197,20 @@ export function ComboPage({
                   </Link>
                   .
                 </p>
+                {comboGuides.length > 0 ? (
+                  <ul className="space-y-2 border-t border-grey-200 pt-5">
+                    {comboGuides.map((guide) => (
+                      <li key={guide.slug}>
+                        <Link
+                          href={`/guides/${guide.slug}/`}
+                          className="quiet-link text-navy"
+                        >
+                          {guide.title}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                ) : null}
               </div>
               <ContentImage
                 photo={comboPhotos.secondary}

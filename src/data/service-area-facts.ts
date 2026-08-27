@@ -1,4 +1,3 @@
-import { areaFacts } from "./area-facts";
 import { areas } from "./areas";
 import { SERVICE_SLUGS, type ServiceSlug } from "./types";
 

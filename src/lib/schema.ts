@@ -337,3 +337,37 @@ export function contactPageSchema(url: string, name: string, description: string
     mainEntity: { "@id": BUSINESS_ID },
   };
 }
+
+export function articleSchema({
+  headline,
+  url,
+  description,
+  datePublished,
+  dateModified,
+}: {
+  headline: string;
+  url: string;
+  description: string;
+  datePublished: string;
+  dateModified: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline,
+    url,
+    description: publicCopy(description),
+    inLanguage: "en-GB",
+    // Attributed to the company: no staff names are published anywhere.
+    author: { "@id": BUSINESS_ID },
+    publisher: { "@id": BUSINESS_ID },
+    datePublished,
+    dateModified,
+    isPartOf: { "@id": WEBSITE_ID },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `${url}#webpage`,
+      url,
+    },
+  };
+}
