@@ -69,14 +69,21 @@ const PRICE = /£\s?\d/;
 // legitimately in survey language ("structural openings as found") and in
 // referral language, and flagging them buries the real signal.
 const OUT_OF_SCOPE = /\b(loft conversion|house extension)\w*/gi;
+/**
+ * Safe context is either an explicit exclusion/referral, or description of
+ * work already carried out on the building by someone else. The pattern that
+ * must still be caught is an offer: the service named with neither.
+ */
 const EXCLUSION_NEAR =
   /\b(not|never|no|nor|exclu\w*|outside|beyond|sits with|handled by|refer\w*|separate|instead of|rather than|Hampstead Renovations)\b/i;
+const DESCRIPTIVE_NEAR =
+  /\b(already|existing|previous\w*|since|earlier|gained|added|been|has|have|inherited|historic\w*)\b/i;
 
 function outOfScopeOffers(text) {
   const hits = [];
   for (const m of text.matchAll(OUT_OF_SCOPE)) {
     const window = text.slice(Math.max(0, m.index - 240), m.index + 240);
-    if (!EXCLUSION_NEAR.test(window)) hits.push(m[0]);
+    if (!EXCLUSION_NEAR.test(window) && !DESCRIPTIVE_NEAR.test(window)) hits.push(m[0]);
   }
   return hits;
 }

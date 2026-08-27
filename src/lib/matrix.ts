@@ -65,10 +65,26 @@ export function getCombo(serviceSlug: string, areaSlug: string): Combo | undefin
   return { service, area };
 }
 
+/**
+ * Neighbouring areas, as a reciprocal graph.
+ *
+ * nearbyAreaSlugs is declared one way round, so A could list B without B
+ * listing A and the "nearby" links pointed in one direction only. Declared
+ * neighbours come first, then areas that declare this one, capped at five.
+ * Order is deterministic so the prerendered output is stable.
+ */
 export function getNearbyAreas(area: Area): Area[] {
-  return area.nearbyAreaSlugs
+  const declared = area.nearbyAreaSlugs;
+  const reverse = areas
+    .filter((other) => other.slug !== area.slug)
+    .filter((other) => other.nearbyAreaSlugs.includes(area.slug))
+    .map((other) => other.slug)
+    .filter((slug) => !declared.includes(slug))
+    .sort();
+  return [...declared, ...reverse]
     .map((slug) => getArea(slug))
-    .filter((nearby): nearby is Area => nearby !== undefined);
+    .filter((nearby): nearby is Area => nearby !== undefined)
+    .slice(0, 5);
 }
 
 export function getCombosForService(serviceSlug: ServiceSlug): Combo[] {

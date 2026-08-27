@@ -22,7 +22,6 @@ import { publicCopy } from "@/lib/public-copy";
 import {
   absoluteUrl,
   faqSchema,
-  howToSchema,
   itemListSchema,
   serviceSchema,
   webPageSchema,
@@ -73,13 +72,6 @@ export function ServiceHub({ service }: { service: Service }) {
           description: service.metaDescription,
           image: servicePhotos[service.slug].src,
           imageAlt: servicePhotos[service.slug].alt,
-        })}
-      />
-      <JsonLd
-        data={howToSchema({
-          name: seo.processH2,
-          description: service.summary,
-          steps: service.processSteps,
         })}
       />
       <JsonLd data={faqSchema(faqs)} />
@@ -348,6 +340,23 @@ export function ServiceHub({ service }: { service: Service }) {
                   );
                 })}
               </ul>
+            ) : null}
+            {comboAreas.length > 0 ? (
+              <div className="mt-14 border-t border-grey-200 pt-10">
+                <h3 className="caption text-grey-500">Every {heading.toLowerCase()} page</h3>
+                <ul className="mt-6 grid gap-x-10 gap-y-3 text-base sm:grid-cols-2 lg:grid-cols-3">
+                  {comboAreas.map((area) => (
+                    <li key={`link-${area.slug}`}>
+                      <Link
+                        href={`/${service.slug}/${area.slug}/`}
+                        className="quiet-link text-navy"
+                      >
+                        {heading} in {area.name} {area.postcode}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             ) : null}
             <div className="mt-12">
               <AreaLinkGrid areas={tier2Areas()} heading="Also covering" />

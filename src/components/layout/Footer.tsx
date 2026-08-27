@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import { areas } from "@/data/areas";
 import { services } from "@/data/services";
 import { site } from "@/data/site";
 import { tier1Areas } from "@/lib/matrix";
@@ -7,10 +8,42 @@ import { tier1Areas } from "@/lib/matrix";
 import { Container } from "../ui/Container";
 import { Wordmark } from "./Wordmark";
 
+/**
+ * Eight combo pages spread across all four services, linked sitewide with
+ * their postcode in the anchor text.
+ */
+const POPULAR_COMBOS: { service: string; area: string }[] = [
+  { service: "kitchen-renovation", area: "hampstead" },
+  { service: "bathroom-renovation", area: "st-johns-wood" },
+  { service: "painting-decorating", area: "belsize-park" },
+  { service: "light-refurbishment", area: "west-hampstead" },
+  { service: "kitchen-renovation", area: "highgate" },
+  { service: "bathroom-renovation", area: "maida-vale" },
+  { service: "painting-decorating", area: "primrose-hill" },
+  { service: "light-refurbishment", area: "kentish-town" },
+];
+
+const SERVICE_LABEL: Record<string, string> = {
+  "kitchen-renovation": "Kitchen renovation",
+  "bathroom-renovation": "Bathroom renovation",
+  "painting-decorating": "Painting & decorating",
+  "light-refurbishment": "Light refurbishment",
+};
+
 export function Footer() {
+  const popular = POPULAR_COMBOS.map((item) => {
+    const area = areas.find((entry) => entry.slug === item.area);
+    return area
+      ? {
+          href: `/${item.service}/${item.area}/`,
+          label: `${SERVICE_LABEL[item.service]} in ${area.name} ${area.postcode}`,
+        }
+      : null;
+  }).filter((item): item is { href: string; label: string } => item !== null);
+
   return (
     <footer className="band-navy pb-16 lg:pb-0">
-      <Container className="grid gap-16 py-24 sm:grid-cols-2 lg:grid-cols-12">
+      <Container className="grid gap-16 pt-24 sm:grid-cols-2 lg:grid-cols-12">
         <div className="lg:col-span-4">
           <Wordmark inverted />
           <p className="lede mt-8 max-w-xs text-xl text-bone/75">{site.tagline}</p>
@@ -70,6 +103,16 @@ export function Footer() {
             </p>
           </address>
         </div>
+      </Container>
+      <Container className="pb-20 pt-4">
+        <h2 className="kicker text-bone/70">Popular local pages</h2>
+        <ul className="mt-6 grid gap-x-10 gap-y-3 text-sm text-bone/85 sm:grid-cols-2 lg:grid-cols-4">
+          {popular.map((item) => (
+            <li key={item.href}>
+              <Link href={item.href}>{item.label}</Link>
+            </li>
+          ))}
+        </ul>
       </Container>
       <div className="border-t border-bone/10">
         <Container className="flex flex-col gap-3 py-7 text-xs tracking-wide text-bone/70 sm:flex-row sm:items-center sm:justify-between">

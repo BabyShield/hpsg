@@ -18,7 +18,7 @@ import { serviceAreaCue } from "@/data/seo-cues";
 import { addressSingleLine, site } from "@/data/site";
 import { getNearbyAreas, isCombo } from "@/lib/matrix";
 import { publicCopy } from "@/lib/public-copy";
-import { absoluteUrl, faqSchema, placeSchema, serviceSchema, webPageSchema } from "@/lib/schema";
+import { absoluteUrl, placeSchema, serviceSchema, webPageSchema } from "@/lib/schema";
 import {
   comboIncludesLede,
   comboOpening,
@@ -102,7 +102,6 @@ export function ComboPage({
         })}
       />
       <JsonLd data={placeSchema(combo.area.name, combo.area.postcode)} />
-      <JsonLd data={faqSchema(faqs)} />
       <article>
         <PageHero
           photo={heroPhoto}
@@ -231,29 +230,33 @@ export function ComboPage({
         ) : null}
 
         <section className="py-24 sm:py-32">
-          <Container>
-            <p className="rule mb-8" aria-hidden="true" />
-            <h2 className="font-display text-4xl font-normal sm:text-5xl">
-              {headings.includes}
-            </h2>
-            {scopeNotes.length > 0 ? (
-              <div className="mt-8 max-w-measure space-y-5 text-base leading-relaxed text-grey-700">
-                {scopeNotes.map((paragraph) => (
-                  <p key={paragraph.slice(0, 48)}>{paragraph}</p>
-                ))}
-              </div>
-            ) : (
-              <p className="mt-5 max-w-measure text-base leading-relaxed text-grey-700">
-                {comboIncludesLede(combo)}
+          <Container className="grid gap-10 lg:grid-cols-12 lg:gap-16">
+            <div className="lg:col-span-4">
+              <p className="rule mb-8" aria-hidden="true" />
+              <h2 className="font-display text-4xl font-normal sm:text-5xl">
+                {headings.includes}
+              </h2>
+            </div>
+            <div className="lg:col-span-8">
+              {scopeNotes.length > 0 ? (
+                <div className="space-y-5 text-base leading-relaxed text-grey-700">
+                  {scopeNotes.map((paragraph) => (
+                    <p key={paragraph.slice(0, 48)}>{paragraph}</p>
+                  ))}
+                </div>
+              ) : (
+                <p className="text-base leading-relaxed text-grey-700">
+                  {comboIncludesLede(combo)}
+                </p>
+              )}
+              <p className="mt-8 text-base leading-relaxed text-grey-700">
+                <Link href={`/${combo.service.slug}/`} className="quiet-link text-navy">
+                  The full inclusion list is on the {serviceName.toLowerCase()} in North West
+                  London page
+                </Link>
+                .
               </p>
-            )}
-            <p className="mt-8 text-base leading-relaxed text-grey-700">
-              <Link href={`/${combo.service.slug}/`} className="quiet-link text-navy">
-                The full inclusion list is on the {serviceName.toLowerCase()} in North West
-                London page
-              </Link>
-              .
-            </p>
+            </div>
           </Container>
         </section>
 

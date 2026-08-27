@@ -20,11 +20,12 @@ import {
   getCombosForArea,
   getNearbyAreas,
   hasPaintingMicrosite,
+  isCombo,
 } from "@/lib/matrix";
 import { areaTitleCue } from "@/data/seo-cues";
 import { addressSingleLine, site } from "@/data/site";
 import { publicCopy } from "@/lib/public-copy";
-import { absoluteUrl, faqSchema, itemListSchema, placeSchema, serviceSchema, webPageSchema } from "@/lib/schema";
+import { absoluteUrl, itemListSchema, placeSchema, serviceSchema, webPageSchema } from "@/lib/schema";
 import { areaHook, areaMetaDescription, servicePlainName } from "@/lib/seo-copy";
 
 function serviceHref(area: Area, serviceSlug: string): string | null {
@@ -48,6 +49,20 @@ export function AreaHub({ area }: { area: Area }) {
   const streets = publicCopy(detail?.streets ?? "");
   const buildings = publicCopy(detail?.buildings ?? "");
   const accessNote = publicCopy(detail?.access ?? "");
+  const nearbyCombos =
+    area.tier === 2
+      ? getNearbyAreas(area)
+          .filter((neighbour) => neighbour.tier === 1)
+          .flatMap((neighbour) =>
+            services
+              .filter((service) => isCombo(service.slug, neighbour.slug))
+              .map((service) => ({
+                href: `/${service.slug}/${neighbour.slug}/`,
+                label: `${servicePlainName(service)} in ${neighbour.name} ${neighbour.postcode}`,
+              })),
+          )
+          .slice(0, 6)
+      : [];
   const cue = areaTitleCue[area.slug];
   const heroPhoto = photo
     ? {
@@ -93,7 +108,6 @@ export function AreaHub({ area }: { area: Area }) {
         })}
       />
       <JsonLd data={placeSchema(area.name, area.postcode)} />
-      <JsonLd data={faqSchema(faqs)} />
       {area.tier === 1 ? (
         <JsonLd
           data={itemListSchema(
@@ -132,7 +146,10 @@ export function AreaHub({ area }: { area: Area }) {
                 return (
                   <li key={service.slug}>
                     <Link href={href} className="quiet-link">
-                      {servicePlainName(service)} in {area.tier === 1 ? area.name : "North West London"}
+                      {servicePlainName(service)} in{" "}
+                      {area.tier === 1
+                        ? `${area.name} ${area.postcode}`
+                        : "North West London"}
                     </Link>
                   </li>
                 );
@@ -170,6 +187,31 @@ export function AreaHub({ area }: { area: Area }) {
             ) : null}
           </aside>
         </Container>
+
+        {area.tier === 2 && nearbyCombos.length > 0 ? (
+          <section className="border-t border-grey-200 py-20 sm:py-24">
+            <Container>
+              <p className="rule mb-8" aria-hidden="true" />
+              <h2 className="font-display text-4xl font-normal sm:text-5xl">
+                Nearest local pages to {area.name}
+              </h2>
+              <p className="lede mt-6 max-w-measure text-xl text-grey-600">
+                {area.name} is covered from the North West London service pages.
+                These neighbouring pages describe the same work in the closest
+                comparable housing stock.
+              </p>
+              <ul className="mt-10 grid gap-x-10 gap-y-3 text-base sm:grid-cols-2 lg:grid-cols-3">
+                {nearbyCombos.map((item) => (
+                  <li key={item.href}>
+                    <Link href={item.href} className="quiet-link text-navy">
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </Container>
+          </section>
+        ) : null}
 
         {streets || buildings ? (
           <section className="bg-grey-50/60 py-20 sm:py-24">
