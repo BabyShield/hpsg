@@ -56,13 +56,51 @@ Also in the Cloudflare dashboard for the zone [VERIFY current UI names]:
 - Redirect Rule: `www.hpsg.co.uk` → `https://hpsg.co.uk` (301, preserve path). The Next.js config repeats this host redirect if www ever hits the worker.
 - Do not attach `www` as a second content origin if the redirect rule is in place.
 
-Preview / staging: set Worker var `HPSG_NOINDEX=true` on preview deployments only. Production `wrangler.jsonc` sets `HPSG_NOINDEX=false`. Middleware then sends `X-Robots-Tag: noindex, nofollow` on preview and never on production.
+Indexing: `HPSG_NOINDEX` controls the `X-Robots-Tag: noindex, nofollow` header
+set by `src/middleware.ts`. It is currently `"true"` in `wrangler.jsonc`,
+because the only live host is `*.workers.dev` while `hpsg.co.uk` is still
+parked at Hostinger — every canonical on the site points at hpsg.co.uk, so the
+preview host must not be indexed against them. Set it to `"false"` as part of
+the launch flip described above.
 
-Project photographs: compress to about 1600px on the long edge, AVIF/WebP-friendly JPEG, before commit. Use `ProjectImage` (`next/image`, explicit width/height, `priority` on a hero only, lazy otherwise). Alt pattern: `{service} in {area} — {detail}`.
+Next 16 deprecates `middleware.ts` in favour of `proxy.ts`. That migration is
+blocked for now: Proxy defaults to the Node.js runtime and forbids the
+`runtime` config option, and `@opennextjs/cloudflare` 1.20.2 will not build
+Node.js middleware. The deprecation warning in `next dev` is expected.
 
-Fonts are the system Helvetica stack in `@theme`; no webfont request, so no font layout shift from a downloaded face.
+Images are served through `next/image`. On Workers the transforms come from the
+`IMAGES` binding in `wrangler.jsonc`; without it the OpenNext handler passes
+originals through untransformed, so the site still works but the payload is
+much larger. Source photographs live at 1280x720 in `public/images` and are
+recompressed with mozjpeg — keep new ones under about 150KB. All image
+components take `sizes`; heroes take `priority`, everything else lazy-loads.
 
-Client JavaScript is limited to the FAQ accordion and the mobile menu.
+Fonts are Cormorant Garamond (display) and Source Sans 3 (body), loaded via
+`next/font/google` in `src/app/layout.tsx` and self-hosted at build time.
+Brand colours live in the `@theme` block of `src/app/globals.css`, which is
+the single source of truth — there is no `tailwind.config.ts`. The two hex
+values that cannot read CSS (the OG image and the icons) import from
+`src/lib/brand.ts`.
+
+Client JavaScript is limited to the FAQ accordion, the mobile menu and the
+header's Areas disclosure.
+
+## Checks
+
+Run after `npm run build`:
+
+```bash
+node scripts/check-content.mjs   # compliance + duplication gate, exits non-zero on a breach
+node scripts/check-links.mjs     # inbound internal links per page class
+```
+
+`check-content.mjs` reads the prerendered HTML and fails on banned vocabulary
+(professional designations, invented social proof), review markup, leaked
+`[TBC]` / `[VERIFY]` tokens, price figures, banned positioning phrases, and
+out-of-scope services named without an exclusion nearby. It also reports
+normalised 8-gram overlap between sibling pages, collapsing place and council
+names so that a sentence reused with the area swapped still counts as a
+duplicate.
 
 Generate Worker env types:
 
