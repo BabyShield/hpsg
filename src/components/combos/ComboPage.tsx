@@ -69,7 +69,7 @@ export function ComboPage({
     { name: "Home", href: "/" },
     { name: serviceName, href: `/${combo.service.slug}/` },
     {
-      name: `${serviceName} in ${combo.area.name}`,
+      name: `${combo.area.name} ${combo.area.postcode}`,
       href: `/${combo.service.slug}/${combo.area.slug}/`,
     },
   ];
@@ -137,6 +137,7 @@ export function ComboPage({
           imageWidth: heroPhoto.width,
           imageHeight: heroPhoto.height,
           mainEntityId: `${pageUrl}#service`,
+          breadcrumb: true,
           significantLinks: [
             absoluteUrl(`/${combo.service.slug}/`),
             absoluteUrl(`/areas/${combo.area.slug}/`),

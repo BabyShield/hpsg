@@ -152,6 +152,7 @@ export function webPageSchema({
   mainEntityId,
   significantLinks,
   relatedLinks,
+  breadcrumb = false,
 }: {
   name: string;
   url: string;
@@ -163,6 +164,7 @@ export function webPageSchema({
   mainEntityId?: string;
   significantLinks?: string[];
   relatedLinks?: string[];
+  breadcrumb?: boolean;
 }) {
   return {
     "@context": "https://schema.org",
@@ -176,6 +178,7 @@ export function webPageSchema({
     about: { "@id": BUSINESS_ID },
     publisher: { "@id": BUSINESS_ID },
     mainEntity: mainEntityId ? { "@id": mainEntityId } : undefined,
+    breadcrumb: breadcrumb ? { "@id": `${url}#breadcrumb` } : undefined,
     primaryImageOfPage: image
       ? {
           "@type": "ImageObject",
@@ -353,15 +356,28 @@ export function serviceSchema({
 }
 
 export function breadcrumbSchema(items: { name: string; href: string }[]) {
+  const last = items[items.length - 1];
+  const listId = last ? `${absoluteUrl(last.href)}#breadcrumb` : undefined;
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    itemListElement: items.map((item, index) => ({
-      "@type": "ListItem",
-      position: index + 1,
-      name: item.name,
-      item: absoluteUrl(item.href),
-    })),
+    "@id": listId,
+    itemListOrder: "https://schema.org/ItemListOrderAscending",
+    numberOfItems: items.length,
+    itemListElement: items.map((item, index) => {
+      const url = absoluteUrl(item.href);
+      return {
+        "@type": "ListItem",
+        position: index + 1,
+        name: item.name,
+        item: {
+          "@type": "WebPage",
+          "@id": url,
+          url,
+          name: item.name,
+        },
+      };
+    }),
   };
 }
 

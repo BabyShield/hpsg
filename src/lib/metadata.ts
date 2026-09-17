@@ -15,6 +15,8 @@ export function pageMetadata({
   keywords,
   category,
   geoPlacename,
+  index = true,
+  follow = true,
 }: {
   title: string;
   description: string;
@@ -27,6 +29,8 @@ export function pageMetadata({
   keywords?: string[];
   category?: string;
   geoPlacename?: string;
+  index?: boolean;
+  follow?: boolean;
 }): Metadata {
   const url = absoluteUrl(path);
   const ogImage = image ? assetUrl(image) : absoluteUrl("/opengraph-image");
@@ -51,11 +55,11 @@ export function pageMetadata({
       languages: { "en-GB": url, "x-default": url },
     },
     robots: {
-      index: true,
-      follow: true,
+      index,
+      follow,
       googleBot: {
-        index: true,
-        follow: true,
+        index,
+        follow,
         "max-image-preview": "large",
         "max-snippet": -1,
         "max-video-preview": -1,

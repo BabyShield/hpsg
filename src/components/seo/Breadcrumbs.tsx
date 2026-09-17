@@ -26,7 +26,12 @@ export function Breadcrumbs({
           return (
             <li key={`${item.href}-${item.name}`} className="flex items-center gap-2">
               {last ? (
-                <span className={light ? "text-bone" : "text-navy"}>{item.name}</span>
+                <span
+                  className={light ? "text-bone" : "text-navy"}
+                  aria-current="page"
+                >
+                  {item.name}
+                </span>
               ) : (
                 <Link href={item.href} className="quiet-link">
                   {item.name}

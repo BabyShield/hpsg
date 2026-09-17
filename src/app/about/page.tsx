@@ -44,6 +44,7 @@ export default function AboutPage() {
           description:
             "Hampstead Property Services Group Limited (17404557) carries out kitchen renovation, bathroom renovation, painting and light refurbishment in Hampstead and North West London.",
           image: officeNeighbourhood.src,
+          breadcrumb: true,
         })}
       />
       <JsonLd data={faqSchema(faqs)} />

@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 
 import { Container } from "@/components/ui/Container";
@@ -5,9 +6,27 @@ import { ServiceCard } from "@/components/ui/ServiceCard";
 import { services } from "@/data/services";
 import { tier1Areas } from "@/lib/matrix";
 
+export const metadata: Metadata = {
+  title: { absolute: "Page not found | HPSG" },
+  robots: {
+    index: false,
+    follow: true,
+    googleBot: { index: false, follow: true },
+  },
+};
+
 export default function NotFound() {
   return (
     <Container className="py-20 sm:py-28">
+      <nav aria-label="Breadcrumb" className="mb-6 text-xs text-grey-600">
+        <Link href="/" className="quiet-link">
+          Home
+        </Link>
+        <span aria-hidden="true"> › </span>
+        <span className="text-navy" aria-current="page">
+          Page not found
+        </span>
+      </nav>
       <p className="font-display text-7xl font-light text-gold-deep">404</p>
       <h1 className="mt-4 font-display text-4xl font-light sm:text-6xl">Page not found</h1>
       <p className="mt-6 max-w-measure text-lg leading-relaxed text-grey-700">

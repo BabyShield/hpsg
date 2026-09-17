@@ -13,6 +13,7 @@ export const site = {
   phoneTel: "+442071013168",
   email: "contact@hpsg.co.uk",
   url: "https://hpsg.co.uk",
+  contentRevised: "2026-09-18",
   footerLegal:
     "Hampstead Property Services Group Limited · Company No. 17404557 · Registered in England & Wales · Unit 3 Palace Court, 250 Finchley Road, London NW3 6DN",
   tagline:

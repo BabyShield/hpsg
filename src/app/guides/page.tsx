@@ -27,6 +27,7 @@ export default function GuidesPage() {
           name: "Guides",
           url: absoluteUrl("/guides/"),
           description: DESCRIPTION,
+          breadcrumb: true,
         })}
       />
       <JsonLd

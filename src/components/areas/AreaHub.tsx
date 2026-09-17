@@ -105,6 +105,7 @@ export function AreaHub({ area }: { area: Area }) {
           description,
           image: heroPhoto?.src,
           imageAlt: heroPhoto?.alt,
+          breadcrumb: true,
         })}
       />
       <JsonLd data={placeSchema(area.name, area.postcode)} />

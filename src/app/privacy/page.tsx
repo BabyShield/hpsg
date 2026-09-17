@@ -8,6 +8,8 @@ export const metadata = pageMetadata({
   title: "Privacy notice | HPSG",
   description: "Privacy notice for Hampstead Property Services Group Limited.",
   path: "/privacy/",
+  index: false,
+  follow: true,
 });
 
 export default function PrivacyPage() {

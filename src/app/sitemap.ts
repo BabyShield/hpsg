@@ -5,11 +5,12 @@ import { guides } from "@/data/guides";
 import { areaPhotos, servicePhotos } from "@/data/photos";
 import { publishedProjects } from "@/data/projects";
 import { services } from "@/data/services";
+import { site } from "@/data/site";
 import { getCombos } from "@/lib/matrix";
 import { absoluteUrl, assetUrl } from "@/lib/schema";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date();
+  const lastModified = new Date(site.contentRevised);
 
   const home: MetadataRoute.Sitemap[number] = {
     url: absoluteUrl("/"),
@@ -24,7 +25,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/about/", priority: 0.6, image: "/images/about/office-neighbourhood.jpg" },
     { path: "/contact/", priority: 0.6, image: "/images/about/office-neighbourhood.jpg" },
     { path: "/group/", priority: 0.4 },
-    { path: "/privacy/", priority: 0.2 },
     { path: "/projects/", priority: 0.3, image: "/images/services/kitchen-renovation.jpg" },
     { path: "/guides/", priority: 0.5 },
   ].map(({ path, priority, image }) => ({

@@ -43,7 +43,7 @@ export function ServiceHub({ service }: { service: Service }) {
 
   const crumbs = [
     { name: "Home", href: "/" },
-    { name: `${heading} in North West London`, href: `/${service.slug}/` },
+    { name: heading, href: `/${service.slug}/` },
   ];
   const pageUrl = absoluteUrl(`/${service.slug}/`);
   const heroPhoto = servicePhotos[service.slug];
@@ -96,6 +96,7 @@ export function ServiceHub({ service }: { service: Service }) {
           imageWidth: heroPhoto.width,
           imageHeight: heroPhoto.height,
           mainEntityId: `${pageUrl}#service`,
+          breadcrumb: true,
           significantLinks: [
             absoluteUrl("/contact/"),
             ...featuredAreas
