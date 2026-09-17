@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import { JsonLd } from "@/components/seo/JsonLd";
+import { PageContents } from "@/components/seo/PageContents";
 import { Container } from "@/components/ui/Container";
 import { ContentImage } from "@/components/ui/ContentImage";
 import { CtaBand } from "@/components/ui/CtaBand";
@@ -19,11 +20,20 @@ import { serviceAreaCue } from "@/data/seo-cues";
 import { addressSingleLine, site } from "@/data/site";
 import { getNearbyAreas, isCombo } from "@/lib/matrix";
 import { publicCopy } from "@/lib/public-copy";
-import { absoluteUrl, placeSchema, serviceSchema, webPageSchema } from "@/lib/schema";
+import {
+  absoluteUrl,
+  faqSchema,
+  howToSchema,
+  placeSchema,
+  serviceSchema,
+  webPageSchema,
+} from "@/lib/schema";
 import {
   comboIncludesLede,
   comboOpening,
   comboProcessLede,
+  comboSearchFaqs,
+  mergeFaqs,
   servicePlainName,
 } from "@/lib/seo-copy";
 
@@ -43,14 +53,7 @@ export function ComboPage({
 }) {
   const siblings = siblingCombos(combo);
   const otherServices = services.filter((item) => item.slug !== combo.service.slug);
-  const seenFaqs = new Set<string>();
-  const faqs = [...content.localFaqs]
-    .map((item) => ({ q: publicCopy(item.q), a: publicCopy(item.a) }))
-    .filter((item) => {
-      if (!item.q || !item.a || seenFaqs.has(item.q)) return false;
-      seenFaqs.add(item.q);
-      return true;
-    });
+  const faqs = mergeFaqs(comboSearchFaqs(combo), content.localFaqs);
 
   const serviceName = servicePlainName(combo.service);
   const headings = comboHeadings(combo.service.slug, combo.area.name);
@@ -72,7 +75,12 @@ export function ComboPage({
   ];
   const pageUrl = absoluteUrl(`/${combo.service.slug}/${combo.area.slug}/`);
   const opening = comboOpening(combo);
-
+  const relatedServices = otherServices
+    .filter((item) => isCombo(item.slug, combo.area.slug))
+    .map((item) => ({
+      name: `${servicePlainName(item)} in ${combo.area.name}`,
+      url: absoluteUrl(`/${item.slug}/${combo.area.slug}/`),
+    }));
   const introParas = content.intro.map((paragraph) => publicCopy(paragraph)).filter(Boolean);
   const workingParas = content.working.map((paragraph) => publicCopy(paragraph)).filter(Boolean);
   const specParas = content.specification.map((paragraph) => publicCopy(paragraph)).filter(Boolean);
@@ -80,7 +88,22 @@ export function ComboPage({
   const scopeNotes = (content.scopeNotes ?? []).map((item) => publicCopy(item)).filter(Boolean);
   const processNote = publicCopy(content.processNote ?? "");
   const consent = publicCopy(content.consent ?? "");
+  const audienceParas = (content.audience ?? []).map((item) => publicCopy(item)).filter(Boolean);
+  const failures = (content.failures ?? [])
+    .map((item) => ({ title: publicCopy(item.title), text: publicCopy(item.text) }))
+    .filter((item) => item.title && item.text);
   const comboGuides = guidesForCombo(combo.service.slug, combo.area.slug).slice(0, 2);
+  const contents = [
+    audienceParas.length > 0 ? { href: "#who", label: headings.audience } : null,
+    rooms ? { href: "#rooms", label: headings.rooms } : null,
+    failures.length > 0 ? { href: "#must-be-right", label: headings.failures } : null,
+    { href: "#facts", label: headings.facts },
+    { href: "#working", label: headings.working },
+    specParas.length > 0 ? { href: "#spec", label: headings.spec } : null,
+    { href: "#includes", label: headings.includes },
+    { href: "#process", label: headings.process },
+    faqs.length > 0 ? { href: "#questions", label: headings.questions } : null,
+  ].filter((item): item is { href: string; label: string } => item !== null);
 
   return (
     <>
@@ -91,7 +114,17 @@ export function ComboPage({
           areaServed: [`${combo.area.name}, ${combo.area.postcode}`, "North West London"],
           description: content.lede,
           image: heroPhoto.src,
+          imageAlt: heroPhoto.alt,
+          imageWidth: heroPhoto.width,
+          imageHeight: heroPhoto.height,
           serviceType: serviceName,
+          related: [
+            {
+              name: `${serviceName} in North West London`,
+              url: absoluteUrl(`/${combo.service.slug}/`),
+            },
+            ...relatedServices,
+          ],
         })}
       />
       <JsonLd
@@ -101,8 +134,29 @@ export function ComboPage({
           description: content.lede,
           image: heroPhoto.src,
           imageAlt: heroPhoto.alt,
+          imageWidth: heroPhoto.width,
+          imageHeight: heroPhoto.height,
+          mainEntityId: `${pageUrl}#service`,
+          significantLinks: [
+            absoluteUrl(`/${combo.service.slug}/`),
+            absoluteUrl(`/areas/${combo.area.slug}/`),
+            absoluteUrl("/contact/"),
+          ],
+          relatedLinks: [
+            ...relatedServices.map((item) => item.url),
+            ...siblings.map((area) => absoluteUrl(`/${combo.service.slug}/${area.slug}/`)),
+          ],
         })}
       />
+      <JsonLd
+        data={howToSchema({
+          name: `How ${serviceName.toLowerCase()} in ${combo.area.name} runs`,
+          description: processNote || comboProcessLede(combo),
+          steps: combo.service.processSteps.map((step) => ({ title: step.title })),
+          url: pageUrl,
+        })}
+      />
+      {faqs.length > 0 ? <JsonLd data={faqSchema(faqs)} /> : null}
       <JsonLd data={placeSchema(combo.area.name, combo.area.postcode)} />
       <article>
         <PageHero
@@ -135,6 +189,7 @@ export function ComboPage({
                 </Link>
                 .
               </p>
+              <PageContents items={contents} />
             </div>
             {areaPhotos[combo.area.slug] ? (
               <div className="lg:col-span-5">
@@ -151,8 +206,23 @@ export function ComboPage({
           </Container>
         </section>
 
+        {audienceParas.length > 0 ? (
+          <section id="who" className="scroll-mt-28 border-t border-grey-200 py-24 sm:py-32">
+            <Container className="grid gap-10 lg:grid-cols-12">
+              <h2 className="font-display text-4xl font-normal sm:text-5xl lg:col-span-4">
+                {headings.audience}
+              </h2>
+              <div className="space-y-5 text-base leading-relaxed text-grey-700 lg:col-span-8">
+                {audienceParas.map((paragraph) => (
+                  <p key={paragraph.slice(0, 48)}>{paragraph}</p>
+                ))}
+              </div>
+            </Container>
+          </section>
+        ) : null}
+
         {rooms ? (
-          <section className="border-y border-grey-200 py-24 sm:py-32">
+          <section id="rooms" className="scroll-mt-28 border-y border-grey-200 py-24 sm:py-32">
             <Container className="grid gap-10 lg:grid-cols-12">
               <h2 className="font-display text-4xl font-normal sm:text-5xl lg:col-span-4">
                 {headings.rooms}
@@ -162,14 +232,34 @@ export function ComboPage({
           </section>
         ) : null}
 
+        {failures.length > 0 ? (
+          <section id="must-be-right" className="band-navy scroll-mt-28 py-24 sm:py-32">
+            <Container>
+              <p className="rule mb-8" aria-hidden="true" />
+              <h2 className="font-display text-4xl font-normal text-bone sm:text-5xl">
+                {headings.failures}
+              </h2>
+              <NumberedList
+                tone="dark"
+                columns={4}
+                items={failures.map((item) => ({
+                  title: item.title,
+                  text: item.text,
+                }))}
+              />
+            </Container>
+          </section>
+        ) : null}
+
         <LocalFacts
+          id="facts"
           areaName={combo.area.name}
           facts={getServiceAreaFacts(combo.service.slug, combo.area.slug)}
           heading={headings.facts}
           lede={`Checkable facts that shape ${serviceName.toLowerCase()} in ${combo.area.name} ${combo.area.postcode} — housing, council and the room as found.`}
         />
 
-        <section className="py-24 sm:py-32">
+        <section id="working" className="scroll-mt-28 py-24 sm:py-32">
           <Container>
             <p className="rule mb-8" aria-hidden="true" />
             <h2 className="font-display text-4xl font-normal sm:text-5xl">
@@ -231,7 +321,7 @@ export function ComboPage({
         </section>
 
         {specParas.length > 0 ? (
-          <section className="border-y border-grey-200 py-24 sm:py-32">
+          <section id="spec" className="scroll-mt-28 border-y border-grey-200 py-24 sm:py-32">
             <Container className="grid gap-10 lg:grid-cols-12">
               <h2 className="font-display text-4xl font-normal sm:text-5xl lg:col-span-4">
                 {headings.spec}
@@ -245,7 +335,7 @@ export function ComboPage({
           </section>
         ) : null}
 
-        <section className="py-24 sm:py-32">
+        <section id="includes" className="scroll-mt-28 py-24 sm:py-32">
           <Container className="grid gap-10 lg:grid-cols-12 lg:gap-16">
             <div className="lg:col-span-4">
               <p className="rule mb-8" aria-hidden="true" />
@@ -276,7 +366,7 @@ export function ComboPage({
           </Container>
         </section>
 
-        <section className="border-y border-grey-200 py-24 sm:py-32">
+        <section id="process" className="scroll-mt-28 border-y border-grey-200 py-24 sm:py-32">
           <Container className="grid gap-10 lg:grid-cols-12 lg:gap-16">
             <div className="lg:col-span-4">
               <p className="rule mb-8" aria-hidden="true" />
@@ -304,7 +394,7 @@ export function ComboPage({
           </Container>
         </section>
 
-        <section className="py-24 sm:py-32">
+        <section id="questions" className="scroll-mt-28 py-24 sm:py-32">
           <Container className="grid gap-12 lg:grid-cols-12">
             <h2 className="font-display text-4xl font-normal sm:text-5xl lg:col-span-4">
               {headings.questions}

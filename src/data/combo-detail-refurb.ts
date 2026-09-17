@@ -10,6 +10,32 @@ export const refurbDetail: ComboDetailMap = {
     ],
     processNote: "On the avenues the managing agent's timetable sets the start date, and nothing is stripped until the pack is back. In a converted house the lead-in is shorter, but the room heights have to be planned for: towers and platforms are booked, and somewhere in the flat has to store them. That pushes ceilings, cornices and high-level preparation to the front of the works. Floors are laid afterwards, because a floor laid first is only covered up again.",
     consent: "The Belsize Conservation Area is a Camden designation and a separate one from Hampstead's, with Article 4 directions over parts of it [VERIFY the boundary and any Article 4 for the address]. Interior replacement within the rooms as they stand ordinarily sits outside planning; the elevation, the windows and the roofscape do not. Consent under the lease is a different matter altogether. In blocks it comes from the managing agent; in a share-of-freehold conversion it comes from the other flat owners, and it still has to be given in writing.",
+    audience: [
+      "Most Belsize Park programmes are for owner-occupiers of a lateral conversion: two former houses joined through a punched opening, an inserted kitchen around a chimney breast, a bathroom on whichever stack the split left, high rooms that show every filling shortcut, and floors that change level where the two buildings meet. The brief is that demise brought to one finish, not a further opening through the wall that still separates the halves.",
+      "The other typical client is a leaseholder or landlord of a mansion flat on Belsize Avenue or Haverstock Hill, refreshing the leased plan between occupants: compact wet rooms on original risers, corridor and principal rooms decorated, floors renewed to whatever acoustic standard the lease allows. The agent's pack and the lift decide the diary. We do not treat an avenue apartment as a renamed conversion, or a conversion as a block with a porter.",
+    ],
+    failures: [
+      {
+        title: "The join between two houses",
+        text:
+          "A lateral conversion is still two Victorian carcasses. We replace kitchen and bathroom, decorate, and ease the floor transition. We do not take out the remaining party wall, form a new opening, or pretend the join can be designed away. That work sits with Hampstead Renovations.",
+      },
+      {
+        title: "Height before the furniture arrives",
+        text:
+          "Belsize rooms are tall. Cornice, high-level preparation and filling run from a clear floor, before units and a bath make towers impractical. Wet rooms still lead the programme. Paint last is not a preference here; it is how a late plumber is stopped from destroying a ceiling that took a week.",
+      },
+      {
+        title: "Avenue pack or conversion neighbours",
+        text:
+          "On Belsize Avenue the managing agent's licence and hours set the start. In a converted villa the other flat owners, acting as freeholder, have to put the same consent in writing. Nothing is stripped while either is outstanding. The paperwork is different; the rule is not.",
+      },
+      {
+        title: "Levels that never quite met",
+        text:
+          "Where two houses were joined, floors, skirtings and service runs were installed twice. Subfloors that have dropped, redundant wiring and a waste that crosses what used to be a party wall are listed at survey as provisional, not buried. We will not specify a floor finish until the join has been measured.",
+      },
+    ],
     extraFaqs: [
       {
         q: "Our flat runs across two houses. Does the join cause problems?",
@@ -23,6 +49,26 @@ export const refurbDetail: ComboDetailMap = {
         q: "Can an ensuite be added to a bedroom in a Belsize conversion?",
         a: "Only where the drainage will reach it without cutting into another flat, and where the lease allows a wet room over a habitable room below. Both are checked at survey rather than assumed from a floor plan. If the answer is no, we say so at the first visit. Forming a new door opening in a structural wall is a separate matter and not this service.",
       },
+      {
+        q: "Can we stay in a Belsize Park lateral conversion while kitchen, bathroom, decoration and floors all run?",
+        a: "A single wet room can often be sequenced around you. A whole-demise programme in a tall lateral conversion is usually cleaner empty: towers for the ceilings, two service positions, and nowhere to live between the halves once both wet rooms are open. We will say which after survey rather than as a rule of thumb.",
+      },
+      {
+        q: "Can the kitchen and bathroom in a Belsize Park conversion sit in the same programme?",
+        a: "That is the point of the instruction. The inserted kitchen around the breast and the bathroom on the inherited stack are stripped, first-fixed and closed as one sequence, with decoration of the high rooms last. Splitting them into two contractors is how the join between the two houses is finished twice and still does not match.",
+      },
+      {
+        q: "Does a Belsize Park mansion flat on the avenues need a licence to alter for a whole-interior programme?",
+        a: "Usually, where the lease says so, and the pack commonly covers both wet rooms and anything that touches shared stacks or flooring. We can prepare drawings and a method statement for the whole demise. Consent remains the managing agent's. Nothing is stripped on Belsize Avenue or Haverstock Hill while the pack is outstanding.",
+      },
+      {
+        q: "Is an empty Belsize Park rental between tenancies a typical light-refurbishment brief?",
+        a: "Yes, if the plan stays as leased: kitchen and bathroom replaced on the stacks that exist, decoration and floors brought to one standard, common parts protected rather than redecorated unless the freeholder is the client. We write the scope to the void dates you actually have. We do not invent a package price for a turnaround.",
+      },
+      {
+        q: "What is not included in a Belsize Park light-refurbishment programme?",
+        a: "The stucco, the roofscape, the communal hall of a converted villa, a further opening through the wall that still separates two halves, a loft, an extension and a basement. Those sit with Hampstead Renovations, or with the freeholder. Kitchen, bathroom, decoration and floors inside the rooms as they stand are this service.",
+      },
     ],
   },
   "crouch-end": {
@@ -32,6 +78,32 @@ export const refurbDetail: ComboDetailMap = {
     ],
     processNote: "Before anything is ordered we establish who the freeholder actually is, because in a split house it is often the other flat owners, and their written agreement takes longer to gather than a managing agent's decision. Haringey licences a skip on a residential side street. Stair and hallway protection goes in on day one. Breaking out over an occupied flat is blocked into agreed hours, and the shared parts are made good before handover rather than after it.",
     consent: "Two different permissions are involved and they come from different people. Haringey grants planning permission and holds the conservation-area designation [VERIFY whether the address sits inside it]; that bears on windows, elevations and anything visible, not on replacing a kitchen inside a room that already exists. The lease decides the rest. A licence to alter for work touching structure, wastes or common services is granted by the freeholder, and in a share-of-freehold house that means your co-owners acting in that capacity [VERIFY the tenure]. We can prepare drawings and a method statement; the consent itself is not ours to give.",
+    audience: [
+      "The ordinary Crouch End client owns one flat in a house split decades ago: kitchen in the former rear room, bathroom fitted wherever the plan allowed, high rooms decorated with mouldings intact, floors made good, the original tiled hall protected rather than treated as a site path. The programme is that demise, not the building. The stair, the roof and the front elevation belong to the freeholder unless they instruct them separately.",
+      "Landlords emptying a Crouch End conversion between tenancies sit in the same definition: kitchen, bathroom, decoration and floors as one account, neighbour notice because a waste run crosses the ceiling below, and a written method for the shared stair. Purpose-built blocks are the exception around the Broadway, not the rule. We do not price a new rear addition under this heading because the house next door already has one.",
+    ],
+    failures: [
+      {
+        title: "The demise, not the house",
+        text:
+          "A Crouch End conversion is one flat behind a shared front door. We work the rooms you own. The stair, the tiled hall beyond your threshold, the roof and the garden are out unless the freeholder is the client. Taking the wall out between front and rear reception is structural and sits with Hampstead Renovations.",
+      },
+      {
+        title: "Breaking out over an occupied ceiling",
+        text:
+          "The bathroom waste in this stock usually sits over a neighbour's bedroom. Isolation, testing and making good are planned; noisy breaking is confined to agreed hours; neighbour notice goes out before strip-out. Wet rooms still lead the programme. A late plumber returning after the decorator has finished is how the ceiling below becomes a dispute.",
+      },
+      {
+        title: "Co-owners granting the licence",
+        text:
+          "Share of freehold is common here. Your co-owners, acting as the freeholder, grant a licence to alter in writing — not over the fence. It usually takes longer to gather than a managing agent's decision. We can prepare drawings and a method statement. We do not strip a kitchen or bathroom while it is outstanding. [VERIFY the tenure.]",
+      },
+      {
+        title: "What the former rear room hides",
+        text:
+          "Kitchens occupy rooms never meant to be kitchens. Failed subfloors, a waste laid at too shallow a fall, and later partitions sitting on boards rather than structure are ordinary findings once the room is open. They are listed as provisional at survey. When we find something, we stop and write a variation before continuing.",
+      },
+    ],
     extraFaqs: [
       {
         q: "What actually drives the cost of refurbishing a conversion flat here?",
@@ -45,6 +117,26 @@ export const refurbDetail: ComboDetailMap = {
         q: "The flat below is occupied — how does that change a bathroom replacement?",
         a: "It sets the hours and the method. The waste runs sit over their ceiling, so isolation, testing and making good are planned rather than improvised, and noisy breaking is confined to agreed times. Neighbour notice goes out before the strip-out. If there is a history of leaks, we would rather see it at survey than find it through their plaster.",
       },
+      {
+        q: "Can we stay in a Crouch End conversion while the whole demise is refurbished?",
+        a: "A single wet room, often, if the other kitchen or bathroom can be kept. A whole-demise programme — rear-room kitchen, bathroom, decoration and floors — is usually cleaner if you decant, because the shared stair is the only route and the tiled hall cannot be a living space once it is boarded. We will say which after survey.",
+      },
+      {
+        q: "Can kitchen and bathroom in a Crouch End conversion run as one programme?",
+        a: "Yes. That is the local type: the former rear room and the bathroom the split allowed, first-fixed together, decoration of the high rooms last. Splitting them between two contractors is how the shared stair is protected twice and the neighbour below is given two sets of hours.",
+      },
+      {
+        q: "Can original boards in a Crouch End conversion be sanded as part of the work?",
+        a: "Where they will take it. Failed subfloors, boards too thin to sand, and a previous bitumen covering are listed at survey rather than discovered under a hired sander. Geometric hall tiles outside the demise are protected, not sanded. We will not promise a sanded finish from a photograph of a Crouch End floor.",
+      },
+      {
+        q: "How long does a whole Crouch End conversion flat take once the co-owners have consented?",
+        a: "The rooms set a baseline; the building moves it. A bathroom over an occupied ceiling, a stair that only one trade can use, and whatever is found under the rear-room floor all add days. The licence sits in the lead-in, not inside the on-site weeks. We date the programme after survey against the written scope.",
+      },
+      {
+        q: "What is not included in a Crouch End light-refurbishment programme?",
+        a: "A new rear addition, taking the wall out between front and rear reception, the roof, the front elevation, and the shared stair unless the freeholder instructs it. Those sit with Hampstead Renovations or with the other owners. Kitchen, bathroom, decoration and floors inside the demise as it stands are this service.",
+      },
     ],
   },
   "golders-green": {
@@ -54,6 +146,32 @@ export const refurbDetail: ComboDetailMap = {
     ],
     processNote: "Barnet issues the licences, and on the crescents behind the main road a drive often removes the need for one altogether — though a drive is used as a drop point only if the survey says the crossover and the paving will take the weight. The bigger variable is you. In an occupied house the sequence is built around keeping a kitchen and a bathroom alive, which means the second bathroom, if there is one, is finished before the first is touched.",
     consent: "Most Golders Green addresses are ordinary Barnet planning: no Trust, no scheme of management, and no conservation constraint on an interior that leaves the outside as it was. Selected streets and the ground near Golders Hill Park are designated, and there the elevation matters again — a new extract terminal or a flue on a front or flank wall is checked before it is drawn [VERIFY Barnet's conservation-area map for the address]. Where the property is a flat in one of the blocks on the main roads, the licence to alter is granted by the freeholder or managing agent, not the council.",
+    audience: [
+      "Golders Green programmes are more often a family house than a stacked flat. The typical client is an owner-occupier of an Edwardian or inter-war house — brick, pebbledash or later mock-Tudor — who wants the kitchen in the original family room at the back, one bathroom and often a second, halls and landings, the receptions and the bedrooms, and floors throughout, sequenced so a kitchen and a bedroom remain usable if they stay.",
+      "Landlords of mansion flats along Golders Green Road and Finchley Road are the other brief: the leased plan, compact wet rooms, the agent's hours, a peak-hour kerb rather than a drive. That is not a house programme with occupancy phasing, and we do not write it as one. This is ordinary Barnet planning unless the map says the address sits inside Hampstead Garden Suburb. [VERIFY.]",
+    ],
+    failures: [
+      {
+        title: "The wall that neighbours have already taken out",
+        text:
+          "Knocking the kitchen through to the dining room is the request we most often decline in Golders Green. It is a structural opening. It is not this service — Hampstead Renovations does that work. Nor do we replace the back addition, raise the roof or convert the garage. The rooms stay as they stand.",
+      },
+      {
+        title: "A kitchen that has to stay alive",
+        text:
+          "These houses are large enough to live in around the work, which makes phasing the real constraint. If you stay, the second bathroom is finished before the first is touched, and a working kitchen is kept until its replacement is ready to connect. Wet rooms still lead. Paint last. Occupied sequencing is slower than an empty house; we will set both options out after survey.",
+      },
+      {
+        title: "Barnet hours, not Trust hours",
+        text:
+          "Most Golders Green addresses are ordinary Barnet planning and a Barnet skip licence. The Suburb Trust does not apply by default; its boundary is a separate map [VERIFY]. A flat in a block on the main roads adds a freeholder's licence to alter and the building's working hours. We do not start from Suburb rules and then relax them.",
+      },
+      {
+        title: "Coatings and tiles of that age",
+        text:
+          "Textured ceiling coatings and old floor tiles in a 1930s house are not disturbed until a specialist has tested them, because materials of that age can contain asbestos. Later partitions, mixed solid and suspended floors, and services replaced piecemeal are listed as provisional. They are not used as a blank cheque.",
+      },
+    ],
     extraFaqs: [
       {
         q: "Can a family-house refurbishment be split into phases rather than done in one run?",
@@ -67,6 +185,26 @@ export const refurbDetail: ComboDetailMap = {
         q: "Do you work on the mansion flats along the main roads as well as the houses?",
         a: "Yes, and they are a different job in everything except the definition. A flat brings a lease, a managing agent, agreed working hours and common parts that have to be protected rather than walked through. Loading is the other difference: a house behind the crescents usually has a drive, while a block on the main road has a peak-hour kerb and a timed window. The four items in scope do not change.",
       },
+      {
+        q: "Can a Golders Green family stay in the house during a whole-interior programme?",
+        a: "Often, if a kitchen and a bedroom can be kept and if there is a second bathroom to finish first. A whole-house strip is usually cleaner empty. Occupied work costs time: protection goes up around you, and a decorator returns to rooms that have been lived in. We will say which after survey rather than as a slogan.",
+      },
+      {
+        q: "Do kitchen and bathroom in a Golders Green house have to sit in the same programme?",
+        a: "They do not have to, but grouping the wet rooms is the sensible sequence, because they carry the services. Decoration and floors then close the house as one account. Splitting kitchen and bathroom across two years is how first-fix is opened twice and the occupancy plan has to be rewritten.",
+      },
+      {
+        q: "Is an empty Golders Green rental between tenancies a typical light-refurbishment brief?",
+        a: "On the family houses behind the crescents, less often than an owner-occupier still in residence. On the mansion flats along the main roads, yes: kitchen and bathroom if they need it, decoration and floors to one standard, agent's hours, one programme. We write the scope to the void you actually have. We do not invent a package price.",
+      },
+      {
+        q: "Can original boards in a Golders Green house be sanded as part of the programme?",
+        a: "Where they will take it. A 1930s ground floor is often solid in one room and suspended timber in the next, and old floor tiles are not lifted until they have been tested. We list what can be sanded, what needs a new finish, and what is provisional, at survey. We do not promise a sanded house from a photograph.",
+      },
+      {
+        q: "What is not included in a Golders Green light-refurbishment programme?",
+        a: "Knocking the kitchen through to the dining room, replacing the back addition, raising the roof, converting the garage, a loft and a basement. Those sit with Hampstead Renovations. Kitchen, bathrooms, decoration and floors inside the rooms as they stand are this service. The Suburb Trust is a different map; we do not apply it by default. [VERIFY.]",
+      },
     ],
   },
   "hampstead": {
@@ -76,6 +214,32 @@ export const refurbDetail: ComboDetailMap = {
     ],
     processNote: "The lead-in here carries more than materials. Listing and conservation status are checked against the address before anything is ordered, and in a converted house the freeholder's position on wet-room work is settled in the same period. Loading is timed for the lane, and a whole-flat strip is broken into drops rather than one delivery. On site that means the shared stair carries one trade at a time, and the flat is worked back to front so the entrance is finished last.",
     consent: "Planning, conservation-area and listed-building matters all sit with Camden. Replacing a kitchen or bathroom inside the rooms that already exist usually falls outside planning control, though in a listed building internal work affecting the special interest can need listed-building consent in its own right [VERIFY on the specific property]. The envelope is different: an extract terminal, a replacement sash or external decoration is a Camden question. A licence to alter, where the lease requires one, is granted by the freeholder or managing agent, not the council.",
+    audience: [
+      "Most Hampstead programmes are for owner-occupiers of a flat carved from one village house: the kitchen in a former bedroom or rear closet, the bathroom over the original stack, lime plaster repaired rather than skimmed, original joinery treated as joinery, boards refinished where they will take it. The brief is those rooms brought to one standard, not a new envelope on a listed interior.",
+      "The other typical client owns a storey of a family house toward the Heath or along Frognal and wants that floor — kitchen, bathroom, decoration and floors — without a loft, a rear addition or a structural opening. Village lanes off Heath Street were not drawn for a multi-room delivery. We record access as well as the rooms. Structural work sits with Hampstead Renovations.",
+    ],
+    failures: [
+      {
+        title: "A listed plan with unlisted ambition",
+        text:
+          "The listed count around the High Street is high enough that internal alteration cannot be assumed [VERIFY listing on the address]. We replace kitchen and bathroom, decorate and renew floors inside the rooms as they stand. Changing the plan of a listed house, forming a structural opening, a loft or a rear addition is not this service.",
+      },
+      {
+        title: "Lath and plaster before paint",
+        text:
+          "Village ceilings are often lath and plaster rather than board. Sound lime plaster is repaired; a modern skim over a soft background tends to fail at the edges. Wet rooms still lead. High-level preparation runs from a clear floor. Paint last is how a late plumber is stopped from destroying a ceiling that cannot be rolled over in an afternoon.",
+      },
+      {
+        title: "One trade on a village stair",
+        text:
+          "Converted houses share a stair that only one trade can use at a time. Loading is timed for the lane; a whole-flat strip is broken into drops rather than one delivery. The flat is worked back to front so the entrance is finished last. Common-parts protection is part of the method, not a courtesy.",
+      },
+      {
+        title: "Floors that have dropped since the split",
+        text:
+          "Where the house was divided, floors have often dropped away from level, and the soil pipe is where it has always been. Failed subfloors and boards too thin to sand are listed at survey. We will not pretend a worn village floor is a new oak finish, or specify a kitchen layout that the existing stack will not serve.",
+      },
+    ],
     extraFaqs: [
       {
         q: "How long does a Hampstead conversion flat take once work starts?",
@@ -89,6 +253,26 @@ export const refurbDetail: ComboDetailMap = {
         q: "The flat was altered before we bought it and we think it is listed — what then?",
         a: "We check the listing and the conservation-area position against the address before pricing anything [VERIFY]. If earlier work was carried out without consent, that is a matter for you and Camden, and we will not build over it as though it had been approved. Our scope stays inside kitchen, bathroom, decoration and floors in the rooms as found.",
       },
+      {
+        q: "Can kitchen and bathroom in a Hampstead conversion sit in the same programme as decoration and floors?",
+        a: "That is the instruction. The closet kitchen and the bathroom on the original stack are first-fixed together; joinery repairs, boards and decoration close the demise. Splitting the wet rooms from the decoration is how a village stair is protected twice and a late plumber returns to a finished lime ceiling.",
+      },
+      {
+        q: "Does a Hampstead conversion need a licence to alter before the wet rooms come out?",
+        a: "Where the lease requires one, yes, and in a converted village house that consent often comes from the other flat owners rather than a managing agent. Listed-building consent is a separate Camden question if the interior is of special interest [VERIFY]. We can prepare drawings and a method statement. We do not strip kitchen or bathroom while either is outstanding.",
+      },
+      {
+        q: "Is an empty Hampstead rental between tenancies a typical village brief?",
+        a: "It happens, more often in conversions off the High Street than in family houses toward the Heath. The plan stays as it is: kitchen and bathroom if they need it, decoration and floors to one standard, listing checked, the shared stair protected. We write the scope to the void dates you have. We do not invent a package price for a turnaround.",
+      },
+      {
+        q: "Can we stay on one floor of a Hampstead family house while the other storey is refurbished?",
+        a: "Sometimes, if a kitchen and a bathroom can be kept on the floor you occupy and if the stair can be protected as a living route. A whole-house strip is usually cleaner empty. Village lanes still constrain deliveries either way. We will say which after survey rather than promise that occupancy is free.",
+      },
+      {
+        q: "What is not included in a Hampstead light-refurbishment programme?",
+        a: "A loft, a rear addition, a structural opening between kitchen and reception, the roof, the parapet gutters, and sash boxes on the front elevation. Changing the plan of a listed interior is not this service. Those sit with Hampstead Renovations or with Camden. Kitchen, bathroom, decoration and floors in the rooms as found are.",
+      },
     ],
   },
   "hampstead-garden-suburb": {
@@ -98,6 +282,32 @@ export const refurbDetail: ComboDetailMap = {
     ],
     processNote: "The lead-in asks one question ahead of any other: does the brief hide an item that breaks the envelope. An extractor terminal is the usual one, and finding it after the kitchen is out stops a job rather than delaying it. Where two approvals are needed they are started in parallel, not one behind the other. On site, materials are stored inside rather than on a green or a verge, and deliveries reach a close in small staged loads.",
     consent: "The Suburb answers to Barnet and to the Trust, and they are not interchangeable. Barnet grants planning permission and administers the conservation area and the Article 4 direction that limits permitted-development rights here [VERIFY its scope]. The Hampstead Garden Suburb Trust separately administers a Scheme of Management under its own Act, and its written consent is required for many external items even where the house is freehold, which is exactly where owners are caught out [VERIFY whether the property falls inside the Scheme]. Leasehold flats are not the local type, so a licence to alter is rarely the question. The Trust usually is.",
+    audience: [
+      "Hampstead Garden Suburb programmes are for owner-occupiers of Unwin and Lutyens cottages and free-standing houses: a small cottage kitchen refitted in the room it has always occupied, a bathroom renewed on the waste already there, decoration through rooms with original doors and panelling, floors made good. Purpose-built mansion blocks are not the local type. The outside is unavailable, so appliance and extract choices are made to suit a route that exists.",
+      "Families in a larger Suburb house who want a storey or the whole interior brought to one standard sit in the same definition — kitchen, bathrooms, decoration and floors — without a rooflight, a dormer, a wider hardstanding or a grille on the elevation. Freehold title does not lift the Trust's Scheme of Management. We would rather name that at the first visit than meet it after strip-out. [VERIFY.]",
+    ],
+    failures: [
+      {
+        title: "Anything that shows on the close",
+        text:
+          "A new grille, a flue, a rooflight, a dormer, replacement windows and a wider hardstanding are out. The Trust's Scheme of Management and Barnet's controls both reach items owners assume are theirs alone. We re-fit the rooms that exist. Anything that breaks the envelope is checked before we open up. [VERIFY.]",
+      },
+      {
+        title: "Cottage rooms in single file",
+        text:
+          "Cottage kitchens and bathrooms are small enough that trades cannot overlap the way they do in a larger house. Wet rooms still lead. Cabinetry is scribed rather than dropped in, because these walls were not built square. Decoration last. The sequence runs closer to single file than to a stacked programme.",
+      },
+      {
+        title: "Barnet and the Trust in parallel",
+        text:
+          "Where two approvals are needed they are started together, not one behind the other, and neither runs to our diary. Internal kitchen, bathroom, decoration and floors often sit outside Trust consent; an extract terminal does not. Finding the terminal after the kitchen is out stops a job rather than delaying it. [VERIFY.]",
+      },
+      {
+        title: "A green is not a yard",
+        text:
+          "Materials are stored inside rather than on a green or a verge. Deliveries reach a close in small staged loads. Failed subfloors and out-of-square walls are listed as provisional. We do not treat a close as a building site for work the Trust would not allow on the outside.",
+      },
+    ],
     extraFaqs: [
       {
         q: "We own our house freehold — why does the Trust still have a say?",
@@ -111,6 +321,26 @@ export const refurbDetail: ComboDetailMap = {
         q: "What makes a Suburb programme take longer than the same rooms elsewhere?",
         a: "The lead-in, not the trades. If any part of the brief touches the outside, two written consents have to be in hand before work starts, and neither runs to our diary. Cottage rooms are also small enough that trades cannot overlap the way they do in a larger house, so the sequence runs closer to single file.",
       },
+      {
+        q: "Can we stay in a Hampstead Garden Suburb cottage while kitchen and bathroom both come out?",
+        a: "A cottage is a poor place to live through two wet rooms. There is rarely a second bathroom, and the rooms are too small to keep a kitchen alive in a corner. A larger free-standing house can sometimes be sequenced if a kitchen and a bedroom remain usable. We will say which after survey. Empty is cleaner in either case.",
+      },
+      {
+        q: "Can kitchen and bathroom in a Hampstead Garden Suburb house sit in the same internal programme?",
+        a: "Yes, and they should. Both are refitted in the rooms they already occupy, with decoration and floors closing the interior as one account. The constraint is the envelope, not the pairing: an extract terminal that shows on the close has to be settled before either room is opened. [VERIFY.]",
+      },
+      {
+        q: "Is an empty Hampstead Garden Suburb house between occupants a typical brief?",
+        a: "It happens in the larger houses more than in the cottages, which tend to stay owner-occupied. The work is still internal: kitchen, bathrooms, decoration and floors, inside an envelope we do not treat as a building site. We write the scope to the dates you have. We do not invent a package price, and we do not assume permitted development. [VERIFY.]",
+      },
+      {
+        q: "Can original boards in a Hampstead Garden Suburb cottage be sanded as part of the interior work?",
+        a: "Where they will take it. Cottage boards are often thinner, and previous coverings are common. Failed subfloors are listed at survey. Sanding is an interior finish; it does not change the elevation, which is why it usually sits outside Trust consent. Replacement of a floor finish that would alter a threshold or a front door is a different question. [VERIFY.]",
+      },
+      {
+        q: "What is not included in a Hampstead Garden Suburb light-refurbishment programme?",
+        a: "A grille or flue on the elevation, a rooflight, a dormer, replacement windows, a wider hardstanding, a loft and a structural opening. Those need Barnet and, in most cases, written Trust consent, and the construction sits with Hampstead Renovations. Kitchen, bathrooms, decoration and floors inside the rooms that exist are this service. [VERIFY.]",
+      },
     ],
   },
   "highgate": {
@@ -120,6 +350,32 @@ export const refurbDetail: ComboDetailMap = {
     ],
     processNote: "The first task is administrative, not practical: establishing which borough the address belongs to, because that determines the skip and scaffolding licence, the conservation appraisal that applies and, if the house is listed, whose conservation officer takes the enquiry. Village lanes then decide the vehicle and the number of drops. Only once those are fixed do wet rooms start; on a listed interior, nothing is opened up until the position on the fabric is written down.",
     consent: "Highgate is where the usual rule of thumb breaks down. Elsewhere, planning looks outward and an interior is nobody's business but the owner's and the lease's. In a listed building that is not true: listed-building consent can be required for internal alterations as well as external ones, and it comes from the borough the address sits in — Camden, Haringey or, on some streets, Islington. A licence to alter, where a lease exists, is the freeholder's or agent's decision and separate from either. [VERIFY the listing, the designation and the authority for the address.]",
+    audience: [
+      "Highgate Village programmes are for owners of Georgian and Victorian houses around Pond Square and Highgate High Street: small, tall rooms, original joinery, often a listed interior [VERIFY the listing]. The kitchen, bathroom, decoration and floors sit inside those rooms. Extract is kept off a Heath-facing front wherever the building allows. We do not assume a skip can stand where the van stopped.",
+      "Families in slope villas toward the Heath and Archway want a different plan at a larger scale: a family kitchen already in a rear room, two or three bathrooms, long decorating runs and floors, without a loft storey or a wall taken out. Conversion flats toward Archway take the same four items on a stacked wet room and a shared hallway. Confirming the council is part of the survey, not a footnote.",
+    ],
+    failures: [
+      {
+        title: "Which borough before which room",
+        text:
+          "Highgate is not a single-authority area. Camden, Haringey or, on some streets, Islington issues the skip licence, holds the conservation appraisal and, if the house is listed, takes the enquiry. We confirm it from the address, not from N6. Holly Lodge Estate is a designation of its own. [VERIFY.]",
+      },
+      {
+        title: "No cutting and no digging",
+        text:
+          "No opening is formed between rooms, no storey is added under the roof, and no ground is broken. Steep plots and mature trees make groundwork a specialist and often a protected matter [VERIFY any TPO]. That work belongs to Hampstead Renovations. Light refurbishment is the interiors of the house as it stands.",
+      },
+      {
+        title: "Village lanes and a steep plot",
+        text:
+          "Village pedestrian traffic, limited turning and a gradient decide the vehicle and the number of drops. Tree constraints on Heath-facing plots can restrict even an internal programme if the skip sits on a root zone [VERIFY TPO and conservation-area tree notice with the correct borough]. Wet rooms start only once access is fixed.",
+      },
+      {
+        title: "A floor that has moved with the house",
+        text:
+          "Village floors take a gentle fall with a levelling compound or a ply overlay, at a cost paid at thresholds, skirtings and the bottom stair riser. A floor that has moved because something structural has moved is identified rather than buried. On a listed interior, nothing is opened up until the position on the fabric is written down. [VERIFY.]",
+      },
+    ],
     extraFaqs: [
       {
         q: "Does internal work in a Highgate house need consent from the council?",
@@ -133,6 +389,26 @@ export const refurbDetail: ComboDetailMap = {
         q: "Can uneven floors in a Village house be levelled as part of the work?",
         a: "Within limits. A self-levelling compound or a ply overlay will take out a gentle fall, but it adds height, and that height has to be paid for at the door thresholds, the skirtings and the bottom stair riser. A floor that has moved because something structural has moved is a different problem, and one we will identify rather than bury under a new finish.",
       },
+      {
+        q: "Can we stay in a Highgate slope villa during a whole-interior programme?",
+        a: "Often, if a kitchen and a bedroom can be kept and if a second bathroom can be finished first. Village houses are a poorer fit for occupancy: the rooms are small and tall, and a listed interior is no place to live through strip-out. A conversion toward Archway is usually cleaner empty. We will say which after survey.",
+      },
+      {
+        q: "Can kitchen and bathrooms in a Highgate villa sit in the same programme?",
+        a: "Yes. The family kitchen in the rear room and the bathrooms already on that waste run are first-fixed together; decoration of the long runs and floors close the house. Splitting them is how a steep plot is loaded twice. A new ensuite that the existing stack will not serve is a different question, and not this service if it needs new structure.",
+      },
+      {
+        q: "Does a Highgate conversion toward Archway need a licence to alter?",
+        a: "Where the flat is leasehold, yes, from the freeholder or managing agent, and that is separate from whichever borough holds the conservation appraisal. Village houses are more often freehold, so the listing and the council are the questions instead. We confirm tenure, listing and authority from the address. [VERIFY.]",
+      },
+      {
+        q: "How long does a Highgate Village house take once the listing position is written down?",
+        a: "The on-site weeks still follow the rooms. What stretches a Village programme is the lead-in — listing, the correct borough, a vehicle that will turn in the lane — and the fabric: lath, original joinery, floors that have moved. We date the programme after survey, not from a photograph of Pond Square.",
+      },
+      {
+        q: "What is not included in a Highgate light-refurbishment programme?",
+        a: "A loft storey, a basement, a wall taken out between rooms, groundwork on a steep plot, and any opening that needs cutting. Those sit with Hampstead Renovations. Tree works and elevation changes sit with the correct borough. Kitchen, bathroom, decoration and floors inside the rooms that exist are this service.",
+      },
     ],
   },
   "kentish-town": {
@@ -142,6 +418,32 @@ export const refurbDetail: ComboDetailMap = {
     ],
     processNote: "Two things sit in the lead-in here more heavily than elsewhere: the moisture picture in any lower-ground room, and the freeholder's position where the flat is leasehold. Both are settled before materials are dated. Drying and remedial time is written into the programme rather than left to compress the decoration at the end. Camden licences the skip on a side street. Neighbours on two party walls are given notice before the noisiest phase, not during it.",
     consent: "Camden is the planning authority, and designation here is patchwork rather than uniform: some streets are covered, others are not, so it is read for the address rather than for the postcode [VERIFY the named conservation area]. Interior replacement within existing rooms is normally outside planning; a new extract terminal, soil pipe or window on a rear elevation is not. Leasehold flats add a licence to alter, granted by the freeholder or managing agent where wastes, structure or common services are touched. Notifiable electrical and drainage work is notified to building control in the ordinary way.",
+    audience: [
+      "The ordinary Kentish Town client owns a whole demise in a converted terrace: rear-return galley, a bathroom squeezed in where the split allowed, decoration, floors. In a garden flat the lower-ground rooms come with it, and moisture in a half-buried wall decides when units can be hung and when plaster can be painted. The survey reads that fabric before anyone discusses finishes.",
+      "Landlords emptying a Kentish Town conversion between tenancies sit in the same definition: one programme for the demise, neighbour notice on two party walls, the shared hallway protected rather than used as a store. Toward Tufnell Park and Dartmouth Park the occasional family-house interior takes the same four items at a larger scale. We do not open the carcass of the terrace.",
+    ],
+    failures: [
+      {
+        title: "Headroom that would need underpinning",
+        text:
+          "Digging a lower-ground floor down, underpinning, or opening the wall between front and back is not part of this. It is a common request in NW5 garden flats, and it is structural work for Hampstead Renovations. A rear addition that already exists can be refitted as a room; a new one cannot be built under this heading.",
+      },
+      {
+        title: "Moisture before a unit is hung",
+        text:
+          "Lower-ground kitchens and bathrooms get tested and, where necessary, isolated and left to dry before lining, tiling or paint is ordered. A wall that is still wet will not hold units or paint that lasts. Wet rooms still lead the programme. Drying time is written in rather than left to compress the decoration at the end.",
+      },
+      {
+        title: "Neighbours on both party walls",
+        text:
+          "Terraces here sit close together. Strip-out and chasing are blocked into agreed hours early, and neighbours on two sides are told beforehand. Shared hallways carry sound. Working hours belong in the written method. A licence to alter, where the flat is leasehold, is settled before materials are dated.",
+      },
+      {
+        title: "A waste the flat below can hear",
+        text:
+          "A rear-return kitchen and a stacked bathroom share a stack the neighbour is also using. Failed subfloors, a history of leaks and a waste laid at too shallow a fall are listed at survey. We would rather see a leak at the first visit than find it through their plaster once the room is open.",
+      },
+    ],
     extraFaqs: [
       {
         q: "Can you lower the lower-ground floor while the flat is stripped out?",
@@ -155,6 +457,26 @@ export const refurbDetail: ComboDetailMap = {
         q: "Neighbours on both sides work from home — how do you plan the noise?",
         a: "By front-loading it. Strip-out and chasing are the loud phases, so they are blocked into agreed hours early in the programme and neighbours are told beforehand rather than afterwards. Quieter trades follow. Terraces here sit close together and shared hallways carry sound, so working hours belong in the written method rather than in a courtesy conversation.",
       },
+      {
+        q: "Can we stay in a Kentish Town conversion while kitchen, bathroom, decoration and floors all run?",
+        a: "A single wet room, often, if the other can be kept. A whole-demise programme in a dense terrace is usually cleaner if you decant: the shared hallway is the only route, two party walls carry the noise, and a garden flat may be drying before it can be lived in. We will say which after survey.",
+      },
+      {
+        q: "Can the rear-return kitchen and the bathroom in a Kentish Town flat sit in the same programme?",
+        a: "Yes. That is the local type. Both rooms sit on the same stack, so first-fix is coordinated rather than run as two jobs, and decoration of the rest of the demise closes last. Splitting them is how the neighbour below is given two isolation dates and the hallway is boarded twice.",
+      },
+      {
+        q: "Does a Kentish Town leasehold conversion need a licence to alter before strip-out?",
+        a: "Where wastes, structure or common services are touched, yes, from the freeholder or managing agent. In a share-of-freehold house that is often the owner of the other flat. We can prepare drawings and a method statement. We do not strip the rear-return kitchen or the bathroom while it is outstanding. [VERIFY the tenure.]",
+      },
+      {
+        q: "Is an empty Kentish Town rental between tenancies a typical whole-flat brief?",
+        a: "Yes, if the plan stays as it is: rear-return kitchen and bathroom if they need it, decoration and floors to one standard, one programme and one account. Lower-ground moisture is still a survey item, not a decorating surprise. We write the scope to the void dates you have. We do not invent a package price.",
+      },
+      {
+        q: "Can original boards in a Kentish Town conversion be sanded as part of the programme?",
+        a: "Where they will take it. Failed subfloors, previous bitumen and boards too thin to sand are listed at survey. In a garden flat the lower-ground finish is often a different construction from the boards above, so we do not specify one sanded standard across both. We will not promise a finish from a photograph.",
+      },
     ],
   },
   "kilburn": {
@@ -164,6 +486,32 @@ export const refurbDetail: ComboDetailMap = {
     ],
     processNote: "The first thing the lead-in settles is the borough, because Camden and Brent licence skips and scaffolding separately and the High Road is the line [VERIFY the borough for the address]. The second is who the freeholder is. A council or housing-association landlord runs its own alterations process on its own timetable [VERIFY], so that application starts earlier than a private agent's. Access is measured before cabinetry is ordered, and where the route passes a trading shop, deliveries follow its hours rather than ours.",
     consent: "Consent here can come from three directions. The council — Camden east of the High Road, Brent west of it — grants planning permission and holds the conservation-area maps, which do not follow the neighbourhood name, so designation is checked frontage by frontage [VERIFY both maps]. Replacing a kitchen or bathroom inside an existing room is not usually a planning matter; a grille, a soil pipe or a window on an upper storey above a parade is. The lease supplies the third: a licence to alter from the freeholder, whether that is a private landlord, a managing agent or a public one.",
+    audience: [
+      "East of Kilburn High Road the typical client owns a Victorian conversion toward West Hampstead, in Camden: rear-return kitchen, stacked bathroom, decoration, floors, party-wall hours, a protected hallway. That is conversion work. The High Road itself is the historic boundary, so we confirm the borough from the address before we write the method. [VERIFY.]",
+      "West of the High Road, and in the parades on it, the client is more often a landlord of a later purpose-built or former local-authority block, or of a flat above a shop: concrete or dry-lined walls, boxed or surface services, communal heating on some blocks, access through a trading shop or a narrow side door. The four items do not change. The construction does, and a fit-out drawn for a period conversion does not transfer without being redrawn. [VERIFY the construction of the block.]",
+    ],
+    failures: [
+      {
+        title: "A conversion drawing on a concrete slab",
+        text:
+          "Cutting into structural concrete, opening the compartment floor between a shop and the flat above it, or altering a shopfront to land a duct all sit outside this service, as do extensions and loft rooms. Wastes take boxed or surface routes rather than deep chases. We do not cut structural concrete to hide a pipe. [VERIFY the construction.]",
+      },
+      {
+        title: "Camden east, Brent west",
+        text:
+          "The two boroughs licence skips and scaffolding separately, and the High Road is the line [VERIFY the borough for the address]. A skip on the High Road is not the working assumption. Wet rooms open only when the correct licence, the freeholder's consent and the drop point are in place. A council or housing-association landlord runs its own alterations process on its own timetable. [VERIFY.]",
+      },
+      {
+        title: "A shop still trading downstairs",
+        text:
+          "Flats above the High Road share a stair with a trading premises, or are reached by a narrow side door. Deliveries follow the shop's hours rather than ours. Access is measured before cabinetry is ordered. Common-parts protection applies in conversions; a method statement applies where the route is through a shop.",
+      },
+      {
+        title: "Heat that belongs to the block",
+        text:
+          "Communal heating means there is no boiler to swap, and any change at the heat interface is the freeholder's call. Isolation and drain-down are booked before first fix because they affect other flats. Failed subfloors in conversions, and a slab that will not take a chased waste in later blocks, are listed as provisional. [VERIFY the arrangement.]",
+      },
+    ],
     extraFaqs: [
       {
         q: "Our freeholder is the council — does that change the licence to alter?",
@@ -177,6 +525,26 @@ export const refurbDetail: ComboDetailMap = {
         q: "The block has communal heating — does that limit a kitchen and bathroom refit?",
         a: "It shapes both. There is no boiler to swap, hot water comes from the block's system, and any change at the heat interface or to a towel rail is the freeholder's call rather than a fitting choice. Isolation and drain-down are booked with the managing agent before first fix, because they affect other flats. [VERIFY the arrangement for the block.]",
       },
+      {
+        q: "Can we stay in a Kilburn conversion while the whole demise is refurbished?",
+        a: "A single wet room, often. A whole-demise programme east of the High Road is usually cleaner empty, because the hallway is shared and party-wall hours constrain the noisy weeks. A shop-flat on the High Road is tighter still: there is nowhere to live once the kitchen and bathroom are both open, and the stair is also the shop's. We will say which after survey.",
+      },
+      {
+        q: "Can kitchen and bathroom in a Kilburn shop-flat sit in the same programme?",
+        a: "Yes, if access and extract can be solved. Both rooms are first-fixed together, with decoration last, and deliveries are timed around the shop's trading. We measure the stair before we promise a kitchen. A conversion toward West Hampstead takes the same pairing on a rear return and a stacked bathroom, with party-wall hours instead of a shop method statement.",
+      },
+      {
+        q: "Is an empty Kilburn rental between tenancies a typical brief east of the High Road?",
+        a: "Yes, on the Victorian conversions toward West Hampstead: rear-return kitchen, stacked bathroom, decoration and floors, one programme, neighbour notice, a protected hallway. West of the High Road the same four items arrive in a later block, often with a public landlord's alterations process that does not move faster because the flat is empty. [VERIFY.]",
+      },
+      {
+        q: "Can original boards in a Kilburn conversion toward West Hampstead be sanded?",
+        a: "Where they will take it. Failed subfloors and previous coverings are listed at survey. A later block west of the High Road is a different question: there may be no boards to sand, and a hard finish over a concrete slab still has to meet whatever acoustic standard the lease sets. We specify the floor after we have seen the construction, not from the postcode. [VERIFY.]",
+      },
+      {
+        q: "What is not included in a Kilburn light-refurbishment programme?",
+        a: "Cutting structural concrete, opening the compartment floor between a shop and the flat above, altering a shopfront to land a duct, a loft and an extension. Those sit with Hampstead Renovations, or with the freeholder. Kitchen, bathroom, decoration and floors inside the rooms as they stand are this service. A conversion drawing does not transfer to a concrete-framed block without being redrawn.",
+      },
     ],
   },
   "maida-vale": {
@@ -186,6 +554,32 @@ export const refurbDetail: ComboDetailMap = {
     ],
     processNote: "Two dates govern the programme and neither is ours. The licence to alter has to be back, and water isolation for the riser has to be booked with the porter or managing agent, which fixes the day the bathroom opens rather than leaving it flexible. Deliveries follow the building's hours and usually the stair. Tanking and screed then need drying time before floors and skirtings, so the hall is decorated last because everything is carried along it.",
     consent: "The Maida Vale Conservation Area covers a substantial part of W9, and Westminster is the authority for it [VERIFY the boundary for the frontage]. Replacing a kitchen or a bathroom inside the rooms that exist generally sits outside planning; repainting previously painted brickwork, changing windows and altering balconies do not. The lease is a separate track: a licence to alter is granted by the freeholder or the managing agent, and it commonly reaches flooring and anything touching shared services. On canal-side frontages the Canal & River Trust can be a further party [VERIFY].",
+    audience: [
+      "Most Maida Vale programmes are for leaseholders of purpose-built red-brick and terracotta mansion flats from the 1890s–1910s: a compact kitchen at the back, a bathroom off the hall, a long corridor connecting everything, rooms of good proportion at the front. The 1890s plan is kept. The two wet rooms are replaced in place, the corridor is decorated as a room rather than a leftover, and floors are renewed to whatever acoustic standard the lease allows.",
+      "Owners of canal-side houses and mews toward Little Venice want the same four items on a different structure: a family kitchen already in the envelope, bathrooms on existing wastes, decoration and floors, without opening the corridor into the receptions. Porters, small lifts and Westminster licences shape the diary in the blocks. The mews are a different construction and a different access problem. We do not write them as a renamed mansion flat.",
+    ],
+    failures: [
+      {
+        title: "The duct the 1890s plan already has",
+        text:
+          "We do not move a wet room off the service duct to a more fashionable position, because the drainage in these blocks was laid for the plan the building already has. Opening the corridor into the receptions is structural and sits with Hampstead Renovations. Windows, balconies and previously painted brickwork belong to Westminster and the freeholder.",
+      },
+      {
+        title: "Isolation booked before the bathroom opens",
+        text:
+          "Two dates govern the programme and neither is ours: the licence to alter has to be back, and water isolation for the riser has to be booked with the porter or managing agent. That fixes the day the bathroom opens. Wet rooms still lead. Tanking and screed then need drying time before floors and skirtings.",
+      },
+      {
+        title: "Carcasses up the stair",
+        text:
+          "Lifts in older Maida Vale blocks are small. Kitchen carcasses often go up the stairs. Deliveries follow the building's hours. The hall is decorated last because everything is carried along it. Common-parts protection is part of the method, not a courtesy to the porter.",
+      },
+      {
+        title: "Tanking over a timber intermediate floor",
+        text:
+          "The bathroom sits over a timber floor that moves, and the flat below is somebody's ceiling. Tanking, falls and build-up all have to work within existing door heights. Failed subfloors and previous bitumen are common in this stock. We list them at survey rather than promising a sanded finish from a photograph.",
+      },
+    ],
     extraFaqs: [
       {
         q: "Do I need planning permission to replace the kitchen and bathroom in a mansion flat?",
@@ -199,6 +593,26 @@ export const refurbDetail: ComboDetailMap = {
         q: "Can the flat's electrics be brought up to date as part of the work?",
         a: "The circuits serving the rooms in scope, yes, coordinated with the installation that already exists. Blocks of this age often have limited spare capacity at the flat's own board, and shared rising mains that belong to the building rather than to you. What can be improved inside the demise is recorded at survey; anything on the building side is the freeholder's.",
       },
+      {
+        q: "Can we stay in a compact Maida Vale mansion flat while kitchen and bathroom both come out?",
+        a: "Usually wiser not to. Living in dust in a compact apartment, with the corridor as the only route and both wet rooms open, costs more time than it saves. Decoration of a single reception can be done around you. A whole-demise programme is cleaner empty. Little Venice houses can sometimes be sequenced if a kitchen and a bedroom remain usable.",
+      },
+      {
+        q: "Can the rear kitchen and the hall bathroom in a Maida Vale mansion flat sit in the same programme?",
+        a: "That is the local type. Both rooms sit on the original stacks, first-fixed together, with corridor decoration and floors closing last because everything is carried along the hall. Relocating either wet room is only possible if the drainage will serve the new position without cutting into another demise. We will say at survey rather than redraw the 1890s plan.",
+      },
+      {
+        q: "Does a Maida Vale licence to alter usually cover kitchen, bathroom and floors together?",
+        a: "Often, yes. Leases in these blocks commonly reach flooring and anything that touches shared services, not only the two wet rooms. We read the clause before specifying, and we can prepare drawings and a method statement for the whole interior. Consent remains the freeholder's or managing agent's. Nothing is stripped while the pack is outstanding.",
+      },
+      {
+        q: "Is an empty Maida Vale rental between tenancies a typical mansion-flat brief?",
+        a: "Yes. The plan stays as leased: compact rear kitchen, bathroom off the hall, corridor and principal rooms decorated, floors renewed to the acoustic standard the lease allows. Porters' hours and the licence sit in the lead-in. We write the scope to the void dates you have. We do not invent a package price for a turnaround.",
+      },
+      {
+        q: "How long does a whole Maida Vale mansion flat take once water isolation is booked?",
+        a: "Isolation fixes the day the bathroom opens; it does not shorten the drying. Tanking and screed need time before floors and skirtings, and the hall is decorated last. The licence sits ahead of all of it. We date the programme after survey against the written scope, not from a photograph of a W9 corridor.",
+      },
     ],
   },
   "muswell-hill": {
@@ -208,6 +622,32 @@ export const refurbDetail: ComboDetailMap = {
     ],
     processNote: "Access is settled first here. Haringey licences the skip, and on a controlled street a bay may need suspending before material can be dropped [VERIFY the parking arrangement for the road]. Where extract or a window would show on an elevation inside the conservation area, that question is answered while the old wet rooms are still standing. The hall and stair are protected before the first strip-out and decorated last, and materials arrive in staged loads rather than in one delivery.",
     consent: "Replacing a kitchen or bathroom inside rooms that already exist normally sits outside planning. The envelope is a separate matter. Haringey holds the conservation-area designations covering the Broadway and much of the slope, with a second designation adjoining on the Fortis Green side, and window replacement, dormers or a new grille on a visible elevation are council decisions, not ours [VERIFY the boundary and any Article 4 for the address]. Most houses on the slope are freehold, so no licence to alter arises. A converted flat or a flat behind the Broadway is leasehold, and there the freeholder or managing agent grants that licence.",
+    audience: [
+      "The usual Muswell Hill client owns an Edwardian house on the slope: the kitchen in the original back addition, a bathroom above it on the same waste run, decoration through the hall, stair and landing, boards lifted or refinished. The hall is the only route from the front door to everything in the scope. Occupancy can be sequenced if a kitchen and a bedroom remain usable. We do not treat a neighbour's knock-through as a precedent.",
+      "Landlords of flats above the Broadway and later infill want the same four items on a tighter plan: a compact kitchen, a stacked bathroom, extract over a parade, a stair that may not take a hopeful island. Plots and rear gardens are larger than in inner Camden; the hill is not. We plan vehicle and drop point at survey rather than assuming a flat terrace.",
+    ],
+    failures: [
+      {
+        title: "The knock-through on the house next door",
+        text:
+          "Taking the wall out between the two receptions, forming a dormer or a loft room, or building a new rear addition are not this service. Neighbouring houses have often had all three, which makes them look like part of an ordinary refresh. They are not. That work sits with Hampstead Renovations. The roof, the chimneys and the sash windows stay out of an interior programme.",
+      },
+      {
+        title: "The hall is the last room finished",
+        text:
+          "On the slope the hall is the only route. It is protected before the first strip-out and decorated last. Wet rooms still lead. Materials arrive in staged loads rather than in one delivery, because a long-wheelbase van on a steep street is a poor default. Paint last is how a late plumber is stopped from walking a finished stair.",
+      },
+      {
+        title: "A skip on a slope",
+        text:
+          "Haringey licences the skip, and on a controlled street a bay may need suspending before material can be dropped [VERIFY the parking arrangement]. Where extract or a window would show on an elevation inside the conservation area, that question is answered while the old wet rooms are still standing. Broadway flats add a freeholder's licence to alter.",
+      },
+      {
+        title: "A waste that will not reach an ensuite",
+        text:
+          "The bathroom usually sits over the back addition. The further a new waste has to travel, the less likely the fall becomes. Failed subfloors and old wiring are listed as provisional. Cutting new structure to gain a route is not this service. We measure the run at survey and answer then.",
+      },
+    ],
     extraFaqs: [
       {
         q: "What decides how long a whole-house programme takes here?",
@@ -221,6 +661,26 @@ export const refurbDetail: ComboDetailMap = {
         q: "Do you repair original sashes and internal joinery as part of the work?",
         a: "Internal joinery, yes: doors, architraves, shutters and skirtings are repaired and decorated within the rooms in scope, and sash repair inside the existing opening sits with us as well. Replacing the windows themselves is an elevation decision that can need council consent in a conservation area, so it is kept out of an interior programme rather than slipped into one. [VERIFY.]",
       },
+      {
+        q: "Can kitchen and bathroom in a Muswell Hill family house sit in the same programme as decoration and floors?",
+        a: "Yes. The kitchen in the back addition and the bathroom above it are first-fixed together, because they share a waste run; the hall, stair and landing are decorated last because they are the only route. Splitting the wet rooms from the decoration is how a steep plot is loaded twice.",
+      },
+      {
+        q: "Does a Muswell Hill Broadway flat need a licence to alter for a whole-interior programme?",
+        a: "Where the flat is leasehold, yes, from the freeholder or managing agent, and extract over a parade is often the item that makes the pack necessary. Most houses on the slope are freehold, so the licence does not arise; Haringey still decides anything that shows on a conservation-area elevation. [VERIFY tenure and the CA boundary.]",
+      },
+      {
+        q: "Is an empty Muswell Hill rental between tenancies a typical slope-house brief?",
+        a: "On the family houses, less often than an owner-occupier still in residence. On the Broadway flats, yes: compact kitchen, stacked bathroom, decoration and floors, extract as a real constraint, one programme. We write the scope to the void dates you have. We do not invent a package price.",
+      },
+      {
+        q: "Can original boards in a Muswell Hill Edwardian house be sanded as part of the work?",
+        a: "Where they will take it. Failed subfloors are listed at survey. The hall boards take more traffic during a whole-house programme than the receptions, so they are protected until decoration closes, then finished. We will not promise a sanded house from a photograph of an N10 floor.",
+      },
+      {
+        q: "What is not included in a Muswell Hill light-refurbishment programme?",
+        a: "A knock-through between the two receptions, a dormer, a loft room, a new rear addition, and replacement windows on a conservation-area elevation. Those sit with Hampstead Renovations or with Haringey. Kitchen, bathrooms, decoration and floors inside the rooms that exist are this service. A neighbour's extension is not a precedent.",
+      },
     ],
   },
   "primrose-hill": {
@@ -230,6 +690,32 @@ export const refurbDetail: ComboDetailMap = {
     ],
     processNote: "Two things stretch the front of the programme. The first is moisture: a lower-ground kitchen or bathroom gets tested and, where necessary, isolated and left to dry before any lining, tiling or paint is even ordered. The second is access — narrow streets, resident bays and weekend visitor pressure around the hill mean the skip and the deliveries are booked to fixed windows. Everything wet therefore runs early and unhurried; decoration is deliberately the last thing to arrive.",
     consent: "Camden is the planning authority; the licence to alter, where one is needed, comes from the freeholder or managing agent — and in a split house that is often the owner of the other flat [VERIFY the tenure]. The council's interest starts at the front door and the rear wall, so new units, tiling, floors and paint inside existing rooms are not usually a planning matter at all. The elevation is where that changes: an Article 4 direction has been in force in the conservation area since 3 March 1983, so a grille, a flue or a window is checked before it is drawn.",
+    audience: [
+      "Most Primrose Hill programmes are for owner-occupiers of a single-family terrace facing the park: kitchen, one or two bathrooms, the floors and the decoration of the principal rooms in one run, park-facing elevations left alone unless consent exists. Stock brick, stucco dressings and original sashes stay. We do not form a new rear addition facing the park.",
+      "The other typical client owns a garden or upper flat in a split house: the same four items on half the building, with the kitchen sitting in a rear closet or a lower-ground room. Moisture in those lower-ground walls, and how far the drainage has to travel without crossing the demise below, decide the job. We do not refurbish a neighbour's floor as a courtesy.",
+    ],
+    failures: [
+      {
+        title: "A park-facing elevation under Article 4",
+        text:
+          "No wall comes out between the front and back receptions, no floor is dropped to win height in a lower ground, and no rear addition is built to make the kitchen work — those are Hampstead Renovations projects. Steps, railings, stucco and sashes on a park-side street are conservation matters before they are decorating ones. Camden has had an Article 4 direction here since 3 March 1983. [VERIFY.]",
+      },
+      {
+        title: "Drying before lining",
+        text:
+          "A lower-ground kitchen or bathroom is tested and, where necessary, isolated and left to dry before any lining, tiling or paint is ordered. Drying decides the programme more often than the fitting does. Wet rooms still lead. Decoration is deliberately the last thing to arrive. We will not hang a kitchen on a wet wall as part of handover.",
+      },
+      {
+        title: "Weekend visitors around the hill",
+        text:
+          "Narrow streets, resident bays and weekend visitor pressure around the park mean the skip and the deliveries are booked to fixed windows. Skip placement on park-facing streets needs extra notice. Occupied family houses can be sequenced; a whole split-flat is usually cleaner empty.",
+      },
+      {
+        title: "The other floor of the split",
+        text:
+          "In a split house the freeholder is often the owner of the other flat [VERIFY the tenure]. A waste run cannot cross into their demise without agreement. Failed subfloors and a history of lower-ground leaks are listed at survey. We give notice as a matter of course rather than on request.",
+      },
+    ],
     extraFaqs: [
       {
         q: "How long does a whole-house programme take on a Primrose Hill terrace?",
@@ -243,6 +729,26 @@ export const refurbDetail: ComboDetailMap = {
         q: "Do original shutters and sash boxes sit inside a light-refurbishment scope?",
         a: "Internally, yes — shutters, boxes and beads are programmed as joinery, stripped and made good where the build-up of old coatings has stopped them closing. Failed cords, split staff beads and perished putty are listed as repairs at survey; they are not absorbed into a painting line. Anything that changes the window itself, rather than its finish, is a conservation question first.",
       },
+      {
+        q: "Can we stay in a Primrose Hill family terrace while kitchen and bathrooms both run?",
+        a: "Often, if a kitchen and a bedroom can be kept and if a second bathroom can be finished first. A garden flat in a split house is a poorer fit for occupancy: lower-ground rooms may be drying, and the only access is shared. A whole split-flat is usually cleaner empty. We will say which after survey.",
+      },
+      {
+        q: "Can the lower-ground kitchen and a bathroom in a Primrose Hill house sit in the same programme?",
+        a: "Yes, if moisture and extract are in the specification before units go on the wall or paint goes on plaster. Both wet rooms run early and unhurried; decoration is last. A wet lower-ground is not a decorating job. We isolate damp first, then run kitchen and bathroom as one programme.",
+      },
+      {
+        q: "Does a Primrose Hill split house need a licence to alter from the other flat owner?",
+        a: "Where the flat is leasehold, yes, and in a split house that freeholder is often the owner of the other floor [VERIFY the tenure]. A waste that would cross their ceiling needs their agreement, not a conversation on the stair. We can prepare drawings and a method statement. We do not strip either wet room while it is outstanding.",
+      },
+      {
+        q: "Is an empty Primrose Hill rental between tenancies a typical garden-flat brief?",
+        a: "Yes, if the plan stays as it is: kitchen in a rear closet or lower-ground room, bathroom, decoration and floors, moisture treated as a survey item. Family houses facing the park are more often owner-occupied and sequenced around occupancy. We write the scope to the void dates you have. We do not invent a package price.",
+      },
+      {
+        q: "What is not included in a Primrose Hill light-refurbishment programme?",
+        a: "A wall taken out between the front and back receptions, a lower-ground floor dropped for headroom, a new rear addition facing the park, and elevation changes under the Article 4 direction. Those sit with Hampstead Renovations or with Camden. Kitchen, bathroom, decoration and floors inside the rooms that exist are this service.",
+      },
     ],
   },
   "queens-park": {
@@ -252,6 +758,32 @@ export const refurbDetail: ComboDetailMap = {
     ],
     processNote: "Everything downstream of the first visit depends on one answer: Brent or Westminster. The two authorities licence skips and scaffolds separately, run their own parking controls, and hold different conservation appraisals, so the paperwork is started as soon as the frontage is confirmed. Deliveries are then planned off the commercial spine and onto a residential street with a permit. Wet rooms open only when the licence, the agreed working hours and the drop point are all in place, not before.",
     consent: "Consent here is read twice, from two maps. Brent's conservation area covers streets around the park; Westminster's Queen's Park Estate is a separate designation with its own appraisal, and neither document describes the other's streets [VERIFY which applies to the address]. For the work itself the line falls in the same place on both sides: what happens within the four walls of a room is generally the owner's business and the lease's, while anything that appears on the elevation is the council's. Leasehold flats need the freeholder's or managing agent's licence to alter — that is never the council's to give.",
+    audience: [
+      "On the terrace streets the typical Queen's Park client owns a converted flat: the kitchen in the back addition, a bathroom next to it or above it, decoration through the reception and bedrooms, and floors. A single stack often serves both flats, so the waste that runs through a neighbour's ceiling is not a line we treat as ours to move. Family houses toward Kensal Rise take the same four items at a larger scale.",
+      "On the Queen's Park Estate in Westminster the client owns a decorative brick cottage: the same kitchen, bathroom, decoration and floors in a smaller building — narrow rooms, a modest stair, original joinery treated as joinery rather than boxed in. Room size, not ambition, sets the layout. Two councils mean two skip regimes. We confirm Brent or Westminster from the frontage before we write the method. [VERIFY.]",
+    ],
+    failures: [
+      {
+        title: "The closet wing stays where it is",
+        text:
+          "Extending the closet wing, taking the ground floor into one room, or lifting the roof over a cottage are all structural projects and all sit with Hampstead Renovations. Inside a converted terrace we work to one demise only. Original joinery in an Estate cottage is retained and worked around where it is sound, not boxed in to gain millimetres.",
+      },
+      {
+        title: "Brent or Westminster before a skip",
+        text:
+          "The two authorities licence skips and scaffolds separately, run their own parking controls, and hold different conservation appraisals. Wet rooms open only when the licence, the agreed working hours and the drop point are all in place. Salusbury Road is a poor default loading point. Deliveries are planned onto a residential street with a permit.",
+      },
+      {
+        title: "A tiled path and an original front door",
+        text:
+          "Patterned paths and original front doors are the two things most easily damaged on these streets, and neither is repaired convincingly afterwards. Boards go down over the path before anything is carried past. The shared stair in a conversion is covered the same way. Common-parts protection is part of the method, not a courtesy.",
+      },
+      {
+        title: "Cottage rooms that set the run",
+        text:
+          "Estate cottages are narrow, and the length of run available decides how many appliances the kitchen can hold before the room stops working as a room. Failed subfloors in the terraces, and a stack shared with the flat above or below, are listed at survey. We specify to what the wall gives, not to a layout drawn for a wider house.",
+      },
+    ],
     extraFaqs: [
       {
         q: "Does an Estate cottage have room for the kitchen you would fit in a terrace?",
@@ -265,6 +797,26 @@ export const refurbDetail: ComboDetailMap = {
         q: "Our flat is one of two in a converted terrace. Do the neighbours need to agree anything?",
         a: "Not consent in a planning sense, but there are three practical points. Working hours are agreed and communicated before the first strip-out day. The shared stair and hallway are covered and protected before they are used as the route in. And where the freehold is shared, the other owner is also, in effect, your freeholder for a licence to alter [VERIFY the tenure]. We give notice as a matter of course rather than on request.",
       },
+      {
+        q: "Can we stay in a Queen's Park conversion while the whole demise is refurbished?",
+        a: "A single wet room, often. A whole-demise programme is usually cleaner empty, because the shared stair is the only route and a single stack serves both flats. An Estate cottage can sometimes be sequenced if a kitchen corner can be kept, but the rooms are narrow enough that occupancy costs time. We will say which after survey.",
+      },
+      {
+        q: "Can kitchen and bathroom in a Queen's Park Estate cottage sit in the same programme?",
+        a: "Yes. Both rooms are small, they often share a waste, and the modest stair is the only route, so they are first-fixed together and decoration closes last. A terrace conversion takes the same pairing on a back-addition kitchen and a stacked bathroom. Splitting them is how the tiled path is boarded twice.",
+      },
+      {
+        q: "Does a Queen's Park leasehold conversion need a licence to alter before the wet rooms come out?",
+        a: "Where the lease requires one, yes, from the freeholder or managing agent — and where the freehold is shared, from the other owner acting in that capacity [VERIFY the tenure]. Estate cottages are more often freehold, so the licence does not arise; Westminster's Estate conservation appraisal still decides anything that shows on the elevation. We do not strip while a required pack is outstanding.",
+      },
+      {
+        q: "Is an empty Queen's Park rental between tenancies a typical terrace brief?",
+        a: "Yes, on the converted streets around the park: back-addition kitchen, bathroom, decoration and floors, neighbour notice, a protected stair, one programme. Estate cottages tend to stay owner-occupied. We write the scope to the void dates you have. We do not invent a package price, and we confirm Brent or Westminster from the address first.",
+      },
+      {
+        q: "How long does a whole Queen's Park conversion flat take once the council for the frontage is confirmed?",
+        a: "The rooms set the baseline. What moves it is the shared stack, whatever is found under the floors, and whether you stay. The skip licence sits in the lead-in and follows the borough, not the neighbourhood name. We date the programme after survey against the written scope, not from a photograph of Salusbury Road.",
+      },
     ],
   },
   "st-johns-wood": {
@@ -274,6 +826,32 @@ export const refurbDetail: ComboDetailMap = {
     ],
     processNote: "Nothing is stripped until the agent's pack is signed and the building's own contractor requirements are met. Access is measured in the same period, and it changes what is bought: where the lift will not take long lengths, worktops and carcasses are specified in sizes that go up the stair and assembled inside the flat, which moves part of the fit-out later than it would sit elsewhere. Water isolation is booked with the building, so the wet rooms run to the block's date.",
     consent: "Westminster is the planning authority for most of the residential core and designated the St John's Wood Conservation Area in 1968 [VERIFY the boundary for the address]. Replacing a kitchen or bathroom inside the existing rooms generally falls outside planning; fenestration, front boundaries and roof alterations do not. Lease consent is separate and is granted by the freeholder or managing agent, not the council. Some blocks apply design guides stricter than planning, and some streets sit under an estate scheme of management, which is a third consent again [VERIFY].",
+    audience: [
+      "A St John's Wood programme is normally for the leaseholder of a late-Victorian or Edwardian mansion flat toward Wellington Road or Prince Albert Road: the compact rear kitchen, the bathroom on its original stack, principal-room decoration, floors, internal doors and ironmongery. The leased demise is taken exactly as it stands. The riser was sized for the plumbing of a century ago, it serves flats above and below, and isolating it is an event for the whole block rather than a morning in one flat.",
+      "Owners of villas and mews want a family-house interior — kitchen, bathrooms, decoration and floors — without treating the elevation, the boundary or the roof as part of the brief. Some streets sit under an estate scheme of management [VERIFY]. Lord's match days still affect access on surrounding streets. We do not write a villa as a renamed mansion flat, or a mansion flat as a house with a drive.",
+    ],
+    failures: [
+      {
+        title: "A riser sized for a century ago",
+        text:
+          "We do not move a wet room over a neighbour's bedroom, and we do not form openings. Relocating a soil connection through the building is not this service. Windows, the front elevation, the common parts and the block's structure belong to the freeholder and, in the conservation area, to Westminster. Structural openings sit with Hampstead Renovations.",
+      },
+      {
+        title: "The agent's pack before a wall comes down",
+        text:
+          "Nothing is stripped until the agent's pack is signed and the building's own contractor requirements are met. Water isolation is booked with the building, so the wet rooms run to the block's date, not ours. Some blocks apply design guides stricter than planning [VERIFY]. We can prepare drawings and a method statement. Consent is theirs.",
+      },
+      {
+        title: "A carpet clause written into the lease",
+        text:
+          "Many mansion-block leases specify floor coverings or an acoustic standard for the benefit of the flat below. A hard finish laid without consent is the kind of thing that surfaces at sale. Where an acoustic build-up is acceptable it is designed into the floor level and the door heights from the start, not added after the boards are ordered.",
+      },
+      {
+        title: "Water off for the whole stack",
+        text:
+          "Isolation and any stack work are agreed with the managing agent so that neighbours have notice and services are down for the shortest sensible period. The lift, the porter and the loading bay are confirmed with the building rather than assumed. Where the lift will not take long lengths, carcasses go up the stair and are assembled inside the flat.",
+      },
+    ],
     extraFaqs: [
       {
         q: "The lease says the floors must stay carpeted. Does that stop new flooring?",
@@ -287,6 +865,26 @@ export const refurbDetail: ComboDetailMap = {
         q: "We own a villa rather than a flat. Is there still a consent to worry about?",
         a: "Possibly. Some streets sit under an estate scheme of management, which operates alongside Westminster planning rather than instead of it [VERIFY for the address]. Internal replacement in the rooms as they stand is normally the least constrained part of the work; anything reaching the elevation, the boundary or the roof is where both the scheme and the council arrive.",
       },
+      {
+        q: "Can kitchen and bathroom in a St John's Wood mansion flat sit in the same licence pack?",
+        a: "Usually that is how the pack is written: both wet rooms, and often flooring and anything that touches shared stacks. We can prepare drawings and a method statement for the whole interior. Consent remains the agent's. Nothing is stripped while the pack is outstanding, and isolation is booked to the building's date rather than to ours.",
+      },
+      {
+        q: "Is an empty St John's Wood rental between tenancies a typical mansion-flat brief?",
+        a: "Yes. The leased plan stays as it is: compact rear kitchen, bathroom on the original stack, principal rooms decorated, floors to the acoustic standard the lease allows, common parts protected. Porters' hours and the licence sit in the lead-in. We write the scope to the void dates you have. We do not invent a package price for a turnaround.",
+      },
+      {
+        q: "Can original boards in a St John's Wood mansion flat be sanded if the lease prefers carpet?",
+        a: "Only where the lease and the freeholder allow a hard finish, and then usually with an acoustic build-up designed into the floor level from the start. Many NW8 blocks specify carpet or an acoustic standard for the flat below. We read the clause before anyone talks about sanding. A villa floor is a different construction and a different consent path. [VERIFY.]",
+      },
+      {
+        q: "What is not included in a St John's Wood light-refurbishment programme?",
+        a: "The windows, the front elevation, the common parts, the block's structure, a wet room moved over a neighbour's bedroom, a loft and an extension. Those sit with the freeholder, with Westminster, or with Hampstead Renovations. Kitchen, bathroom, decoration and floors inside the leased demise as it stands are this service.",
+      },
+      {
+        q: "Can we stay in a St John's Wood villa while kitchen, bathrooms, decoration and floors all run?",
+        a: "A villa can sometimes be sequenced if a kitchen and a bedroom remain usable and a second bathroom can be finished first. A compact mansion flat is usually wiser empty: there is nowhere to live once both wet rooms are open, and the lift will not take a kitchen run. Lord's match days can still restrict surrounding streets either way. [VERIFY.]",
+      },
     ],
   },
   "swiss-cottage": {
@@ -296,6 +894,32 @@ export const refurbDetail: ComboDetailMap = {
     ],
     processNote: "The lead-in carries more weight here than the fit-out. A managing agent on Avenue Road wants the pack, the hours and the method statement settled before a demise is opened; a conversion toward Frognal wants the neighbours told and the stair covered. Neither is instant. Wet rooms are dated from the day consent lands rather than the day the proposal is signed, and where you are staying the sequence keeps one working tap and one working bathroom for as long as the fabric allows.",
     consent: "Two consents are worth separating. Camden grants planning and conservation-area consent; the freeholder or managing agent grants a licence to alter. Replacing a kitchen or a bathroom inside the rooms that already exist usually sits outside planning altogether, because nothing changes on the outside of the building. The moment an extract grille, a soil pipe or a window is involved, the envelope is in play and the council's position matters — many of the residential streets off Finchley Road and Avenue Road sit in the South Hampstead Conservation Area [VERIFY the designation for the address]. The lease is a separate test again.",
+    audience: [
+      "On Avenue Road and Finchley Road the typical Swiss Cottage client is a leaseholder of a mansion block or inter-war flat: galley kitchen, bathroom hanging off a boxed riser, floors and decoration of the demise, the entrance hall that everything has to be carried through. The agent's pack, the hours and the method statement are settled before a room is opened. Communal heating on some blocks is not ours to re-plan. [VERIFY.]",
+      "A street back toward Belsize and Frognal the client owns a Victorian conversion: kitchen around a chimney breast, half-landing bathroom, a subfloor that has moved, decoration of the rooms as found. The HPSG office at Unit 3 Palace Court, 250 Finchley Road, London NW3 6DN is in this neighbourhood. It shortens the visit. It does not skip the survey, the licence or the party-wall hours.",
+    ],
+    failures: [
+      {
+        title: "A spine wall that stays",
+        text:
+          "A spine wall between a conversion's front and back rooms stays. A new soil connection or a duct driven into a common void is not assumed because a drawing shows one — in a block that void belongs to the freeholder. Openings, lofts and extensions sit with Hampstead Renovations. A whole-flat rewire is not assumed inside a brief that named two rooms.",
+      },
+      {
+        title: "The day the pack lands, not the day you sign",
+        text:
+          "A managing agent on Avenue Road wants the pack settled before a demise is opened. A conversion toward Frognal wants the neighbours told and the stair covered. Neither is instant. Wet rooms are dated from the day consent lands rather than the day the proposal is signed. Where you stay, the sequence keeps one working tap and one working bathroom for as long as the fabric allows.",
+      },
+      {
+        title: "Finchley Road is not the drop",
+        text:
+          "Finchley Road scaffold and loading are a different process from a side street [VERIFY the highway authority]. Camden licences apply on the residential streets. In blocks we record lift and stair before cabinetry is ordered. Common-parts protection is part of the method. The office being nearby does not mean a skip can sit on the corridor.",
+      },
+      {
+        title: "A boxed riser or a chimney breast",
+        text:
+          "What decides the layout is the building you were given. A conversion gives chimney breasts, a party wall and timber floors that have moved. A purpose-built block gives boxed risers, a tighter hall, and sometimes communal heating. Failed subfloors and redundant wiring are listed as provisional. We do not mix two buildings into one vague job.",
+      },
+    ],
     extraFaqs: [
       {
         q: "What actually drives the cost of a Swiss Cottage flat refurbishment?",
@@ -309,6 +933,26 @@ export const refurbDetail: ComboDetailMap = {
         q: "Does an inter-war block off Finchley Road behave like a Victorian conversion inside?",
         a: "Not inside. A conversion gives you chimney breasts, a party wall and timber floors that have moved; a purpose-built block gives you boxed risers, a tighter hall, and in some cases communal heating or hot water that is not ours to re-plan [VERIFY the arrangement for the block]. The four items in the brief are the same. What decides the layout is not.",
       },
+      {
+        q: "Can we stay in a Swiss Cottage conversion toward Frognal while the whole demise is refurbished?",
+        a: "A single wet room, often. A whole-demise programme is usually cleaner empty: the stair is shared, the chimney-breast kitchen and the half-landing bathroom both come out, and the subfloor may need levelling before anything is laid. An Avenue Road apartment is tighter still. We will say which after survey. Being next to the office does not change that.",
+      },
+      {
+        q: "Can kitchen and bathroom in a Swiss Cottage Avenue Road block sit in the same programme?",
+        a: "Yes. Both hang off the block's risers, so first-fix is coordinated, and decoration of the demise closes last because the entrance hall is the route. A conversion a street back takes the same pairing around a chimney breast and a half-landing stack. Splitting them is how the agent's pack is applied for twice.",
+      },
+      {
+        q: "Does a Swiss Cottage mansion flat need a licence to alter before either wet room is opened?",
+        a: "Usually, where the lease says so, and the pack commonly covers kitchen, bathroom and anything that touches shared stacks or flooring. We can prepare drawings and a method statement. Consent is the agent's. Conversions toward Belsize and Frognal more often need the other flat owners, acting as freeholder. We do not strip while it is outstanding. [VERIFY tenure.]",
+      },
+      {
+        q: "Is an empty Swiss Cottage rental between tenancies a typical block brief?",
+        a: "Yes, on Avenue Road and the Finchley Road blocks: galley kitchen, stacked bathroom, decoration and floors, agent's hours, acoustic flooring if the lease requires it, one programme. Conversions a street back take the same four items with party-wall hours instead of a porter. We write the scope to the void dates you have. We do not invent a package price.",
+      },
+      {
+        q: "How long does a whole Swiss Cottage flat take once the managing agent's pack is back?",
+        a: "The on-site weeks follow the rooms and what the subfloor turns out to be. The pack sits in the lead-in; we do not strip kitchen and bathroom while it is outstanding. Finchley Road loading and a conversion stair that only one trade can use both add days. We date the programme after survey. The office at 250 Finchley Road does not shorten the fabric.",
+      },
     ],
   },
   "west-hampstead": {
@@ -318,6 +962,32 @@ export const refurbDetail: ComboDetailMap = {
     ],
     processNote: "The programme here starts with two conversations rather than one. The freeholder's position on a bathroom sitting above another demise is settled first, and neighbours are told the working hours before a skip is licensed on a side street. Materials then arrive in the order they are fitted, because there is nowhere to stack them. The consequence is that the wet room finishes before the hall is decorated, since every board and bag passes through the hall.",
     consent: "Camden decides planning and conservation-area matters, and parts of the neighbourhood are designated, with Article 4 directions removing some permitted-development rights on windows [VERIFY the designation and any Article 4 for the address]. Replacing a kitchen or bathroom within the existing rooms generally sits outside planning; a new extract terminal or a replacement window on the rear elevation does not. Separately, the lease governs the work, and consent for a wet room over another flat comes from the freeholder. Notifiable electrical and drainage work is dealt with through building control.",
+    audience: [
+      "Which floor of the terrace you own decides a West Hampstead programme more than the postcode does. A ground or garden demise keeps its rear-return kitchen and a full-height bathroom; a top-floor flat has no return at all, so the kitchen occupies a former bedroom and the bathroom is tucked into the eaves with limited height above the trap. Owner-occupiers of either plan want that demise — kitchen, bathroom, decoration and floors — run as one programme through a single shared front door.",
+      "Landlords emptying a West Hampstead conversion between tenancies sit in the same definition: the whole demise, neighbour notice before a skip is licensed on a side street, the hallway not used as a store. One front door serves three or four flats here, and the neighbours did not order the work. Mansion-block interiors near the interchange take the same four items on original risers. We do not form a new envelope behind the terrace.",
+    ],
+    failures: [
+      {
+        title: "Which floor of the terrace you own",
+        text:
+          "A ground-floor return and a top-floor eaves bathroom are not the same job. Widening the opening between reception and kitchen is out; that is structural, and sits with Hampstead Renovations. The common stair, the front door, the roof and the rear elevation belong to the freeholder. We work the rooms you own, on the stacks they already use.",
+      },
+      {
+        title: "Everything through one shared hall",
+        text:
+          "Materials arrive in the order they are fitted, because there is nowhere to stack them. The wet room finishes before the hall is decorated, since every board and bag passes through the hall. Wet rooms still lead. Paint last. We do not assume the hallway can be used for storage. Three stations on West End Lane make daytime loading competitive; we licence a side street.",
+      },
+      {
+        title: "A bathroom over the neighbours' bedroom",
+        text:
+          "The freeholder's position on a bathroom sitting above another demise is settled first, and neighbours are told the working hours before a skip is licensed. The floor is tanked and the build-up checked against door heights. Isolation is agreed with the flat below rather than announced on the morning. Nothing is stripped while the licence is outstanding. [VERIFY.]",
+      },
+      {
+        title: "Nowhere to stack a delivery",
+        text:
+          "Failed subfloors, services that have to be handled through a single shared front door, and boards too thin to sand are listed at survey. A whole-flat strip produces more waste than a kitchen-only job, so the skip is programmed, not hoped for on West End Lane. Party-wall noise belongs in the working hours, not as an afterthought.",
+      },
+    ],
     extraFaqs: [
       {
         q: "What actually drives the cost of refurbishing a conversion flat here?",
@@ -330,6 +1000,26 @@ export const refurbDetail: ComboDetailMap = {
       {
         q: "The bay sashes stick and the cords have gone. Is that part of a refurbishment?",
         a: "Repair is. Easing, re-cording, replacing failed sections of a sash box and redecorating the joinery all sit inside light refurbishment. Replacement is a different question, because an Article 4 direction may remove the permitted-development right to change windows on some of these streets [VERIFY]. We check the address before anyone talks about new windows.",
+      },
+      {
+        q: "Does a West Hampstead licence to alter cover a half-landing bathroom sitting over the flat below?",
+        a: "Often that is exactly the item the lease cares about. Consent for a wet room over another demise comes from the freeholder, and the pack commonly covers the rear-return kitchen as well because both touch shared stacks. We can prepare drawings and a method statement. We do not strip either room while it is outstanding. [VERIFY the lease.]",
+      },
+      {
+        q: "Is an empty West Hampstead rental between tenancies a typical whole-flat brief?",
+        a: "Yes. The demise stays as it was split: rear-return kitchen on the ground or garden floor, or a former-bedroom kitchen under the eaves on the top floor, bathroom, decoration and floors, one programme, neighbour notice, a hallway that is not a store. We write the scope to the void dates you have. We do not invent a package price.",
+      },
+      {
+        q: "Can original boards in a West Hampstead conversion be sanded as part of the programme?",
+        a: "Where they will take it. Failed subfloors and boards too thin to sand are listed at survey. A top-floor eaves bathroom is a different construction from a garden-floor return, so we do not specify one sanded standard across every floor of the terrace. We will not promise a finish from a photograph.",
+      },
+      {
+        q: "How long does a whole West Hampstead conversion flat take once the freeholder has consented?",
+        a: "The rooms set the baseline. What moves it is the floor you own — a full-height return is a different programme from an eaves bathroom — the shared front door, and whatever is found under the boards. The licence sits in the lead-in. We date the programme after survey against the written scope, not from West End Lane.",
+      },
+      {
+        q: "What is not included in a West Hampstead light-refurbishment programme?",
+        a: "The common stair, the front door, the roof, the rear elevation, and a widened opening between reception and kitchen. Those belong to the freeholder or sit with Hampstead Renovations. Kitchen, bathroom, decoration and floors inside the demise as it stands are this service. We do not form a new envelope behind the terrace.",
       },
     ],
   },

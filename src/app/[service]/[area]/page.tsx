@@ -6,7 +6,12 @@ import { getComboContent } from "@/data/combo-content";
 import { servicePhotos } from "@/data/photos";
 import { getCombo, getCombos } from "@/lib/matrix";
 import { pageMetadata } from "@/lib/metadata";
-import { comboMetaDescription, comboMetaTitle } from "@/lib/seo-copy";
+import {
+  comboKeywords,
+  comboMetaDescription,
+  comboMetaTitle,
+  servicePlainName,
+} from "@/lib/seo-copy";
 
 export const dynamic = "force-static";
 export const dynamicParams = false;
@@ -45,6 +50,11 @@ export async function generateMetadata({
     path: `/${combo.service.slug}/${combo.area.slug}/`,
     image: photo.src,
     imageAlt: photo.alt,
+    imageWidth: photo.width,
+    imageHeight: photo.height,
+    keywords: comboKeywords(combo),
+    category: servicePlainName(combo.service),
+    geoPlacename: `${combo.area.name}, London`,
   });
 }
 

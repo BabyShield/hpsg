@@ -71,6 +71,10 @@ export type ComboContent = {
   processNote?: string;
   /** Conservation, tenure and consent as they bear on THIS service here. */
   consent?: string;
+  /** Who this service in THIS area is for. */
+  audience?: string[];
+  /** Four constraints that decide whether the job here actually works. */
+  failures?: { title: string; text: string }[];
   localFaqs: Faq[];
   metaDescription: string;
 };

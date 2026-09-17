@@ -23,6 +23,8 @@ function withDetail(
           scopeNotes: extra.scopeNotes,
           processNote: extra.processNote,
           consent: extra.consent,
+          audience: extra.audience,
+          failures: extra.failures,
           localFaqs: [...content.localFaqs, ...extra.extraFaqs],
         }
       : content;

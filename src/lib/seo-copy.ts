@@ -95,7 +95,14 @@ export function comboProcessLede(combo: Combo): string {
 }
 
 export function comboMetaTitle(combo: Combo): string {
-  return `${serviceTitleName(combo.service)} in ${combo.area.name} ${combo.area.postcode} | ${site.shortName}`;
+  const base = `${serviceTitleName(combo.service)} in ${combo.area.name} ${combo.area.postcode}`;
+  const suffix = ` | ${site.shortName}`;
+  const cue = serviceAreaCue(combo.service.slug, combo.area.slug);
+  if (cue) {
+    const withCue = `${base} | ${cue.title}${suffix}`;
+    if (withCue.length <= 62) return withCue;
+  }
+  return `${base}${suffix}`;
 }
 
 export function comboMetaDescription(lede: string, stored: string): string {
@@ -132,6 +139,129 @@ export function serviceSearchFaqs(service: Service): Faq[] {
     {
       q: `Which North West London neighbourhoods do you cover for ${name.replace(/^a /, "")}?`,
       a: `${service.name} pages on this site cover Hampstead, West Hampstead, Belsize Park, St John's Wood, Maida Vale, Swiss Cottage, Primrose Hill, Highgate and the wider list. If the property sits just outside those pages, contact us and we will say whether we can take it on.`,
+    },
+  ];
+}
+
+export function mergeFaqs(...groups: Faq[][]): Faq[] {
+  const seen = new Set<string>();
+  const out: Faq[] = [];
+  for (const group of groups) {
+    for (const item of group) {
+      const q = publicCopy(item.q);
+      const a = publicCopy(item.a);
+      if (!q || !a || seen.has(q)) continue;
+      seen.add(q);
+      out.push({ q, a });
+    }
+  }
+  return out;
+}
+
+export function serviceKeywords(service: Service): string[] {
+  switch (service.slug) {
+    case "kitchen-renovation":
+      return [
+        "kitchen renovation",
+        "kitchen renovation North West London",
+        "kitchen renovation Hampstead",
+        "kitchen renovation St John's Wood",
+        "kitchen renovation Maida Vale",
+        "galley kitchen renovation",
+        "mansion flat kitchen",
+        "period conversion kitchen",
+        "NW3 kitchen renovation",
+      ];
+    case "bathroom-renovation":
+      return [
+        "bathroom renovation",
+        "bathroom renovation North West London",
+        "bathroom renovation Hampstead",
+        "bathroom renovation St John's Wood",
+        "bathroom renovation Maida Vale",
+        "ensuite renovation",
+        "mansion flat bathroom",
+        "conversion bathroom tanking",
+        "NW3 bathroom renovation",
+      ];
+    case "painting-decorating":
+      return [
+        "painting and decorating",
+        "painting and decorating North West London",
+        "painting and decorating Hampstead",
+        "period interior decorating",
+        "sash window painting",
+        "occupied home decorating",
+        "conservation area decorating",
+        "period joinery decoration",
+      ];
+    case "light-refurbishment":
+      return [
+        "light refurbishment",
+        "light refurbishment North West London",
+        "flat refurbishment Hampstead",
+        "mansion flat refurbishment",
+        "kitchen and bathroom refurbishment",
+        "conversion flat refurbishment",
+        "NW3 refurbishment",
+      ];
+  }
+}
+
+export function comboKeywords(combo: Combo): string[] {
+  const name = servicePlainName(combo.service).toLowerCase();
+  const cue = serviceAreaCue(combo.service.slug, combo.area.slug);
+  return [
+    `${name} ${combo.area.name}`,
+    `${name} ${combo.area.postcode}`,
+    `${name} ${combo.area.name} ${combo.area.postcode}`,
+    `${name} North West London`,
+    combo.area.name,
+    combo.area.postcode,
+    ...(cue ? [cue.title] : []),
+  ];
+}
+
+export function comboSearchFaqs(combo: Combo): Faq[] {
+  const name = serviceSearchName(combo.service);
+  const plain = servicePlainName(combo.service).toLowerCase();
+  const cue = serviceAreaCue(combo.service.slug, combo.area.slug);
+  const council = publicCopy(combo.area.council);
+  const hook = cue ? cue.opening : `${servicePlainName(combo.service)} in ${combo.area.name} follows ${areaHook(combo.area)}.`;
+  const stay =
+    combo.service.slug === "painting-decorating"
+      ? `Occupied decorating in ${combo.area.name} is ordinary. Rooms are sequenced so a kitchen, a bathroom and a bedroom stay usable where the programme allows.`
+      : combo.service.slug === "light-refurbishment"
+        ? `A single kitchen or bathroom in ${combo.area.name} can often be done around you. A whole-flat programme is usually cleaner if you decant. We will say which after survey.`
+        : combo.service.slug === "bathroom-renovation"
+          ? `Often, if there is a second bathroom. A single bathroom in a ${combo.area.name} ${combo.area.postcode} flat is usually cleaner if you decant for the programme.`
+          : `Often, if there is a second sink or a temporary set-up. In a compact ${combo.area.name} kitchen it is usually more practical to decant kitchen use for the programme.`;
+
+  const duration =
+    combo.service.slug === "painting-decorating"
+      ? `A ${combo.area.name} flat can be a matter of days or a small number of weeks depending on prep. A family house, occupied, takes longer because we work around you.`
+      : combo.service.slug === "light-refurbishment"
+        ? `A ${combo.area.name} conversion flat — kitchen, bathroom, decoration and floors — is commonly a matter of weeks once materials are dated. A licence to alter extends the lead-in, not the strip-out.`
+        : combo.service.slug === "bathroom-renovation"
+          ? `A single ${combo.area.name} bathroom with drainage in the right place is commonly a small number of weeks. Two bathrooms, or a room waiting on extract or a licence, takes longer.`
+          : `A straightforward ${combo.area.name} kitchen replacement is often a small number of weeks on site. Consent, access and long-lead cabinetry extend that.`;
+
+  return [
+    {
+      q: `What does ${name} in ${combo.area.name} ${combo.area.postcode} cost?`,
+      a: `We do not publish a price list for ${plain} in ${combo.area.name}. ${hook} Addresses sit with ${council}. We visit from ${addressSingleLine}, then write a proposal against a defined scope. ${site.phoneDisplay}.`,
+    },
+    {
+      q: `Do I need planning permission for ${name} in ${combo.area.name}?`,
+      a: `Internal ${plain} within existing rooms in ${combo.area.name} ${combo.area.postcode} often does not need planning permission. ${council} still controls extract, windows and elevations where conservation, listing or Article 4 apply. We check the address. We do not assume permitted development.`,
+    },
+    {
+      q: `How long does ${name} in ${combo.area.name} take?`,
+      a: `${duration} ${cue ? `${cue.title} in ${combo.area.name} ${combo.area.postcode} shape the programme.` : ""} The written programme follows the survey.`,
+    },
+    {
+      q: `Can I stay in the property during ${name} in ${combo.area.name}?`,
+      a: `${stay} We will say so plainly at survey.`,
     },
   ];
 }

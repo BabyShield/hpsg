@@ -6,6 +6,7 @@ import { servicePhotos } from "@/data/photos";
 import { services } from "@/data/services";
 import { getService, isServiceSlug } from "@/lib/matrix";
 import { pageMetadata } from "@/lib/metadata";
+import { serviceKeywords, servicePlainName } from "@/lib/seo-copy";
 
 export const dynamic = "force-static";
 export const dynamicParams = false;
@@ -29,6 +30,11 @@ export async function generateMetadata({
     path: `/${service.slug}/`,
     image: photo.src,
     imageAlt: photo.alt,
+    imageWidth: photo.width,
+    imageHeight: photo.height,
+    keywords: serviceKeywords(service),
+    category: servicePlainName(service),
+    geoPlacename: "North West London",
   });
 }
 

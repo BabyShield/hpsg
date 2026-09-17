@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import { JsonLd } from "@/components/seo/JsonLd";
+import { PageContents } from "@/components/seo/PageContents";
 import { AreaLinkGrid } from "@/components/ui/AreaLinkGrid";
 import { Container } from "@/components/ui/Container";
 import { ContentImage } from "@/components/ui/ContentImage";
@@ -23,11 +24,12 @@ import { publicCopy } from "@/lib/public-copy";
 import {
   absoluteUrl,
   faqSchema,
+  howToSchema,
   itemListSchema,
   serviceSchema,
   webPageSchema,
 } from "@/lib/schema";
-import { servicePlainName, serviceSearchFaqs } from "@/lib/seo-copy";
+import { mergeFaqs, servicePlainName, serviceSearchFaqs } from "@/lib/seo-copy";
 
 export function ServiceHub({ service }: { service: Service }) {
   const content = serviceHubContent[service.slug];
@@ -44,16 +46,28 @@ export function ServiceHub({ service }: { service: Service }) {
     { name: `${heading} in North West London`, href: `/${service.slug}/` },
   ];
   const pageUrl = absoluteUrl(`/${service.slug}/`);
-  const localFaqs = [...seo.extraFaqs, ...service.faqs]
-    .map((item) => ({ q: publicCopy(item.q), a: publicCopy(item.a) }))
-    .filter((item) => item.q && item.a);
-  const localQuestions = new Set(localFaqs.map((item) => item.q));
-  const faqs = [
-    ...serviceSearchFaqs(service)
-      .map((item) => ({ q: publicCopy(item.q), a: publicCopy(item.a) }))
-      .filter((item) => item.q && item.a && !localQuestions.has(item.q)),
-    ...localFaqs,
-  ];
+  const heroPhoto = servicePhotos[service.slug];
+  const featuredAreas = ["hampstead", "st-johns-wood", "maida-vale", "west-hampstead"];
+  const catalog = comboAreas.map((area) => ({
+    name: `${heading} in ${area.name}`,
+    url: absoluteUrl(`/${service.slug}/${area.slug}/`),
+  }));
+  const related = others.map((item) => ({
+    name: `${servicePlainName(item)} in North West London`,
+    url: absoluteUrl(`/${item.slug}/`),
+  }));
+  const faqs = mergeFaqs(serviceSearchFaqs(service), seo.extraFaqs, service.faqs);
+  const contents = [
+    { href: "#who", label: seo.audienceH2 },
+    content.typicalRooms && content.typicalRooms.length > 0
+      ? { href: "#rooms", label: content.roomsHeading ?? `Typical ${service.navLabel.toLowerCase()} we take on` }
+      : null,
+    { href: "#includes", label: seo.includesH2 },
+    { href: "#process", label: seo.processH2 },
+    { href: "#cost", label: seo.costH2 },
+    { href: "#areas", label: seo.areasH2 },
+    { href: "#questions", label: seo.questionsH2 },
+  ].filter((item): item is { href: string; label: string } => item !== null);
 
   return (
     <>
@@ -63,8 +77,13 @@ export function ServiceHub({ service }: { service: Service }) {
           url: pageUrl,
           areaServed: ["North West London", ...comboAreas.map((area) => `${area.name}, ${area.postcode}`)],
           description: service.summary,
-          image: servicePhotos[service.slug].src,
+          image: heroPhoto.src,
+          imageAlt: heroPhoto.alt,
+          imageWidth: heroPhoto.width,
+          imageHeight: heroPhoto.height,
           serviceType: heading,
+          related,
+          catalog,
         })}
       />
       <JsonLd
@@ -72,20 +91,30 @@ export function ServiceHub({ service }: { service: Service }) {
           name: `${heading} in North West London`,
           url: pageUrl,
           description: service.metaDescription,
-          image: servicePhotos[service.slug].src,
-          imageAlt: servicePhotos[service.slug].alt,
+          image: heroPhoto.src,
+          imageAlt: heroPhoto.alt,
+          imageWidth: heroPhoto.width,
+          imageHeight: heroPhoto.height,
+          mainEntityId: `${pageUrl}#service`,
+          significantLinks: [
+            absoluteUrl("/contact/"),
+            ...featuredAreas
+              .filter((slug) => comboAreas.some((area) => area.slug === slug))
+              .map((slug) => absoluteUrl(`/${service.slug}/${slug}/`)),
+          ],
+          relatedLinks: related.map((item) => item.url),
         })}
       />
-      <JsonLd data={faqSchema(faqs)} />
       <JsonLd
-        data={itemListSchema(
-          `${heading} by neighbourhood`,
-          comboAreas.map((area) => ({
-            name: `${heading} in ${area.name}`,
-            url: absoluteUrl(`/${service.slug}/${area.slug}/`),
-          })),
-        )}
+        data={howToSchema({
+          name: `How ${heading.toLowerCase()} in North West London runs`,
+          description: service.summary,
+          steps: service.processSteps,
+          url: pageUrl,
+        })}
       />
+      {faqs.length > 0 ? <JsonLd data={faqSchema(faqs)} /> : null}
+      <JsonLd data={itemListSchema(`${heading} by neighbourhood`, catalog)} />
       <article>
         <PageHero
           photo={servicePhotos[service.slug]}
@@ -100,8 +129,9 @@ export function ServiceHub({ service }: { service: Service }) {
               <p key={paragraph.slice(0, 32)}>{paragraph}</p>
             ))}
             <p>{seo.who}</p>
+            <PageContents items={contents} />
           </div>
-          <div className="lg:col-span-5">
+          <div id="who" className="scroll-mt-28 lg:col-span-5">
             <p className="rule mb-6" aria-hidden="true" />
             <h2 className="font-display text-3xl font-normal">
               {seo.audienceH2}
@@ -128,6 +158,7 @@ export function ServiceHub({ service }: { service: Service }) {
         </Container>
 
         <LocalFacts
+          id="facts"
           areaName="North West London"
           facts={getServiceHubFacts(service.slug)}
           heading={`Facts that shape ${heading.toLowerCase()} in North West London`}
@@ -135,7 +166,7 @@ export function ServiceHub({ service }: { service: Service }) {
         />
 
         {content.failures && content.failures.length > 0 ? (
-          <section className="band-navy py-24 sm:py-32">
+          <section id="must-be-right" className="band-navy scroll-mt-28 py-24 sm:py-32">
             <Container>
               <p className="rule mb-8" aria-hidden="true" />
               <h2 className="font-display text-4xl font-normal text-bone sm:text-5xl">
@@ -159,7 +190,7 @@ export function ServiceHub({ service }: { service: Service }) {
         ) : null}
 
         {content.typicalRooms && content.typicalRooms.length > 0 ? (
-          <section className="py-24 sm:py-32">
+          <section id="rooms" className="scroll-mt-28 py-24 sm:py-32">
             <Container>
               <p className="rule mb-8" aria-hidden="true" />
               <h2 className="font-display text-4xl font-normal sm:text-5xl">
@@ -201,7 +232,7 @@ export function ServiceHub({ service }: { service: Service }) {
         ) : null}
 
         {content.housing.length > 0 ? (
-          <section className="border-y border-grey-200 py-24 sm:py-32">
+          <section id="housing" className="scroll-mt-28 border-y border-grey-200 py-24 sm:py-32">
             <Container>
               <p className="rule mb-8" aria-hidden="true" />
               <h2 className="font-display text-4xl font-normal sm:text-5xl">
@@ -231,18 +262,10 @@ export function ServiceHub({ service }: { service: Service }) {
         ) : null}
 
         {content.permissions.length > 0 ? (
-          <section className="py-24 sm:py-32">
+          <section id="consent" className="scroll-mt-28 py-24 sm:py-32">
             <Container className="grid gap-10 lg:grid-cols-12">
               <h2 className="font-display text-4xl font-normal sm:text-5xl lg:col-span-4">
-                {service.slug === "bathroom-renovation"
-                  ? "Licence, building control and extract"
-                  : service.slug === "kitchen-renovation"
-                    ? "Licence, extract and the building"
-                    : service.slug === "painting-decorating"
-                      ? "Conservation, joinery and occupied homes"
-                      : service.slug === "light-refurbishment"
-                        ? "Licence, sequence and the envelope"
-                        : "Consent, extract and the building"}
+                {seo.consentH2}
               </h2>
               <div className="space-y-5 text-base leading-relaxed text-grey-700 lg:col-span-8">
                 {content.permissions
@@ -256,7 +279,7 @@ export function ServiceHub({ service }: { service: Service }) {
           </section>
         ) : null}
 
-        <section className="border-y border-grey-200 py-24 sm:py-32">
+        <section id="includes" className="scroll-mt-28 border-y border-grey-200 py-24 sm:py-32">
           <Container>
             <p className="rule mb-8" aria-hidden="true" />
             <h2 className="font-display text-4xl font-normal sm:text-5xl">
@@ -277,7 +300,7 @@ export function ServiceHub({ service }: { service: Service }) {
           </Container>
         </section>
 
-        <section className="py-24 sm:py-32">
+        <section id="process" className="scroll-mt-28 py-24 sm:py-32">
           <Container>
             <p className="rule mb-8" aria-hidden="true" />
             <h2 className="font-display text-4xl font-normal sm:text-5xl">
@@ -293,7 +316,7 @@ export function ServiceHub({ service }: { service: Service }) {
           </Container>
         </section>
 
-        <section className="border-y border-grey-200 py-24 sm:py-32">
+        <section id="spec" className="scroll-mt-28 border-y border-grey-200 py-24 sm:py-32">
           <Container className="grid gap-10 lg:grid-cols-12">
             <h2 className="font-display text-4xl font-normal sm:text-5xl lg:col-span-4">
               {seo.specH2}
@@ -306,7 +329,20 @@ export function ServiceHub({ service }: { service: Service }) {
           </Container>
         </section>
 
-        <section className="py-24 sm:py-32">
+        <section id="cost" className="scroll-mt-28 py-24 sm:py-32">
+          <Container className="grid gap-10 lg:grid-cols-12">
+            <h2 className="font-display text-4xl font-normal sm:text-5xl lg:col-span-4">
+              {seo.costH2}
+            </h2>
+            <div className="space-y-5 text-base leading-relaxed text-grey-700 lg:col-span-8">
+              {seo.costParas.map((paragraph) => publicCopy(paragraph)).filter(Boolean).map((paragraph) => (
+                <p key={paragraph.slice(0, 32)}>{paragraph}</p>
+              ))}
+            </div>
+          </Container>
+        </section>
+
+        <section id="areas" className="scroll-mt-28 py-24 sm:py-32">
           <Container>
             <p className="rule mb-8" aria-hidden="true" />
             <h2 className="font-display text-4xl font-normal sm:text-5xl">
@@ -367,7 +403,7 @@ export function ServiceHub({ service }: { service: Service }) {
         </section>
 
         {relatedGuides.length > 0 ? (
-          <section className="py-20 sm:py-24">
+          <section id="guides" className="scroll-mt-28 py-20 sm:py-24">
             <Container className="grid gap-10 lg:grid-cols-12 lg:gap-16">
               <div className="lg:col-span-4">
                 <p className="rule mb-8" aria-hidden="true" />
@@ -397,18 +433,10 @@ export function ServiceHub({ service }: { service: Service }) {
           </section>
         ) : null}
 
-        <section className="border-y border-grey-200 py-24 sm:py-32">
+        <section id="questions" className="scroll-mt-28 border-y border-grey-200 py-24 sm:py-32">
           <Container className="grid gap-12 lg:grid-cols-12">
             <h2 className="font-display text-4xl font-normal sm:text-5xl lg:col-span-4">
-              {service.slug === "bathroom-renovation"
-                ? "Bathroom renovation questions"
-                : service.slug === "kitchen-renovation"
-                  ? "Kitchen renovation questions"
-                  : service.slug === "painting-decorating"
-                    ? "Painting and decorating questions"
-                    : service.slug === "light-refurbishment"
-                      ? "Light refurbishment questions"
-                      : `${heading} questions`}
+              {seo.questionsH2}
             </h2>
             <div className="lg:col-span-8">
               <FaqAccordion items={faqs} />

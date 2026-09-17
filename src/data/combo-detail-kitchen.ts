@@ -10,6 +10,28 @@ export const kitchenDetail: ComboDetailMap = {
     ],
     processNote: "Ceiling height decides what happens first here. In a room of that height, filling and finishing overhead is done from a clear floor, before a run of units makes access equipment impractical. The paperwork decides the rest: whether the building is a managed block on the avenues or a small converted house with a shared freehold sets how long consent runs, and that is settled before anything is ordered rather than alongside delivery.",
     consent: "Camden deals with the outside of a Belsize house. The Belsize Conservation Area covers much of the neighbourhood, Article 4 directions apply to parts of it, and stucco, windows and any new grille are read against that; a kitchen fitted within an existing room generally is not planning's business at all. The lease deals with the inside. A licence to alter comes from the freeholder or managing agent, and holding a share of the freehold changes who signs rather than whether a signature is needed. [VERIFY the boundary, any Article 4 and the lease terms.]",
+    audience: [
+      "Owner-occupiers in Belsize Park NW3, under the London Borough of Camden, typically instruct us on a kitchen that was never drawn as one: a former bedroom or service room in a laterally converted stucco house, cornice still circling the space, a chimney breast occupying the only long wall. Landlords with the same stock want a durable re-fit that the waste run and the extract will actually support, not a catalogue layout dropped onto a floor that has to drain across another household's ceiling. On Belsize Avenue and Haverstock Hill the client is more often a leaseholder in a mansion flat, and the kitchen is a purpose-built galley on original risers rather than an insertion.",
+      "The Village conversion and the avenue block are different rooms. The first has generous head height, out-of-square walls and a stack that belongs to a plan from before the kitchen existed; filling the ceiling from a clear floor is part of the job. The second is honest about its compactness — a short run, a window, a riser — but the carcass still has to negotiate a communal stair sized for coal scuttles. We fit both as the rooms they are. Joining two rooms of a lateral conversion is a structural brief, and it belongs with Hampstead Renovations rather than here.",
+    ],
+    failures: [
+      {
+        title: "Inserted-room waste run",
+        text: "In a Belsize Park conversion the kitchen often occupies a former bedroom, so the waste has to travel across the floor to a stack that was never positioned for it. That run sits above another household's ceiling, and the fall it can find decides where the sink and the machines go. A layout that ignores it will not drain. The floor question is opened before a cabinet elevation is drawn.",
+      },
+      {
+        title: "Breast in the wall",
+        text: "A chimney breast in the middle of the only long wall is the ordinary Belsize constraint, not a feature to box out for a longer run. Units are scribed to the masonry. Hanging from a breast a previous owner has already opened is a structural question first; until the remaining brickwork is understood, nothing is loaded onto it. Where the structure itself has to change, that is not a kitchen instruction.",
+      },
+      {
+        title: "High-room filling first",
+        text: "Ceiling height in these stucco houses decides the sequence. Filling and finishing overhead from a clear floor is done before a run of units makes access equipment impractical. Treating the height as a visual bonus and fitting first is how joints show for the life of the kitchen. Access equipment is written into the programme where the ceiling is in the envelope.",
+      },
+      {
+        title: "Avenue managing agent",
+        text: "On Belsize Avenue and Haverstock Hill the kitchen is a mansion-flat galley, and the managing agent's licence pack, working hours and common-parts rules sit ahead of any cabinet order. A converted house with a share of the freehold is a different delay: the neighbours grant consent, formally. Neither is skipped because the room is only being re-fitted. [VERIFY the lease terms.]",
+      },
+    ],
     extraFaqs: [
       {
         q: "We hold a share of the freehold. Is a licence to alter still needed?",
@@ -23,6 +45,26 @@ export const kitchenDetail: ComboDetailMap = {
         q: "The kitchen sits in a former bedroom. Where does the waste actually run?",
         a: "Across the floor, in most cases, to reach a stack that was never positioned for a kitchen in that room. That run sets the layout: sink and machines go where the fall works, and the floor build-up has to carry it, often above another household's ceiling. It is the first thing surveyed in an inserted Belsize kitchen and the first thing that rules a plan out.",
       },
+      {
+        q: "Can we stay in our Belsize Park flat while the kitchen is stripped?",
+        a: "In an avenue mansion flat there is often a washbasin in a bathroom off the hall, which makes a temporary arrangement possible if dust can be isolated from the rest of the demise. In a one-room Village conversion where the inserted kitchen is the sole wet space, cooking is usually moved out for the noisy weeks. Which of those applies is a survey finding, not a general promise.",
+      },
+      {
+        q: "Will a new extractor in a Belsize Park kitchen need Camden's consent?",
+        a: "Inside the room, replacing units is not normally planning's business. A grille through stucco on a principal or conservation elevation in the Belsize Conservation Area often is, and Article 4 directions apply to parts of the neighbourhood. [VERIFY the boundary and any Article 4 for the address.] Inserted kitchens in former bedrooms still need a route the elevation will accept; where it will not, recirculation is specified and said so before the hood is ordered.",
+      },
+      {
+        q: "Is there room for an island in a Belsize Park conversion kitchen?",
+        a: "Rarely. An inserted former bedroom is already fighting a chimney breast and a waste run that has to cross the floor; a free-standing unit would put pipework through that crossing and steal circulation the room does not have. Avenue galleys on Belsize Avenue are shorter still. A peninsula against a wall is sometimes honest; a free-standing island in this stock usually is not.",
+      },
+      {
+        q: "What sets the on-site weeks for a Belsize Park kitchen?",
+        a: "High-ceiling filling from a clear floor comes first, then first fix, cabinetry, worktop template and second fix. The calendar lengthens in the lead-in — a freeholder's pack in an avenue block, or a share-of-freehold signature in a converted house — and that wait sits before strip-out, not inside it. Dates are written after the room has been measured.",
+      },
+      {
+        q: "Does swapping a hob in a Belsize Park inserted kitchen involve Building Control?",
+        a: "Live gas is handled by a Gas Safe registered engineer. Matching a hob on an existing supply in an inserted former bedroom is ordinary; a new pipe from a meter in a communal hall, or a switch to induction that needs its own circuit, is a different notification. In an avenue mansion flat the lease may treat either as an alteration. A new circuit is notified if the wiring regulations say so. [VERIFY the supply and the lease.]",
+      },
     ],
   },
   "crouch-end": {
@@ -32,6 +74,28 @@ export const kitchenDetail: ComboDetailMap = {
     ],
     processNote: "In a converted house the lead-in is mostly other people's diaries. A leasehold flat needs the freeholder's pack agreed before anything is ordered, and the other households behind the same front door need notice of the noisy weeks. That fixes the order: paperwork and protection first, then strip-out on a day the skip has a licensed side-street position, because the Broadway is not a place to stand a lorry. Second fix follows the worktop template, not the calendar.",
     consent: "Haringey and the freeholder answer different questions, and it is worth keeping them apart. The council is the planning authority; its conservation-area designation of 25 October 1974 covers the Broadway and a ring of residential streets, so anything visible on the elevation — a new extract terminal, a replaced window — is decided there. [VERIFY whether the address sits inside the boundary.] A licence to alter comes from the freeholder or managing agent instead, and in a converted house that is often a neighbour holding a share of the freehold. Re-fitting an existing kitchen internally usually needs neither.",
+    audience: [
+      "Converted houses around the Crouch End N8 clock tower, under Haringey, generate the ordinary kitchen instruction: an owner-occupier or a landlord in a garden or first-floor flat whose kitchen occupies the rear room, sometimes a former scullery already inside the envelope, reached through a tiled hall and a shared front door. Purpose-built mansion blocks are the exception here, not the rule. The work itself sits on the residential streets that climb toward Highgate and fall toward Hornsey.",
+      "The room is almost always planned from the soil stack on the rear elevation. Cabinet runs, the sink and the washing machine are set out from that pipe, and a bricked-up range recess in the back wall is often the only depth the cooker can steal without taking floor. Original mouldings and the tiled hall stay outside the envelope. We re-fit the rear room that exists; forming a new rear addition is a different class of project.",
+    ],
+    failures: [
+      {
+        title: "Rear-elevation soil stack",
+        text: "In a Crouch End conversion the kitchen is a rear room, and the soil stack on the back wall is the fixed point. The wet appliances have to reach it with fall that the floor will actually give. Moving the wet wall away from that stack is how a layout fails on paper. The stack is surveyed before a run of units is drawn.",
+      },
+      {
+        title: "Tiled communal hall",
+        text: "The tiled hall and shared front door belong to the other households in the house, not to the kitchen instruction. Carcasses, plasterboard and a skip's worth of strip-out still have to pass through that hall. Protection is written into the method, and the tiles are left as found. Redecorating the common parts is the freeholder's business unless they instruct it separately.",
+      },
+      {
+        title: "Broadway skip standing",
+        text: "Crouch End Broadway is a shopping street, not a place to stand a lorry. A licensed side-street position is secured before strip-out is dated, because the Broadway will not hold a skip for a kitchen strip. If the licence slips, the drop is rebooked. Waste is not left outside the clock tower.",
+      },
+      {
+        title: "Recessed range opening",
+        text: "A bricked-up range recess in the back wall can take a cooker or a tall unit without stealing floor, but only if the flue above it is sound and either capped or ventilated. Old registers, soot staining and unsupported brickwork live in that opening. It is opened at strip-out rather than drawn as a hob position in advance, because what is behind the brick decides whether it is usable.",
+      },
+    ],
     extraFaqs: [
       {
         q: "What decides the cost of a kitchen in a Crouch End conversion?",
@@ -45,6 +109,26 @@ export const kitchenDetail: ComboDetailMap = {
         q: "There is a bricked-up range recess in the back wall — is it any use?",
         a: "Often, yes. A recess of that kind gives depth for a cooker or a tall unit without stealing floor, provided the flue above it is sound and either capped or ventilated properly. It is also where surprises live: old registers, soot staining and unsupported brickwork. We open it at strip-out and confirm the specification then, rather than drawing a hob into it in advance.",
       },
+      {
+        q: "Can we live in a Crouch End conversion while the kitchen is out?",
+        a: "In a garden or first-floor flat there is sometimes a washbasin in a bathroom on the half-landing, which will carry a kettle and a microwave if dust is kept to the rear room. Where the kitchen is the only wet space behind a shared front door, moving cooking out for the strip and first-fix weeks is usually kinder on the other households in the tiled hall. Occupancy is settled at survey against the actual plan, not assumed.",
+      },
+      {
+        q: "Does a Crouch End kitchen need the freeholder's licence to alter?",
+        a: "A like-for-like re-fit inside the rear room often does not. Written consent is usually needed when a waste run moves, a duct crosses a common void, or a new circuit leaves the demise. In a converted Crouch End house the person granting it is frequently a neighbour who holds a share of the freehold rather than a managing agent. The pack can be drawn up; they sign it. [VERIFY the lease.]",
+      },
+      {
+        q: "Can extract from a Crouch End rear kitchen go through the garden wall?",
+        a: "A short duct through the rear elevation is the honest route where the stack already sits on that wall. Inside the Crouch End Conservation Area — designated by Haringey on 25 October 1974 — a new terminal on a visible elevation is a council question. [VERIFY whether the address sits inside the boundary.] Where a neighbour's window sits a few feet from the landing, recirculation is specified instead of a grille drawn to nowhere.",
+      },
+      {
+        q: "Will a Crouch End rear room take a kitchen island?",
+        a: "The rear rooms in these conversions are larger than a Camden galley, so the footprint is sometimes there. Wet services in that island still have to reach the soil stack on the rear elevation, which means a waste run across a suspended timber floor. If the joists will not give that run with fall, the island does not happen. That is answered with the boards, not on a mood board.",
+      },
+      {
+        q: "How long is a Crouch End kitchen out of use?",
+        a: "Strip-out waits on a licensed side-street drop, because the Broadway will not hold a skip. First fix, cabinetry and the worktop template then follow the rear stack and whatever the range recess turns out to contain. A house where other households share the tiled hall is programmed more slowly than an empty one: noisy weeks are banded and the neighbours are told. A dated sequence is written after the visit.",
+      },
     ],
   },
   "golders-green": {
@@ -54,6 +138,28 @@ export const kitchenDetail: ComboDetailMap = {
     ],
     processNote: "Consent takes up less of the lead-in here than household logistics do. Where there is a driveway the skip stands off the highway and no Barnet licence is needed, which removes a step that a Camden street would have added. [VERIFY the licence position with Barnet.] What replaces it is sequencing around a family that is staying put: a temporary sink and a working route to the back door, and the gas isolation booked so the house is not without hot water for longer than the changeover needs.",
     consent: "Most of this stock is undesignated, which is not the same as unregulated. Barnet is the planning authority, and selected streets — including some near Golders Hill Park — sit in conservation areas, so a new flue terminal or extract grille on a visible elevation is checked before it is drawn. [VERIFY Barnet's map for the address.] The Hampstead Garden Suburb Trust does not reach here unless the address is inside its boundary, which is a separate map again. In the mansion flats on the main roads a freeholder's licence to alter still applies.",
+    audience: [
+      "Family houses on the crescents behind Golders Green Road, NW11, under Barnet, generate most of the kitchen instructions here: owner-occupiers in Edwardian and inter-war brick, pebbledash and later mock-Tudor, and landlords of the same stock let as family homes. The room is more often an original family kitchen than an inserted closet: a larger footprint, a rear window, sometimes a larder and a back scullery already in the envelope. Mansion flats toward Golders Hill Park and along the main roads add a smaller galley type on original risers.",
+      "Plots are larger than in a Camden conversion, and off-street parking is common, so the constraint is rarely the skip. It is what is already on the walls: a boiler and its flue on the rear elevation, an aged gas run from a meter in the hall, and a consumer unit that will not carry a full set of new kitchen circuits without attention. An inter-war ground floor is often solid rather than suspended, so new services are chased or run high rather than dropped under the boards. This is not Hampstead Garden Suburb unless the map says so.",
+    ],
+    failures: [
+      {
+        title: "Hall-to-kitchen gas run",
+        text: "Many Golders Green houses still feed the hob from a meter in the hall along a run that has not been touched since the last kitchen. That pipe decides whether a like-for-like hob is ordinary or whether a Gas Safe engineer is isolating, recapping and relaying before units go back. A family staying in the house cannot lose hot water for longer than the changeover needs. The isolation is booked into the sequence, not discovered on strip-out day.",
+      },
+      {
+        title: "Solid inter-war floor",
+        text: "An inter-war ground floor in this stock is often a solid slab rather than suspended timber. Waste cannot drop into a void; it is chased or run high, and the sink stays closer to the existing stack than a hopeful island would like. Pebbledash walls hide out-of-square corners and later partitions as readily as a conversion. The floor construction is opened at survey before a layout that depends on underfloor runs is drawn.",
+      },
+      {
+        title: "Rear-wall boiler flue",
+        text: "The boiler sitting on the kitchen wall is the ordinary Golders Green problem, not an inconvenience to be moved for a run of wall units. Relocating it means a new flue position on the elevation, a longer gas pipe and a condensate route. Where the existing position can be planned around, that is usually the cleaner answer. A new terminal on a street near Golders Hill Park may be a Barnet conservation question. [VERIFY Barnet's map for the address.]",
+      },
+      {
+        title: "Crescent driveway width",
+        text: "A drive that will take two cars will not always take a skip lorry. Standing surface and access width are checked before the strip-out date, because a driveway drop avoids a Barnet highway licence and keeps the work off a crescent that fills with cars in the evening. Where the drive is too tight, a licensed roadside position is the fallback. [VERIFY the licence position with Barnet.]",
+      },
+    ],
     extraFaqs: [
       {
         q: "The boiler is on the kitchen wall. Does it have to move?",
@@ -67,6 +173,26 @@ export const kitchenDetail: ComboDetailMap = {
         q: "Our house still has a larder and a back scullery. Can they be brought into the kitchen?",
         a: "Taking out the wall between them is a structural question, and that sits with Hampstead Renovations rather than here. What we can do within this service is re-fit the rooms as they stand, and a larder is often more useful kept than lost: it takes tall storage and appliances off the main run and leaves the working wall clear. We will show both options at survey.",
       },
+      {
+        q: "Can a Golders Green household keep cooking in the house during the works?",
+        a: "Often, and that is the ordinary instruction here. A temporary sink and a working route to the back door are sequenced so the house is not without washing-up for the whole programme; the gas isolation is booked so hot water is lost only for the changeover. Empty is faster. A family still cooking around the room is programmed more slowly, and the dates reflect that rather than an optimistic empty-house run.",
+      },
+      {
+        q: "Will a Golders Green kitchen take an island?",
+        a: "These family rooms are wider than a Camden conversion galley, so the footprint is sometimes there. On a solid inter-war floor a sink or hob in that island means chasing, not dropping a waste into a void, and the run still has to reach the existing stack with fall. Pebbledash walls that look square often are not. Whether an island is honest is a survey answer against that floor, not a catalogue assumption.",
+      },
+      {
+        q: "What stretches a Golders Green kitchen programme?",
+        a: "Consent takes up less of the lead-in here than household logistics do. Where a driveway holds the skip, a Barnet highway licence drops out of the sequence; what remains is the boiler changeover, the solid-floor chasing and the family's temporary sink. A replacement in the same footprint, boiler left where it is, finishes sooner than one that relocates services. Dates are written after the visit, not given on the telephone.",
+      },
+      {
+        q: "Who notifies a new kitchen circuit in a Golders Green family house?",
+        a: "Live gas is isolated and recapped by a Gas Safe registered engineer. Matching the existing hall-to-kitchen run is ordinary; a relocated boiler flue, or a switch to induction that needs its own circuit, is a different notification, and the consumer unit in these houses often cannot take a full kitchen load without attention. Barnet's building-control route is used where that circuit is notifiable. [VERIFY the supply.]",
+      },
+      {
+        q: "Do mansion flats on Golders Green Road need a freeholder's licence for a kitchen?",
+        a: "Often, yes. The family houses on the crescents are typically freehold, so an internal re-fit has no landlord to satisfy. The mansion flats toward Golders Hill Park and along the main roads are leasehold, and the pack usually starts when a waste is moved or a duct is taken through a common void. The agent grants it. [VERIFY the tenure.]",
+      },
     ],
   },
   "hampstead": {
@@ -76,6 +202,28 @@ export const kitchenDetail: ComboDetailMap = {
     ],
     processNote: "Two checks sit ahead of everything else here: what the address is actually designated as, and whether a converted house's freeholder has to agree anything. Both belong before the order goes in, not before handover. The extract route is settled while the old kitchen is still standing, because the elevation decides it and a lane off Heath Street gives one delivery window rather than several. The strip-out date is booked to that window, not to a convenient Monday.",
     consent: "Listing is the question that matters most on this stock. Where the house is listed, internal alterations can need listed building consent, so the entry is read before anything is priced in detail. Otherwise a kitchen replaced inside an existing room sits outside planning; the elevation does not, and a new opening, a grille on a principal front or a replacement window in the Hampstead Conservation Area is a Camden matter. Permission to alter a leasehold flat is the freeholder's or managing agent's to give, never ours. [VERIFY the designation, the listing and the lease terms on the address.]",
+    audience: [
+      "Village conversions off Heath Street and the High Street, Hampstead NW3, under Camden, are the core of this kitchen work: owner-occupiers and landlords with a first-floor rear room or a half-landing galley in a Georgian or early-Victorian house, behind lath and plaster, on boards that have dropped toward the party wall. Larger family houses toward the Heath and along Frognal give a bigger version of the same job, still inside the room as it stands. Original joinery, lime plaster and floors that have moved are the norm, not a defect to be erased.",
+      "What the kitchen typically is here is compact. Islands are uncommon because the footprint will not take them. The run of units is decided by the chimney breast, the out-of-square wall and the extract route that a conservation-area elevation will actually accept. A lane off Heath Street gives one delivery window rather than several. We do not punch a grille through a principal village front as a convenience, and we do not form a kitchen-diner from two small rear rooms sitting side by side.",
+    ],
+    failures: [
+      {
+        title: "Village listing check",
+        text: "Listing is the question that matters most on Hampstead village stock. Where the house is listed, internal alterations can need listed building consent even when nothing shows on the elevation, so the entry is read before anything is priced in detail. New cabinets in a room that has already been a kitchen are ordinary; cutting original joinery or a breast to make the run fit is not. [VERIFY the listing on the address.]",
+      },
+      {
+        title: "Lime plaster scribing",
+        text: "A village-house floor that has settled over a century is levelled locally, where a unit or an appliance needs it, rather than made flat end to end. The run is scribed to the lime plaster instead of the wall being rebuilt to the run, and making-good is in a compatible material. Pretending the room is square is how doors bind and joints open. Both the slope and the plaster are recorded so the tolerance is agreed rather than discovered.",
+      },
+      {
+        title: "Heath Street loading",
+        text: "Lanes off Heath Street and the High Street were not drawn for a kitchen delivery. The extract route is settled while the old kitchen is still standing, because the elevation decides it and the lane gives one window rather than several. The strip-out date is booked to that window, not to a convenient Monday. A skip standing for the duration is not assumed.",
+      },
+      {
+        title: "Conversion stair protection",
+        text: "Three other households on a village stair make the common parts part of the site: dust screens, protected treads, an agreed route in and out, and hours those households have been told about. Material is not left standing in a shared hall. Decoration of those parts belongs to the freeholder and is not inside a flat's kitchen scope. The stair is treated as a neighbour's floor, because it is.",
+      },
+    ],
     extraFaqs: [
       {
         q: "The floors slope and the walls are lime plaster. Will the room be squared up first?",
@@ -89,6 +237,26 @@ export const kitchenDetail: ComboDetailMap = {
         q: "Three other households share our stair. Can the work still run?",
         a: "Yes, with the common parts treated as part of the site: dust screens, protected treads, an agreed route in and out, and hours the other households have been told about. Deliveries on a village lane are timed so that material does not stand in a shared hall. Decoration of those parts belongs to the freeholder and is not inside a flat's kitchen scope.",
       },
+      {
+        q: "Can we stay in a Hampstead conversion while the kitchen is renovated?",
+        a: "In a Frognal family house there is often a utility or a second sink that will carry washing-up for the programme if dust is isolated. In a one-bedroom village flat off Heath Street, where the half-landing galley is the sole wet space, cooking is usually taken off-site for strip-out and first fix. Which of those the address supports is said after the visit, not as a rule of thumb.",
+      },
+      {
+        q: "Does a Hampstead kitchen in a listed village house need listed building consent?",
+        a: "Internal fit-out within a room that has already been altered is ordinary work. Listed constraints bite when historic fabric, the plan, the windows or the elevation change. A grille on a principal front in the Hampstead Conservation Area is a Camden question whether or not the house is listed. The entry is read before anything is opened up. [VERIFY the designation, the listing and the lease terms on the address.]",
+      },
+      {
+        q: "Will a Hampstead village kitchen take an island?",
+        a: "Uncommon, because the footprint will not take one. A first-floor rear room or a half-landing galley is already wrapping a chimney breast and chasing fall to a stack that was never drawn for a modern run. A free-standing unit would put pipework through the centre of that room and need circulation around it. Family houses toward the Heath are larger; even there the island happens only if the drainage and the floor will take it.",
+      },
+      {
+        q: "What shapes the on-site weeks of a Hampstead kitchen?",
+        a: "Two checks sit ahead of everything else: what the address is actually designated as, and whether a converted house's freeholder has to agree anything. Both belong before the order goes in. On site, lime making-good, local levelling and a timed lane delivery shape the weeks more than the cabinet count. A listed interior adds a wait that no fitting programme can compress.",
+      },
+      {
+        q: "What happens to old gas pipes when a Hampstead kitchen comes out?",
+        a: "Redundant gas runs are the ordinary finding behind village units, along with wiring that serves something else. Live work is by a Gas Safe registered engineer; dead pipe is capped and recorded while the room is open. A like-for-like hob on a sound supply is ordinary; a new circuit for induction is notified where the regulations require it. Findings are put to you as a written variation before they are acted on.",
+      },
     ],
   },
   "hampstead-garden-suburb": {
@@ -98,6 +266,28 @@ export const kitchenDetail: ComboDetailMap = {
     ],
     processNote: "Two boundaries are checked at the very start, because they are not the same line: the conservation-area map and the Trust's Scheme of Management area. [VERIFY both for the property.] If any part of the brief touches the outside, that element goes for written Trust consent and Barnet planning before drawings are finalised, and the internal programme waits rather than starting hopefully. Delivery planning is its own item; a close or a green takes a small vehicle and a short, agreed standing time.",
     consent: "Consent here comes from two independent bodies with different powers. Barnet is the local planning authority and decides planning applications; the long-standing Article 4 direction means alterations that would be permitted development elsewhere are not assumed to be here. Separately, the Hampstead Garden Suburb Trust administers a Scheme of Management under its own Act and gives written consent as a landowner interest, which is not planning permission and does not replace it. [VERIFY whether the property is inside the Trust area and what its current guidelines require.] Replacing a kitchen inside the room, changing nothing outside, generally engages neither.",
+    audience: [
+      "Arts and Crafts houses planned around greens and closes in Hampstead Garden Suburb NW11, under Barnet, are the stock this kitchen work is written for: owner-occupiers of Unwin cottages and larger free-standing houses, and landlords of the same interiors. Purpose-built mansion blocks are not the local type. The kitchen is almost always the third or fourth version of that room: a modest cottage plan, a casement rather than a sash, a larder or former scullery already absorbed into the space. Ceiling heights in the cottages are modest, so wall units and any extract housing have to be set out against the real head height.",
+      "The Trust, Barnet planning and an Article 4 in force since the 1970s sit on the outside of the house. Internally, a modern kitchen is ordinary work provided nothing lands on the elevation: no new grille, no soil pipe, no replacement casement, no change to a front boundary or hardstanding to ease a delivery. Central Square and the Institute grouping set the composition; the kitchen is fitted behind it. Permitted development is not the working assumption here.",
+    ],
+    failures: [
+      {
+        title: "Trust casement envelope",
+        text: "The window is more often a casement than a sash, and that casement is part of the planned composition the Trust protects. Wall units, splashbacks and any extract housing are dimensioned against the real reveal, not a standard elevation. A grille, a soil pipe or a replacement window that breaks the envelope is Trust consent and often Barnet planning as well. Recirculation that leaves the casement untouched is frequently the honest answer, and it is not presented as equivalent to a ducted hood.",
+      },
+      {
+        title: "Cottage ceiling height",
+        text: "Ceiling heights in the Unwin cottages are modest by modern kitchen standards. Wall units and cooker-hood housing are set out against the measured head height, or they collide with the casement head and the cornice. A catalogue elevation drawn for a later house will not fit. The vertical dimension is taken before carcasses are ordered, not after they arrive on a close.",
+      },
+      {
+        title: "Close delivery window",
+        text: "A close or a green takes a small vehicle and a short, agreed standing time. These streets are not loading bays, and a long-wheelbase lorry on the grass or the kerb is not a working method. Carcasses come in as several loads rather than one, and the internal programme waits on that drop rather than starting hopefully. Barnet licences still apply; the setting decides the vehicle.",
+      },
+      {
+        title: "Scheme versus planning",
+        text: "Two boundaries are checked at the start because they are not the same line: the conservation-area map, designated in 1967, and the Trust's Scheme of Management area. Trust consent is a landowner interest under its own Act; Barnet planning is a separate decision under the planning acts. One does not carry the other. An internal kitchen that leaves the elevation untouched generally engages neither; anything that breaks the envelope can need both. [VERIFY both maps for the property.]",
+      },
+    ],
     extraFaqs: [
       {
         q: "If the Trust consents, do we still need Barnet planning permission?",
@@ -111,6 +301,26 @@ export const kitchenDetail: ComboDetailMap = {
         q: "Are Suburb houses listed as well as being in the conservation area?",
         a: "Some are. Listing is a separate national designation from the conservation area and from the Trust, and it applies to individual buildings and groups rather than to the Suburb as a whole. Where a house is listed, interior work can require listed building consent even when nothing shows outside. We check the entry for the address before anything is opened up. [VERIFY listing on the property.]",
       },
+      {
+        q: "Can a Hampstead Garden Suburb cottage stay occupied through a kitchen fit-out?",
+        a: "Unwin cottages are small, and many have only one wet room, so a temporary sink in the same footprint is often the honest arrangement rather than a second kitchen elsewhere in the house. Larger free-standing houses around the greens sometimes have a larder or a former scullery that will carry washing-up if it is left standing. Occupancy is sequenced around that, and empty is faster. Which the address supports is said after the room has been seen.",
+      },
+      {
+        q: "Can extract sit in a Hampstead Garden Suburb kitchen without breaking the elevation?",
+        a: "Yes, if it recirculates. A ducted hood wants a terminal on the outside wall, and that terminal is Trust consent and often Barnet planning, because the Article 4 in force since the 1970s removes the assumption of permitted development. Recirculation on carbon filters leaves the casement and the composition untouched. It is not equivalent to ducted extract, and it is specified as such rather than sold as the same thing. [VERIFY the elevation and both maps.]",
+      },
+      {
+        q: "Will a Hampstead Garden Suburb kitchen take an island?",
+        a: "In an Unwin cottage, almost never: the plan is modest, the casement and the absorbed larder already occupy the walls, and there is no path around a free-standing unit. In a larger free-standing house the footprint is sometimes present, but a sink in that island still has to reach the existing waste without a new soil pipe on the elevation. That pipe would be a Trust item. The island happens only if the room and the services that already exist will take it.",
+      },
+      {
+        q: "What holds up a Hampstead Garden Suburb kitchen on site?",
+        a: "If the brief is strictly internal, the on-site weeks follow the cottage: strip-out, first fix, scribed cabinetry against a low ceiling, worktop template, second fix. If any part of the brief touches the outside — a grille, a soil pipe, a casement — that element goes for written Trust consent and Barnet planning before drawings are finalised, and the internal programme waits. Delivery on a close adds its own standing-time constraint.",
+      },
+      {
+        q: "Does a gas hob in a Hampstead Garden Suburb kitchen involve the Trust?",
+        a: "Internal gas work does not, provided nothing lands on the elevation. A Gas Safe registered engineer handles the isolation, the cap and any new run. A boiler flue relocated to the outside wall, or a new terminal, is a different matter: that is Trust consent and often Barnet planning. Matching an existing internal supply is ordinary kitchen work. [VERIFY whether the flue position changes.]",
+      },
     ],
   },
   "highgate": {
@@ -120,6 +330,28 @@ export const kitchenDetail: ComboDetailMap = {
     ],
     processNote: "Which borough holds the frontage is settled before anything is applied for, because Camden, Haringey and Islington each run their own licensing and each takes its own time. A listing check runs alongside it. On the steeper plots the drop point then decides the shape of strip-out: where a skip cannot stand, waste is bagged and carried, which is slower and is priced and programmed as such rather than discovered on the day.",
     consent: "The useful distinction here is between two designations that behave differently. Conservation-area control, which covers much of the Village and the slopes, bears on what can be seen — grilles, windows, rooflines — and is administered by whichever of Camden, Haringey or Islington holds the frontage. Listing is separate and reaches the interior, so an internal alteration in a listed Village house can need consent even though the same work elsewhere would not. Tenure adds a third layer: a converted flat may need the freeholder's licence to alter. [VERIFY all three on the address.]",
+    audience: [
+      "N6 produces two Highgate client types, and neither sits under a single council. In the Village around Pond Square and Highgate High Street the client is often in a listed Georgian or Victorian house, and the kitchen is a later insertion into a basement or a rear service wing; listing reaches inside the building as well as outside it. On the slopes toward the Heath and Archway the more common instruction is a family kitchen at the back of a raised ground floor in an unlisted villa, where the deciding constraint is the gradient rather than the fabric.",
+      "Converted houses and purpose-built mansion flats both appear; the Village itself is finer-grain and more listed. Woods and steep plots affect access and anything that touches an elevation more than in the inner NW postcodes. Holly Lodge Estate is a separate conservation designation from Highgate Conservation Area, designated 21 December 1967 and split between Camden and Haringey, with some streets in Islington. [VERIFY the council for the specific address.] We confirm the authority from the frontage, not from the neighbourhood name.",
+    ],
+    failures: [
+      {
+        title: "Three-borough frontage",
+        text: "Highgate is not a single-authority area. Skip and scaffolding licences are issued by Camden, Haringey or, on some streets, Islington, and an application to the wrong council does not run. Which borough holds the frontage is settled before anything is applied for, because each runs its own licensing and each takes its own time. The room decides the layout; the frontage decides the paperwork. [VERIFY the council for the address.]",
+      },
+      {
+        title: "Village historic fabric",
+        text: "In a listed Village house the kitchen is usually a later insertion into a basement or a rear service wing, and listed status reaches that interior. Replacing units in a room that has already been altered is ordinary work. Removing a chimney breast, panelling or an original partition to make the run fit is not, and that consent is from the council in its own right, not a decision on site. What is original is identified before a layout that depends on removing it is priced.",
+      },
+      {
+        title: "Slope skip standing",
+        text: "On the steeper plots toward the Heath and Archway the drop point decides the shape of strip-out. Where a skip cannot stand, waste is bagged and carried, which is slower and is priced and programmed as such rather than discovered on the day. Tree constraints on Heath-facing plots are common; a skip on a root zone can need notice even when the kitchen is internal. [VERIFY TPO and conservation-area tree notice with the correct borough.]",
+      },
+      {
+        title: "Holly Lodge designation",
+        text: "Holly Lodge Estate is a separate conservation designation from Highgate Conservation Area, so the appraisal that applies is not the Village one, and the estate's own arrangements may sit on top of the council's. Inside the property the work is an ordinary kitchen fit-out; the checks run beforehand are the part that differs. Covenants and the estate's rules are read with the designation, not assumed from N6. [VERIFY the designation and any estate covenants.]",
+      },
+    ],
     extraFaqs: [
       {
         q: "What actually moves the number on a Highgate kitchen?",
@@ -133,6 +365,26 @@ export const kitchenDetail: ComboDetailMap = {
         q: "We are on the Holly Lodge Estate. Is that treated differently?",
         a: "It is a separate conservation designation from Highgate Conservation Area, so the appraisal that applies to your building is not the Village one, and the estate's own arrangements may sit on top of the council's. [VERIFY the designation and any estate covenants for your address.] Inside the property the work is an ordinary kitchen fit-out; the checks we run beforehand are the part that differs.",
       },
+      {
+        q: "Can we stay in a Highgate house while the kitchen is renovated?",
+        a: "On a slope villa the family kitchen is often at the back of a raised ground floor, and a utility or a basement sink will sometimes carry washing-up if the route between them can be kept clean. In a Village basement insertion there is frequently no second wet space, and the steep plot makes coming and going with shopping during strip-out harder than in a flat Camden terrace. Occupancy is settled against that plan, not as a default yes.",
+      },
+      {
+        q: "Is a Highgate slope villa kitchen a licence-to-alter job?",
+        a: "The villas on the slopes are more often freehold, so the kitchen instruction has no landlord in it. Converted flats toward Archway and in the Village are leasehold, and the pack usually starts when a waste is moved or a duct is taken through a common void. The council on the frontage — Camden, Haringey or Islington — is a separate question from the lease. [VERIFY tenure and the borough.]",
+      },
+      {
+        q: "Can extract from a Highgate kitchen land on a Heath-facing wall?",
+        a: "Not as a default. Conservation-area control, which covers much of the Village and the slopes, bears on what can be seen, and a Heath-facing or principal front is the elevation we route away from wherever the building allows. Listing in a Village house can reach the interior as well. Recirculation is specified where no acceptable terminal exists, and it is said so before the hood is ordered. [VERIFY the designation.]",
+      },
+      {
+        q: "Will a Highgate villa kitchen take an island without a structural opening?",
+        a: "A larger family kitchen in an existing rear room on the slopes sometimes has the footprint. Wet services in that island still have to reach the waste that exists, and taking out the wall behind the kitchen to make one room is not this service — that brief sits with Hampstead Renovations. The island happens only if the room as it stands, and the services in it, will take it. Village basement insertions almost never will.",
+      },
+      {
+        q: "How do kitchen carcasses reach a Highgate plot on a steep street?",
+        a: "The drop point is taken with the tape before carcasses are ordered. Where a long-wheelbase van cannot stand, a smaller vehicle and a carry are programmed, and on the steepest plots waste is bagged rather than skipped. Tree root zones can constrain even an internal job. The fitting week does not absorb a delivery that the gradient will not take; the lead-in does.",
+      },
     ],
   },
   "kentish-town": {
@@ -142,6 +394,28 @@ export const kitchenDetail: ComboDetailMap = {
     ],
     processNote: "The sequence here gains a step before it starts. Where the room is below ground, we want the fabric looked at and the cause of any damp identified before cabinetry is ordered, because a drying period cannot be compressed once the programme is running. The Camden skip licence goes in against a side street, never the corridor, and the neighbours either side are given the noisy dates. Strip-out follows the drop, not the other way round.",
     consent: "Tenure matters more than designation on most of these addresses. A flat in a split terrace is leasehold, so if a waste run moves or a duct passes through anything outside the demise, the freeholder or managing agent grants the licence to alter; Camden has no part in that. Camden's part is the elevation. Conservation-area coverage runs street by street through Kentish Town and up toward Dartmouth Park rather than following the High Street, so a rear grille may be an ordinary detail on one road and a planning question on the next. [VERIFY the designation for the address.]",
+    audience: [
+      "Denser Victorian terraces in Kentish Town NW5, under Camden, instruct this kitchen work more often than the village stock to the west: owner-occupiers and landlords in split houses whose kitchen is a rear return or, more often than in Hampstead, a lower-ground room against retained ground at the back. Former workshops converted to dwellings add a third type, with waste runs and ventilation that were never domestic. Larger streets toward Tufnell Park and Dartmouth Park become more residential and more likely to include original family houses.",
+      "The lower-ground room is part solid floor and part suspended timber, with masonry that has never been dry in the way a modern wall is dry. Moisture readings and the state of the existing plaster decide the specification before any layout question is settled, and they decide whether the room is ready for units at all. Kentish Town Road is a mixed-use corridor; the work is on the side streets. Cabinets are not hung on a wall that is still wet.",
+    ],
+    failures: [
+      {
+        title: "Retained-ground moisture",
+        text: "A lower-ground kitchen against retained ground has to be dry before anything is fixed to it. Finding the cause, taking off failed plaster and letting a wall read stable are not stages that run in parallel with a cabinet fit. Cabinets are not hung on masonry that is still wet, and no decoration is signed off over it. Where the cause sits outside the flat — a blocked gully, a neighbour's gutter — it is reported, not absorbed.",
+      },
+      {
+        title: "Mixed floor construction",
+        text: "Part solid floor and part suspended timber is the ordinary lower-ground build-up here, not a single deck. Waste runs, uncoupling layers and appliance feet have to know which they are standing on. A layout drawn as if the whole room were one construction is how a machine sits out of level and a tile cracks. A section is opened at survey rather than guessed from the boards.",
+      },
+      {
+        title: "Workshop drainage improvisation",
+        text: "Converted workshops were not laid out for domestic services. Waste runs, floor construction and ventilation are often improvised rather than original, and a proposed sink or hob position may not be servable without work that falls outside a kitchen renovation. What is there is surveyed before anything is drawn. The fit-out follows the same sequence only once those runs are understood.",
+      },
+      {
+        title: "High Street skip ban",
+        text: "Kentish Town Road is a corridor, not a skip location. The Camden licence is applied for against a named side street and a stated date window, and permit-holder bays fill by mid-morning. If a permit slips, the drop is rebooked. Waste is not left on the High Street, and the neighbours either side of the terrace are given the noisy dates before strip-out.",
+      },
+    ],
     extraFaqs: [
       {
         q: "Why does a lower-ground kitchen take longer than the same room upstairs?",
@@ -155,6 +429,26 @@ export const kitchenDetail: ComboDetailMap = {
         q: "Who arranges the skip licence and the parking for the delivery?",
         a: "We do. The skip licence and any parking bay suspension are applied for through Camden against a named side street and a stated date window, and those dates go into the programme rather than being assumed. Permit-holder bays fill by mid-morning, so the delivery is booked to the window rather than hoped for. If a permit slips, the delivery moves with it, and nothing is left on the pavement.",
       },
+      {
+        q: "Can we stay in a Kentish Town flat while a lower-ground kitchen is renovated?",
+        a: "If you live above the room, sometimes, provided the stair can be kept as a clean route and a bathroom sink will carry a kettle. If the lower-ground kitchen is the flat, occupancy during a drying wait is uncomfortable: failed plaster coming off and a wall being monitored are not stages that sit happily next to daily cooking. The readings decide the programme. Staying is not promised around a wet wall.",
+      },
+      {
+        q: "Does a Kentish Town conversion need a licence to alter for a kitchen re-fit?",
+        a: "A flat in a split terrace is leasehold. Matching the existing layout inside the demise often needs nothing; consent is usually triggered by a waste run relocated, a new circuit, or a duct passing through anything outside the demise. The freeholder or managing agent grants it; Camden has no part in that paperwork. The pack can be drawn up for them. [VERIFY the lease.]",
+      },
+      {
+        q: "Can extract from a Kentish Town lower-ground kitchen go out at the back?",
+        a: "A rear grille may be an ordinary detail on one road and a planning question on the next, because conservation-area coverage runs street by street through Kentish Town and up toward Dartmouth Park rather than following the High Street. A lower-ground room also has to clear retained ground and any neighbour's window at yard level. The route is settled before the hood is specified. [VERIFY the designation for the address.]",
+      },
+      {
+        q: "Will a Kentish Town rear return take a kitchen island?",
+        a: "A rear-return galley in this grain is compact: one window, a party wall, a door that swings into the run. An island would take the circulation that is already tight. In a lower-ground room the mixed floor — part solid, part suspended — makes a waste run to the middle of the room a construction question before it is a layout one. Family houses toward Dartmouth Park are larger; even there any island is drawn to the drainage that exists.",
+      },
+      {
+        q: "Does a new electrical circuit in a Kentish Town kitchen need notifying?",
+        a: "A notifiable new circuit is notified. Matching existing kitchen circuits is ordinary; a consumer unit that will not carry a hob, an oven and an induction changeover is a different piece of work, quoted separately from the fit-out. A Gas Safe registered engineer does any live gas work. The lower-ground moisture question is settled before any of that is fixed to the wall.",
+      },
     ],
   },
   "kilburn": {
@@ -164,6 +458,28 @@ export const kitchenDetail: ComboDetailMap = {
     ],
     processNote: "Nothing is applied for until the borough is settled, because Camden and Brent run separate licensing and a permit from the wrong one is worthless. That check sits at the front of the lead-in alongside the access measurement: stair width, turns, door openings and, above a shop, the hours the occupier will accept a delivery. Carcasses are ordered against those dimensions. Strip-out is booked only once the route and the waste collection are confirmed for the same days.",
     consent: "Three parties can be involved and none of them is us. The council — Camden east of the High Road, Brent west of it — decides planning and conservation matters, and designation here covers selected streets rather than the neighbourhood as a whole. [VERIFY both maps for the address.] The freeholder or managing agent grants any licence to alter, which is ordinary in a leasehold flat where services move. Above a shop, the commercial leaseholder controls access and sometimes the frontage. Replacing a kitchen inside the existing room normally engages none of them.",
+    audience: [
+      "Kilburn High Road, NW6, splits the kitchen client as well as the borough. East, toward West Hampstead, the instruction is typically a Camden conversion galley with a party wall and a single rear window. West, in Brent, the range widens: inter-war and post-war flats where the kitchen is a purpose-built compartment with ducting already in the plan. Flats above shops on the High Road are a third type — a narrow stair, extract as a real constraint, and a commercial occupier below. Owner-occupiers and landlords appear in all three.",
+      "The layout question in a conversion is the stack; in a purpose-built block it is what the building's ventilation will accept. Above a shop, the first measurement is the stair, because a stone worktop that cannot make the turn is a delay with a lorry held on the High Road. Two boroughs mean two licensing regimes. We confirm Camden or Brent from the address before a skip is applied for, then fit the kitchen to the room.",
+    ],
+    failures: [
+      {
+        title: "High Road borough split",
+        text: "Kilburn High Road is the historic boundary: Camden to the east, Brent to the west. Nothing is applied for until the borough is settled, because the two councils run separate licensing and an application to the wrong one does not run. Conservation-area coverage is by street rather than the neighbourhood as a whole. The room still decides the layout; the frontage decides which form is filled in. [VERIFY both maps for the address.]",
+      },
+      {
+        title: "Shop-stair carcass size",
+        text: "Flats above the High Road shops are reached by a narrow stair and a side door that was never drawn for a kitchen delivery. Stair width, turns and door openings are measured before carcasses are ordered, and the hours the shop occupier will accept a delivery are part of that measurement. A unit that cannot make the turn is templated in pieces or built up in the kitchen. That decision belongs before the lorry is booked, not on the High Road with it waiting.",
+      },
+      {
+        title: "Shopfront extract grille",
+        text: "A grille through a shopfront elevation on Kilburn High Road is not assumed. That frontage may carry its own design guidance, and the commercial leaseholder below controls access and sometimes the wall. [VERIFY for the address.] Where extract has no honest route — through the shop, through a rear yard, or into a block duct — recirculation is specified and said so before anything is ordered. Punching a hole as a convenience is not the method.",
+      },
+      {
+        title: "Purpose-built block ducts",
+        text: "West of the High Road, in Brent, a purpose-built kitchen has ducting and services designed into the plan, which helps, but it also means the block decides what can change. The managing agent sets working hours and lift use; the building's ventilation accepts a termination or it does not. The gain is a squarer room; the constraint is a building with rules. Both are recorded before the specification is written.",
+      },
+    ],
     extraFaqs: [
       {
         q: "Do I need my freeholder's permission to replace a kitchen in a Kilburn flat?",
@@ -177,6 +493,26 @@ export const kitchenDetail: ComboDetailMap = {
         q: "We are on the Brent side in a purpose-built block — is that easier?",
         a: "Not automatically. A purpose-built kitchen has ducting and services designed into the plan, which helps, but it also means the block decides what can change, and the managing agent sets working hours and lift use. Brent issues the licences on that side. The gain is a squarer room; the constraint is a building with rules. Both are recorded before the specification is written.",
       },
+      {
+        q: "Can we stay in a Kilburn shop-flat while the kitchen is stripped?",
+        a: "Above a High Road shop there is rarely a second sink, and the only wet space is the galley being emptied. A bathroom washbasin will carry a kettle if dust can be kept to the kitchen, but the narrow stair is also the only way in with shopping. A conversion toward West Hampstead sometimes has a half-landing bathroom that makes occupancy more workable. Which the address supports is a survey finding against the plan.",
+      },
+      {
+        q: "Can extract from a Kilburn kitchen go through the High Road shopfront?",
+        a: "Not as a default. Shopfronts and upper-floor windows on the High Road may have separate design guidance, and the commercial occupier below controls access and sometimes the frontage. [VERIFY Camden and Brent maps and any shopfront guidance.] A rear yard or a block duct is the honest alternative where it exists. Where neither is available, recirculation is specified rather than a grille drawn through the shop.",
+      },
+      {
+        q: "Will a Kilburn conversion galley take a kitchen island?",
+        a: "East of the High Road the room is usually a Victorian conversion galley: one rear window, a party wall, a stack. There is no space to walk around a free-standing unit. West of it, a purpose-built compartment is squarer but still sized as a kitchen, not as a dining room, and the block's ducts decide where a hob can sit. An island happens only if the room and the ventilation will take it, which in this stock is uncommon.",
+      },
+      {
+        q: "What decides the calendar for a Kilburn kitchen?",
+        a: "The borough check sits at the front of the lead-in, because a Camden permit on a Brent address is worthless. Above a shop, the occupier's delivery hours and the stair measurement then decide when carcasses can land. A purpose-built block on the Brent side adds the agent's working-hours band. The on-site weeks follow the room; the calendar follows the building and the High Road.",
+      },
+      {
+        q: "Does a gas hob in a Kilburn shop-flat need a different method from a conversion?",
+        a: "Live gas is still handled by a Gas Safe registered engineer. The difference is the run: above a shop the meter is often in a cupboard on a communal landing or in the commercial demise below, and isolation may need the occupier's agreement as well as the lease. A conversion toward West Hampstead more often has the meter inside the flat. Either way, a new induction circuit is notified if the wiring regulations say it must be. [VERIFY the meter position.]",
+      },
     ],
   },
   "maida-vale": {
@@ -186,6 +522,28 @@ export const kitchenDetail: ComboDetailMap = {
     ],
     processNote: "The measurement that governs the order is not the wall. It is the turn of the stair and the width of the corridor inside the flat, both recorded before a carcass is specified, because a unit that will not come round a corner has to be reordered and the programme, not the fitting week, absorbs the wait. The licence pack runs alongside that, the porter's hours decide which days can take the noise, and deliveries are split so nothing stands in a communal hall.",
     consent: "The lease is usually the document that decides a Maida Vale kitchen. A licence to alter is granted by the freeholder or the managing agent, on their timescale, and we prepare drawings and a method statement for it rather than issue it. Westminster is the second question and a narrower one: fitting a kitchen inside an existing room is not normally asked of the council, while window replacement, balcony work and the repainting of previously painted brick are ordinary consent topics in the Maida Vale Conservation Area. A canal-side frontage can add a third party. [VERIFY the conservation area, the lease and any Canal & River Trust interest.]",
+    audience: [
+      "Purpose-built red-brick and terracotta mansion flats of the 1890s–1910s in Maida Vale W9, under Westminster, are the ordinary kitchen client: a leaseholder or landlord with a long corridor, a kitchen at the back, a bathroom off the hall, stacked on original risers. Canal-side houses and mews toward Little Venice appear less often and in a different construction altogether. Interiors are often original in plan, so layout work has to respect stacks and service ducts rather than redraw the flat.",
+      "The room is where the block put it. Drainage is the fixed point: stack and duct stay where they are, and the layout is drawn to reach them. Lifts in the older blocks are small; kitchen carcasses often go up the stairs. Clifton Road and the Grand Union / Regent's Canal junction sit at the edge of this stock; a canal-side frontage can add the Canal & River Trust as a third party. We re-fit those rooms without pretending the flat is a house.",
+    ],
+    failures: [
+      {
+        title: "1890s stacked riser",
+        text: "In a W9 mansion flat the kitchen sits on a 1890s stack shared with the flats above and below. The wet appliances have to reach that stack; a sink can move only if the new position drains without cutting into another demise. The original plan — long corridor, back kitchen — is the layout. Drawing first and asking the stack to move is how the job fails before strip-out.",
+      },
+      {
+        title: "Corridor turn measurement",
+        text: "The measurement that governs the order is not the wall. It is the turn of the stair and the width of the corridor inside the flat, both recorded before a carcass is specified, because a tall unit that cannot come round an original doorway has to be reordered and the programme, not the fitting week, absorbs the wait. Where the route defeats a carcass, a size that will make the journey is specified, or a unit that can be assembled in the room.",
+      },
+      {
+        title: "Porter booking slots",
+        text: "Porters' hours are building-specific. Deliveries are split so nothing stands in a communal hall, and noisy work is banded into the days the porter will accept. A skip on a principal mansion-block street is not the working assumption. The licence pack runs alongside that calendar, on the freeholder's timescale, not ours. Fitting is sequenced against what has actually landed.",
+      },
+      {
+        title: "Canal-side third party",
+        text: "Toward Little Venice a canal-side frontage can add the Canal & River Trust as well as Westminster. That interest is not assumed on every W9 address; it is checked on the specific frontage. Houses and mews are a different construction and a different access problem from the terracotta blocks. Anything that lands on a water-facing elevation is a third-party question before it is a kitchen one. [VERIFY any Canal & River Trust interest.]",
+      },
+    ],
     extraFaqs: [
       {
         q: "Two flats in the same block: why can they not carry the same price?",
@@ -199,6 +557,26 @@ export const kitchenDetail: ComboDetailMap = {
         q: "Can the kitchen window be replaced while the room is stripped?",
         a: "Repairing an original sash while the room is open is sensible, and we do it. Replacing it is a different question. Window replacement is a common consent topic in the Maida Vale Conservation Area, and it is usually an alteration under the lease as well, so it involves Westminster and the freeholder on their timescales. It is a separate instruction from the kitchen. [VERIFY the designation and the lease.]",
       },
+      {
+        q: "Can we occupy a Maida Vale mansion flat during the kitchen strip?",
+        a: "The bathroom off the hall is the usual second sink in this 1890s plan, and it will carry washing-up if dust is kept to the back kitchen and the long corridor is protected as a clean route. In a compact demise where that bathroom is also being used as the only shower, occupancy during strip-out is tighter. Little Venice houses sometimes have a scullery that makes staying easier. The plan of the flat decides it, not a general rule.",
+      },
+      {
+        q: "Does a Maida Vale kitchen need a licence to alter from the freeholder?",
+        a: "Usually, in the mansion blocks, and the lease is the document that decides it. A licence is granted by the freeholder or the managing agent, on their timescale. Drawings and a method statement are prepared for that pack; they are not issued by us. Westminster is a narrower question and is not normally asked for a kitchen fitted inside the existing room. Strip-out waits on the signature. [VERIFY the lease.]",
+      },
+      {
+        q: "Can a Maida Vale mansion-flat kitchen take a ducted extractor?",
+        a: "Only if the block will accept a termination and there is a route to it that does not cut a common void or land a grille on a principal terracotta elevation in the Maida Vale Conservation Area. Stack and duct stay where the 1890s plan put them. Where a new grille is not available, a carbon-filter hood is specified rather than a duct drawn to the front. That choice is made before the hood is ordered. [VERIFY the block's position.]",
+      },
+      {
+        q: "Will a Maida Vale kitchen take an island?",
+        a: "The back kitchen of a purpose-built mansion flat is a compact galley or a short L on a riser, reached along a corridor that has not changed since the 1890s. There is no footprint for an island, and a hob in the centre of that galley would ask the stacked drainage to move. Opening the kitchen into the reception is not this service. Little Venice houses are larger; even there any island is drawn to the drainage that exists.",
+      },
+      {
+        q: "Do kitchen carcasses in Maida Vale go in the lift or up the stair?",
+        a: "The 1890s lifts are small, so the stair is assumed until the car is measured. A tall unit that fits the back kitchen will often not fit that car. The turn of the stair and the corridor inside the flat are recorded before a carcass is specified. Where the route defeats a unit, it is sized to make the journey or built up in the kitchen, not hoped into the lift on delivery day.",
+      },
     ],
   },
   "muswell-hill": {
@@ -208,6 +586,28 @@ export const kitchenDetail: ComboDetailMap = {
     ],
     processNote: "Here the lead-in carries two things the sequence cannot start without: confirmation of which Haringey designation the address sits in, and a drop point that a steep street will actually take. [VERIFY the conservation-area boundary for the address.] Extract is settled before carcasses are ordered, because a grille over a Broadway parade follows a different path from one on a rear garden wall. Where the family stays in the house, strip-out is timed to the delivery, not to a convenient morning.",
     consent: "Many Muswell Hill kitchens are in houses held freehold, so there is no landlord in the picture, and replacing units, services and finishes inside an existing room ordinarily falls outside planning control as well. The envelope is a different matter. Haringey's conservation-area designation reaches the Broadway and many of the residential streets around it, and a new grille, duct terminal or altered window on a designated elevation is a council question. [VERIFY the boundary and any Article 4 for the address.] Flats above the parade are usually leasehold, and there the freeholder or managing agent grants a licence to alter, not us.",
+    audience: [
+      "Edwardian red-brick houses on the Muswell Hill N10 slopes, under Haringey, generate most of the kitchen instructions here: owner-occupiers in family homes with timber sash windows and generous halls, and landlords of the same stock converted to flats. The ordinary room is a rear ground-floor kitchen, usually enlarged once already by a previous owner, with a garden door in the run, a flank chimney breast, and floorboards over joists that have moved since the house was built. Flats above the Broadway add a tighter type, with extract over a shop or a parade.",
+      "Plots and rear gardens are larger than in inner Camden, so the constraint is rarely the footprint. It is where the back door and the existing waste sit, because those two fixed points set the sink, the appliance wall and the length of usable worktop. Muswell Hill Conservation Area was designated by Haringey on 1 March 1974; Fortis Green Conservation Area was designated the same day. The hill itself decides the van. Alexandra Park sits immediately to the south-east; it does not change the kitchen specification, only the geography.",
+    ],
+    failures: [
+      {
+        title: "Garden door in the run",
+        text: "The garden door in a Muswell Hill rear kitchen sits in the working wall more often than not, and that swing takes a length of worktop with it. Sink, hob and tall fridge have to be set out around the opening rather than drawn as a continuous run that the door then cuts. A previous owner's enlargement of the room does not move the door. The door and the existing waste are the two fixed points; everything else is arranged around them.",
+      },
+      {
+        title: "Flank chimney breast",
+        text: "A flank chimney breast on the side wall is the ordinary Edwardian constraint here. It steals depth from one run and gives a recess that can take a cooker if the flue is sound. Boxing it out for a longer run of units wastes the room and loads a wall that was not drawn as a kitchen. Cabinets are scribed to the breast. Taking it out is a structural brief, not a kitchen one.",
+      },
+      {
+        title: "Hill van length",
+        text: "Some streets on the slopes are steep and poorly suited to long-wheelbase vans. The vehicle and the drop point are planned at survey rather than assumed from a flat Camden terrace. Muswell Hill has no Underground station; the hill still decides the van for a kitchen delivery. A carcass that cannot come off a short wheelbase on a gradient is specified differently, not hoped onto a lorry that cannot stand.",
+      },
+      {
+        title: "Parade extract terminal",
+        text: "An extract grille on the Broadway is a different consent path from one on a rear garden wall on the slope. Shopfronts and residential fenestration are both sensitive inside the conservation area designated on 1 March 1974. Flats above the parade often cannot take a new terminal on the shopping frontage; recirculation, or a route to a rear elevation the building will accept, is established before the hood is specified. [VERIFY the boundary and any Article 4.]",
+      },
+    ],
     extraFaqs: [
       {
         q: "How long will our kitchen be out of use in an Edwardian house here?",
@@ -221,6 +621,26 @@ export const kitchenDetail: ComboDetailMap = {
         q: "The room is big enough for an island — will you fit one?",
         a: "Possibly. Muswell Hill rear rooms are larger than a Camden conversion galley, so the footprint is sometimes there. Whether it happens depends on the services: a sink or hob in the island means drainage and extract crossing the floor, and on suspended timber that means lifting boards and working within what the joists will allow. We answer that at survey, not on a drawing.",
       },
+      {
+        q: "Can a Muswell Hill household cook elsewhere in the house during the works?",
+        a: "Often, if a temporary arrangement for cooking can be kept — a kettle on the dining-room side of the garden door, or a utility that remains standing. The garden door in the run is useful here: it gives a working route to the back that does not go through the rest of the house. Empty is faster. A Broadway flat is tighter still, with no second wet space. Which the address supports is said after the visit.",
+      },
+      {
+        q: "Who grants consent for a kitchen above Muswell Hill Broadway?",
+        a: "Flats above the parade are usually leasehold, and the pack usually starts when a waste is moved or a duct is taken through a common void. The freeholder or managing agent grants the licence, not us. Many houses on the slopes are freehold, so the kitchen instruction has no landlord in it. The envelope is a separate Haringey question if a grille lands on a designated elevation. [VERIFY tenure and the boundary.]",
+      },
+      {
+        q: "Can extract from a Muswell Hill kitchen go over the Broadway parade?",
+        a: "A new grille on the shopping frontage is a different consent path from a rear garden wall on the slope. Shopfronts inside the conservation area designated on 1 March 1974 are sensitive, and a flat above a shop often cannot take a terminal on that wall. Recirculation, or a route to a rear elevation the building will accept, is settled before the hood is ordered. [VERIFY the map for the address.]",
+      },
+      {
+        q: "Who notifies a new kitchen circuit in a Muswell Hill Edwardian house?",
+        a: "Live gas is handled by a Gas Safe registered engineer. Matching an existing supply in a family house is ordinary; a new run, or a switch to induction that needs its own circuit, is a different notification. The consumer unit in these houses is often in a hall cupboard and will not always take a full kitchen load without attention. A notifiable circuit is notified. [VERIFY the supply.]",
+      },
+      {
+        q: "How do kitchen units reach a Muswell Hill house on a steep street?",
+        a: "The hill decides the van. Some streets are poorly suited to long-wheelbase vehicles, so a shorter wheelbase and a carry from a drop point that will actually stand are programmed at survey. Fortis Green streets on the north-west side have the same gradient problem. A carcass that cannot come off the vehicle chosen is specified in sections, not hoped onto a lorry that cannot park.",
+      },
     ],
   },
   "primrose-hill": {
@@ -230,6 +650,28 @@ export const kitchenDetail: ComboDetailMap = {
     ],
     processNote: "On a lower-ground job the order of works is set by drying, not by convenience. Anything wet is opened, established and left to read stable before plaster goes back, which pushes cabinetry and worktop templating to the back of the programme and lengthens the gap between them. Above ground that gap disappears. Deliveries are booked for weekday mornings, away from the park traffic, and the shared front steps and hall are protected for the whole run rather than on fitting day.",
     consent: "In a split house the freeholder is often the flat upstairs. Where the freehold is shared, a licence to alter means a written agreement with a neighbour rather than a managing agent, and it is worth starting that conversation early. Camden is the separate authority, and only for the envelope: the Article 4 direction in force here since 3 March 1983 removes permitted-development rights on windows, rooflines and front boundaries, so a new grille or door is a planning question. A kitchen inside an existing room is not. [VERIFY the lease and the conservation-area map.]",
+    audience: [
+      "Park-facing Victorian terraces in Primrose Hill NW1, under Camden, split into two kitchen clients: an owner-occupier or landlord with a garden-level kitchen under the front steps of a split house, or an upper-floor room that began as a closet. Many houses remain single-family; others are split into garden and upper-floor flats. Stock brick, stucco dressings and original sashes are characteristic. Later mansion blocks toward Regent's Park Road add a smaller compact type.",
+      "Below ground the waste usually leaves the building into a yard gully rather than a stack, so the gully's position, not the plan, decides where the sink and the machine can sit. Head height under a rear closet is the second limit, and it is measured before a tall unit is drawn. Chalcot Square and Regent's Park Road are characteristic of the core. Weekend visitors around the park affect van access; drops are planned away from peak hours where we can.",
+    ],
+    failures: [
+      {
+        title: "Yard gully position",
+        text: "In a garden-level Primrose Hill kitchen the waste usually leaves into a yard gully rather than a soil stack. The gully's position, not the plan, decides where the sink and the machine can sit, because the fall across a lower-ground floor is short and the void is shallow. A layout that puts the wet wall away from that gully will not drain. The gully is the first measurement, before a cabinet elevation is drawn.",
+      },
+      {
+        title: "Garden-level drying wait",
+        text: "On a lower-ground job the order of works is set by drying, not by convenience. Anything wet is opened, established and left to read stable before plaster goes back, which pushes cabinetry and worktop templating to the back of the programme and lengthens the gap between them. Causes that sit outside the room — a defective gully, a raised path, a failed rear wall — are reported rather than tiled over. Cabinets wait on masonry that is still wet.",
+      },
+      {
+        title: "Park-visible grille",
+        text: "Properties backing onto the park may have additional visibility from public open space. An extract grille on a park-facing wall is a consent question, not a default, and the Article 4 direction in force since 3 March 1983 removes permitted-development rights on windows, rooflines and front boundaries. A new opening to the garden or a wider rear door is not this service. Recirculation is specified where no acceptable terminal exists. [VERIFY the map and the elevation.]",
+      },
+      {
+        title: "Rear-closet headroom",
+        text: "An upper-floor kitchen that began as a closet has head height as the second limit after drainage. Tall units, cooker-hood housing and any extract duct are measured against the real soffit before they are drawn. A catalogue elevation for a family rear room will not fit under that closet. The height is taken with the tape, not from the floor plan.",
+      },
+    ],
     extraFaqs: [
       {
         q: "How long should we expect a lower-ground kitchen here to take?",
@@ -243,6 +685,26 @@ export const kitchenDetail: ComboDetailMap = {
         q: "Can we lay stone or large-format tiles on a garden-level kitchen floor?",
         a: "Only once we know what is underneath. A suspended timber floor over a shallow void moves, and rigid finishes crack unless the deck is upgraded or an uncoupling layer is used; a solid floor with an old asphalt or bitumen layer is a different question again. The survey opens a section rather than guessing, and the floor build-up is written into the specification before ordering.",
       },
+      {
+        q: "Can we stay in a Primrose Hill garden flat while the kitchen is renovated?",
+        a: "If the garden-level kitchen is the only wet space in the demise, occupancy during a drying wait is uncomfortable: a wall being monitored is not a room to cook beside. An upper-floor split-house flat sometimes has a bathroom that will carry a kettle if the shared front steps stay protected. Weekend visitor pressure around the park also makes coming and going with shopping harder during strip-out. Occupancy is settled against that plan, not hoped for around a wet wall.",
+      },
+      {
+        q: "Does Article 4 stop a new extractor on a Primrose Hill park-facing wall?",
+        a: "Interior fit-out within existing rooms is ordinary work. Article 4, in force here since 3 March 1983, bites on windows, rooflines and front boundaries, and a grille on a park-facing wall is a consent question because the elevation is visible from public open space. Recirculation is specified where no acceptable terminal exists. A new opening to the garden is not this service. [VERIFY the elevation and the map.]",
+      },
+      {
+        q: "Will a Primrose Hill closet kitchen take an island?",
+        a: "An upper-floor room that began as a closet has neither the footprint nor the head height. A garden-level kitchen under the front steps is larger, but the waste leaves into a yard gully, and a sink in the middle of the room would have to cross a shallow void with fall it usually cannot find. Family houses facing the park can take a larger kitchen within an existing rear room; even there any island is drawn to the gully that exists.",
+      },
+      {
+        q: "Does a gas hob in a Primrose Hill lower-ground kitchen need a different approach?",
+        a: "Live gas is still handled by a Gas Safe registered engineer. The difference is the meter and the moisture: a garden-level run often comes from a meter under the front steps, and isolation has to be sequenced around a wall that may be in a drying wait. A new induction circuit is notified if the wiring regulations say it must be, and it is not fixed to masonry that is still wet. [VERIFY the meter position.]",
+      },
+      {
+        q: "How do deliveries reach a Primrose Hill kitchen near the park?",
+        a: "Narrow streets and weekend visitors around the park affect van access. Drops are booked for weekday mornings, away from peak visitor hours, and the shared front steps and hall are protected for the whole run rather than on fitting day. Skip placement on park-facing streets needs extra notice. A carcass is not left on the pavement outside Chalcot Square while a parking bay is hoped for.",
+      },
     ],
   },
   "queens-park": {
@@ -252,6 +714,28 @@ export const kitchenDetail: ComboDetailMap = {
     ],
     processNote: "What runs above the kitchen sets the sequence here. Where the bathroom on the half-landing drains through the room, that pipework is opened and closed inside one agreed window, so the bathroom is not out of use across the whole fit-out. The paperwork runs in parallel and has to name the right authority — Brent and Westminster license separately and appraise separately, and the wrong form is time lost. Drops are booked to a residential street, never the spine. [VERIFY the frontage.]",
     consent: "Which council you are dealing with is settled by the frontage, not by the postcode: Brent's Queen's Park Conservation Area and Westminster's Queen's Park Estate Conservation Area are separate designations with separate appraisals. [VERIFY which one covers the address.] Either way, replacing a kitchen inside an existing room is not normally a planning matter, while anything landing on the elevation is. Tenure runs on a different track again — the converted flats on the larger roads usually need the freeholder's licence to alter, whereas an Estate cottage in single ownership will not.",
+    audience: [
+      "Queen's Park NW6 instructs kitchens on two grains and two councils, and the first question is which. On the Brent terraces around the park the kitchen sits in a rear return with a bathroom on the half-landing above, so the soil pipe and the bath waste come down through the room. On the Westminster side the Queen's Park Estate — decorative brick cottages built from 1875 by the Artizans', Labourers' and General Dwellings Company — is a distinct grid: small rooms, original joinery, and most cottages have no side route, so every carcass comes in at the front door and along the hall. Owner-occupiers and landlords appear in both.",
+      "Converted flats are common on the larger roads; family houses remain on the quieter streets toward Kensal Rise. Bay windows, patterned brick and original tiled paths are characteristic outside. Salusbury Road is the commercial spine and a busy loading environment. We fit kitchens to the room that exists: a Brent rear return boxed around a soil pipe, or an Estate interior whose dresser recess, door and architrave are specified and worked around rather than removed for a longer run of units.",
+    ],
+    failures: [
+      {
+        title: "Half-landing waste drop",
+        text: "On the Brent terraces the bathroom on the half-landing drains through the kitchen, so the soil pipe and the bath waste pass through the room. Ceiling and boxing come down with the units, and that pipework is opened and closed inside one agreed window so the bathroom above is not off across the whole fit-out. Where the pipe is old cast iron, replacing it while the ceiling is open is usually the sensible moment. Wall units go where the boxing that remains will allow.",
+      },
+      {
+        title: "Estate hall width",
+        text: "On the Westminster Estate the cottages are small and most have no side route. Every carcass comes in at the front door and along the hall, in sections, on a timed drop. The door, the hall width and the turn at the back are measured before anything is ordered, and the floor is protected for the whole run rather than on delivery day. Where a unit will not turn, it is specified differently. The Estate grid is tight; Salusbury Road is not the drop.",
+      },
+      {
+        title: "Two-council licensing",
+        text: "Brent's Queen's Park Conservation Area and Westminster's Queen's Park Estate Conservation Area are separate designations with separate appraisals, and they license skips and scaffolding separately. The paperwork has to name the right authority; the wrong form is time lost. Which council you are dealing with is settled by the frontage, not by the postcode. [VERIFY which one covers the address.]",
+      },
+      {
+        title: "Cottage dresser recess",
+        text: "On the Estate, original internal joinery — a dresser recess, a door, an architrave — is specified and worked around rather than removed for a longer run of units. Boxing it in as a convenience is how the cottage loses the thing that makes it a cottage. Decorative brickwork outside the room is not ours to alter. Extract on an Estate cottage elevation is a consent question, not a default grille.",
+      },
+    ],
     extraFaqs: [
       {
         q: "The bathroom is directly above our kitchen. What does that mean for the work?",
@@ -265,6 +749,26 @@ export const kitchenDetail: ComboDetailMap = {
         q: "Our rear-return kitchen has one small window. Can that be improved?",
         a: "Within this service, not by making the opening bigger — that is a change to the elevation and to the structure, and it sits with Hampstead Renovations. What can change inside the room is the lighting layout, the colour and reflectance of the finishes, and where the tall units sit so the window is not blocked. Mechanical extract is specified for the room, not left to the window.",
       },
+      {
+        q: "Can a Queen's Park Estate cottage stay occupied through a kitchen fit-out?",
+        a: "The 1875 cottages are small, and the kitchen is often the only room with a sink, so a temporary arrangement in the same footprint — a kettle on a protected section of worktop, washing-up in a bathroom if there is one — is the honest occupancy, not a second kitchen elsewhere. On a Brent terrace the half-landing bathroom above will sometimes carry a kettle if that bathroom can stay on outside the pipework window. Empty is faster. Occupancy is settled against the actual plan.",
+      },
+      {
+        q: "Who grants consent for a Queen's Park conversion kitchen?",
+        a: "Converted flats on the larger roads usually do, if a waste run moves or a duct crosses a common void; the freeholder or managing agent grants it. An Estate cottage in single ownership will not, because the kitchen instruction has no landlord in it. Extract on an Estate elevation is still a Westminster conservation question. The two grains have different paperwork. [VERIFY tenure and which council holds the frontage.]",
+      },
+      {
+        q: "Can extract from a Queen's Park Estate cottage go through the brick elevation?",
+        a: "A new grille on decorative Estate brick is a consent question in Westminster's Queen's Park Estate Conservation Area, which is a separate designation from Brent's Queen's Park Conservation Area around the park. Recirculation that leaves the brick untouched is often the honest answer on a cottage. On a Brent rear return a short duct through the back wall is more often available, provided it does not land on a neighbour's window. [VERIFY which conservation area covers the address.]",
+      },
+      {
+        q: "Will a Queen's Park kitchen take an island?",
+        a: "An Estate cottage will not: the room is cottage-scale, the dresser recess and the hall door already occupy the walls, and there is no path around a free-standing unit. A Brent rear return is a galley boxed around a soil pipe from the bathroom above; an island would take the floor that pipework and the door already share. Filling in the side return to make a wider room sits with Hampstead Renovations.",
+      },
+      {
+        q: "What governs the on-site sequence for a Queen's Park kitchen?",
+        a: "On a Brent terrace the half-landing bathroom sets a window: the soil pipe is opened and closed so that bathroom is not off across the whole fit-out. On the Estate the constraint is the drop — front door, hall, timed standing on a tight grid — and joinery worked around rather than boxed in. Two councils mean the lead-in names the right authority first. Dates are written after the room and the frontage have been seen.",
+      },
     ],
   },
   "st-johns-wood": {
@@ -274,6 +778,28 @@ export const kitchenDetail: ComboDetailMap = {
     ],
     processNote: "The building's calendar, not ours, gives the programme its shape. Deliveries arrive in booked slots through a door the porter controls, so a kitchen comes in as several loads rather than one, and fitting is sequenced against what has actually landed. Noisy hours are banded, which spreads the same quantity of work over more days without adding any to it. Match days at Lord's are read into the plan before dates are given, not explained afterwards. [VERIFY event restrictions with the building.]",
     consent: "Consent here arrives in two layers that are easily confused. Westminster is the planning authority, and it designated the St John's Wood Conservation Area in 1968; fenestration, front boundaries and roof alterations are controlled, while a kitchen fitted within an existing room usually is not. The freeholder is the second layer, and in the mansion blocks the design guide and the licence to alter are frequently stricter than anything the council would ask for. Some addresses also sit under an estate scheme of management. [VERIFY the designation, the lease and any scheme of management on the address.]",
+    audience: [
+      "Late-Victorian and Edwardian mansion blocks toward Wellington Road and Prince Albert Road, St John's Wood NW8, under Westminster, are the ordinary kitchen client: a leaseholder with a short galley or an L on a stacked waste, inside a building whose managing agent has a view on working hours, floor coverings and almost everything between. Detached and semi-detached villas and mews appear less often, with later interior alterations and a different access problem. Most of the residential core is Westminster; Camden holds a smaller adjoining conservation area on the borough edge.",
+      "What sizes the job is not taste but the route. A stair, a doorway and an internal corridor decide between them the largest carcass that can arrive in one piece. Flats in those blocks have original service risers, compact kitchens stacked through the building, and common parts that managing agents protect closely. Lord's Cricket Ground affects access on surrounding streets on match days. We measure the lift and the stair before we order units, and we write the kitchen to the stacks that already exist.",
+    ],
+    failures: [
+      {
+        title: "Carcasses up the stair",
+        text: "A St John's Wood lift will often not take a run of carcasses. The stair is assumed until the car is measured, and a doorway and an internal corridor then decide the largest unit that can arrive in one piece. Cabinetry is ordered only once those dimensions are confirmed on site. A unit that cannot make the turn is cut into sections or assembled in the room, not hoped into the lift on delivery day.",
+      },
+      {
+        title: "Block hours banding",
+        text: "The building's calendar, not ours, gives the programme its shape. Noisy hours are banded, which spreads the same quantity of work over more days without adding any to it. Deliveries arrive in booked slots through a door the porter controls, so a kitchen comes in as several loads rather than one. That is built into the dates before they are given, so the finish reflects the block's rules rather than an optimistic run at them.",
+      },
+      {
+        title: "Lord's match-day streets",
+        text: "Lord's Cricket Ground can restrict access on surrounding streets on match days. Those dates are read into the plan before a start is given, not explained afterwards. A delivery booked through a match-day closure is a delivery that does not land, and the fitting week cannot absorb it. Event restrictions are checked with the building. [VERIFY event restrictions with the building.]",
+      },
+      {
+        title: "Shared riser freeze",
+        text: "The kitchen sits on a stacked waste shared with the flats above and below. Layout follows that drainage; a relocated sink is possible only where the new position drains without cutting into another demise or touching the block's services. The scope does not touch the riser, the common parts beyond protecting them, or any wall dividing one demise from another. A drawing that asks that stack to move fails before the agent has even seen the pack.",
+      },
+    ],
     extraFaqs: [
       {
         q: "The block restricts working hours. Does that make the job longer?",
@@ -287,6 +813,26 @@ export const kitchenDetail: ComboDetailMap = {
         q: "We want to drop gas and move to induction. Is that straightforward?",
         a: "It is a real change rather than a swap. The gas supply is capped by a Gas Safe registered engineer, and induction wants its own circuit, so in an older mansion block the incoming supply and the consumer unit are checked before anything is specified. New circuits are notified where the regulations require it, and the lease may treat the change as an alteration. [VERIFY the supply and the lease.]",
       },
+      {
+        q: "Is it practical to live in a St John's Wood mansion flat through the kitchen works?",
+        a: "The bathroom stacked on the same riser is the usual second sink, and it will carry washing-up if dust is kept to the galley and the common parts stay protected for the other residents. Porter hours and the block's working band still apply to occupancy: strip-out cannot run early to make the kitchen usable by evening. Villas sometimes have a utility that makes staying easier. The demise decides it, not a general yes.",
+      },
+      {
+        q: "Does a St John's Wood kitchen need drawings for the managing agent's licence?",
+        a: "Usually, yes. Licence-to-alter packs are ordinary here, and in the mansion blocks the design guide is frequently stricter than anything Westminster would ask for. The pack can be drawn up; consent is the agent's or freeholder's, not ours. Some addresses also sit under an estate scheme of management. Strip-out waits on the signature. [VERIFY whether the building requires a licence.]",
+      },
+      {
+        q: "Can extract from a St John's Wood kitchen land on a Wellington Road elevation?",
+        a: "Not as a default. Westminster designated the St John's Wood Conservation Area in 1968, and fenestration on those principal fronts is controlled. Many blocks also sit behind freeholder design guides that are stricter than planning. The extract route the block will accept is recorded at survey; where a new grille is not available, recirculation is specified. [VERIFY the designation and the building's guide.]",
+      },
+      {
+        q: "Will a St John's Wood mansion-flat kitchen take an island?",
+        a: "Most instructions are a galley or a short L on original risers, not an island. The footprint is not there, and a hob in the centre of that galley would ask the stacked drainage to move. Villas and mews supply larger family rooms; even there any island is drawn to the drainage that already serves the room. Opening between reception rooms sits with Hampstead Renovations.",
+      },
+      {
+        q: "Do kitchen units in St John's Wood go in the lift?",
+        a: "Often they do not. The lift is measured, and until it is, the stair is the route. A doorway and an internal corridor then decide the largest carcass that can arrive in one piece. Deliveries come in booked slots through a door the porter controls, so a kitchen arrives as several loads rather than one. A unit that cannot make the turn is sized for the journey, not the lift brochure.",
+      },
     ],
   },
   "swiss-cottage": {
@@ -296,6 +842,28 @@ export const kitchenDetail: ComboDetailMap = {
     ],
     processNote: "The lead-in carries more weight here than the fit-out does. In the larger blocks off Avenue Road the managing agent's paperwork, working-hours clause and any porter arrangement are settled before a cabinet is ordered, and nothing is stripped while that sits open. Conversions a street back need neighbour notice and a protected communal stair instead. Either way the delivery slot is booked against a Finchley Road corridor restriction rather than assumed, which is what usually sets the start date. [VERIFY the highway authority for the frontage.]",
     consent: "Consent here comes from two places that are easy to confuse. Replacing a kitchen inside an existing room is normally outside planning control; the moment a duct, grille or window touches the elevation, Camden becomes the decision-maker, and many streets off Finchley Road and Avenue Road remain inside the South Hampstead Conservation Area [VERIFY the map for the address]. Separately, the lease may require the freeholder or managing agent to grant a licence to alter before wet areas or circuits are moved. We prepare that pack; we do not grant it. [VERIFY the lease.]",
+    audience: [
+      "Finchley Road and Avenue Road blocks, and converted houses a street back toward Belsize, are who Swiss Cottage NW3 kitchen work is for, under Camden. Leaseholders in inter-war and post-war flats, and owner-occupiers in Victorian conversions toward Frognal, both appear. The HPSG office is at Unit 3 Palace Court, 250 Finchley Road, London NW3 6DN, in this neighbourhood; that shortens the visit, not the measured survey of lift, stair and extract. Avenue Road leans to mansion-block galleys on original risers. The side streets lean to conversion kitchens around chimney breasts.",
+      "In the later blocks the floor is often solid rather than timber, so waste runs cannot drop into a void and the sink stays close to the existing stack. That single fact decides most of the layout before anything is drawn. Ceiling heights and window sizes vary sharply between the Victorian houses and the later blocks. Camden renamed the Swiss Cottage Conservation Area the South Hampstead Conservation Area; many residential streets off Finchley Road remain inside it. Belsize Conservation Area adjoins to the east.",
+    ],
+    failures: [
+      {
+        title: "Solid-floor waste run",
+        text: "In the inter-war and post-war blocks on Finchley Road and Avenue Road the kitchen floor is often solid rather than timber. Waste cannot drop into a void; the sink stays close to the existing stack, and a layout that puts the wet wall across the room is a layout that will not drain. That single fact decides most of the plan before a cabinet elevation is drawn. Conversions a street back toward Belsize still have boards; the two stocks are not specified as one.",
+      },
+      {
+        title: "Avenue Road licence pack",
+        text: "In the larger blocks off Avenue Road the managing agent's paperwork, working-hours clause and any porter arrangement are settled before a cabinet is ordered, and nothing is stripped while that sits open. The freeholder or the agent acting for them grants the licence to alter under the lease. Camden only enters if something breaks the elevation. Timescales vary by building. [VERIFY with the agent.]",
+      },
+      {
+        title: "Finchley Road drop slot",
+        text: "The delivery slot is booked against a Finchley Road corridor restriction rather than assumed, which is what usually sets the start date. Scaffold and loading on the main road are a different process from a side street. [VERIFY the highway authority for the frontage.] Conversions a street back need neighbour notice and a protected communal stair instead. Either way the drop is programmed; it is not hoped for on Finchley Road at peak hours.",
+      },
+      {
+        title: "Block extract termination",
+        text: "Where a new grille on an Avenue Road or Finchley Road elevation is not available, a recirculating hood is specified rather than a duct drawn to the front. Many streets remain inside the South Hampstead Conservation Area, and Belsize Conservation Area adjoins to the east. The block's position on termination is settled before the hood is ordered. [VERIFY the map and the block's position.]",
+      },
+    ],
     extraFaqs: [
       {
         q: "Who actually signs off a kitchen change in an Avenue Road block?",
@@ -309,6 +877,26 @@ export const kitchenDetail: ComboDetailMap = {
         q: "Our flat has neighbours above and below — how is the noisy work handled?",
         a: "In the blocks along Finchley Road and Avenue Road the working hours are usually written into the lease or the agent's conditions, not left to us, and percussive work carries a long way through a solid floor. We programme cutting and lifting into the permitted window and warn the flats either side beforehand. In a converted house it is the party wall and the shared stair that set the same limits.",
       },
+      {
+        q: "Can we stay in a Swiss Cottage flat while the kitchen is renovated?",
+        a: "In an Avenue Road block a washbasin off the hall will sometimes carry a kettle, and a solid floor means percussive work is banded into the agent's hours whether you stay or not. In a converted first-floor room toward Belsize there is sometimes a half-landing bathroom that will carry washing-up if the communal stair is protected. Being next to the office at 250 Finchley Road does not change occupancy; the demise does. Occupancy is a survey finding, not a neighbourhood default.",
+      },
+      {
+        q: "Will a Swiss Cottage block kitchen take an island?",
+        a: "On a solid floor in an inter-war or post-war block the sink stays close to the existing stack, because waste cannot drop into a void. An island would ask that run to cross the slab, which it usually cannot. Avenue Road galleys on original risers are compact in any case. Conversions toward Frognal wrap a chimney breast; the footprint there is not an island either. The island is specified only if the construction will take the run.",
+      },
+      {
+        q: "Why does the lead-in dominate a Swiss Cottage kitchen?",
+        a: "The lead-in carries more weight here than the fit-out does. In the larger Avenue Road blocks the agent's pack, working-hours clause and porter arrangement are settled before a cabinet is ordered. The Finchley Road delivery slot then sets the start date. On site, a solid-floor first fix is a different sequence from a conversion with boards. Dates are written after those two stocks have been distinguished, not given as one neighbourhood figure.",
+      },
+      {
+        q: "Does a gas hob in a Swiss Cottage mansion block need the agent's consent?",
+        a: "The lease may treat a change of fuel as an alteration even when the kitchen stays in the same room. Live gas is handled by a Gas Safe registered engineer. Matching a hob on the existing supply is ordinary; a cap-off and a new circuit for induction is a different notification, and on a solid floor that circuit is chased rather than dropped. A notifiable circuit is notified. [VERIFY the lease and the supply.]",
+      },
+      {
+        q: "How do kitchen carcasses reach a Swiss Cottage block?",
+        a: "In the larger Avenue Road blocks the lift is measured; until it is, the stair and the service entrance are the working assumption, and those are the building's to grant. Conversions a street back have a communal stair and no lift. Finchley Road loading is a corridor process, so the drop is booked rather than assumed. A unit that cannot make the turn is sized for the route that actually exists.",
+      },
     ],
   },
   "west-hampstead": {
@@ -318,6 +906,28 @@ export const kitchenDetail: ComboDetailMap = {
     ],
     processNote: "Here the lead-in is mostly logistics rather than designation. A licensed drop on a residential side street has to be booked before a strip-out date is fixed, because three stations on West End Lane make a same-day decision unworkable. Noisy first fix is banded into hours the neighbour through the party wall has been told about. Carcasses are ordered only once the return has been measured out of square, which is later than most clients expect and earlier than the fitters need.",
     consent: "Camden is the authority for every address here, so the variable is the street rather than the borough. Some streets sit in a conservation area, and an Article 4 direction can remove a permitted-development right that would otherwise apply to a window. A kitchen fitted inside the existing room is not usually a planning matter; the moment work reaches the outside wall it becomes one, whether that is a new grille, an enlarged opening or a replacement sash. Tenure is the other half: most flats here are leasehold, and the licence to alter is granted by the freeholder or their managing agent. [VERIFY the conservation area, any Article 4 and the lease terms for the address.]",
+    audience: [
+      "Rear returns in West Hampstead NW6, under Camden, are the ordinary kitchen instruction: converted Victorian and Edwardian terraces whose kitchen is a run set between one window and a door that opens into it, with the waste leaving through the back wall to a yard stack. Owner-occupiers and landlords of those conversions are the usual clients. Later mansion blocks near the transport interchange add a compact room on original risers. West End Lane is the commercial spine; the residential streets behind it hold original bay windows, timber floors and stacked bathrooms on half-landings.",
+      "The width of that return decides the job. It sets worktop depth, whether a dishwasher and a tall fridge can both stand in the run, and whether a hood can be ducted at all. Three stations on West End Lane — Underground, London Overground and Thameslink — make daytime loading competitive, so carcasses are planned off the high street. Streets toward Fortune Green and the South Hampstead approaches may sit in conservation areas. Party-wall noise in these terraces belongs in the working hours, not as an afterthought.",
+    ],
+    failures: [
+      {
+        title: "Return width first",
+        text: "The width of a West Hampstead rear return is the measurement the job is built around. It sets worktop depth, whether a dishwasher and a tall fridge can both stand in the run, and whether a hood can be ducted at all. Rear returns are out of square; units are scribed. A catalogue run drawn for a wider room is how the door swing and the window fight the appliances. The return is measured out of square before carcasses are ordered.",
+      },
+      {
+        title: "Three-station interchange",
+        text: "Three stations on West End Lane make a same-day decision unworkable. A licensed drop on a residential side street has to be secured before strip-out is dated; loading from the high street is rarely the default. A kitchen strip produces more waste than a decorate, so the drop is programmed, not hoped for on West End Lane. If the licence slips, the drop is rebooked.",
+      },
+      {
+        title: "Party-wall noisy weeks",
+        text: "These terraces share a party wall, and the neighbour through it is often a bedroom. Noisy first fix is banded into hours that household has been told about. Percussive work is not run early or late to make up time. The shared hallway and stair are protected for the duration; redecorating common parts is the freeholder's business, not a flat's kitchen scope.",
+      },
+      {
+        title: "Back-wall yard stack",
+        text: "Waste in these terraces leaves at the back to a yard stack, and that stack is the fixed point. A run forward across the flat to put the kitchen in the front room needs fall it usually cannot find without lifting the floor. A short duct through the return's rear or side wall is the honest extract option, and a neighbour's window a few feet away changes it. Moving the kitchen off that stack is how the layout fails.",
+      },
+    ],
     extraFaqs: [
       {
         q: "How long is a rear-return kitchen out of use?",
@@ -330,6 +940,26 @@ export const kitchenDetail: ComboDetailMap = {
       {
         q: "Can a rear return take a properly ducted extractor?",
         a: "Sometimes. A short duct through the return's rear or side wall is the honest option, and the answer depends on where it lands: a neighbour's window a few feet away changes it, and so does a conservation-area elevation. Where no acceptable route exists we say so and specify a recirculating hood instead, at survey, not after the ceiling has been closed. [VERIFY the designation for the address.]",
+      },
+      {
+        q: "Can we stay in a West Hampstead conversion while the rear-return kitchen is stripped?",
+        a: "The rear return is usually the only kitchen, and the half-landing bathroom stacked above it is the usual second sink. That bathroom will carry a kettle if dust is kept to the return and the shared hallway stays a clean route for the other flats. A one-bedroom conversion with no second wet space is tighter; cooking is usually taken off-site for strip-out and first fix, which is kinder on the party wall. Occupancy is settled against the plan of that conversion.",
+      },
+      {
+        q: "When does a West Hampstead leasehold kitchen need written consent?",
+        a: "Most flats here are leasehold. Matching the existing layout inside the return often needs nothing; written consent is usually needed when a waste run moves, a new circuit is added, or a duct crosses a common void. The freeholder or their managing agent grants it. Streets toward Fortune Green may also sit in a conservation area, which is a Camden elevation question rather than a lease one. [VERIFY the lease, the conservation area and any Article 4.]",
+      },
+      {
+        q: "Will a West Hampstead rear return take a kitchen island?",
+        a: "Almost never. The return is a galley between one window and a door that swings into the run, with the waste leaving through the back wall to a yard stack. There is no space to walk around a free-standing unit, and a hob in the centre of that width would take the worktop the dishwasher and the tall fridge are already competing for. Opening the return into the reception sits with Hampstead Renovations.",
+      },
+      {
+        q: "What does a gas changeover mean for a West Hampstead rear return?",
+        a: "Live gas is handled by a Gas Safe registered engineer. Matching the existing run to the yard elevation is ordinary; a new pipe, or a switch to induction that needs its own circuit in a conversion consumer unit, is a different notification. Party-wall chasing for that circuit is noisy work and is banded into the hours the neighbour has been told about. A notifiable circuit is notified. [VERIFY the supply and the lease.]",
+      },
+      {
+        q: "Do kitchen carcasses for a West Hampstead conversion go up a shared stair?",
+        a: "Yes. The shared hallway and stair are the route; there is rarely a side access to a rear return. Stair width, the turn at the back and the door into the return are measured before carcasses are ordered, and the common parts are protected for the whole run. Three stations on West End Lane mean the drop itself is on a licensed side street, timed around the interchange, not on the high street.",
       },
     ],
   },

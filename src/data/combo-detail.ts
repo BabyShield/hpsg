@@ -9,6 +9,11 @@ import type { Faq } from "./types";
  * appear on the service hub and the area hub. Each field below is written for
  * one service in one area and appears on exactly one page.
  */
+export type ComboFailure = {
+  title: string;
+  text: string;
+};
+
 export type ComboDetail = {
   /** 2 paragraphs: what a typical instruction covers here, and what it excludes. */
   scopeNotes: string[];
@@ -16,6 +21,10 @@ export type ComboDetail = {
   processNote: string;
   /** 1 paragraph: conservation, tenure and consent for THIS service here. */
   consent: string;
+  /** Who this service in THIS area is for — unique, not a renamed hub paragraph. */
+  audience?: string[];
+  /** Four constraints that decide whether the job here actually works. */
+  failures?: ComboFailure[];
   /** Additional hand-written questions, merged after the existing localFaqs. */
   extraFaqs: Faq[];
 };

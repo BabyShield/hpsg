@@ -32,6 +32,10 @@ export const metadata: Metadata = {
     template: `%s | ${site.tradingName}`,
   },
   description: site.homeMetaDescription,
+  applicationName: site.tradingName,
+  authors: [{ name: site.legalName, url: site.url }],
+  creator: site.legalName,
+  publisher: site.legalName,
   openGraph: {
     type: "website",
     locale: "en_GB",

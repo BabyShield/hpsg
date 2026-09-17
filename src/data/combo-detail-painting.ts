@@ -10,6 +10,28 @@ export const paintingDetail: ComboDetailMap = {
     ],
     processNote: "Access is the first thing fixed, not the last. The tower is sized to the room and to the stair that has to carry it, which on the tighter Village streets can decide the week the work starts. Ceilings and enrichment go before anything below them, so no finished skirting is worked over twice. On the avenues, the block's hours and the porter's rules narrow the working day, and a lateral conversion runs as one programme even though it was once two flats.",
     consent: "Two consents are often confused here. The council decides conservation matters on the outside — stucco colour, windows, the roofscape — and parts of Belsize also sit under an Article 4 direction, which removes rights a homeowner elsewhere would take for granted [VERIFY the boundary and the direction with Camden]. The freeholder or managing agent decides everything to do with the building: hours, access equipment in common parts, and the licence a lateral conversion was granted under, which may still carry conditions on how the flat is kept and decorated. Redecorating the rooms as they stand engages neither.",
+    audience: [
+      "Households still living in laterally converted stucco houses in Belsize Park, NW3, are the ordinary client for this work, together with leaseholders in the mansion flats on Belsize Avenue and Haverstock Hill. Camden is the council. Village streets give occupied family rooms behind original shutters; the avenues give compact demises behind a porter. A kitchen, a bathroom and somewhere to sleep stay in use unless the instruction is an empty flat.",
+      "What those interiors actually are is stucco-era: tall receptions carrying cornice, ceiling roses and picture rails, full-height shutters, deep architraves, and walls patched through a century of conversions so that lime and later gypsum sit on the same plane. High rooms on the Village side need a tower booked into the programme. Avenue blocks more often need the agent's hours than extra height. We coat the rooms as they stand.",
+    ],
+    failures: [
+      {
+        title: "Cornice height on a stucco-era wall",
+        text: "Tall Belsize receptions punish a thin fill. Later patches at cornice level telegraph through a modern coating unless the background is made honest first. Lime and gypsum on one plane are two specifications, not a single emulsion. Where lining is the honest answer, it is written on the proposal rather than added once the tower is already up.",
+      },
+      {
+        title: "Full-height shutters, not a cut-in",
+        text: "Original shutters, tall doors and deep architraves are joinery time, not a wall colour taken around them. Decades of coating on a Village shutter is a decision at survey: prepare and re-coat, or take further back. On listed fabric that choice can be a consent question before it is a technique [VERIFY listing on the address].",
+      },
+      {
+        title: "A tower that has to come up a Village stair",
+        text: "Rooms at this scale cannot be cut in from a leaning ladder. The tower, the room it stands in, and the day it comes up a tight Village stair are written into the programme. Avenue mansion flats swap that problem for a small lift and porter hours. Either way, access is priced before a brush is loaded.",
+      },
+      {
+        title: "Stucco colour on a Belsize front",
+        text: "Emulsion inside existing rooms is ordinary work. A new colour on previously painted stucco, or a change to windows, sits with Camden's Belsize Conservation Area and, on some streets, an Article 4 direction [VERIFY the boundary]. We do not fold an exterior colour into an interior decorate as a courtesy.",
+      },
+    ],
     extraFaqs: [
       {
         q: "What makes one Belsize room take twice as long as another?",
@@ -23,6 +45,26 @@ export const paintingDetail: ComboDetailMap = {
         q: "Is a lateral conversion decorated as one flat or as the two it used to be?",
         a: "As one flat, with one specification. The join usually shows anyway: the two sides rarely have matching skirting heights, cornice patterns or wall build-ups, and a single colour across both halves makes those differences more visible, not less. We record where the two meet at survey and agree how the change is handled before any of it is coated.",
       },
+      {
+        q: "Can a Belsize Park household stay while the flat is decorated?",
+        a: "Yes. Occupied sequencing is the working assumption in both Village conversions and avenue mansion flats. Rooms come back in turn so cooking, washing and sleeping can continue. That is slower than emptying the demise, which is why occupation sits in the programme rather than arriving as a surprise on the first morning.",
+      },
+      {
+        q: "Will you spray a furnished Belsize Park reception?",
+        a: "Rarely. Spray belongs in an empty room where masking is clean and the method is faster. Around full-height shutters, cornice and furniture still in place, brush and roller stay the method. We choose per room after survey, not as a house slogan.",
+      },
+      {
+        q: "Do Belsize Park walls need lining paper as well as filling?",
+        a: "Where later patches on stucco-era plaster would telegraph through a modern coating, lining is specified on the proposal. High rooms make that decision more visible, not less. We will not slip a lining paper in once the tower is already standing.",
+      },
+      {
+        q: "Are original Belsize Park sashes and shutters priced as joinery?",
+        a: "Yes. Frames, opening lights, shutters and the deep architraves that come with them are programmed as joinery. Failed cords, staff beads or putty are reported rather than coated over. That is a different quantity of work from cutting emulsion into a window reveal.",
+      },
+      {
+        q: "Does painting and decorating in Belsize Park include the shared hall?",
+        a: "Only if the freeholder or managing agent instructs it. The demise is one scope; the stair, the hall and the stucco front are another. Common-parts protection is still in the method when we only coat the flat. Exterior colour on previously painted stucco is a Camden conservation question, not an add-on [VERIFY].",
+      },
     ],
   },
   "crouch-end": {
@@ -32,6 +74,28 @@ export const paintingDetail: ComboDetailMap = {
     ],
     processNote: "The tiled hall is treated as a route rather than a work area, so the ground-floor rooms run before anything on the stair, and protection is laid on the first morning and lifted last. Before a date is offered, the lead-in settles what is demise and what is common, since a house of three flats has three interested parties. Haringey licensing for a skip on a residential side street is arranged in the same window; the Broadway is not the fallback.",
     consent: "Decorating the inside of the rooms you have does not usually engage planning. Windows, front doors and the elevation do, and the Crouch End designation takes in the Broadway and much of the residential grid behind it, so external colour and any joinery change are checked against Haringey's map first [VERIFY whether the address falls inside it]. In a converted house the freeholder or the managing agent grants a licence to alter for anything past decoration. Where the freehold is shared between the flats, that means the other owners in practice.",
+    audience: [
+      "Most of the work around Crouch End, N8, is one occupied flat inside a Victorian or Edwardian house split decades ago. Haringey is the council. The first-floor pair of rooms often still reads as one composition — a rose at each end, a continuous cornice, double doors or an arch where the division was — and the household is usually still in it. Family houses that were never split sit on the quieter streets toward Highgate; they are the same joinery problem at a larger scale.",
+      "The fabric is conversion plaster under original mouldings: later board meeting old lath, cornice that has been softened by decades of emulsion, and tiled halls that are a route, not a paint surface. Sashes on the residential grid behind the Broadway are joinery. We do not treat the tiled dado as a wall to cover, and we do not assume the Broadway is a place to stand a spray van.",
+    ],
+    failures: [
+      {
+        title: "Original cornice over conversion plaster",
+        text: "A Crouch End first floor often carries one original ceiling over two later rooms. The cornice is cut at the partition, and old lath meets new board on the same wall plane. Filling that junction as if it were one background is how the hairline returns. Where lining is needed it is named on the proposal.",
+      },
+      {
+        title: "Sashes still in the Broadway grid",
+        text: "Timber sashes on the residential streets are programmed as joinery: beads, putty and opening lights, not a cut-in around the glass. Cords that have gone and staff beads that have been over-painted are reported before a coating is specified. Replacing the window is not this service.",
+      },
+      {
+        title: "Living through a first-floor decorate",
+        text: "The tiled hall is the only way in, and the flat above or below is usually occupied. Rubbing down is noisy through a timber floor, so it sits in agreed hours. Rooms are worked so the kitchen and a bedroom stay usable. Half a conversion at a time is slower than an empty house, and the programme says so.",
+      },
+      {
+        title: "Front-door colour under Haringey",
+        text: "Emulsion inside the rooms you already have is not a planning matter. A new colour on the street door, the sashes or the elevation is, where the Crouch End Conservation Area covers the Broadway and the grid behind it [VERIFY whether the address sits inside]. We check Haringey's map before an exterior colour appears on a proposal.",
+      },
+    ],
     extraFaqs: [
       {
         q: "What actually drives the cost of decorating a Crouch End conversion?",
@@ -45,6 +109,26 @@ export const paintingDetail: ComboDetailMap = {
         q: "The rear room was added long before we bought the house. Does that change the decorating?",
         a: "Sometimes. Older rear additions are often thinner in construction than the main house, and the staining that shows in a corner is condensation at a cold junction rather than a tired coating. We record it at survey and say what a coating will and will not do about it. Painting a cold corner does not warm it.",
       },
+      {
+        q: "Can we stay in a Crouch End conversion while it is decorated?",
+        a: "Yes. Occupied-home working is the ordinary brief here. The tiled hall stays a route, rooms are handed back in sequence, and noisy preparation is programmed against the neighbours above and below. An empty flat is faster; most Crouch End instructions are not empty.",
+      },
+      {
+        q: "Do you spray or brush in a Crouch End conversion?",
+        a: "Brush and roller around furnished original mouldings. Spray is for a room that has been emptied and can be masked cleanly. A first-floor pair with cornice, roses and furniture still in it is not that room. The method is chosen per space after survey.",
+      },
+      {
+        q: "Is lining paper part of painting and decorating in Crouch End?",
+        a: "Where conversion plaster would show through a finish — the joint between old lath and later board, or a partition cut under original cornice — lining goes on the written scope. It is not a site extra, and it is not a substitute for making a moving joint honest first.",
+      },
+      {
+        q: "Are Crouch End sash windows treated as joinery?",
+        a: "The frames and opening lights are, if they are in the instruction. Ironmongery comes off and goes back; seized fasteners are reported rather than painted stuck. Glass and any failed putty are a different trade. We will not price a sash as a cut-in around the pane.",
+      },
+      {
+        q: "Is one Crouch End room a different job from decorating the whole flat?",
+        a: "Yes. A single reception with surviving enrichment is a joinery-and-plaster job. A whole conversion adds the hall, the junctions at later partitions, and occupation across several rooms. The shared tiled hall is still not in scope unless the freeholder is the client.",
+      },
     ],
   },
   "golders-green": {
@@ -54,6 +138,28 @@ export const paintingDetail: ComboDetailMap = {
     ],
     processNote: "Many houses here have off-street parking, so the lead-in is shorter than in a Camden conversion: no porter, no lift booking, often no skip licence at all if the skip stays on the property. What replaces it is a room plan agreed with the household. We check the Barnet map first in case the street is one of the designated ones, then set a sequence — bedrooms and landing before the ground floor — so a family keeps somewhere to sleep throughout.",
     consent: "The residential streets are largely freehold houses, so there is no managing agent and no licence to alter — the decision is the owner's. Barnet is the planning authority. Selected streets and the setting of Golders Hill Park sit in conservation areas, while much of the inter-war stock is undesignated [VERIFY Barnet's map for the address]. Being close to Hampstead Garden Suburb does not bring a house under the Trust; that is a different boundary. Interior decoration in existing rooms is ordinary work either way. A new external colour is not.",
+    audience: [
+      "Golders Green, NW11, is Barnet, and the brief is more often a whole occupied house than a stacked flat: four or five rooms, a landing, and a stairwell taller than anything else in the building. Edwardian and inter-war family houses — brick, pebbledash, later mock-Tudor — are the stock. Mansion flats along Golders Green Road and toward Golders Hill Park are the exception, not the type. Off-street parking is common; a managing agent is not.",
+      "What you are looking at inside is volume of joinery rather than exotic plaster: doors, architraves, skirtings and casements in quantity, on walls that are generally sound and generally not square. Steel casements appear on some inter-war fronts [VERIFY the frame type]. This is not Hampstead Garden Suburb; the Trust boundary is a different map, and Trust casements and cottage lime are not assumed here.",
+    ],
+    failures: [
+      {
+        title: "Inter-war plaster that is not square",
+        text: "Family-house walls here still need scribing and filling. They are not true because they are suburban. Hairline movement at chimney breasts and later partitions will show through a thin coat. Where lining is the honest answer it is named before work starts, not discovered once the bedrooms are already open.",
+      },
+      {
+        title: "Steel casements versus timber doors",
+        text: "A Golders Green house can carry timber doors and steel opening lights in the same elevation. Steel is rust-treated and primed for metal; timber is a different preparation. Condensation on the inside face of metal frames is common in this stock. We specify from the frame that exists [VERIFY], not from the decade of the house as a slogan.",
+      },
+      {
+        title: "A family house that stays occupied",
+        text: "Empty is faster. Occupied is the usual brief. Bedrooms and landing run before the ground floor so the household keeps somewhere to sleep. A kitchen and a bathroom stay usable. Whole-house decorate around a family is a sequence, not a spray shop emptied for a week.",
+      },
+      {
+        title: "Pebbledash and mock-Tudor timbering",
+        text: "Previously painted masonry and painted timbering can be in scope where access and weather allow. Bare pebbledash is a different specification. A new external colour on a designated street, or in the setting of Golders Hill Park, is checked against Barnet's map [VERIFY]. Proximity to the Suburb does not import Trust rules.",
+      },
+    ],
     extraFaqs: [
       {
         q: "Do you paint the timbering on a mock-Tudor front?",
@@ -67,6 +173,26 @@ export const paintingDetail: ComboDetailMap = {
         q: "We are having a rear extension built — can you decorate it afterwards?",
         a: "Yes, once it is finished and dry. We do not form it: extensions, openings and loft conversions sit with Hampstead Renovations, not with this service. New plaster needs a mist coat and time before a finish goes on, and joining a new room to older ones usually means the adjoining spaces come into the scope so the change is not visible at the doorway.",
       },
+      {
+        q: "Can a Golders Green family stay in the house during decorating?",
+        a: "Yes. Occupied sequencing is the ordinary brief on these streets. Bedrooms and the landing go first; the ground floor follows, so the household keeps a kitchen, a bathroom and a place to sleep. An empty house is a shorter programme. We say which after survey.",
+      },
+      {
+        q: "Will you spray a Golders Green house or brush it?",
+        a: "Empty rooms can take spray where masking is clean. A furnished family house is brush and roller, room by room. Volume of joinery here — doors, architraves, casements — is not a job that benefits from spraying around furniture. The method is chosen per room.",
+      },
+      {
+        q: "Do Golders Green interiors need lining paper?",
+        a: "Where later partitions or chimney-breast movement would telegraph through paint, we name lining at survey. Inter-war plaster that is sound but not square is filled and scribed first; lining is not a way of skipping that. We will not add it quietly on site.",
+      },
+      {
+        q: "Is painting and decorating in Golders Green one room or the whole house?",
+        a: "Both appear. One reception is a bounded instruction. Whole-house work is more common here than in a Camden conversion, because the stock is freehold family houses. The stairwell is its own quantity of access. We price the rooms listed in the proposal, not a slogan about the postcode.",
+      },
+      {
+        q: "Does a Golders Green house need Trust consent for a new outside colour?",
+        a: "Not by default. Golders Green is ordinary Barnet planning unless the address sits inside a designated street or the Suburb boundary, which is a separate map [VERIFY]. Interior emulsion does not engage that. A new colour on previously painted masonry or timbering is checked before it is quoted.",
+      },
     ],
   },
   "hampstead": {
@@ -76,6 +202,28 @@ export const paintingDetail: ComboDetailMap = {
     ],
     processNote: "The lead-in here is mostly checking and access. Listing and, in a converted house, the freeholder's rules are confirmed before dates are offered, and the drop point is agreed with a vehicle that fits the lane, which usually means smaller loads more often. Joinery is settled early, because a door taken back to bare timber changes both the drying time and the order of the rooms. Where an elevation is in scope, the inside is completed first and the outside waits on a licence and a weather window.",
     consent: "Redecorating the rooms you already have is not usually a planning matter; the elevation is. Camden holds the conservation-area and listed-building maps, and the council is the body that grants consent for external change. On a listed building the inside is not automatically outside that: taking historic joinery back, altering panelling or removing an original coating can engage listed building consent, so listing is checked on the address first [VERIFY]. In a converted house the hall and stair belong to the freeholder, and their written agreement, not ours, governs anything done there.",
+    audience: [
+      "Painting and decorating in Hampstead, NW3, is for occupied village houses and for flats carved out of them, under the London Borough of Camden. The core around Heath Street and the High Street is Georgian and early-Victorian fabric; later stucco villas and mansion blocks sit on the busier approaches. Larger family houses toward the Heath and along Frognal are the same lime-and-joinery problem at a bigger scale. Empty is unusual. A village interior is rarely cleared for a spray shop.",
+      "What those rooms actually are is lime plaster, original sashes, panelled doors, shutters and deep skirtings behind furniture that has not moved in years. Later gypsum patches sit on the lime. Floors have moved. North-facing village rooms and Heath-edge light do not read the same emulsion. We sample on the wall in the room. Listing is concentrated in the village core [VERIFY the entry on the address].",
+    ],
+    failures: [
+      {
+        title: "Lime plaster behind later gypsum",
+        text: "Village walls are rarely one background. Lime, hairline movement at chimney breasts, and later gypsum patches on the same plane will telegraph through a modern film applied too soon. Ordinary vinyl emulsion is not the default on lime that still needs to breathe. We test small areas rather than guess, and we will not coat failed plaster as a finish.",
+      },
+      {
+        title: "Village sashes priced as joinery",
+        text: "Box frames, staff beads, shutters and original doors are programmed as joinery, not as a cut-in. Failed cords and putty are reported before a coating is specified. On a listed building, taking historic joinery back can engage listed building consent, so listing is read first [VERIFY]. We will not strip a village door as a courtesy extra.",
+      },
+      {
+        title: "One floor of an occupied house",
+        text: "Village work is normally taken a floor at a time, with the household still in the other rooms. Materials come up a lane in small loads. The shared hall of a converted house is not a store. Keeping cooking, washing and sleeping possible on the other floor is the working assumption, and it stretches the calendar.",
+      },
+      {
+        title: "Colour on a listed village elevation",
+        text: "Emulsion inside unchanged rooms is ordinary work. A new colour on a village front, a scaffold on a listed elevation, or a coating change on original external joinery is a Camden conservation and listing question [VERIFY]. A highway licence for a village lane is a separate matter again. External colour is not added at the end of an interior job.",
+      },
+    ],
     extraFaqs: [
       {
         q: "How long does redecorating one floor of a Hampstead village house take?",
@@ -89,6 +237,26 @@ export const paintingDetail: ComboDetailMap = {
         q: "Is there anywhere to store paint and materials in a converted village house?",
         a: "Not the shared hall, unless the freeholder has agreed it in writing. Village conversions rarely have spare space, so materials are held in the room being worked on and kept to what that room can take without becoming a store. Where a listed or original stair is the only route, protection for it is written into the method before anything is carried up.",
       },
+      {
+        q: "Can ordinary emulsion go on lime plaster in a Hampstead interior?",
+        a: "Not as a default. The coating follows the substrate. Lime that still needs to breathe does not take a modern vinyl film, and a later gypsum patch on the same wall is not the same specification. We test small areas rather than guess, and we write the system down before any product is ordered.",
+      },
+      {
+        q: "Will you spray a Hampstead village house?",
+        a: "Empty rooms, sometimes, where masking is clean. Occupied original joinery — shutters, panelled doors, sashes — is brush and roller. A village interior cannot usually be emptied for a spray shop, and Heath Street lanes are not loading bays for that kind of set-up.",
+      },
+      {
+        q: "Are Hampstead sash windows part of a decorating instruction?",
+        a: "The frames, beads and opening lights can be, as joinery. Failed cords, staff beads or putty are not a paint item; we say so before we start. On listed windows the constraint is checked on the address [VERIFY]. Cutting emulsion into a reveal is not the same work.",
+      },
+      {
+        q: "Does painting and decorating in Hampstead include the communal stair?",
+        a: "Only when the freeholder instructs it. In a converted village house the hall and stair belong to the freeholder. We protect them as a route when we only coat the demise. Listing and the Hampstead Conservation Area bite on the elevation and, on listed interiors, on historic joinery [VERIFY].",
+      },
+      {
+        q: "Is one Hampstead room a different job from a whole village floor?",
+        a: "Yes. A single principal room with shutters and cornice is joinery and lime plaster at height. A floor adds the landing, the occupied sequence, and materials carried up a lane in small loads. We write the rooms that are in, and we do not assume the house can be emptied.",
+      },
     ],
   },
   "hampstead-garden-suburb": {
@@ -98,6 +266,28 @@ export const paintingDetail: ComboDetailMap = {
     ],
     processNote: "Whether the instruction touches the outside at all is settled first, because if it does, a Barnet application and a separate written Trust consent both run before any programme date can be offered [VERIFY the route for the item of work]. Internal-only instructions can be programmed straight off the survey. Joinery colours and sheens are agreed and sampled before wall coatings are ordered, since in these rooms the joinery sets the reading. Deliveries are arranged with the household, not left to the close.",
     consent: "Two bodies, two different things. The Hampstead Garden Suburb Trust administers a Scheme of Management under its own Act and consents to matters covered by the freehold covenants; the London Borough of Barnet grants planning permission and handles conservation-area control, with an Article 4 direction removing permitted-development rights on the envelope. One external item can require both, and neither substitutes for the other [VERIFY the current requirement for the specific property]. Redecorating rooms behind an unchanged elevation generally engages neither.",
+    audience: [
+      "Decorating in Hampstead Garden Suburb, NW11, is for occupied Arts and Crafts houses under the London Borough of Barnet and, on the envelope, the Hampstead Garden Suburb Trust. Cottage rooms, larger free-standing houses and grouped compositions around greens and closes are the stock. Purpose-built mansion blocks are not the local type. Households stay in the house; a close is not a place to empty a spray shop onto the grass.",
+      "The interiors vary from modest cottage rooms to substantial family spaces, almost all already altered inside. Original doors, stair strings and deep window boards were often stained or oiled and never painted. Trust casements, some with leaded lights, are joinery and glass as two trades [VERIFY the glazing type]. Lime and later plaster sit behind an elevation that has been held still. We re-decorate the rooms that exist.",
+    ],
+    failures: [
+      {
+        title: "Stained joinery that has never been painted",
+        text: "Doors, stair strings and window boards that still show the original stain are a one-way choice if they go to paint. Stripping that film back later is slow and rarely returns the surface you had. We put the decision in writing before a brush is loaded, and we would rather sample one room than convert the whole house on the first morning.",
+      },
+      {
+        title: "Trust casements and leaded lights",
+        text: "Frames and opening lights can be in a decorating instruction as joinery. Ironmongery comes off; seized stays are reported rather than coated stuck. The glass, and on some houses the leading, is a glazier's work [VERIFY the glazing type]. External colour on those frames is where Trust and Barnet arrive, not an interior extra.",
+      },
+      {
+        title: "Cottage rooms with the household in them",
+        text: "Cottage interiors are low and small-windowed. There is nowhere to stack a household, so rooms are finished one at a time. Deliveries are arranged with the household, not left on the close. Occupied sequencing is ordinary; spray around furnished original joinery is not.",
+      },
+      {
+        title: "External colour under Trust and Barnet",
+        text: "Interior emulsion behind an unchanged elevation generally engages neither body. A new outside colour, even on previously painted surfaces, can need written Trust consent and Barnet planning, and the Trust boundary is not identical to the conservation-area line [VERIFY both maps and the current Trust guidelines]. We do not trial a colour on the street front.",
+      },
+    ],
     extraFaqs: [
       {
         q: "Why does one Suburb house cost more to decorate than another of the same size?",
@@ -111,6 +301,26 @@ export const paintingDetail: ComboDetailMap = {
         q: "Are the original casement windows part of a decorating instruction?",
         a: "The frames and opening lights can be, as joinery. Ironmongery is taken off and refitted rather than painted around, and stays and fasteners that have seized are reported rather than coated stuck. What is not included is the glass and, on some houses, the leading [VERIFY the glazing type], which is a glazier's work.",
       },
+      {
+        q: "Can a Hampstead Garden Suburb household stay during decorating?",
+        a: "Yes. Occupied sequencing is ordinary in cottage rooms and in the larger free-standing houses. Rooms come back in turn so the household can still cook and sleep. Closes and greens are not loading bays; deliveries are planned with the household rather than left on the grass.",
+      },
+      {
+        q: "Will you spray a Hampstead Garden Suburb cottage?",
+        a: "An emptied room, sometimes, where the method is cleaner. Furnished cottage joinery — stained doors, window boards, a boxed stair — is brush and roller. Spray around original fabric in a low, small-windowed room is rarely the cleaner method.",
+      },
+      {
+        q: "Does a Hampstead Garden Suburb interior need lining paper?",
+        a: "Where later internal plaster would show through a finish, lining is named at survey. Cottage rooms and larger houses both carry later alterations behind an elevation that has been held still. Lining is not a way of skipping honest filling, and it is not added on the day.",
+      },
+      {
+        q: "Can I change the outside colour on a Hampstead Garden Suburb house?",
+        a: "Not as a casual extra. External painting may need written Trust consent, and Barnet planning may also apply, including under the Article 4 direction [VERIFY the current requirement for the property]. Interior decoration behind an unchanged elevation is ordinary work. The two are not the same consent.",
+      },
+      {
+        q: "Is painting and decorating in Hampstead Garden Suburb one room or the whole house?",
+        a: "Both. Because the Trust's interest is the outside, instructions are often whole interiors. A single room is a bounded instruction, and it is also how we would trial painted joinery before the rest of the house follows. The quote follows the rooms named.",
+      },
     ],
   },
   "highgate": {
@@ -120,6 +330,28 @@ export const paintingDetail: ComboDetailMap = {
     ],
     processNote: "Nothing is ordered until the address has been matched to a borough and, in the Village, to a listing entry. That check sits at the front of the programme because it decides whose licence any external element needs and whether joinery can be treated at all [VERIFY listing on the property]. Access follows: a steep or narrow street sets the vehicle, and the vehicle sets how much material comes at once, which is why rooms are started in the order the stair can serve.",
     consent: "Highgate has more than one planning authority, so the first answer is always the address rather than the postcode: Camden, Haringey or, on some streets, Islington [VERIFY]. That council grants planning permission and handles conservation-area and listed-building matters; a freeholder or managing agent grants a licence to alter in a converted villa flat, and the two are not interchangeable. Redecorating rooms that are not changing usually sits outside planning. Listed interiors are the exception worth checking, and anything on the elevation — colour, windows, a scaffold — is the council's question, not ours.",
+    audience: [
+      "Highgate, N6, is not a single-council decorate. Village houses around Pond Square sit in Camden or Haringey; some streets are Islington [VERIFY the authority from the address]. The work is for occupied Village interiors, for slope villas toward the Heath and Archway, and for conversion flats on the later streets. Listing is concentrated in the Village. Holly Lodge Estate is a separate designation again.",
+      "Village rooms are small and joinery-heavy: panelled doors, window linings, a staircase that is more surface than the plan suggests, and lime under later gypsum patches. Slope villas reverse that — fewer, taller rooms and a hall that runs the full height of the house. Toward Archway the plaster is mixed conversion stock. Heath-facing light and Village north rooms do not read the same sheen. We sample on the wall.",
+    ],
+    failures: [
+      {
+        title: "Lime under later patches in the Village",
+        text: "Village walls are often lime behind later gypsum. An old oil-bound coating may still be sound, or it may lift under a wash. We test small areas rather than guess, and we will not put a modern film over lime that needs to breathe. Where a coating cannot be made to hold, the remedy is priced separately.",
+      },
+      {
+        title: "A villa stairwell on the Heath slope",
+        text: "Slope villas give a hall that runs the full height of the house. Access equipment, the vehicle that can take the gradient, and how much material comes at once are decided before a room is opened. Village lanes are tighter still. A ladder across a flight is not a working platform.",
+      },
+      {
+        title: "Which borough paints the outside",
+        text: "Skip licences, scaffolding and elevation colour are issued by the borough the address sits in — Camden, Haringey or, on some streets, Islington [VERIFY]. A new colour on a Village front is a conservation and, where listed, a listing question. We do not quote an external colour from the neighbourhood name.",
+      },
+      {
+        title: "The hall of a converted Highgate villa",
+        text: "Decoration inside your own rooms is usually the demise. The shared stair, the hall and the hours they may be used belong to the freeholder or managing agent [VERIFY the lease]. We protect common parts as a route when they are not in the instruction. Occupation in Village rooms is sequenced; a Pond Square interior is rarely cleared.",
+      },
+    ],
     extraFaqs: [
       {
         q: "Does a flat in a converted Highgate villa need a licence to alter?",
@@ -133,6 +365,26 @@ export const paintingDetail: ComboDetailMap = {
         q: "What happens if nobody knows what the walls were last painted with?",
         a: "That is the normal position in an older Village interior. We test small areas rather than guess: whether the surface is lime or gypsum, whether an old oil-bound coating is still sound, whether a wash will lift. The result goes into the written prep specification before any product is ordered. Where a coating cannot be made to hold, we say so and price the remedy separately.",
       },
+      {
+        q: "Can a Highgate household stay in the house while it is decorated?",
+        a: "Yes. Occupied sequencing is ordinary in Village houses and on the slope. Daily rooms stay open while the rest is coated. Steep streets and Village lanes already stretch deliveries; emptying the house is not the working assumption.",
+      },
+      {
+        q: "Will you spray a Highgate Village interior?",
+        a: "Empty rooms, where access and masking allow. Occupied original joinery in a listed or lime-plastered Village room is brush and roller. Spray is a method, not a neighbourhood slogan, and Village lanes are a poor place to stage it.",
+      },
+      {
+        q: "Are Highgate sash windows treated as joinery?",
+        a: "Frames, linings and opening lights are, if they are in the instruction. Slope villas and Village houses both carry original sashes that are a different quantity of work from a wall emulsion. Failed cords and putty are reported. On listed windows the constraint is checked first [VERIFY].",
+      },
+      {
+        q: "Does painting and decorating in Highgate include lining paper?",
+        a: "Where movement in mixed Village plaster, or in conversion patches toward Archway, would show through a finish, lining is a specified item. Lime and gypsum on the same plane are two backgrounds. We will not add it once the stairwell tower is already standing.",
+      },
+      {
+        q: "Is one Highgate room different from decorating a whole slope villa?",
+        a: "A Village parlour is joinery and lime in a small room. A slope villa adds a full-height hall, taller principal rooms and a vehicle that can take the gradient. We price the rooms that are in scope. External colour remains a borough-and-listing question either way [VERIFY].",
+      },
     ],
   },
   "kentish-town": {
@@ -142,6 +394,28 @@ export const paintingDetail: ComboDetailMap = {
     ],
     processNote: "Lower-ground rooms are opened up and looked at first, so the decision about whether they are in scope is taken at the start rather than discovered once the upper floors are done. On a terrace with no front garden, everything comes through the front door and up a shared stair, so the protection route and the hours for noisy preparation are agreed with the neighbours on both party walls before Camden licensing is arranged.",
     consent: "Internal decoration inside the rooms you already have is ordinary work in NW5 and does not normally need planning permission. Conservation coverage here is granular: several Camden designations touch this neighbourhood and the ground rising toward Dartmouth Park, while the High Street is less uniformly covered, so external joinery colour is checked street by street [VERIFY the named area for the address]. In a leasehold flat, the freeholder grants a licence to alter for anything touching common structure. Camden grants planning permission. They are not interchangeable.",
+    audience: [
+      "Kentish Town, NW5, is Camden. Converted terraces and former workshops are decorated with the household still in them. Houses toward Tufnell Park and Dartmouth Park are more likely to remain single-family; the High Street mix is not. Neighbours are close. Hours are written down because rubbing down travels through a party wall. We decorate the rooms as they have been re-drawn, not as the original plan.",
+      "The interiors have usually been cut about. A stud partition dropped in at conversion runs under one original ceiling, cutting the cornice at an angle, so old lath-and-plaster meets new board on the same wall plane. Former workshops add painted brick and higher volumes. Lower-ground rooms carry staining that is often moisture rather than tired emulsion. Sashes, where they remain, are joinery.",
+    ],
+    failures: [
+      {
+        title: "Lath meeting plasterboard on one wall",
+        text: "Two backgrounds that move at different rates behind one finish are the preparation. The joint is raked, filled and reinforced where it has already opened. Where the movement will keep showing, lining is named on the proposal. Sometimes the honest answer is that a hairline will return. We will not roll one emulsion over both as if they were the same wall.",
+      },
+      {
+        title: "Lower-ground staining that is not tired emulsion",
+        text: "A lower-ground room that looks tired is often wet. We open it first, so the decision about whether it is in scope is taken at the start. Drainage, ventilation or a failed floor is not a paint item. We isolate it, report it, and leave it out rather than coat it and hand the room back looking solved.",
+      },
+      {
+        title: "Rubbing down against a party wall",
+        text: "Preparation is noisy through a terrace. Hours are agreed with the neighbours on both party walls before Camden licensing is arranged. Occupied flats keep cooking and sleeping possible while the other rooms are open. Everything comes through the front door and up a shared stair; the tiled or painted hall is a route, not a work area.",
+      },
+      {
+        title: "Joinery colour checked street by street",
+        text: "Emulsion inside existing rooms does not normally need planning in NW5. External joinery colour does, and conservation coverage here is granular — several Camden designations toward Dartmouth Park, the High Street less uniformly covered [VERIFY the named area]. The freeholder's hall is a separate instruction from the demise.",
+      },
+    ],
     extraFaqs: [
       {
         q: "Do we need the freeholder's permission to have our flat decorated?",
@@ -155,6 +429,26 @@ export const paintingDetail: ComboDetailMap = {
         q: "Our flat is a former workshop conversion. Is painted brick decorated the same way?",
         a: "No. Painted brick takes a different system from skimmed plaster: the existing coating is tested for adhesion, loose material is taken off, and suction is dealt with before anything decorative goes on. Volumes are larger too, so access is written into the programme. What we will not do is roll a wall emulsion over a failing coat.",
       },
+      {
+        q: "Can we stay in a Kentish Town conversion while it is decorated?",
+        a: "Yes. Occupied sequencing is ordinary. You keep the kitchen and somewhere to sleep and wash, and rubbing down sits in agreed hours because the neighbours are close. An empty flat is faster. Most NW5 conversions are not empty.",
+      },
+      {
+        q: "Will you spray a furnished Kentish Town flat?",
+        a: "Rarely. A conversion with mixed plaster, original joinery and furniture still in it is brush and roller. Former workshop volumes can take spray once emptied and masked; that is a decision after survey, not a default. Kentish Town terraces are not emptied as a matter of course.",
+      },
+      {
+        q: "Are remaining Kentish Town sashes priced as joinery?",
+        a: "Where they remain, yes. Frames and opening lights are joinery time. Failed cords and putty are reported rather than coated over. Many conversions here have already lost original windows; we specify from the frames that exist, not from a terrace photograph.",
+      },
+      {
+        q: "Is painting and decorating in Kentish Town one room or the whole conversion?",
+        a: "Both appear. A single reception is priced as itself. A whole-flat decorate adds the hall, the junctions at later partitions, and occupation across several rooms. The shared stair is still not in the instruction unless the freeholder is the client.",
+      },
+      {
+        q: "Does a new outside colour in Kentish Town need Camden's agreement?",
+        a: "It can, depending on the street. Conservation coverage is granular toward Dartmouth Park and less uniform on the High Street [VERIFY the named designation]. Interior emulsion in existing rooms is ordinary work. External joinery colour is checked street by street, not assumed from the neighbourhood name.",
+      },
     ],
   },
   "kilburn": {
@@ -164,6 +458,28 @@ export const paintingDetail: ComboDetailMap = {
     ],
     processNote: "In a managed block the lead-in absorbs the building's rules before it absorbs the paint: hours, whether the lift can be used or has to be protected, and whether a materials drop through the main entrance is allowed at all at that time of day. In a house conversion it absorbs a conversation with the neighbours about the shared stair. Either way, the room used to store materials is the last one decorated.",
     consent: "Redecorating inside existing rooms is not a planning matter on either side of the High Road. What changes with the boundary is who you deal with for everything else: two councils administer planning and conservation-area control, and the designated streets are selective on both maps [VERIFY]. Above a shop, the freehold is often held with the commercial ground floor, so a licence to alter for anything beyond decoration comes from that owner. Shopfronts, fascias and upper-floor windows may also carry separate frontage guidance [VERIFY].",
+    audience: [
+      "Kilburn, NW6, sits either side of the High Road: Camden toward West Hampstead, Brent to the west [VERIFY the borough from the address]. Two-bedroom conversions, later blocks west of the High Road, and shop-flats reached by a narrow stair are the usual instructions, and occupation is typical. We confirm the council before a skip is licensed. Dust into a shop is a method question, not an afterthought.",
+      "East of the High Road the interiors are conversion plaster: later patches, lining that has been painted until it fails, and joinery cut in around a family still in occupation. West of it the rooms vary more — skimmed plasterboard, flush doors, a corridor the landlord decorates on its own cycle. North-facing corners mark from condensation. Sashes remain on some terrace fronts and have already gone on others.",
+    ],
+    failures: [
+      {
+        title: "North-facing condensation on conversion plaster",
+        text: "A marked corner is washed, treated and allowed to dry before any colour is chosen. That deals with what you can see. It does not deal with the moisture, which is ventilation, extract or a cold junction. A coating over it buys a season. We say that at survey rather than after handover.",
+      },
+      {
+        title: "A High Road shop-flat stair",
+        text: "Flats above shops are reached by a narrow stair that is also the shop's fire route. Materials, protection and hours are written so the stair is not a chute and grit does not walk into the trading floor. The freehold is often held with the commercial ground floor. We measure the stair before anything is brought in.",
+      },
+      {
+        title: "Camden or Brent for the elevation",
+        text: "Interior emulsion is not a planning matter on either side of the High Road. External joinery colour, shopfronts and upper-floor windows may be. Two councils, two maps, and designated streets that are selective on both [VERIFY]. We do not assume a High Road colour from the neighbourhood name.",
+      },
+      {
+        title: "Rooms handed back one at a time",
+        text: "A Kilburn instruction is usually the whole flat, decorated while the household stays. Sound walls in a later block move quickly; a conversion with opened joints, old lining and original joinery does not. Occupation extends the programme because rooms are handed back in sequence. The communal corridor stays on the landlord's cycle unless we are separately instructed.",
+      },
+    ],
     extraFaqs: [
       {
         q: "Our flat is over a shop and the freeholder owns the shop. Does that hold things up?",
@@ -177,6 +493,26 @@ export const paintingDetail: ComboDetailMap = {
         q: "How long should a two-bedroom flat take here?",
         a: "Days rather than months, but the range is wide and the survey sets it. Preparation is the variable: sound walls in a later block move quickly, while a conversion with opened joints, old lining and original joinery does not. Living in the flat while we work extends it, because rooms are handed back one at a time.",
       },
+      {
+        q: "Can we stay in a Kilburn flat while it is decorated?",
+        a: "Yes. Occupied sequencing is ordinary on both sides of the High Road. A kitchen, a bathroom and a bedroom are kept usable where the programme allows. Shop-flat hours may also be set by the lease because access passes the trading floor. Empty is faster; most instructions here are not empty.",
+      },
+      {
+        q: "Will you spray a furnished Kilburn conversion?",
+        a: "Rarely. A conversion with furniture still in it, or a shop-flat where dust into the stair is a method question, is brush and roller. Later blocks with sound plasterboard can take spray once emptied; that is a per-room decision after survey, not a High Road default.",
+      },
+      {
+        q: "Does painting and decorating in Kilburn include lining paper?",
+        a: "Where conversion plaster, opened joints or old lining that has failed would telegraph through a new coating, the proposal lists lining where it is needed. Later-block plasterboard is a different background and is specified as such. Failed lining is stripped, not coated over.",
+      },
+      {
+        q: "Are Kilburn sash windows still treated as joinery?",
+        a: "Where they remain, yes — frames and opening lights, not a cut-in around the glass. Many High Road and later-block flats have already lost original sashes. We specify from the windows that exist. Failed cords and putty are reported rather than coated over.",
+      },
+      {
+        q: "Is one Kilburn room a different job from the whole two-bedroom flat?",
+        a: "Yes. A single front room is its own job. Whole-flat work is more common here, because hall, reception and two bedrooms are usually taken together. The landlord's corridor remains outside that instruction. External colour still follows whichever council the frontage sits in [VERIFY].",
+      },
     ],
   },
   "maida-vale": {
@@ -186,6 +522,28 @@ export const paintingDetail: ComboDetailMap = {
     ],
     processNote: "The lift is measured before anything is ordered, because in these blocks it often decides that materials come up the stairs instead, which changes both the delivery size and the hour it can happen. Porters' hours narrow the day. Work starts at the rooms furthest from the entrance and moves back toward it, with the hall split so a route always stays open. Canal-side houses replace all of that with a loading problem of their own.",
     consent: "Inside your own front door the lease governs, and the planning system does not: no one needs to be asked about the colour of a bedroom in W9. Outside it, Westminster's conservation controls reach the envelope, so previously painted brick, window frames and balcony metalwork are matters for the council, and the designation that applies to a particular frontage is checked rather than assumed [VERIFY]. Between the two sits the managing agent, who controls access, hours and anything touching common parts. Canal-side frontages can bring a further party into external work [VERIFY].",
+    audience: [
+      "Maida Vale, W9, is the City of Westminster. Purpose-built red-brick and terracotta mansion flats from the 1890s–1910s are decorated around occupation. Long corridors, rooms off a hall, original joinery and a neighbour the other side of the wall are the brief. Canal-side houses and mews toward Little Venice are a different construction and a different loading problem. Porters' hours narrow the day. Spray around furnished original doors is not the default.",
+      "The interiors keep their original plan: a long internal hall with doors down both sides, deep reveals where the terracotta elevation comes through, picture rails running past every doorway, and compact rooms that share walls with the next demise. Sashes and original doors are joinery. The block's own corridors, stairs and lift lobby are the agent's. We do not assume a 1900s lift will take a full delivery.",
+    ],
+    failures: [
+      {
+        title: "The long corridor that cannot close",
+        text: "The hall is the largest single surface in a Maida Vale flat and the only route to the front door. It is worked in halves so a walkable side always remains. Doors off it are coated with the leaf open. Closing the whole run for two days would be faster; occupation forbids it, which is why the split appears in the programme.",
+      },
+      {
+        title: "Original doors in a terracotta block",
+        text: "Decades of coating on original doors, architraves and picture rails are joinery time. Matching 'what is there' is a sample on the wall, not a code from a faded tin. Later partitions in an altered flat may need lining where movement would show. We specify from the door that exists, not from the decade of the block.",
+      },
+      {
+        title: "Porter hours and a small lift",
+        text: "The lift is measured before anything is ordered, because in these blocks it often decides that materials come up the stairs instead. Porters' hours narrow the usable day. Work starts at the rooms furthest from the entrance and moves back toward it. Canal-side houses replace all of that with a loading problem of their own.",
+      },
+      {
+        title: "Previously painted brick on a W9 front",
+        text: "Nobody needs to be asked about the colour of a bedroom. Previously painted brick, window frames and balcony metalwork are Westminster conservation matters, and the designation on a particular frontage is checked rather than assumed [VERIFY]. Canal-side work can bring a further party [VERIFY]. Common parts stay the agent's specification.",
+      },
+    ],
     extraFaqs: [
       {
         q: "What decides the cost of decorating a Maida Vale mansion flat?",
@@ -199,6 +557,26 @@ export const paintingDetail: ComboDetailMap = {
         q: "Does the block's own external redecoration cycle affect work inside the flat?",
         a: "It can. When a block redecorates its elevations, scaffold, sheeting and window access arrive on a timetable set by the freeholder, and that is a poor moment to have your windows freshly finished inside. If a cycle is due, we ask the agent for dates before we programme the flat, and sequence the window joinery around them rather than against them.",
       },
+      {
+        q: "Can we stay in a Maida Vale mansion flat while it is decorated?",
+        a: "Yes. Occupied sequencing is ordinary. The long hall is worked in halves so the front door stays reachable, and rooms come back in turn. Porter hours already shorten the day; emptying the flat is not the working assumption. Cooking, washing and a sleeping room stay reachable while the rest is coated.",
+      },
+      {
+        q: "Will you spray a furnished Maida Vale mansion flat?",
+        a: "Rarely. A furnished mansion flat is not a spray shop. Original doors, picture rails and a corridor that cannot close are cut in by hand. Empty rooms can take spray where the building allows it and the lift — or the stair — can carry the equipment.",
+      },
+      {
+        q: "Does painting and decorating in Maida Vale include lining paper?",
+        a: "Where later plaster in an altered flat would show through a finish, lining is listed as its own prep item. Original backgrounds that are sound are filled and coated. We will not add lining quietly once the hall is already split and the porter's hours are running.",
+      },
+      {
+        q: "Are Maida Vale sash windows part of the flat's decorate?",
+        a: "The inside face of frames and opening lights can be, as joinery. Windows on a mansion elevation are often the block's cyclical item rather than something added to a flat's decorate. Cords that have gone, and putty that has failed, are a joinery report. Colour on the outside of those frames is Westminster's question [VERIFY].",
+      },
+      {
+        q: "Is one Maida Vale room a different job from the whole demise?",
+        a: "Yes. A single bedroom is a defined scope. Whole-flat work is the norm in these blocks, because a single approved period of works is simpler for a building to administer, and because the long hall has to be sequenced with everything else. Common parts remain the agent's instruction.",
+      },
     ],
   },
   "muswell-hill": {
@@ -208,6 +586,28 @@ export const paintingDetail: ComboDetailMap = {
     ],
     processNote: "Because the hall governs access, the tower goes up before the bedrooms are touched and comes down before the ground floor is finished, which puts the stairwell out of the usual room-by-room order. Ahead of that, Haringey licensing for anything standing on the highway carries a lead time, the van is chosen for the gradient rather than the load, and the frontage is checked against the Muswell Hill and Fortis Green maps before an external item is priced. [VERIFY which map applies.]",
     consent: "Redecorating the rooms you already have is not usually a planning matter in N10. The envelope is. Haringey administers both planning permission and conservation-area control, and the designation reaches the Broadway and a good deal of the residential slope, so a colour change on a street-facing window or door is settled with the council before it appears on a proposal [VERIFY the boundary for the address]. Where the property is a flat in a converted house, consent for anything beyond decoration inside the demise is the freeholder's or the managing agent's, granted through a licence to alter, not by the council.",
+    audience: [
+      "Muswell Hill, N10, is Haringey, and the work is for occupied Edwardian family houses on the slope together with tighter flats above the Broadway. Red brick, timber sashes and generous halls are typical. Converted houses on the residential streets are the same joinery at a split tenure. Plots and rear gardens are larger than in inner Camden; the hill is not. Long-wheelbase vans are not always possible.",
+      "The interiors are high Edwardian rooms: deep cornices, picture rails, panelled doors carrying decades of coats, and plaster that has moved on a slope. The staircase hall is often the largest single surface — a well through two or three storeys, the landing ceiling sitting above a flight rather than a floor. Broadway flats swap that height for a narrow stair and dust control over a shop. We sample colour on the wall in the room's own light.",
+    ],
+    failures: [
+      {
+        title: "A stairwell taller than the rooms",
+        text: "The well governs access before a wall is filled. The tower is built off the treads with a stair frame, which needs the hall clear for the days it is up. A ladder set across a flight is not a working platform. The tower goes up before the bedrooms are touched and comes down before the ground floor is finished, which puts the stairwell out of the usual room-by-room order.",
+      },
+      {
+        title: "Picture rails and Edwardian sashes",
+        text: "Rails stay. Taking one down usually damages the plaster line, and the reveal is rarely as clean as expected. The rail is prepared as joinery. Timber sashes on the slope are the same: frames, beads and opening lights, not a cut-in. Over-painted profiles are recorded at survey and stated plainly.",
+      },
+      {
+        title: "The gradient decides the van",
+        text: "Steep streets decide the vehicle, not the other way round. Haringey licensing for anything standing on the highway carries a lead time. Occupied houses are sequenced so cooking and sleeping continue on the floors not under the tower. Broadway flats add dust control over a shop and a stair that will not take a casual delivery.",
+      },
+      {
+        title: "Window colour on the Broadway",
+        text: "Emulsion inside existing rooms is not usually a planning matter in N10. A colour change on a street-facing window or door is, where Muswell Hill or Fortis Green conservation areas apply [VERIFY which map]. An external colour on the Broadway is a different consent path from a rear elevation on the slope. Converted-house halls remain the freeholder's instruction.",
+      },
+    ],
     extraFaqs: [
       {
         q: "How long does a whole-house decorate take in one of the slope houses?",
@@ -221,6 +621,26 @@ export const paintingDetail: ComboDetailMap = {
         q: "Should the picture rails come off to decorate properly?",
         a: "No. Taking a rail down usually damages the plaster line above and below it, and the reveal is rarely as clean as the client expects. The rail is prepared as joinery: filled, caulked at the wall, rubbed down and coated to the specified sheen. If it has been over-painted to the point of losing its profile, that is recorded at survey and stated plainly.",
       },
+      {
+        q: "Can a Muswell Hill family stay in the house during decorating?",
+        a: "Yes. Occupied sequencing is ordinary on the slope and in Broadway flats. The stairwell tower already takes the hall out of daily use for some days, so bedrooms and the ground floor are planned around that. The kitchen and one bedroom keep running while the well is in the air.",
+      },
+      {
+        q: "Will you spray a Muswell Hill Edwardian house?",
+        a: "Empty rooms, sometimes, where the method is cleaner. Furnished high rooms with cornice, picture rails and panelled doors are brush and roller. Broadway flats over shops are the same: spray is rarely the cleaner method in a furnished space with a neighbour on the stair.",
+      },
+      {
+        q: "Does painting and decorating in Muswell Hill include lining paper?",
+        a: "Where plaster that has moved on the slope would show through a finish, lining is booked with the tower, not after it. High Edwardian rooms make that movement more visible, not less. Sound cornice and rails are prepared as they stand.",
+      },
+      {
+        q: "Are Muswell Hill sash windows priced as joinery?",
+        a: "Timber sashes on the slope houses are joinery when they sit in the brief — the box, the beads, the opening lights. Cords that have gone are a joinery note. Broadway flats often carry later windows; we specify from the frames that exist. Colour on street-facing joinery is a Haringey conservation question [VERIFY].",
+      },
+      {
+        q: "Is one Muswell Hill room a different job from the whole slope house?",
+        a: "Yes. A single principal room is cornice, picture rails and joinery at height. Whole-house work adds the stairwell tower, occupation across floors, and a van that can take the gradient. Converted-house common parts remain the freeholder's unless they instruct us in writing.",
+      },
     ],
   },
   "primrose-hill": {
@@ -230,6 +650,28 @@ export const paintingDetail: ComboDetailMap = {
     ],
     processNote: "Order of works here is set by the sashes and the lower ground. We look at both before a programme is written, because a window that needs cords and putty is joinery time, not a cut-in, and a wet rear wall can take a room out of the sequence altogether. Deliveries are booked away from weekend park traffic. In an occupied house we usually work downwards, so the rooms in daily use at ground and lower-ground level are disturbed last.",
     consent: "Primrose Hill Conservation Area covers the core streets and the setting of the park, and Camden's Article 4 direction has applied since 3 March 1983 [VERIFY the boundary for the address]. That direction bites on windows, front boundaries and elevations — the things visible from the street and from the park — rather than on emulsion inside a room that is not changing shape. Where a house has been split, the flat is one demise and the communal hall is the freeholder's: hall decoration needs their instruction, not the leaseholder's good intentions.",
+    audience: [
+      "Primrose Hill, NW1, is Camden, and the work splits between occupied family houses that still face the park as one household, and garden flats in houses that have been split. Stock brick, stucco dressings and original sashes are characteristic. Later mansion blocks toward Regent's Park Road are a different tenure. Weekend visitors around the park are an access problem, not a decorating one. We plan drops away from peak hours where we can.",
+      "The rooms themselves are straightforward — plaster that has been patched, original sashes on the front — until a hand and a meter find the rear wall of a lower-ground room. Park-facing first floors take reflected daylight that a card does not show; lower-ground rear rooms take much less. Lime and later gypsum both appear. We prepare. We do not coat over damp.",
+    ],
+    failures: [
+      {
+        title: "Moisture on a lower-ground rear wall",
+        text: "Staining in a garden-flat or lower-ground room is often moisture rather than a tired emulsion. We look at it before a programme is written. A wet wall comes out of the sequence until the cause is dealt with, which can pause a house mid-programme. Tanking and a new rear opening are not this service. We will not decorate over a damp wall as a finish.",
+      },
+      {
+        title: "Park-facing sashes as joinery",
+        text: "Original sashes on a park-facing front are joinery time: cords, staff beads, putty, opening lights. A window that needs those is not a cut-in. Listed windows are checked [VERIFY]. Article 4 since 3 March 1983 already bites on window changes visible from the street and from the park; a coat of paint is not a way around that.",
+      },
+      {
+        title: "A family house that cannot empty",
+        text: "Occupied sequencing is ordinary. We usually work downwards, so the rooms in daily use at ground and lower-ground level are disturbed last. Garden flats add hours through a timber party floor. Cooking and sleeping continue upstairs while the lower ground is open. Empty is faster; most Primrose Hill houses are not empty.",
+      },
+      {
+        title: "Article 4 on the park-facing elevation",
+        text: "Emulsion inside a room that is not changing shape is ordinary work. A new colour on a park-facing wall, a change to sash detailing, or previously painted masonry seen from the park is a conservation and Article 4 question [VERIFY the boundary]. External colour is not added at the end of an interior job as a courtesy. Split-house halls remain the freeholder's.",
+      },
+    ],
     extraFaqs: [
       {
         q: "How long does decorating a Primrose Hill house take?",
@@ -243,6 +685,26 @@ export const paintingDetail: ComboDetailMap = {
         q: "The front room faces the park — does that change the colour?",
         a: "It changes what the colour does. A first floor facing the park takes a lot of reflected daylight and a strong colour can read colder there than on a card. The rear rooms below take much less. We paint samples on the actual wall in both, look at them at different times of day, and only then write the colour into the specification.",
       },
+      {
+        q: "Can a Primrose Hill household stay in the house during decorating?",
+        a: "Yes. Occupied sequencing is the working assumption. We usually work downwards so ground and lower-ground rooms in daily use are disturbed last. Family rooms that are lived in stay last in the sequence. A wet lower-ground wall can still take a room out of that run until the cause is dealt with.",
+      },
+      {
+        q: "Will you spray a Primrose Hill family house?",
+        a: "Empty rooms, sometimes. Occupied original sashes, furniture still in a park-facing reception, and a garden flat with a neighbour on the floor above are brush and roller. Spray is a method chosen per room, not a way of shortening an occupied house.",
+      },
+      {
+        q: "Does painting and decorating in Primrose Hill include lining paper?",
+        a: "Where patched plaster would show through a finish, lining is agreed before the sashes come off. Lower-ground rooms are a moisture question first; lining over a wet wall is not a remedy. Park-facing first floors are a different background again.",
+      },
+      {
+        q: "Does Article 4 stop a Primrose Hill interior decorate?",
+        a: "Interior decoration within existing rooms is ordinary work. Article 4, in force here since 3 March 1983, bites on windows, front boundaries and elevations visible from the street and the park [VERIFY]. A park-facing colour change is a consent question; a drawing-room emulsion is not.",
+      },
+      {
+        q: "Is one Primrose Hill room a different job from the whole house?",
+        a: "Yes. A single park-facing reception is joinery, light and a sample on that wall. Whole-house work adds the lower ground, the occupied sequence, and — in a split house — a hall that belongs to the freeholder. Scope is the rooms agreed at survey.",
+      },
     ],
   },
   "queens-park": {
@@ -252,6 +714,28 @@ export const paintingDetail: ComboDetailMap = {
     ],
     processNote: "The first hour of the lead-in goes on paperwork that is not ours: which council the frontage sits in, and who holds the freehold of a converted house, because in this stock it is often the neighbours upstairs. After that the constraint is space. A cottage has nowhere to stack materials and little room to stand a ladder outside, so deliveries are split into smaller drops on a residential street and rooms are finished one at a time rather than opened up together.",
     consent: "Two authorities meet here, and they are not interchangeable: Brent's Queen's Park Conservation Area covers streets around the park, while Westminster's Queen's Park Estate Conservation Area is a separate designation with its own appraisal [VERIFY which applies to the address]. Whichever it is, the council deals with planning, conservation and the licence for anything standing on the pavement. Consent to touch a shared hall comes from the freeholder — in a converted terrace that is frequently the other leaseholders. Painting rooms inside an unchanged flat is ordinary work; the front door and the elevation are not.",
+    audience: [
+      "Queen's Park, NW6, straddles Brent and Westminster [VERIFY the borough from the address], and the work is for occupied bay-fronted terraces on the Brent streets together with the Westminster Estate cottages. Converted flats are common on the larger roads; family houses remain toward Kensal Rise. Salusbury Road is a poor default loading point. A cottage has nowhere to stack a household, so rooms are finished one at a time.",
+      "On the Brent side the interiors are terrace conversions: mixed plaster, a hall with an original tiled floor that stays as it is, party-wall hours. On the Estate the rooms are cottage-scale and the ratio changes — more door, frame and skirting per square metre of wall than a larger terrace room carries. Patterned brick, encaustic floors and tiled dados are not paint surfaces. Sashes and original doors are joinery.",
+    ],
+    failures: [
+      {
+        title: "Cottage joinery versus terrace wall",
+        text: "An Estate cottage room can hold two doors, a window, deep skirtings and a boxed stair in the same few square metres. Each is prepared and coated separately, and small rooms take one person at a time. A Brent terrace room is more wall and more conversion plaster. The survey counts the joinery rather than the floor area.",
+      },
+      {
+        title: "Encaustic floors and tiled dados",
+        text: "Original tiled dados, encaustic hall floors and decorative brick are not surfaces we cover to save preparation. We will not paint them because a room reads dark. The tiled hall of a converted terrace stays as a route until the freeholder instructs it. Filling and coating follow a written specification, not a one-day cut-in around the tiles.",
+      },
+      {
+        title: "Two councils on one park",
+        text: "Brent's Queen's Park Conservation Area and Westminster's Queen's Park Estate Conservation Area are separate designations [VERIFY which applies]. Interior emulsion in an unchanged flat is ordinary work. Front-door colour, Estate joinery colour and a painted brick front are conservation matters for the council that actually holds the frontage. The skip licence follows the same split.",
+      },
+      {
+        title: "A shared hall with no single client",
+        text: "In a converted Queen's Park terrace the freehold of the hall is often the neighbours jointly. One leaseholder cannot instruct the common parts alone. Until a written instruction exists, the hall is protected as an access route while we work in the flat. Occupied cottages and conversions are sequenced; a cottage cannot usually be stacked empty.",
+      },
+    ],
     extraFaqs: [
       {
         q: "Who signs off decorating the shared hall in a converted house?",
@@ -265,6 +749,26 @@ export const paintingDetail: ComboDetailMap = {
         q: "Why does a small Estate cottage take longer than its size suggests?",
         a: "Because the work is in the joinery, not the wall area. A cottage room can have two doors, a window, deep skirtings and a boxed stair in the same few square metres, and each of those is prepared and coated separately. Small rooms also take one person at a time. The survey counts the joinery rather than the floor area, and the programme follows that count.",
       },
+      {
+        q: "Can a Queen's Park household stay during decorating?",
+        a: "Yes. Occupied sequencing is ordinary in terrace conversions and in Estate cottages. A cottage has nowhere to stack furniture, so rooms are finished one at a time. You still cook, wash and sleep in the rooms not open. Party-wall hours on the Brent terraces sit in the method.",
+      },
+      {
+        q: "Will you spray a Queen's Park Estate cottage?",
+        a: "An emptied room, sometimes. Furnished cottage joinery — two doors, a window, deep skirtings and a boxed stair in a few square metres — is brush and roller. Terrace conversions with a household still in them are the same. Spray is a method, not a way of skipping joinery preparation.",
+      },
+      {
+        q: "Does painting and decorating in Queen's Park include lining paper?",
+        a: "Where conversion plaster on the Brent streets would show through a finish, lining is agreed before a cottage or terrace room is opened. Estate cottage walls that are sound are filled and coated; lining is not a way of boxing in original joinery. We will not add it on the day.",
+      },
+      {
+        q: "Are Queen's Park sash windows treated as joinery?",
+        a: "Yes, on both sides of the park, when the windows sit in the brief. Cottage sashes are a higher ratio of joinery per room than a terrace bay. Broken cords and hard putty come out as a joinery note, not a paint extra. Colour on those frames follows whichever council holds the frontage [VERIFY].",
+      },
+      {
+        q: "Is one Queen's Park room a different job from the whole cottage or terrace?",
+        a: "Yes. A single cottage room is joinery-dense and takes one person at a time. Whole-house or whole-flat work adds occupation, the hall question, and — on the Estate — conservation colour on the elevation. Cost follows the rooms in the written brief. Tiled dados stay unless the brief says otherwise.",
+      },
     ],
   },
   "st-johns-wood": {
@@ -274,6 +778,28 @@ export const paintingDetail: ComboDetailMap = {
     ],
     processNote: "Nothing is booked until the agent's paperwork is back: approved working hours, evidence of insurance, and in most blocks a named contact and a method for protecting the route from the lift to the door. Delivery days are checked against fixtures at Lord's, which can restrict access on surrounding streets [VERIFY with the building]. Protection goes down before a tin arrives. The flat's own hall is finished last, because until then it is the corridor everyone and everything crosses.",
     consent: "The council's interest here stops at the elevation. Westminster is not consulted about the colour of a reception room, and the St John's Wood Conservation Area governs the outside — external joinery colour, windows, front boundaries [VERIFY the boundary on the address]. What governs the inside is the lease, and in several blocks a freeholder design guide stricter than planning, covering anything visible from the corridor. Evidence of insurance is usually asked for before contractors are admitted; we are fully insured [INSURANCE_TBC].",
+    audience: [
+      "St John's Wood, NW8, is the City of Westminster for most of the residential core, with a smaller Camden conservation area on the borough edge. Late-Victorian and Edwardian mansion flats toward Wellington Road and Prince Albert Road are decorated around occupation, as are villa and mews houses on the tree-lined streets. Porters' rules, Lord's match days and a corridor the agent inspects shape the programme as much as the paint. We are fully insured [INSURANCE_TBC].",
+      "Block interiors are compact: original joinery, previous coatings of unknown type, and a demise that must be painted without marking the stair. Villa interiors are a different grain — larger principal rooms, original sashes, occupied family houses. In several buildings a freeholder design guide is stricter than planning for anything visible from the corridor. Fire doors keep their seals, closers and labels unpainted.",
+    ],
+    failures: [
+      {
+        title: "The corridor the agent inspects",
+        text: "Common parts are never inside a flat's decorate. The corridor, the lift lobby, the stair and — in most leases — the outward face of the entrance door belong to the freeholder [VERIFY the lease]. Protection goes down before a tin arrives. Agents notice floors and stairs first. Hall decoration, if instructed, follows the agent's specification and hours, not ours.",
+      },
+      {
+        title: "Villa sashes versus block casements",
+        text: "Villa and mews houses supply original sashes priced as joinery. Mansion-flat windows on a block elevation are usually the building's cyclical item, not something added to a demise. Failed cords and putty are reported. We specify from the frames that exist. Matching an old coating in these blocks is a sample, not a code from a faded tin.",
+      },
+      {
+        title: "Fire doors and their seals",
+        text: "The door face is decorated; intumescent seals, closers, hinges and the certification label on the edge are left clear. Coating them can compromise how the door performs. Where a flat entrance door is involved, the agent's specification comes first [VERIFY]. Occupation in the demise is sequenced around the building's approved hours.",
+      },
+      {
+        title: "External colour in Westminster's designation",
+        text: "Westminster is not consulted about a reception-room emulsion. The St John's Wood Conservation Area governs external joinery colour, windows and front boundaries [VERIFY the boundary]. Several blocks add a design guide covering anything visible from the corridor. Lord's fixtures can restrict access on surrounding streets [VERIFY with the building]. We do not trial a colour on the elevation.",
+      },
+    ],
     extraFaqs: [
       {
         q: "What does the managing agent need before decorating starts in a block?",
@@ -287,6 +813,26 @@ export const paintingDetail: ComboDetailMap = {
         q: "Do you paint fire doors and their ironmongery in a mansion flat?",
         a: "The door face is decorated; the parts that make it a fire door are not. Intumescent seals, closers, hinges and the certification label on the door edge are left clear, because coating them can compromise how the door performs and removes the evidence that it was ever tested. Where a flat entrance door is involved, the agent's specification comes first [VERIFY].",
       },
+      {
+        q: "Can we stay in a St John's Wood mansion flat while it is decorated?",
+        a: "Yes. Occupied sequencing is ordinary. The building's approved hours already shorten the day, and the demise keeps a working kitchen, bath and bedroom while other rooms are coated. The flat's own hall is finished last, because until then it is the corridor everyone and everything crosses. Empty is faster; most demises here are not empty.",
+      },
+      {
+        q: "Will you spray a furnished St John's Wood mansion flat?",
+        a: "Rarely. Spray is used where a room is empty and the building allows it. Original doors, a protected common route, and furniture still in the demise are brush work. Villa interiors with original sashes are the same decision, made per room after survey.",
+      },
+      {
+        q: "Does painting and decorating in St John's Wood include lining paper?",
+        a: "Where movement in later partitions would show through a finish, lining is in the written prep specification. Original backgrounds that are sound are filled and coated. We will not add lining after the agent's protection method is already down and the hours are running.",
+      },
+      {
+        q: "Are St John's Wood sash windows part of a flat's decorate?",
+        a: "In villas and mews, the frames and opening lights can be, as joinery. In mansion blocks, windows on the elevation are usually the building's cyclical item. Failed cords and putty are reported either way. External colour on those frames is a Westminster conservation question [VERIFY].",
+      },
+      {
+        q: "Is one St John's Wood room a different job from the whole demise?",
+        a: "Yes. A single reception can be instructed on its own. Whole-demise work is more common in the blocks, because one approved period of works is simpler for a building to administer than several across a season. Common parts remain outside it. Villa whole-house work is a different scale of original joinery again.",
+      },
     ],
   },
   "swiss-cottage": {
@@ -296,6 +842,28 @@ export const paintingDetail: ComboDetailMap = {
     ],
     processNote: "The lead-in here is usually spent on the building rather than the paint. Larger blocks on Avenue Road commonly want notice, hours and a protection method before anyone carries a tin through the entrance hall, and that sets the start date more often than our diary does. Materials for a Finchley Road frontage are booked to a timed drop, so the first room started is the one nearest the stair, not the one you most want finished.",
     consent: "Flats in the blocks here are generally leasehold, so the first question is tenure, not planning. Redecorating inside your own demise rarely needs a licence to alter; the freeholder or managing agent still sets the rules for the stair, the lift and the hours, and those rules are theirs to grant, not ours. Camden is the planning authority, and its South Hampstead Conservation Area covers many of the residential streets off Finchley Road and Avenue Road [VERIFY which designation applies to the address]. Interior colour sits outside that. Window and elevation work does not.",
+    audience: [
+      "Swiss Cottage, NW3, is Camden, and the work sits between two stocks. Occupied inter-war flats off Finchley Road and Avenue Road need the agent's hours and a protection method for the entrance. Occupied Victorian conversions toward Belsize and Frognal need mixed plaster, a chimney breast that has moved, and original sashes treated as joinery. The HPSG office is at Unit 3 Palace Court, 250 Finchley Road, London NW3 6DN; that shortens the visit, not the specification.",
+      "Inter-war interiors are walls, ceilings, the internal hall and the flat's own doors, on substrates that are not the same as a Victorian conversion a street back. Converted houses toward Belsize carry later filling at a moved chimney breast that has to be honest before colour is discussed. Finchley Road west light and a north room toward Frognal do not read the same emulsion. Common parts stay a separate instruction until the freeholder gives them in writing.",
+    ],
+    failures: [
+      {
+        title: "Inter-war skim versus Victorian patches",
+        text: "An Avenue Road block with sound plaster and one hall is not the same wall as a Victorian conversion with a moved chimney breast. The specification follows the substrate in each room, not the decade of the building as a slogan. Where later filling would telegraph through a modern coating, lining is named on the proposal.",
+      },
+      {
+        title: "Chimney-breast movement that lining has to hide",
+        text: "In converted houses toward Belsize and Frognal the breast has often been cut about, and the filling around it is the preparation. Hairline movement at that junction will show through a thin coat. Lining is specified where it is the honest answer. Opening the plan around the breast is not this service.",
+      },
+      {
+        title: "Avenue Road hours and Finchley Road grit",
+        text: "Larger blocks commonly want notice, hours and a protection method before anyone carries a tin through the entrance hall, and that sets the start date more often than our diary does. Materials for a Finchley Road frontage are a timed drop. Windows on the corridor often stay shut, so drying time is planned. Occupation is sequenced around those hours.",
+      },
+      {
+        title: "South Hampstead colour on the envelope",
+        text: "Interior colour sits outside planning. Window and elevation work does not. Camden's South Hampstead Conservation Area covers many residential streets off Finchley Road and Avenue Road; Belsize Conservation Area adjoins to the east [VERIFY which designation applies]. We do not quote an external colour from the neighbourhood name. Common parts remain the agent's.",
+      },
+    ],
     extraFaqs: [
       {
         q: "What decides the cost of decorating a Swiss Cottage flat?",
@@ -309,6 +877,26 @@ export const paintingDetail: ComboDetailMap = {
         q: "Does being on Finchley Road change how a room is decorated?",
         a: "It changes ventilation and dust. A flat on the corridor cannot be aired the way a room on a side street can, so windows often stay shut for much of the day and drying time is planned rather than assumed. Protection is heavier at the entrance because grit comes in on boots. The prep specification itself still follows the wall in the room.",
       },
+      {
+        q: "Can we stay in a Swiss Cottage flat while it is decorated?",
+        a: "Yes. Occupied sequencing is ordinary in the inter-war blocks and in the Victorian conversions toward Belsize and Frognal. Occupation keeps the kitchen and one bedroom going. Agent hours in the larger Avenue Road buildings already shorten the day; emptying the demise is not the working assumption.",
+      },
+      {
+        q: "Will you spray a furnished Swiss Cottage mansion flat?",
+        a: "Rarely. Spray is used in empty rooms where it is cleaner and the building allows it. Occupation, original doors, and a Finchley Road flat that cannot be aired with the windows open stay as brush work. Victorian conversions toward Frognal with mixed plaster are the same decision, made per room.",
+      },
+      {
+        q: "Does painting and decorating in Swiss Cottage include lining paper?",
+        a: "Where later patches around a moved chimney breast, or mixed conversion plaster toward Belsize, would show through a finish, lining is priced as its own item. Inter-war skim that is sound is filled and coated. Agent hours do not change that split.",
+      },
+      {
+        q: "Are Swiss Cottage sash windows treated as joinery?",
+        a: "In the Victorian houses toward Belsize and Frognal, frames and opening lights are joinery if they are in the instruction. Inter-war windows are specified from the frame that exists, not from a slogan about the decade of the block. Cords, beads and putty that have failed are called out before a coating is specified. Colour on the envelope is a conservation question on the map that applies [VERIFY].",
+      },
+      {
+        q: "Is one Swiss Cottage room a different job from the whole flat?",
+        a: "Yes. One room is a complete instruction. Whole-flat work is more common in the blocks, because notice and a protection method are already required for the entrance. Converted-house whole-flat work adds the chimney-breast junction and the shared stair, which remains the freeholder's unless they instruct it. The office being nearby does not change that split.",
+      },
     ],
   },
   "west-hampstead": {
@@ -318,6 +906,28 @@ export const paintingDetail: ComboDetailMap = {
     ],
     processNote: "Before a date is offered, three things are settled: who owns the hall, where the vehicle stands, and what hours the flats above and below can live with. Once those are fixed, the order is dictated by the route in. Bedrooms and the rear return come first, the hall and half-landing last, so the way through the flat stays protected until the end. Noisy rubbing down sits in the middle of the day, not at either edge of it.",
     consent: "Decorating inside a leasehold flat alters nothing, so a licence to alter is rarely the right instrument; the lease is. Leases commonly carry a decorating covenant and a clause on contractors, and some require the freeholder or managing agent to be told before work starts. That is the freeholder's process, not the council's. Camden's role begins at the elevation: repainting previously painted joinery in the same colour is ordinary maintenance, while a change of external appearance in a conservation area, or under an Article 4 direction on windows, is not [VERIFY the designation for the street].",
+    audience: [
+      "West Hampstead, NW6, is Camden. Converted Victorian and Edwardian terraces behind West End Lane are decorated with the household still in them. One- and two-bedroom demises, bay-fronted front rooms, rear-return walls that have been patched more than once, and bedrooms off a half-landing are the brief. Later mansion blocks near the interchange are a different tenure and a different agent. Three stations make daytime loading competitive; materials are planned off the high street.",
+      "The fabric is conversion plaster: later patches on original walls, lining that has been painted until it fails, and joinery cut in around a family that has not left. Party-wall noise from rubbing down belongs in the working hours. Sashes in the bays are joinery. The communal front door, the entrance hall and the stair are the freeholder's. We decorate the demise. We do not assume a van can stand on West End Lane.",
+    ],
+    failures: [
+      {
+        title: "Rear-return plaster that has been patched twice",
+        text: "Half-landing bedrooms and rear-return kitchen walls show every thin fill. Later patches on original plaster, and lining that has been over-painted until it fails, telegraph through a modern coating unless the background is made honest first. Where lining is needed again, it is named on the proposal, not slipped in on the day.",
+      },
+      {
+        title: "Bay sashes treated as joinery",
+        text: "Original sashes in the bays are programmed as joinery: frames, beads, opening lights. Failed cords and putty are reported. External joinery on a terrace front is a separate item — access, weather, and on some streets a conservation-area or Article 4 check before a colour is agreed [VERIFY]. Where the flat is one of three, the elevation is usually a freeholder matter.",
+      },
+      {
+        title: "Furniture that moves twice",
+        text: "In a one- or two-bedroom demise there is nowhere to stack a household. Rooms are worked in halves; furniture moves to the centre, then back against a finished wall. Nothing is stored on the shared landing. Noisy rubbing down sits in the middle of the day because the flats above and below can hear it. Occupation is the default, not a courtesy.",
+      },
+      {
+        title: "West End Lane is not the loading bay",
+        text: "Before a date is offered, three things are settled: who owns the hall, where the vehicle stands, and what hours the neighbours can live with. Loading from West End Lane is rarely the default. Streets around Fortune Green and the South Hampstead approaches may be designated; unlisted terraces may still sit under Article 4 on windows [VERIFY]. Common-parts decoration needs the freeholder in writing.",
+      },
+    ],
     extraFaqs: [
       {
         q: "Do we need the freeholder's permission to redecorate a converted flat?",
@@ -330,6 +940,26 @@ export const paintingDetail: ComboDetailMap = {
       {
         q: "What happens to our furniture while a two-bedroom conversion is decorated?",
         a: "It moves twice in most rooms: to the centre and covered, then back against a finished wall so the other half can be worked. Larger pieces that cannot be lifted safely are worked around, and we say which those are at survey rather than on the first morning. Nothing is stored on the shared landing, because that is not ours to fill.",
+      },
+      {
+        q: "Can we stay in a West Hampstead conversion while it is decorated?",
+        a: "Yes. Occupied-home sequencing is the default here. Bedrooms and the rear return come first; the hall and half-landing last, so the way through the flat stays protected. The rear kitchen and a bedroom stay live until their turn. Empty is faster. Most conversions behind West End Lane are not empty.",
+      },
+      {
+        q: "Will you spray a furnished West Hampstead conversion?",
+        a: "Rarely. A conversion with furniture moving twice, party-wall hours, and original bay joinery still in place is brush and roller. We choose the method per room after survey, not as a way of shortening an occupied flat behind West End Lane.",
+      },
+      {
+        q: "Does painting and decorating in West Hampstead include lining paper?",
+        a: "Where rear-return patches, half-landing movement or old lining that has failed would telegraph through a new coating, lining is on the proposal as a named item. Sound walls are filled and coated. Lining is not a substitute for making a moving joint honest first, and the shared landing is not where we store the rolls.",
+      },
+      {
+        q: "Are West Hampstead bay sashes priced as joinery?",
+        a: "Yes, when the bay is in the brief. The box, the beads and the opening lights are joinery time, not a cut-in around the glass. Putty that has gone hard is reported before a coating is specified. The outside of the bay is a separate item, and on some streets a conservation or Article 4 question before a colour is agreed [VERIFY].",
+      },
+      {
+        q: "Is one West Hampstead room a different job from the whole conversion?",
+        a: "Yes. A single bay-fronted reception is joinery and a defined wall. Whole-flat work adds the rear return, the half-landing, furniture moving twice, and a hall that belongs to the freeholder unless they instruct it. Only the rooms on the proposal are priced. West End Lane still is not the loading bay.",
       },
     ],
   },

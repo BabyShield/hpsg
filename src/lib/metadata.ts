@@ -10,6 +10,11 @@ export function pageMetadata({
   absoluteTitle = true,
   image,
   imageAlt,
+  imageWidth,
+  imageHeight,
+  keywords,
+  category,
+  geoPlacename,
 }: {
   title: string;
   description: string;
@@ -17,12 +22,30 @@ export function pageMetadata({
   absoluteTitle?: boolean;
   image?: string;
   imageAlt?: string;
+  imageWidth?: number;
+  imageHeight?: number;
+  keywords?: string[];
+  category?: string;
+  geoPlacename?: string;
 }): Metadata {
   const url = absoluteUrl(path);
   const ogImage = image ? assetUrl(image) : absoluteUrl("/opengraph-image");
+  const ogImages = [
+    {
+      url: ogImage,
+      alt: imageAlt ?? title,
+      ...(imageWidth && imageHeight ? { width: imageWidth, height: imageHeight } : {}),
+    },
+  ];
   return {
     title: absoluteTitle ? { absolute: title } : title,
     description,
+    applicationName: site.tradingName,
+    authors: [{ name: site.legalName, url: site.url }],
+    creator: site.legalName,
+    publisher: site.legalName,
+    category,
+    keywords,
     alternates: {
       canonical: url,
       languages: { "en-GB": url, "x-default": url },
@@ -45,13 +68,19 @@ export function pageMetadata({
       siteName: site.tradingName,
       title,
       description,
-      images: [{ url: ogImage, alt: imageAlt ?? title }],
+      images: ogImages,
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: [ogImage],
+      images: ogImages,
+    },
+    other: {
+      "geo.region": "GB-LND",
+      "geo.placename": geoPlacename ?? "Hampstead, London",
+      "geo.position": `${site.geo.latitude};${site.geo.longitude}`,
+      ICBM: `${site.geo.latitude}, ${site.geo.longitude}`,
     },
   };
 }

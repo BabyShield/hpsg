@@ -7,6 +7,10 @@ export type ServiceSeo = {
   processH2: string;
   specH2: string;
   areasH2: string;
+  consentH2: string;
+  questionsH2: string;
+  costH2: string;
+  costParas: string[];
   who: string;
   extraFaqs: Faq[];
 };
@@ -22,6 +26,8 @@ export function comboHeadings(slug: ServiceSlug, area: string) {
         process: "How a kitchen programme runs",
         questions: `Kitchen renovation questions in ${area}`,
         facts: `Local facts that shape a ${area} kitchen`,
+        audience: `Who kitchen renovation in ${area} is for`,
+        failures: `What has to be right in a ${area} kitchen`,
       };
     case "bathroom-renovation":
       return {
@@ -32,6 +38,8 @@ export function comboHeadings(slug: ServiceSlug, area: string) {
         process: "How a bathroom programme runs",
         questions: `Bathroom questions in ${area}`,
         facts: `Local facts that shape a ${area} bathroom`,
+        audience: `Who bathroom renovation in ${area} is for`,
+        failures: `What has to be right in a ${area} bathroom`,
       };
     case "painting-decorating":
       return {
@@ -42,6 +50,8 @@ export function comboHeadings(slug: ServiceSlug, area: string) {
         process: "How a decorating programme runs",
         questions: `Painting and decorating questions in ${area}`,
         facts: `Local facts that shape decorating in ${area}`,
+        audience: `Who painting and decorating in ${area} is for`,
+        failures: `What has to be right before decorating in ${area}`,
       };
     case "light-refurbishment":
       return {
@@ -52,18 +62,27 @@ export function comboHeadings(slug: ServiceSlug, area: string) {
         process: "How a light-refurbishment programme runs",
         questions: `Light refurbishment questions in ${area}`,
         facts: `Local facts that shape a ${area} programme`,
+        audience: `Who light refurbishment in ${area} is for`,
+        failures: `What has to be right on a ${area} programme`,
       };
   }
 }
 
 export const serviceSeo: Record<ServiceSlug, ServiceSeo> = {
   "kitchen-renovation": {
-    audienceH2: "Who this kitchen work is for",
-    housingH2: "Conversions, mansion flats and family kitchens",
-    includesH2: "What a typical kitchen instruction includes",
-    processH2: "How a kitchen programme runs",
-    specH2: "How a kitchen is specified",
-    areasH2: "Neighbourhoods we cover",
+    audienceH2: "Who kitchen renovation in North West London is for",
+    housingH2: "Conversions, mansion flats and family kitchens in North West London",
+    includesH2: "What a typical kitchen renovation includes",
+    processH2: "How a kitchen renovation programme runs",
+    specH2: "How a North West London kitchen is specified",
+    areasH2: "Kitchen renovation neighbourhoods in North West London",
+    consentH2: "Licence, extract and the building",
+    questionsH2: "Kitchen renovation questions",
+    costH2: "What kitchen renovation in North West London costs",
+    costParas: [
+      "We do not publish a price list for kitchen renovation in North West London. A rear-return galley in West Hampstead, a compact mansion-flat kitchen on original risers in St John's Wood, and a family room wrapping a chimney breast in Highgate are different jobs. Access, extract, tenure and the services as found change the figure more than the postcode does.",
+      "The written proposal after a visit is the price. It is set against a defined scope: measured survey, first and second fix, cabinetry scribed to the room, worktops in generic material categories, appliance installation and handover. Provisional items are listed for what we cannot see. We do not quote from photographs. Telephone 020 7101 3168.",
+    ],
     who: "Hampstead Property Services Group Limited (company no. 17404557) plans and fits kitchens from Unit 3 Palace Court, 250 Finchley Road, London NW3 6DN. Telephone 020 7101 3168.",
     extraFaqs: [
       {
@@ -86,15 +105,38 @@ export const serviceSeo: Record<ServiceSlug, ServiceSeo> = {
         q: "Do you order kitchen units before measuring the stair?",
         a: "No. Units are ordered only once lift, stair and room dimensions are confirmed on site. In St John's Wood and Maida Vale mansion blocks the stair is the working assumption until we measure.",
       },
+      {
+        q: "Do you renovate small kitchens in North West London conversions?",
+        a: "Yes. Rear-return galleys and compact mansion-flat rooms are ordinary work. Layout follows the window, the stack and the door, not a catalogue island. We will not draw an island that the room cannot serve.",
+      },
+      {
+        q: "Can you renovate a kitchen in a listed Hampstead or Highgate house?",
+        a: "Internal kitchen renovation within the existing room is ordinary work. Listed and conservation rules bite when extract, windows or the elevation change. We check the address before we plan a grille. We do not form openings in listed fabric.",
+      },
+      {
+        q: "Do you work in NW3, NW8 and NW6?",
+        a: "Yes. Hampstead and Belsize Park are NW3. St John's Wood is NW8. West Hampstead, Kilburn and Queen's Park sit in NW6. Each kitchen page on this site is written for that postcode's housing, council and conservation map.",
+      },
+      {
+        q: "What is not included in a kitchen renovation?",
+        a: "Structural openings, kitchen-diners that remove a wall, loft conversions and extensions. Those sit with Hampstead Renovations. A kitchen renovation on this site is a fit-out of the room that exists.",
+      },
     ],
   },
   "bathroom-renovation": {
-    audienceH2: "Who this bathroom work is for",
-    housingH2: "Conversion bathrooms, mansion flats and family houses",
-    includesH2: "What a typical bathroom instruction includes",
-    processH2: "How a bathroom programme runs",
-    specH2: "How a bathroom is specified",
-    areasH2: "Neighbourhoods we cover",
+    audienceH2: "Who bathroom renovation in North West London is for",
+    housingH2: "Conversion bathrooms, mansion flats and family houses in North West London",
+    includesH2: "What a typical bathroom renovation includes",
+    processH2: "How a bathroom renovation programme runs",
+    specH2: "How a North West London bathroom is specified",
+    areasH2: "Bathroom renovation neighbourhoods in North West London",
+    consentH2: "Licence, building control and extract",
+    questionsH2: "Bathroom renovation questions",
+    costH2: "What bathroom renovation in North West London costs",
+    costParas: [
+      "We do not publish a price list for bathroom renovation in North West London. Timber floors in a Hampstead conversion, a stacked mansion-flat bathroom in Maida Vale, and a family bathroom in a Highgate house are different jobs. Floor depth, the stack, extract and whether a licence to alter is needed change the figure.",
+      "The written proposal after a visit is the price. It covers tanking as a documented system, first and second fix, tiling, sanitaryware as specified products, mechanical extract and a watertightness check. We do not quote a suite from a photograph. Telephone 020 7101 3168.",
+    ],
     who: "Hampstead Property Services Group Limited (company no. 17404557) renovates bathrooms from Unit 3 Palace Court, 250 Finchley Road, London NW3 6DN. Telephone 020 7101 3168.",
     extraFaqs: [
       {
@@ -109,15 +151,38 @@ export const serviceSeo: Record<ServiceSlug, ServiceSeo> = {
         q: "Do you work in Camden and Westminster mansion blocks?",
         a: "Yes. Stacked bathrooms in St John's Wood, Maida Vale and Swiss Cottage, and timber-floor conversions in Hampstead and West Hampstead, are ordinary work. The stack and the neighbour below decide the layout.",
       },
+      {
+        q: "Do you renovate small bathrooms in mansion flats?",
+        a: "Yes. Compact stacked rooms in St John's Wood, Maida Vale and Swiss Cottage are ordinary work. Layout follows the stack and the neighbour below. A bath crate is often a stair problem until we measure the lift.",
+      },
+      {
+        q: "Can you add a shower to a family bathroom in a conversion?",
+        a: "Where the floor depth, the waterproofing system and the extract will take it. A conversion rarely has the build-up of a new-build slab. We will not draw a level-access wet room onto joists that cannot accept the fall.",
+      },
+      {
+        q: "Do you renovate bathrooms in listed buildings?",
+        a: "Internal bathroom renovation within the existing room is ordinary work. Listed and conservation rules bite when extract or the elevation change. We check the address before we plan a grille.",
+      },
+      {
+        q: "What is not included in a bathroom renovation?",
+        a: "New external soil pipes on principal elevations, structural openings, and work that cuts into another demise without the building's process. The bathroom stays in the envelope that exists unless the stack will honestly serve a change.",
+      },
     ],
   },
   "painting-decorating": {
-    audienceH2: "Who this decorating work is for",
-    housingH2: "Occupied houses, conversions and mansion flats",
+    audienceH2: "Who painting and decorating in North West London is for",
+    housingH2: "Occupied houses, conversions and mansion flats in North West London",
     includesH2: "What a typical decorating instruction includes",
     processH2: "How a decorating programme runs",
-    specH2: "How decorating is specified",
-    areasH2: "Neighbourhoods we cover",
+    specH2: "How decorating is specified in North West London",
+    areasH2: "Painting and decorating neighbourhoods in North West London",
+    consentH2: "Conservation, joinery and occupied homes",
+    questionsH2: "Painting and decorating questions",
+    costH2: "What painting and decorating in North West London costs",
+    costParas: [
+      "We do not publish a price list for painting and decorating in North West London. A Hampstead drawing room with original joinery, an occupied West Hampstead conversion and a Maida Vale mansion flat are different jobs. Substrate, ceiling height, sash repair and whether the house stays occupied change the figure more than the colour does.",
+      "The written proposal after a visit is the price. It is set against a prep specification: washing down, filling, lining where movement would telegraph, coats, sheen and joinery treated as joinery. Samples are painted on the wall. We do not quote a refresh from a chart. Telephone 020 7101 3168.",
+    ],
     who: "Hampstead Property Services Group Limited (company no. 17404557) decorates period interiors from Unit 3 Palace Court, 250 Finchley Road, London NW3 6DN. Telephone 020 7101 3168.",
     extraFaqs: [
       {
@@ -140,15 +205,34 @@ export const serviceSeo: Record<ServiceSlug, ServiceSeo> = {
         q: "Do you paint original sash windows as joinery?",
         a: "Yes, where they are in scope. Failed cords, staff beads or putty are not a paint item; we say so before we start. Conservation-area and listed windows are checked on the address.",
       },
+      {
+        q: "Do you decorate a single room, or only whole houses?",
+        a: "A single drawing room, a floor of a conversion, or a whole house. The prep specification is written either way. A cheap emulsion over unprepared walls is not the work.",
+      },
+      {
+        q: "Can you paint lime plaster in period interiors?",
+        a: "Yes, with a system that suits the substrate. Lime, gypsum and mixed later patches are surveyed first. We will not put a modern acrylic over lime as a default.",
+      },
+      {
+        q: "Do you paint exteriors in Hampstead Garden Suburb?",
+        a: "Previously painted windows, doors and joinery where access and weather allow. A new outside colour in the Suburb is not assumed. Internal decoration that does not change the elevation is ordinary work.",
+      },
     ],
   },
   "light-refurbishment": {
-    audienceH2: "Who this programme is for",
-    housingH2: "Conversion flats, mansion apartments and family houses",
-    includesH2: "What a typical programme includes",
+    audienceH2: "Who light refurbishment in North West London is for",
+    housingH2: "Conversion flats, mansion apartments and family houses in North West London",
+    includesH2: "What a typical light-refurbishment programme includes",
     processH2: "How a light-refurbishment programme runs",
-    specH2: "How the programme is specified",
-    areasH2: "Neighbourhoods we cover",
+    specH2: "How a North West London programme is specified",
+    areasH2: "Light refurbishment neighbourhoods in North West London",
+    consentH2: "Licence, sequence and the envelope",
+    questionsH2: "Light refurbishment questions",
+    costH2: "What light refurbishment in North West London costs",
+    costParas: [
+      "We do not publish a price list for light refurbishment in North West London. A West Hampstead conversion flat, a Maida Vale mansion apartment and a storey of a Highgate house are different programmes. Kitchen and bathroom scope, floor condition, licence lead-in and whether you decant change the figure.",
+      "The written proposal after a visit is the price for a defined programme: kitchen and bathroom if they are in, decoration, floors, joinery and the services those rooms need. Structural openings, lofts and extensions are not in that price because they are not this service. Telephone 020 7101 3168.",
+    ],
     who: "Hampstead Property Services Group Limited (company no. 17404557) runs light-refurbishment programmes from Unit 3 Palace Court, 250 Finchley Road, London NW3 6DN. Telephone 020 7101 3168.",
     extraFaqs: [
       {
@@ -170,6 +254,14 @@ export const serviceSeo: Record<ServiceSlug, ServiceSeo> = {
       {
         q: "Do you protect common parts in conversion and mansion-block programmes?",
         a: "Yes. Shared stairs and hallways are written into the method. The demise is one programme; the stair is a separate instruction unless the freeholder is the client.",
+      },
+      {
+        q: "What is the difference between light refurbishment and a full renovation?",
+        a: "Light refurbishment keeps the structure. Kitchen, bathroom, decoration, floors and the services those rooms need. A full renovation that moves walls, adds a storey or forms an extension sits with Hampstead Renovations.",
+      },
+      {
+        q: "Do you refurbish mansion flats in St John's Wood and Maida Vale?",
+        a: "Yes. The plan stays as it is. Kitchen and bathroom replaced, floors and decoration brought to one standard, the building's hours and licence-to-alter process followed. We do not alter the carcass.",
       },
     ],
   },

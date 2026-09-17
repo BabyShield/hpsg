@@ -113,7 +113,7 @@ export const services: Service[] = [
     ],
     metaTitle: "Kitchen renovation in North West London | HPSG",
     metaDescription:
-      "Galleys, chimney breasts and compact mansion-flat kitchens in Hampstead, St John's Wood and Maida Vale. Survey-led fit-out from Finchley Road. 020 7101 3168.",
+      "Kitchen renovation in Hampstead, St John's Wood and Maida Vale: galleys, chimney breasts and mansion-flat kitchens. Survey-led. 020 7101 3168.",
   },
   {
     slug: "bathroom-renovation",
@@ -227,7 +227,7 @@ export const services: Service[] = [
     ],
     metaTitle: "Bathroom renovation in North West London | HPSG",
     metaDescription:
-      "Tanking, extract and compact layouts in Hampstead conversions and St John's Wood mansion flats. Timber floors and shared wastes. Survey-led. 020 7101 3168.",
+      "Bathroom renovation in Hampstead conversions and St John's Wood mansion flats: tanking, extract and compact layouts. Survey-led. 020 7101 3168.",
   },
   {
     slug: "painting-decorating",
@@ -328,7 +328,7 @@ export const services: Service[] = [
     ],
     metaTitle: "Painting & decorating in North West London | HPSG",
     metaDescription:
-      "Preparation, original joinery and occupied houses in Hampstead, Belsize Park and Highgate. A written prep specification, not a quick refresh. 020 7101 3168.",
+      "Painting and decorating in Hampstead, Belsize Park and Highgate: preparation, original joinery and occupied houses. Written prep specification. 020 7101 3168.",
   },
   {
     slug: "light-refurbishment",
@@ -437,7 +437,7 @@ export const services: Service[] = [
     ],
     metaTitle: "Light refurbishment in North West London | HPSG",
     metaDescription:
-      "Kitchen, bathroom, decoration and floors as one programme in Hampstead conversions and mansion flats. Not a loft or extension. Survey-led. 020 7101 3168.",
+      "Light refurbishment in Hampstead conversions and mansion flats: kitchen, bathroom, decoration and floors as one programme, not a loft. 020 7101 3168.",
   },
 ];
 

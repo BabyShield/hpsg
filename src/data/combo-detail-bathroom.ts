@@ -10,6 +10,28 @@ export const bathroomDetail: ComboDetailMap = {
     ],
     processNote: "Paperwork comes before plaster here. Conservation status and any Article 4 are checked against the address, because a duct that must reach a rear elevation changes the layout and not merely the finish. In the avenue blocks the managing agent's licence runs in parallel, and the room is not opened until it is granted. Village streets then set the vehicle and the drop, and the common stair is protected before anything is carried up.",
     consent: "Two consents can apply and they come from different places. Camden controls the exterior: the Belsize Conservation Area covers much of the neighbourhood and Article 4 directions apply to parts of it, so a grille or a duct terminating on stucco is a planning question [VERIFY the boundary and the direction for the address]. Inside, the lease decides. In laterally converted houses the demise often crosses what was once a party wall, so the lease plan is worth reading before a waste moves; the licence to alter is granted by the freeholder or managing agent, not by the council.",
+    audience: [
+      "Bathroom renovation in Belsize Park (NW3) is for owner-occupiers and landlords in Camden's mid- and late-Victorian stucco houses — many now split laterally — and in the purpose-built mansion flats on Belsize Avenue and Haverstock Hill. The instruction is usually a household that wants an ensuite in a former bedroom, or a compact stacked bathroom in an avenue block brought up to a documented waterproofing standard, without taking a chimney breast out or running a waste through a neighbouring demise.",
+      "The Belsize bathroom is rarely the room the house was drawn with. In converted houses it is a later insertion around a chimney breast, often a former dressing room or box room on timber joists over another household. On the avenues it is a compact room on the block's original riser, with a sash onto a lightwell and a door that fights a shower tray. High ceilings look generous and then show every joint in the tiling. Wet rooms are specified only where that floor has the depth for a fall.",
+    ],
+    failures: [
+      {
+        title: "Lateral-conversion tanking",
+        text: "A Belsize ensuite often sits on timber joists over another demise in a house that was split after it was built. Paint-on tanking over boarded floor is not a system; a documented membrane with falls that actually drain is. The neighbour below is the first person a failed seal reaches. We isolate, tank and test before tiling closes the floor.",
+      },
+      {
+        title: "Stucco extract grille",
+        text: "Belsize Conservation Area covers a large part of the neighbourhood, and Article 4 directions apply to parts of it [VERIFY the boundary and the direction for the address]. A fan that dumps into a void is not extract. A grille punched through a principal stucco front as a convenience is not a route we will draw. The duct is planned for a rear or flank elevation Camden will actually accept, before the room is opened.",
+      },
+      {
+        title: "Chimney-breast layout",
+        text: "Inserted ensuites here are planned around a breast, not through it. The stack often sits in or beside that breast, and the alcoves either side decide where a shower or a cistern can go. Removing the breast is structural work and sits with Hampstead Renovations. Where the honest answer is that the room cannot hold a shower without a pump, that is said at survey.",
+      },
+      {
+        title: "Tall-room waste boxing",
+        text: "Generous Belsize ceiling heights give room to run a waste at a fall, but the boxing that hides it is at eye level and every joint shows. Tiling to that height needs access equipment written into the programme. Cornice outside the wet zone is treated as fabric. A catalogue wet-room drawing that ignores the height will look unfinished in this stock.",
+      },
+    ],
     extraFaqs: [
       {
         q: "Who has to approve an ensuite in a Belsize Park flat before work starts?",
@@ -23,6 +45,26 @@ export const bathroomDetail: ComboDetailMap = {
         q: "Do the high ceilings in Belsize rooms make a bathroom easier or harder?",
         a: "Harder, on balance. Height gives room to run a waste at a fall, but the boxing that hides it is at eye level in a tall room and every joint shows. Tiling to a high ceiling also needs access equipment written into the programme, and cornice at that height is fragile. The advantage is real ventilation volume; the cost is that nothing sloppy can hide.",
       },
+      {
+        q: "Can a Belsize Park conversion bathroom become a wet room on timber joists?",
+        a: "Only where the floor has the depth for a fall and a documented waterproofing system. Lateral conversions in Belsize Park are not a new-build slab; the joists are often shallow and already carry a neighbour's ceiling below. We survey the build-up rather than draw a level-access room onto a floor that cannot take it.",
+      },
+      {
+        q: "Can we stay in a Belsize Park flat while the bathroom is out?",
+        a: "Often, if there is a second bathroom or a workable arrangement with the rest of the flat. In a lateral conversion there is usually only one room, and the shared stair is not a place to store a bath crate. We say at survey whether staying is practical, and we sequence noisy work and water isolation so the rest of the demise remains usable. A short decant is sometimes the cleaner route; we do not pretend otherwise.",
+      },
+      {
+        q: "Will underfloor heating fit in a Belsize Park bathroom floor?",
+        a: "It is a depth question, not a finishes question. Inserted ensuites in converted houses rarely have the build-up of a solid slab, and a wet-room fall plus insulation plus a heating mat can exceed what the joists will accept without lifting the finished floor above the landing. We measure at survey and will say if the mat belongs, rather than thin the insulation to make it fit.",
+      },
+      {
+        q: "Can you tile over the existing tiles in a Belsize Park bathroom?",
+        a: "Not as a default. Failed adhesive and trapped moisture in this conversion stock make tiling over tiles a false economy, and the extra thickness steals the door clearance a compact ensuite already lacks. We strip to a substrate the waterproofing can bond to. If a section of wall tile is sound and outside the wet zone, that is a written exception, not the method.",
+      },
+      {
+        q: "Does a Belsize Park bathroom renovation need building-control notification?",
+        a: "Where the work falls within the current regulations — a new electrical circuit, extra-low-voltage underfloor heating, or a change to drainage — notification is arranged at proposal stage, not after strip-out. Replacing sanitaryware on existing wastes inside the room often does not. We identify which it is from the survey rather than treating every Belsize ensuite as a notifiable job. Gas work, if an appliance shares the room or the flue, is by a Gas Safe registered engineer.",
+      },
     ],
   },
   "crouch-end": {
@@ -32,6 +74,28 @@ export const bathroomDetail: ComboDetailMap = {
     ],
     processNote: "In a converted house the lead-in is mostly other people. Consent may rest with a freeholder who is also the neighbour downstairs, a skip needs a Haringey licence on a residential street rather than the Broadway, and the other flats need to know which days are noisy. Those answers set the order: protection to the stair and hall goes in first, breaking-out is grouped into a stated window in the working day, and the room is not opened until the licence and the delivery slot line up.",
     consent: "Conservation designation here bears on the outside of the building, not on a bathroom inside it. Re-fitting an existing room is generally not development, so most of what we do needs no application. A grille, a new soil pipe or a window change on a designated frontage is a different matter, and that consent is Haringey's. [VERIFY whether the address sits inside the boundary and whether an Article 4 applies.] Separately, most upper flats in these converted houses are leasehold: an alteration to shared drainage needs the freeholder's written permission, which is theirs to give, not ours.",
+    audience: [
+      "Bathroom renovation in Crouch End (N8) is for owner-occupiers in Haringey's converted Victorian and Edwardian houses around the Broadway — garden and upper-floor flats that share a tiled hall, a single soil stack and a neighbour on the other side of the floor. Purpose-built mansion blocks are the exception here, not the rule. Typical instructions come from a household that wants the half-landing or back-addition bathroom re-fitted without opening the plan or treating the shared stair as a site route.",
+      "The Crouch End bathroom is a conversion room. It sits on a half-landing or in a rear addition already inside the envelope, with another household directly beneath it and a door that often opens over the head of the stair. High-ceilinged rooms with original mouldings sit outside the wet zone; the bathroom itself is the leftover of a house that was never drawn as flats. Wet rooms are specified only where the timber floor has the depth. We do not form a new rear addition as this service.",
+    ],
+    failures: [
+      {
+        title: "Shared-house stack",
+        text: "Most Crouch End conversions drain the whole house into one rear stack. The bathroom layout follows that stack; moving a WC a long way is often the item that is not possible without work we do not do. A pumped waste is a last resort, written into the proposal if it is the only way the room works, not hidden as a day-two extra. We lift boards and confirm the fall before the drawing is finished.",
+      },
+      {
+        title: "Neighbour-ceiling tanking",
+        text: "The floor of an upper-flat bathroom here is somebody's ceiling. Paint-on tanking over boarded floor is not a system. A documented membrane, isolation of the wastes and a test before tiling closes the deck are the method, because a failed joint shows first in the room below. We agree access with that household if a connection sits in their void.",
+      },
+      {
+        title: "Broadway extract route",
+        text: "Crouch End Conservation Area was designated by Haringey on 25 October 1974 and covers the Broadway and a ring of residential streets [VERIFY whether the address sits inside it]. An extract grille pointing at a neighbouring rear window, or punched through a designated frontage as a convenience, is not a route we will draw. The duct is planned for an elevation the neighbours and the council will actually accept.",
+      },
+      {
+        title: "Tiled-hall protection",
+        text: "Original tiled halls and moulded stairs are characteristic of these converted houses and they are not a site path by default. Protection, working hours and a drop point on a residential side street — not the Broadway — are agreed with the other flats before anything is carried up. A bath crate that will not turn on the half-landing is found at survey, not on delivery day.",
+      },
+    ],
     extraFaqs: [
       {
         q: "What makes one Crouch End bathroom cost more than another?",
@@ -45,6 +109,26 @@ export const bathroomDetail: ComboDetailMap = {
         q: "Our bathroom is in the back addition and it is cold and out of square. Can it be squared up?",
         a: "Within the finish, yes; by moving the walls, no. Back-addition rooms in these houses are rarely square and rarely well insulated, so we scribe boards and tiling to what is there and, where floor and wall depth allow, improve the build-up while the room is open. What we will not do is take out or rebuild the wall to correct the geometry.",
       },
+      {
+        q: "Can a Crouch End conversion bathroom become a wet room on timber joists?",
+        a: "Only if the floor has the depth for a fall and a documented waterproofing system. Converted houses around the Broadway are not a new-build slab, and a half-landing is often short of build-up. We will say so at survey rather than draw a level-access room onto joists that cannot take it.",
+      },
+      {
+        q: "Can we stay in a Crouch End flat while the bathroom is stripped?",
+        a: "In a converted house there is often only one bathroom, so staying means living without that room for the wet weeks. A second room, or an arrangement with the household below, changes that. We sequence noisy work into a stated window of the day and keep the rest of the flat usable. We say at survey whether staying is practical rather than assuming a vacant house.",
+      },
+      {
+        q: "Does a Crouch End bathroom in a converted house need a licence to alter?",
+        a: "For a like-for-like re-fit within the room, often not, though many leases require notice. For anything that moves a waste onto the house stack, cuts a new duct or opens a shared void, almost certainly. In these houses the freeholder is often a neighbour holding a share of the freehold, so the pack is a neighbour conversation as well as a legal one. We can prepare drawings and a method statement; consent is theirs to give.",
+      },
+      {
+        q: "Will extract through a Crouch End conservation elevation need consent?",
+        a: "It can, if the grille lands on a designated frontage. Crouch End Conservation Area covers the Broadway and a ring of residential streets; a rear elevation pointing at a neighbouring window is a neighbour question even when it is not a planning one. We plan the route at survey and will not punch a hole as a convenience. [VERIFY whether the address sits inside the boundary.]",
+      },
+      {
+        q: "Can a family bathroom and a shower room in a Crouch End house be done in one programme?",
+        a: "Where both rooms already exist, yes. Converted houses here sometimes keep a half-landing bathroom and a later back-addition shower room; taking them in turn keeps one room available. We do not form a second bathroom as this service. The sequence is written so there is never a week with neither, unless you choose to open both.",
+      },
     ],
   },
   "golders-green": {
@@ -54,6 +138,28 @@ export const bathroomDetail: ComboDetailMap = {
     ],
     processNote: "Two things let the sequence run more cleanly here than in a Camden flat, and one does not. Off-street parking means the strip-out skip and the material drop can often be arranged on the property rather than licensed on the highway, so the front end is shorter. Occupied family houses are the offsetting factor: with the household in residence, the WC provision, the dust route through the landing and the hours are agreed before anything comes out, and second fix is sequenced to give the room back in one piece.",
     consent: "Most of this stock is undesignated, which changes the paperwork rather than the standard. A bathroom renewed inside an existing room is not a planning matter in Barnet. The elevation is different: a replacement bathroom window in an altered design, a new soil vent pipe or a grille on a front wall can all run into permitted-development limits, and on the designated streets around Golders Hill Park into conservation control [VERIFY Barnet's map]. Ownership rarely arises in the houses; in the mansion flats a licence to alter from the freeholder does. Trust rules apply only inside the Hampstead Garden Suburb boundary [VERIFY].",
+    audience: [
+      "Bathroom renovation in Golders Green (NW11) is for owner-occupiers of Edwardian and inter-war family houses in the London Borough of Barnet — brick, pebbledash and later mock-Tudor — who want the first-floor family bathroom replaced while the household stays in residence. Compact ensuites in the mansion flats along Golders Green Road and toward Golders Hill Park are a second, smaller instruction. This is not Hampstead Garden Suburb: the Suburb is next door and has its own Trust [VERIFY the boundary].",
+      "The typical Golders Green bathroom is an original family room with a window, a tiled dado behind later boarding, and often a separate WC on the other side of a partition. It sits on suspended timber over a bedroom or a hall. Plots are larger than in a Camden conversion and off-street parking is more common, but the floor is still timber and the extract still has to leave the house. Wet rooms are specified only where the joists have the depth for a fall.",
+    ],
+    failures: [
+      {
+        title: "Inter-war joist depth",
+        text: "A larger family bathroom is not a slab. Edwardian and inter-war first floors here are still suspended timber, and a level-access wet room needs a fall the joists may not have the depth to take. We lift boards and measure the build-up before a wet-room drawing is offered. A pebbledash house that looks suburban on the outside can be as out of square under the floor as a Camden conversion.",
+      },
+      {
+        title: "Cavity-wall ducting",
+        text: "Much of the inter-war stock is cavity-built. A fan duct that stops short in the cavity puts warm, wet air into the wall rather than outside. The duct is sleeved through to a terminal on the face, insulated where it crosses a cold void, and set to fall outward. On the designated streets near Golders Hill Park a grille on a front wall becomes a Barnet application [VERIFY the map].",
+      },
+      {
+        title: "Separate-WC partition",
+        text: "Many of these houses still have a bathroom and a separate WC either side of a partition. Combining them is only ours to do if that wall is a later stud taking no load. If it carries anything above, the work is structural and sits with Hampstead Renovations. We look at what is above that wall before we answer, not after strip-out.",
+      },
+      {
+        title: "Driveway bath drop",
+        text: "Off-street parking eases the drop compared with a Camden conversion, but a drive that takes two cars will not always take a skip lorry or a bath crate. Golders Green Road at peak hours is a loading problem for properties on that spine; the crescents behind it are not. The vehicle and the standing surface are settled at survey rather than assumed from the plot size.",
+      },
+    ],
     extraFaqs: [
       {
         q: "We have two bathrooms. Should they be done together or one after the other?",
@@ -67,6 +173,26 @@ export const bathroomDetail: ComboDetailMap = {
         q: "Does a cavity wall change how the extract is done?",
         a: "Yes. Much of the inter-war stock here is cavity-built, and a fan duct that stops short in the cavity puts warm, wet air into the wall rather than outside. The duct is sleeved through to a terminal on the face, insulated where it crosses a cold void, and set to fall outward. It is easy to get right at first fix and disruptive to put right afterwards.",
       },
+      {
+        q: "Can an Edwardian family bathroom in Golders Green become a wet room on joists?",
+        a: "Sometimes, if the floor has the depth. A larger family room is not the same as a slab, and first-floor joists over a bedroom still have to take a fall and a documented waterproofing system. We will not specify a wet room that the joists cannot take. The survey measures the build-up rather than assuming suburban houses are deeper.",
+      },
+      {
+        q: "Can the household stay in a Golders Green house while the bathroom is out?",
+        a: "Usually, and that is the ordinary brief here. Occupied family houses need a working WC, a dust route through the landing and hours agreed before anything comes out. Where there is a second bathroom, we take the rooms in turn so one remains available. Where there is not, second fix is sequenced to give the room back in one piece rather than in interrupted weeks.",
+      },
+      {
+        q: "Will underfloor heating fit in a Golders Green bathroom floor?",
+        a: "It depends on the depth once boards are up. Inter-war first floors here can take a mat more readily than a Camden half-landing, but a wet-room fall plus insulation plus heating still has to sit below the landing threshold. We measure at survey. Extra-low-voltage underfloor heating is treated as an electrical circuit, and building-control notification is arranged where the work falls within the current regulations.",
+      },
+      {
+        q: "Can you tile over the existing tiles in a Golders Green family bathroom?",
+        a: "Not as a default. Tiled dados behind later boarding are common in this stock, and the adhesive behind them is of unknown age. Trapped moisture and a flexing timber floor will crack a new finish laid over an old one. We strip to a substrate the waterproofing can bond to. Sound wall tile outside the wet zone can stay as a written exception.",
+      },
+      {
+        q: "Does a Golders Green bathroom renovation need building-control notification?",
+        a: "Where a new electrical circuit, extra-low-voltage underfloor heating or a change to drainage is involved, yes — arranged at proposal stage. Replacing sanitaryware on existing wastes inside the room often does not. Barnet is the planning authority for the elevation; building control is a separate question. We identify which applies from the survey rather than treating every family bathroom as notifiable.",
+      },
     ],
   },
   "hampstead": {
@@ -76,6 +202,28 @@ export const bathroomDetail: ComboDetailMap = {
     ],
     processNote: "The lead-in here carries the checks rather than the site. Listing and conservation status are confirmed from Camden's map before anything is ordered, because a grille position can change the layout. Where the flat is leasehold, the freeholder's paperwork starts then too. On site, the carry is planned before the room is opened: a village lane takes a timed vehicle, and the stair and hall are protected first. Materials are dated before the only bathroom in the house is stripped.",
     consent: "Listing is the first question in the village, not the conservation area. Where a house is listed, internal alterations can require listed building consent in their own right: the listing covers plan form, joinery and panelling, not only the front elevation. Unlisted properties in the Hampstead Conservation Area are controlled on the outside instead, so a new grille or duct terminal is where Camden's interest begins, while a bathroom renewed inside its existing walls usually falls outside planning. Camden grants those consents; a freeholder grants a licence to alter. [VERIFY listing and boundary on the address.]",
+    audience: [
+      "Bathroom renovation in Hampstead (NW3) is for owner-occupiers of village houses and converted flats in the London Borough of Camden — Georgian and early-Victorian fabric around Heath Street and the High Street, later stucco villas, and mansion blocks on the busier approaches. Typical instructions are a family bathroom already in use, a compact ensuite in a former dressing room or box room where the stack will reach, or a stacked conversion bathroom on timber floors over a neighbour.",
+      "The Hampstead bathroom is waterproofing in old fabric. Lime plaster, original joinery and floors that have moved sit around the wet zone; the soil stack, the floor build-up and the extract route that a listed or conservation elevation will actually accept decide the layout before sanitaryware is chosen. Larger family houses toward the Heath and along Frognal give a bigger version of the same job. We renovate the rooms that exist. We do not form a new envelope.",
+    ],
+    failures: [
+      {
+        title: "Village-lane bath crate",
+        text: "Lanes off Heath Street were not drawn as loading bays. A bath crate is a measured carry up an original stair, timed to a vehicle that will actually fit, not a kerbside assumption. The survey records the turn of the stair and the drop point before anything is ordered. A stone bath that will not come round the newel is found then, not on delivery day.",
+      },
+      {
+        title: "Listed-elevation extract",
+        text: "Much of Hampstead sits in Camden's Hampstead Conservation Area, with a high concentration of listed buildings around the village [VERIFY listing and boundary on the address]. Where a house is listed, internal alterations can need listed building consent in their own right. A grille on a principal front is not a convenience we will draw. Extract is planned for an elevation the designation will accept, before the room is opened.",
+      },
+      {
+        title: "Lime-plaster wet zone",
+        text: "A waterproofing system needs a substrate it can bond to, and old lime is not it. Inside the wet zone the plaster comes off. Outside that zone, sound lime and original architraves stay and are made good rather than stripped for convenience. Boxing in joinery on a principal landing to hide a waste is not the method in this stock.",
+      },
+      {
+        title: "Conversion-joist tanking",
+        text: "Stacked bathrooms in converted village houses sit on timber intermediate floors over another demise. Paint-on tanking over boarded floor is not a system. A documented membrane with falls that actually drain, isolation of the wastes and a test before tiling closes the deck are what protect the room below. A village conversion is not a new-build slab.",
+      },
+    ],
     extraFaqs: [
       {
         q: "How long does a bathroom in a Hampstead conversion take from the day you start?",
@@ -89,6 +237,26 @@ export const bathroomDetail: ComboDetailMap = {
         q: "What happens to the lime plaster and joinery around a Hampstead bathroom?",
         a: "Inside the wet zone it comes off, because a waterproofing system needs a substrate it can bond to and old lime is not it. Outside that zone, sound plaster and original architraves stay and are made good rather than stripped for convenience. Where a bathroom sits off a principal landing, the door, the frame and the floor beyond it are protected for the whole programme.",
       },
+      {
+        q: "Can we stay in a Hampstead village house while the bathroom is stripped?",
+        a: "Where there is a second bathroom, yes, and the programme is written around that room remaining available. Where the house has only one, staying means living without it for the wet weeks, and materials cannot be stored on a village lane. We date sanitaryware before the only bathroom comes out. A short decant is sometimes the cleaner route in a listed interior; we say so at survey.",
+      },
+      {
+        q: "Does a Hampstead conversion bathroom need a licence to alter?",
+        a: "If the flat is leasehold and wastes move, or extract is cut through a common void, usually yes. Village conversions often share a stair and a stack with other households; the freeholder or managing agent grants the licence, not Camden and not us. We can prepare drawings and a method statement. We do not strip the room while that pack is outstanding. [VERIFY the lease for the address.]",
+      },
+      {
+        q: "Will underfloor heating fit in a Hampstead conversion bathroom?",
+        a: "It is a depth question on timber joists that have already moved. A wet-room fall plus insulation plus a heating mat can lift the finished floor above a principal landing that was never meant to step. We measure at survey and will say if the mat belongs. Extra-low-voltage underfloor heating is an electrical circuit; building-control notification is arranged where the work falls within the current regulations.",
+      },
+      {
+        q: "Can you tile over the existing tiles in a Hampstead village bathroom?",
+        a: "Not as a default. Period floors here rarely offer a level fall, and failed adhesive over lime or later boarding traps moisture that a new finish will not cure. Extra thickness also fights original door clearances and architraves we are keeping. We strip the wet zone to a substrate the waterproofing can bond to.",
+      },
+      {
+        q: "Does a Hampstead bathroom renovation need building-control notification?",
+        a: "Where a new electrical circuit, extra-low-voltage underfloor heating or a change to drainage is involved, notification is arranged at proposal stage. Replacing sanitaryware on existing wastes inside the room often does not. Listing is a separate question from building control: a listed interior can need listed building consent even when building control is not engaged. [VERIFY listing on the address.]",
+      },
     ],
   },
   "hampstead-garden-suburb": {
@@ -98,6 +266,28 @@ export const bathroomDetail: ComboDetailMap = {
     ],
     processNote: "One question governs the order of everything here: does any part of the scheme reach the outside of the house. Extract is usually the only candidate, so its route is settled at the start rather than left to first fix. If it stays internal, the programme runs like any other fit-out. If it does not, the Trust and Barnet run in the background while materials are dated, and the room is not opened until both answers exist. Deliveries are planned for a close, not a kerb.",
     consent: "Two separate permissions cover the outside of a Suburb house, and neither covers a bathroom that stays inside a room. Barnet decides planning, including anything the Article 4 direction has taken out of permitted development. The Hampstead Garden Suburb Trust decides consent under its Scheme of Management, which is a property arrangement rather than a planning one, and it applies to properties within its own boundary. So a grille, a pipe or a window can need both, in writing, before work starts. [VERIFY the Trust boundary and current guidance for the specific item.]",
+    audience: [
+      "Bathroom renovation in Hampstead Garden Suburb (NW11) is for owner-occupiers of Arts and Crafts and later houses in the London Borough of Barnet — cottages, larger free-standing houses, and grouped compositions around greens and closes — who want the bathroom re-fitted without touching the planned envelope. Purpose-built mansion blocks are not the local type. The Trust, Barnet planning and an Article 4 sit on the outside of the house; the instruction is internal work under that envelope.",
+      "The Suburb bathroom has almost always been altered since the original build. Cottage rooms are tight, often under a ceiling that follows the roof, with one small casement that is not an extract route. Larger free-standing houses give a family bathroom in an existing room, and an ensuite only where the stack can be reached without breaking the elevation. Wet rooms are specified only where the floor will take a fall. We re-fit the room that exists.",
+    ],
+    failures: [
+      {
+        title: "Trust-elevation extract",
+        text: "A grille, a soil pipe or a window on a Suburb house can need Barnet planning permission and separate written Trust consent before work starts [VERIFY the Trust boundary and current guidance for the item]. Internal work that does not change the elevation often sits outside Trust consent, but we do not assume that if extract has to leave the house. The route is settled at the start, not at first fix.",
+      },
+      {
+        title: "Cottage roof-slope ceiling",
+        text: "Cottage bathrooms here often sit under a ceiling that follows the roof. A concealed cistern, a recessed shower valve and a drop for extract ducting all borrow depth from somewhere, and there is less of it than in a free-standing family house. We measure the soffit before the layout is drawn. Raising the floor to win a wet-room fall can steal the headroom the slope has already taken.",
+      },
+      {
+        title: "Close-and-green delivery",
+        text: "Closes and greens were designed as settings, not as service yards. A bath crate does not sit where a delivery lorry would elsewhere; materials come in smaller loads with a planned carry. Party walls in a grouped cottage carry sound, so breaking out is kept to stated hours. The drop is agreed before anything is ordered.",
+      },
+      {
+        title: "Arts-and-Crafts floor depth",
+        text: "These floors were not drawn for a level-access wet room. Cottage joists are often shallow, and a documented waterproofing system with a fall needs build-up the landing threshold may not allow. We lift boards and measure before a wet-room drawing is offered. A larger family bathroom in a free-standing house is still timber, not a slab.",
+      },
+    ],
     extraFaqs: [
       {
         q: "What determines the cost of a bathroom in a Suburb house?",
@@ -111,6 +301,26 @@ export const bathroomDetail: ComboDetailMap = {
         q: "We are in a terraced group of cottages around a close. Does that change how you work?",
         a: "It changes noise and access more than method. Party walls in a grouped cottage carry sound, so breaking out is kept to stated hours and neighbours are told in advance. Vehicles cannot sit where a delivery lorry would elsewhere, so materials come in smaller loads with a planned carry. Inside the room, the floor, the waterproofing and the extract are judged exactly as they would be in a larger house.",
       },
+      {
+        q: "Can a Hampstead Garden Suburb cottage bathroom become a wet room on joists?",
+        a: "Internally, sometimes, if the floor will take a fall and a documented waterproofing system. Cottage joists are often shallow, and raising the floor to win that fall can steal headroom under a roof slope. The Trust and Barnet arrive when extract, a soil pipe or a window is involved. We will not assume a grille on a Trust elevation, and we will not draw a level-access room onto joists that cannot take it.",
+      },
+      {
+        q: "Can the household stay in a Hampstead Garden Suburb house while the bathroom is out?",
+        a: "Usually. These are family houses, and occupied working is the ordinary brief. Where there is a second bathroom we take the rooms in turn. Where there is not, sanitaryware is dated before the only room comes out, and deliveries are planned for a close rather than stored in a hall. We say at survey whether staying is practical for the wet weeks.",
+      },
+      {
+        q: "Will underfloor heating fit in a Hampstead Garden Suburb cottage bathroom?",
+        a: "It is a depth and a headroom question. A heating mat plus insulation plus a fall can lift the finished floor under a ceiling that already follows the roof. We measure the soffit and the joists at survey. Extra-low-voltage underfloor heating is an electrical circuit; building-control notification is arranged where the work falls within the current regulations.",
+      },
+      {
+        q: "Can you tile over the existing tiles in a Hampstead Garden Suburb bathroom?",
+        a: "Not as a default. Bathrooms here have almost all been re-fitted since the original build, so the tiles you see sit on somebody's later work of unknown quality. Trapped moisture and a shallow floor make tiling over tiles a false economy. We strip the wet zone to a substrate the waterproofing can bond to, and we keep original joinery outside that zone rather than boxing it in.",
+      },
+      {
+        q: "Can two bathrooms in a Hampstead Garden Suburb house be done in one programme?",
+        a: "Where both rooms already exist, yes. A cottage with one bathroom and a larger house with a family room and an ensuite are different sequences. We take the rooms in turn so the household is never without one, unless you choose to open both. We do not form a second bathroom by opening the plan; that sits with Hampstead Renovations.",
+      },
     ],
   },
   "highgate": {
@@ -120,6 +330,28 @@ export const bathroomDetail: ComboDetailMap = {
     ],
     processNote: "Before anything is ordered we settle which authority the address answers to, because that decides the skip and scaffold application and how long it takes. That check runs alongside the water-system reading: if the house is on a stored cold-water supply, the shower specification and any pressure work have to be resolved at layout stage, not discovered at second fix. Deliveries are the last variable. A bath crate reaches a village house or a slope villa by a carry we walk beforehand.",
     consent: "Two questions, answered separately. Planning and conservation are the council's, and in Highgate that means establishing whether the address falls to Camden, Haringey or Islington before an application is drafted; a renewed bathroom inside an existing room is not normally an application at all, while a grille, an external waste or a window is. Ownership is the other question: in a converted villa the freeholder or agent grants the licence to alter, and that is who consents to a waste moving through a shared void — not the borough. [VERIFY the authority, designation and tenure for the property.]",
+    audience: [
+      "Bathroom renovation in Highgate (N6) is for owner-occupiers of Village houses around Pond Square and Highgate High Street, and of the larger Victorian villas on the slopes toward the Heath and Archway. Highgate is not a single-authority area: Camden, Haringey and, on some streets, Islington all appear [VERIFY the council for the address]. Typical instructions are a first-floor bathroom in a house that has been added to over a century — a former dressing room off the principal bedroom, or a half-landing room over the return.",
+      "The Highgate bathroom is decided by water and by the rear stack, not by the fixture list. Many of these houses are still gravity-fed from a roof tank [VERIFY on the property], and the cast-iron stack on the rear wall is often an external, visible component in a conservation area. Conversion flats toward Archway are closer to a Camden terrace bathroom. Holly Lodge Estate is a different map. Wet rooms are specified only where the floor depth will take a fall.",
+    ],
+    failures: [
+      {
+        title: "Gravity-fed shower pressure",
+        text: "A stored, gravity-fed supply gives you the head the tank height allows, and in a Village house that can be modest for a first-floor shower. A catalogue mixer specified for mains pressure will not perform on that system. The options are a pump, a change of hot-water arrangement, or a shower chosen for the pressure that exists, measured at survey rather than discovered at second fix. [VERIFY the system on the property.]",
+      },
+      {
+        title: "Split-borough paperwork",
+        text: "Skip and scaffolding licences are issued by the borough the address sits in — Camden, Haringey or, on some streets, Islington. Highgate Conservation Area was designated on 21 December 1967 and is split between Camden and Haringey; Holly Lodge Estate is a separate designation. Confirming the authority is part of the survey, not a neighbourhood-name assumption. [VERIFY which authority and which conservation-area name apply.]",
+      },
+      {
+        title: "Cast-iron rear stack",
+        text: "The soil stack on these rear elevations is often original cast iron, visible, and in a conservation area. Swapping it for plastic is a change to the building's appearance as well as a plumbing decision. We connect to it where it is sound, report it where it is not, and say what consent a replacement would need before it is priced. We do not re-route the external stack as this service.",
+      },
+      {
+        title: "Slope-villa bath carry",
+        text: "Steep roads, tree constraints and Village lanes decide how a bath crate arrives. A slope villa is not automatically easier than a conversion: the carry is longer, the turning is tighter, and a skip may sit on a root zone that needs notice [VERIFY TPO and conservation-area tree notice with the correct borough]. The vehicle and the route are walked at survey.",
+      },
+    ],
     extraFaqs: [
       {
         q: "Who has to say yes before a Highgate bathroom starts?",
@@ -133,6 +365,26 @@ export const bathroomDetail: ComboDetailMap = {
         q: "Is the old cast-iron soil stack replaced as part of the work?",
         a: "Not by default. On these rear elevations it is an external, visible component in a conservation area, and swapping it for plastic is a change to the building's appearance as well as a plumbing decision. We connect to it where it is sound, report it where it is not, and say what consent a replacement would need before it is priced. [VERIFY the designation for the address.]",
       },
+      {
+        q: "Can we stay in a Highgate villa while the bathroom is stripped?",
+        a: "Usually, if there is a second bathroom or a workable WC elsewhere in the house. Slope villas often have a family bathroom and a later ensuite; taking them in turn keeps one available. Village houses with a single room are tighter, and the carry up a slope means materials cannot sit in a hall for weeks. We say at survey whether staying is practical.",
+      },
+      {
+        q: "Does a Highgate converted villa need a licence to alter for the bathroom?",
+        a: "If wastes move through a shared void, or extract is cut through common fabric, usually yes. The freeholder or managing agent grants that licence, not the borough. A like-for-like re-fit within the room often needs notice rather than a full pack, but we read the lease rather than assume. We do not strip the room while the pack is outstanding. [VERIFY tenure.]",
+      },
+      {
+        q: "Will extract on a Highgate Heath-facing elevation need conservation consent?",
+        a: "It can. Highgate Conservation Area is split between Camden and Haringey, and a grille on a Heath-facing or principal front is a designation question, not a convenience. We plan the route away from that front wherever the building allows. Confirming which borough and which conservation-area name apply is part of the survey. [VERIFY.]",
+      },
+      {
+        q: "Will underfloor heating fit in a Highgate slope-villa bathroom?",
+        a: "Slope villas are not automatically deeper than a conversion. A heating mat plus insulation plus a fall still has to sit below the landing threshold, and gravity-fed pipework already occupies some of the void. We measure at survey. Extra-low-voltage underfloor heating is an electrical circuit; building-control notification is arranged where the work falls within the current regulations.",
+      },
+      {
+        q: "Can you tile over the existing tiles in a Highgate village bathroom?",
+        a: "Not as a default. Village interiors often mix original joinery with later tiled dados of unknown adhesive, and a flexing timber floor will crack a new finish laid over an old one. Extra thickness also fights original door clearances. We strip the wet zone to a substrate the waterproofing can bond to, and we treat joinery outside that zone as fabric.",
+      },
     ],
   },
   "kentish-town": {
@@ -142,6 +394,28 @@ export const bathroomDetail: ComboDetailMap = {
     ],
     processNote: "The sequence here bends around moisture and around neighbours. In a lower-ground room readings are taken and a source identified before a waterproofing specification is written, because the substrate decides the system and the system decides the tile. Above ground the variable is the shared hallway: Camden's skip licence, the carry past other front doors and the working hours are agreed with the building before the room is opened. Materials are dated after those two answers, not before.",
     consent: "Two different permissions get confused here. Camden grants planning and conservation-area consent, and its designations run street by street through Kentish Town and up toward Dartmouth Park, so the frontage matters and the interior usually does not. [VERIFY the named area for the address.] The freeholder or managing agent grants a licence to alter, and in a converted terrace that is the permission that actually bites: a rear soil pipe, or a waste that also serves the flat above, is shared fabric, and altering it is not a private decision.",
+    audience: [
+      "Bathroom renovation in Kentish Town (NW5) is for owner-occupiers of converted Victorian terraces in the London Borough of Camden — a denser, more mixed grain than Hampstead — and for households in the more residential streets toward Tufnell Park and Dartmouth Park. Typical instructions divide by floor: a stacked half-landing room upstairs, or a lower-ground bathroom where moisture in the structure has to be settled before any waterproofing is worth putting down.",
+      "The Kentish Town bathroom sits in a rear return, on a half-landing, or in a lower-ground room that was never drawn as a wet space. Upstairs it drains to a rear-elevation soil pipe that was added long after the house was built, often serving more than one flat. Downstairs the wall base tells you whether the rest of the drawing is worth doing. Former workshops give a solid floor rather than timber, which changes the detail, not the requirement. Wet rooms are specified only after moisture is solved and only if the floor will take a fall.",
+    ],
+    failures: [
+      {
+        title: "Lower-ground moisture",
+        text: "A lower-ground bathroom that smells damp is usually telling you about the structure behind it, not the seals in front of it. We take readings and identify the source before a waterproofing specification is written. Tanking a wet wall traps the problem and fails later. If the source sits outside the room, it is reported as its own item rather than buried under a tiled finish.",
+      },
+      {
+        title: "Shared rear soil pipe",
+        text: "The rear-elevation soil pipe on these terraces was often added later and now serves more than one flat. Altering a connection to it is not a private decision; it is shared fabric and usually needs the freeholder's licence to alter. Layout follows that pipe. Moving a WC a long way, or forming an ensuite that cannot reach it without cutting another demise, is often the item that is not possible.",
+      },
+      {
+        title: "Half-landing timber floor",
+        text: "Upstairs, the bathroom sits on timber joists over a neighbour, and the half-landing is short of build-up. Paint-on tanking over boarded floor is not a system. A documented membrane, a fall that actually drains and a test before tiling closes the deck are the method. We will not draw a level-access wet room onto a half-landing that cannot take it.",
+      },
+      {
+        title: "Workshop-infill substrate",
+        text: "Later infill and former workshops mixed into this grain often give a solid floor and a designed riser rather than joists and a later waste. The finish can look identical to a Victorian conversion; the method behind it is not. A managing agent with rules about hours and common parts usually comes with the infill block. The survey records which stock the room actually is.",
+      },
+    ],
     extraFaqs: [
       {
         q: "Do I need my freeholder's permission for a bathroom in a converted flat?",
@@ -155,6 +429,26 @@ export const bathroomDetail: ComboDetailMap = {
         q: "Half the street is Victorian terrace and half is a later infill block — does that change the bathroom?",
         a: "It changes the floor and the drainage, which is most of the job. A Victorian conversion gives timber joists over a neighbour and a waste run added later on the back wall. A later infill block usually gives a solid floor, a designed riser and a managing agent with rules about hours and common parts. The finish can look identical; the method behind it is not.",
       },
+      {
+        q: "Can a Kentish Town upper-floor bathroom become a wet room on timber joists?",
+        a: "Only if the floor has the depth for a fall and a documented waterproofing system. Half-landings in these terraces are short of build-up, and the deck is somebody's ceiling. We will not draw a level-access room onto joists that cannot take it. A lower-ground wet room is a different question again: moisture has to be solved first.",
+      },
+      {
+        q: "Can we stay in a Kentish Town conversion while the bathroom is out?",
+        a: "In an upper flat there is often only one bathroom, so staying means living without it for the wet weeks and sharing a hallway with the work. A lower-ground garden flat sometimes has a second room upstairs that is no longer yours. We sequence noisy work and water isolation, protect the shared hall, and say at survey whether staying is practical.",
+      },
+      {
+        q: "Will extract on a Kentish Town conservation frontage need consent?",
+        a: "It can, if the grille lands on a designated elevation. Camden's conservation areas here run street by street, including toward Dartmouth Park; the High Street itself is mixed-use and less uniformly designated. We check the map for the address and plan the duct for a rear or flank position wherever the building allows. [VERIFY the named area for the address.]",
+      },
+      {
+        q: "Will underfloor heating fit in a Kentish Town half-landing bathroom?",
+        a: "Half-landings are short of depth. A heating mat plus insulation plus a fall can lift the finished floor above the stair nosing, which is a trip before it is a comfort. We measure at survey and will say if the mat belongs. Extra-low-voltage underfloor heating is an electrical circuit; building-control notification is arranged where the work falls within the current regulations.",
+      },
+      {
+        q: "Does a Kentish Town bathroom renovation need building-control notification?",
+        a: "Where a new electrical circuit, extra-low-voltage underfloor heating or a change to the shared rear soil pipe is involved, notification is arranged at proposal stage. Replacing sanitaryware on existing wastes inside the room often does not. A licence to alter from the freeholder is a separate question from building control, and in a converted terrace it is often the one that actually bites.",
+      },
     ],
   },
   "kilburn": {
@@ -164,6 +458,28 @@ export const bathroomDetail: ComboDetailMap = {
     ],
     processNote: "Everything in the lead-in starts with an address check. Camden or Brent decides whose skip licence and whose conservation map apply, and that answer arrives before any date is offered. Where the flat sits over a shop, access is negotiated with the occupier below and the noisy work is placed away from their trading hours. In a managed block the agent sets hours and the lift rules. Only then is the strip-out week fixed, because the room should not be open while an access agreement is still being written.",
     consent: "Kilburn needs the council settled before anything else, because Camden and Brent run separate conservation maps and separate licensing, and designation here covers selected streets rather than the neighbourhood. [VERIFY both maps for the address.] Inside an existing room, a bathroom is usually not a planning matter for either. The moment a duct or a soil pipe reaches the outside wall of a building with a shop below, two consents can be in play: the council's, if the frontage is designated, and the freeholder's licence to alter. The freeholder grants that, not us.",
+    audience: [
+      "Bathroom renovation in Kilburn (NW6) is for owner-occupiers on both sides of Kilburn High Road: Victorian conversion flats toward West Hampstead in Camden, and a wider mix of blocks and periods in Brent. Flats above shops on the High Road are a third instruction, with a commercial ceiling below and a narrow stair. Confirming the borough is part of the first visit [VERIFY the council for the address]. Typical work is a stacked conversion bathroom, a shop-flat shower room, or a compact room in a purpose-built block west of the High Road.",
+      "The Kilburn bathroom is decided by what sits under the floor and who else uses it. East of the High Road that is joists and a waste added to the back wall. West of it that is more often a solid floor and a boxed riser that is not ours to open. Above a shop it is a commercial ceiling, a narrow stair, and an extract route with nowhere obvious to go. Wet rooms are specified only where the floor can take a fall and the room can ventilate honestly.",
+    ],
+    failures: [
+      {
+        title: "High-Road borough split",
+        text: "Kilburn High Road is the historic boundary: Camden to the east, Brent to the west. Skip licences, conservation maps and building-control routes are issued by the borough the address sits in, not by the neighbourhood name. We confirm it before a date is offered. Treating all of Kilburn as one council is how a skip application sits in the wrong office.",
+      },
+      {
+        title: "Shop-flat extract route",
+        text: "A bathroom above a shop has nowhere obvious for a fan to go. A grille through a shopfront, a duct into a commercial ceiling, or a terminal over a neighbour's yard all need a route and a permission path before they are drawn. We will not punch a hole without both. Access for the work itself has to be agreed with the occupier below and placed away from their trading hours.",
+      },
+      {
+        title: "Narrow-stair bath crate",
+        text: "Shop-flat stairs and conversion half-landings here are often too tight for a bath crate. The stair is measured before sanitaryware is ordered; the High Road is not a loading bay. A bath that will not turn on the landing is found at survey, not on delivery day. In a managed block the lift rules are the building's, not ours.",
+      },
+      {
+        title: "Boxed-riser constraint",
+        text: "In purpose-built blocks west of the High Road the bathroom often backs onto a boxed riser that serves other flats. Opening the casing or moving a connection is the building's business and needs the managing agent's written agreement. We design around it. What we will not do is take a shared service into our own hands to gain a few centimetres of floor.",
+      },
+    ],
     extraFaqs: [
       {
         q: "Does a flat above a shop take longer than one on a residential street?",
@@ -177,6 +493,26 @@ export const bathroomDetail: ComboDetailMap = {
         q: "The flat is a leasehold ex-council flat. Is that different from a private conversion?",
         a: "In method, only where the construction differs — solid floors and designed risers rather than joists and a later waste. In process it is quite different. The freeholder may be the council or a housing association, with a formal alterations procedure, its own notice periods and rules about common parts. We ask who the landlord is at the first visit, because that answer sets the lead-in more than the room does.",
       },
+      {
+        q: "Can a Kilburn conversion bathroom east of the High Road become a wet room on joists?",
+        a: "Only if the timber floor has the depth for a fall and a documented waterproofing system. Victorian conversions toward West Hampstead are not a new-build slab, and the deck is somebody's ceiling. Shop-flat bathrooms rarely can: floor depth, extract and a narrow stair all constrain them. We survey rather than force a wet room into a room that cannot drain or ventilate honestly.",
+      },
+      {
+        q: "Can we stay in a Kilburn flat while the bathroom is stripped?",
+        a: "On a residential street, often, if there is a second room or a workable arrangement. Above a shop, staying means living with a narrow stair used as a goods route and with noisy work placed around the business below. We sequence water isolation and say at survey whether staying is practical. A shop-flat with one bathroom is a tighter brief than a conversion with a half-landing WC.",
+      },
+      {
+        q: "Does a Kilburn bathroom need a licence to alter from Camden or from Brent?",
+        a: "The licence to alter comes from the freeholder or managing agent, not from either council. The council that matters is the one the address sits in, because skip licences and conservation maps follow that borough. East of the High Road that is usually Camden; west of it, Brent. We confirm both the tenure and the borough before a pack is drawn. [VERIFY the address.]",
+      },
+      {
+        q: "Will underfloor heating fit in a Kilburn shop-flat bathroom?",
+        a: "Rarely. Shop-flat floors are often shallow, already carrying a commercial ceiling below, and a heating mat plus a fall can exceed the depth without lifting the finished floor into the door swing. Conversion floors east of the High Road are a separate measurement. We survey the build-up and will say if the mat belongs. Extra-low-voltage underfloor heating is an electrical circuit where it is specified.",
+      },
+      {
+        q: "Does a Kilburn bathroom renovation need building-control notification?",
+        a: "Where a new electrical circuit, extra-low-voltage underfloor heating or a change to drainage is involved, notification is arranged at proposal stage with the borough the address sits in — Camden or Brent, not both. Replacing sanitaryware on existing wastes inside the room often does not. A shop-flat extract that reaches the outside wall can engage planning as well as building control. [VERIFY the borough.]",
+      },
     ],
   },
   "maida-vale": {
@@ -186,6 +522,28 @@ export const bathroomDetail: ComboDetailMap = {
     ],
     processNote: "Before a date exists, two things are settled: what the lease requires, and how the materials get in. Porters' hours, the lift car and the turn of the stair are recorded at survey, and the delivery is broken into loads the building will accept rather than one pallet at the kerb. A date is offered only once the lease question is answered. Inside, isolation and testing precede tiling, because that floor is someone else's ceiling.",
     consent: "Westminster is the planning authority and the Maida Vale Conservation Area covers a substantial part of W9, so anything appearing on a mansion-block elevation — a vent, a duct terminal, a replacement window — is a council matter rather than a right [VERIFY the boundary for the address]. Renewing a bathroom inside its existing walls generally is not. The lease sits alongside that: the stacks and ducts are usually retained by the freeholder, so altering a connection needs a licence to alter from them. Canal-side frontages can add the Canal & River Trust. [VERIFY on the property.]",
+    audience: [
+      "Bathroom renovation in Maida Vale (W9) is for leaseholders in the City of Westminster's purpose-built red-brick and terracotta mansion blocks of the 1890s to 1910s, and for owner-occupiers of canal-side houses and mews toward Little Venice. Typical instructions are the original bathroom off the hall — a compact stacked room on the block's service duct — brought up to a documented waterproofing standard over a neighbour's ceiling. Landlords with a single room to re-fit in an occupied block are the same stock.",
+      "The Maida Vale bathroom sits on a timber intermediate floor above another demise, on wastes drawn in the 1890s, in a lift that will not take a bath crate. Long corridors and a single service position mean the WC stays near the duct; relocating it is only possible if the drainage will serve the new position without cutting into another demise. Mews and Little Venice houses are a different construction, often with shallower floors. Wet rooms are specified only where the build-up will take them.",
+    ],
+    failures: [
+      {
+        title: "1890s intermediate floor",
+        text: "The floor of a Maida Vale mansion-flat bathroom is often timber over another household. A failed seal is not a private problem. Paint-on tanking over boarded floor is not a system; a documented membrane, isolation of the wastes and a test before tiling closes the deck are the method. Not every 1890s–1910s floor has the depth for a level-access wet room.",
+      },
+      {
+        title: "Lift-car bath crate",
+        text: "Lifts in these blocks take people. A bath crate and boards of tile often go up the stair. Porters' hours, the lift car and the turn of the stair are recorded at survey, and the delivery is broken into loads the building will accept rather than one pallet at the kerb. Sanitaryware is ordered only once those dimensions are confirmed on site.",
+      },
+      {
+        title: "Original-riser position",
+        text: "These plans were drawn around a single service position and a long corridor. Stacks and ducts are usually retained by the freeholder, so altering a connection needs a licence to alter. The further a WC travels from that duct, the worse the fall and the more boxing you live with. Where the drainage will not serve a new position, we say so instead of drawing it and hoping.",
+      },
+      {
+        title: "Canal-frontage extract",
+        text: "Maida Vale Conservation Area covers a substantial part of W9, so a vent or duct terminal on a mansion-block elevation is a Westminster matter rather than a right [VERIFY the boundary for the address]. Canal-side frontages can add the Canal & River Trust [VERIFY on the property]. We will not assume a grille on a principal or water-facing wall. The route is agreed before the room is opened.",
+      },
+    ],
     extraFaqs: [
       {
         q: "How long does a licence to alter usually add to the start date in a Maida Vale block?",
@@ -199,6 +557,26 @@ export const bathroomDetail: ComboDetailMap = {
         q: "Is a bathroom in a Little Venice house or a mews the same job as one in a block?",
         a: "No. A freehold house has its own drainage and no managing agent, which removes the licence step, but it brings a narrow stair, a close neighbour, and on some frontages a canal setting that constrains anything touching the outside [VERIFY on the frontage]. Mews buildings are a different construction, often with shallow floors. The survey treats them as separate stock, not as a flat that happens to sit at ground level.",
       },
+      {
+        q: "Can we stay in a Maida Vale mansion flat while the bathroom is out?",
+        a: "Often, if there is a second bathroom or a cloakroom off the hall. Many of these flats have only the original stacked room, so staying means living without it for the wet weeks and sharing a common stair with the carry. Porters' hours and the building's working-hours clause shape when noisy work can run. We say at survey whether staying is practical.",
+      },
+      {
+        q: "Will extract on a Maida Vale conservation elevation need Westminster consent?",
+        a: "It can, if the grille lands on a mansion-block front or a designated flank. Maida Vale Conservation Area covers a substantial part of W9. Internal work within the existing room generally does not need the council; the envelope does. Canal-side frontages can add the Canal & River Trust. We plan the route at survey. [VERIFY the boundary and any canal-side constraint.]",
+      },
+      {
+        q: "Will underfloor heating fit in a Maida Vale mansion-flat bathroom?",
+        a: "It is a depth question on an 1890s–1910s timber intermediate floor. A heating mat plus insulation plus a fall can exceed what the joists will accept without lifting the finished floor above a long corridor that was never meant to step. We measure at survey. Extra-low-voltage underfloor heating is an electrical circuit; building-control notification is arranged where the work falls within the current regulations.",
+      },
+      {
+        q: "Can you tile over the existing tiles in a Maida Vale mansion-flat bathroom?",
+        a: "Not as a default. Extra thickness on a compact stacked room steals the door swing and the tray upstand, and failed adhesive over a timber floor traps moisture above a neighbour. We strip to a substrate the waterproofing can bond to. Isolation and testing precede tiling, because that floor is someone else's ceiling.",
+      },
+      {
+        q: "Does a Maida Vale bathroom renovation need building-control notification?",
+        a: "Where a new electrical circuit, extra-low-voltage underfloor heating or a change to the block's drainage is involved, notification is arranged at proposal stage. Replacing sanitaryware on existing wastes inside the room often does not. A licence to alter from the freeholder is a separate question, and in these blocks it is often the one that sets the start date.",
+      },
     ],
   },
   "muswell-hill": {
@@ -208,6 +586,28 @@ export const bathroomDetail: ComboDetailMap = {
     ],
     processNote: "The lead-in here carries two decisions before anything is ordered. Haringey's conservation map settles where a grille may sit — a rear elevation on the slope and a frontage on the Broadway are not the same question — and the street settles the vehicle. Long loads are staged rather than delivered in one drop. Only when both are answered do dates go against sanitaryware and tile, and only then does the room come out. In a one-bathroom house the wet weeks are sequenced to be continuous, not interrupted.",
     consent: "Replacing a bathroom inside an existing room is normally outside planning control. The envelope is not: a new extract grille, a relocated soil pipe or a changed window on a house inside Muswell Hill Conservation Area is a matter for Haringey, and the Fortis Green designation on the north-west side is a separate boundary again. [VERIFY which map the address sits on, and any Article 4.] Tenure is the other half. In a converted flat or a flat over a Broadway parade, a licence to alter is granted by the freeholder or managing agent, not by the council and not by us.",
+    audience: [
+      "Bathroom renovation in Muswell Hill (N10) is for owner-occupiers of Edwardian and late-Victorian family houses on the slopes in the London Borough of Haringey, and for leaseholders of the tighter flats above the Broadway parades. Typical instructions are the first-floor family bathroom of a house — a room with a window, deep sash reveals, and floorboards that have been lifted before for earlier plumbing — replaced while the household stays in residence.",
+      "The Muswell Hill bathroom is an Edwardian family room on a slope, or a windowless internal room that needs mechanical extract with a clear route to outside. The constraint that decides the job is the existing waste run to the rear stack and how much fall it has left; a slope house rarely runs level under the finish. Broadway flats add extract over a shop or a parade and a different access problem. Wet rooms are specified only where the floor depth will take a fall. The hill is a delivery constraint for a bath as much as for a kitchen.",
+    ],
+    failures: [
+      {
+        title: "Slope-house waste fall",
+        text: "A Muswell Hill house sits on a hill, so the floor under the bathroom is rarely level and the waste run to the rear stack has only the fall it was given. We lift boards and confirm that fall before a layout is fixed. Relaying the run is sometimes the honest answer; drawing a shower where the pipe already sags is not. A slope is not extra depth.",
+      },
+      {
+        title: "Broadway-flat extract",
+        text: "Flats above the Broadway sit over a shop or a parade. Extract through a shopfront, into a commercial void, or onto a conservation frontage is a different consent path from a rear garden elevation on the slope. Muswell Hill Conservation Area was designated by Haringey on 1 March 1974; Fortis Green is a separate map [VERIFY which the address sits on]. We will not leave an internal bathroom dependent on a window that does not exist.",
+      },
+      {
+        title: "Hill-street bath delivery",
+        text: "Some streets here are steep and poorly suited to long-wheelbase vans. Off-street parking is not universal. A bath crate is staged rather than delivered in one drop, and the vehicle is settled at survey rather than assumed from a map. The hill is a handling problem before it is a waterproofing one.",
+      },
+      {
+        title: "Windowless internal room",
+        text: "Internal bathrooms without a window occur in both the houses and the Broadway flats. Mechanical extract with a clear route to outside is not optional. A fan that dumps into a roof void or a stairwell is not extract. The duct is planned for the elevation that exists — rear garden on the slope, or a consented position on the parade — before the room is opened.",
+      },
+    ],
     extraFaqs: [
       {
         q: "How long does a bathroom take in an Edwardian house on the hill?",
@@ -221,6 +621,26 @@ export const bathroomDetail: ComboDetailMap = {
         q: "Can the family bathroom and a small shower room be done in one programme?",
         a: "Often that is the sensible way to do it in a family house here, because the second room keeps the household washing while the first is out. It is one survey, one specification and one account. The sequence matters more than the total: we take the rooms in turn rather than opening both, so there is never a week with neither available.",
       },
+      {
+        q: "Can we stay in a Muswell Hill house while the bathroom is stripped?",
+        a: "Usually, and that is the ordinary brief on the slope. Occupied family houses need a working WC and a dust route through the landing. Where there is a second shower room we take the rooms in turn. Broadway flats with a single internal bathroom are tighter, and the carry up a steep stair is not something the household lives around without notice. We say at survey whether staying is practical.",
+      },
+      {
+        q: "Does a Muswell Hill bathroom above the Broadway need a licence to alter?",
+        a: "Usually, if wastes move or extract is cut through a common void or over a shop. The freeholder or managing agent grants that licence, not Haringey. On the slope, a freehold family house often needs no licence for internal work; a converted flat does. We read the tenure at survey rather than treating the whole of N10 as one process.",
+      },
+      {
+        q: "Will underfloor heating fit in a Muswell Hill Edwardian bathroom?",
+        a: "It depends on the depth once boards are up, and on a slope house that depth is not uniform. A heating mat plus insulation plus a fall still has to sit below the landing threshold. We measure at survey and will say if the mat belongs. Extra-low-voltage underfloor heating is an electrical circuit; building-control notification is arranged where the work falls within the current regulations.",
+      },
+      {
+        q: "Can you tile over the existing tiles in a Muswell Hill family bathroom?",
+        a: "Not as a default. Floorboards that have been lifted for earlier plumbing rarely sit flat, and failed adhesive on a flexing timber floor will crack a new finish laid over an old one. Extra thickness also fights deep sash reveals we are keeping. We strip the wet zone to a substrate the waterproofing can bond to.",
+      },
+      {
+        q: "Does a Muswell Hill bathroom renovation need building-control notification?",
+        a: "Where a new electrical circuit, extra-low-voltage underfloor heating or a change to drainage is involved, notification is arranged at proposal stage. Replacing sanitaryware on existing wastes inside the room often does not. Extract on a Broadway frontage can be a Haringey conservation question as well as a building-control one. [VERIFY which map the address sits on.]",
+      },
     ],
   },
   "primrose-hill": {
@@ -230,6 +650,28 @@ export const bathroomDetail: ComboDetailMap = {
     ],
     processNote: "The order of works is set by moisture, not by the calendar. Where a lower-ground room is involved, the survey opens the wall base first and the room is left to dry before waterproofing is specified; that reading sits in the lead-in alongside material dates. Above ground the constraint is different — the household is usually still in residence, so strip-out noise is agreed with the neighbours either side, and the drop is booked for a weekday morning rather than a weekend around the hill.",
     consent: "Nothing inside the room needs the council's permission in the ordinary case: replacing a bathroom within an existing room is not development. The Article 4 direction and the conservation-area designation bite on the outside — windows, rooflines, front gardens, and any new duct or grille that appears on an elevation. Tenure is the other half. In a split house the freeholder is often the flat owner upstairs or downstairs, so a licence to alter, where the lease requires one, is a neighbour conversation as much as a legal one. [VERIFY the designation and the lease terms for the address.]",
+    audience: [
+      "Bathroom renovation in Primrose Hill (NW1) is for owner-occupiers of Victorian terraces and larger houses facing the park, in the London Borough of Camden, and for households in split houses where a garden flat and an upper-floor flat share the original stack. Many houses remain single-family; others are split, with bathrooms a long drainage run from that stack. Typical instructions are a closet-wing shower room, a lower-ground bathroom in a garden flat, or a family bathroom in a park-facing house.",
+      "The Primrose Hill bathroom is one of two rooms. In a split terrace it is carved out of a closet wing: shallow joists, one cold external wall in stock brick, and a door that already opens over the head of the stair. In a garden flat it is a lower-ground room where the wall condition has to be established and dried before any waterproofing is specified. Park-facing family houses can take a larger bathroom within an existing room. We do not form a new addition as this service.",
+    ],
+    failures: [
+      {
+        title: "Closet-wing joist depth",
+        text: "The closet-wing bathroom in a split terrace sits on shallow joists, often over the head of the stair. A level-access wet room needs a fall those joists may not have the depth to take, and raising the floor fights a door that already opens the wrong way. We lift boards before a wet-room drawing is offered. A pumped waste is a last resort, written down if it is the only way the room reaches the stack.",
+      },
+      {
+        title: "Park-facing extract grille",
+        text: "Primrose Hill Conservation Area covers the core streets, and Camden has had an Article 4 direction here since 3 March 1983 [VERIFY]. Properties backing onto the park may have additional visibility from public open space. A grille on a park-facing wall is a consent question, not a default. We plan the duct for an elevation the designation will accept, before the room is opened.",
+      },
+      {
+        title: "Lower-ground wall moisture",
+        text: "A garden-flat bathroom that reads dry in August can be carrying moisture behind a previous refit. We take readings at the wall base and leave the room to dry before waterproofing is specified. Tanking a wet structure traps the problem and fails later. We will not decorate over a damp wall as part of handover.",
+      },
+      {
+        title: "Split-house drainage run",
+        text: "In a split house the bathroom is often a long way from the original stack, so falls, pumps and stack location are survey items. We will not hide a bad run behind tiling. Where a gravity connection is achievable we specify it; where it is not, we say plainly what a macerator asks of you in maintenance. Altering a shared stack needs the other flat's process, not a private decision.",
+      },
+    ],
     extraFaqs: [
       {
         q: "What actually drives the cost of a bathroom here?",
@@ -243,6 +685,26 @@ export const bathroomDetail: ComboDetailMap = {
         q: "Why does the survey start at the bottom of the wall, not the layout?",
         a: "Because in the lower-ground rooms around here the wall base tells you whether the rest of the drawing is worth doing. A room that reads dry in August can be carrying moisture behind a previous refit. We take readings, look at what the last installation concealed and record the condition in writing. Waterproofing is applied to a substrate we have understood, not over one we have covered up.",
       },
+      {
+        q: "Can we stay in a Primrose Hill split house while the bathroom is out?",
+        a: "In a family house, usually, if there is a second room. In a split terrace the bathroom is often the only one in that demise, and the door already opens over the head of the stair, so the carry is through the household's only route. Weekend visitor pressure around the park also shapes when we drop. We say at survey whether staying is practical for the wet weeks.",
+      },
+      {
+        q: "Does a Primrose Hill split-house bathroom need a licence to alter?",
+        a: "Where the lease requires one, yes — and in a split house the freeholder is often the flat owner upstairs or downstairs, so the pack is a neighbour conversation as much as a legal one. Moving a waste onto a shared stack, or cutting extract through a common void, is the usual trigger. We can prepare drawings and a method statement. Consent is theirs to give.",
+      },
+      {
+        q: "Will extract on a Primrose Hill park-facing elevation need conservation consent?",
+        a: "It can. The conservation area and the Article 4 direction of 3 March 1983 bite on the outside — windows, rooflines and any new duct or grille. Properties backing onto the park may have additional visibility from public open space. We will not assume a grille on a park-facing wall. [VERIFY the designation for the address.]",
+      },
+      {
+        q: "Will underfloor heating fit in a Primrose Hill closet-wing bathroom?",
+        a: "Closet-wing joists are shallow, and a heating mat plus insulation plus a fall can lift the finished floor into a door that already opens over the stair. Lower-ground rooms are a different substrate again: moisture has to be solved before any mat is discussed. We measure at survey. Extra-low-voltage underfloor heating is an electrical circuit where it is specified.",
+      },
+      {
+        q: "Can an upper-floor Primrose Hill bathroom become a wet room on timber joists?",
+        a: "Only if the floor has the depth for a fall and a documented waterproofing system. Closet-wing joists in split terraces are often too shallow. A lower-ground wet room is a separate question: moisture first, then depth. We will not tank a wet structure or draw a level-access room onto joists that cannot take it.",
+      },
     ],
   },
   "queens-park": {
@@ -252,6 +714,28 @@ export const bathroomDetail: ComboDetailMap = {
     ],
     processNote: "Confirming the frontage comes before confirming the fixtures. Brent and Westminster issue skip and scaffolding licences separately and on their own timetables, so the borough is settled from the address before any application goes anywhere. After that the sequence divides by stock. In an Estate cottage, strip-out is planned around joinery that is being kept and around neighbours a single brick away, which pushes noisy work into a narrow band of the day. On the terraces, deliveries come off a residential street rather than Salusbury Road.",
     consent: "The borough decides the process; the lease decides the permission. Brent and Westminster maintain separate conservation areas here and separate application routes, though a renewed bathroom inside an existing room usually engages neither, because internal work to an unlisted house is not development. The envelope is where that changes — a new grille, an external waste, a window in a different design. Tenure is the parallel track: in a converted flat the freeholder or managing agent, not the council, grants the licence to alter that lets a waste move or a shared void be opened. [VERIFY the borough, the designation and the lease for the address.]",
+    audience: [
+      "Bathroom renovation in Queen's Park (NW6) is for owner-occupiers of late-Victorian and Edwardian terraces around the park, and of the decorative brick cottages on the Queen's Park Estate. The neighbourhood straddles the London Borough of Brent and the City of Westminster [VERIFY the borough for the address]. Typical instructions are a half-landing bathroom above the rear return on the Brent streets, or a cottage-scale room on the Estate that was often a later insertion into a house not built with one [VERIFY on the property].",
+      "The Queen's Park bathroom is two rooms. On the terraces it is reached off a half-landing, with the stack on the outside of the return wall and a floor that steps down from the bedroom level. On the Westminster Estate it is smaller again, with original joinery that should not be boxed in to make a suburban wet room. Converted flats on the larger roads add a neighbour below. Wet rooms are specified only if the floor and, on the Estate, the conservation character will take them.",
+    ],
+    failures: [
+      {
+        title: "Estate-cottage joinery",
+        text: "Cottage bathrooms on the Queen's Park Estate sit in rooms that were often inserted later, with original joinery that the conservation area is there to keep. Boxing it in to win a shower enclosure is not the method. Patterned brick and original tiled paths are characteristic outside; inside, we tank timber floors and scribe to the walls. A cottage wet room is only specified if the floor and the character will take it.",
+      },
+      {
+        title: "Return-wall soil stack",
+        text: "On the Brent terraces the stack sits on the outside of the rear-return wall. The bathroom above that return drains to it; moving a WC away from it is often the item that is not possible without a new external run, which is a designation question on some streets [VERIFY]. Layout follows that stack. We lift boards and confirm the fall before the drawing is finished.",
+      },
+      {
+        title: "Two-borough skip licence",
+        text: "Brent and Westminster issue skip and scaffolding licences separately and on their own timetables. The neighbourhood name does not decide which; the frontage does. Confirming the borough is the first step in the lead-in, before any application goes anywhere. Salusbury Road is a poor default loading point for either side.",
+      },
+      {
+        title: "Bedroom-to-bath floor step",
+        text: "Terrace bathrooms here often sit a step down from the bedroom level, on a half-landing deck that has already dropped. A level-access tray is not assumed before the boards come up. Raising the floor to win a fall can steal the headroom a cottage already lacks, and on the Estate upstairs ceiling heights limit what a raised floor can do. We measure both before a wet-room drawing is offered.",
+      },
+    ],
     extraFaqs: [
       {
         q: "What makes one Queen's Park bathroom a bigger job than the next?",
@@ -265,6 +749,26 @@ export const bathroomDetail: ComboDetailMap = {
         q: "Our bathroom was put in during a 1990s conversion. Does that help or hurt?",
         a: "It usually means less archaeology and more surprises of a different kind. Conversion-era boxing often hides a shallow floor build-up, a waste run laid to minimal fall and insulation that stops where the plasterboard starts. We open a section before the layout is finalised rather than trusting what a previous contractor drew. What we find sets the waterproofing detail and the acoustic separation from the flat below.",
       },
+      {
+        q: "Can we stay in a Queen's Park terrace or Estate cottage while the bathroom is out?",
+        a: "In a family house, usually, if there is a second WC. Estate cottages are small and neighbours sit a single brick away, so noisy work is pushed into a narrow band of the day and the household lives around it. Converted flats on the larger roads often have only one bathroom and a shared stair. We say at survey whether staying is practical.",
+      },
+      {
+        q: "Does a Queen's Park converted flat need a licence to alter for the bathroom?",
+        a: "If wastes move or a shared void is opened, usually yes. The freeholder or managing agent grants that licence, not Brent or Westminster. On the Estate, a freehold cottage often needs no licence for internal work; extract on the elevation is a conservation question instead. We read the tenure and the borough at survey. [VERIFY both.]",
+      },
+      {
+        q: "Will extract on a Queen's Park Estate cottage need conservation consent?",
+        a: "It can. Westminster's Queen's Park Estate Conservation Area is a separate designation from Brent's Queen's Park Conservation Area around the park, and a grille on an Estate elevation is a consent question. We will not punch a hole as a convenience. Terrace extract on a designated Brent street is a different map again. [VERIFY which conservation area and which council apply.]",
+      },
+      {
+        q: "Will underfloor heating fit in a Queen's Park Estate cottage bathroom?",
+        a: "Estate rooms are small and upstairs ceiling heights already limit what a raised floor can do. A heating mat plus insulation plus a fall can steal the headroom a cottage lacks. Terrace half-landings are a different measurement: a step down from the bedroom may give depth, or it may already have dropped. We measure at survey. Extra-low-voltage underfloor heating is an electrical circuit where it is specified.",
+      },
+      {
+        q: "Can a Queen's Park terrace bathroom become a wet room on timber joists?",
+        a: "Only if the floor has the depth for a fall and a documented waterproofing system. Half-landing decks above the return are often short of build-up, and a floor that steps down from the bedroom is not a slab. On the Estate the conservation character is a further constraint. We will not box in original cottage fabric to make a wet room look suburban.",
+      },
     ],
   },
   "st-johns-wood": {
@@ -274,6 +778,28 @@ export const bathroomDetail: ComboDetailMap = {
     ],
     processNote: "Everything here waits on the block. The licence pack is drawn and submitted first, and the agent's timetable, not ours, sets when work can begin. Once granted, the sequence is arranged around the building's working hours, the porter's booking sheet for the lift or the loading bay, and notice to the flats above and below before services are isolated. Waste leaves by an agreed route at agreed times. Match days at Lord's are checked against the delivery dates. [VERIFY with the building.]",
     consent: "Tenure leads here, not planning. Most flats are leasehold and most leases require a licence to alter before wastes, extract or electrical routes change; some blocks also run their own design rules, which can be stricter than anything the council would ask. That consent is the freeholder's or managing agent's to give. Westminster designated the St John's Wood Conservation Area in 1968 and controls the envelope — fenestration, roofs and anything visible on the outside — while a bathroom rebuilt within its existing walls generally falls outside planning. A small Camden conservation area adjoins on the borough edge. [VERIFY which applies.]",
+    audience: [
+      "Bathroom renovation in St John's Wood (NW8) is for leaseholders in the late-Victorian and Edwardian mansion blocks toward Wellington Road and Prince Albert Road, in the City of Westminster, and for owner-occupiers of the detached and semi-detached villas and mews on the tree-lined streets. Typical instructions are a compact stacked shower room or bathroom on the block's original riser, watched by a managing agent, where a leak is a neighbour problem before it is a finish problem.",
+      "The St John's Wood bathroom in a mansion block is compact, stacked, and tied to a riser the whole building shares. A sash onto a lightwell is common; space for a bath and a basin without losing the door swing is not. Villas and mews supply a larger family bathroom and a different access problem: a driveway, a front boundary and a stair built for a household rather than for a trade. Wet rooms on timber intermediate floors are specified only where the build-up will take them. Most of the residential core is Westminster; Camden holds a smaller adjoining conservation area on the borough edge.",
+    ],
+    failures: [
+      {
+        title: "Mansion-riser layout",
+        text: "The riser, the common stack and the structure belong to the building; we connect to them under the licence and do not re-route them to suit a layout. A WC that travels a long way from that riser is often the item that is not possible without crossing another demise. Some flats have a former maid's room that will take a second shower; many do not. We survey the riser positions first.",
+      },
+      {
+        title: "Porter-hours bath delivery",
+        text: "Porters' rules, the lift car and the loading bay are building-specific, and baths and boards of tile often go up the stair, not in the lift. Lord's match days can restrict access on surrounding streets [VERIFY event restrictions with the building]. The delivery is booked on the porter's sheet, not assumed from the kerb. Sanitaryware is ordered only once the lift and the stair have been measured.",
+      },
+      {
+        title: "Agent design-guide extract",
+        text: "Some blocks run design guides stricter than Westminster planning. A grille on a lightwell or a principal elevation can fail the agent's rules even when it would pass the council. Westminster designated the St John's Wood Conservation Area in 1968 and controls the envelope [VERIFY which designation applies]. Extract is agreed with the building before strip-out, not punched through as a convenience.",
+      },
+      {
+        title: "Stacked-floor watertightness",
+        text: "A mansion-flat bathroom sits on a timber intermediate floor over a neighbour. Historic staining under a bath is common and often explains a complaint from years earlier. Paint-on tanking over boarded floor is not a system. Isolation, a documented membrane and a test before tiling closes the deck are the method, because a leak here is a building problem before it is a finish one.",
+      },
+    ],
     extraFaqs: [
       {
         q: "Why can you not give a price for a mansion-flat bathroom over the phone?",
@@ -287,6 +813,26 @@ export const bathroomDetail: ComboDetailMap = {
         q: "Can a second shower room be added to a flat in one of the blocks?",
         a: "Only where a waste can reach the existing riser at a workable fall inside your own demise, and where the block will licence it. Some flats have a former maid's room or a wide hall cupboard that will take one; many do not, because the drainage would have to cross a neighbour. We survey the riser positions first and say plainly if the answer is no.",
       },
+      {
+        q: "Can we stay in a St John's Wood mansion flat while the bathroom is out?",
+        a: "Often, if there is a second bathroom or a cloakroom. Compact stacked flats frequently have only the original room, so staying means living without it for the wet weeks and sharing common parts with the carry, inside the building's working hours. Villa households are a different brief and usually have a second WC. We say at survey whether staying is practical.",
+      },
+      {
+        q: "Can a St John's Wood mansion-flat bathroom become a wet room on timber joists?",
+        a: "Only where the floor has the depth for a fall and a documented waterproofing system. Stacked intermediate floors in these blocks are not a new-build slab, and the deck is a neighbour's ceiling. We will not draw a level-access room onto joists that cannot take it. The block's licence may also constrain a change from a bath to a wet room; we ask before we draw.",
+      },
+      {
+        q: "Will extract on a St John's Wood conservation elevation need consent?",
+        a: "It can, from Westminster and from the building. The conservation area designated in 1968 controls the envelope; some blocks also run design guides stricter than planning. A grille on a lightwell or a principal front is agreed with the agent before strip-out. A small Camden conservation area adjoins on the borough edge. [VERIFY which applies.]",
+      },
+      {
+        q: "Will underfloor heating fit in a St John's Wood mansion-flat bathroom?",
+        a: "It is a depth question on a compact stacked floor. A heating mat plus insulation plus a fall can lift the finished floor above a corridor that was never meant to step, and the block may have rules about electrical alterations. We measure at survey. Extra-low-voltage underfloor heating is an electrical circuit; building-control notification is arranged where the work falls within the current regulations.",
+      },
+      {
+        q: "Can you tile over the existing tiles in a St John's Wood mansion-flat bathroom?",
+        a: "Not as a default. Extra thickness in a compact stacked room steals the door swing and the tray upstand, and failed adhesive over a timber floor sits above a neighbour. Historic leaks under baths in these blocks are common; tiling over tiles would hide them rather than test them. We strip to a substrate the waterproofing can bond to.",
+      },
     ],
   },
   "swiss-cottage": {
@@ -296,6 +842,28 @@ export const bathroomDetail: ComboDetailMap = {
     ],
     processNote: "The lead-in carries more here than the site weeks do. In the Avenue Road and Finchley Road blocks a managing agent's pack — drawings, method statement, working hours — is prepared and submitted before a single tile is ordered, and nothing is stripped while it is outstanding. On the South Hampstead side streets the check is a conservation one and the paperwork is thinner, so the sequence compresses. Either way the delivery slot is booked around the corridor, not around us.",
     consent: "The freeholder and the council answer different questions. A licence to alter is granted by the freeholder or the managing agent, not by Camden and not by us; it governs moving a waste, cutting into riser boxing, or working outside the block's stated hours. Planning and conservation sit with Camden, and internal work within an existing bathroom generally falls outside both — the envelope does not. A new grille on a Finchley Road frontage and one on a South Hampstead side street are different questions. [VERIFY which designation covers the address, and whether the tenure requires a licence.]",
+    audience: [
+      "Bathroom renovation in Swiss Cottage (NW3) is for leaseholders in the mansion blocks and inter-war flats along Finchley Road and Avenue Road, and for owner-occupiers of Victorian conversions on the side streets toward Belsize and Frognal, in the London Borough of Camden. The HPSG office is at Unit 3 Palace Court, 250 Finchley Road, London NW3 6DN, which shortens the visit, not the method. Typical instructions are a single-room replacement on a boxed riser in an Avenue Road block, or a conversion bathroom on timber joists a street back.",
+      "Swiss Cottage bathrooms sit in two stocks. Avenue Road leans to compact stacked rooms on original risers, often with a low soffit and a managing agent. The streets toward Belsize and Frognal lean to conversion bathrooms and half-landings around chimney breasts, over another household's ceiling. Camden renamed the Swiss Cottage Conservation Area to the South Hampstead Conservation Area; Belsize Conservation Area adjoins to the east [VERIFY which applies]. Wet rooms are specified only where the floor will take a fall. Tanking is required in both stocks.",
+    ],
+    failures: [
+      {
+        title: "Two-stock bathroom method",
+        text: "An Avenue Road block and a Victorian conversion a street back are not the same job. The block gives a boxed riser, a solid or later floor and an agent's hours; the conversion gives timber joists over a neighbour, a chimney breast and a shared stair. The finish can look identical, but the method behind it is not. The survey records which stock the room actually is before a layout is drawn.",
+      },
+      {
+        title: "Avenue-Road licence pack",
+        text: "In the Avenue Road and Finchley Road blocks a managing agent's pack — drawings, method statement, working hours — is prepared and submitted before a single tile is ordered. Nothing is stripped while it is outstanding. The agent's timetable, not ours, sets when work can begin. On the South Hampstead side streets the paperwork is thinner; the timber floor is not.",
+      },
+      {
+        title: "Inter-war soffit depth",
+        text: "A concealed cistern, a recessed shower valve and a drop for extract ducting all borrow depth from somewhere. In the later blocks there is less of it above the door head than in a Victorian house on the side streets. We measure the soffit and the floor build-up before the layout is drawn, and say plainly which items the room will not hold. A low ceiling is not a reason to skip tanking.",
+      },
+      {
+        title: "Finchley-Road loading bay",
+        text: "Finchley Road is a major corridor; scaffold and loading on it are a different process from a side street [VERIFY the highway authority on the specific frontage]. A bath crate in an Avenue Road block is a goods-lift or stair question confirmed with the building. On the conversion streets the drop is a Camden licence on a residential kerb. The office being in the neighbourhood does not change either.",
+      },
+    ],
     extraFaqs: [
       {
         q: "How long is a bathroom out of use in a Finchley Road flat?",
@@ -309,6 +877,26 @@ export const bathroomDetail: ComboDetailMap = {
         q: "Does a low ceiling in an inter-war block limit what the room can take?",
         a: "It can. A concealed cistern, a recessed shower valve and a drop for extract ducting all borrow depth from somewhere, and in the later blocks there is less of it above the door head than in a Victorian house on the side streets. We measure the soffit and the floor build-up before the layout is drawn, and say plainly which items the room will not hold.",
       },
+      {
+        q: "Can we stay in a Swiss Cottage flat while the bathroom is stripped?",
+        a: "In an Avenue Road block, often, if there is a second bathroom; many inter-war flats have only the stacked room, and the building's hours then shape when noisy work can run. On the conversion side streets the household shares a stair with other flats, and there is usually one bathroom. The office being on Finchley Road does not change that. We say at survey whether staying is practical.",
+      },
+      {
+        q: "Can a Swiss Cottage conversion bathroom become a wet room on timber joists?",
+        a: "Only if the floor has the depth for a fall and a documented waterproofing system. Side-street conversions toward Belsize and Frognal sit on timber over another household; Avenue Road blocks are a different floor again, often with less soffit depth rather than less joist depth. We survey the build-up rather than treating Swiss Cottage as one construction.",
+      },
+      {
+        q: "Will extract on a Swiss Cottage South Hampstead elevation need conservation consent?",
+        a: "It can. Camden now calls that designation the South Hampstead Conservation Area; Belsize Conservation Area adjoins to the east. A grille on a Finchley Road mixed-use frontage and one on a conservation side street are different questions. We plan the route at survey and will not punch a hole as a convenience. [VERIFY which designation covers the address.]",
+      },
+      {
+        q: "Will underfloor heating fit in a Swiss Cottage inter-war bathroom?",
+        a: "Low soffits and shallow floor build-up in the later blocks often decide against it. A heating mat plus insulation plus a fall can lift the finished floor above a corridor, and a concealed cistern is already competing for the same depth. Conversion floors a street back are a separate measurement. We measure at survey. Extra-low-voltage underfloor heating is an electrical circuit where it is specified.",
+      },
+      {
+        q: "Does a Swiss Cottage bathroom renovation need building-control notification?",
+        a: "Where a new electrical circuit, extra-low-voltage underfloor heating or a change to the block's drainage is involved, notification is arranged at proposal stage. Replacing sanitaryware on existing wastes inside the room often does not. A licence to alter from the Avenue Road agent is a separate question from building control, and in those blocks it is often the one that sets the start date.",
+      },
     ],
   },
   "west-hampstead": {
@@ -318,6 +906,28 @@ export const bathroomDetail: ComboDetailMap = {
     ],
     processNote: "Two things stretch the front end here: the neighbour below and the shared stair. Before a date is fixed we agree isolation and testing with the flat underneath, settle with the freeholder how the common hall is protected, and confirm whether the waste run needs a licence. Order of works follows from that — protection, then noisy work inside agreed hours. Sanitaryware arrives when the room can receive it, because a converted terrace has nowhere to store a bath.",
     consent: "Work inside the room is generally outside planning control. The outside of the building is not, and a converted flat is in a weaker position than a house: the permitted-development rights a householder relies on do not apply to flats, so a new vent or duct on an external wall is a planning matter for Camden rather than an automatic right [VERIFY for the address]. Conservation-area coverage in NW6 runs street by street, and Article 4 directions can bite on windows. Tenure is a separate track: a licence to alter comes from the freeholder or managing agent, on their timetable.",
+    audience: [
+      "Bathroom renovation in West Hampstead (NW6) is for owner-occupiers of converted Victorian and Edwardian terraces in the London Borough of Camden — brick houses behind West End Lane with original bay windows, timber floors and stacked bathrooms on half-landings — and for leaseholders in the later mansion blocks near the transport interchange. Typical instructions are one half-landing room: the soil stack is where it is, and the room is the remainder.",
+      "The West Hampstead bathroom is a half-landing stacked room. One soil stack sits on the party wall; a door opens the wrong way for a shower; the timber floor is a neighbour's ceiling. Kitchens occupy rear returns; bathrooms occupy the leftover of the plan. Some mansion-block bathrooms near the interchange are compact rooms on original risers. Wet rooms are specified only if the floor depth and the tanking system will take the fall. Three stations on West End Lane make daytime loading competitive; we do not assume a skip can sit on it.",
+    ],
+    failures: [
+      {
+        title: "Half-landing floor fall",
+        text: "Half-landing decks in these terraces have usually dropped, and they are short of build-up. A level-access wet room needs a fall those joists may not have the depth to take, and boards that flex will crack a tiled finish and eventually the waterproofing under it. We lift the deck, measure, and will not draw a wet room onto a floor that cannot accept it. If the floor turns out sound, the scope is reduced in writing.",
+      },
+      {
+        title: "Party-wall soil stack",
+        text: "The stack sits on the party wall and the room is whatever is left. Layout follows that stack. Moving a WC a long way is often the item that is not possible without work we do not do. A waste run that also serves the flat above is shared fabric; altering it needs the freeholder's process, which in a share-of-freehold house is usually the neighbours in a meeting rather than an agent.",
+      },
+      {
+        title: "Door-swing shower plan",
+        text: "The door on a West Hampstead half-landing usually opens the wrong way for a shower tray. Rehanging it can steal the landing; leaving it can steal the enclosure. We survey the swing before sanitaryware is chosen. A catalogue wet-room drawing that ignores the door will not fit this room, however well it fitted a showroom.",
+      },
+      {
+        title: "Shared-stair protection",
+        text: "Conversions share stairs and hallways. Common-parts protection, neighbour notice and isolation of the wastes with the flat underneath are part of the method, not a courtesy. West End Lane is rarely the default loading point; we use side streets with a Camden licence, timed around the interchange. A converted terrace has nowhere to store a bath, so sanitaryware arrives when the room can receive it.",
+      },
+    ],
     extraFaqs: [
       {
         q: "What actually drives the cost of a West Hampstead bathroom?",
@@ -330,6 +940,26 @@ export const bathroomDetail: ComboDetailMap = {
       {
         q: "We only wanted new tiles — why does the floor have to come up?",
         a: "Because a tanked floor is only as good as what it sits on. Half-landing decks in these terraces have usually moved, and boards that flex will crack a tiled finish and eventually the waterproofing under it. Lifting the deck also shows the waste runs and any earlier leak. If the floor turns out sound, we say so and the scope is reduced in writing.",
+      },
+      {
+        q: "Can we stay in a West Hampstead conversion while the bathroom is stripped?",
+        a: "In a half-landing flat there is often only one bathroom, so staying means living without it for the wet weeks and sharing a stair with the carry. A second WC in the same demise changes that. We agree isolation and testing with the flat underneath, protect the common hall, and date sanitaryware so the room is not open waiting for a bath. We say at survey whether staying is practical.",
+      },
+      {
+        q: "Will extract on a West Hampstead conservation elevation need Camden consent?",
+        a: "It can. Converted flats do not have the permitted-development rights a householder relies on, so a new vent or duct on an external wall is a planning matter for Camden rather than an automatic right. Conservation-area coverage in NW6 runs street by street, including toward Fortune Green. We plan the route at survey. [VERIFY the named conservation area for the address.]",
+      },
+      {
+        q: "Will underfloor heating fit in a West Hampstead half-landing bathroom?",
+        a: "Half-landings are short of depth, and the deck has usually dropped. A heating mat plus insulation plus a fall can lift the finished floor above the stair nosing. We measure at survey and will say if the mat belongs, rather than thin the insulation to make it fit. Extra-low-voltage underfloor heating is an electrical circuit; building-control notification is arranged where the work falls within the current regulations.",
+      },
+      {
+        q: "Can you tile over the existing tiles in a West Hampstead half-landing bathroom?",
+        a: "Not as a default. Half-landing decks flex, and failed adhesive over a moving floor will crack a new finish laid over an old one. Extra thickness also fights a door that already opens the wrong way for a shower. We strip to a substrate the waterproofing can bond to. If the floor turns out sound, that is a written exception, not the method.",
+      },
+      {
+        q: "Does a West Hampstead bathroom renovation need building-control notification?",
+        a: "Where a new electrical circuit, extra-low-voltage underfloor heating or a change to drainage is involved, notification is arranged at proposal stage. Replacing sanitaryware on existing wastes inside the room often does not. A licence to alter from a share-of-freehold company is a separate question from building control, and in these converted terraces it is often the one that sets the start date.",
       },
     ],
   },

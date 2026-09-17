@@ -8,17 +8,19 @@ export function LocalFacts({
   facts,
   heading,
   lede,
+  id,
 }: {
   areaName: string;
   facts: string[];
   heading?: string;
   lede?: string;
+  id?: string;
 }) {
   const visible = facts.map((fact) => publicCopy(fact)).filter(Boolean);
   if (visible.length === 0) return null;
 
   return (
-    <section className="border-y border-grey-200 py-24 sm:py-32">
+    <section id={id} className="scroll-mt-28 border-y border-grey-200 py-24 sm:py-32">
       <Container>
         <p className="rule mb-8" aria-hidden="true" />
         <h2 className="font-display text-4xl font-normal sm:text-5xl">

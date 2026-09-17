@@ -147,12 +147,22 @@ export function webPageSchema({
   description,
   image,
   imageAlt,
+  imageWidth,
+  imageHeight,
+  mainEntityId,
+  significantLinks,
+  relatedLinks,
 }: {
   name: string;
   url: string;
   description?: string;
   image?: string;
   imageAlt?: string;
+  imageWidth?: number;
+  imageHeight?: number;
+  mainEntityId?: string;
+  significantLinks?: string[];
+  relatedLinks?: string[];
 }) {
   return {
     "@context": "https://schema.org",
@@ -164,13 +174,23 @@ export function webPageSchema({
     inLanguage: "en-GB",
     isPartOf: { "@id": WEBSITE_ID },
     about: { "@id": BUSINESS_ID },
+    publisher: { "@id": BUSINESS_ID },
+    mainEntity: mainEntityId ? { "@id": mainEntityId } : undefined,
     primaryImageOfPage: image
       ? {
           "@type": "ImageObject",
           url: assetUrl(image),
           caption: imageAlt ?? name,
+          width: imageWidth,
+          height: imageHeight,
         }
       : undefined,
+    significantLink: significantLinks && significantLinks.length > 0 ? significantLinks : undefined,
+    relatedLink: relatedLinks && relatedLinks.length > 0 ? relatedLinks : undefined,
+    potentialAction: {
+      "@type": "ReadAction",
+      target: url,
+    },
   };
 }
 
@@ -197,10 +217,12 @@ export function howToSchema({
   name,
   description,
   steps,
+  url,
 }: {
   name: string;
   description: string;
-  steps: { title: string; text: string }[];
+  steps: { title: string; text?: string }[];
+  url?: string;
 }) {
   return {
     "@context": "https://schema.org",
@@ -208,17 +230,18 @@ export function howToSchema({
     name,
     description: publicCopy(description),
     inLanguage: "en-GB",
+    url,
     step: steps
       .map((step) => ({
         title: publicCopy(step.title),
-        text: publicCopy(step.text),
+        text: step.text ? publicCopy(step.text) : "",
       }))
-      .filter((step) => step.title && step.text)
+      .filter((step) => step.title)
       .map((step, index) => ({
         "@type": "HowToStep",
         position: index + 1,
         name: step.title,
-        text: step.text,
+        ...(step.text ? { text: step.text } : {}),
       })),
   };
 }
@@ -229,14 +252,24 @@ export function serviceSchema({
   areaServed,
   description,
   image,
+  imageAlt,
+  imageWidth,
+  imageHeight,
   serviceType,
+  related,
+  catalog,
 }: {
   name: string;
   url: string;
   areaServed: string | string[];
   description?: string;
   image?: string;
+  imageAlt?: string;
+  imageWidth?: number;
+  imageHeight?: number;
   serviceType?: string;
+  related?: { name: string; url: string }[];
+  catalog?: { name: string; url: string }[];
 }) {
   const places = (Array.isArray(areaServed) ? areaServed : [areaServed]).map((place) => ({
     "@type": "Place",
@@ -245,14 +278,19 @@ export function serviceSchema({
   return {
     "@context": "https://schema.org",
     "@type": "Service",
+    "@id": `${url}#service`,
     name,
     serviceType: serviceType ?? name,
+    category: serviceType ?? name,
     url,
     description: description ? publicCopy(description) : undefined,
     image: image
       ? {
           "@type": "ImageObject",
           url: assetUrl(image),
+          caption: imageAlt,
+          width: imageWidth,
+          height: imageHeight,
         }
       : undefined,
     provider: { "@id": BUSINESS_ID },
@@ -262,11 +300,49 @@ export function serviceSchema({
       "@type": "Audience",
       geographicArea: places,
     },
+    providerMobility: "dynamic",
+    availableChannel: {
+      "@type": "ServiceChannel",
+      serviceUrl: absoluteUrl("/contact/"),
+      servicePhone: {
+        "@type": "ContactPoint",
+        telephone: site.phoneTel,
+        contactType: "customer service",
+        availableLanguage: "English",
+      },
+    },
     offers: {
       "@type": "Offer",
       url,
       availability: "https://schema.org/InStock",
       description: "Written proposal after a visit. We do not quote from photographs.",
+      areaServed: places,
+    },
+    isRelatedTo: related?.map((item) => ({
+      "@type": "Service",
+      name: item.name,
+      url: item.url,
+    })),
+    hasOfferCatalog:
+      catalog && catalog.length > 0
+        ? {
+            "@type": "OfferCatalog",
+            name: `${name} by neighbourhood`,
+            itemListElement: catalog.map((item, index) => ({
+              "@type": "Offer",
+              position: index + 1,
+              itemOffered: {
+                "@type": "Service",
+                name: item.name,
+                url: item.url,
+              },
+            })),
+          }
+        : undefined,
+    potentialAction: {
+      "@type": "ContactAction",
+      name: "Request a quote",
+      target: absoluteUrl("/contact/"),
     },
     mainEntityOfPage: {
       "@type": "WebPage",
