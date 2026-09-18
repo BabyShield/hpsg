@@ -19,7 +19,7 @@ Building hpsg.co.uk for Hampstead Property Services Group Limited.
 - Trading name: Hampstead Property Services Group (short form: HPSG)
 - Address: Unit 3 Palace Court, 250 Finchley Road, London NW3 6DN
 - Phone: 020 7101 3168 (`tel:+442071013168`) — the only phone number allowed
-- Email: contact@hpsg.co.uk — the only email allowed
+- Email: office@hpsg.co.uk — the only email allowed
 - Domain: https://hpsg.co.uk
 - Footer legal line: "Hampstead Property Services Group Limited · Company No. 17404557 · Registered in England & Wales · Unit 3 Palace Court, 250 Finchley Road, London NW3 6DN"
 

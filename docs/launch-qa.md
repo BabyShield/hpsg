@@ -36,7 +36,7 @@ Canonical values in `src/data/site.ts`:
 
 - Phone display: `020 7101 3168`
 - Phone tel: `+442071013168`
-- Email: `contact@hpsg.co.uk`
+- Email: `office@hpsg.co.uk`
 - Address: Unit 3 Palace Court, 250 Finchley Road, London NW3 6DN
 - Company no.: 17404557
 - Footer legal line matches the standing context.

@@ -202,7 +202,7 @@ export default function ContactPage() {
           <p className="text-sm text-grey-600">
             {site.formEndpoint
               ? "Send an enquiry."
-              : "The form opens an email to contact@hpsg.co.uk."}
+              : `The form opens an email to ${site.email}.`}
           </p>
           <label className="block">
             <span className="kicker text-navy">Name</span>

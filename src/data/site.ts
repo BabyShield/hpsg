@@ -11,7 +11,7 @@ export const site = {
   },
   phoneDisplay: "020 7101 3168",
   phoneTel: "+442071013168",
-  email: "contact@hpsg.co.uk",
+  email: "office@hpsg.co.uk",
   url: "https://hpsg.co.uk",
   contentRevised: "2026-09-18",
   footerLegal:
