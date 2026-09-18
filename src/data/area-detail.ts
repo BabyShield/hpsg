@@ -32,6 +32,22 @@ export const areaDetail: Record<string, AreaDetail> = {
         q: "Can a flat above a shop on Junction Road be refurbished while the shop stays open?",
         a: "Usually, with conditions. Everything goes up a single street door and a narrow stair, so loads are broken down and timed around the shop's trading. Noisy work is programmed rather than run continuously, and waste comes out the same way it went in. Extract has to terminate on a rear or flank elevation, because there is rarely a route to the front [VERIFY the demise and any lease restriction on hours].",
       },
+      {
+        q: "What does a kitchen renovation in an Archway terrace conversion actually have to work around?",
+        a: "The closet wing. In these two- and three-storey stock-brick houses the kitchen still sits in the old scullery, with a fall to the rear and services boxed in wherever a previous conversion found room. We survey the wing as found — levels, the waste run to the stack, and whether the floor is original boards or a later build-up — and draw the layout to that, not to a showroom plan. Opening the wing into the main room is structural work and sits with Hampstead Renovations.",
+      },
+      {
+        q: "Can a bathroom renovation on an Archway half-landing take a proper shower?",
+        a: "Often, if the floor and the stack allow it. The bathroom in these houses is usually the room above the closet wing, on shallow joists that were never sized for a stone tray and a wet-room build-up. We check span, the existing waste and the neighbour below before specifying a tray height, and we use a documented waterproofing system on timber rather than trusting sealant. Where the joists will not take the weight we say so and specify a lighter construction [VERIFY any structural input needed on the house].",
+      },
+      {
+        q: "Does a kitchen or bathroom in Archway need conservation consent?",
+        a: "Internally, a like-for-like renovation in an existing room is not normally a planning application. Externally it can be. Conservation-area coverage here is patchy compared with Highgate or Dartmouth Park: some streets toward the Village edge are designated, many around the gyratory are not, and Islington is the authority [VERIFY the map for the address]. A new extract grille, an external soil alteration or a window change is the point at which we check before specifying, not after.",
+      },
+      {
+        q: "Where can a skip stand for an Archway refurbishment?",
+        a: "Not on the gyratory, and not as a default on Holloway Road or Archway Road, which are main routes with restricted standing [VERIFY red-route status and hours]. The practical base is a residential side street — St John's Way, Hargrave Road and the streets off Highgate Hill — with an Islington skip licence and, where the CPZ bites, a suspended bay [VERIFY zone and hours]. Those streets slope, so the skip needs level standing and chocking rather than a hope that the brake will hold.",
+      },
     ],
   },
   "belsize-park": {
@@ -46,6 +62,22 @@ export const areaDetail: Record<string, AreaDetail> = {
       {
         q: "Our stucco front is cracked and flaking. Is that decorating work?",
         a: "Painting previously painted stucco is decorating; cutting out and re-running the mouldings is a repair specification, and either can need consent inside the conservation area [VERIFY the boundary and any Article 4 for the address]. The coating matters as much as the colour, since a film that will not let the render dry out is what has caused most of the flaking we find.",
+      },
+      {
+        q: "Where does a kitchen renovation sit in a Belsize Park villa?",
+        a: "Usually at lower ground, in the room that was the original kitchen, reached past a lightwell and a raised entrance. Principal rooms above are tall; this one is not, and at least one wall may be holding ground. We settle moisture, floor level and an extract route that does not punch a grille through the stucco front before any run is drawn. Laterally converted houses add a further constraint: the waste can already leave one original property and enter another, so the layout follows that run rather than inventing a new one.",
+      },
+      {
+        q: "How do you renovate a bathroom in a Belsize Park conversion when the room has no outside wall?",
+        a: "By treating extract as the layout, not as an accessory. Inserted bathrooms here often occupy a former dressing room or a slice of a bedroom, with no window and no obvious duct. The options are an existing void, a route to a rear or lightwell elevation, or a recirculating unit with proper filtration — cutting a fresh grille through a principal stucco front is a conservation and freeholder question [VERIFY the Belsize Conservation Area boundary and the lease]. Waterproofing on timber joists over a neighbour is specified as a system, not as a mat under the tiles.",
+      },
+      {
+        q: "Do Article 4 or licence-to-alter rules affect interior work in Belsize Park?",
+        a: "They affect different things. Article 4, where it applies, is about the outside: windows, stucco, roofscape [VERIFY which streets it covers]. A kitchen or bathroom inside an existing room is not normally a planning application. Licence to alter is the leasehold question, and it bites in laterally converted villas and in mansion flats when a waste moves, a stack is cut, or extract crosses a common void. We prepare drawings and a method statement; the freeholder or managing agent grants the licence [VERIFY the lease].",
+      },
+      {
+        q: "Can you renovate a Belsize Park kitchen while we stay in the house?",
+        a: "A single room, often yes, provided the carry is planned. On a raised-ground-floor villa everything comes up half a storey before it reaches the hall, and on Belsize Lane, Belsize Terrace and Belsize Crescent loading is measured in minutes rather than hours. We protect the stair and the lightwell, break deliveries into carryable loads, and keep noisy work to agreed hours. A whole-flat refurbishment is usually cleaner if you decant; we say which after we have seen the plan.",
       },
     ],
   },
@@ -62,6 +94,22 @@ export const areaDetail: Record<string, AreaDetail> = {
         q: "Can the original tiled hall floor survive a flat refurbishment?",
         a: "Usually, if it is protected from the first day rather than the last. Geometric hall tiles are thin, bedded on lime and unforgiving of a dropped tool, so the hall is boarded before any material comes through. Loose tiles are lifted and re-bedded, and missing ones matched where a match exists. We would rather repair the original floor than cover it with a new one.",
       },
+      {
+        q: "What is a kitchen renovation in a Crouch End garden flat actually working with?",
+        a: "The old rear return. Garden-flat kitchens sit in the original scullery wing, often with a neighbour's bathroom stacked above, a shared stack on the rear wall, and joists that do not run the way a new layout wants. We survey the return as found — the junction with the main house, the damp at that junction, and the fall on the existing waste — and draw the run to those points. Forming a new opening into the front room is structural and sits with Hampstead Renovations.",
+      },
+      {
+        q: "Can you renovate a bathroom that was carved from a Crouch End box room?",
+        a: "Yes, within the drainage. Upper-flat bathrooms here are usually a former box room or a slice taken off a bedroom, which is why so many sit directly over a neighbour's bed. The stack is shared, so the WC stays on that line unless a pumped run and the freeholder both say otherwise [VERIFY the lease]. Pipework is clipped and lagged, wastes laid to a fall on resilient supports, and the wet area built as a documented system on timber rather than as tiles on the old boards.",
+      },
+      {
+        q: "Does the Crouch End Conservation Area reach a kitchen extract or a bathroom grille?",
+        a: "It can. Haringey designated the conservation area on 25 October 1974; it covers the Broadway and a ring of residential streets, so a new grille on a front or publicly visible elevation is a council question rather than a fitting choice [VERIFY the map for the address]. Inside an existing room, a kitchen or bathroom renovation is not normally a planning application. In a converted house the freeholder's licence to alter is the permission that actually bites if a waste or a duct crosses shared fabric.",
+      },
+      {
+        q: "How do you work in an occupied Crouch End conversion without wrecking the shared hall?",
+        a: "By treating the common parts as part of the method, not as a corridor. Geometric tiles, an original arch and a modern fire door are the usual sequence, and they are boarded before the first load. Deliveries use the residential streets rather than the Broadway bus corridor; a Haringey skip licence and, on the hill roads, chocking and lighting are arranged rather than assumed [VERIFY the current CPZ]. Noisy work is programmed around the other flats, not run continuously.",
+      },
     ],
   },
   "dartmouth-park": {
@@ -76,6 +124,22 @@ export const areaDetail: Record<string, AreaDetail> = {
       {
         q: "Can the bathroom above the back addition take a stone or tiled floor?",
         a: "Sometimes, and the joists decide it. Back-addition bathrooms in these houses sit on shallow spans that were sized for boards and a bath, not for a bedded stone floor. We check span, deflection and the existing waste run before a finish is chosen, and where the floor will not take the weight we specify a lighter build-up instead [VERIFY any structural input needed on the specific house].",
+      },
+      {
+        q: "Is a kitchen renovation in Dartmouth Park different on the Highgate Road side from the villas higher up?",
+        a: "The room is different, even when the trades look the same. West of Dartmouth Park Hill the tighter bay-fronted terraces put the kitchen in a lower-ground rear against retaining ground; east and higher, Dartmouth Park Road and Dartmouth Park Avenue hold larger villas where the kitchen may still be a service room but the section is more generous. In both, we settle levels, moisture and extract before cabinets. Opening a structural wall between kitchen and dining room sits with Hampstead Renovations, not with this service.",
+      },
+      {
+        q: "What governs a bathroom renovation above a Dartmouth Park back addition besides the floor finish?",
+        a: "The neighbour and the sequence. These bathrooms are later insertions on the back addition, and they often sit over a kitchen that is still in use. Waterproofing is specified as a system on timber rather than as sealant around a tray, the waste is kept to the existing run, and the kitchen below is planned out of the splash zone for the wet weeks. Stone or a bedded floor is a separate structural question, already answered by the joists; we do not order a finish that the span cannot carry.",
+      },
+      {
+        q: "Does Dartmouth Park Conservation Area consent apply to internal kitchen and bathroom work?",
+        a: "Not to a like-for-like renovation inside an existing room. Camden's designation covers the core of the neighbourhood and is sensitive about original windows and front boundaries, so an extract grille, a soil alteration or a sash repair that changes the elevation is the point of contact [VERIFY the boundary for the address]. In a converted house, moving a waste through a shared void is a freeholder licence-to-alter question, which is separate from planning and is the one that more often holds the start date.",
+      },
+      {
+        q: "How do you get a skip and materials onto a sloping Dartmouth Park street?",
+        a: "By staging the drop rather than tipping it. Material comes off a tail lift onto a gradient, so loads are broken down on a level bearing; a skip needs the same, plus chocking, and a Camden licence with a suspended bay once the CPZ fills [VERIFY the zone code and hours]. Highgate Road is a bus corridor and a poor unloading point. Raised front doors with a lightwell beside them mean baths and carcasses are walked round to a side or rear entrance where one exists, rather than forced up the steps.",
       },
     ],
   },
@@ -92,6 +156,22 @@ export const areaDetail: Record<string, AreaDetail> = {
         q: "The bathroom is over the hall and it is small. What can actually change?",
         a: "Layout, within the drainage. The WC in these houses usually sits against the wall carrying the soil stack, and moving it takes more room than it gains. Fittings, floor and wall build-up, a properly ducted extract and the position of the door are where the space is found. On a suspended timber floor we set out the waterproofing and the falls before any tiling is ordered.",
       },
+      {
+        q: "What does a kitchen renovation in an East Finchley house actually look like?",
+        a: "It depends which plan you have. The Edwardian terrace toward Fortis Green still puts the kitchen in a narrow outrigger that was the scullery, often on timber, with the bathroom stacked above it. The inter-war semi toward Creighton Avenue and East End Road puts it in the rear corner on a solid concrete floor, with a side window and a bathroom over the hall. We survey which of those you have — concealed pipework of unknown age is common to both — and we work within the openings that exist. Forming a new opening sits with Hampstead Renovations.",
+      },
+      {
+        q: "How is a bathroom renovation specified in an East Finchley Edwardian terrace when it sits over the kitchen?",
+        a: "As a stacked room on the outrigger, not as a hall bathroom in an inter-war semi. The soil stack is on the rear wall, the floor is suspended timber, and the kitchen below is in use for part of the programme. We keep the WC on that stack, specify a waterproofing system that expects movement, and put the kitchen out of the splash zone for the wet weeks. A stone or large-format finish is only ordered once span and deflection have been checked.",
+      },
+      {
+        q: "Does living near Hampstead Garden Suburb change planning for an East Finchley kitchen?",
+        a: "No. Proximity to the Suburb does not bring a property under the Trust or under the Suburb's Article 4; that is a separate boundary. Conservation-area coverage in East Finchley itself is selective [VERIFY Barnet's map for the address]. A kitchen or bathroom inside an existing room is not normally a planning application. A new grille, a window change or a front-boundary alteration is ordinary Barnet planning if the house is undesignated, and a conservation question if it is not.",
+      },
+      {
+        q: "Can a skip for an East Finchley renovation stand on the drive?",
+        a: "Where there is a hardstanding, yes — the tail lift can work off the highway entirely, which changes the method more than any licence does. Where there is not, Barnet issues the permit. The High Road is the exception: bus lanes, timed loading restrictions [VERIFY the hours] and school traffic make a mid-morning drop unwise there. Scaffolding on a semi is agreed with the attached neighbour before it goes up, because the standards land on a shared boundary.",
+      },
     ],
   },
   "frognal": {
@@ -106,6 +186,22 @@ export const areaDetail: Record<string, AreaDetail> = {
       {
         q: "Some houses near Frognal Way look modern rather than Victorian — does that change anything?",
         a: "It can. A small number of twentieth-century houses on and around Frognal Way are individually listed, and the listing usually protects the very things a refurbishment touches: window sections, built-in joinery, floor finishes and the openness of the plan. They are not forgiving of standard replacements. We read the list entry first and specify against what is actually there [VERIFY the address and grade with Camden].",
+      },
+      {
+        q: "Where does a kitchen renovation go in a converted Frognal house?",
+        a: "Into a former bedroom or the old service wing, more often than into a purpose-made kitchen. Tall red-brick villas on Frognal, Redington Road and the Fitzjohn's Avenue stretch were divided with a single internal soil chase serving the whole building, so the layout is an argument about fall and about the flue or chimney breast that still occupies the room. We measure the chase, the ceiling height — generous on raised ground, tight under the staff storey — and scribe the run to walls that are rarely square. Enlarging the room is structural and sits with Hampstead Renovations.",
+      },
+      {
+        q: "Can you renovate a bathroom that was a dressing room in a Frognal villa?",
+        a: "Yes, if the soil chase will serve it. Bathrooms in these houses were formed afterwards out of dressing rooms and box rooms, which is why a waste may already travel further than anyone would design from scratch. Top-storey rooms have shallower joists; principal-floor rooms have depth but sit over someone else's ceiling. We survey the existing run, set waterproofing and acoustics as a system on timber, and put any pumped solution to the freeholder rather than treating it as a default [VERIFY the lease and the stack position].",
+      },
+      {
+        q: "Does the Frognal and Fitzjohn's Conservation Area control a kitchen extract?",
+        a: "The elevation, yes; the interior, usually not. Camden's designation covers a large part of Frognal, Frognal Lane, the Redington Frognal streets and Fitzjohn's Avenue [VERIFY the boundary for the address]. A like-for-like kitchen or bathroom inside an existing room is not normally a planning application. A new grille on a gabled red-brick front, a soil alteration or a sash replacement is. Listed buildings are scattered rather than continuous, and on those addresses the list entry can reach joinery and plan form as well [VERIFY with Camden].",
+      },
+      {
+        q: "How do you handle access for a Frognal renovation on the hill?",
+        a: "By finding a flat spot for the tail-lift and adding the carry from kerb to door. Front gardens on Redington Road, Templewood Avenue and Frognal itself are deep, and sack trucks do not behave on the gradient. Camden issues the skip and scaffold licences; a skip on a hill needs chocking and a level base [VERIFY the CPZ zone and hours]. University College School traffic on the hill is heavy at each end of the day, so deliveries are kept out of those windows rather than fought through them.",
       },
     ],
   },
@@ -122,6 +218,22 @@ export const areaDetail: Record<string, AreaDetail> = {
         q: "Will you work around Shabbat and the festivals?",
         a: "Yes. Friday finishing times shorten considerably through the winter, and the autumn festivals take out working days in blocks. Both go into the programme at the outset rather than being discovered halfway through, and deliveries are booked around them. Tell us at survey how you want the site left before each break and that becomes part of the method.",
       },
+      {
+        q: "What should a kitchen renovation in a Golders Green semi check before units are ordered?",
+        a: "The floor void and what the last refit buried. Ground floors here are timber over a ventilated void, so the air bricks matter more than they look, and a rear projection that once held a scullery and a larder has usually already been combined. We establish whether that dividing wall still carries load — if it does, opening it sits with Hampstead Renovations — and we look at concealed pipework of unknown age behind the existing units. The layout then follows the rear wall, the boiler flue and the side passage, not a plan drawn for a different house.",
+      },
+      {
+        q: "Will a bathroom renovation upstairs in a Golders Green house take a heavy tray on timber?",
+        a: "Only if the floor will carry it. Bathrooms sit over the hall or the return, on suspended timber that flexes under a filled bath. We check span and deflection before a stone or large-format finish is chosen, specify a waterproofing system that expects movement, and keep the WC on the existing stack unless there is a clear reason not to. Casements and leaded lights that survive in the room are repaired rather than replaced as a default, particularly where a conservation street is involved [VERIFY Barnet's map].",
+      },
+      {
+        q: "Is conservation consent needed for a kitchen or bathroom in Golders Green?",
+        a: "Internally, a renovation inside an existing room is not normally a planning application. Selected streets and the setting of Golders Hill Park sit in conservation areas [VERIFY Barnet's map for the address]; most of the inter-war stock is undesignated and still subject to ordinary Barnet planning if windows or front boundaries change. A new extract grille on a principal elevation is the item we check. Licence to alter applies in the purpose-built blocks along Golders Green Road, not in a typical freehold semi.",
+      },
+      {
+        q: "Can a skip for a Golders Green kitchen stand on the driveway?",
+        a: "Often, and that is the difference from a Camden conversion. Where the skip sits wholly on private ground a highway licence may not be needed [VERIFY Barnet's current requirement]; where it cannot, Barnet licenses both skip and scaffold. On Hodford Road, Wentworth Road and the crescents behind the main road, cars stand both sides and a long wheelbase will not turn, so material crosses the front garden. Scaffolding to a side return is asked of the neighbour early, not on the morning it arrives.",
+      },
     ],
   },
   "hampstead": {
@@ -136,6 +248,22 @@ export const areaDetail: Record<string, AreaDetail> = {
       {
         q: "The floors slope and the walls are out of true. Will a fitted kitchen work?",
         a: "It will, provided the survey measures the fall instead of assuming a level floor. In village houses of this age we set the run off the worst corner, pack and level the carcasses, and scribe end panels and worktops to the wall. Skirting, cornice and tiling are then cut to the same reference, so nothing in the finished room reads as an obvious wedge.",
+      },
+      {
+        q: "Where is a kitchen renovation usually formed in a Hampstead village house?",
+        a: "At lower ground or in the rear closet, not in the principal room on the raised floor. Georgian and early-Victorian terraces on Church Row, Flask Walk and the lanes off Heath Street have lime plaster, shutter boxes and walls that are rarely square, so a fitted run is scribed rather than dropped in. We settle moisture and extract — a grille on a village front is a conservation matter — before cabinets. A later villa toward Downshire Hill or Well Walk may already have a rear kitchen from a previous owner; we survey that work as found rather than assuming it is original.",
+      },
+      {
+        q: "Can you renovate a bathroom that was a dressing room in a Hampstead house?",
+        a: "Yes, within the existing drainage and, on listed addresses, within the list entry. Bathrooms in the later villas were formed afterwards out of dressing rooms and landings; in mansion flats on Rosslyn Hill and Fitzjohn's Avenue they remain compact original service rooms. We do not move partitions or cut original joinery on a listed interior without establishing consent first [VERIFY the list entry]. Waterproofing on timber over a decorated ceiling is specified as a system. Fittings can generally be renewed.",
+      },
+      {
+        q: "Does listed-building consent reach a kitchen or bathroom inside a Hampstead village house?",
+        a: "It can. Listing covers the interior as well as the elevation, so chimneypieces, staircases, panelled doors, shutters and the plan form itself may all be caught, where the Hampstead Conservation Area alone would only reach the outside [VERIFY the entry for the address]. A like-for-like renovation of fittings in an unlisted room is a different question. We read the list entry before a layout is drawn. Extract, soil pipes and windows remain tightly controlled across the village core even where the building is not listed.",
+      },
+      {
+        q: "How do you get materials into a Hampstead village lane for occupied work?",
+        a: "On foot, from the lanes behind, not from Heath Street or the High Street. Many lanes have no off-street parking and no room for a long-wheelbase van, and some sections are footway only [VERIFY the restriction on the specific lane]. Camden licenses skips and scaffolding; a scaffold on a narrow village pavement can need a footway licence too [VERIFY]. We break loads so two people can carry them, protect original stairs and lime plaster as we go, and time noisy work around occupation rather than running it continuously.",
       },
     ],
   },
@@ -152,6 +280,22 @@ export const areaDetail: Record<string, AreaDetail> = {
         q: "We have damp patches on an external wall. Will redecorating solve it?",
         a: "No, and painting over it usually makes the wall worse. Roughcast render on a solid wall is meant to let moisture move outwards; gypsum skim and vinyl paint applied inside stop it doing so. We investigate the source before specifying anything and use breathable finishes where the construction calls for them. Repairing the render itself is external work, under Barnet and Trust control [VERIFY].",
       },
+      {
+        q: "What does a kitchen renovation in a Hampstead Garden Suburb cottage have to obey?",
+        a: "The openings, the chimney and the roof pitch. The early cottage groups around Asmuns Place, Hampstead Way and Willifield Way have low eaves that cut into upper rooms, a rear scullery that became the kitchen, and small-pane casements that we design from rather than enlarge. Larger houses on Erskine Hill and Meadway give better proportions on the same roughcast fabric. Enlarging a window or forming a new opening is not an internal decision: it needs Barnet consent and, where the Scheme of Management applies, separate Trust consent [VERIFY for the property]. We work within the room as it stands.",
+      },
+      {
+        q: "Can you renovate the only bathroom in a Hampstead Garden Suburb house while we stay?",
+        a: "A single bathroom, with conditions. In the cottages it sits over the hall or the stair, so the house loses its only wet room for the duration, and the floor is suspended timber that needs a proper waterproofing system rather than a tray on the boards. We set out temporary arrangements, keep the work to one room, and do not use the programme to enlarge the opening or steal space from a bedroom — that is a different consent path. Gypsum skim and vinyl paint over lime-based walls are investigated before we redecorate, because painting over a damp patch is not a finish.",
+      },
+      {
+        q: "Whose consent is needed for a kitchen or bathroom in Hampstead Garden Suburb?",
+        a: "Two, and they are not the same map. Barnet is the planning authority and the conservation area was designated in 1967, with an Article 4 direction in force since the 1970s. The Hampstead Garden Suburb Trust runs a Scheme of Management under its own Act of Parliament, and most external works need written Trust consent as well as Barnet's. The Trust boundary and the conservation-area boundary are not identical [VERIFY both, and whether Trust consent is required]. Internal fittings in an existing room are ordinarily the Trust's lighter end of the scale; a grille, a window or a hardstanding is not.",
+      },
+      {
+        q: "Where can a skip stand on a Hampstead Garden Suburb close?",
+        a: "On the drive where there is one; not on the green, the verge or the close as if it were an ordinary street. Hedges, walls and hardstandings sit under Trust control as well as Barnet's [VERIFY the current Trust guidelines for the item]. Turning heads on the closes are tight for a long van, so deliveries are sized to the street. Scaffolding to a front elevation may need Trust consent alongside the Barnet licence [VERIFY]. We do not assume permitted development for any of it.",
+      },
     ],
   },
   "hampstead-heath": {
@@ -166,6 +310,22 @@ export const areaDetail: Record<string, AreaDetail> = {
       {
         q: "The house is cut into the slope down to the Heath — does that affect a kitchen at lower-ground level?",
         a: "Usually yes. Where a rear or side wall is retaining ground, the room behaves differently from a basement that is open on both sides: moisture arrives through the structure rather than through the air, and no amount of extract fixes it on its own. We survey the wall as found, establish where water is coming from, and specify the build-up accordingly before any units are ordered.",
+      },
+      {
+        q: "What does a kitchen renovation look like in a South End Green house facing Hampstead Heath?",
+        a: "A closet-wing or lower-ground room in a three-storey terrace with a semi-basement, climbing South Hill Park, Parliament Hill, Nassington Road or Tanza Road. The kitchen now sits in that wing or in the lower-ground room, and previous owners have often already enlarged it — that earlier work, not the original fabric, is usually what the survey has to correct: falls to the rear, boxed services, extract routed to whichever wall was nearest. We will not put a new kitchen over a moisture problem. Forming a new rear opening sits with Hampstead Renovations.",
+      },
+      {
+        q: "How is a bathroom renovation specified on a Hampstead Heath half-landing?",
+        a: "From the stack and the neighbour. In the terraces above South End Green the bathroom is usually on the half-landing above the closet wing, on timber, over someone else's ceiling. Waterproofing and an acoustic layer are specified as a system; the waste has to reach the rear stack at a fall a half-landing rarely offers, so tray height is a drainage decision. In the shallower villas on Downshire Hill and Keats Grove the room may be a later insertion in a listed interior, which is a consent question before it is a tiling one [VERIFY the list entry].",
+      },
+      {
+        q: "Can a kitchen extract terminate on a Heath-facing elevation in Hampstead Heath?",
+        a: "That is the wrong default. Elevations seen from the Heath sit in the Hampstead Conservation Area or an adjoining designation, and trees on the plot may be protected by conservation-area rules or TPOs [VERIFY CA, listing and TPO]. We look for a rear, flank or already-served position first. A new grille on a publicly visible Heath frontage is a Camden question, and on listed houses on Downshire Hill, Keats Grove and Willow Road the list entry can reach the interior as well. Internal fittings in an existing room are not normally a planning application.",
+      },
+      {
+        q: "How do you reach a house in the Vale of Health for a Hampstead Heath renovation?",
+        a: "By transferring to a small van or barrowing in. The Vale is a pocket of cottages and later houses inside the Heath, reached by one lane off East Heath Road with no turning space for a long wheelbase. On East Heath Road and the Parliament Hill streets a skip or scaffold on a Heath frontage needs a Camden licence and is seen from open ground, so placement is agreed before it is ordered. Pond Street carries hospital traffic, and fine weekends fill South End Green [VERIFY current parking controls].",
       },
     ],
   },
@@ -182,6 +342,22 @@ export const areaDetail: Record<string, AreaDetail> = {
         q: "The kitchen is at the lower rear and the garden sits above floor level. What does that mean?",
         a: "That wall is holding back ground, and it will behave like it. Before cabinets are chosen we want to know how the wall was built, whether anything has been tanked before, and where the room's air comes from. Resolving that is separate work from the kitchen and far cheaper done first. Alterations to a retaining wall sit with Hampstead Renovations.",
       },
+      {
+        q: "How does the slope change a kitchen renovation in Highgate?",
+        a: "Drainage falls the way the land does. Houses on Highgate West Hill, Millfield Lane and Fitzroy Park are built into the ground, so a room level with the garden at the back can be half a storey down at the front. Kitchens began as service rooms at the lower rear and have usually been moved once already. We survey the existing fall, the retaining wall if there is one, and an extract route that does not land on a Village frontage, before any run is drawn. Alterations to a retaining wall sit with Hampstead Renovations.",
+      },
+      {
+        q: "Can you add or renovate an ensuite in a Highgate conversion far from the stack?",
+        a: "Sometimes, and the stack decides it. On Cholmeley Park and the streets dropping toward Archway Road, converted Victorian and Edwardian houses often want an ensuite in a former bedroom with no waste nearby. Gravity, floor depth and the freeholder's view of a pumped run are settled before a layout is drawn [VERIFY the lease]. In a listed Village house on South Grove, Pond Square or The Grove, cutting joists for a new waste may itself need listed building consent [VERIFY the listing]. In the inter-war flats — Highpoint, Holly Lodge — the riser already fixes the plan.",
+      },
+      {
+        q: "Which council grants conservation consent for a Highgate kitchen grille?",
+        a: "The one that holds the frontage, which is not obvious from the postcode. Highgate Conservation Area was designated on 21 December 1967 and is split between Camden and Haringey; Islington and Barnet designations abut the edges, and Holly Lodge Estate is a separate designation [VERIFY which authority and which CA name apply]. A grille, a window or external pipework follows that map. Interior fittings in an existing room are not normally a planning application, but listed Village houses are a different test: listing covers the interior.",
+      },
+      {
+        q: "Why does a skip licence in Highgate depend on the street?",
+        a: "Because licensing splits with the borough boundary. A skip on a Camden street and one a few streets away in Haringey are separate applications [VERIFY which side the address falls]. Gradient decides the vehicle: Swain's Lane and Highgate West Hill are not roads to reverse a long wheelbase down, and Village parking is short-stay. School traffic on North Road and Highgate Hill concentrates twice a day in term time [VERIFY the schools and their hours]. A scaffold near a protected tree involves the tree officer first.",
+      },
     ],
   },
   "kensal-rise": {
@@ -196,6 +372,22 @@ export const areaDetail: Record<string, AreaDetail> = {
       {
         q: "Can the original tiled hall path and floor survive a full refurbishment?",
         a: "Usually, if it is protected from the first delivery rather than the first breakage. Encaustic tiles in these halls are laid on lime and sand and crack under point loads, so we board over them and route heavy items with that in mind. Missing or loose tiles are lifted and reset where matches can be found; where they cannot, we say so rather than substituting something close.",
+      },
+      {
+        q: "What is a kitchen renovation in a Kensal Rise terrace working inside?",
+        a: "A single-storey back addition that was the scullery, or someone else's rear extension on top of it. College Road, Clifford Gardens, Bathurst Gardens and Wrentham Avenue repeat the same section: bay-fronted front room, middle room, narrow return. Where the return is original we work to one window, one rear stack and shallow joists. Where it has already been extended we survey the junction — floor levels, the flat roof into the existing gully, concealed waste — before ordering. We do not form the extension; that sits with Hampstead Renovations.",
+      },
+      {
+        q: "How do you renovate a bathroom over the back addition in Kensal Rise?",
+        a: "As a stacked room on shallow joists, not as a wet room dropped onto the old boards. The bathroom is either over that addition or upstairs in the old box room, which puts a kitchen or a bedroom underneath it. Waterproofing is a documented system that expects timber movement; the soil stack on the outside rear wall fixes the WC. There is no side alley, so the bath comes through the front door, over the tiled path and hall, and up a stair that turns — boarding goes in on day one.",
+      },
+      {
+        q: "Does conservation consent apply to a kitchen extract in Kensal Rise?",
+        a: "On some streets, not on Chamberlayne Road as a default. Conservation-area coverage includes streets toward Queen's Park and Kensal Green [VERIFY Brent CA names and boundaries]; much of Chamberlayne Road itself is undesignated mixed-use. A renovation inside an existing room is not normally a planning application. A new grille on a designated elevation is. In a converted house, moving a waste through a shared void is a freeholder licence-to-alter question, which is independent of Brent planning.",
+      },
+      {
+        q: "How do materials reach a Kensal Rise kitchen when there is no back way in?",
+        a: "Through the front door, over the original tiled path and hall, and up the stair. These terraces have no side alley, so every carcass and bag of waste takes that route; the path and hall are boarded from the first delivery. Side roads are parked to capacity by the morning commute, so a suspended bay is arranged rather than assumed [VERIFY the zone hours], and waste is bagged out where a skip cannot be licensed by Brent. Chamberlayne Road is a tight loading environment and a poor default for a skip.",
       },
     ],
   },
@@ -212,6 +404,22 @@ export const areaDetail: Record<string, AreaDetail> = {
         q: "The floors in our terrace slope noticeably. Do you level them?",
         a: "We measure them and tell you the range before anything is ordered. Settlement over the life of a Victorian terrace is not a defect to be chased out of the house. Where tiles or a rigid floor are going down the deck has to be flat, so we pack or use a levelling compound and adjust door heights and skirtings to suit. Where boards are being kept, the fall usually stays.",
       },
+      {
+        q: "What does a kitchen renovation at lower ground in Kentish Town have to solve besides cabinets?",
+        a: "Head height, the floor and the light well. Early terraces on Leighton Road, Lady Margaret Road and toward Torriano put the kitchen in a lower-ground room behind a front area: restricted ceiling, a solid or part-solid floor, and a light well doing all the ventilation work. We measure the range of the floor, pack or level only where a rigid finish needs it, and do not chase settlement out of the house. Material often goes down the area stair rather than through the raised ground floor, so the front area is boarded first. Opening the room into the garden structurally sits with Hampstead Renovations.",
+      },
+      {
+        q: "Can you renovate a half-landing bathroom in a Kentish Town conversion?",
+        a: "Yes, and the recurring find is a shower tray laid over springy timber. These bathrooms were carved out at some point in the last century, on joists that move, feeding a rear-elevation soil pipe that was added long after the house was built. We specify a waterproofing system for that movement, keep the WC on the stack, and treat lath and lime behind later boxing as fabric to record rather than as rubble. In a former workshop the floor may be solid, which changes the detail, not the requirement that the wet area is built as a system.",
+      },
+      {
+        q: "Which conservation rules apply to a Kentish Town kitchen grille?",
+        a: "Camden's, and they run street by street rather than across the whole of NW5. Several conservation areas cover parts of Kentish Town and the rise toward Dartmouth Park [VERIFY the named CA for the address]; the High Street itself is mixed-use and less uniformly designated. A grille punched through a front elevation is visible from the street and may need consent; a rear or light-well route is preferred. Interior renovation in an existing room is not normally a planning application. In a conversion, the freeholder's licence to alter is what bites if a waste or duct crosses shared fabric.",
+      },
+      {
+        q: "Can you work in an occupied Kentish Town terrace around market days and neighbours?",
+        a: "Yes, with the hours written down. Queen's Crescent market days close part of that street [VERIFY the market days], Camden permit bays fill by mid-morning, and the high street is no place to leave a skip, so a bay is suspended and licensed rather than found [VERIFY the current process]. Party-wall noise in these terraces belongs in the working-hours plan. Where the kitchen is at lower ground, the carry is down the area stair; protection of that area and of the shared hall is in the method before the first delivery.",
+      },
     ],
   },
   "kilburn": {
@@ -226,6 +434,22 @@ export const areaDetail: Record<string, AreaDetail> = {
       {
         q: "We are above a shop on the High Road. Can work happen during trading hours?",
         a: "Some of it. Noisy operations such as lifting floors, cutting tiles and breaking out are scheduled around the business below and agreed in writing with the freeholder or the tenant first. Everything arrives through one street door and up a stair, so deliveries are broken into carryable loads rather than dropped on the pavement as a pallet and left there.",
+      },
+      {
+        q: "What does a kitchen renovation look like in a subdivided Kilburn house?",
+        a: "A former bedroom with a boxed duct running to a stack it was never meant to serve. East of the High Road, on Priory Road, Iverson Road and toward West Hampstead, three storeys over a lower ground were cut into small flats through the twentieth century; west of it the grain includes more purpose-built blocks. The first hour of survey separates original structure from later stud, because that changes layout, acoustics and drainage together. If a wall carries load we stop — structural work sits with Hampstead Renovations. The layout then follows the waste that exists, not a plan that assumes a service wall.",
+      },
+      {
+        q: "How do you renovate a bathroom that occupies a former cupboard in Kilburn?",
+        a: "By treating the boxed duct as the room's one fixed point. Waste often crosses a floor inside that duct to reach the stack, and the floor is timber over a neighbour in a Camden-side conversion, or a solid floor and a riser in a Brent-side block. We do not open a shared riser on our own decision. Waterproofing is specified for the construction that is actually there; extract has to find a rear or already-served route rather than a High Road shopfront. Fittings can be renewed inside the existing walls.",
+      },
+      {
+        q: "Does a Kilburn kitchen need conservation consent, and from which council?",
+        a: "The council follows the address, not the neighbourhood name: Camden east of the High Road, Brent west of it [VERIFY the borough for the property]. Named conservation areas cover selected streets rather than the whole of Kilburn [VERIFY both maps]. Interior renovation in an existing room is not normally a planning application for either. A grille or soil alteration on a designated elevation is. Above a shop, the freeholder's licence to alter and any shopfront guidance sit alongside that, and we do not start strip-out while they sit outstanding.",
+      },
+      {
+        q: "Where can a skip stand for a Kilburn renovation?",
+        a: "On a side street, under the licence of the borough that holds the frontage, not on the High Road as a default. The High Road is a bus and delivery route with restricted standing [VERIFY the current red-route and loading restrictions]. Flats above shops have one narrow street door and a long stair, so deliveries are broken into carryable loads and timed around the business below. Side streets are controlled on both sides under different permit rules [VERIFY the zones]. We arrange a suspended bay rather than hunting for one at 8am.",
       },
     ],
   },
@@ -242,6 +466,22 @@ export const areaDetail: Record<string, AreaDetail> = {
         q: "Where can a kitchen extract actually go in a mansion block?",
         a: "Rarely anywhere new. Cutting a fresh grille through a principal elevation is both a planning question inside the conservation area and a freeholder question, so the practical options are an existing vent or duct, a route to a lightwell or rear elevation, or a recirculating hood with proper carbon filtration. We establish which is available at survey, not after the units are ordered [VERIFY the duct route in your block].",
       },
+      {
+        q: "What is a kitchen renovation in a Maida Vale mansion flat actually replacing?",
+        a: "The original service kitchen at the back of a corridor plan. On Elgin Avenue, Lauderdale Road, Delaware Road and the red-brick and terracotta blocks, principal rooms face the street and the kitchen sits off what was the service stair, with a riser in a duct that serves every flat in the column. The layout is drawn to reach that duct at a fall, not drawn first and then asked to fit. Opening the kitchen into the reception is structural and a lease question; it sits with Hampstead Renovations. Carcasses are measured against the corridor turn and the lift car before they are ordered.",
+      },
+      {
+        q: "How is a bathroom renovation built over timber floors in a Maida Vale block?",
+        a: "As a waterproofing and acoustic system, not as tiles on the boards. Floors between flats are usually timber joists, bathrooms stacked one above another, and many leases restrict hard flooring or require a specified underlay [VERIFY the clause]. We record deflection, the build-up the lease allows, and the existing connection to the duct before any stone or porcelain is discussed. The stucco houses around Warwick Avenue and Warrington Crescent behave differently — lower-ground rooms, lightwells, lime plaster — and are surveyed as houses, not as flats that happen to sit at garden level.",
+      },
+      {
+        q: "What consents sit behind a kitchen or bathroom renovation in Maida Vale?",
+        a: "The lease first, Westminster second. A licence to alter is granted by the freeholder or managing agent when a waste, a stack connection or extract changes; we prepare the pack, they grant it. The Maida Vale Conservation Area covers a substantial part of W9, so a new grille, window or the painting of previously painted brick is a council matter [VERIFY the boundary]. Canal-side properties on Blomfield Road and Maida Avenue may add the Canal & River Trust [VERIFY on the frontage]. Renewing fittings inside existing walls is not normally a planning application.",
+      },
+      {
+        q: "Can you renovate a Maida Vale kitchen while the rest of the block is occupied?",
+        a: "Yes, and the constraint is the common parts rather than the room. Polished corridors, one shared front door and a lift with a stated load mean protection boards, agreed delivery windows and loads broken to what the building will accept. Porters' hours are usually tighter than Westminster's. The wide avenues take a skip more easily than most of our patch, provided a bay is suspended [VERIFY the Westminster process and the CPZ hours]. A towpath is not a delivery route.",
+      },
     ],
   },
   "muswell-hill": {
@@ -256,6 +496,22 @@ export const areaDetail: Record<string, AreaDetail> = {
       {
         q: "Do you work in the flats above the Broadway parades?",
         a: "Yes, though the method differs from a house on the slope. Access is a shared street door and stair over a trading business, so delivery times and noisy operations are agreed in advance. Extract normally has to reach a rear light well rather than the parade elevation, and the conservation area applies to the frontage [VERIFY the boundary for the building]. Floors between flats are separating floors, so acoustic detail matters.",
+      },
+      {
+        q: "What does a kitchen renovation in a Muswell Hill Edwardian house have to design around?",
+        a: "A chimney breast, a rear return and, very often, two floor build-ups. Red-brick houses with roughcast gables on the avenues off the Broadway put the original kitchen in a scullery off that return; in most houses the dividing wall came down years ago, leaving a long rear space with a junction where damp likes to bridge. We survey that junction, the garden door and the existing waste before a run is drawn. Taking out the wall to the room in front, or forming a side return, is structural and sits with Hampstead Renovations.",
+      },
+      {
+        q: "How do you renovate a bathroom over the return in a Muswell Hill house?",
+        a: "On timber, over a kitchen that may still be in use, with the stack on the rear wall. Bathrooms usually sit over that return or in a rear bedroom; plaster is lime on lath under later gypsum patches, and boards have been cut about for pipe runs more than once. We specify a waterproofing system that expects movement, keep the WC on the existing line, and repair sashes and casements in the room rather than replacing them as a default inside the conservation area [VERIFY the boundary]. The kitchen below is planned out of the splash zone for the wet weeks.",
+      },
+      {
+        q: "Does the Muswell Hill Conservation Area control internal kitchen work?",
+        a: "The envelope, not the cabinets. Haringey designated the conservation area on 1 March 1974; Fortis Green Conservation Area, also 1 March 1974, sits on the north-west side [VERIFY which applies, and any Article 4]. A renovation inside an existing room in a freehold house is not normally a planning application. A new grille, duct terminal or altered window on a designated elevation is. Flats above the Broadway parades are usually leasehold, and there the freeholder grants a licence to alter if a waste or extract crosses shared fabric.",
+      },
+      {
+        q: "How do you deliver a kitchen up a steep Muswell Hill street?",
+        a: "In smaller drops, not with a long-wheelbase van left on the gradient. There is no Underground station, so residents keep cars and the permit bays fill early [VERIFY the Haringey CPZ zone and hours]. Skip placement is licensed by Haringey and is mostly a question of finding level ground. Behind the parade, off-street drives are more common than on inner-Camden streets, and where a house has one it settles the delivery. Occupied family houses keep noisy work to agreed hours; Broadway flats add the shop below and a shared stair.",
       },
     ],
   },
@@ -272,6 +528,22 @@ export const areaDetail: Record<string, AreaDetail> = {
         q: "Does repainting the stucco front need permission here?",
         a: "Not always, but this is not an area where permitted development can be assumed. Camden's controls on this conservation area reach further than the national default, and colour, finish and the condition of the render beneath all matter to the street [VERIFY what the direction removes for your address]. We establish the position before external decoration is specified.",
       },
+      {
+        q: "What does a kitchen renovation in a Primrose Hill lower-ground room have to settle first?",
+        a: "Moisture and ventilation, then cabinets. The repeating house on Chalcot Square, Chalcot Road, Fitzroy Road and Gloucester Avenue is a mid-nineteenth-century terrace with a lower ground that opens to a front area and a closet wing at the back. Kitchens sit down there with retained earth behind at least one wall. Previous work has often put gypsum and impermeable paint onto walls that need to breathe. We survey the wall as found, establish where water is coming from, and specify the build-up before any units are ordered. Opening pavement vaults into the kitchen is not our work and sits with Hampstead Renovations.",
+      },
+      {
+        q: "How is a bathroom renovation in a Primrose Hill closet wing actually built?",
+        a: "On a half-landing, on timber, over a neighbour or over the kitchen. The closet wing is where these bathrooms usually sit; drainage runs can be long, and the floor was not sized for a stone wet-room. We check the fall to the stack, specify a waterproofing system for movement, and do not assume a new extract can punch through a park-facing elevation [VERIFY which elevations face open space]. In houses still in single occupation the sequence is simpler than in a split house, but the fabric is the same.",
+      },
+      {
+        q: "Does the Primrose Hill Article 4 direction affect a kitchen extract?",
+        a: "It can, because it reaches the outside. Camden has had an Article 4 direction here since 3 March 1983, and the conservation area covers the core streets and the setting of the park, so rooflines, front gardens, windows and a grille on a visible elevation are sensitive [VERIFY what the direction removes for the address]. Interior fittings in an existing room are not normally a planning application. Properties looking onto the hill itself carry the most publicly visible frontages; we check before specifying a termination, not after the hood is ordered.",
+      },
+      {
+        q: "Can you work in an occupied Primrose Hill house when the streets fill at weekends?",
+        a: "Yes, by treating Saturday as a poor delivery day and the entry as a carry. Materials come either up a flight from the pavement or down into a front area, so they are carried rather than wheeled. The streets are narrow, largely single-file, and under Camden control [VERIFY the zone letter]. Fine weekends bring visitor traffic onto the slope. Skips need a Camden licence and neighbours told before the lorry arrives; a front scaffold generally has to bridge the area railings rather than stand on them.",
+      },
     ],
   },
   "queens-park": {
@@ -286,6 +558,22 @@ export const areaDetail: Record<string, AreaDetail> = {
       {
         q: "Where can a cooker hood vent to in a back-addition kitchen?",
         a: "Usually straight through the rear wall on the shortest run, with a grille chosen to suit the elevation rather than whatever arrives in the box. Long ducts through the house lose performance and collect grease. Where the rear elevation falls inside a conservation-area audit, the grille position is worth settling first [VERIFY which designation applies to the address].",
+      },
+      {
+        q: "What is a kitchen renovation in a Queen's Park back addition actually constrained by?",
+        a: "Width, the rear stack and the bathroom above it. Brent-side houses on Chevening Road, Kingswood Avenue and Milman Road follow one plan: a bay-fronted terrace, kitchen at ground level in the back addition, bathroom directly above, both served by a soil stack on the outside rear wall. We keep the wet services on that wall, survey the ventilated void under the timber floor, and do not treat chimney breasts as optional. Forming a side-return opening sits with Hampstead Renovations. Extract is usually the shortest run through the rear wall, with the grille settled against any conservation-area audit [VERIFY the designation].",
+      },
+      {
+        q: "Is a bathroom renovation in a Queen's Park Estate cottage the same job as one in a Brent terrace?",
+        a: "No. Estate cottages on the Westminster grid — Alperton through to Peach [VERIFY the full run and the Estate's boundary] — are smaller-boned: lower ceilings, tighter stairs, decorative brick and joinery worth keeping, and some hold two dwellings behind what reads as a single house [VERIFY the arrangement]. The Brent terrace bathroom is the stacked room over the kitchen. Both sit on timber and need a proper waterproofing system; the Estate adds a separate conservation-area audit and, often, a tighter carry from pavement to room.",
+      },
+      {
+        q: "Which conservation area applies to a Queen's Park kitchen, Brent's or Westminster's?",
+        a: "Whichever holds the address, and they are not interchangeable. Brent's Queen's Park Conservation Area covers streets around the park; Westminster's Queen's Park Estate Conservation Area is a separate designation with its own audit [VERIFY which CA and which council apply]. Interior renovation in an existing room is not normally a planning application. Windows, a grille and front-boundary work follow the audit that applies. Two councils also means two licence-to-alter regimes in converted houses, and two skip-licence regimes.",
+      },
+      {
+        q: "How do you place a skip for a Queen's Park renovation when the house meets the pavement?",
+        a: "By suspending a bay in advance, under the council that holds the kerb. On the Estate there is no front garden to hide in; a skip takes a bay. North of the park the comb of streets can take a skip more easily, but Brent's controlled hours and Westminster's do not match, and a bay suspension arranged with one council is no use on the other [VERIFY the zones and hours either side of the boundary]. Salusbury Road narrows around the station, and the Sunday market draws traffic to its middle stretch [VERIFY the market's day and location].",
       },
     ],
   },
@@ -302,6 +590,22 @@ export const areaDetail: Record<string, AreaDetail> = {
         q: "Can a van stand on the Outer Circle while a kitchen is unloaded?",
         a: "Not as an assumption. The Outer Circle is a park road rather than an ordinary borough street, with its own controls on standing, and gates that are not open at all hours [VERIFY the arrangements that apply to your frontage]. Deliveries are booked into a window, split into loads two people can carry, and scheduled so the vehicle is not sitting there once it is empty.",
       },
+      {
+        q: "Where does a kitchen renovation sit in a Regent's Park terrace house?",
+        a: "In the basement service rooms, more often than in a principal room on the park front. Cumberland Terrace, Chester Terrace, York Terrace and their neighbours are deep, narrow and vertical: service at the bottom, a raised ground floor, full-height sashes to the first-floor principal room, and lower ceilings above. Where the house has been divided, kitchens have landed in former service or dressing rooms, so wastes travel further than anyone would design from scratch. We draw to the existing run and to the listing. Opening the plan is not this service and sits with Hampstead Renovations.",
+      },
+      {
+        q: "How do you renovate a bathroom at the light-well end of a Regent's Park flat?",
+        a: "As a wet room sitting over a decorated ceiling that belongs to someone else. Bathrooms in these divided terraces occupy the light-well end of the plan; sequencing and protection matter as much as the fit-out. Waterproofing and acoustics are specified as a system, the waste is kept to a fall that the existing stack will accept, and chimneypieces, cornices and staircases are treated as part of the listing until the list entry says otherwise [VERIFY the grade and the entry]. Fittings can generally be renewed; cutting a cornice or forming a new service opening may need listed building consent.",
+      },
+      {
+        q: "Is Crown Estate or freeholder approval separate from listed-building consent in Regent's Park?",
+        a: "Yes, and all three can apply to one kitchen. Listing is the statutory interior-and-exterior test; planning and the conservation area sit with Westminster or Camden depending on the frontage [VERIFY the borough]; the Crown Estate and other large freeholders add a layer of approval beyond the council [VERIFY the estate for the building]. We establish which of the three apply before drawings go anywhere. A like-for-like renovation of fittings in an existing demise is still often a pack of drawings and a method statement, because the managing agent will ask for one.",
+      },
+      {
+        q: "Can you renovate a Regent's Park kitchen while the building stays occupied?",
+        a: "Yes, inside the porter's hours and the goods lift, not as a kerbside drop on the Outer Circle. Terrace frontages give onto a park road with its own vehicle rules and gate hours [VERIFY Royal Parks access for the frontage]; material is then carried across a front area and down or up steps. In the blocks, the service entrance, the lift and the porter decide the day. We split loads, protect original common parts, and do not assume a Westminster skip licence is even available in front of a listed elevation.",
+      },
     ],
   },
   "south-hampstead": {
@@ -316,6 +620,22 @@ export const areaDetail: Record<string, AreaDetail> = {
       {
         q: "What can be done about sound transfer between the flats in a converted house?",
         a: "Within a refurbishment, a fair amount. Lifting a floor is the one chance to add an acoustic layer under the boards, and the same applies to a resilient build-up under a new bathroom or kitchen floor. Hard finishes laid straight onto old boards make the problem worse. We set out what the lease requires, what the floor depth allows, and what the result will realistically be.",
+      },
+      {
+        q: "What does a kitchen renovation in a South Hampstead converted house have to work to?",
+        a: "A room that was never a kitchen, in a house with no lift. Compayne, Canfield, Greencroft, Fairhazel, Aberdare and Goldhurst Terrace are tall red-brick and stucco houses of the 1880s and 1890s, most now three or four flats each, with tall front rooms on the lower floors and much lower ceilings under the roof. Kitchens have been inserted where a rear wall and a stack could be found. We survey that stack, the floor that passes sound straight down, and the carry up the common stair before ordering carcasses. Purpose-built blocks on the same streets are the opposite problem: consistent heights and shafts that have barely moved.",
+      },
+      {
+        q: "How is a bathroom renovation specified in a South Hampstead conversion when the stack is shared?",
+        a: "From the stack and the lease, not from the tile. Wet rooms here serve, and are served by, other people's leases. A shared soil pipe fixes where a WC can sit; cutting into it affects flats that are not yours, so the proposal goes to the freeholder or managing agent before first fix [VERIFY the lease terms]. Waterproofing and an acoustic layer are specified together, because hard finishes laid straight onto old boards make the sound worse and the neighbour's ceiling is the underside of the tray. We do not move the bathroom off the stack as a convenience.",
+      },
+      {
+        q: "Does the South Hampstead Conservation Area affect a kitchen extract?",
+        a: "On the elevation, yes. Camden's South Hampstead Conservation Area covers a substantial part of the neighbourhood; it was renamed from the Swiss Cottage Conservation Area and still covers many of the residential streets off Finchley Road [VERIFY the boundary, and whether Belsize Conservation Area adjoins]. Interior renovation in an existing room is not normally a planning application. A new grille on a five-storey red-brick front, or a sash replacement, is. The Alexandra Road Estate is listed in its own right [VERIFY grade] and is not treated as a converted house.",
+      },
+      {
+        q: "How do you get a kitchen to a fourth-floor flat in South Hampstead?",
+        a: "Up the common stair, in loads the stair will take, with the hall protected from day one. Converted houses here have no lift; original tiling and a shared front door are the route, so delivery timing is agreed with the managing agent or freeholder in advance. The railway cutting stops several streets from connecting through, which matters once a long vehicle is committed. Finchley Road is a main-road frontage with its own loading rules [VERIFY the highway authority]; scaffolding to a five-storey elevation needs a licence and the neighbours told. Occupied work keeps noisy operations to the agreed window.",
       },
     ],
   },
@@ -332,6 +652,22 @@ export const areaDetail: Record<string, AreaDetail> = {
         q: "Can a bathroom move to a different room in the flat?",
         a: "Sometimes, but the original stacks run vertically through the whole building and there is rarely a second one to use. Moving a WC off that line means a pumped or macerating solution, a floor build-up to gain the fall, and a written case for the managing agent. We would usually rather improve the bathroom where it stands than argue for a position the building was never planned for.",
       },
+      {
+        q: "What is a kitchen renovation in a St John's Wood mansion flat working around?",
+        a: "Original risers and a compact room near the old service stair. Blocks on Wellington Road, Prince Albert Road and Grove End Road were planned with brick cross-walls that look like partitions and are not, so the sink and the soil pipe sit where the building put them. We draw the layout to those ducts. Opening the kitchen into the dining room is structural, belongs with Hampstead Renovations, and in a block needs the freeholder's own approval as well. Villas on Hamilton Terrace, Carlton Hill and Abercorn Place are a different job: rear kitchens added later, lime in the original rooms and gypsum in the additions.",
+      },
+      {
+        q: "How do you renovate a stacked bathroom in a St John's Wood block?",
+        a: "By keeping it on the original stack and building the floor as a waterproofing and acoustic system. Bathrooms sit one above another through the building; there is rarely a second stack to use, which is why we would rather improve the room where it stands than argue for a bedroom conversion the plan never allowed. Parquet halls and heavy architraves on the way in are protected and usually kept. The mews behind these streets are a separate stock — shallower floors, a different carry — and are surveyed as such [VERIFY the named mews].",
+      },
+      {
+        q: "What is a licence to alter actually for in St John's Wood?",
+        a: "For the freeholder, not for Westminster, though both can apply. Westminster designated the St John's Wood Conservation Area in 1968; Camden holds a smaller adjoining area on its side of the boundary [VERIFY CA and listed status]. Interior fittings in an existing room are not normally a planning application; windows, front boundaries and roof alterations are tightly controlled. Many mansion blocks also sit behind freeholder design guides and a scheme of management that are stricter than planning [VERIFY the estate]. We prepare drawings and a method statement; the agent grants consent, on their timetable.",
+      },
+      {
+        q: "Can you work in an occupied St John's Wood block around Lord's match days?",
+        a: "Yes, if the programme is booked rather than simply started. Porters set delivery windows, lift use and where a skip may stand, and those conditions are usually tighter than the council's [VERIFY the building's own rules]. Wellington Road carries through traffic and stopping on it is not a loading plan [VERIFY whether it is a red route]. Westminster issues the skip and scaffold licences. On the villa streets a driveway helps, though Lord's event days still change what can reach the door [VERIFY event restrictions with the building]. Carcasses often go up the stairs because the lift car will not take them.",
+      },
     ],
   },
   "swiss-cottage": {
@@ -346,6 +682,22 @@ export const areaDetail: Record<string, AreaDetail> = {
       {
         q: "The floors are solid concrete. Does that decide where the sink can go?",
         a: "It narrows the options considerably. Without a void under the boards there is nowhere to run a waste at a fall, so a moved sink means a raised plinth, a boxed run along the wall, or a pump. We measure the existing fall from the stack before drawing anything, and we say plainly when a plan cannot be served.",
+      },
+      {
+        q: "Where does a kitchen renovation sit in a divided Swiss Cottage villa?",
+        a: "In a former rear bedroom, using a stack that was never asked to serve three separate flats. Fitzjohn's Avenue, Maresfield Gardens and Netherhall Gardens are tall red brick and stucco, most of it divided a century ago; load-bearing brick, lath-and-plaster ceilings and boarded floors are the fabric. We open up enough to see what earlier refits boxed in, then draw the run to the waste that exists. Avenue Road is the opposite grain — wide plots, later blocks, solid floors with no void to bury a pipe in — and a moved sink there means a plinth, a boxed run or a pump. Forming a new opening sits with Hampstead Renovations.",
+      },
+      {
+        q: "How is a bathroom renovation different in a Swiss Cottage inter-war block from one in a converted villa?",
+        a: "The floor and the extract. In the framed blocks, bathrooms often sit in the middle of the plan with no outside wall; mechanical extract runs into a shared shaft, and the replacement fan has to suit that shaft. Floors are solid, so there is no void for a new waste at a fall. In a converted villa the bathroom is more likely a former dressing room on timber over a neighbour, with lime and boards and a stack shared by later flats. Cutting a new opening through an external wall is a freeholder matter and usually a planning one as well [VERIFY the lease and the elevation].",
+      },
+      {
+        q: "Which conservation area covers a Swiss Cottage kitchen extract?",
+        a: "Often the South Hampstead Conservation Area, which is the name Camden now uses for what was the Swiss Cottage Conservation Area; Belsize Conservation Area adjoins to the east [VERIFY which CA applies]. Finchley Road mixed-use frontages are less likely to be designated, but extract on those buildings can still need consent. Interior renovation in an existing room is not normally a planning application. A grille on a principal elevation, or a window in a metal-framed block [VERIFY the original glazing], is a different question. Licence to alter sits with the managing agent in the larger Avenue Road blocks.",
+      },
+      {
+        q: "Can a van stand on Finchley Road while a Swiss Cottage kitchen is unloaded?",
+        a: "Not as a plan. Finchley Road through the junction is a Transport for London route, so a frontage there is no place to stand a van or a skip [VERIFY the highway authority for the address]. Side streets sit under Camden controlled parking, with little slack in the working day [VERIFY the zone and hours]. Blocks impose their own delivery bays, lift bookings and working hours; kitchen runs are measured against the lift car before anything is ordered. Occupied flats keep noisy work inside those hours. Our office at Unit 3 Palace Court, 250 Finchley Road is in this neighbourhood, which helps with the survey, not with parking on the main road.",
       },
     ],
   },
@@ -362,6 +714,22 @@ export const areaDetail: Record<string, AreaDetail> = {
         q: "Can working days be set around Shabbat and the festival calendar?",
         a: "Yes. Working days, Friday finishing times and whether Saturdays are used at all are agreed with the household before the programme is fixed, not adjusted once trades are booked. The same applies to festival weeks. It is easier to build the calendar into the sequence at the start than to lose a fitting slot later, so we ask at the survey rather than assume.",
       },
+      {
+        q: "Is a kitchen renovation above the Temple Fortune parade the same job as one in the houses behind?",
+        a: "No. Behind the parade, toward Bridge Lane and Golders Green, the inter-war semi gives a small rear kitchen with a side door, a larder and the bathroom waste dropping through from above — wet services stay on that wall. Above the shops on Finchley Road the kitchen is a flat with one narrow stair, extract that cannot land on the parade elevation, and a freeholder who will want a licence if a waste moves. The gateway buildings were put up as the western entrance to Hampstead Garden Suburb, which is why the architecture there does not match the housing behind [VERIFY the buildings' names and dates]. We survey them as different stock.",
+      },
+      {
+        q: "How do you renovate a bathroom stacked over the kitchen in a Temple Fortune semi?",
+        a: "By treating the floor as timber that moves and the waste as already in the right place. The bathroom sits directly above the kitchen, which is useful for the stack and disruptive for the household: the kitchen below is out of the splash zone for the wet weeks. Ground and upper floors are both suspended timber over a void. We specify a waterproofing system for that movement, keep the WC on the existing line, and match inter-war skirting and plaster texture when we make good — that is the part of the job people underestimate.",
+      },
+      {
+        q: "Does the Hampstead Garden Suburb Trust control a kitchen in Temple Fortune?",
+        a: "Not by default. East of Finchley Road, Temple Fortune Lane and Hampstead Way rise into the Suburb and change regime entirely; west and south the streets are ordinary Barnet housing. The parade and some adjoining streets have a different status from the Suburb immediately to the east [VERIFY whether the address is inside the Trust / conservation area or ordinary Barnet planning]. Interior renovation in an existing room is not normally a planning application. Do not apply Trust rules, or the Suburb's Article 4, to a house that sits outside both maps.",
+      },
+      {
+        q: "Can a skip for a Temple Fortune kitchen stand on the drive?",
+        a: "Usually, on the residential streets. Most houses behind the parade have off-street parking, so a highway licence is needed only when the skip or scaffold stands on public ground [VERIFY Barnet's current requirement]. We check the crossover, the drainage gully and what the surface will carry. On the parade itself, loading is squeezed between bus traffic and shop deliveries, and material for a flat above goes up one narrow stair in carryable loads. Occupied houses can keep working days off Saturdays where that is how the household wants the site left.",
+      },
     ],
   },
   "tufnell-park": {
@@ -377,6 +745,22 @@ export const areaDetail: Record<string, AreaDetail> = {
         q: "What happens to the original cornices and ceiling roses in a refurbishment?",
         a: "They stay, unless they are beyond repair. In these villas the plaster mouldings are usually the only original feature the conversion left intact, so they are protected, cleaned back where paint has clogged the profile, and made good in lime or fibrous plaster rather than filled with a modern compound. Where a section is missing we say what can be matched and what cannot.",
       },
+      {
+        q: "What does a kitchen renovation in a Tufnell Park villa closet wing have to follow?",
+        a: "The rear wall and the stack, not a former bedroom's wishful drainage. The paired villas on Tufnell Park Road, Dalmeny Avenue, Anson Road and Carleton Road have a side entrance on a half-landing stair, two rooms deep, and a two-storey closet wing at the back. Conversions have pushed a kitchen into whichever room had a rear wall — often that wing. We survey the existing waste, the neighbour's ceiling below and what the lease permits before drawing units. Moving the kitchen into a bedroom with no waste nearby is a different problem; improving the wing is usually the better instruction. Opening the wing structurally sits with Hampstead Renovations.",
+      },
+      {
+        q: "How do you renovate stacked half-landing bathrooms in a Tufnell Park conversion?",
+        a: "As a column feeding a single external stack. Bathrooms cluster on the half-landings, one above the other, which is why a tray on timber is also an acoustic problem for the flat below. We specify a waterproofing system that expects movement, keep the WC on that stack, and put any proposal to move a waste to the freeholder before first fix [VERIFY the lease]. Cornices, ceiling roses and four-panel doors in the rest of the villa are protected while the wet room is open; they are not stripped as part of a bathroom job.",
+      },
+      {
+        q: "Which council's conservation rules apply to a Tufnell Park kitchen grille?",
+        a: "The council that holds the frontage. Tufnell Park Conservation Area and adjoining Camden designations cover parts of the neighbourhood, and coverage is not uniform [VERIFY which council and which CA]. Brecknock Road and Fortess Road mark the Camden side; Holloway begins where the villas stop [VERIFY the borough line]. Interior renovation in an existing room is not normally a planning application. A grille on a stuccoed ground-floor front of a paired villa is visible from the street and may need consent; a rear route is preferred. Licence to alter is the freeholder's permission in a conversion.",
+      },
+      {
+        q: "How do you work in an occupied Tufnell Park conversion with a shared tiled hall?",
+        a: "By boarding the hall and stair before the first delivery, and by putting the skip on a side street rather than on Tufnell Park Road. That road carries buses and is not a loading bay; the side streets are permit-held and full by mid-morning [VERIFY the zone codes and hours either side of the borough line]. Few front gardens will take a skip, so it sits on the carriageway with a suspended bay, licensed by the borough that holds the kerb. Noisy work is programmed around the other flats in the villa, not run as if the house were empty.",
+      },
     ],
   },
   "west-hampstead": {
@@ -391,6 +775,22 @@ export const areaDetail: Record<string, AreaDetail> = {
       {
         q: "Could the kitchen move to the front room?",
         a: "Sometimes, though it is a larger job than it looks. The soil and waste stack is at the back of these terraces, so a front kitchen means a long concealed run under the floor, and extract then has to leave through the elevation most likely to be controlled. We would rather rework the return properly than push services the length of a flat [VERIFY any conservation-area or Article 4 control on the frontage].",
+      },
+      {
+        q: "What does a kitchen renovation in a West Hampstead rear return actually have to work to?",
+        a: "One window, one external wall and a single rear stack. North of Mill Lane the Greek-named streets — Achilles, Agamemnon, Ulysses — are small bay-fronted terraces on tight plots [VERIFY the local name]; around Fortune Green Road and Hillfield Road the terraces are a little larger. The kitchen takes the closet wing in both. We rework that return properly rather than pushing services the length of the flat. Most conversions belong to a later phase of stud partitions and boxed services [VERIFY the conversion date], and those boxings often hide the only usable run for new waste. Forming a new opening sits with Hampstead Renovations.",
+      },
+      {
+        q: "Can you renovate an ensuite in a West Hampstead conversion that is not the half-landing bathroom?",
+        a: "Sometimes, if a waste can reach the rear stack at a fall without crossing another demise. The half-landing room over the closet wing is the original insertion; an ensuite carved from a bedroom is a later wish, and the floor is still timber over a neighbour. We survey the existing boxed runs, set waterproofing and acoustics as a system, and put a pumped solution to the freeholder rather than assuming it [VERIFY the lease]. We would rather get the half-landing room right than create a second wet room the drainage cannot serve.",
+      },
+      {
+        q: "Do conservation-area or Article 4 rules affect a West Hampstead kitchen extract?",
+        a: "They can, on the elevation. Parts of the area sit in Camden conservation areas, including streets around Fortune Green and the South Hampstead approaches [VERIFY the named CA]. Unlisted terraces may still be subject to Article 4 directions on windows [VERIFY Article 4 on the street]. Interior renovation in an existing room is not normally a planning application. A grille on the front bay, or a sash replacement, is the item we check. In a conversion, licence to alter is the freeholder's question if extract crosses a common void or a waste moves.",
+      },
+      {
+        q: "How do you renovate a West Hampstead kitchen while the rest of the house is occupied?",
+        a: "Through the front door and up a shared staircase, with the hall protected from the first day. Most terraces here have no side return and no rear gate, so units, baths and waste all take that route. West End Lane is a poor loading position at any hour, given the three stations; side streets are permit-controlled and full by mid-morning [VERIFY the CPZ zone and hours], so skips stand on a side street under a Camden licence, with a bay suspension where one is needed [VERIFY]. Noisy work is programmed around occupation and around the neighbours on the party wall, not run continuously.",
       },
     ],
   },

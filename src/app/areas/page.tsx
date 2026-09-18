@@ -1,19 +1,32 @@
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
+import { JsonLd } from "@/components/seo/JsonLd";
 import { AreaLinkGrid } from "@/components/ui/AreaLinkGrid";
 import { Container } from "@/components/ui/Container";
 import { CtaBand } from "@/components/ui/CtaBand";
 import { PhotoTile } from "@/components/ui/PhotoTile";
+import { areas } from "@/data/areas";
 import { areaPhotos } from "@/data/photos";
 import { addressSingleLine } from "@/data/site";
 import { pageMetadata } from "@/lib/metadata";
 import { tier1Areas, tier2Areas } from "@/lib/matrix";
+import { absoluteUrl, itemListSchema, webPageSchema } from "@/lib/schema";
 
 export const metadata = pageMetadata({
   title: "Areas We Cover in North West London | HPSG",
   description:
     "Kitchen, bathroom, painting and light refurbishment in Hampstead, St John's Wood, Maida Vale, Highgate and 25 NW London neighbourhoods. 020 7101 3168.",
   path: "/areas/",
+  keywords: [
+    "kitchen renovation North West London",
+    "bathroom renovation Hampstead",
+    "areas we cover",
+    "NW3",
+    "NW8",
+    "NW6",
+  ],
+  category: "Kitchen and bathroom renovation",
+  geoPlacename: "North West London",
 });
 
 export default function AreasIndexPage() {
@@ -21,8 +34,32 @@ export default function AreasIndexPage() {
   const [featured, ...rest] = tier1;
   const featuredPhoto = featured ? areaPhotos[featured.slug] : undefined;
 
+  const pageUrl = absoluteUrl("/areas/");
+  const areaList = areas.map((area) => ({
+    name: `${area.name} ${area.postcode}`,
+    url: absoluteUrl(`/areas/${area.slug}/`),
+  }));
+
   return (
     <>
+      <JsonLd
+        data={webPageSchema({
+          name: "North West London areas we cover",
+          url: pageUrl,
+          description:
+            "Kitchen renovation, bathroom renovation, painting and light refurbishment across twenty-five neighbourhoods in North West London.",
+          breadcrumb: true,
+          significantLinks: [
+            absoluteUrl("/kitchen-renovation/"),
+            absoluteUrl("/bathroom-renovation/"),
+            absoluteUrl("/areas/hampstead/"),
+            absoluteUrl("/areas/st-johns-wood/"),
+          ],
+        })}
+      />
+      <JsonLd
+        data={itemListSchema("North West London neighbourhoods", areaList)}
+      />
       <Container className="py-16 sm:py-28">
         <Breadcrumbs
           items={[

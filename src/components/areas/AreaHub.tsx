@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import { JsonLd } from "@/components/seo/JsonLd";
+import { PageContents } from "@/components/seo/PageContents";
 import { Container } from "@/components/ui/Container";
 import { ContentImage } from "@/components/ui/ContentImage";
 import { CtaBand } from "@/components/ui/CtaBand";
@@ -25,8 +26,21 @@ import {
 import { areaTitleCue } from "@/data/seo-cues";
 import { addressSingleLine, site } from "@/data/site";
 import { publicCopy } from "@/lib/public-copy";
-import { absoluteUrl, itemListSchema, placeSchema, serviceSchema, webPageSchema } from "@/lib/schema";
-import { areaHook, areaMetaDescription, servicePlainName } from "@/lib/seo-copy";
+import {
+  absoluteUrl,
+  faqSchema,
+  itemListSchema,
+  placeSchema,
+  serviceSchema,
+  webPageSchema,
+} from "@/lib/schema";
+import {
+  areaHook,
+  areaMetaDescription,
+  areaSearchFaqs,
+  mergeFaqs,
+  servicePlainName,
+} from "@/lib/seo-copy";
 
 function serviceHref(area: Area, serviceSlug: string): string | null {
   if (area.tier === 2) return `/${serviceSlug}/`;
@@ -79,23 +93,43 @@ export function AreaHub({ area }: { area: Area }) {
     { name: `${area.name} ${area.postcode}`, href: `/areas/${area.slug}/` },
   ];
   const pageUrl = absoluteUrl(`/areas/${area.slug}/`);
-  const localFaqs = [...content.faqs, ...(areaDetail[area.slug]?.extraFaqs ?? [])]
-    .map((item) => ({ q: publicCopy(item.q), a: publicCopy(item.a) }))
-    .filter((item) => item.q && item.a);
-  // The five generated area FAQs duplicated hero, body and home-page copy on
-  // all 25 hubs; the hand-written set carries the page.
-  const faqs = localFaqs;
+  const faqs = mergeFaqs(
+    areaSearchFaqs(area),
+    content.faqs,
+    areaDetail[area.slug]?.extraFaqs ?? [],
+  );
   const description = areaMetaDescription(area);
+  const catalog = services
+    .filter((service) => serviceHref(area, service.slug))
+    .map((service) => ({
+      name: `${servicePlainName(service)} in ${area.name}`,
+      url: absoluteUrl(serviceHref(area, service.slug) ?? `/${service.slug}/`),
+    }));
+  const contents = [
+    streets || buildings
+      ? { href: "#housing", label: `The housing in ${area.name}` }
+      : null,
+    { href: "#facts", label: `Ten facts about ${area.name}` },
+    { href: "#work", label: `Work we take on in ${area.name}` },
+    { href: "#consent", label: `Council, conservation and access in ${area.name}` },
+    { href: "#near", label: `Near ${area.name}` },
+    faqs.length > 0 ? { href: "#questions", label: `Questions about ${area.name}` } : null,
+  ].filter((item): item is { href: string; label: string } => item !== null);
 
   return (
     <>
       <JsonLd
         data={serviceSchema({
-          name: `Property services in ${area.name}`,
+          name: `Kitchen, bathroom and light refurbishment in ${area.name}`,
           url: pageUrl,
-          areaServed: `${area.name}, ${area.postcode}`,
+          areaServed: [`${area.name}, ${area.postcode}`, "North West London"],
           description,
           image: heroPhoto?.src,
+          imageAlt: heroPhoto?.alt,
+          imageWidth: heroPhoto?.width,
+          imageHeight: heroPhoto?.height,
+          serviceType: "Interior renovation",
+          catalog,
         })}
       />
       <JsonLd
@@ -105,22 +139,20 @@ export function AreaHub({ area }: { area: Area }) {
           description,
           image: heroPhoto?.src,
           imageAlt: heroPhoto?.alt,
+          imageWidth: heroPhoto?.width,
+          imageHeight: heroPhoto?.height,
+          mainEntityId: `${pageUrl}#service`,
           breadcrumb: true,
+          significantLinks: [
+            absoluteUrl("/contact/"),
+            ...catalog.slice(0, 4).map((item) => item.url),
+          ],
         })}
       />
       <JsonLd data={placeSchema(area.name, area.postcode)} />
-      {area.tier === 1 ? (
-        <JsonLd
-          data={itemListSchema(
-            `Services in ${area.name}`,
-            services
-              .filter((service) => serviceHref(area, service.slug))
-              .map((service) => ({
-                name: `${servicePlainName(service)} in ${area.name}`,
-                url: absoluteUrl(`/${service.slug}/${area.slug}/`),
-              })),
-          )}
-        />
+      {faqs.length > 0 ? <JsonLd data={faqSchema(faqs)} /> : null}
+      {catalog.length > 0 ? (
+        <JsonLd data={itemListSchema(`Services in ${area.name}`, catalog)} />
       ) : null}
       <article>
         <PageHero
@@ -156,6 +188,7 @@ export function AreaHub({ area }: { area: Area }) {
                 );
               })}
             </ul>
+            <PageContents items={contents} />
           </div>
           <aside className="band-navy p-8 lg:col-span-5 lg:p-10">
             <p className="kicker text-gold">At a glance</p>
@@ -215,7 +248,7 @@ export function AreaHub({ area }: { area: Area }) {
         ) : null}
 
         {streets || buildings ? (
-          <section className="bg-grey-50/60 py-20 sm:py-24">
+          <section id="housing" className="scroll-mt-28 bg-grey-50/60 py-20 sm:py-24">
             <Container className="grid gap-12 lg:grid-cols-12 lg:gap-16">
               <div className="lg:col-span-4">
                 <p className="rule mb-8" aria-hidden="true" />
@@ -242,16 +275,17 @@ export function AreaHub({ area }: { area: Area }) {
         ) : null}
 
         <LocalFacts
+          id="facts"
           areaName={area.name}
           facts={getAreaFacts(area.slug)}
-          heading={`Ten facts about ${area.name}`}
+          heading={`Ten facts about ${area.name} ${area.postcode}`}
         />
 
-        <section className="border-y border-grey-200 py-24 sm:py-32">
+        <section id="work" className="scroll-mt-28 border-y border-grey-200 py-24 sm:py-32">
           <Container>
             <p className="rule mb-8" aria-hidden="true" />
             <h2 className="font-display text-4xl font-normal sm:text-5xl">
-              Work we take on in {area.name}
+              Work we take on in {area.name} {area.postcode}
             </h2>
             <p className="lede mt-6 max-w-measure text-xl text-grey-600">
               {area.tier === 1
@@ -320,7 +354,7 @@ export function AreaHub({ area }: { area: Area }) {
           </Container>
         </section>
 
-        <section className="py-24 sm:py-32">
+        <section id="consent" className="scroll-mt-28 py-24 sm:py-32">
           <Container className="grid items-start gap-12 lg:grid-cols-12 lg:gap-16">
             <div className="lg:col-span-6">
               <p className="rule mb-8" aria-hidden="true" />
@@ -353,7 +387,7 @@ export function AreaHub({ area }: { area: Area }) {
           </Container>
         </section>
 
-        <section className="border-y border-grey-200 py-24 sm:py-32">
+        <section id="near" className="scroll-mt-28 border-y border-grey-200 py-24 sm:py-32">
           <Container>
             <p className="rule mb-8" aria-hidden="true" />
             <h2 className="font-display text-4xl font-normal sm:text-5xl">
@@ -388,10 +422,10 @@ export function AreaHub({ area }: { area: Area }) {
           </Container>
         </section>
 
-        <section className="py-24 sm:py-32">
+        <section id="questions" className="scroll-mt-28 py-24 sm:py-32">
           <Container className="grid gap-12 lg:grid-cols-12">
             <h2 className="font-display text-4xl font-normal sm:text-5xl lg:col-span-4">
-              Questions about {area.name}
+              Questions about {area.name} {area.postcode}
             </h2>
             <div className="lg:col-span-8">
               <FaqAccordion items={faqs} />

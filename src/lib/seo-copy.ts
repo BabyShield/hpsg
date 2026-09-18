@@ -1,4 +1,4 @@
-import { serviceAreaCue } from "@/data/seo-cues";
+import { areaTitleCue, serviceAreaCue } from "@/data/seo-cues";
 import { addressSingleLine, site } from "@/data/site";
 import type { Area, Combo, Faq, Service } from "@/data/types";
 
@@ -114,6 +114,8 @@ export function comboMetaDescription(lede: string, stored: string): string {
 }
 
 export function areaMetaTitle(area: Area): string {
+  const long = `Kitchen & Bathroom Renovation in ${area.name} ${area.postcode} | ${site.shortName}`;
+  if (long.length <= 62) return long;
   return `Kitchens & Bathrooms in ${area.name} ${area.postcode} | ${site.shortName}`;
 }
 
@@ -123,6 +125,45 @@ export function areaMetaDescription(area: Area): string {
   const lead = `${area.name} ${area.postcode}: kitchen renovation, bathroom renovation, painting and light refurbishment.`;
   const body = trimMeta(`${lead} ${hooked}.`, 160 - PHONE_TAIL.length).replace(/\.$/, "");
   return `${body}.${PHONE_TAIL}`;
+}
+
+export function areaKeywords(area: Area): string[] {
+  const cue = areaTitleCue[area.slug];
+  return [
+    `kitchen renovation ${area.name}`,
+    `bathroom renovation ${area.name}`,
+    `light refurbishment ${area.name}`,
+    `painting and decorating ${area.name}`,
+    `${area.name} ${area.postcode}`,
+    area.postcode,
+    "North West London",
+    ...(cue ? [cue] : []),
+  ];
+}
+
+export function areaSearchFaqs(area: Area): Faq[] {
+  const hook = areaHook(area);
+  const council = publicCopy(area.council);
+  const cue = areaTitleCue[area.slug];
+  const cueBit = cue ? `${cue} in ${area.name} ${area.postcode}` : `${area.name} ${area.postcode}`;
+  return [
+    {
+      q: `What does kitchen or bathroom renovation in ${area.name} cost?`,
+      a: `We do not publish a price list for work in ${area.name}. ${cueBit} and the room as found change the figure more than the postcode. Addresses sit with ${council}. We visit from ${addressSingleLine}, then write a proposal against a defined scope. ${site.phoneDisplay}.`,
+    },
+    {
+      q: `Do I need planning permission for a kitchen or bathroom in ${area.name}?`,
+      a: `Internal kitchen or bathroom work within existing rooms in ${area.name} ${area.postcode} often does not need planning permission. ${council} still controls extract, windows and elevations where conservation, listing or Article 4 apply. We check the address. We do not assume permitted development.`,
+    },
+    {
+      q: `Which services do you carry out in ${area.name}?`,
+      a: `Kitchen renovation, bathroom renovation, painting and decorating, and light refurbishment. ${area.name} ${area.postcode} is ${hook}. Structural openings, lofts and extensions sit with Hampstead Renovations.`,
+    },
+    {
+      q: `Can I stay in the property during work in ${area.name}?`,
+      a: `A single kitchen or bathroom in ${area.name} can often be sequenced around you. A whole-flat programme is usually cleaner if you decant. Occupation, access and ${cue ? cue.toLowerCase() : "the housing as found"} are settled at survey.`,
+    },
+  ];
 }
 
 export function serviceSearchFaqs(service: Service): Faq[] {

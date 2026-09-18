@@ -7,7 +7,7 @@ import { areas } from "@/data/areas";
 import { areaPhotos } from "@/data/photos";
 import { assertAreaGraph, getArea } from "@/lib/matrix";
 import { pageMetadata } from "@/lib/metadata";
-import { areaMetaDescription, areaMetaTitle } from "@/lib/seo-copy";
+import { areaKeywords, areaMetaDescription, areaMetaTitle } from "@/lib/seo-copy";
 
 export const dynamic = "force-static";
 export const dynamicParams = false;
@@ -38,6 +38,11 @@ export async function generateMetadata({
     path: `/areas/${area.slug}/`,
     image: photo?.src,
     imageAlt: photo?.alt,
+    imageWidth: photo?.width,
+    imageHeight: photo?.height,
+    keywords: areaKeywords(area),
+    category: "Kitchen and bathroom renovation",
+    geoPlacename: `${area.name}, London`,
   });
 }
 
