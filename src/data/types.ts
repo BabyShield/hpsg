@@ -75,6 +75,22 @@ export type ComboContent = {
   audience?: string[];
   /** Four constraints that decide whether the job here actually works. */
   failures?: { title: string; text: string }[];
+  /** What a measured visit settles before this job in this area is priced. */
+  survey?: { title: string; text: string }[];
+  /** Materials, finishes and coatings as they suit THIS area's fabric. */
+  materials?: string[];
+  /** The on-site sequence for this service here, stage by stage. */
+  programme?: { title: string; text: string }[];
+  /** Deliveries, parking, licensing and the route into the building. */
+  access?: string[];
+  /** What moves the figure here. Drivers only — never a price. */
+  costDrivers?: { title: string; text: string }[];
+  /** Living with the work: what stays usable, what does not. */
+  living?: string[];
+  /** Handover, snagging and what happens after the last visit. */
+  handover?: string[];
+  /** How this job goes wrong in this area, and what avoids it. */
+  pitfalls?: string[];
   localFaqs: Faq[];
   metaDescription: string;
 };

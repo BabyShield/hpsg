@@ -28,6 +28,14 @@ export function comboHeadings(slug: ServiceSlug, area: string) {
         facts: `Local facts that shape a ${area} kitchen`,
         audience: `Who kitchen renovation in ${area} is for`,
         failures: `What has to be right in a ${area} kitchen`,
+        survey: `What a visit settles before a ${area} kitchen is priced`,
+        materials: `Worktops, cabinetry and finishes for ${area} kitchens`,
+        programme: `A ${area} kitchen, stage by stage`,
+        access: `Deliveries, parking and the stair in ${area}`,
+        cost: `What moves the figure on a ${area} kitchen`,
+        living: `Cooking, dust and daily life while the ${area} kitchen is out`,
+        handover: `Handover, snagging and the year after in ${area}`,
+        pitfalls: `How a ${area} kitchen goes wrong, and what prevents it`,
       };
     case "bathroom-renovation":
       return {
@@ -40,6 +48,14 @@ export function comboHeadings(slug: ServiceSlug, area: string) {
         facts: `Local facts that shape a ${area} bathroom`,
         audience: `Who bathroom renovation in ${area} is for`,
         failures: `What has to be right in a ${area} bathroom`,
+        survey: `What a visit settles before a ${area} bathroom is priced`,
+        materials: `Tanking, tiling and sanitaryware in ${area}`,
+        programme: `A ${area} bathroom, stage by stage`,
+        access: `Deliveries, parking and the stair in ${area}`,
+        cost: `What moves the figure on a ${area} bathroom`,
+        living: `Washing, dust and daily life while the ${area} bathroom is out`,
+        handover: `Handover, watertightness and the year after in ${area}`,
+        pitfalls: `How a ${area} bathroom fails, and what prevents it`,
       };
     case "painting-decorating":
       return {
@@ -52,6 +68,14 @@ export function comboHeadings(slug: ServiceSlug, area: string) {
         facts: `Local facts that shape decorating in ${area}`,
         audience: `Who painting and decorating in ${area} is for`,
         failures: `What has to be right before decorating in ${area}`,
+        survey: `What a visit settles before decorating starts in ${area}`,
+        materials: `Coatings, sheens and joinery systems in ${area}`,
+        programme: `A ${area} decorating programme, stage by stage`,
+        access: `Deliveries, parking and protection in ${area}`,
+        cost: `What moves the figure on a ${area} decorate`,
+        living: `Staying in the house while ${area} rooms are decorated`,
+        handover: `Handover, touch-in and the year after in ${area}`,
+        pitfalls: `How decorating in ${area} disappoints, and what prevents it`,
       };
     case "light-refurbishment":
       return {
@@ -64,6 +88,14 @@ export function comboHeadings(slug: ServiceSlug, area: string) {
         facts: `Local facts that shape a ${area} programme`,
         audience: `Who light refurbishment in ${area} is for`,
         failures: `What has to be right on a ${area} programme`,
+        survey: `What a visit settles before a ${area} programme is priced`,
+        materials: `Materials, finishes and one standard across ${area} rooms`,
+        programme: `A ${area} programme, stage by stage`,
+        access: `Deliveries, parking and common parts in ${area}`,
+        cost: `What moves the figure on a ${area} programme`,
+        living: `Staying put or decanting in ${area}`,
+        handover: `Handover, provisional items and the year after in ${area}`,
+        pitfalls: `How a ${area} programme slips, and what prevents it`,
       };
   }
 }

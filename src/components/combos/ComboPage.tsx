@@ -92,16 +92,38 @@ export function ComboPage({
   const failures = (content.failures ?? [])
     .map((item) => ({ title: publicCopy(item.title), text: publicCopy(item.text) }))
     .filter((item) => item.title && item.text);
+  const survey = (content.survey ?? [])
+    .map((item) => ({ title: publicCopy(item.title), text: publicCopy(item.text) }))
+    .filter((item) => item.title && item.text);
+  const materials = (content.materials ?? []).map((item) => publicCopy(item)).filter(Boolean);
+  const programme = (content.programme ?? [])
+    .map((item) => ({ title: publicCopy(item.title), text: publicCopy(item.text) }))
+    .filter((item) => item.title && item.text);
+  const access = (content.access ?? []).map((item) => publicCopy(item)).filter(Boolean);
+  const costDrivers = (content.costDrivers ?? [])
+    .map((item) => ({ title: publicCopy(item.title), text: publicCopy(item.text) }))
+    .filter((item) => item.title && item.text);
+  const living = (content.living ?? []).map((item) => publicCopy(item)).filter(Boolean);
+  const handover = (content.handover ?? []).map((item) => publicCopy(item)).filter(Boolean);
+  const pitfalls = (content.pitfalls ?? []).map((item) => publicCopy(item)).filter(Boolean);
   const comboGuides = guidesForCombo(combo.service.slug, combo.area.slug).slice(0, 2);
   const contents = [
     audienceParas.length > 0 ? { href: "#who", label: headings.audience } : null,
     rooms ? { href: "#rooms", label: headings.rooms } : null,
+    survey.length > 0 ? { href: "#survey", label: headings.survey } : null,
     failures.length > 0 ? { href: "#must-be-right", label: headings.failures } : null,
     { href: "#facts", label: headings.facts },
     { href: "#working", label: headings.working },
     specParas.length > 0 ? { href: "#spec", label: headings.spec } : null,
+    materials.length > 0 ? { href: "#materials", label: headings.materials } : null,
     { href: "#includes", label: headings.includes },
     { href: "#process", label: headings.process },
+    programme.length > 0 ? { href: "#programme", label: headings.programme } : null,
+    access.length > 0 ? { href: "#access", label: headings.access } : null,
+    costDrivers.length > 0 ? { href: "#cost", label: headings.cost } : null,
+    living.length > 0 ? { href: "#living", label: headings.living } : null,
+    pitfalls.length > 0 ? { href: "#pitfalls", label: headings.pitfalls } : null,
+    handover.length > 0 ? { href: "#handover", label: headings.handover } : null,
     faqs.length > 0 ? { href: "#questions", label: headings.questions } : null,
   ].filter((item): item is { href: string; label: string } => item !== null);
 
@@ -233,6 +255,22 @@ export function ComboPage({
           </section>
         ) : null}
 
+        {survey.length > 0 ? (
+          <section id="survey" className="scroll-mt-28 border-b border-grey-200 py-24 sm:py-32">
+            <Container>
+              <p className="rule mb-8" aria-hidden="true" />
+              <h2 className="font-display text-4xl font-normal sm:text-5xl">
+                {headings.survey}
+              </h2>
+              <p className="lede mt-6 max-w-xl text-xl text-grey-600 md:text-2xl">
+                A visit is a measuring exercise, not a sales call. These are the
+                things we settle in {combo.area.name} before a figure is written.
+              </p>
+              <NumberedList columns={3} items={survey} />
+            </Container>
+          </section>
+        ) : null}
+
         {failures.length > 0 ? (
           <section id="must-be-right" className="band-navy scroll-mt-28 py-24 sm:py-32">
             <Container>
@@ -336,6 +374,24 @@ export function ComboPage({
           </section>
         ) : null}
 
+        {materials.length > 0 ? (
+          <section id="materials" className="scroll-mt-28 py-24 sm:py-32">
+            <Container className="grid gap-10 lg:grid-cols-12">
+              <div className="lg:col-span-4">
+                <p className="rule mb-8" aria-hidden="true" />
+                <h2 className="font-display text-4xl font-normal sm:text-5xl">
+                  {headings.materials}
+                </h2>
+              </div>
+              <div className="space-y-5 text-base leading-relaxed text-grey-700 lg:col-span-8">
+                {materials.map((paragraph) => (
+                  <p key={paragraph.slice(0, 48)}>{paragraph}</p>
+                ))}
+              </div>
+            </Container>
+          </section>
+        ) : null}
+
         <section id="includes" className="scroll-mt-28 py-24 sm:py-32">
           <Container className="grid gap-10 lg:grid-cols-12 lg:gap-16">
             <div className="lg:col-span-4">
@@ -394,6 +450,114 @@ export function ComboPage({
             </div>
           </Container>
         </section>
+
+        {programme.length > 0 ? (
+          <section id="programme" className="scroll-mt-28 py-24 sm:py-32">
+            <Container className="grid gap-10 lg:grid-cols-12 lg:gap-16">
+              <div className="lg:col-span-4">
+                <p className="rule mb-8" aria-hidden="true" />
+                <h2 className="font-display text-4xl font-normal sm:text-5xl">
+                  {headings.programme}
+                </h2>
+                <p className="mt-6 text-base leading-relaxed text-grey-700">
+                  The steps above are the method. Below is what those steps mean
+                  in {combo.area.name} {combo.area.postcode}, in the order they
+                  happen on site. Durations are written after the room is
+                  measured, not before.
+                </p>
+              </div>
+              <div className="lg:col-span-8">
+                <NumberedList variant="timeline" items={programme} />
+              </div>
+            </Container>
+          </section>
+        ) : null}
+
+        {access.length > 0 ? (
+          <section id="access" className="scroll-mt-28 border-y border-grey-200 py-24 sm:py-32">
+            <Container className="grid gap-10 lg:grid-cols-12">
+              <h2 className="font-display text-4xl font-normal sm:text-5xl lg:col-span-4">
+                {headings.access}
+              </h2>
+              <div className="space-y-5 text-base leading-relaxed text-grey-700 lg:col-span-8">
+                {access.map((paragraph) => (
+                  <p key={paragraph.slice(0, 48)}>{paragraph}</p>
+                ))}
+              </div>
+            </Container>
+          </section>
+        ) : null}
+
+        {costDrivers.length > 0 ? (
+          <section id="cost" className="band-navy scroll-mt-28 py-24 sm:py-32">
+            <Container>
+              <p className="rule mb-8" aria-hidden="true" />
+              <h2 className="font-display text-4xl font-normal text-bone sm:text-5xl">
+                {headings.cost}
+              </h2>
+              <p className="lede mt-6 max-w-xl text-xl text-bone/75 md:text-2xl">
+                We do not publish a price list, and we do not price from
+                photographs. These are the things that move the figure in{" "}
+                {combo.area.name}.
+              </p>
+              <NumberedList tone="dark" columns={4} items={costDrivers} />
+            </Container>
+          </section>
+        ) : null}
+
+        {living.length > 0 ? (
+          <section id="living" className="scroll-mt-28 py-24 sm:py-32">
+            <Container className="grid gap-10 lg:grid-cols-12">
+              <h2 className="font-display text-4xl font-normal sm:text-5xl lg:col-span-4">
+                {headings.living}
+              </h2>
+              <div className="space-y-5 text-base leading-relaxed text-grey-700 lg:col-span-8">
+                {living.map((paragraph) => (
+                  <p key={paragraph.slice(0, 48)}>{paragraph}</p>
+                ))}
+              </div>
+            </Container>
+          </section>
+        ) : null}
+
+        {pitfalls.length > 0 ? (
+          <section id="pitfalls" className="scroll-mt-28 border-y border-grey-200 py-24 sm:py-32">
+            <Container className="grid gap-10 lg:grid-cols-12">
+              <div className="lg:col-span-4">
+                <p className="rule mb-8" aria-hidden="true" />
+                <h2 className="font-display text-4xl font-normal sm:text-5xl">
+                  {headings.pitfalls}
+                </h2>
+              </div>
+              <div className="space-y-5 text-base leading-relaxed text-grey-700 lg:col-span-8">
+                {pitfalls.map((paragraph) => (
+                  <p key={paragraph.slice(0, 48)}>{paragraph}</p>
+                ))}
+              </div>
+            </Container>
+          </section>
+        ) : null}
+
+        {handover.length > 0 ? (
+          <section id="handover" className="scroll-mt-28 border-t border-grey-200 py-24 sm:py-32">
+            <Container className="grid gap-10 lg:grid-cols-12">
+              <h2 className="font-display text-4xl font-normal sm:text-5xl lg:col-span-4">
+                {headings.handover}
+              </h2>
+              <div className="space-y-5 text-base leading-relaxed text-grey-700 lg:col-span-8">
+                {handover.map((paragraph) => (
+                  <p key={paragraph.slice(0, 48)}>{paragraph}</p>
+                ))}
+                <p>
+                  <Link href="/contact/" className="quiet-link text-navy">
+                    Arrange a visit
+                  </Link>{" "}
+                  or telephone {site.phoneDisplay}.
+                </p>
+              </div>
+            </Container>
+          </section>
+        ) : null}
 
         <section id="questions" className="scroll-mt-28 py-24 sm:py-32">
           <Container className="grid gap-12 lg:grid-cols-12">
