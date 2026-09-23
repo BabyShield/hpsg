@@ -24,22 +24,22 @@ export const officeNeighbourhood: Photo = {
 export const servicePhotos: Record<ServiceSlug, Photo> = {
   "kitchen-renovation": {
     src: "/images/services/kitchen-renovation.jpg",
-    alt: "A family kitchen in a Hampstead house — Hague Blue cabinets, oak worktops and a black range",
+    alt: "A principal kitchen in a Hampstead villa — ivory cabinets, a Calacatta marble island and brass",
     ...wide,
   },
   "bathroom-renovation": {
     src: "/images/services/bathroom-renovation.jpg",
-    alt: "A family bathroom in a Hampstead house — porcelain bath, sage zellige and brass taps",
+    alt: "A principal bathroom — honed marble walls, a stone oval bath and a brass floor tap",
     ...wide,
   },
   "painting-decorating": {
     src: "/images/services/painting-decorating.jpg",
-    alt: "A decorated Hampstead drawing room — olive walls, cornicing, herringbone and a linen sofa",
+    alt: "A finished Hampstead drawing room — olive walls, a gilt mirror and a marble chimneypiece",
     ...wide,
   },
   "light-refurbishment": {
     src: "/images/services/light-refurbishment.jpg",
-    alt: "Looking from a mansion-flat reception through original doors into a new oak kitchen",
+    alt: "A reception opening through panelled doors into a walnut and stone kitchen",
     ...wide,
   },
 };
@@ -47,22 +47,22 @@ export const servicePhotos: Record<ServiceSlug, Photo> = {
 export const kitchenRoomPhotos = {
   galley: {
     src: "/images/services/kitchen-galley.jpg",
-    alt: "A rear-return galley in a London conversion — sage cabinets, metro tiles and a garden sash",
+    alt: "A narrow galley kitchen — fluted dark oak, Arabescato marble and Crittall garden doors",
     ...wide,
   },
   compact: {
     src: "/images/services/kitchen-compact.jpg",
-    alt: "A compact mansion-flat kitchen — walnut cabinets, stone worktop and a lightwell sash",
+    alt: "A compact mansion-flat kitchen — walnut cabinets, green marble and a breakfast table",
     ...wide,
   },
   chimney: {
     src: "/images/services/kitchen-chimney.jpg",
-    alt: "A kitchen scribed around a chimney breast with a black range in a Hampstead house",
+    alt: "A kitchen built around a limestone chimney breast, with ink-blue cabinets and a black range",
     ...wide,
   },
   suburb: {
     src: "/images/services/kitchen-suburb.jpg",
-    alt: "An Arts and Crafts Hampstead Garden Suburb kitchen — cream cabinets, green tiles and a leaded casement",
+    alt: "A formal oak kitchen with a limestone island, a plaster hood and steel doors to the garden",
     ...wide,
   },
 } as const satisfies Record<string, Photo>;
@@ -70,7 +70,7 @@ export const kitchenRoomPhotos = {
 export const refurbRoomPhotos = {
   sitting: {
     src: "/images/services/refurb-sitting.jpg",
-    alt: "A period sitting room after light refurbishment — blue-grey walls, marble chimneypiece and a linen sofa",
+    alt: "A finished sitting room — blue-grey walls, a marble chimneypiece and a tailored sofa",
     ...wide,
   },
   hall: {
@@ -88,12 +88,12 @@ export const refurbRoomPhotos = {
 export const paintingRoomPhotos = {
   drawing: {
     src: "/images/services/painting-drawing.jpg",
-    alt: "A decorated Hampstead drawing room — Setting Plaster walls, marble chimneypiece and sanded boards",
+    alt: "A decorated drawing room — warm plaster walls, a carved marble chimneypiece and a green velvet chair",
     ...wide,
   },
   sashes: {
     src: "/images/services/painting-sashes.jpg",
-    alt: "Freshly painted sash windows and shutters against grey-green walls in a Hampstead bay",
+    alt: "Ivory-painted sash windows and open shutters beside a gilt mirror",
     ...wide,
   },
   flat: {
@@ -111,7 +111,7 @@ export const bathroomRoomPhotos = {
   },
   shower: {
     src: "/images/services/bathroom-shower.jpg",
-    alt: "A walk-in shower in a North West London conversion — limestone tiles, chrome fittings and a garden sash",
+    alt: "A walk-in shower lined in book-matched marble, with a brass rain head",
     ...wide,
   },
   wetWall: {
