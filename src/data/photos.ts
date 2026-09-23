@@ -124,7 +124,7 @@ export const bathroomRoomPhotos = {
 export const areaPhotos: Record<string, Photo> = {
   hampstead: {
     src: "/images/areas/hampstead.jpg",
-    alt: "Cream and stock-brick cottages with wisteria, typical of Hampstead village, NW3",
+    alt: "Georgian stock-brick and white houses on a wet Hampstead street, with a church spire, NW3",
     ...wide,
   },
   "west-hampstead": {
@@ -154,12 +154,12 @@ export const areaPhotos: Record<string, Photo> = {
   },
   "primrose-hill": {
     src: "/images/areas/primrose-hill.jpg",
-    alt: "Cream park-facing terraces and a quiet garden, typical of Primrose Hill, NW1",
+    alt: "Pastel stucco houses around a railed garden square, typical of Primrose Hill, NW1",
     ...wide,
   },
   highgate: {
     src: "/images/areas/highgate.jpg",
-    alt: "Brick houses around a paved square, typical of Highgate Village, N6",
+    alt: "Georgian brick houses around a village green, typical of Highgate Village, N6",
     ...wide,
   },
   "golders-green": {
@@ -194,7 +194,7 @@ export const areaPhotos: Record<string, Photo> = {
   },
   "hampstead-garden-suburb": {
     src: "/images/areas/hampstead-garden-suburb.jpg",
-    alt: "Arts and Crafts houses around a close, typical of Hampstead Garden Suburb, NW11",
+    alt: "A stone church spire and Arts and Crafts houses across a green, Hampstead Garden Suburb, NW11",
     ...wide,
   },
   "hampstead-heath": {
