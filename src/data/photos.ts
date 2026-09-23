@@ -24,7 +24,7 @@ export const officeNeighbourhood: Photo = {
 export const servicePhotos: Record<ServiceSlug, Photo> = {
   "kitchen-renovation": {
     src: "/images/services/kitchen-renovation.jpg",
-    alt: "A family kitchen in a Hampstead house — Hague Blue cabinets, oak worktops and a black Aga",
+    alt: "A family kitchen in a Hampstead house — Hague Blue cabinets, oak worktops and a black range",
     ...wide,
   },
   "bathroom-renovation": {

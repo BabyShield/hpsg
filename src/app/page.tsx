@@ -18,7 +18,7 @@ import {
   homeServiceLines,
   whyHpsg,
 } from "@/data/home";
-import { areaPhotos, homeHero, officeNeighbourhood, servicePhotos } from "@/data/photos";
+import { areaPhotos, homeHero, kitchenRoomPhotos, officeNeighbourhood } from "@/data/photos";
 import { services } from "@/data/services";
 import { addressSingleLine, site } from "@/data/site";
 import { pageMetadata } from "@/lib/metadata";
@@ -169,7 +169,7 @@ export default function HomePage() {
         </Container>
         <div className="bleed mt-20">
           <ContentImage
-            photo={servicePhotos["kitchen-renovation"]}
+            photo={kitchenRoomPhotos.suburb}
             className="aspect-[16/7] w-full min-h-[16rem]"
             sizes="100vw"
           />
