@@ -347,7 +347,7 @@ export const kitchenCombos: Record<string, ComboContent> = {
       },
       {
         q: "Can a Highgate slope villa take a family kitchen without a structural opening?",
-        a: "Yes. A larger family kitchen in an existing rear room is ordinary Highgate work. A wall taken out, a loft or a new envelope is not this service; that sits with Hampstead Renovations.",
+        a: "Yes. A larger family kitchen in an existing rear room is ordinary Highgate work. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction.",
       },
     ],
     metaDescription:

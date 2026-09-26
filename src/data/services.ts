@@ -96,11 +96,11 @@ export const services: Service[] = [
       },
       {
         q: "Do you open the kitchen into the next room?",
-        a: "No. Removing a wall or forming a kitchen-diner is not kitchen renovation on this site. That work sits with Hampstead Renovations. We fit the kitchen in the envelope that exists.",
+        a: "No. Removing a wall or forming a kitchen-diner is not kitchen renovation on this site. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction. We fit the kitchen in the envelope that exists.",
       },
       {
         q: "Will a conservation area stop a new extract?",
-        a: "It can restrict where the grille sits. We will not assume a hole in the principal elevation. The route is planned at survey, particularly in Hampstead, Highgate, Primrose Hill and the Suburb.",
+        a: "The property's conservation and listed status need to be checked before an external extract route is proposed. Include any existing consent or managing-agent requirements in your enquiry.",
       },
       {
         q: "Do units go in the lift in a mansion block?",
@@ -337,7 +337,7 @@ export const services: Service[] = [
     heroLine:
       "Light refurbishment in North West London flats and houses — kitchen, bathroom, decoration and floors as one programme, without structural work.",
     summary:
-      "Light refurbishment in Hampstead, Maida Vale and North West London: kitchens, bathrooms, decoration and floors coordinated as one account. Not an extension, loft or structural opening — that sits with Hampstead Renovations.",
+      "Light refurbishment in Hampstead, Maida Vale and North West London: kitchens, bathrooms, decoration and floors coordinated as one account. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction.",
     included: [
       "A single programme covering the rooms in scope, with one point of contact",
       "Redecoration to a written prep and coating specification",
@@ -349,12 +349,12 @@ export const services: Service[] = [
       "Floor protection, dust control and occupied-home sequencing where you are staying",
       "Building-control and freeholder notices for the non-structural work that needs them",
       "Snagging, clean and handover of the whole scope, not room by room in isolation",
-      "A clear exclusion of structural openings, loft conversions, extensions and basement works, with a single referral to Hampstead Renovations where that is what the property needs",
+      "Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction.",
     ],
     processSteps: [
       {
         title: "Scope",
-        text: "We walk the property and write down what is in and what is out. If the brief is actually a structural project, we will say so and point you to Hampstead Renovations rather than stretch light refurbishment to cover it.",
+        text: "We walk the property and write down what is in and what is out. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction.",
       },
       {
         title: "Survey and proposal",
@@ -380,7 +380,7 @@ export const services: Service[] = [
     faqs: [
       {
         q: "What do you mean by light refurbishment?",
-        a: "Redecoration, flooring, joinery, kitchen and bathroom swaps, and the electrical and plumbing coordination those rooms require. It is the work that refreshes a home without changing its structure. For design and build, extensions, lofts or structural openings, see Hampstead Renovations.",
+        a: "Redecoration, flooring, joinery, kitchen and bathroom swaps, and the electrical and plumbing coordination those rooms require. It is the work that refreshes a home without changing its structure. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction.",
       },
       {
         q: "Can you refurbish a whole flat?",
@@ -408,7 +408,7 @@ export const services: Service[] = [
       },
       {
         q: "Do you do loft conversions or extensions?",
-        a: "No. That work is carried out by our sister company, Hampstead Renovations (hampsteadrenovations.co.uk). We will introduce you rather than take a project we do not deliver.",
+        a: "No. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction. We will introduce you rather than take a project we do not deliver.",
       },
       {
         q: "What does light refurbishment in North West London cost?",

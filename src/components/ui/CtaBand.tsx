@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import type { Photo } from "@/data/photos";
 import { site } from "@/data/site";
+import { enquiryHref } from "@/lib/enquiry-links";
 
 import { Container } from "./Container";
 
@@ -10,10 +11,14 @@ export function CtaBand({
   title = "Request a quote",
   text = "Tell us about the property and the rooms in scope. We visit before we write a proposal.",
   photo,
+  service,
+  area,
 }: {
   title?: string;
   text?: string;
   photo?: Photo;
+  service?: string;
+  area?: string;
 }) {
   return (
     <section className="relative overflow-hidden bg-navy text-bone">
@@ -39,7 +44,7 @@ export function CtaBand({
           <p className="lede mt-6 text-xl text-bone/85 md:text-2xl">{text}</p>
         </div>
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-          <Link href="/contact/" className="btn btn-gold">
+          <Link href={service ? enquiryHref(service, area) : "/contact/"} className="btn btn-gold">
             Request a quote
           </Link>
           <a href={`tel:${site.phoneTel}`} className="btn-line text-bone">

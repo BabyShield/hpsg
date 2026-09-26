@@ -19,7 +19,7 @@ export const bathroomPitfalls: ComboPitfallsMap = {
       },
       {
         q: "Can the bathroom be made larger by moving a wall?",
-        a: "Not under this service. Moving or removing a wall is structural work and sits with Hampstead Renovations, and in a listed or conservation-area village house it is a consent question as well. What we can do inside the existing room is often more than people expect: a wall-hung basin, a reconfigured layout and a better door swing can transform a small bathroom without touching the structure.",
+        a: "Not under this service. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction. What we can do inside the existing room is often more than people expect: a wall-hung basin, a reconfigured layout and a better door swing can transform a small bathroom without touching the structure.",
       },
       {
         q: "Is underfloor heating worth it in a period bathroom?",

@@ -142,8 +142,8 @@ export default function HomePage() {
             </a>
           </div>
           <p className="mt-10 max-w-xl text-sm leading-relaxed text-bone/80">
-            {addressSingleLine}. Structural openings, lofts and extensions sit
-            with Hampstead Renovations.
+            {addressSingleLine}. For work beyond our four main services, explore{" "}
+            <Link href="/other-services/" className="underline underline-offset-4">Other services</Link>.
           </p>
         </Container>
       </section>

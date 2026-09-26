@@ -18,7 +18,7 @@ Building hpsg.co.uk for Hampstead Property Services Group Limited.
 - Company number: 17404557, registered in England & Wales
 - Trading name: Hampstead Property Services Group (short form: HPSG)
 - Address: Unit 3 Palace Court, 250 Finchley Road, London NW3 6DN
-- Phone: 020 7101 3168 (`tel:+442071013168`) — the only phone number allowed
+- Phone: 020 7101 3168 (`tel:+442071013168`). The owner retained WhatsApp 07459 345456 (`https://wa.me/447459345456`) on 26 September 2026.
 - Email: office@hpsg.co.uk — the only email allowed
 - Domain: https://hpsg.co.uk
 - Footer legal line: "Hampstead Property Services Group Limited · Company No. 17404557 · Registered in England & Wales · Unit 3 Palace Court, 250 Finchley Road, London NW3 6DN"
@@ -35,7 +35,7 @@ Building hpsg.co.uk for Hampstead Property Services Group Limited.
 
 ## Positioning
 
-HPSG targets only light refurbishment, kitchen renovation, bathroom renovation, and painting & decorating in North West London. Never target design and build, house extension, loft conversion, structural work, full house refurbishment, "builders in [area]", or "[area] painters" exact-match terms.
+The four main services remain light refurbishment, kitchen renovation, bathroom renovation, and painting & decorating. On 26 September 2026 the owner explicitly retained the wider ai-leads-nw catalogue under /other-services/ on hpsg.co.uk, with its sitewide navigation link in the footer. Keep it out of the main desktop and mobile menus. Keep those services grouped there; do not create keyword or location permutations. Do not describe Other services as a separate legal company. The written proposal must identify the business responsible for a particular job. All evidence and claims rules above still apply.
 
 ## Brand
 

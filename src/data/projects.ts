@@ -10,6 +10,12 @@ export type Project = {
   approach: string;
   specHighlights: string[];
   photoDir: string;
+  publication?: {
+    sourceRecord: string;
+    completed: boolean;
+    ownerApproved: boolean;
+    photoConsent: boolean;
+  };
 };
 
 export const projects: Project[] = [
@@ -88,9 +94,14 @@ export const projects: Project[] = [
 ];
 
 export function getProject(slug: string): Project | undefined {
-  return projects.find((project) => project.slug === slug);
+  return publishedProjects().find((project) => project.slug === slug);
 }
 
 export function publishedProjects(): Project[] {
-  return projects.filter((project) => !isDraftToken(project.title));
+  return projects.filter((project) => {
+    const evidence = project.publication;
+    return evidence?.completed === true && evidence.ownerApproved === true && evidence.photoConsent === true
+      && evidence.sourceRecord.trim().length > 0
+      && ![project.title, project.serviceLabel, project.areaLabel, project.postcode, project.summary, project.approach, ...project.specHighlights].some(isDraftToken);
+  });
 }

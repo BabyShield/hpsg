@@ -6,7 +6,7 @@ export const refurbDetail: ComboDetailMap = {
   "belsize-park": {
     scopeNotes: [
       "A large share of Belsize flats are lateral conversions spanning two former houses, and that inheritance sets the brief. There are two sets of floor levels meeting somewhere in the middle, two original service positions, and doors punched through what used to be a party wall. The instruction covers replacing the kitchen and bathroom on whichever service position they were given, decorating rooms whose walls carry more area than the plan suggests, and levelling floors between the halves.",
-      "What we do not take on is the stucco, the roofscape, the communal hall of a converted villa, or a further opening through the wall that still separates the two halves. That is structural and belongs with Hampstead Renovations. External repair is outside the brief as well: on this stock a rendered front is a consent matter and a maintenance liability shared with other flat owners, not an item to fold into an interior programme.",
+      "What we do not take on is the stucco, the roofscape, the communal hall of a converted villa, or a further opening through the wall that still separates the two halves. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction. External repair is outside the brief as well: on this stock a rendered front is a consent matter and a maintenance liability shared with other flat owners, not an item to fold into an interior programme.",
     ],
     processNote: "On the avenues the managing agent's timetable sets the start date, and nothing is stripped until the pack is back. In a converted house the lead-in is shorter, but the room heights have to be planned for: towers and platforms are booked, and somewhere in the flat has to store them. That pushes ceilings, cornices and high-level preparation to the front of the works. Floors are laid afterwards, because a floor laid first is only covered up again.",
     consent: "The Belsize Conservation Area is a Camden designation and a separate one from Hampstead's, with Article 4 directions over parts of it [VERIFY the boundary and any Article 4 for the address]. Interior replacement within the rooms as they stand ordinarily sits outside planning; the elevation, the windows and the roofscape do not. Consent under the lease is a different matter altogether. In blocks it comes from the managing agent; in a share-of-freehold conversion it comes from the other flat owners, and it still has to be given in writing.",
@@ -18,7 +18,7 @@ export const refurbDetail: ComboDetailMap = {
       {
         title: "The join between two houses",
         text:
-          "A lateral conversion is still two Victorian carcasses. We replace kitchen and bathroom, decorate, and ease the floor transition. We do not take out the remaining party wall, form a new opening, or pretend the join can be designed away. That work sits with Hampstead Renovations.",
+          "A lateral conversion is still two Victorian carcasses. We replace kitchen and bathroom, decorate, and ease the floor transition. We do not take out the remaining party wall, form a new opening, or pretend the join can be designed away. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction.",
       },
       {
         title: "Height before the furniture arrives",
@@ -67,7 +67,7 @@ export const refurbDetail: ComboDetailMap = {
       },
       {
         q: "What is not included in a Belsize Park light-refurbishment programme?",
-        a: "The stucco, the roofscape, the communal hall of a converted villa, a further opening through the wall that still separates two halves, a loft, an extension and a basement. Those sit with Hampstead Renovations, or with the freeholder. Kitchen, bathroom, decoration and floors inside the rooms as they stand are this service.",
+        a: "The stucco, the roofscape, the communal hall of a converted villa, a further opening through the wall that still separates two halves, a loft, an extension and a basement. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction. Kitchen, bathroom, decoration and floors inside the rooms as they stand are this service.",
       },
     ],
   },
@@ -86,7 +86,7 @@ export const refurbDetail: ComboDetailMap = {
       {
         title: "The demise, not the house",
         text:
-          "A Crouch End conversion is one flat behind a shared front door. We work the rooms you own. The stair, the tiled hall beyond your threshold, the roof and the garden are out unless the freeholder is the client. Taking the wall out between front and rear reception is structural and sits with Hampstead Renovations.",
+          "A Crouch End conversion is one flat behind a shared front door. We work the rooms you own. The stair, the tiled hall beyond your threshold, the roof and the garden are out unless the freeholder is the client. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction.",
       },
       {
         title: "Breaking out over an occupied ceiling",
@@ -135,14 +135,14 @@ export const refurbDetail: ComboDetailMap = {
       },
       {
         q: "What is not included in a Crouch End light-refurbishment programme?",
-        a: "A new rear addition, taking the wall out between front and rear reception, the roof, the front elevation, and the shared stair unless the freeholder instructs it. Those sit with Hampstead Renovations or with the other owners. Kitchen, bathroom, decoration and floors inside the demise as it stands are this service.",
+        a: "A new rear addition, taking the wall out between front and rear reception, the roof, the front elevation, and the shared stair unless the freeholder instructs it. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction. Kitchen, bathroom, decoration and floors inside the demise as it stands are this service.",
       },
     ],
   },
   "golders-green": {
     scopeNotes: [
       "A typical instruction covers more rooms than a flat brief does. Kitchen at the back, one bathroom and often a second, halls and landings, the receptions and the bedrooms, and floors throughout. Because the houses are large enough to live in around the work, the deciding question is usually not the fabric but the phasing: which rooms come out of use, in what order, and for how long.",
-      "Knocking the kitchen through to the dining room is the request we most often have to decline. It is a structural opening, and it is not this service — Hampstead Renovations does that work. Nor do we replace the back addition, raise the roof or convert the garage. One more exclusion is worth stating plainly: textured ceiling coatings and old floor tiles are not disturbed until a specialist has tested them, because materials of that age can contain asbestos.",
+      "Knocking the kitchen through to the dining room is the request we most often have to decline. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction. Nor do we replace the back addition, raise the roof or convert the garage. One more exclusion is worth stating plainly: textured ceiling coatings and old floor tiles are not disturbed until a specialist has tested them, because materials of that age can contain asbestos.",
     ],
     processNote: "Barnet issues the licences, and on the crescents behind the main road a drive often removes the need for one altogether — though a drive is used as a drop point only if the survey says the crossover and the paving will take the weight. The bigger variable is you. In an occupied house the sequence is built around keeping a kitchen and a bathroom alive, which means the second bathroom, if there is one, is finished before the first is touched.",
     consent: "Most Golders Green addresses are ordinary Barnet planning: no Trust, no scheme of management, and no conservation constraint on an interior that leaves the outside as it was. Selected streets and the ground near Golders Hill Park are designated, and there the elevation matters again — a new extract terminal or a flue on a front or flank wall is checked before it is drawn [VERIFY Barnet's conservation-area map for the address]. Where the property is a flat in one of the blocks on the main roads, the licence to alter is granted by the freeholder or managing agent, not the council.",
@@ -154,7 +154,7 @@ export const refurbDetail: ComboDetailMap = {
       {
         title: "The wall that neighbours have already taken out",
         text:
-          "Knocking the kitchen through to the dining room is the request we most often decline in Golders Green. It is a structural opening. It is not this service — Hampstead Renovations does that work. Nor do we replace the back addition, raise the roof or convert the garage. The rooms stay as they stand.",
+          "Knocking the kitchen through to the dining room is the request we most often decline in Golders Green. It is a structural opening. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction. Nor do we replace the back addition, raise the roof or convert the garage. The rooms stay as they stand.",
       },
       {
         title: "A kitchen that has to stay alive",
@@ -203,20 +203,20 @@ export const refurbDetail: ComboDetailMap = {
       },
       {
         q: "What is not included in a Golders Green light-refurbishment programme?",
-        a: "Knocking the kitchen through to the dining room, replacing the back addition, raising the roof, converting the garage, a loft and a basement. Those sit with Hampstead Renovations. Kitchen, bathrooms, decoration and floors inside the rooms as they stand are this service. The Suburb Trust is a different map; we do not apply it by default. [VERIFY.]",
+        a: "Knocking the kitchen through to the dining room, replacing the back addition, raising the roof, converting the garage, a loft and a basement. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction. Kitchen, bathrooms, decoration and floors inside the rooms as they stand are this service. The Suburb Trust is a different map; we do not apply it by default. [VERIFY.]",
       },
     ],
   },
   "hampstead": {
     scopeNotes: [
       "Most Hampstead instructions land in a flat carved out of one house, so the kitchen sits in a former bedroom or rear closet and the bathroom sits over the original stack. What decides the job is rarely the finish schedule. It is where the soil pipe already runs, whether the ceilings are lath and plaster rather than board, and how far the floors have dropped away from level since the house was divided.",
-      "Left out are the roof, the parapet gutters, the sash boxes on the front elevation and anything that changes the plan of a listed interior. Village terraces share roofs and rainwater goods with neighbours, and the listed count around the High Street is high enough that internal alteration cannot be assumed. Structural openings, lofts and rear additions are not this service either; that work sits with Hampstead Renovations. We make no assumption about a van reaching the door.",
+      "Left out are the roof, the parapet gutters, the sash boxes on the front elevation and anything that changes the plan of a listed interior. Village terraces share roofs and rainwater goods with neighbours, and the listed count around the High Street is high enough that internal alteration cannot be assumed. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction. We make no assumption about a van reaching the door.",
     ],
     processNote: "The lead-in here carries more than materials. Listing and conservation status are checked against the address before anything is ordered, and in a converted house the freeholder's position on wet-room work is settled in the same period. Loading is timed for the lane, and a whole-flat strip is broken into drops rather than one delivery. On site that means the shared stair carries one trade at a time, and the flat is worked back to front so the entrance is finished last.",
     consent: "Planning, conservation-area and listed-building matters all sit with Camden. Replacing a kitchen or bathroom inside the rooms that already exist usually falls outside planning control, though in a listed building internal work affecting the special interest can need listed-building consent in its own right [VERIFY on the specific property]. The envelope is different: an extract terminal, a replacement sash or external decoration is a Camden question. A licence to alter, where the lease requires one, is granted by the freeholder or managing agent, not the council.",
     audience: [
       "Most Hampstead programmes are for owner-occupiers of a flat carved from one village house: the kitchen in a former bedroom or rear closet, the bathroom over the original stack, lime plaster repaired rather than skimmed, original joinery treated as joinery, boards refinished where they will take it. The brief is those rooms brought to one standard, not a new envelope on a listed interior.",
-      "The other typical client owns a storey of a family house toward the Heath or along Frognal and wants that floor — kitchen, bathroom, decoration and floors — without a loft, a rear addition or a structural opening. Village lanes off Heath Street were not drawn for a multi-room delivery. We record access as well as the rooms. Structural work sits with Hampstead Renovations.",
+      "The other typical client owns a storey of a family house toward the Heath or along Frognal and wants that floor — kitchen, bathroom, decoration and floors — without a loft, a rear addition or a structural opening. Village lanes off Heath Street were not drawn for a multi-room delivery. We record access as well as the rooms. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction.",
     ],
     failures: [
       {
@@ -271,7 +271,7 @@ export const refurbDetail: ComboDetailMap = {
       },
       {
         q: "What is not included in a Hampstead light-refurbishment programme?",
-        a: "A loft, a rear addition, a structural opening between kitchen and reception, the roof, the parapet gutters, and sash boxes on the front elevation. Changing the plan of a listed interior is not this service. Those sit with Hampstead Renovations or with Camden. Kitchen, bathroom, decoration and floors in the rooms as found are.",
+        a: "A loft, a rear addition, a structural opening between kitchen and reception, the roof, the parapet gutters, and sash boxes on the front elevation. Changing the plan of a listed interior is not this service. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction. Kitchen, bathroom, decoration and floors in the rooms as found are.",
       },
     ],
   },
@@ -339,14 +339,14 @@ export const refurbDetail: ComboDetailMap = {
       },
       {
         q: "What is not included in a Hampstead Garden Suburb light-refurbishment programme?",
-        a: "A grille or flue on the elevation, a rooflight, a dormer, replacement windows, a wider hardstanding, a loft and a structural opening. Those need Barnet and, in most cases, written Trust consent, and the construction sits with Hampstead Renovations. Kitchen, bathrooms, decoration and floors inside the rooms that exist are this service. [VERIFY.]",
+        a: "A grille or flue on the elevation, a rooflight, a dormer, replacement windows, a wider hardstanding, a loft and a structural opening. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction. Kitchen, bathrooms, decoration and floors inside the rooms that exist are this service. [VERIFY.]",
       },
     ],
   },
   "highgate": {
     scopeNotes: [
       "Three building types account for most of the work. A Village house gives small, tall rooms, original joinery and, often, a listed interior [VERIFY the listing for the address]. A slope villa gives a family kitchen already in a rear room, two or three bathrooms and long decorating runs. A conversion toward Archway gives a stacked wet room and a shared hallway. The brief is the same four items in each; the fabric they sit in is not.",
-      "Nothing here involves cutting or digging. No opening is formed between rooms, no storey is added under the roof, and no ground is broken — steep plots and mature trees make groundwork a specialist and often a protected matter [VERIFY any TPO or conservation-area tree notice with the correct borough]. That work belongs to Hampstead Renovations. We also do not assume a skip can stand where the van stopped.",
+      "Nothing here involves cutting or digging. No opening is formed between rooms, no storey is added under the roof, and no ground is broken — steep plots and mature trees make groundwork a specialist and often a protected matter [VERIFY any TPO or conservation-area tree notice with the correct borough]. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction. We also do not assume a skip can stand where the van stopped.",
     ],
     processNote: "The first task is administrative, not practical: establishing which borough the address belongs to, because that determines the skip and scaffolding licence, the conservation appraisal that applies and, if the house is listed, whose conservation officer takes the enquiry. Village lanes then decide the vehicle and the number of drops. Only once those are fixed do wet rooms start; on a listed interior, nothing is opened up until the position on the fabric is written down.",
     consent: "Highgate is where the usual rule of thumb breaks down. Elsewhere, planning looks outward and an interior is nobody's business but the owner's and the lease's. In a listed building that is not true: listed-building consent can be required for internal alterations as well as external ones, and it comes from the borough the address sits in — Camden, Haringey or, on some streets, Islington. A licence to alter, where a lease exists, is the freeholder's or agent's decision and separate from either. [VERIFY the listing, the designation and the authority for the address.]",
@@ -363,7 +363,7 @@ export const refurbDetail: ComboDetailMap = {
       {
         title: "No cutting and no digging",
         text:
-          "No opening is formed between rooms, no storey is added under the roof, and no ground is broken. Steep plots and mature trees make groundwork a specialist and often a protected matter [VERIFY any TPO]. That work belongs to Hampstead Renovations. Light refurbishment is the interiors of the house as it stands.",
+          "No opening is formed between rooms, no storey is added under the roof, and no ground is broken. Steep plots and mature trees make groundwork a specialist and often a protected matter [VERIFY any TPO]. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction. Light refurbishment is the interiors of the house as it stands.",
       },
       {
         title: "Village lanes and a steep plot",
@@ -407,14 +407,14 @@ export const refurbDetail: ComboDetailMap = {
       },
       {
         q: "What is not included in a Highgate light-refurbishment programme?",
-        a: "A loft storey, a basement, a wall taken out between rooms, groundwork on a steep plot, and any opening that needs cutting. Those sit with Hampstead Renovations. Tree works and elevation changes sit with the correct borough. Kitchen, bathroom, decoration and floors inside the rooms that exist are this service.",
+        a: "A loft storey, a basement, a wall taken out between rooms, groundwork on a steep plot, and any opening that needs cutting. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction. Tree works and elevation changes sit with the correct borough. Kitchen, bathroom, decoration and floors inside the rooms that exist are this service.",
       },
     ],
   },
   "kentish-town": {
     scopeNotes: [
       "The ordinary Kentish Town brief is a whole demise in a converted terrace: rear-return galley, a bathroom squeezed in where the split allowed, decoration, floors. In a garden flat the lower-ground rooms come with it, and they are what sets the order of works. Moisture in a half-buried wall decides when units can be hung and when plaster can be painted, so the survey reads the fabric before anyone discusses finishes.",
-      "Height is the exclusion that matters here. Digging a lower-ground floor down, underpinning, or opening the wall between front and back is not part of this. It is a common request in NW5 garden flats, and it is structural work for Hampstead Renovations. A rear addition that already exists can be refitted as a room; a new one cannot be built under this heading. Nor do we treat a shared hallway as ours to use without a written method.",
+      "Height is the exclusion that matters here. Digging a lower-ground floor down, underpinning, or opening the wall between front and back is not part of this. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction. A rear addition that already exists can be refitted as a room; a new one cannot be built under this heading. Nor do we treat a shared hallway as ours to use without a written method.",
     ],
     processNote: "Two things sit in the lead-in here more heavily than elsewhere: the moisture picture in any lower-ground room, and the freeholder's position where the flat is leasehold. Both are settled before materials are dated. Drying and remedial time is written into the programme rather than left to compress the decoration at the end. Camden licences the skip on a side street. Neighbours on two party walls are given notice before the noisiest phase, not during it.",
     consent: "Camden is the planning authority, and designation here is patchwork rather than uniform: some streets are covered, others are not, so it is read for the address rather than for the postcode [VERIFY the named conservation area]. Interior replacement within existing rooms is normally outside planning; a new extract terminal, soil pipe or window on a rear elevation is not. Leasehold flats add a licence to alter, granted by the freeholder or managing agent where wastes, structure or common services are touched. Notifiable electrical and drainage work is notified to building control in the ordinary way.",
@@ -426,7 +426,7 @@ export const refurbDetail: ComboDetailMap = {
       {
         title: "Headroom that would need underpinning",
         text:
-          "Digging a lower-ground floor down, underpinning, or opening the wall between front and back is not part of this. It is a common request in NW5 garden flats, and it is structural work for Hampstead Renovations. A rear addition that already exists can be refitted as a room; a new one cannot be built under this heading.",
+          "Digging a lower-ground floor down, underpinning, or opening the wall between front and back is not part of this. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction. A rear addition that already exists can be refitted as a room; a new one cannot be built under this heading.",
       },
       {
         title: "Moisture before a unit is hung",
@@ -447,7 +447,7 @@ export const refurbDetail: ComboDetailMap = {
     extraFaqs: [
       {
         q: "Can you lower the lower-ground floor while the flat is stripped out?",
-        a: "No. Taking a floor down for headroom means underpinning and structural design, which is not light refurbishment however convenient the timing looks. We will say so at the first visit and introduce you to Hampstead Renovations. What we can do is refit the rooms as they stand, once the moisture in those walls has been dealt with properly.",
+        a: "No. Taking a floor down for headroom means underpinning and structural design, which is not light refurbishment however convenient the timing looks. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction. What we can do is refit the rooms as they stand, once the moisture in those walls has been dealt with properly.",
       },
       {
         q: "Does damp in a garden flat add weeks to the programme?",
@@ -543,14 +543,14 @@ export const refurbDetail: ComboDetailMap = {
       },
       {
         q: "What is not included in a Kilburn light-refurbishment programme?",
-        a: "Cutting structural concrete, opening the compartment floor between a shop and the flat above, altering a shopfront to land a duct, a loft and an extension. Those sit with Hampstead Renovations, or with the freeholder. Kitchen, bathroom, decoration and floors inside the rooms as they stand are this service. A conversion drawing does not transfer to a concrete-framed block without being redrawn.",
+        a: "Cutting structural concrete, opening the compartment floor between a shop and the flat above, altering a shopfront to land a duct, a loft and an extension. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction. Kitchen, bathroom, decoration and floors inside the rooms as they stand are this service. A conversion drawing does not transfer to a concrete-framed block without being redrawn.",
       },
     ],
   },
   "maida-vale": {
     scopeNotes: [
       "The 1890s and Edwardian blocks here hand you a fixed plan: a compact kitchen at the back, a bathroom off the hall, a corridor connecting everything, and rooms of good proportion at the front. A typical instruction replaces the two wet rooms in place, decorates the corridor and principal rooms, and renews floors. The timber intermediate floor decides most of it, since tanking, falls and build-up all have to work within existing door heights.",
-      "Not included: the block's windows, its balconies, its previously painted brickwork, or any attempt to open the corridor into the reception rooms. The first three are Westminster's and the freeholder's; the last is structural work and belongs with Hampstead Renovations. Nor is a wet room moved off the service duct to a more fashionable position, because the drainage in these blocks was laid for the plan the building already has.",
+      "Not included: the block's windows, its balconies, its previously painted brickwork, or any attempt to open the corridor into the reception rooms. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction. Nor is a wet room moved off the service duct to a more fashionable position, because the drainage in these blocks was laid for the plan the building already has.",
     ],
     processNote: "Two dates govern the programme and neither is ours. The licence to alter has to be back, and water isolation for the riser has to be booked with the porter or managing agent, which fixes the day the bathroom opens rather than leaving it flexible. Deliveries follow the building's hours and usually the stair. Tanking and screed then need drying time before floors and skirtings, so the hall is decorated last because everything is carried along it.",
     consent: "The Maida Vale Conservation Area covers a substantial part of W9, and Westminster is the authority for it [VERIFY the boundary for the frontage]. Replacing a kitchen or a bathroom inside the rooms that exist generally sits outside planning; repainting previously painted brickwork, changing windows and altering balconies do not. The lease is a separate track: a licence to alter is granted by the freeholder or the managing agent, and it commonly reaches flooring and anything touching shared services. On canal-side frontages the Canal & River Trust can be a further party [VERIFY].",
@@ -562,7 +562,7 @@ export const refurbDetail: ComboDetailMap = {
       {
         title: "The duct the 1890s plan already has",
         text:
-          "We do not move a wet room off the service duct to a more fashionable position, because the drainage in these blocks was laid for the plan the building already has. Opening the corridor into the receptions is structural and sits with Hampstead Renovations. Windows, balconies and previously painted brickwork belong to Westminster and the freeholder.",
+          "We do not move a wet room off the service duct to a more fashionable position, because the drainage in these blocks was laid for the plan the building already has. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction. Windows, balconies and previously painted brickwork belong to Westminster and the freeholder.",
       },
       {
         title: "Isolation booked before the bathroom opens",
@@ -618,7 +618,7 @@ export const refurbDetail: ComboDetailMap = {
   "muswell-hill": {
     scopeNotes: [
       "A whole family house on the slope is the usual Muswell Hill instruction: the kitchen in the original back addition, a bathroom above it on the same waste run, decoration through the hall, stair and landing, and boards lifted or refinished. What decides the job is where the drainage already runs and how many rooms have to stay usable, because the hall is the only route from the front door to everything in the scope.",
-      "It does not include taking the wall out between the two receptions, forming a dormer or a loft room, or building a new rear addition. That work sits with Hampstead Renovations. Neighbouring houses have often had all three, which makes them look like part of an ordinary refresh. They are not. We also do not price the roof, the chimneys or the sash windows into an interior programme; those are elevation items with their own consent path.",
+      "It does not include taking the wall out between the two receptions, forming a dormer or a loft room, or building a new rear addition. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction. Neighbouring houses have often had all three, which makes them look like part of an ordinary refresh. They are not. We also do not price the roof, the chimneys or the sash windows into an interior programme; those are elevation items with their own consent path.",
     ],
     processNote: "Access is settled first here. Haringey licences the skip, and on a controlled street a bay may need suspending before material can be dropped [VERIFY the parking arrangement for the road]. Where extract or a window would show on an elevation inside the conservation area, that question is answered while the old wet rooms are still standing. The hall and stair are protected before the first strip-out and decorated last, and materials arrive in staged loads rather than in one delivery.",
     consent: "Replacing a kitchen or bathroom inside rooms that already exist normally sits outside planning. The envelope is a separate matter. Haringey holds the conservation-area designations covering the Broadway and much of the slope, with a second designation adjoining on the Fortis Green side, and window replacement, dormers or a new grille on a visible elevation are council decisions, not ours [VERIFY the boundary and any Article 4 for the address]. Most houses on the slope are freehold, so no licence to alter arises. A converted flat or a flat behind the Broadway is leasehold, and there the freeholder or managing agent grants that licence.",
@@ -630,7 +630,7 @@ export const refurbDetail: ComboDetailMap = {
       {
         title: "The knock-through on the house next door",
         text:
-          "Taking the wall out between the two receptions, forming a dormer or a loft room, or building a new rear addition are not this service. Neighbouring houses have often had all three, which makes them look like part of an ordinary refresh. They are not. That work sits with Hampstead Renovations. The roof, the chimneys and the sash windows stay out of an interior programme.",
+          "Taking the wall out between the two receptions, forming a dormer or a loft room, or building a new rear addition are not this service. Neighbouring houses have often had all three, which makes them look like part of an ordinary refresh. They are not. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction. The roof, the chimneys and the sash windows stay out of an interior programme.",
       },
       {
         title: "The hall is the last room finished",
@@ -679,14 +679,14 @@ export const refurbDetail: ComboDetailMap = {
       },
       {
         q: "What is not included in a Muswell Hill light-refurbishment programme?",
-        a: "A knock-through between the two receptions, a dormer, a loft room, a new rear addition, and replacement windows on a conservation-area elevation. Those sit with Hampstead Renovations or with Haringey. Kitchen, bathrooms, decoration and floors inside the rooms that exist are this service. A neighbour's extension is not a precedent.",
+        a: "A knock-through between the two receptions, a dormer, a loft room, a new rear addition, and replacement windows on a conservation-area elevation. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction. Kitchen, bathrooms, decoration and floors inside the rooms that exist are this service. A neighbour's extension is not a precedent.",
       },
     ],
   },
   "primrose-hill": {
     scopeNotes: [
       "Most briefs here fall into two shapes. A single-family terrace takes the kitchen, one or two bathrooms, the floors and the decoration of the principal rooms in one run. A garden or upper flat in a split house takes the same list on half the building, with the kitchen sitting in a rear closet or a lower-ground room. What usually decides the job is the condition of the lower-ground walls and how far the drainage has to travel.",
-      "The brief will not carry structure. No wall comes out between the front and back receptions, no floor is dropped to win height in a lower ground, and no rear addition is built to make the kitchen work — those are Hampstead Renovations projects, not this one. We also make no promise about the front elevation. Steps, railings, stucco and sashes on a park-side street are conservation matters before they are decorating ones [VERIFY the designation].",
+      "The brief will not carry structure. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction. We also make no promise about the front elevation. Steps, railings, stucco and sashes on a park-side street are conservation matters before they are decorating ones [VERIFY the designation].",
     ],
     processNote: "Two things stretch the front of the programme. The first is moisture: a lower-ground kitchen or bathroom gets tested and, where necessary, isolated and left to dry before any lining, tiling or paint is even ordered. The second is access — narrow streets, resident bays and weekend visitor pressure around the hill mean the skip and the deliveries are booked to fixed windows. Everything wet therefore runs early and unhurried; decoration is deliberately the last thing to arrive.",
     consent: "Camden is the planning authority; the licence to alter, where one is needed, comes from the freeholder or managing agent — and in a split house that is often the owner of the other flat [VERIFY the tenure]. The council's interest starts at the front door and the rear wall, so new units, tiling, floors and paint inside existing rooms are not usually a planning matter at all. The elevation is where that changes: an Article 4 direction has been in force in the conservation area since 3 March 1983, so a grille, a flue or a window is checked before it is drawn.",
@@ -698,7 +698,7 @@ export const refurbDetail: ComboDetailMap = {
       {
         title: "A park-facing elevation under Article 4",
         text:
-          "No wall comes out between the front and back receptions, no floor is dropped to win height in a lower ground, and no rear addition is built to make the kitchen work — those are Hampstead Renovations projects. Steps, railings, stucco and sashes on a park-side street are conservation matters before they are decorating ones. Camden has had an Article 4 direction here since 3 March 1983. [VERIFY.]",
+          "Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction. Steps, railings, stucco and sashes on a park-side street are conservation matters before they are decorating ones. Camden has had an Article 4 direction here since 3 March 1983. [VERIFY.]",
       },
       {
         title: "Drying before lining",
@@ -747,14 +747,14 @@ export const refurbDetail: ComboDetailMap = {
       },
       {
         q: "What is not included in a Primrose Hill light-refurbishment programme?",
-        a: "A wall taken out between the front and back receptions, a lower-ground floor dropped for headroom, a new rear addition facing the park, and elevation changes under the Article 4 direction. Those sit with Hampstead Renovations or with Camden. Kitchen, bathroom, decoration and floors inside the rooms that exist are this service.",
+        a: "A wall taken out between the front and back receptions, a lower-ground floor dropped for headroom, a new rear addition facing the park, and elevation changes under the Article 4 direction. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction. Kitchen, bathroom, decoration and floors inside the rooms that exist are this service.",
       },
     ],
   },
   "queens-park": {
     scopeNotes: [
       "On the terrace streets the work is usually a converted flat: the kitchen in the back addition, a bathroom next to it or above it, decoration through the reception and bedrooms, and floors. On the Estate the same list arrives in a smaller building — narrow rooms, a modest stair, and joinery that is part of the character rather than an obstacle to the units. Room size, not ambition, sets the layout in both.",
-      "The exclusions here are mostly about the back of the building. Extending the closet wing, taking the ground floor into one room, or lifting the roof over a cottage are all structural projects and all sit with Hampstead Renovations. Inside a converted terrace we work to one demise only: a single stack often serves both flats, so the waste that runs through your neighbour's ceiling is not a line we treat as ours to move.",
+      "The exclusions here are mostly about the back of the building. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction. Inside a converted terrace we work to one demise only: a single stack often serves both flats, so the waste that runs through your neighbour's ceiling is not a line we treat as ours to move.",
     ],
     processNote: "Everything downstream of the first visit depends on one answer: Brent or Westminster. The two authorities licence skips and scaffolds separately, run their own parking controls, and hold different conservation appraisals, so the paperwork is started as soon as the frontage is confirmed. Deliveries are then planned off the commercial spine and onto a residential street with a permit. Wet rooms open only when the licence, the agreed working hours and the drop point are all in place, not before.",
     consent: "Consent here is read twice, from two maps. Brent's conservation area covers streets around the park; Westminster's Queen's Park Estate is a separate designation with its own appraisal, and neither document describes the other's streets [VERIFY which applies to the address]. For the work itself the line falls in the same place on both sides: what happens within the four walls of a room is generally the owner's business and the lease's, while anything that appears on the elevation is the council's. Leasehold flats need the freeholder's or managing agent's licence to alter — that is never the council's to give.",
@@ -766,7 +766,7 @@ export const refurbDetail: ComboDetailMap = {
       {
         title: "The closet wing stays where it is",
         text:
-          "Extending the closet wing, taking the ground floor into one room, or lifting the roof over a cottage are all structural projects and all sit with Hampstead Renovations. Inside a converted terrace we work to one demise only. Original joinery in an Estate cottage is retained and worked around where it is sound, not boxed in to gain millimetres.",
+          "Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction. Inside a converted terrace we work to one demise only. Original joinery in an Estate cottage is retained and worked around where it is sound, not boxed in to gain millimetres.",
       },
       {
         title: "Brent or Westminster before a skip",
@@ -822,7 +822,7 @@ export const refurbDetail: ComboDetailMap = {
   "st-johns-wood": {
     scopeNotes: [
       "A St John's Wood instruction is normally the leased demise exactly as it stands: the compact rear kitchen, the bathroom on its original stack, principal-room decoration, floors, internal doors and ironmongery. The riser is what decides the job. It was sized for the plumbing of a century ago, it serves flats above and below, and isolating it for a bathroom strip is an event for the whole block rather than a morning in one flat.",
-      "Excluded are the windows, the front elevation, the common parts and the block's structure, all of which belong to the freeholder and, in the conservation area, to Westminster as well. We do not move a wet room over a neighbour's bedroom, and we do not form openings; that sits with Hampstead Renovations. The lift, the porter and the loading bay are treated as matters to confirm with the building rather than facilities that come with the job.",
+      "Excluded are the windows, the front elevation, the common parts and the block's structure, all of which belong to the freeholder and, in the conservation area, to Westminster as well. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction. The lift, the porter and the loading bay are treated as matters to confirm with the building rather than facilities that come with the job.",
     ],
     processNote: "Nothing is stripped until the agent's pack is signed and the building's own contractor requirements are met. Access is measured in the same period, and it changes what is bought: where the lift will not take long lengths, worktops and carcasses are specified in sizes that go up the stair and assembled inside the flat, which moves part of the fit-out later than it would sit elsewhere. Water isolation is booked with the building, so the wet rooms run to the block's date.",
     consent: "Westminster is the planning authority for most of the residential core and designated the St John's Wood Conservation Area in 1968 [VERIFY the boundary for the address]. Replacing a kitchen or bathroom inside the existing rooms generally falls outside planning; fenestration, front boundaries and roof alterations do not. Lease consent is separate and is granted by the freeholder or managing agent, not the council. Some blocks apply design guides stricter than planning, and some streets sit under an estate scheme of management, which is a third consent again [VERIFY].",
@@ -834,7 +834,7 @@ export const refurbDetail: ComboDetailMap = {
       {
         title: "A riser sized for a century ago",
         text:
-          "We do not move a wet room over a neighbour's bedroom, and we do not form openings. Relocating a soil connection through the building is not this service. Windows, the front elevation, the common parts and the block's structure belong to the freeholder and, in the conservation area, to Westminster. Structural openings sit with Hampstead Renovations.",
+          "We do not move a wet room over a neighbour's bedroom, and we do not form openings. Relocating a soil connection through the building is not this service. Windows, the front elevation, the common parts and the block's structure belong to the freeholder and, in the conservation area, to Westminster. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction.",
       },
       {
         title: "The agent's pack before a wall comes down",
@@ -879,7 +879,7 @@ export const refurbDetail: ComboDetailMap = {
       },
       {
         q: "What is not included in a St John's Wood light-refurbishment programme?",
-        a: "The windows, the front elevation, the common parts, the block's structure, a wet room moved over a neighbour's bedroom, a loft and an extension. Those sit with the freeholder, with Westminster, or with Hampstead Renovations. Kitchen, bathroom, decoration and floors inside the leased demise as it stands are this service.",
+        a: "The windows, the front elevation, the common parts, the block's structure, a wet room moved over a neighbour's bedroom, a loft and an extension. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction. Kitchen, bathroom, decoration and floors inside the leased demise as it stands are this service.",
       },
       {
         q: "Can we stay in a St John's Wood villa while kitchen, bathrooms, decoration and floors all run?",
@@ -890,7 +890,7 @@ export const refurbDetail: ComboDetailMap = {
   "swiss-cottage": {
     scopeNotes: [
       "Here the brief usually names one demise and four things inside it: the kitchen, the bathroom, the floors and the decoration. In the inter-war and later blocks on the main roads, the deciding constraint is rarely the room — it is the boxed riser the bathroom hangs off and the entrance hall that everything has to be carried through. In the Victorian conversions a street back, it is the chimney breast and a subfloor that has moved.",
-      "Excluded, deliberately: anything that changes the shell. A spine wall between a conversion's front and back rooms stays. A new soil connection or a duct driven into a common void is not assumed because a drawing shows one — in a block that void belongs to the freeholder, not to the flat. Openings, lofts and extensions sit with Hampstead Renovations. A whole-flat rewire is not assumed inside a brief that named two rooms.",
+      "Excluded, deliberately: anything that changes the shell. A spine wall between a conversion's front and back rooms stays. A new soil connection or a duct driven into a common void is not assumed because a drawing shows one — in a block that void belongs to the freeholder, not to the flat. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction. A whole-flat rewire is not assumed inside a brief that named two rooms.",
     ],
     processNote: "The lead-in carries more weight here than the fit-out. A managing agent on Avenue Road wants the pack, the hours and the method statement settled before a demise is opened; a conversion toward Frognal wants the neighbours told and the stair covered. Neither is instant. Wet rooms are dated from the day consent lands rather than the day the proposal is signed, and where you are staying the sequence keeps one working tap and one working bathroom for as long as the fabric allows.",
     consent: "Two consents are worth separating. Camden grants planning and conservation-area consent; the freeholder or managing agent grants a licence to alter. Replacing a kitchen or a bathroom inside the rooms that already exist usually sits outside planning altogether, because nothing changes on the outside of the building. The moment an extract grille, a soil pipe or a window is involved, the envelope is in play and the council's position matters — many of the residential streets off Finchley Road and Avenue Road sit in the South Hampstead Conservation Area [VERIFY the designation for the address]. The lease is a separate test again.",
@@ -902,7 +902,7 @@ export const refurbDetail: ComboDetailMap = {
       {
         title: "A spine wall that stays",
         text:
-          "A spine wall between a conversion's front and back rooms stays. A new soil connection or a duct driven into a common void is not assumed because a drawing shows one — in a block that void belongs to the freeholder. Openings, lofts and extensions sit with Hampstead Renovations. A whole-flat rewire is not assumed inside a brief that named two rooms.",
+          "A spine wall between a conversion's front and back rooms stays. A new soil connection or a duct driven into a common void is not assumed because a drawing shows one — in a block that void belongs to the freeholder. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction. A whole-flat rewire is not assumed inside a brief that named two rooms.",
       },
       {
         title: "The day the pack lands, not the day you sign",
@@ -958,7 +958,7 @@ export const refurbDetail: ComboDetailMap = {
   "west-hampstead": {
     scopeNotes: [
       "Which floor of the house you own decides the West Hampstead brief more than the postcode does. A ground or garden demise keeps its rear-return kitchen and a full-height bathroom; a top-floor flat has no return at all, so the kitchen occupies a former bedroom and the bathroom is tucked into the eaves with limited height above the trap. Waste from both runs to a stack the flat above is also using.",
-      "Out of scope are the common stair, the front door, the roof and the rear elevation, all of which belong to the freeholder rather than to your demise. Widening the opening between reception and kitchen is out too; that is structural, and sits with Hampstead Renovations. Nor do we assume the hallway can be used for storage. One front door serves three or four flats here, and the neighbours did not order the work.",
+      "Out of scope are the common stair, the front door, the roof and the rear elevation, all of which belong to the freeholder rather than to your demise. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction. Nor do we assume the hallway can be used for storage. One front door serves three or four flats here, and the neighbours did not order the work.",
     ],
     processNote: "The programme here starts with two conversations rather than one. The freeholder's position on a bathroom sitting above another demise is settled first, and neighbours are told the working hours before a skip is licensed on a side street. Materials then arrive in the order they are fitted, because there is nowhere to stack them. The consequence is that the wet room finishes before the hall is decorated, since every board and bag passes through the hall.",
     consent: "Camden decides planning and conservation-area matters, and parts of the neighbourhood are designated, with Article 4 directions removing some permitted-development rights on windows [VERIFY the designation and any Article 4 for the address]. Replacing a kitchen or bathroom within the existing rooms generally sits outside planning; a new extract terminal or a replacement window on the rear elevation does not. Separately, the lease governs the work, and consent for a wet room over another flat comes from the freeholder. Notifiable electrical and drainage work is dealt with through building control.",
@@ -970,7 +970,7 @@ export const refurbDetail: ComboDetailMap = {
       {
         title: "Which floor of the terrace you own",
         text:
-          "A ground-floor return and a top-floor eaves bathroom are not the same job. Widening the opening between reception and kitchen is out; that is structural, and sits with Hampstead Renovations. The common stair, the front door, the roof and the rear elevation belong to the freeholder. We work the rooms you own, on the stacks they already use.",
+          "A ground-floor return and a top-floor eaves bathroom are not the same job. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction. The common stair, the front door, the roof and the rear elevation belong to the freeholder. We work the rooms you own, on the stacks they already use.",
       },
       {
         title: "Everything through one shared hall",
@@ -1019,7 +1019,7 @@ export const refurbDetail: ComboDetailMap = {
       },
       {
         q: "What is not included in a West Hampstead light-refurbishment programme?",
-        a: "The common stair, the front door, the roof, the rear elevation, and a widened opening between reception and kitchen. Those belong to the freeholder or sit with Hampstead Renovations. Kitchen, bathroom, decoration and floors inside the demise as it stands are this service. We do not form a new envelope behind the terrace.",
+        a: "The common stair, the front door, the roof, the rear elevation, and a widened opening between reception and kitchen. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction. Kitchen, bathroom, decoration and floors inside the demise as it stands are this service. We do not form a new envelope behind the terrace.",
       },
     ],
   },

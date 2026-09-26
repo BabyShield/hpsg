@@ -151,7 +151,7 @@ export const serviceSeo: Record<ServiceSlug, ServiceSeo> = {
       },
       {
         q: "What is not included in a kitchen renovation?",
-        a: "Structural openings, kitchen-diners that remove a wall, loft conversions and extensions. Those sit with Hampstead Renovations. A kitchen renovation on this site is a fit-out of the room that exists.",
+        a: "Structural openings, kitchen-diners that remove a wall, loft conversions and extensions. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction. A kitchen renovation on this site is a fit-out of the room that exists.",
       },
     ],
   },
@@ -273,7 +273,7 @@ export const serviceSeo: Record<ServiceSlug, ServiceSeo> = {
       },
       {
         q: "What sits outside light refurbishment?",
-        a: "Structural openings, loft conversions, extensions and basement works. Those sit with Hampstead Renovations. We will say so at the first visit rather than stretch the word.",
+        a: "Structural openings, loft conversions, extensions and basement works. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction. We will say so at the first visit rather than stretch the word.",
       },
       {
         q: "Is a buy-to-let refresh a light refurbishment?",
@@ -289,7 +289,7 @@ export const serviceSeo: Record<ServiceSlug, ServiceSeo> = {
       },
       {
         q: "What is the difference between light refurbishment and a full renovation?",
-        a: "Light refurbishment keeps the structure. Kitchen, bathroom, decoration, floors and the services those rooms need. A full renovation that moves walls, adds a storey or forms an extension sits with Hampstead Renovations.",
+        a: "Light refurbishment keeps the structure. Kitchen, bathroom, decoration, floors and the services those rooms need. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction.",
       },
       {
         q: "Do you refurbish mansion flats in St John's Wood and Maida Vale?",

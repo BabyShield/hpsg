@@ -159,29 +159,28 @@ export default function AboutPage() {
       <section className="py-24 sm:py-32">
         <Container className="grid gap-10 lg:grid-cols-12">
           <h2 className="font-display text-4xl font-light sm:text-5xl lg:col-span-4">
-            What this company is not
+            Main services and wider requirements
           </h2>
           <div className="space-y-5 text-base leading-relaxed text-grey-700 lg:col-span-8">
             <p>
-              Light refurbishment on this site does not include changing the
-              carcass of a building — extensions, loft conversions or structural
-              openings. That work sits with{" "}
-              <a
-                href="https://hampsteadrenovations.co.uk"
+              Kitchens, bathrooms, painting and light refurbishment remain our
+              main services. Wider requirements, including building projects and
+              property maintenance, are grouped under{" "}
+              <Link
+                href="/other-services/"
                 className="quiet-link text-navy"
               >
-                Hampstead Renovations
-              </a>
-              , a sister company in the same family.
+                Other services
+              </Link>.
             </p>
             <p>
-              Day-to-day on-demand trades sit with Hampstead On Demand. The
-              family is explained on the{" "}
+              The scope and business responsible for any work are identified in
+              the written proposal before an instruction. The website structure
+              is explained on the{" "}
               <Link href="/group/" className="quiet-link text-navy">
                 Group
               </Link>{" "}
-              page. For kitchens, bathrooms, painting and light refurbishment,
-              stay on this site.
+              page.
             </p>
           </div>
         </Container>

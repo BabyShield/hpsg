@@ -6,6 +6,7 @@ import { Header } from "@/components/layout/Header";
 import { MobileCallBar } from "@/components/layout/MobileCallBar";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { site } from "@/data/site";
+import { ContactMeasurement } from "@/components/contact/ContactMeasurement";
 import { organizationSchema, websiteSchema } from "@/lib/schema";
 
 import "./globals.css";
@@ -71,6 +72,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <div id="main">{children}</div>
         <Footer />
         <MobileCallBar />
+        <ContactMeasurement />
       </body>
     </html>
   );

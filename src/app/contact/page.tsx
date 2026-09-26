@@ -1,12 +1,11 @@
 import Link from "next/link";
+import { EmailEnquiryForm } from "@/components/contact/EmailEnquiryForm";
 
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { Container } from "@/components/ui/Container";
 import { ContentImage } from "@/components/ui/ContentImage";
-import { areas } from "@/data/areas";
 import { officeNeighbourhood } from "@/data/photos";
-import { services } from "@/data/services";
 import { addressSingleLine, site } from "@/data/site";
 import { pageMetadata } from "@/lib/metadata";
 import { absoluteUrl, contactPageSchema } from "@/lib/schema";
@@ -22,10 +21,8 @@ export const metadata = pageMetadata({
 
 const mapSrc = `https://www.openstreetmap.org/export/embed.html?bbox=${site.geo.longitude - 0.01}%2C${site.geo.latitude - 0.006}%2C${site.geo.longitude + 0.01}%2C${site.geo.latitude + 0.006}&layer=mapnik&marker=${site.geo.latitude}%2C${site.geo.longitude}`;
 
-const fieldClass = "field";
 
 export default function ContactPage() {
-  const formAction = site.formEndpoint ?? `mailto:${site.email}`;
 
   return (
     <>
@@ -50,7 +47,8 @@ export default function ContactPage() {
           <h1 className="font-display text-5xl font-light sm:text-6xl">Contact</h1>
           <p className="lede mt-8 max-w-measure text-xl text-grey-600">
             Request a quote for kitchen renovation, bathroom renovation, painting
-            or light refurbishment in Hampstead and North West London.
+            or light refurbishment in Hampstead and North West London. For wider
+            work, choose the relevant Other service in the enquiry form.
           </p>
           <div className="mt-6 max-w-measure space-y-5 text-base leading-relaxed text-grey-700">
             <p>
@@ -109,6 +107,7 @@ export default function ContactPage() {
           </p>
         </div>
 
+        <EmailEnquiryForm />
         <div className="space-y-14 lg:col-span-12">
           <section>
             <h2 className="font-display text-3xl font-normal sm:text-4xl">
@@ -193,72 +192,6 @@ export default function ContactPage() {
             </div>
           </section>
         </div>
-        <form
-          action={formAction}
-          method={site.formEndpoint ? "post" : "get"}
-          className="space-y-8 border-t border-gold/50 pt-10 lg:col-span-7 lg:border-t-0 lg:border-l lg:border-gold/40 lg:pl-14 lg:pt-20"
-        >
-          <p className="kicker">Enquiry</p>
-          <p className="text-sm text-grey-600">
-            {site.formEndpoint
-              ? "Send an enquiry."
-              : `The form opens an email to ${site.email}.`}
-          </p>
-          <label className="block">
-            <span className="kicker text-navy">Name</span>
-            <input required name="name" className={fieldClass} />
-          </label>
-          <label className="block">
-            <span className="kicker text-navy">Email</span>
-            <input required type="email" name="email" className={fieldClass} />
-          </label>
-          <label className="block">
-            <span className="kicker text-navy">Phone</span>
-            <input name="phone" className={fieldClass} />
-          </label>
-          <label className="block">
-            <span className="kicker text-navy">Area</span>
-            <select name="area" className={fieldClass} defaultValue="">
-              <option value="" disabled>
-                Select an area
-              </option>
-              {areas.map((area) => (
-                <option key={area.slug} value={area.slug}>
-                  {area.name} {area.postcode}
-                </option>
-              ))}
-            </select>
-          </label>
-          <label className="block">
-            <span className="kicker text-navy">Service</span>
-            <select name="service" className={fieldClass} defaultValue="">
-              <option value="" disabled>
-                Select a service
-              </option>
-              {services.map((service) => (
-                <option key={service.slug} value={service.slug}>
-                  {service.name}
-                </option>
-              ))}
-            </select>
-          </label>
-          <label className="block">
-            <span className="kicker text-navy">Message</span>
-            <textarea required name="message" rows={5} className={fieldClass} />
-          </label>
-          <p className="text-sm leading-relaxed text-grey-600">
-            After we receive the enquiry we will contact you to arrange a visit.
-            We do not send a price from photographs. Enquiry details are used
-            only to respond; see the{" "}
-            <Link href="/privacy/" className="underline decoration-gold underline-offset-4">
-              privacy notice
-            </Link>
-            .
-          </p>
-          <button type="submit" className="btn btn-primary">
-            Send enquiry
-          </button>
-        </form>
       </Container>
     </>
   );

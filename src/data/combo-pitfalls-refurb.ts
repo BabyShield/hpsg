@@ -10,7 +10,7 @@ export const refurbPitfalls: ComboPitfallsMap = {
     pitfalls: [
       "The failure that costs most on a village programme is a scope nobody wrote down. A refurbishment sits next to a hall, a landing and a cupboard, and a job that begins as two rooms quietly becomes half the flat without any figure changing to match. When the conversation eventually happens, it is an argument rather than a decision. The boundary goes in writing before anything is ordered, and genuine additions are repriced openly.",
       "The second is ordering against a consent that has not arrived. In a leasehold conversion a licence to alter runs to the freeholder's timetable, and a kitchen and bathroom delivered into a flat that is not cleared to start is stock standing in a shared hall while somebody takes a view. Nothing is ordered until the licence is in hand, and we would rather hold a date than lose a month.",
-      "The third is treating the word refurbishment as elastic. Opening a wall between two village rooms, forming a kitchen-diner or altering the envelope is structural work, and taking that on under this heading means a project without the design, the consent or the contract it needs. We say at the first visit that it sits with Hampstead Renovations rather than discovering it at strip-out.",
+      "The third is treating the word refurbishment as elastic. Opening a wall between two village rooms, forming a kitchen-diner or altering the envelope is structural work, and taking that on under this heading means a project without the design, the consent or the contract it needs. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction.",
     ],
     moreFaqs: [
       {
@@ -105,7 +105,7 @@ export const refurbPitfalls: ComboPitfallsMap = {
       },
       {
         q: "What is the difference between this and a full renovation?",
-        a: "This service keeps the carcass. Kitchen, bathrooms, floors, joinery, decoration and the services those rooms need, within the plan that exists. A full renovation that moves walls, changes the plan or alters the structure is a different class of project with different design, different consent and a different contract, and it sits with Hampstead Renovations. We separate the two at the first visit.",
+        a: "This service keeps the carcass. Kitchen, bathrooms, floors, joinery, decoration and the services those rooms need, within the plan that exists. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction. We separate the two at the first visit.",
       },
     ],
   },
@@ -257,7 +257,7 @@ export const refurbPitfalls: ComboPitfallsMap = {
       },
       {
         q: "Will the house feel bigger afterwards?",
-        a: "It can feel considerably better used without a single wall moving. One floor finish running through the ground floor instead of three, doors that swing the right way, storage built where there was none, and lighting designed rather than inherited. Those are the gains a light refurbishment delivers in a cottage. Removing a wall is a different service and it sits with Hampstead Renovations.",
+        a: "It can feel considerably better used without a single wall moving. One floor finish running through the ground floor instead of three, doors that swing the right way, storage built where there was none, and lighting designed rather than inherited. Those are the gains a light refurbishment delivers in a cottage. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction.",
       },
       {
         q: "How do we keep the neighbours on side for two months?",

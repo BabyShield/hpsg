@@ -1,0 +1,157 @@
+{
+  "version": 1,
+  "mainWebsite": "https://hpsg.co.uk",
+  "basePath": "/other-services/",
+  "revised": "2026-09-26",
+  "mainServices": [
+    {"name":"Kitchen renovation","path":"/kitchen-renovation/","legacy":["kitchen-renovation","kitchen-fitting"]},
+    {"name":"Bathroom renovation","path":"/bathroom-renovation/","legacy":["bathroom-renovation"]},
+    {"name":"Painting and decorating","path":"/painting-decorating/","legacy":["painting-decorating"]},
+    {"name":"Light refurbishment","path":"/light-refurbishment/","legacy":[]}
+  ],
+  "groups": [
+    {
+      "slug":"building-projects","name":"Building projects",
+      "intro":"For projects that change the space or layout of a property. Tell us what exists now, what you want to change and whether drawings or permissions are already available. The scope, responsible business and any specialist appointments need to be clear before work is agreed.",
+      "prepare":["Property address and type, including whether it is leasehold or listed.","Existing plans, proposed drawings and any decisions already received.","Access, neighbouring properties, occupancy and your intended sequence of work."],
+      "services":[
+        {"slug":"loft-conversions","name":"Loft conversions","detail":"Describe the roof shape, current access and intended use of the new rooms."},
+        {"slug":"house-extensions","name":"House extensions","detail":"Include the proposed position, approximate footprint and connection to the existing house."},
+        {"slug":"basement-conversion","name":"Basement conversions","aliases":["basement_conversion"],"detail":"Say whether there is an existing cellar or a proposed excavation, and provide any reports on damp or structure."},
+        {"slug":"full-house-refurbishment","name":"Property and full-house refurbishment","aliases":["renovation"],"detail":"List the rooms, services and structural changes in scope, with any areas that must remain occupied."},
+        {"slug":"new-builds","name":"New builds","detail":"Include the site, current planning position and the drawings available for the proposed building."},
+        {"slug":"garage-conversion","name":"Garage conversions","detail":"Describe the garage construction, access and intended room use."},
+        {"slug":"conservatories","name":"Conservatories","detail":"Include the existing or proposed footprint, roof type and how the space connects to the home."},
+        {"slug":"orangeries","name":"Orangeries","detail":"Describe the proposed glazing, roof arrangement and connection to adjoining rooms."},
+        {"slug":"commercial-renovations","name":"Commercial renovations","detail":"Tell us the property use, operating hours, access restrictions and the work required."}
+      ]
+    },
+    {
+      "slug":"design-and-planning","name":"Design and planning",
+      "intro":"For drawings, layouts and the information needed to define a project. The correct appointment depends on the property and the decisions still to be made. Existing reports and correspondence help identify what is needed without duplicating work.",
+      "prepare":["The address, existing drawings and photographs of the relevant spaces.","The decision or application you need help with and any stated deadline.","Details of any designer, engineer, managing agent or adviser already appointed."],
+      "services":[
+        {"slug":"architectural-design","name":"Architectural design","aliases":["architectural_design"],"detail":"Explain the proposed changes and which drawings, layout options or application documents are needed."},
+        {"slug":"planning-applications","name":"Planning applications","aliases":["planning_applications"],"detail":"Provide the proposal and any existing application reference or council correspondence."},
+        {"slug":"structural-engineering","name":"Structural engineering","aliases":["structural_engineering"],"detail":"Identify the proposed opening, altered structure or element requiring assessment, with drawings where available."},
+        {"slug":"interior-design","name":"Interior design","aliases":["interior_design"],"detail":"Set out the rooms, furniture or finishes to coordinate and what you intend to retain."},
+        {"slug":"building-surveying","name":"Building surveying","detail":"State the property type and the purpose of the requested inspection or report; the appropriate appointment must be confirmed."},
+        {"slug":"party-wall","name":"Party wall enquiries","detail":"Include the proposed works and any notices or correspondence already received, without uploading unrelated personal documents."}
+      ]
+    },
+    {
+      "slug":"joinery-and-interiors","name":"Joinery and interiors",
+      "intro":"For fitted storage, timber features and changes to the way rooms work. Useful enquiries describe what needs to fit, the available dimensions and the surrounding finishes. Photographs help explain the room but do not replace measurements before an order.",
+      "prepare":["The room, approximate dimensions and any awkward corners or changes in level.","Items to store or equipment to accommodate, including model dimensions where relevant.","Preferred materials and finishes, and any existing items to retain."],
+      "services":[
+        {"slug":"bespoke-joinery","name":"Bespoke joinery","detail":"Describe the fitted piece, its purpose and the wall or room where it will sit."},
+        {"slug":"fitted-wardrobes","name":"Fitted wardrobes","detail":"Include the available width and height, door preference and the storage you need inside."},
+        {"slug":"media-walls-tv-units","name":"Media walls and TV units","detail":"List screen and equipment sizes, cable routes and any ventilation requirements supplied by the manufacturers."},
+        {"slug":"bespoke-wine-cellars","name":"Wine cellars and storage","detail":"Explain the room, intended storage capacity and any temperature-control equipment being considered."},
+        {"slug":"boot-rooms-mudrooms","name":"Boot rooms and mudrooms","detail":"Describe the entrance, wet storage needs and any bench, sink or laundry provision."},
+        {"slug":"staircases","name":"Staircases","detail":"Say whether the enquiry concerns repair, replacement or a new stair, and include existing plans if available."},
+        {"slug":"door-hanging","name":"Door hanging","detail":"Give the number of doors, whether frames are being retained and any door specification already supplied."},
+        {"slug":"soundproofing-solutions","name":"Soundproofing","detail":"Describe the noise, where it is heard and the floor, wall or ceiling involved; performance needs assessment before a specification."}
+      ]
+    },
+    {
+      "slug":"floors-and-finishes","name":"Floors and finishes",
+      "intro":"For floors, tiles, plaster and decoration that sit within an agreed room layout. The existing surface, build-up and access often determine the preparation needed. Include the finish you want and whether materials have already been bought.",
+      "prepare":["Approximate area, room use and photographs of the existing surface.","Known moisture, movement or unevenness, and any test information already available.","Product details and who is supplying materials, trims and adhesives."],
+      "services":[
+        {"slug":"wood-flooring","name":"Wood flooring","aliases":["wood_flooring","wood-flooring-premium","flooring"],"detail":"Identify the existing floor, the rooms involved and whether you want new boards, replacement or finishing work."},
+        {"slug":"engineered-wood-flooring","name":"Engineered wood flooring","detail":"Include the proposed product, board dimensions and any underfloor-heating information."},
+        {"slug":"solid-oak-flooring","name":"Solid oak flooring","detail":"Describe the subfloor and room conditions, and say whether boards are already selected."},
+        {"slug":"herringbone-pattern-flooring","name":"Herringbone flooring","detail":"Include the room layout, proposed border and how the pattern should meet doorways."},
+        {"slug":"tiling-services","name":"Tiling","aliases":["tiling_services"],"detail":"List wall and floor areas, tile sizes, existing surfaces and whether wet-area preparation is included."},
+        {"slug":"porcelain-tiles","name":"Porcelain tiles","detail":"Share the product and format, approximate area and any cuts, steps or external areas involved."},
+        {"slug":"natural-stone-tiles","name":"Natural stone tiles","detail":"Identify the stone, its intended location and any supplier guidance on fixing and sealing."},
+        {"slug":"tiles-supplier","name":"Tile supply enquiries","detail":"Include the selected range, quantity and whether matching an existing tile is required."},
+        {"slug":"moisture-testing","name":"Moisture testing","detail":"Explain the surface to be assessed and why a reading is needed, such as preparation for a new floor."},
+        {"slug":"plastering","name":"Plastering","detail":"Describe the wall or ceiling, existing finish and whether the request is for repairs or a complete surface."},
+        {"slug":"rendering","name":"Rendering","detail":"Include the elevation, access and existing render condition, with photographs taken safely from ground level."},
+        {"slug":"wallpapering","name":"Wallpapering","detail":"Give wall dimensions, paper type and pattern repeat, and describe any preparation required."},
+        {"slug":"exterior-painting","name":"Exterior painting","detail":"List the surfaces and access restrictions, including windows, masonry or exterior joinery."}
+      ]
+    },
+    {
+      "slug":"heating-plumbing-electrical","name":"Heating, plumbing and electrical",
+      "intro":"For installations, repairs and fault enquiries involving building services. Include the equipment or circuit involved, the symptoms and any existing reports. The required specialist and any certification must be established for the actual work; an enquiry does not confirm an appointment or emergency response.",
+      "prepare":["Equipment make and model, if safely visible, and a description of the problem.","The rooms affected, when the issue began and whether it is intermittent.","Existing reports or installation information relevant to the requested work."],
+      "services":[
+        {"slug":"emergency-plumber","name":"Urgent plumbing enquiries","detail":"Describe the leak or loss of service and the property location; availability must be confirmed directly."},
+        {"slug":"blocked-drains","name":"Blocked drains","detail":"Say which fixtures or drains are affected and whether the issue is inside or outside."},
+        {"slug":"leak-detection","name":"Leak detection","detail":"Describe visible signs, the affected rooms and any checks already carried out."},
+        {"slug":"boiler-installation","name":"Boiler installation","detail":"Include the current equipment, fuel type and proposed location, if known."},
+        {"slug":"boiler-repair","name":"Boiler repair","detail":"Provide the make, model and displayed fault information without opening the appliance."},
+        {"slug":"central-heating","name":"Central heating","detail":"Describe the rooms, radiators or controls involved and any known system limitations."},
+        {"slug":"gas-safety","name":"Gas safety enquiries","detail":"State the property use and appliances involved so the required inspection and appropriate registered professional can be identified."},
+        {"slug":"underfloor-heating","name":"Underfloor heating","detail":"Say whether the proposed system is electric or water-based and describe the floor build-up, where known."},
+        {"slug":"emergency-electrician","name":"Urgent electrical enquiries","detail":"Describe the affected supply or circuit and the location; a response time is not promised by submitting an enquiry."},
+        {"slug":"house-rewiring","name":"House rewiring","detail":"Include the property size, occupancy and any existing electrical inspection report."},
+        {"slug":"fuse-box","name":"Consumer units and fuse boxes","detail":"Describe the requested change and provide any existing inspection recommendations."},
+        {"slug":"lighting-installation","name":"Lighting installation","detail":"List fitting types, positions and whether controls or new wiring are part of the request."},
+        {"slug":"ev-chargers","name":"EV charging","detail":"Include parking position, charger preference and the relationship between the parking space and electrical supply."},
+        {"slug":"smart-home","name":"Smart home systems","detail":"List the functions and existing devices you want to connect, including their makes and models."}
+      ]
+    },
+    {
+      "slug":"property-care","name":"Property care and cleaning",
+      "intro":"For maintenance, practical repairs and cleaning requirements. A list of tasks helps distinguish a small visit from a larger programme. Describe the property, access arrangements and any tenancy or handover deadline; dates and availability are confirmed individually.",
+      "prepare":["A task list with quantities or approximate areas where useful.","The property type, access restrictions and whether it is occupied.","Any relevant deadline and materials or equipment already on site."],
+      "services":[
+        {"slug":"property-maintenance","name":"Property maintenance","aliases":["property_maintenance"],"detail":"Group the tasks by room or building area and identify any recurring faults."},
+        {"slug":"handyman-services","name":"Handyman services","aliases":["handyman"],"detail":"List the individual repair or fitting jobs, with photographs of fixings or replacement items where helpful."},
+        {"slug":"locksmith","name":"Locksmith enquiries","detail":"Describe the door and lock problem and your access to the property; attendance must be confirmed directly."},
+        {"slug":"housekeeping","name":"Housekeeping","detail":"Describe the rooms, frequency requested and the tasks you want included."},
+        {"slug":"end-of-tenancy","name":"End-of-tenancy cleaning","detail":"Include the property size, furnishing level and any written cleaning requirements."},
+        {"slug":"carpet-cleaning","name":"Carpet cleaning","detail":"Give the approximate area, material if known and any stains or access constraints."},
+        {"slug":"oven-cleaning","name":"Oven cleaning","detail":"Provide the appliance type, size and any manufacturer cleaning restrictions."},
+        {"slug":"window-cleaning","name":"Window cleaning","detail":"Include the number of windows, floors involved and whether access is internal, external or both."},
+        {"slug":"rubbish-removal","name":"Rubbish removal","detail":"Describe the materials and volume and flag anything needing separate handling so the appropriate collection can be assessed."},
+        {"slug":"pest-control","name":"Pest control enquiries","detail":"Describe the signs noticed, affected spaces and whether children or animals use those spaces."}
+      ]
+    },
+    {
+      "slug":"gardens-and-outdoor","name":"Gardens and outdoor spaces",
+      "intro":"For gardens, planting, boundaries and outdoor surfaces. Photographs and rough dimensions help explain the brief. Include how people and materials reach the space, and distinguish regular maintenance from a change to the layout.",
+      "prepare":["Rough dimensions, current photographs and the access route.","What should remain and what you want to change or remove.","Known boundary, tree or building restrictions and any existing design."],
+      "services":[
+        {"slug":"garden-design","name":"Garden design","detail":"Describe how you want to use the garden, existing features and maintenance preferences."},
+        {"slug":"landscaping","name":"Landscaping","detail":"List the changes to levels, surfaces, planting or layout that you are considering."},
+        {"slug":"garden-maintenance","name":"Garden maintenance","detail":"Set out the recurring tasks and the current condition of beds, paths and planting."},
+        {"slug":"lawn-mowing","name":"Lawn mowing","detail":"Give the approximate lawn area, access and frequency requested."},
+        {"slug":"hedge-trimming","name":"Hedge trimming","detail":"Include the hedge length, approximate height and access on each side."},
+        {"slug":"tree-surgery","name":"Tree work enquiries","detail":"Describe the tree and proposed work and provide any known protection or permission information."},
+        {"slug":"green-waste-removal","name":"Green waste removal","detail":"Describe the vegetation, approximate volume and collection access."},
+        {"slug":"artificial-grass","name":"Artificial grass","detail":"Include the intended area, existing surface and drainage concerns."},
+        {"slug":"decking","name":"Decking","detail":"Describe the proposed footprint, level changes and material preference."},
+        {"slug":"fencing","name":"Fencing","detail":"Give the boundary length, fence type and whether existing posts or panels are being retained."},
+        {"slug":"driveways","name":"Driveways","detail":"Include the area, current surface and any proposed change to access or drainage."},
+        {"slug":"jet-wash-patio","name":"Patio cleaning","detail":"Identify the surface material, approximate area and any damaged joints or delicate adjacent finishes."},
+        {"slug":"outdoor-kitchens","name":"Outdoor kitchens","detail":"Describe the layout and appliances, and whether water, drainage or power connections are proposed."},
+        {"slug":"window-box-refresh","name":"Window boxes and planters","detail":"Include the number and size of containers, their position and planting preferences."}
+      ]
+    },
+    {
+      "slug":"roofs-windows-security","name":"Roofs, windows and security",
+      "intro":"For repairs and replacements affecting the exterior or security of a property. Start with a description and photographs taken from a safe position. Access and the existing construction need to be assessed before a method or specification is agreed.",
+      "prepare":["The affected elevation, floor or roof area and the symptoms or intended change.","Photographs from a safe accessible position and any existing reports.","Known building restrictions, ownership boundaries and access arrangements."],
+      "services":[
+        {"slug":"roof-repair","name":"Roof repairs","detail":"Describe the roof covering, signs of a problem and the location of any internal staining."},
+        {"slug":"flat-roofing","name":"Flat roofing","detail":"Include the roof use, covering if known, approximate area and drainage arrangement."},
+        {"slug":"slate-roofing","name":"Slate roofing","detail":"Describe the affected slope and whether the request concerns local repairs or a wider replacement."},
+        {"slug":"chimney-repair","name":"Chimney repairs","detail":"Identify the stack or flue concerned and any existing inspection information."},
+        {"slug":"guttering","name":"Guttering","detail":"Describe the material, affected length and whether the issue is blockage, leakage or replacement."},
+        {"slug":"fascias-soffits","name":"Fascias and soffits","detail":"Include the affected elevation, existing material and access height."},
+        {"slug":"brick-cleaning","name":"Brick cleaning","detail":"Describe the masonry and staining so a suitable method and any trial area can be considered."},
+        {"slug":"sash-windows","name":"Sash windows","detail":"Give the number of windows and whether the request concerns repair, draught reduction or replacement."},
+        {"slug":"double-glazing","name":"Double glazing","detail":"Include opening sizes, frame preference and whether existing frames are retained."},
+        {"slug":"bifold-doors","name":"Bifold doors","detail":"Describe the opening, proposed door arrangement and whether structural alterations are part of the brief."},
+        {"slug":"front-doors","name":"Front doors","detail":"Include the opening, frame condition and any specification imposed by the building."},
+        {"slug":"burglar-alarms","name":"Burglar alarms","detail":"Describe the property layout, existing system and functions required without sending access codes."},
+        {"slug":"cctv","name":"CCTV","detail":"Describe the areas to be covered and existing equipment without sharing passwords or security credentials."}
+      ]
+    }
+  ]
+}

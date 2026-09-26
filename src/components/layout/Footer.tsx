@@ -59,6 +59,7 @@ export function Footer() {
                 <Link href={`/${service.slug}/`}>{service.name}</Link>
               </li>
             ))}
+            <li><Link href="/other-services/">Other services</Link></li>
           </ul>
         </div>
         <div className="lg:col-span-3">
@@ -92,6 +93,10 @@ export function Footer() {
             <li>
               <Link href="/privacy/">Privacy</Link>
             </li>
+            <li><Link href="/privacy/#statistics">Contact click preferences</Link></li>
+            <li>
+              <Link href="/terms/">Website terms</Link>
+            </li>
           </ul>
           <address className="mt-10 text-sm not-italic leading-relaxed text-bone/70">
             <p>
@@ -120,15 +125,9 @@ export function Footer() {
       <div className="border-t border-bone/10">
         <Container className="flex flex-col gap-3 py-7 text-xs tracking-wide text-bone/70 sm:flex-row sm:items-center sm:justify-between">
           <p>{site.footerLegal}</p>
-          <p>
-            <a href="https://hampsteadrenovations.co.uk">Hampstead Renovations</a>
-            {site.sisterBrands[1]?.url ? (
-              <>
-                {" · "}
-                <a href={site.sisterBrands[1].url}>Hampstead On Demand</a>
-              </>
-            ) : null}
-          </p>
+          {site.sisterBrands[1]?.url ? (
+            <p><a href={site.sisterBrands[1].url}>Hampstead On Demand</a></p>
+          ) : null}
         </Container>
       </div>
     </footer>

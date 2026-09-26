@@ -1,0 +1,21 @@
+{
+  "$schema": "../../node_modules/wrangler/config-schema.json",
+  "name": "hpsg-enquiries",
+  "main": "worker.mjs",
+  "compatibility_date": "2026-09-26",
+  "workers_dev": true,
+  "preview_urls": false,
+  "observability": { "enabled": true },
+  "vars": {
+    "PUBLIC_ENABLED": "false",
+    "ALLOWED_ORIGINS": "https://hpsg.co.uk,https://www.hpsg.co.uk",
+    "TURNSTILE_SITE_KEY": ""
+  },
+  "triggers": { "crons": ["*/10 * * * *"] },
+  "d1_databases": [{
+    "binding": "DB",
+    "database_name": "hpsg-enquiries",
+    "database_id": "00000000-0000-0000-0000-000000000000",
+    "migrations_dir": "migrations"
+  }]
+}

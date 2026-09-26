@@ -34,7 +34,7 @@ export const areaDetail: Record<string, AreaDetail> = {
       },
       {
         q: "What does a kitchen renovation in an Archway terrace conversion actually have to work around?",
-        a: "The closet wing. In these two- and three-storey stock-brick houses the kitchen still sits in the old scullery, with a fall to the rear and services boxed in wherever a previous conversion found room. We survey the wing as found — levels, the waste run to the stack, and whether the floor is original boards or a later build-up — and draw the layout to that, not to a showroom plan. Opening the wing into the main room is structural work and sits with Hampstead Renovations.",
+        a: "The closet wing. In these two- and three-storey stock-brick houses the kitchen still sits in the old scullery, with a fall to the rear and services boxed in wherever a previous conversion found room. We survey the wing as found — levels, the waste run to the stack, and whether the floor is original boards or a later build-up — and draw the layout to that, not to a showroom plan. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction.",
       },
       {
         q: "Can a bathroom renovation on an Archway half-landing take a proper shower?",
@@ -57,7 +57,7 @@ export const areaDetail: Record<string, AreaDetail> = {
     extraFaqs: [
       {
         q: "Can the chimney breast come out to make room for the kitchen?",
-        a: "Not by us. Taking out a breast is structural work and sits with Hampstead Renovations, not with a refurbishment programme. In practice we design around it: the breast becomes the cooker position or a full-height run of tall units, and the alcoves take the worktop. In a converted villa the flue above may still serve another flat, which is a further reason to leave it standing.",
+        a: "Not by us. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction. In practice we design around it: the breast becomes the cooker position or a full-height run of tall units, and the alcoves take the worktop. In a converted villa the flue above may still serve another flat, which is a further reason to leave it standing.",
       },
       {
         q: "Our stucco front is cracked and flaking. Is that decorating work?",
@@ -96,7 +96,7 @@ export const areaDetail: Record<string, AreaDetail> = {
       },
       {
         q: "What is a kitchen renovation in a Crouch End garden flat actually working with?",
-        a: "The old rear return. Garden-flat kitchens sit in the original scullery wing, often with a neighbour's bathroom stacked above, a shared stack on the rear wall, and joists that do not run the way a new layout wants. We survey the return as found — the junction with the main house, the damp at that junction, and the fall on the existing waste — and draw the run to those points. Forming a new opening into the front room is structural and sits with Hampstead Renovations.",
+        a: "The old rear return. Garden-flat kitchens sit in the original scullery wing, often with a neighbour's bathroom stacked above, a shared stack on the rear wall, and joists that do not run the way a new layout wants. We survey the return as found — the junction with the main house, the damp at that junction, and the fall on the existing waste — and draw the run to those points. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction.",
       },
       {
         q: "Can you renovate a bathroom that was carved from a Crouch End box room?",
@@ -127,7 +127,7 @@ export const areaDetail: Record<string, AreaDetail> = {
       },
       {
         q: "Is a kitchen renovation in Dartmouth Park different on the Highgate Road side from the villas higher up?",
-        a: "The room is different, even when the trades look the same. West of Dartmouth Park Hill the tighter bay-fronted terraces put the kitchen in a lower-ground rear against retaining ground; east and higher, Dartmouth Park Road and Dartmouth Park Avenue hold larger villas where the kitchen may still be a service room but the section is more generous. In both, we settle levels, moisture and extract before cabinets. Opening a structural wall between kitchen and dining room sits with Hampstead Renovations, not with this service.",
+        a: "The room is different, even when the trades look the same. West of Dartmouth Park Hill the tighter bay-fronted terraces put the kitchen in a lower-ground rear against retaining ground; east and higher, Dartmouth Park Road and Dartmouth Park Avenue hold larger villas where the kitchen may still be a service room but the section is more generous. In both, we settle levels, moisture and extract before cabinets. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction.",
       },
       {
         q: "What governs a bathroom renovation above a Dartmouth Park back addition besides the floor finish?",
@@ -150,7 +150,7 @@ export const areaDetail: Record<string, AreaDetail> = {
     extraFaqs: [
       {
         q: "Can you open up the wall between the kitchen and the dining room in an inter-war semi?",
-        a: "No. Forming or widening a structural opening is not part of light refurbishment, and that work sits with Hampstead Renovations. What we do is work within the openings that exist: a new kitchen in the rear corner, the services re-run, the solid floor levelled and finished, and the two rooms decorated as one scheme so they read together. We will say at survey which of the two you need.",
+        a: "No. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction. What we do is work within the openings that exist: a new kitchen in the rear corner, the services re-run, the solid floor levelled and finished, and the two rooms decorated as one scheme so they read together. We will say at survey which of the two you need.",
       },
       {
         q: "The bathroom is over the hall and it is small. What can actually change?",
@@ -158,7 +158,7 @@ export const areaDetail: Record<string, AreaDetail> = {
       },
       {
         q: "What does a kitchen renovation in an East Finchley house actually look like?",
-        a: "It depends which plan you have. The Edwardian terrace toward Fortis Green still puts the kitchen in a narrow outrigger that was the scullery, often on timber, with the bathroom stacked above it. The inter-war semi toward Creighton Avenue and East End Road puts it in the rear corner on a solid concrete floor, with a side window and a bathroom over the hall. We survey which of those you have — concealed pipework of unknown age is common to both — and we work within the openings that exist. Forming a new opening sits with Hampstead Renovations.",
+        a: "It depends which plan you have. The Edwardian terrace toward Fortis Green still puts the kitchen in a narrow outrigger that was the scullery, often on timber, with the bathroom stacked above it. The inter-war semi toward Creighton Avenue and East End Road puts it in the rear corner on a solid concrete floor, with a side window and a bathroom over the hall. We survey which of those you have — concealed pipework of unknown age is common to both — and we work within the openings that exist. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction.",
       },
       {
         q: "How is a bathroom renovation specified in an East Finchley Edwardian terrace when it sits over the kitchen?",
@@ -189,7 +189,7 @@ export const areaDetail: Record<string, AreaDetail> = {
       },
       {
         q: "Where does a kitchen renovation go in a converted Frognal house?",
-        a: "Into a former bedroom or the old service wing, more often than into a purpose-made kitchen. Tall red-brick villas on Frognal, Redington Road and the Fitzjohn's Avenue stretch were divided with a single internal soil chase serving the whole building, so the layout is an argument about fall and about the flue or chimney breast that still occupies the room. We measure the chase, the ceiling height — generous on raised ground, tight under the staff storey — and scribe the run to walls that are rarely square. Enlarging the room is structural and sits with Hampstead Renovations.",
+        a: "Into a former bedroom or the old service wing, more often than into a purpose-made kitchen. Tall red-brick villas on Frognal, Redington Road and the Fitzjohn's Avenue stretch were divided with a single internal soil chase serving the whole building, so the layout is an argument about fall and about the flue or chimney breast that still occupies the room. We measure the chase, the ceiling height — generous on raised ground, tight under the staff storey — and scribe the run to walls that are rarely square. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction.",
       },
       {
         q: "Can you renovate a bathroom that was a dressing room in a Frognal villa?",
@@ -207,12 +207,12 @@ export const areaDetail: Record<string, AreaDetail> = {
   },
   "golders-green": {
     streets: "Golders Green Road carries the shops from the station up toward Temple Fortune, and the residential streets hang off it. Immediately behind are Hodford Road, Wentworth Road and Rotherwick Road: close-set Edwardian and early inter-war semis and short terraces with bay fronts and tiled paths [VERIFY the road names for the address]. Hoop Lane, with the cemetery and crematorium along it, divides that grain from the streets running toward the Suburb boundary. West of the station, out along North End Road toward West Heath and Golders Hill Park, plots widen and detached houses appear. The parades on the main roads carry flats above the shops, with purpose-built blocks at the junctions. Garages and hardstandings are ordinary here in a way they are not in the Camden conversions.",
-    buildings: "Inside the standard house, the back of the plan is the interesting part. A rear projection once held a scullery and a larder beside the kitchen, and those small rooms are why so many kitchens here have already been combined once. The survey therefore establishes what the dividing wall carries before any layout is drawn: opening a structural wall is not our work and sits with Hampstead Renovations. Bathrooms are upstairs over the hall or the return, on suspended timber floors that flex under a filled bath. Casements, leaded lights, picture rails and panelled doors survive in patches rather than throughout. Ground floors are timber over a ventilated void, so the air bricks matter more than they look.",
+    buildings: "Inside the standard house, the back of the plan is the interesting part. A rear projection once held a scullery and a larder beside the kitchen, and those small rooms are why so many kitchens here have already been combined once. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction. Bathrooms are upstairs over the hall or the return, on suspended timber floors that flex under a filled bath. Casements, leaded lights, picture rails and panelled doors survive in patches rather than throughout. Ground floors are timber over a ventilated void, so the air bricks matter more than they look.",
     access: "Driveways change the arithmetic. Where a skip can stand wholly on private ground no highway licence is needed and a van unloads off the carriageway [VERIFY Barnet's current requirement]; where it cannot, Barnet licenses both skip and scaffold. On the crescents behind the main road, cars stand both sides and a long wheelbase will not turn, so material crosses the front garden rather than reversing to the door. Scaffolding to a side return usually needs the neighbour's agreement as well as the council's, and is asked for early.",
     extraFaqs: [
       {
         q: "Can the old scullery wall come out to make one kitchen?",
-        a: "Sometimes. Where it is a stud partition doing nothing but dividing two rooms, taking it down and making good is ordinary work for us. Where it carries floor or roof load, or a beam would be needed, that is structural and belongs with Hampstead Renovations rather than with this service. We establish which it is at survey and say so.",
+        a: "Sometimes. Where it is a stud partition doing nothing but dividing two rooms, taking it down and making good is ordinary work for us. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction. We establish which it is at survey and say so.",
       },
       {
         q: "Will you work around Shabbat and the festivals?",
@@ -220,7 +220,7 @@ export const areaDetail: Record<string, AreaDetail> = {
       },
       {
         q: "What should a kitchen renovation in a Golders Green semi check before units are ordered?",
-        a: "The floor void and what the last refit buried. Ground floors here are timber over a ventilated void, so the air bricks matter more than they look, and a rear projection that once held a scullery and a larder has usually already been combined. We establish whether that dividing wall still carries load — if it does, opening it sits with Hampstead Renovations — and we look at concealed pipework of unknown age behind the existing units. The layout then follows the rear wall, the boiler flue and the side passage, not a plan drawn for a different house.",
+        a: "The floor void and what the last refit buried. Ground floors here are timber over a ventilated void, so the air bricks matter more than they look, and a rear projection that once held a scullery and a larder has usually already been combined. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction. The layout then follows the rear wall, the boiler flue and the side passage, not a plan drawn for a different house.",
       },
       {
         q: "Will a bathroom renovation upstairs in a Golders Green house take a heavy tray on timber?",
@@ -313,7 +313,7 @@ export const areaDetail: Record<string, AreaDetail> = {
       },
       {
         q: "What does a kitchen renovation look like in a South End Green house facing Hampstead Heath?",
-        a: "A closet-wing or lower-ground room in a three-storey terrace with a semi-basement, climbing South Hill Park, Parliament Hill, Nassington Road or Tanza Road. The kitchen now sits in that wing or in the lower-ground room, and previous owners have often already enlarged it — that earlier work, not the original fabric, is usually what the survey has to correct: falls to the rear, boxed services, extract routed to whichever wall was nearest. We will not put a new kitchen over a moisture problem. Forming a new rear opening sits with Hampstead Renovations.",
+        a: "A closet-wing or lower-ground room in a three-storey terrace with a semi-basement, climbing South Hill Park, Parliament Hill, Nassington Road or Tanza Road. The kitchen now sits in that wing or in the lower-ground room, and previous owners have often already enlarged it — that earlier work, not the original fabric, is usually what the survey has to correct: falls to the rear, boxed services, extract routed to whichever wall was nearest. We will not put a new kitchen over a moisture problem. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction.",
       },
       {
         q: "How is a bathroom renovation specified on a Hampstead Heath half-landing?",
@@ -340,11 +340,11 @@ export const areaDetail: Record<string, AreaDetail> = {
       },
       {
         q: "The kitchen is at the lower rear and the garden sits above floor level. What does that mean?",
-        a: "That wall is holding back ground, and it will behave like it. Before cabinets are chosen we want to know how the wall was built, whether anything has been tanked before, and where the room's air comes from. Resolving that is separate work from the kitchen and far cheaper done first. Alterations to a retaining wall sit with Hampstead Renovations.",
+        a: "That wall is holding back ground, and it will behave like it. Before cabinets are chosen we want to know how the wall was built, whether anything has been tanked before, and where the room's air comes from. Resolving that is separate work from the kitchen and far cheaper done first. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction.",
       },
       {
         q: "How does the slope change a kitchen renovation in Highgate?",
-        a: "Drainage falls the way the land does. Houses on Highgate West Hill, Millfield Lane and Fitzroy Park are built into the ground, so a room level with the garden at the back can be half a storey down at the front. Kitchens began as service rooms at the lower rear and have usually been moved once already. We survey the existing fall, the retaining wall if there is one, and an extract route that does not land on a Village frontage, before any run is drawn. Alterations to a retaining wall sit with Hampstead Renovations.",
+        a: "Drainage falls the way the land does. Houses on Highgate West Hill, Millfield Lane and Fitzroy Park are built into the ground, so a room level with the garden at the back can be half a storey down at the front. Kitchens began as service rooms at the lower rear and have usually been moved once already. We survey the existing fall, the retaining wall if there is one, and an extract route that does not land on a Village frontage, before any run is drawn. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction.",
       },
       {
         q: "Can you add or renovate an ensuite in a Highgate conversion far from the stack?",
@@ -375,7 +375,7 @@ export const areaDetail: Record<string, AreaDetail> = {
       },
       {
         q: "What is a kitchen renovation in a Kensal Rise terrace working inside?",
-        a: "A single-storey back addition that was the scullery, or someone else's rear extension on top of it. College Road, Clifford Gardens, Bathurst Gardens and Wrentham Avenue repeat the same section: bay-fronted front room, middle room, narrow return. Where the return is original we work to one window, one rear stack and shallow joists. Where it has already been extended we survey the junction — floor levels, the flat roof into the existing gully, concealed waste — before ordering. We do not form the extension; that sits with Hampstead Renovations.",
+        a: "A single-storey back addition that was the scullery, or someone else's rear extension on top of it. College Road, Clifford Gardens, Bathurst Gardens and Wrentham Avenue repeat the same section: bay-fronted front room, middle room, narrow return. Where the return is original we work to one window, one rear stack and shallow joists. Where it has already been extended we survey the junction — floor levels, the flat roof into the existing gully, concealed waste — before ordering. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction.",
       },
       {
         q: "How do you renovate a bathroom over the back addition in Kensal Rise?",
@@ -406,7 +406,7 @@ export const areaDetail: Record<string, AreaDetail> = {
       },
       {
         q: "What does a kitchen renovation at lower ground in Kentish Town have to solve besides cabinets?",
-        a: "Head height, the floor and the light well. Early terraces on Leighton Road, Lady Margaret Road and toward Torriano put the kitchen in a lower-ground room behind a front area: restricted ceiling, a solid or part-solid floor, and a light well doing all the ventilation work. We measure the range of the floor, pack or level only where a rigid finish needs it, and do not chase settlement out of the house. Material often goes down the area stair rather than through the raised ground floor, so the front area is boarded first. Opening the room into the garden structurally sits with Hampstead Renovations.",
+        a: "Head height, the floor and the light well. Early terraces on Leighton Road, Lady Margaret Road and toward Torriano put the kitchen in a lower-ground room behind a front area: restricted ceiling, a solid or part-solid floor, and a light well doing all the ventilation work. We measure the range of the floor, pack or level only where a rigid finish needs it, and do not chase settlement out of the house. Material often goes down the area stair rather than through the raised ground floor, so the front area is boarded first. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction.",
       },
       {
         q: "Can you renovate a half-landing bathroom in a Kentish Town conversion?",
@@ -429,7 +429,7 @@ export const areaDetail: Record<string, AreaDetail> = {
     extraFaqs: [
       {
         q: "Our flat was subdivided years ago. How do you tell original walls from later partitions?",
-        a: "By opening up in a controlled way and reading the evidence: the direction of the joists, whether the plaster is lime on lath or plasterboard, how the wall meets the cornice, and where the stack actually runs. That tells us what can move within a light refurbishment. If a wall turns out to carry load we stop and say so, because structural work sits with Hampstead Renovations.",
+        a: "By opening up in a controlled way and reading the evidence: the direction of the joists, whether the plaster is lime on lath or plasterboard, how the wall meets the cornice, and where the stack actually runs. That tells us what can move within a light refurbishment. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction.",
       },
       {
         q: "We are above a shop on the High Road. Can work happen during trading hours?",
@@ -437,7 +437,7 @@ export const areaDetail: Record<string, AreaDetail> = {
       },
       {
         q: "What does a kitchen renovation look like in a subdivided Kilburn house?",
-        a: "A former bedroom with a boxed duct running to a stack it was never meant to serve. East of the High Road, on Priory Road, Iverson Road and toward West Hampstead, three storeys over a lower ground were cut into small flats through the twentieth century; west of it the grain includes more purpose-built blocks. The first hour of survey separates original structure from later stud, because that changes layout, acoustics and drainage together. If a wall carries load we stop — structural work sits with Hampstead Renovations. The layout then follows the waste that exists, not a plan that assumes a service wall.",
+        a: "A former bedroom with a boxed duct running to a stack it was never meant to serve. East of the High Road, on Priory Road, Iverson Road and toward West Hampstead, three storeys over a lower ground were cut into small flats through the twentieth century; west of it the grain includes more purpose-built blocks. The first hour of survey separates original structure from later stud, because that changes layout, acoustics and drainage together. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction. The layout then follows the waste that exists, not a plan that assumes a service wall.",
       },
       {
         q: "How do you renovate a bathroom that occupies a former cupboard in Kilburn?",
@@ -468,7 +468,7 @@ export const areaDetail: Record<string, AreaDetail> = {
       },
       {
         q: "What is a kitchen renovation in a Maida Vale mansion flat actually replacing?",
-        a: "The original service kitchen at the back of a corridor plan. On Elgin Avenue, Lauderdale Road, Delaware Road and the red-brick and terracotta blocks, principal rooms face the street and the kitchen sits off what was the service stair, with a riser in a duct that serves every flat in the column. The layout is drawn to reach that duct at a fall, not drawn first and then asked to fit. Opening the kitchen into the reception is structural and a lease question; it sits with Hampstead Renovations. Carcasses are measured against the corridor turn and the lift car before they are ordered.",
+        a: "The original service kitchen at the back of a corridor plan. On Elgin Avenue, Lauderdale Road, Delaware Road and the red-brick and terracotta blocks, principal rooms face the street and the kitchen sits off what was the service stair, with a riser in a duct that serves every flat in the column. The layout is drawn to reach that duct at a fall, not drawn first and then asked to fit. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction. Carcasses are measured against the corridor turn and the lift car before they are ordered.",
       },
       {
         q: "How is a bathroom renovation built over timber floors in a Maida Vale block?",
@@ -491,7 +491,7 @@ export const areaDetail: Record<string, AreaDetail> = {
     extraFaqs: [
       {
         q: "Our house already has a rear extension. Can you re-fit the kitchen inside it?",
-        a: "Yes, and it is a common brief here, because so much of the Edwardian stock was extended decades ago. We survey the existing structure first: the floor build-up either side of the original rear wall, the damp detail at that junction, the roof insulation, and where services currently run. Those findings set the layout. We do not form new openings or alter structure, and that work sits with Hampstead Renovations.",
+        a: "Yes, and it is a common brief here, because so much of the Edwardian stock was extended decades ago. We survey the existing structure first: the floor build-up either side of the original rear wall, the damp detail at that junction, the roof insulation, and where services currently run. Those findings set the layout. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction.",
       },
       {
         q: "Do you work in the flats above the Broadway parades?",
@@ -499,7 +499,7 @@ export const areaDetail: Record<string, AreaDetail> = {
       },
       {
         q: "What does a kitchen renovation in a Muswell Hill Edwardian house have to design around?",
-        a: "A chimney breast, a rear return and, very often, two floor build-ups. Red-brick houses with roughcast gables on the avenues off the Broadway put the original kitchen in a scullery off that return; in most houses the dividing wall came down years ago, leaving a long rear space with a junction where damp likes to bridge. We survey that junction, the garden door and the existing waste before a run is drawn. Taking out the wall to the room in front, or forming a side return, is structural and sits with Hampstead Renovations.",
+        a: "A chimney breast, a rear return and, very often, two floor build-ups. Red-brick houses with roughcast gables on the avenues off the Broadway put the original kitchen in a scullery off that return; in most houses the dividing wall came down years ago, leaving a long rear space with a junction where damp likes to bridge. We survey that junction, the garden door and the existing waste before a run is drawn. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction.",
       },
       {
         q: "How do you renovate a bathroom over the return in a Muswell Hill house?",
@@ -522,7 +522,7 @@ export const areaDetail: Record<string, AreaDetail> = {
     extraFaqs: [
       {
         q: "There are vaults under the front pavement. Can they be brought into the kitchen?",
-        a: "Rarely as habitable space, and never as a casual extra. Pavement vaults are unheated, poorly ventilated and often damp, and the pavement above is highway rather than yours [VERIFY ownership and any licence for the address]. Cleaned out, dried and lit, they make useful storage. Opening them up structurally is not our work and sits with Hampstead Renovations.",
+        a: "Rarely as habitable space, and never as a casual extra. Pavement vaults are unheated, poorly ventilated and often damp, and the pavement above is highway rather than yours [VERIFY ownership and any licence for the address]. Cleaned out, dried and lit, they make useful storage. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction.",
       },
       {
         q: "Does repainting the stucco front need permission here?",
@@ -530,7 +530,7 @@ export const areaDetail: Record<string, AreaDetail> = {
       },
       {
         q: "What does a kitchen renovation in a Primrose Hill lower-ground room have to settle first?",
-        a: "Moisture and ventilation, then cabinets. The repeating house on Chalcot Square, Chalcot Road, Fitzroy Road and Gloucester Avenue is a mid-nineteenth-century terrace with a lower ground that opens to a front area and a closet wing at the back. Kitchens sit down there with retained earth behind at least one wall. Previous work has often put gypsum and impermeable paint onto walls that need to breathe. We survey the wall as found, establish where water is coming from, and specify the build-up before any units are ordered. Opening pavement vaults into the kitchen is not our work and sits with Hampstead Renovations.",
+        a: "Moisture and ventilation, then cabinets. The repeating house on Chalcot Square, Chalcot Road, Fitzroy Road and Gloucester Avenue is a mid-nineteenth-century terrace with a lower ground that opens to a front area and a closet wing at the back. Kitchens sit down there with retained earth behind at least one wall. Previous work has often put gypsum and impermeable paint onto walls that need to breathe. We survey the wall as found, establish where water is coming from, and specify the build-up before any units are ordered. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction.",
       },
       {
         q: "How is a bathroom renovation in a Primrose Hill closet wing actually built?",
@@ -561,7 +561,7 @@ export const areaDetail: Record<string, AreaDetail> = {
       },
       {
         q: "What is a kitchen renovation in a Queen's Park back addition actually constrained by?",
-        a: "Width, the rear stack and the bathroom above it. Brent-side houses on Chevening Road, Kingswood Avenue and Milman Road follow one plan: a bay-fronted terrace, kitchen at ground level in the back addition, bathroom directly above, both served by a soil stack on the outside rear wall. We keep the wet services on that wall, survey the ventilated void under the timber floor, and do not treat chimney breasts as optional. Forming a side-return opening sits with Hampstead Renovations. Extract is usually the shortest run through the rear wall, with the grille settled against any conservation-area audit [VERIFY the designation].",
+        a: "Width, the rear stack and the bathroom above it. Brent-side houses on Chevening Road, Kingswood Avenue and Milman Road follow one plan: a bay-fronted terrace, kitchen at ground level in the back addition, bathroom directly above, both served by a soil stack on the outside rear wall. We keep the wet services on that wall, survey the ventilated void under the timber floor, and do not treat chimney breasts as optional. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction. Extract is usually the shortest run through the rear wall, with the grille settled against any conservation-area audit [VERIFY the designation].",
       },
       {
         q: "Is a bathroom renovation in a Queen's Park Estate cottage the same job as one in a Brent terrace?",
@@ -592,7 +592,7 @@ export const areaDetail: Record<string, AreaDetail> = {
       },
       {
         q: "Where does a kitchen renovation sit in a Regent's Park terrace house?",
-        a: "In the basement service rooms, more often than in a principal room on the park front. Cumberland Terrace, Chester Terrace, York Terrace and their neighbours are deep, narrow and vertical: service at the bottom, a raised ground floor, full-height sashes to the first-floor principal room, and lower ceilings above. Where the house has been divided, kitchens have landed in former service or dressing rooms, so wastes travel further than anyone would design from scratch. We draw to the existing run and to the listing. Opening the plan is not this service and sits with Hampstead Renovations.",
+        a: "In the basement service rooms, more often than in a principal room on the park front. Cumberland Terrace, Chester Terrace, York Terrace and their neighbours are deep, narrow and vertical: service at the bottom, a raised ground floor, full-height sashes to the first-floor principal room, and lower ceilings above. Where the house has been divided, kitchens have landed in former service or dressing rooms, so wastes travel further than anyone would design from scratch. We draw to the existing run and to the listing. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction.",
       },
       {
         q: "How do you renovate a bathroom at the light-well end of a Regent's Park flat?",
@@ -646,7 +646,7 @@ export const areaDetail: Record<string, AreaDetail> = {
     extraFaqs: [
       {
         q: "Can the wall between the kitchen and the dining room come out?",
-        a: "Only once it is established what the wall does. In these blocks the internal cross-walls carry load, and often the flat above as well, so forming an opening is structural work: that sits with Hampstead Renovations and, in a block, with the freeholder's own approval process. Where the wall turns out to be a later stud partition, removing it is straightforward and we will say so at survey.",
+        a: "Only once it is established what the wall does. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction. Where the wall turns out to be a later stud partition, removing it is straightforward and we will say so at survey.",
       },
       {
         q: "Can a bathroom move to a different room in the flat?",
@@ -654,7 +654,7 @@ export const areaDetail: Record<string, AreaDetail> = {
       },
       {
         q: "What is a kitchen renovation in a St John's Wood mansion flat working around?",
-        a: "Original risers and a compact room near the old service stair. Blocks on Wellington Road, Prince Albert Road and Grove End Road were planned with brick cross-walls that look like partitions and are not, so the sink and the soil pipe sit where the building put them. We draw the layout to those ducts. Opening the kitchen into the dining room is structural, belongs with Hampstead Renovations, and in a block needs the freeholder's own approval as well. Villas on Hamilton Terrace, Carlton Hill and Abercorn Place are a different job: rear kitchens added later, lime in the original rooms and gypsum in the additions.",
+        a: "Original risers and a compact room near the old service stair. Blocks on Wellington Road, Prince Albert Road and Grove End Road were planned with brick cross-walls that look like partitions and are not, so the sink and the soil pipe sit where the building put them. We draw the layout to those ducts. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction. Villas on Hamilton Terrace, Carlton Hill and Abercorn Place are a different job: rear kitchens added later, lime in the original rooms and gypsum in the additions.",
       },
       {
         q: "How do you renovate a stacked bathroom in a St John's Wood block?",
@@ -685,7 +685,7 @@ export const areaDetail: Record<string, AreaDetail> = {
       },
       {
         q: "Where does a kitchen renovation sit in a divided Swiss Cottage villa?",
-        a: "In a former rear bedroom, using a stack that was never asked to serve three separate flats. Fitzjohn's Avenue, Maresfield Gardens and Netherhall Gardens are tall red brick and stucco, most of it divided a century ago; load-bearing brick, lath-and-plaster ceilings and boarded floors are the fabric. We open up enough to see what earlier refits boxed in, then draw the run to the waste that exists. Avenue Road is the opposite grain — wide plots, later blocks, solid floors with no void to bury a pipe in — and a moved sink there means a plinth, a boxed run or a pump. Forming a new opening sits with Hampstead Renovations.",
+        a: "In a former rear bedroom, using a stack that was never asked to serve three separate flats. Fitzjohn's Avenue, Maresfield Gardens and Netherhall Gardens are tall red brick and stucco, most of it divided a century ago; load-bearing brick, lath-and-plaster ceilings and boarded floors are the fabric. We open up enough to see what earlier refits boxed in, then draw the run to the waste that exists. Avenue Road is the opposite grain — wide plots, later blocks, solid floors with no void to bury a pipe in — and a moved sink there means a plinth, a boxed run or a pump. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction.",
       },
       {
         q: "How is a bathroom renovation different in a Swiss Cottage inter-war block from one in a converted villa?",
@@ -747,7 +747,7 @@ export const areaDetail: Record<string, AreaDetail> = {
       },
       {
         q: "What does a kitchen renovation in a Tufnell Park villa closet wing have to follow?",
-        a: "The rear wall and the stack, not a former bedroom's wishful drainage. The paired villas on Tufnell Park Road, Dalmeny Avenue, Anson Road and Carleton Road have a side entrance on a half-landing stair, two rooms deep, and a two-storey closet wing at the back. Conversions have pushed a kitchen into whichever room had a rear wall — often that wing. We survey the existing waste, the neighbour's ceiling below and what the lease permits before drawing units. Moving the kitchen into a bedroom with no waste nearby is a different problem; improving the wing is usually the better instruction. Opening the wing structurally sits with Hampstead Renovations.",
+        a: "The rear wall and the stack, not a former bedroom's wishful drainage. The paired villas on Tufnell Park Road, Dalmeny Avenue, Anson Road and Carleton Road have a side entrance on a half-landing stair, two rooms deep, and a two-storey closet wing at the back. Conversions have pushed a kitchen into whichever room had a rear wall — often that wing. We survey the existing waste, the neighbour's ceiling below and what the lease permits before drawing units. Moving the kitchen into a bedroom with no waste nearby is a different problem; improving the wing is usually the better instruction. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction.",
       },
       {
         q: "How do you renovate stacked half-landing bathrooms in a Tufnell Park conversion?",
@@ -778,7 +778,7 @@ export const areaDetail: Record<string, AreaDetail> = {
       },
       {
         q: "What does a kitchen renovation in a West Hampstead rear return actually have to work to?",
-        a: "One window, one external wall and a single rear stack. North of Mill Lane the Greek-named streets — Achilles, Agamemnon, Ulysses — are small bay-fronted terraces on tight plots [VERIFY the local name]; around Fortune Green Road and Hillfield Road the terraces are a little larger. The kitchen takes the closet wing in both. We rework that return properly rather than pushing services the length of the flat. Most conversions belong to a later phase of stud partitions and boxed services [VERIFY the conversion date], and those boxings often hide the only usable run for new waste. Forming a new opening sits with Hampstead Renovations.",
+        a: "One window, one external wall and a single rear stack. North of Mill Lane the Greek-named streets — Achilles, Agamemnon, Ulysses — are small bay-fronted terraces on tight plots [VERIFY the local name]; around Fortune Green Road and Hillfield Road the terraces are a little larger. The kitchen takes the closet wing in both. We rework that return properly rather than pushing services the length of the flat. Most conversions belong to a later phase of stud partitions and boxed services [VERIFY the conversion date], and those boxings often hide the only usable run for new waste. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction.",
       },
       {
         q: "Can you renovate an ensuite in a West Hampstead conversion that is not the half-landing bathroom?",

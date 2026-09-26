@@ -13,7 +13,7 @@ export const refurbExtra: ComboExtraMap = {
     survey: [
       {
         title: "Whether the brief is actually structural",
-        text: "The first thing a visit settles is whether what you want is this service at all. Opening a wall between two village rooms, forming a kitchen-diner or altering the envelope is structural work and sits with Hampstead Renovations. We say so at the visit rather than taking the instruction and discovering the truth at strip-out.",
+        text: "The first thing a visit settles is whether what you want is this service at all. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction. We say so at the visit rather than taking the instruction and discovering the truth at strip-out.",
       },
       {
         title: "Which rooms are in and which are not",
@@ -92,7 +92,7 @@ export const refurbExtra: ComboExtraMap = {
     moreFaqs: [
       {
         q: "Is knocking through two rooms part of a light refurbishment?",
-        a: "No. Forming an opening between rooms is structural work, whatever it is called in an estate agent's particulars, and it sits with Hampstead Renovations rather than with this service. We will say so at the first visit rather than taking the instruction and stretching the word. Everything around it — kitchen, bathroom, floors, joinery, decoration and the services those rooms need — is exactly what this service covers.",
+        a: "No. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction. We will say so at the first visit rather than taking the instruction and stretching the word. Everything around it — kitchen, bathroom, floors, joinery, decoration and the services those rooms need — is exactly what this service covers.",
       },
       {
         q: "Why is a programme cheaper than doing the rooms one at a time?",
@@ -208,7 +208,7 @@ export const refurbExtra: ComboExtraMap = {
       },
       {
         q: "What is not included in a light refurbishment?",
-        a: "Anything structural: forming openings, removing walls, loft conversions, extensions and basement works. Those sit with Hampstead Renovations rather than with this service. Also excluded are works to the building's shared fabric beyond your demise, and redecoration of the common hall unless the freeholder instructs that separately. We write what is in and what is out before anything is ordered, because that boundary is where refurbishments go wrong.",
+        a: "Anything structural: forming openings, removing walls, loft conversions, extensions and basement works. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction. Also excluded are works to the building's shared fabric beyond your demise, and redecoration of the common hall unless the freeholder instructs that separately. We write what is in and what is out before anything is ordered, because that boundary is where refurbishments go wrong.",
       },
       {
         q: "Will we need a licence to alter?",
@@ -328,7 +328,7 @@ export const refurbExtra: ComboExtraMap = {
       },
       {
         q: "What sits outside this service?",
-        a: "Anything structural. Joining two rooms of a lateral conversion, removing a chimney breast, forming an opening, or altering the envelope are not light refurbishment whatever they are called, and they sit with Hampstead Renovations. So does work to the building's shared fabric beyond your demise. We write what is in and what is out before anything is ordered, because that boundary is where these programmes go wrong.",
+        a: "Anything structural. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction. So does work to the building's shared fabric beyond your demise. We write what is in and what is out before anything is ordered, because that boundary is where these programmes go wrong.",
       },
     ],
   },
@@ -420,7 +420,7 @@ export const refurbExtra: ComboExtraMap = {
       },
       {
         q: "Can we change the layout of the flat?",
-        a: "Within limits, and those limits are the building's rather than ours. Re-fitting the rooms that exist is this service. Moving walls, altering the carcass or changing the plan is not, and in a managed block it is a different and much harder consent. We separate the two at the first visit so the brief is honest. Where the ambition is genuinely structural, it sits with Hampstead Renovations rather than here.",
+        a: "Within limits, and those limits are the building's rather than ours. Re-fitting the rooms that exist is this service. Moving walls, altering the carcass or changing the plan is not, and in a managed block it is a different and much harder consent. We separate the two at the first visit so the brief is honest. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction.",
       },
       {
         q: "Will the neighbours below be affected for two months?",
@@ -543,7 +543,7 @@ export const refurbExtra: ComboExtraMap = {
       },
       {
         q: "What is excluded from a light refurbishment here?",
-        a: "Anything that alters the carcass: moving walls, forming openings, changing the plan, or work to the building's shared fabric beyond your demise. Those are not this service and in a mansion block they are a different consent as well. Loft conversions, extensions and basement works sit with Hampstead Renovations. We write what is in and what is out before anything is ordered, because that boundary is where programmes go wrong.",
+        a: "Anything that alters the carcass: moving walls, forming openings, changing the plan, or work to the building's shared fabric beyond your demise. Those are not this service and in a mansion block they are a different consent as well. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction. We write what is in and what is out before anything is ordered, because that boundary is where programmes go wrong.",
       },
     ],
   },
@@ -651,7 +651,7 @@ export const refurbExtra: ComboExtraMap = {
       },
       {
         q: "What is excluded?",
-        a: "Anything structural — forming openings, removing walls, loft conversions, extensions and basement works — which sits with Hampstead Renovations rather than with this service. Also excluded is work to the building's shared fabric beyond your demise. We write what is in and what is out before anything is ordered, and if a brief turns out to be structural we say so at the first visit rather than stretching the word refurbishment to cover it.",
+        a: "Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction. Also excluded is work to the building's shared fabric beyond your demise. We write what is in and what is out before anything is ordered, and if a brief turns out to be structural we say so at the first visit rather than stretching the word refurbishment to cover it.",
       },
     ],
   },
@@ -759,7 +759,7 @@ export const refurbExtra: ComboExtraMap = {
       },
       {
         q: "What is not included?",
-        a: "Anything structural. Forming openings, removing walls, lowering a lower-ground floor, loft conversions, extensions and basement works are not light refurbishment and they sit with Hampstead Renovations. Resolving damp in the structure may also be outside this service depending on what is needed. We write what is in and what is out before anything is ordered, and we say at the first visit if the brief is really a different class of project.",
+        a: "Anything structural. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction. Resolving damp in the structure may also be outside this service depending on what is needed. We write what is in and what is out before anything is ordered, and we say at the first visit if the brief is really a different class of project.",
       },
     ],
   },
@@ -970,7 +970,7 @@ export const refurbExtra: ComboExtraMap = {
       },
       {
         q: "What is excluded from light refurbishment?",
-        a: "Anything structural. Forming openings, removing walls, loft conversions, extensions and basement works are not this service and they sit with Hampstead Renovations. In a house this size the temptation to let the brief drift is real, which is exactly why we write what is in and what is out before anything is ordered and say at the first visit if part of what you want is a different class of project.",
+        a: "Anything structural. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction. In a house this size the temptation to let the brief drift is real, which is exactly why we write what is in and what is out before anything is ordered and say at the first visit if part of what you want is a different class of project.",
       },
       {
         q: "How long does a whole-house programme take?",
@@ -1082,7 +1082,7 @@ export const refurbExtra: ComboExtraMap = {
       },
       {
         q: "What is not included?",
-        a: "Anything structural: forming openings, removing walls, loft conversions, extensions and basement works, all of which sit with Hampstead Renovations. In a small house the temptation to open something up is common, and we would rather say at the first visit that the brief is a different class of project than take the instruction and stretch the word refurbishment to cover it.",
+        a: "Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction. In a small house the temptation to open something up is common, and we would rather say at the first visit that the brief is a different class of project than take the instruction and stretch the word refurbishment to cover it.",
       },
     ],
   },
@@ -1190,7 +1190,7 @@ export const refurbExtra: ComboExtraMap = {
       },
       {
         q: "What is excluded?",
-        a: "Anything structural. Forming openings, removing walls, loft conversions, extensions and basement works are not this service and they sit with Hampstead Renovations. In houses this size those ambitions come up often, and we would rather separate them at the first visit than let a refurbishment quietly turn into a project that needs different design, different consent and a different contract.",
+        a: "Anything structural. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction. In houses this size those ambitions come up often, and we would rather separate them at the first visit than let a refurbishment quietly turn into a project that needs different design, different consent and a different contract.",
       },
     ],
   },
@@ -1298,7 +1298,7 @@ export const refurbExtra: ComboExtraMap = {
       },
       {
         q: "What is excluded from this service?",
-        a: "Anything structural — forming openings, removing walls, loft conversions, extensions and basement works — which sits with Hampstead Renovations rather than here. Also excluded is work to the building's shared fabric beyond your demise, and redecoration of the communal hall unless the freeholder instructs it separately. We write that boundary down before anything is ordered, because it is where these programmes most often go wrong.",
+        a: "Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction. Also excluded is work to the building's shared fabric beyond your demise, and redecoration of the communal hall unless the freeholder instructs it separately. We write that boundary down before anything is ordered, because it is where these programmes most often go wrong.",
       },
     ],
   },
@@ -1322,7 +1322,7 @@ export const refurbExtra: ComboExtraMap = {
       },
       {
         title: "Whether the brief is structural",
-        text: "Opening a wall, joining two rooms or altering the envelope is not this service and sits with Hampstead Renovations. In a much-altered building the temptation to keep going is real, and we draw that line at the first visit rather than at strip-out.",
+        text: "Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction. In a much-altered building the temptation to keep going is real, and we draw that line at the first visit rather than at strip-out.",
       },
     ],
     materials: [
@@ -1405,7 +1405,7 @@ export const refurbExtra: ComboExtraMap = {
       },
       {
         q: "What is not included?",
-        a: "Anything structural: forming openings, removing walls, loft conversions, extensions and basement works, all of which sit with Hampstead Renovations. Lowering a lower-ground floor is not this service either. Resolving damp in the structure may also fall outside depending on what is required. We write the boundary down before anything is ordered and say at the first visit if the brief is really a different class of project.",
+        a: "Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction. Lowering a lower-ground floor is not this service either. Resolving damp in the structure may also fall outside depending on what is required. We write the boundary down before anything is ordered and say at the first visit if the brief is really a different class of project.",
       },
     ],
   },
@@ -1513,7 +1513,7 @@ export const refurbExtra: ComboExtraMap = {
       },
       {
         q: "What is excluded?",
-        a: "Anything structural — forming openings, removing walls, loft conversions, extensions and basement works — which sits with Hampstead Renovations rather than with this service. Also excluded is work to the building's shared fabric beyond your demise and any part of a commercial neighbour's premises. We write what is in and what is out before anything is ordered, because in a mixed building that boundary is where programmes go wrong.",
+        a: "Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction. Also excluded is work to the building's shared fabric beyond your demise and any part of a commercial neighbour's premises. We write what is in and what is out before anything is ordered, because in a mixed building that boundary is where programmes go wrong.",
       },
     ],
   },
@@ -1621,7 +1621,7 @@ export const refurbExtra: ComboExtraMap = {
       },
       {
         q: "What is excluded from this service here?",
-        a: "Anything structural or external. Forming openings, removing walls, loft conversions, extensions and basement works sit with Hampstead Renovations. External redecoration, new windows, changes to hardstandings or anything else the street can see is a separate instruction with its own Trust and planning position. We write the boundary down before anything is ordered, because in the Suburb that line is sharper than almost anywhere else we work.",
+        a: "Anything structural or external. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction. External redecoration, new windows, changes to hardstandings or anything else the street can see is a separate instruction with its own Trust and planning position. We write the boundary down before anything is ordered, because in the Suburb that line is sharper than almost anywhere else we work.",
       },
     ],
   },

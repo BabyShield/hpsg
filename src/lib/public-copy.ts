@@ -1,10 +1,8 @@
-/** Strip internal tokens so unfinished facts do not appear on the public site. */
+/** Withhold an entire unfinished statement, not just its internal warning. */
 export function publicCopy(text: string): string {
+  if (/\[(?:VERIFY|TBC|REVIEW)(?:\b|:)/i.test(text)) return "";
   return text
     .replace(/\[INSURANCE_TBC\]/g, "")
-    .replace(/\[TBC:[^\]]*\]/g, "")
-    .replace(/\[VERIFY[^\]]*\]/g, "")
-    .replace(/\[REVIEW:[^\]]*\]/g, "")
     .replace(/[ \t]{2,}/g, " ")
     .replace(/ +\./g, ".")
     .replace(/\s+\n/g, "\n")
@@ -13,5 +11,5 @@ export function publicCopy(text: string): string {
 }
 
 export function isDraftToken(text: string): boolean {
-  return /^\s*\[(TBC|VERIFY|INSURANCE_TBC|REVIEW)/i.test(text);
+  return /\[(TBC|VERIFY|INSURANCE_TBC|REVIEW)(?:\b|:)/i.test(text);
 }
