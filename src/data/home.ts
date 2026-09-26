@@ -23,8 +23,8 @@ export const homeFaqs: Faq[] = [
     a: "A single kitchen or bathroom can often be done around you. Occupied decorating is ordinary. A whole-flat light refurbishment is usually cleaner if you decant. We will say which, after we have seen the plan.",
   },
   {
-    q: "Do you do extensions, lofts or structural openings?",
-    a: "No. Those sit with Hampstead Renovations (hampsteadrenovations.co.uk). Kitchen renovation, bathroom renovation, painting and light refurbishment on this site stay inside the rooms that exist. We will say so at the first visit rather than stretch the brief.",
+    q: "Where can I enquire about extensions, lofts or structural openings?",
+    a: "Use our Other services catalogue for wider building projects. Kitchens, bathrooms, painting and light refurbishment remain the four main services. The scope, availability and business responsible for wider work are confirmed in a written proposal before an instruction.",
   },
   {
     q: "Are you insured?",
@@ -48,7 +48,7 @@ export const homeFaqs: Faq[] = [
   },
   {
     q: "Are you kitchen fitters or a renovation company?",
-    a: "We plan and fit kitchens, bathrooms, painting and light refurbishment as coordinated programmes in North West London housing. We are not a catalogue kitchen showroom, and we are not a structural design-and-build contractor. Extensions and loft conversions sit with Hampstead Renovations.",
+    a: "We plan and fit kitchens, bathrooms, painting and light refurbishment as coordinated programmes in North West London housing. We are not a catalogue kitchen showroom, and we are not a structural design-and-build contractor. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction.",
   },
   {
     q: "Do you work in mansion blocks and conservation areas?",
@@ -85,8 +85,8 @@ export const whyHpsg = [
     text: "One programme and one point of contact for the rooms in scope, rather than a collection of separate trades to coordinate yourself. Wet rooms first, decoration last, a snag against the written specification.",
   },
   {
-    title: "Part of an established London property group",
-    text: "Hampstead Property Services Group sits alongside sister companies in the same family. Kitchens, bathrooms, painting and light refurbishment stay on this site. Extensions and lofts sit with Hampstead Renovations.",
+    title: "Main services and wider requirements",
+    text: "Kitchens, bathrooms, painting and light refurbishment remain our main services. The wider catalogue is grouped under Other services, with scope and the responsible business confirmed before an instruction.",
   },
   {
     title: "Fully insured",

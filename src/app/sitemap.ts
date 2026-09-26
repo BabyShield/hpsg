@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 
 import { areas } from "@/data/areas";
+import { otherServiceGroups, otherServicesRevised } from "@/data/other-services";
 import { guides } from "@/data/guides";
 import { areaPhotos, servicePhotos } from "@/data/photos";
 import { publishedProjects } from "@/data/projects";
@@ -79,6 +80,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     home,
     ...staticPages,
+    ...["/other-services/", ...otherServiceGroups.map((group) => `/other-services/${group.slug}/`)].map((path) => ({url:absoluteUrl(path),lastModified:new Date(otherServicesRevised),changeFrequency:"monthly" as const,priority:0.5})),
     ...servicePages,
     ...areaPages,
     ...comboPages,

@@ -245,7 +245,7 @@ export const guides: Guide[] = [
         heading: "Whether services move",
         paragraphs: [
           "Replacing a kitchen or bathroom on existing service positions is materially different from relocating them. Moving a waste means finding fall; moving a sink or a WC any distance in a period building often means lifting a floor. Extract is the other half of the same question: a short duct through a wall that will accept one is straightforward, and a route that has to cross a flat or land on a controlled elevation is not.",
-          "This is also where scope boundaries matter. Forming or widening a structural opening, or joining two rooms, is not part of a kitchen or bathroom instruction on this site; that work sits with Hampstead Renovations.",
+          "This is also where scope boundaries matter. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction.",
         ],
       },
       {
@@ -324,7 +324,7 @@ export const guides: Guide[] = [
         paragraphs: [
           "An island. A return of this width cannot serve one: the floor will not carry services to the middle of the room without being lifted, and the circulation space disappears. Where a client has seen one in a neighbouring flat, it is almost always because that flat's side return was filled in — a structural job, and not this service.",
           "A kitchen that ignores the stack. Waste leaves these terraces at the back, and a layout that puts the sink at the far end of the flat needs fall it will not find. We would rather rework the return properly than push services the length of a property.",
-          "Opening the return into the room beside it is the usual temptation, and it is structural work that sits with Hampstead Renovations rather than with a kitchen instruction.",
+          "Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction.",
         ],
       },
       {
@@ -697,7 +697,7 @@ export const guides: Guide[] = [
       {
         heading: "Where this service stops",
         paragraphs: [
-          "Light refurbishment covers kitchens, bathrooms, decoration, flooring and joinery within the existing rooms. It does not cover forming or widening structural openings, dropping a floor, or adding a storey. That work sits with Hampstead Renovations, and we would rather name the boundary once, clearly, than blur it.",
+          "Light refurbishment covers kitchens, bathrooms, decoration, flooring and joinery within the existing rooms. It does not cover forming or widening structural openings, dropping a floor, or adding a storey. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction.",
           "The practical consequence is that the plan you start with is the plan you finish with. Where a brief genuinely needs walls to move, it is a different kind of project and should be scoped as one from the beginning.",
         ],
       },

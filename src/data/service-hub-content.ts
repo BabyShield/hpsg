@@ -58,7 +58,7 @@ export const serviceHubContent: Record<ServiceSlug, ServiceHubContent> = {
       {
         title: "The envelope",
         text:
-          "The kitchen stays in the room that exists. We do not form structural openings or kitchen-diners that remove a wall. If the brief is to change the carcass of the house, that sits with Hampstead Renovations, not on this site.",
+          "The kitchen stays in the room that exists. We do not form structural openings or kitchen-diners that remove a wall. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction.",
       },
       {
         title: "Extract",
@@ -159,7 +159,7 @@ export const serviceHubContent: Record<ServiceSlug, ServiceHubContent> = {
       "Leasehold flats usually need a licence to alter before cabinets come out. We can prepare drawings and a method statement. Consent is granted by the freeholder or managing agent, not by us. Lead-in varies by building [VERIFY the building's process].",
       "Conservation-area and listed buildings in Hampstead, Highgate, Primrose Hill and the Suburb cannot always take a visible extract grille on the principal front. We plan the route at survey and will not punch a hole as a convenience. [VERIFY on listed fabric.]",
       "Gas work is by a Gas Safe registered engineer. Electrical circuits added or altered are notified where the regulations require it. Building-control is identified at proposal stage, not after strip-out.",
-      "We do not form structural openings or kitchen-diners that remove a wall. If the brief is to change the carcass of the house, that sits with Hampstead Renovations.",
+      "We do not form structural openings or kitchen-diners that remove a wall. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction.",
     ],
     specification: [
       "Cabinetry is scribed to walls that have moved and to original chimney breasts. Worktops are specified in generic material categories — quartz or solid timber are typical — rather than as a branded partnership. Appliances are client-supplied or specified without exclusive manufacturer claims.",
@@ -436,7 +436,7 @@ export const serviceHubContent: Record<ServiceSlug, ServiceHubContent> = {
     intro: [
       "Light refurbishment in North West London is the coordinated refresh of a flat or house: kitchen and bathroom replacements, decoration, flooring, joinery, and the plumbing and electrical work those rooms need. It is one programme and one account. It is not structural alteration, not an extension, and not a loft conversion.",
       "In Hampstead, West Hampstead, St John's Wood and Maida Vale that usually means a mansion-block apartment or a converted house where the plan stays as it is and the rooms are brought up to a single standard. The kitchen and bathroom are replaced, floors are refinished or renewed, joinery is repaired, and the whole is decorated. Occupied or empty, the sequence is the same: wet and dusty trades first, finishes last.",
-      "Hampstead Property Services Group takes that instruction from a Finchley Road office, with the four trades on this site held in one programme. If you need walls moved, a loft converted or an extension, that is a different company in the same family: Hampstead Renovations. We will say so at the first visit rather than stretch the word refurbishment to cover work we do not deliver.",
+      "Hampstead Property Services Group takes that instruction from a Finchley Road office, with the four trades on this site held in one programme. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction. We will say so at the first visit rather than stretch the word refurbishment to cover work we do not deliver.",
       "The value of the instruction is coordination. A kitchen that is decorated before the plumber has finished, or a floor laid before the bathroom is watertight, is how programmes slip and finishes get damaged. We write the order down. A typical conversion flat — rear-return kitchen, half-landing bathroom, decoration and floors, with common-parts protection — is core work. So is a mansion-flat apartment where the lease allows internal replacement but not alteration of the carcass.",
       "We visit before we write a proposal. Unknowns in this housing stock — hidden damp, failed subfloors, redundant wiring — are listed as provisional items, not buried in a lump sum. When we open a wall and find something, we stop and write a variation before continuing.",
     ],
@@ -452,7 +452,7 @@ export const serviceHubContent: Record<ServiceSlug, ServiceHubContent> = {
       {
         title: "The envelope",
         text:
-          "The plan stays as it is. We do not form structural openings, loft conversions, extensions or basements. If that is the brief, a single introduction to Hampstead Renovations. Light refurbishment is the rooms that already exist.",
+          "The plan stays as it is. We do not form structural openings, loft conversions, extensions or basements. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction. Light refurbishment is the rooms that already exist.",
       },
       {
         title: "Sequence",
@@ -556,7 +556,7 @@ export const serviceHubContent: Record<ServiceSlug, ServiceHubContent> = {
       },
     ],
     permissions: [
-      "Light refurbishment does not include structural openings, loft conversions, extensions or basement works. For those, a single introduction to Hampstead Renovations. We will say so at the first visit rather than stretch the word to cover work we do not deliver.",
+      "Light refurbishment does not include structural openings, loft conversions, extensions or basement works. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction. We will say so at the first visit rather than stretch the word to cover work we do not deliver.",
       "Leasehold flats usually need a licence to alter for kitchen or bathroom replacement. We can prepare drawings and a method statement. Consent is granted by the freeholder or agent, not by us. Building-control for the non-structural work that needs it is started in the lead-in.",
       "Unknowns — hidden damp, failed subfloors, redundant wiring — are listed as provisional items. When we open a wall and find something, we stop and write a variation. They are not used as a blank cheque.",
       "Occupied homes and mansion-block hours are written into the programme. Common-parts protection is part of the method, not a courtesy.",
@@ -564,7 +564,7 @@ export const serviceHubContent: Record<ServiceSlug, ServiceHubContent> = {
     specification: [
       "Decoration, flooring and joinery are specified as systems: prep standard, product type, board finish, ironmongery. Kitchens and bathrooms follow the specifications on those service pages. Rewiring or replumbing is of the rooms in scope, coordinated with the existing installation, not a speculative whole-house strip unless that is the written brief.",
       "The sequence is written: wet rooms and first fix, then floors and joinery, decoration last. A single snag and a single account close the programme, not room by room in isolation.",
-      "Explicitly excluded: structural openings, loft conversions, extensions, basement works, and design-and-build of a new envelope. For those, a single introduction to Hampstead Renovations.",
+      "Explicitly excluded: structural openings, loft conversions, extensions, basement works, and design-and-build of a new envelope. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction.",
     ],
     areasIntro:
       "Local light-refurbishment pages for Hampstead, West Hampstead, Belsize Park, Kentish Town, Kilburn, St John's Wood, Maida Vale, Swiss Cottage, Primrose Hill, Highgate and the wider North West London list sit below. Each page is the housing stock of that neighbourhood, not a renamed copy of this one.",

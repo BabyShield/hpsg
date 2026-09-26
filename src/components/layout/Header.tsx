@@ -70,7 +70,7 @@ export function Header() {
         <Wordmark compact />
         <div className="flex items-center gap-8">
           <nav className="hidden lg:block" aria-label="Primary">
-            <ul className="flex items-center gap-x-7 text-[0.9rem] font-medium text-navy">
+            <ul className="flex items-center gap-x-4 text-[0.82rem] font-medium text-navy">
               {services.map((service) => (
                 <li key={service.slug}>
                   <Link href={`/${service.slug}/`} className="nav-link">
@@ -78,6 +78,7 @@ export function Header() {
                   </Link>
                 </li>
               ))}
+              <li><Link href="/other-services/" className="nav-link">Other services</Link></li>
               <li className="relative" ref={areasRef}>
                 <button
                   type="button"

@@ -14,7 +14,7 @@ export const serviceHubFacts: Record<ServiceSlug, string[]> = {
     "Hampstead Garden Suburb Conservation Area was designated in 1967; the Trust runs a separate Scheme of Management, and an extract grille is not a casual extra.",
     "Hampstead Underground, opened in 1907, is 58.5 metres below street level — the deepest on the network — but kitchen deliveries still use Heath Street and the High Street at grade.",
     "Gas work is by a Gas Safe registered engineer. New electrical circuits are notified where the regulations require it.",
-    "Forming a structural opening or a kitchen-diner that removes a wall is not kitchen renovation on this site; that sits with Hampstead Renovations.",
+    "Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction.",
   ],
   "bathroom-renovation": [
     "Hampstead Property Services Group Limited (company no. 17404557) renovates bathrooms from Unit 3 Palace Court, 250 Finchley Road, London NW3 6DN.",
@@ -43,7 +43,7 @@ export const serviceHubFacts: Record<ServiceSlug, string[]> = {
   "light-refurbishment": [
     "Hampstead Property Services Group Limited (company no. 17404557) runs light-refurbishment programmes from Unit 3 Palace Court, 250 Finchley Road, London NW3 6DN.",
     "Light refurbishment on this site is kitchen, bathroom, decoration, flooring and joinery in the rooms that exist — one programme and one account.",
-    "Structural openings, loft conversions, extensions and basement works sit with Hampstead Renovations (hampsteadrenovations.co.uk), not on this site.",
+    "Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction.",
     "A typical West Hampstead conversion programme is a rear-return kitchen, a half-landing bathroom, decoration and floors, with the shared stair protected.",
     "A typical St John's Wood or Maida Vale programme is a mansion apartment as leased, written through a licence to alter before strip-out.",
     "Hampstead Heath is managed by the City of London Corporation, not by Camden; Heath-facing extract is a different consent question from an interior fit-out.",

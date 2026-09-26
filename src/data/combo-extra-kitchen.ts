@@ -213,7 +213,7 @@ export const kitchenExtra: ComboExtraMap = {
       },
       {
         q: "Is it worth moving the kitchen to the front room instead?",
-        a: "Almost never as a kitchen instruction. Moving the room means taking waste and supply across the flat, cutting a floor that sits over another household, and running extract to what may be the principal elevation. That is a different class of project. If it is genuinely what you want, we will say at the visit that it sits with Hampstead Renovations rather than stretch this service to cover it.",
+        a: "Almost never as a kitchen instruction. Moving the room means taking waste and supply across the flat, cutting a floor that sits over another household, and running extract to what may be the principal elevation. That is a different class of project. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction.",
       },
       {
         q: "How do you keep dust out of the rest of a small conversion flat?",

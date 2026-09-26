@@ -81,6 +81,7 @@ export function MobileNav() {
               </Link>
             </li>
           ))}
+          <li><Link href="/other-services/" className="text-lg text-navy" onClick={close}>Other services</Link></li>
           <li className="pt-6">
             <p className="kicker">Areas</p>
             <ul className="mt-4 flex flex-col gap-2.5 text-base text-navy">

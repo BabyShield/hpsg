@@ -157,7 +157,7 @@ export function areaSearchFaqs(area: Area): Faq[] {
     },
     {
       q: `Which services do you carry out in ${area.name}?`,
-      a: `Kitchen renovation, bathroom renovation, painting and decorating, and light refurbishment. ${area.name} ${area.postcode} is ${hook}. Structural openings, lofts and extensions sit with Hampstead Renovations.`,
+      a: `Kitchen renovation, bathroom renovation, painting and decorating, and light refurbishment. ${area.name} ${area.postcode} is ${hook}. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction.`,
     },
     {
       q: `Can I stay in the property during work in ${area.name}?`,

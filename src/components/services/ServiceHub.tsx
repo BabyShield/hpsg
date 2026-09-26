@@ -145,12 +145,12 @@ export function ServiceHub({ service }: { service: Service }) {
                 <p>
                   For design and build, extensions, loft conversions or structural
                   openings, see{" "}
-                  <a
-                    href="https://hampsteadrenovations.co.uk"
+                  <Link
+                    href="/other-services/building-projects/"
                     className="quiet-link text-navy"
                   >
-                    Hampstead Renovations
-                  </a>
+                    Other services
+                  </Link>
                   .
                 </p>
               ) : null}

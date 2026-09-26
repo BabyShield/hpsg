@@ -44,7 +44,8 @@ const BANNED = [
   [/\bRICS\b|\bMRICS\b/i, "professional designation (RICS)"],
   [/\bchartered\b/i, "professional designation (chartered)"],
   [/\bsurveyor(s)?\b/i, "professional designation (surveyor)"],
-  [/\btestimonial/i, "invented social proof"],
+  [/\btestimonials?\s+(?:from|by|say)/i, "unsupported testimonial attribution"],
+  [/\bFMB\b|£\s*5\s*(?:m|million)\b|\b10[- ]year.{0,35}guarantee/i, "removed accreditation or guarantee claim"],
   [/\b\d+\s*(\+\s*)?years (of )?(experience|in business|trading)/i, "years-in-business claim"],
   [/\b(over|more than)\s+\d[\d,]*\s+(projects|homes|kitchens|bathrooms|clients)/i, "project count"],
   [/\baward[- ]winning\b/i, "award claim"],
@@ -75,7 +76,7 @@ const OUT_OF_SCOPE = /\b(loft conversion|house extension)\w*/gi;
  * must still be caught is an offer: the service named with neither.
  */
 const EXCLUSION_NEAR =
-  /\b(not|never|no|nor|exclu\w*|outside|beyond|sits with|handled by|refer\w*|separate|instead of|rather than|Hampstead Renovations)\b/i;
+  /\b(not|never|no|nor|exclu\w*|outside|beyond|sits with|handled by|refer\w*|separate|instead of|rather than|Hampstead Renovations|Other services)\b/i;
 const DESCRIPTIVE_NEAR =
   /\b(already|existing|previous\w*|since|earlier|gained|added|been|has|have|inherited|historic\w*)\b/i;
 
@@ -112,7 +113,9 @@ for (const file of files) {
   }
   const price = text.match(PRICE);
   if (price) report(file, "price figure in copy", price[0]);
-  for (const hit of outOfScopeOffers(text)) {
+  // Contact options may name every approved service; inspect its prose separately.
+  const scopeText = rel(file) === "contact" ? visibleText(html.replace(/<select\b[\s\S]*?<\/select>/gi, " ")) : text;
+  for (const hit of (rel(file).startsWith("other-services") ? [] : outOfScopeOffers(scopeText))) {
     report(file, "out-of-scope service named without an exclusion nearby", hit);
   }
 }

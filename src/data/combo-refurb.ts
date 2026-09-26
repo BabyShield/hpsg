@@ -17,7 +17,7 @@ export const refurbCombos: Record<string, ComboContent> = {
       "Whole-flat work is usually cleaner if the property is empty. A single wet room can often be done around you. Where a freeholder or managing agent requires a licence to alter, we can prepare drawings and a method statement; consent is theirs, not ours. [VERIFY whether the tenure needs a licence for the rooms in scope.] One programme, one point of contact.",
     ],
     specification: [
-      "The specification is written after a measured survey of the rooms, services, extract routes and fabric as found. Wet trades — kitchen and bathroom — run first; flooring and decoration close the job. We flag listed-building or conservation-area items before they are priced in detail. Changing the carcass of the building, forming a structural opening, an extension or a loft is not this service; that work sits with Hampstead Renovations (https://hampsteadrenovations.co.uk).",
+      "The specification is written after a measured survey of the rooms, services, extract routes and fabric as found. Wet trades — kitchen and bathroom — run first; flooring and decoration close the job. We flag listed-building or conservation-area items before they are priced in detail. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction.",
       "Strip-out, first- and second-fix plumbing and electrics in the rooms in scope, kitchen and bathroom fit-out, flooring in generic categories, joinery repairs, decoration to a written prep standard, waste removal and a snagging pass across the whole brief. We do not quote from photographs.",
     ],
     faqs: [
@@ -367,7 +367,7 @@ export const refurbCombos: Record<string, ComboContent> = {
       },
       {
         q: "Can a Highgate slope villa take a whole-interior programme without a structural opening?",
-        a: "Yes. Kitchen, bathrooms, decoration and floors inside the rooms that exist is ordinary Highgate work. A new storey, a loft or a wall taken out is not this service; that sits with Hampstead Renovations.",
+        a: "Yes. Kitchen, bathrooms, decoration and floors inside the rooms that exist is ordinary Highgate work. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction.",
       },
     ],
     metaDescription:

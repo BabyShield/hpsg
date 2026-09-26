@@ -22,7 +22,7 @@ export const aboutHousing = [
   },
   {
     title: "Family houses",
-    text: "Highgate, Primrose Hill, Muswell Hill, Golders Green and Hampstead Garden Suburb: a kitchen, a bathroom or a storey brought to one standard. Listed fabric and Trust rules are checked where the envelope is involved. Structural openings are not this company.",
+    text: "Highgate, Primrose Hill, Muswell Hill, Golders Green and Hampstead Garden Suburb: a kitchen, a bathroom or a storey brought to one standard. Listed fabric and Trust rules are checked where the envelope is involved. Structural changes are covered separately in Other services.",
   },
 ];
 
@@ -52,7 +52,7 @@ export const aboutFaqs: Faq[] = [
   },
   {
     q: "What work do you take on?",
-    a: "Kitchens, bathrooms, painting and decorating, and light refurbishment of rooms that already exist. We do not form structural openings, loft conversions or extensions. That sits with Hampstead Renovations.",
+    a: "Kitchens, bathrooms, painting and decorating, and light refurbishment of rooms that already exist. We do not form structural openings, loft conversions or extensions. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction.",
   },
   {
     q: "Are you insured?",

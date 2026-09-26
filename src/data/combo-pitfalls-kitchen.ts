@@ -249,7 +249,7 @@ export const kitchenPitfalls: ComboPitfallsMap = {
     moreFaqs: [
       {
         q: "Is there any way to make a cottage kitchen feel bigger?",
-        a: "Several, none of them structural. Keeping full-height units off the window wall, specifying a shallower worktop on one run where the space is tight, choosing a wall treatment above base units rather than a bank of cupboards, and getting the door swing right. Those decisions cost nothing extra at the drawing stage and make a genuine difference. Removing a wall is a different service and sits with Hampstead Renovations.",
+        a: "Several, none of them structural. Keeping full-height units off the window wall, specifying a shallower worktop on one run where the space is tight, choosing a wall treatment above base units rather than a bank of cupboards, and getting the door swing right. Those decisions cost nothing extra at the drawing stage and make a genuine difference. Work outside this main service is covered in our Other services catalogue; the scope and responsible business are confirmed before an instruction.",
       },
       {
         q: "Can the original joinery near the kitchen be kept?",
