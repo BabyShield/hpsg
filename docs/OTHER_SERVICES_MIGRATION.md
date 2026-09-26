@@ -2,7 +2,8 @@
 
 Follow-up work is recorded in [IMPROVEMENTS_2026-09-26.md](IMPROVEMENTS_2026-09-26.md).
 That report supersedes the email authentication findings below: Google has now
-been added to SPF and HPSG is verified in Resend. Website changes remain local.
+been added to SPF and HPSG is verified in Resend. The release record is in
+[OTHER_SERVICES_RELEASE.md](OTHER_SERVICES_RELEASE.md).
 
 Owner instructions, 26 September 2026: remove the old claims; use hpsg.co.uk as
 the main website; retain its four main services; group this system's wider
@@ -74,8 +75,9 @@ Reconcile SPF with actual sending providers while preserving required senders.
 - The Snyk MCP scan required by the legacy repository instruction was not
   available in this session. No dependency was added.
 
-No production assets or Worker were deployed. The old domain remains withdrawn.
-The prepared HPSG changes must be published only as an intentional later release.
+At the time of the initial migration checks, no production assets or Worker
+had been deployed. The owner subsequently requested connecting the catalogue
+on HPSG with its navigation entry in the footer. See the release record above.
 
 References used for policy and mail review:
 

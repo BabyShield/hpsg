@@ -68,9 +68,12 @@ sent. Verification proves domain authentication, not mailbox delivery.
 - Live availability checks passed for old apex, www, lead endpoint and sitemap
   (410/noindex) and the current HPSG homepage (200).
 
-All code remains local. No website or Worker was published, and no D1 database,
+At the time of these checks all code remained local. No website or Worker had
+been published, and no D1 database,
 Turnstile widget, production secrets or recurring health alert was provisioned.
 Direct submission and click measurement therefore remain inactive. HPSG's
-current live website is unchanged. A real inbox delivery test remains outstanding.
+live website was unchanged. A real inbox delivery test remains outstanding.
+The subsequent website release is recorded in
+[OTHER_SERVICES_RELEASE.md](OTHER_SERVICES_RELEASE.md).
 
 The unavailable Snyk MCP scan was not run. No dependency was added or upgraded.

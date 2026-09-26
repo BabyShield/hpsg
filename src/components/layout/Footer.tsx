@@ -125,15 +125,9 @@ export function Footer() {
       <div className="border-t border-bone/10">
         <Container className="flex flex-col gap-3 py-7 text-xs tracking-wide text-bone/70 sm:flex-row sm:items-center sm:justify-between">
           <p>{site.footerLegal}</p>
-          <p>
-            <Link href="/other-services/">HPSG Other services</Link>
-            {site.sisterBrands[1]?.url ? (
-              <>
-                {" · "}
-                <a href={site.sisterBrands[1].url}>Hampstead On Demand</a>
-              </>
-            ) : null}
-          </p>
+          {site.sisterBrands[1]?.url ? (
+            <p><a href={site.sisterBrands[1].url}>Hampstead On Demand</a></p>
+          ) : null}
         </Container>
       </div>
     </footer>

@@ -35,7 +35,7 @@ Building hpsg.co.uk for Hampstead Property Services Group Limited.
 
 ## Positioning
 
-The four main services remain light refurbishment, kitchen renovation, bathroom renovation, and painting & decorating. On 26 September 2026 the owner explicitly retained the wider ai-leads-nw catalogue under /other-services/ on hpsg.co.uk. Keep those services grouped there; do not create keyword or location permutations. Do not describe Other services as a separate legal company. The written proposal must identify the business responsible for a particular job. All evidence and claims rules above still apply.
+The four main services remain light refurbishment, kitchen renovation, bathroom renovation, and painting & decorating. On 26 September 2026 the owner explicitly retained the wider ai-leads-nw catalogue under /other-services/ on hpsg.co.uk, with its sitewide navigation link in the footer. Keep it out of the main desktop and mobile menus. Keep those services grouped there; do not create keyword or location permutations. Do not describe Other services as a separate legal company. The written proposal must identify the business responsible for a particular job. All evidence and claims rules above still apply.
 
 ## Brand
 
