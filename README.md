@@ -1,5 +1,12 @@
 # Hampstead Property Services Group — hpsg.co.uk
 
+Current preparation, 26 September 2026: the Other services and enquiry improvements
+are on the local `codex/other-services-20260926` branch and are not published.
+See [the enquiry service notes](docs/ENQUIRY_SERVICE.md) and
+[the migration report](docs/OTHER_SERVICES_MIGRATION.md). The live apex currently
+uses Vercel; the older Cloudflare launch notes below describe a separate preview
+and must not be treated as the current production routing instructions.
+
 Launch QA: [docs/launch-qa.md](docs/launch-qa.md).
 
 Static Next.js site for Hampstead Property Services Group Limited, deployed to Cloudflare Workers with the OpenNext adapter.

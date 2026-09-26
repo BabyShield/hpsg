@@ -636,6 +636,8 @@ export function ComboPage({
         </section>
       </article>
       <CtaBand
+        service={combo.service.slug}
+        area={combo.area.slug}
         title={`Request a quote for ${combo.service.navLabel.toLowerCase()} in ${combo.area.name}`}
         text="Tell us the property and the rooms in scope. We visit before we write a proposal."
         photo={comboPhotos.area}

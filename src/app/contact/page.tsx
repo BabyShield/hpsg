@@ -47,7 +47,8 @@ export default function ContactPage() {
           <h1 className="font-display text-5xl font-light sm:text-6xl">Contact</h1>
           <p className="lede mt-8 max-w-measure text-xl text-grey-600">
             Request a quote for kitchen renovation, bathroom renovation, painting
-            or light refurbishment in Hampstead and North West London.
+            or light refurbishment in Hampstead and North West London. For wider
+            work, choose the relevant Other service in the enquiry form.
           </p>
           <div className="mt-6 max-w-measure space-y-5 text-base leading-relaxed text-grey-700">
             <p>
@@ -106,6 +107,7 @@ export default function ContactPage() {
           </p>
         </div>
 
+        <EmailEnquiryForm />
         <div className="space-y-14 lg:col-span-12">
           <section>
             <h2 className="font-display text-3xl font-normal sm:text-4xl">
@@ -190,7 +192,6 @@ export default function ContactPage() {
             </div>
           </section>
         </div>
-        <EmailEnquiryForm />
       </Container>
     </>
   );

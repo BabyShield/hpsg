@@ -5,6 +5,7 @@ import { Container } from "@/components/ui/Container";
 import { getOtherServiceGroup, otherServiceGroups } from "@/data/other-services";
 import { site } from "@/data/site";
 import { pageMetadata } from "@/lib/metadata";
+import { enquiryHref, whatsappHref } from "@/lib/enquiry-links";
 
 export const dynamicParams = false;
 export function generateStaticParams() {
@@ -30,6 +31,10 @@ export default async function OtherServiceCategory({ params }: Props) {
           <section id={service.slug} key={service.slug} className="scroll-mt-32 border-t border-grey-200 pt-7">
             <h2 className="font-display text-2xl font-normal">{service.name}</h2>
             <p className="mt-4 leading-relaxed text-grey-700">{service.detail}</p>
+            <div className="mt-5 flex flex-wrap gap-x-6 gap-y-3 text-sm">
+              <Link className="quiet-link" href={enquiryHref(service.slug)} aria-label={`Enquire about ${service.name.toLowerCase()}`}>Enquire about this service</Link>
+              <a className="quiet-link" href={whatsappHref(service.name)} aria-label={`WhatsApp about ${service.name.toLowerCase()}`}>Ask on WhatsApp</a>
+            </div>
           </section>
         ))}
       </div>

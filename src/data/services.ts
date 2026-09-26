@@ -100,7 +100,7 @@ export const services: Service[] = [
       },
       {
         q: "Will a conservation area stop a new extract?",
-        a: "It can restrict where the grille sits. We will not assume a hole in the principal elevation. The route is planned at survey, particularly in Hampstead, Highgate, Primrose Hill and the Suburb.",
+        a: "The property's conservation and listed status need to be checked before an external extract route is proposed. Include any existing consent or managing-agent requirements in your enquiry.",
       },
       {
         q: "Do units go in the lift in a mansion block?",

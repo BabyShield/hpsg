@@ -460,6 +460,7 @@ export function ServiceHub({ service }: { service: Service }) {
         </section>
       </article>
       <CtaBand
+        service={service.slug}
         title={`Request a quote for ${service.navLabel.toLowerCase()} in North West London`}
         text={
           hrReferral

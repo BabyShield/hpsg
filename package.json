@@ -5,7 +5,11 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "postbuild": "node scripts/check-content.mjs && node scripts/check-other-services.mjs && node scripts/check-links.mjs",
+    "postbuild": "node scripts/check-content.mjs && node scripts/check-other-services.mjs && node scripts/check-draft-publication.mjs && node scripts/check-links.mjs",
+    "test:enquiries": "node --test tests/enquiries.test.mjs",
+    "enquiries:dev": "wrangler dev --config cloudflare/enquiries/wrangler.jsonc",
+    "enquiries:check": "wrangler deploy --dry-run --config cloudflare/enquiries/wrangler.jsonc",
+    "check:withdrawal": "node scripts/check-live-withdrawal.mjs",
     "lint": "eslint",
     "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
     "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",

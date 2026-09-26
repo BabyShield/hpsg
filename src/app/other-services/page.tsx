@@ -4,6 +4,7 @@ import { Container } from "@/components/ui/Container";
 import { otherServiceGroups } from "@/data/other-services";
 import { services } from "@/data/services";
 import { pageMetadata } from "@/lib/metadata";
+import { ServiceFinder } from "@/components/services/ServiceFinder";
 
 export const metadata = pageMetadata({
   title: "Other property services | HPSG",
@@ -28,6 +29,7 @@ export default function OtherServicesPage() {
           {services.map((service) => <li key={service.slug}><Link className="quiet-link text-navy" href={`/${service.slug}/`}>{service.name}</Link></li>)}
         </ul>
       </section>
+      <ServiceFinder groups={otherServiceGroups} />
       <div className="mt-16 grid gap-x-16 gap-y-12 md:grid-cols-2">
         {otherServiceGroups.map((group, index) => (
           <section key={group.slug} className="border-t border-grey-200 pt-8">

@@ -1,5 +1,9 @@
 # HPSG Other services
 
+Follow-up work is recorded in [IMPROVEMENTS_2026-09-26.md](IMPROVEMENTS_2026-09-26.md).
+That report supersedes the email authentication findings below: Google has now
+been added to SPF and HPSG is verified in Resend. Website changes remain local.
+
 Owner instructions, 26 September 2026: remove the old claims; use hpsg.co.uk as
 the main website; retain its four main services; group this system's wider
 catalogue under Other services; consolidate repetitive pages; check contacts;

@@ -26,7 +26,7 @@ export const serviceHubFacts: Record<ServiceSlug, string[]> = {
     "A Victorian conversion rarely has the floor build-up of a new-build slab. Level-access wet rooms are specified only where the joists will take the fall.",
     "Lord's Cricket Ground affects access on St John's Wood streets on match days; bathroom crates often go up the stair, not in the lift.",
     "Leasehold flats usually need a licence to alter if wastes move or extract is cut through a common void. Consent is the freeholder's, not ours.",
-    "Crouch End Conservation Area was designated by Haringey on 25 October 1974. Purpose-built mansion-block bathrooms are the exception there, not the rule.",
+    "Crouch End Conservation Area was designated by Haringey on 25 October 1974. Purpose-built mansion-block bathrooms are the exception there, not the rule. [VERIFY the designation source and housing claim.]",
   ],
   "painting-decorating": [
     "Hampstead Property Services Group Limited (company no. 17404557) decorates period interiors from Unit 3 Palace Court, 250 Finchley Road, London NW3 6DN.",
@@ -145,7 +145,7 @@ const kitchenArea: Record<string, string[]> = {
   ],
   "crouch-end": [
     "Crouch End kitchens are typically rear rooms in converted Victorian and Edwardian houses, not mansion-block galleys.",
-    "Crouch End Conservation Area was designated by Haringey on 25 October 1974.",
+    "Crouch End Conservation Area was designated by Haringey on 25 October 1974. [VERIFY the designation source.]",
     "The clock tower marks the Broadway; a skip on the Broadway is not the working assumption.",
     "Original mouldings and tiled halls outside the kitchen envelope are protected, not treated as a site path.",
     "Hornsey Town Hall sits on the Broadway civic cluster; the kitchen is still a rear-room fit-out on a residential side street.",

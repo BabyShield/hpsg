@@ -93,6 +93,7 @@ export function Footer() {
             <li>
               <Link href="/privacy/">Privacy</Link>
             </li>
+            <li><Link href="/privacy/#statistics">Contact click preferences</Link></li>
             <li>
               <Link href="/terms/">Website terms</Link>
             </li>
