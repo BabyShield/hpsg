@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import fs from "node:fs";
 import path from "node:path";
 import ts from "typescript";
+import { normalise, visibleText } from "./lib/built-text.mjs";
 
 const source = fs.readFileSync("src/lib/public-copy.ts", "utf8");
 const compiled = ts.transpileModule(source, { compilerOptions: { module: ts.ModuleKind.ES2022 } }).outputText;
@@ -28,7 +29,6 @@ for (const file of fs.readdirSync("src/data").filter((name) => name.endsWith(".t
 fs.mkdirSync("docs", { recursive: true });
 fs.writeFileSync("docs/content-verification-queue.json", JSON.stringify({ policy: "Withheld until checked against a source and approved. Removing a marker alone is not verification.", statements: drafts }, null, 2) + "\n");
 
-const normalise = (value) => value.replace(/&#x([0-9a-f]+);/gi, (_, code) => String.fromCodePoint(parseInt(code, 16))).replace(/&#(\d+);/g, (_, code) => String.fromCodePoint(Number(code))).replace(/&quot;/g, '"').replace(/&apos;/g, "'").replace(/&amp;/g, "&").replace(/&nbsp;/g, " ").replace(/\s+/g, " ").trim();
 const claims = [...new Set(drafts.map((item) => normalise(item.text.replace(/\[(?:VERIFY|TBC|REVIEW)[^\]]*\]/gi, ""))).filter((text) => text.length >= 60))];
 const files = [];
 function walk(directory) {
@@ -42,8 +42,8 @@ walk(".next/server/app");
 const violations = [];
 for (const filename of files) {
   const html = fs.readFileSync(filename, "utf8");
-  const structured = [...html.matchAll(/<script[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)].map((match) => match[1]).join(" ");
-  const visible = normalise(html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/g, " ").replace(/<style\b[^>]*>[\s\S]*?<\/style>/g, " ").replace(/<[^>]+>/g, " "));
+  const structured = [...html.matchAll(/<script\b[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script[^>]*>/gi)].map((match) => match[1]).join(" ");
+  const visible = visibleText(html);
   const structuredText = normalise(structured);
   for (const claim of claims) if (visible.includes(claim) || structuredText.includes(claim)) violations.push({ filename, claim });
 }

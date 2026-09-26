@@ -45,6 +45,7 @@ assert.ok(email.searchParams.get("body").includes(hostile.message));
 assert.ok(email.searchParams.get("body").includes(hostile.service));
 const form=fs.readFileSync(builtPath('/contact/'),'utf8');
 assert.ok(form.includes('Prepare email'));
-assert.ok(form.includes('https://wa.me/447459345456'));
+const contactLinks = [...form.matchAll(/href="([^"]+)"/g)].map((match) => new URL(match[1], "https://hpsg.co.uk"));
+assert.ok(contactLinks.some((url) => url.origin === "https://wa.me" && url.pathname === "/447459345456"));
 assert.ok(form.includes('Nothing is submitted to HPSG by this page'));
 console.log(JSON.stringify({routes:routes.length,services:allNames.size,internalLinks:checkedLinks,emailEncoding:"passed",networkRequests:0}));

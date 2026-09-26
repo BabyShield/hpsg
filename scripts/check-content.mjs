@@ -13,6 +13,7 @@
  */
 import fs from "node:fs";
 import path from "node:path";
+import { visibleText } from "./lib/built-text.mjs";
 
 const ROOT = ".next/server/app";
 const files = [];
@@ -25,20 +26,6 @@ const files = [];
 })(ROOT);
 
 const rel = (f) => f.split(path.sep).join("/").replace(`${ROOT}/`, "").replace(/\.html$/, "");
-
-/** Visible text only: strip script/style, then tags. */
-function visibleText(html) {
-  return html
-    .replace(/<script[\s\S]*?<\/script>/gi, " ")
-    .replace(/<style[\s\S]*?<\/style>/gi, " ")
-    .replace(/<[^>]+>/g, " ")
-    .replace(/&amp;/g, "&")
-    .replace(/&#x27;|&#39;/g, "'")
-    .replace(/&quot;/g, '"')
-    .replace(/&nbsp;/g, " ")
-    .replace(/\s+/g, " ")
-    .trim();
-}
 
 const BANNED = [
   [/\bRICS\b|\bMRICS\b/i, "professional designation (RICS)"],

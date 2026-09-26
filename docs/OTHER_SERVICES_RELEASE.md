@@ -28,5 +28,8 @@ configuration described in [ENQUIRY_SERVICE.md](ENQUIRY_SERVICE.md).
 - Publication checks passed: 87 services, 12 key routes, 165 catalogue/policy
   links, no leaked marked claims and no orphaned pages across 121 built pages.
 - The primary-menu spacing is restored to match the existing HPSG website.
+- The release checks also cover single-pass HTML entity decoding, mixed-case
+  script/style extraction and exact provider/link URL matching. All 14 tests
+  passed with `node --test tests/built-text.test.mjs tests/enquiries.test.mjs`.
 - Hosted deployment status and live verification are recorded in
   [pull request 1](https://github.com/BabyShield/hpsg/pull/1).

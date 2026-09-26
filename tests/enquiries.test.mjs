@@ -24,7 +24,8 @@ const request = (body, origin = "https://hpsg.co.uk", path = "/enquiries") => ne
 function provider(calls, options = {}) {
   return async (url, init) => {
     calls.push({ url, init });
-    if (url.includes("siteverify")) return Response.json({ success: !options.badToken, hostname: options.hostname || "hpsg.co.uk", action: options.action || "enquiry" });
+    if (new URL(url).href === "https://challenges.cloudflare.com/turnstile/v0/siteverify") return Response.json({ success: !options.badToken, hostname: options.hostname || "hpsg.co.uk", action: options.action || "enquiry" });
+    assert.equal(new URL(url).href, "https://api.resend.com/emails");
     if (options.mailFailure) return Response.json({ message: "synthetic failure" }, { status: 503 });
     return Response.json({ id: "synthetic-provider-id" });
   };
@@ -59,7 +60,7 @@ test("enquiry is durable before receipt; notifications use only the fixed office
   assert.equal((await response.json()).reference, data.submissionId);
   assert.equal(sqlite.prepare("SELECT COUNT(*) AS n FROM enquiries").get().n, 1);
   await flush();
-  const sent = calls.find((call) => call.url.includes("api.resend.com"));
+  const sent = calls.find((call) => new URL(call.url).href === "https://api.resend.com/emails");
   const mail = JSON.parse(sent.init.body);
   assert.deepEqual(mail.to, ["office@hpsg.co.uk"]);
   assert.equal(mail.reply_to, data.email);
@@ -74,7 +75,7 @@ test("retrying the same submission does not duplicate the lead or email", async 
   assert.equal((await handle(request({ ...data, message: "Changed details with the same id." }), env, ctx, transport)).status, 409);
   await flush();
   assert.equal(sqlite.prepare("SELECT COUNT(*) AS n FROM enquiries").get().n, 1);
-  assert.equal(calls.filter((call) => call.url.includes("api.resend.com")).length, 1);
+  assert.equal(calls.filter((call) => new URL(call.url).href === "https://api.resend.com/emails").length, 1);
 });
 
 test("provider failure retains the enquiry and an idempotent retry can recover it", async () => {
