@@ -38,11 +38,24 @@ export function organizationSchema() {
     telephone: site.phoneTel,
     email: site.email,
     description: site.homeMetaDescription,
-    identifier: {
-      "@type": "PropertyValue",
-      name: "Company Number",
-      value: site.companyNumber,
-    },
+    foundingDate: site.incorporated,
+    identifier: [
+      {
+        "@type": "PropertyValue",
+        name: "Company Number",
+        propertyID: "Companies House",
+        value: site.companyNumber,
+      },
+      ...site.sic.map((code) => ({
+        "@type": "PropertyValue",
+        name: "UK SIC",
+        propertyID: "SIC 2007",
+        value: code,
+      })),
+    ],
+    // The register page is the verified profile. Social accounts are omitted
+    // until a profile for this company is confirmed.
+    sameAs: [site.companiesHouseUrl],
     address: {
       "@type": "PostalAddress",
       streetAddress: `${site.address.line1}, ${site.address.line2}`,
@@ -77,9 +90,9 @@ export function organizationSchema() {
       })),
     ],
     slogan: site.tagline,
-    // sameAs would go here once verified profiles for this company exist.
-    // It is not for sister brands: those are separate legal entities.
-    // [TBC: Google Business Profile and any social profiles]
+    // sameAs is only the Companies House register. Social profiles and a
+    // Google Business Profile are omitted until one is confirmed for this
+    // company. Sister brands are separate legal entities and do not belong here.
     knowsAbout: [
       "Kitchen renovation",
       "Bathroom renovation",
@@ -131,6 +144,7 @@ export function websiteSchema() {
     url: site.url,
     name: site.tradingName,
     inLanguage: "en-GB",
+    dateModified: site.contentRevised,
     publisher: { "@id": BUSINESS_ID },
     about: { "@id": BUSINESS_ID },
     potentialAction: {
@@ -153,6 +167,7 @@ export function webPageSchema({
   significantLinks,
   relatedLinks,
   breadcrumb = false,
+  speakableSelectors,
 }: {
   name: string;
   url: string;
@@ -165,6 +180,7 @@ export function webPageSchema({
   significantLinks?: string[];
   relatedLinks?: string[];
   breadcrumb?: boolean;
+  speakableSelectors?: string[];
 }) {
   return {
     "@context": "https://schema.org",
@@ -174,9 +190,14 @@ export function webPageSchema({
     name,
     description: description ? publicCopy(description) : undefined,
     inLanguage: "en-GB",
+    dateModified: site.contentRevised,
     isPartOf: { "@id": WEBSITE_ID },
     about: { "@id": BUSINESS_ID },
     publisher: { "@id": BUSINESS_ID },
+    speakable:
+      speakableSelectors && speakableSelectors.length > 0
+        ? { "@type": "SpeakableSpecification", cssSelector: speakableSelectors }
+        : undefined,
     mainEntity: mainEntityId ? { "@id": mainEntityId } : undefined,
     breadcrumb: breadcrumb ? { "@id": `${url}#breadcrumb` } : undefined,
     primaryImageOfPage: image
@@ -426,6 +447,7 @@ export function contactPageSchema(url: string, name: string, description: string
     name,
     description: publicCopy(description),
     inLanguage: "en-GB",
+    dateModified: site.contentRevised,
     isPartOf: { "@id": WEBSITE_ID },
     about: { "@id": BUSINESS_ID },
     mainEntity: { "@id": BUSINESS_ID },

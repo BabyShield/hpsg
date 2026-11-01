@@ -69,7 +69,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <JsonLd data={organizationSchema()} />
         <JsonLd data={websiteSchema()} />
         <Header />
-        <div id="main">{children}</div>
+        <main id="main">{children}</main>
         <Footer />
         <MobileCallBar />
         <ContactMeasurement />

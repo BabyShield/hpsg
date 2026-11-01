@@ -15,7 +15,13 @@ export const site = {
   whatsappDisplay: "07459 345456",
   whatsappUrl: "https://wa.me/447459345456",
   url: "https://hpsg.co.uk",
-  contentRevised: "2026-09-26",
+  contentRevised: "2026-11-01",
+  /** Companies House incorporation date for company 17404557. Not a trading-history claim. */
+  incorporated: "2026-08-17",
+  companiesHouseUrl:
+    "https://find-and-update.company-information.service.gov.uk/company/17404557",
+  /** UK SIC 2007, as filed at Companies House. */
+  sic: ["43390", "43999"],
   footerLegal:
     "Hampstead Property Services Group Limited · Company No. 17404557 · Registered in England & Wales · Unit 3 Palace Court, 250 Finchley Road, London NW3 6DN",
   tagline:

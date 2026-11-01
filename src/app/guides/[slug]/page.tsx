@@ -33,6 +33,9 @@ export async function generateMetadata({
     title: guide.metaTitle,
     description: guide.metaDescription,
     path: `/guides/${guide.slug}/`,
+    openGraphType: "article",
+    publishedTime: guide.datePublished,
+    modifiedTime: guide.dateModified,
   });
 }
 

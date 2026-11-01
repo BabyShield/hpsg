@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { EmailEnquiryForm } from "@/components/contact/EmailEnquiryForm";
 
-import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { Container } from "@/components/ui/Container";
+import { PageHeading } from "@/components/ui/PageHeading";
 import { ContentImage } from "@/components/ui/ContentImage";
 import { officeNeighbourhood } from "@/data/photos";
 import { addressSingleLine, site } from "@/data/site";
@@ -33,37 +33,18 @@ export default function ContactPage() {
           `Request a quote for kitchen renovation, bathroom renovation, painting and decorating or light refurbishment in North West London. ${site.phoneDisplay}.`,
         )}
       />
-      <Container className="pt-10">
-        <Breadcrumbs
-          items={[
-            { name: "Home", href: "/" },
-            { name: "Contact", href: "/contact/" },
-          ]}
-        />
-      </Container>
-      <Container className="grid gap-16 pb-24 sm:pb-32 lg:grid-cols-12 lg:gap-20">
+      <PageHeading
+        crumbs={[
+          { name: "Home", href: "/" },
+          { name: "Contact", href: "/contact/" },
+        ]}
+        kicker="Finchley Road"
+        title="Contact"
+        lede="Request a quote for kitchen renovation, bathroom renovation, painting or light refurbishment in Hampstead and North West London. For wider work, choose the relevant Other service in the enquiry form."
+      />
+      <Container className="grid gap-16 py-16 sm:py-24 lg:grid-cols-12 lg:gap-20">
         <div className="lg:col-span-5">
-          <p className="rule mb-8" aria-hidden="true" />
-          <h1 className="font-display text-5xl font-light sm:text-6xl">Contact</h1>
-          <p className="lede mt-8 max-w-measure text-xl text-grey-600">
-            Request a quote for kitchen renovation, bathroom renovation, painting
-            or light refurbishment in Hampstead and North West London. For wider
-            work, choose the relevant Other service in the enquiry form.
-          </p>
-          <div className="mt-6 max-w-measure space-y-5 text-base leading-relaxed text-grey-700">
-            <p>
-              Tell us the property and the rooms in scope. We visit before we
-              write a proposal. Photographs help us prepare; they are not a
-              quotation. The office is at {addressSingleLine}, a short run from
-              Hampstead, Belsize Park and Swiss Cottage.
-            </p>
-            <p>
-              Useful in the message: the address, whether it is a conversion,
-              mansion flat or house, kitchen and/or bathroom, whether you are
-              staying, and whether a managing agent or freeholder is involved.
-            </p>
-          </div>
-          <p className="mt-12 font-display text-4xl font-light text-navy sm:text-5xl">
+          <p className="font-display text-4xl font-light text-navy sm:text-5xl">
             <a href={`tel:${site.phoneTel}`}>{site.phoneDisplay}</a>
           </p>
           <address className="mt-8 text-base not-italic leading-relaxed text-grey-700">
@@ -83,6 +64,19 @@ export default function ContactPage() {
               <p className="mt-4">Opening hours: {site.openingHours}</p>
             )}
           </address>
+          <div className="mt-8 max-w-measure space-y-5 text-base leading-relaxed text-grey-700">
+            <p>
+              Tell us the property and the rooms in scope. We visit before we
+              write a proposal. Photographs help us prepare; they are not a
+              quotation. The office is at {addressSingleLine}, a short run from
+              Hampstead, Belsize Park and Swiss Cottage.
+            </p>
+            <p>
+              Useful in the message: the address, whether it is a conversion,
+              mansion flat or house, kitchen and/or bathroom, whether you are
+              staying, and whether a managing agent or freeholder is involved.
+            </p>
+          </div>
           <ContentImage
             photo={officeNeighbourhood}
             className="mt-10 aspect-[4/3] w-full"

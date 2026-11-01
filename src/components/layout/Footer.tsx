@@ -97,6 +97,9 @@ export function Footer() {
             <li>
               <Link href="/terms/">Website terms</Link>
             </li>
+            <li>
+              <a href="/llms.txt">Company summary</a>
+            </li>
           </ul>
           <address className="mt-10 text-sm not-italic leading-relaxed text-bone/70">
             <p>

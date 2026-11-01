@@ -1,8 +1,8 @@
 import Link from "next/link";
 
-import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { Container } from "@/components/ui/Container";
+import { PageHeading } from "@/components/ui/PageHeading";
 import { CtaBand } from "@/components/ui/CtaBand";
 import { guides } from "@/data/guides";
 import { pageMetadata } from "@/lib/metadata";
@@ -39,39 +39,30 @@ export default function GuidesPage() {
           })),
         )}
       />
-      <Container className="pt-10">
-        <Breadcrumbs
-          items={[
-            { name: "Home", href: "/" },
-            { name: "Guides", href: "/guides/" },
-          ]}
-        />
-      </Container>
-      <Container className="grid gap-12 pb-16 pt-8 lg:grid-cols-12 lg:gap-16">
-        <div className="lg:col-span-7">
-          <p className="rule mb-8" aria-hidden="true" />
-          <h1 className="font-display text-4xl font-light sm:text-5xl md:text-6xl">
-            Guides
-          </h1>
-          <p className="lede mt-8 max-w-measure text-xl text-grey-600 md:text-2xl">
-            The questions that decide how a job runs in this housing stock:
-            consent, tenure, services and sequence.
-          </p>
-        </div>
-        <div className="space-y-5 self-end text-base leading-relaxed text-grey-700 lg:col-span-5">
-          <p>
-            These are written for the buildings we work in — period conversions,
-            purpose-built mansion flats and family houses across Camden,
-            Westminster, Barnet and Haringey. They set out how a process works
-            and what it usually asks of you, rather than offering legal advice
-            on a particular address.
-          </p>
-          <p>
-            Where a fact depends on the individual property, we say so instead of
-            generalising. The answer for your address is a matter for the survey.
-          </p>
-        </div>
-      </Container>
+      <PageHeading
+        crumbs={[
+          { name: "Home", href: "/" },
+          { name: "Guides", href: "/guides/" },
+        ]}
+        kicker="Practical notes"
+        title="Guides"
+        lede="The questions that decide how a job runs in this housing stock: consent, tenure, services and sequence."
+        aside={
+          <>
+            <p>
+              These are written for the buildings we work in — period conversions,
+              purpose-built mansion flats and family houses across Camden,
+              Westminster, Barnet and Haringey. They set out how a process works
+              and what it usually asks of you, rather than offering legal advice
+              on a particular address.
+            </p>
+            <p>
+              Where a fact depends on the individual property, we say so instead of
+              generalising. The answer for your address is a matter for the survey.
+            </p>
+          </>
+        }
+      />
 
       <section className="border-t border-grey-200">
         <Container>

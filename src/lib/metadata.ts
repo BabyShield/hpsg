@@ -17,6 +17,9 @@ export function pageMetadata({
   geoPlacename,
   index = true,
   follow = true,
+  openGraphType = "website",
+  publishedTime,
+  modifiedTime,
 }: {
   title: string;
   description: string;
@@ -31,6 +34,9 @@ export function pageMetadata({
   geoPlacename?: string;
   index?: boolean;
   follow?: boolean;
+  openGraphType?: "website" | "article";
+  publishedTime?: string;
+  modifiedTime?: string;
 }): Metadata {
   const url = absoluteUrl(path);
   const ogImage = image ? assetUrl(image) : absoluteUrl("/opengraph-image");
@@ -66,13 +72,14 @@ export function pageMetadata({
       },
     },
     openGraph: {
-      type: "website",
+      type: openGraphType,
       locale: "en_GB",
       url,
       siteName: site.tradingName,
       title,
       description,
       images: ogImages,
+      ...(openGraphType === "article" ? { publishedTime, modifiedTime } : {}),
     },
     twitter: {
       card: "summary_large_image",
@@ -85,6 +92,7 @@ export function pageMetadata({
       "geo.placename": geoPlacename ?? "Hampstead, London",
       "geo.position": `${site.geo.latitude};${site.geo.longitude}`,
       ICBM: `${site.geo.latitude}, ${site.geo.longitude}`,
+      bingbot: `${index ? "index" : "noindex"}, ${follow ? "follow" : "nofollow"}, max-image-preview:large, max-snippet:-1, max-video-preview:-1`,
     },
   };
 }

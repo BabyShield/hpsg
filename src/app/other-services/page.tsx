@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { Container } from "@/components/ui/Container";
+import { PageHeading } from "@/components/ui/PageHeading";
 import { otherServiceGroups } from "@/data/other-services";
 import { services } from "@/data/services";
 import { pageMetadata } from "@/lib/metadata";
@@ -14,16 +14,15 @@ export const metadata = pageMetadata({
 
 export default function OtherServicesPage() {
   return (
+    <>
+    <PageHeading
+      crumbs={[{ name: "Home", href: "/" }, { name: "Other services", href: "/other-services/" }]}
+      kicker="Hampstead Property Services Group"
+      title="Other services"
+      lede="The wider HPSG service catalogue. Choose a category to see the work covered and what to include in an enquiry. Scope, availability and the business responsible for the work are confirmed before an instruction."
+    />
     <Container className="py-16 sm:py-24">
-      <Breadcrumbs items={[{name:"Home",href:"/"},{name:"Other services",href:"/other-services/"}]} />
-      <p className="kicker mt-10">Hampstead Property Services Group</p>
-      <h1 className="mt-5 font-display text-5xl font-light sm:text-7xl">Other services</h1>
-      <p className="lede mt-8 max-w-measure text-xl text-grey-600">
-        The wider HPSG service catalogue. Choose a category to see the work covered
-        and what to include in an enquiry. Scope, availability and the business
-        responsible for the work are confirmed before an instruction.
-      </p>
-      <section className="mt-14 border-y border-gold/40 py-8" aria-labelledby="main-services">
+      <section className="border-y border-gold/40 py-8" aria-labelledby="main-services">
         <h2 id="main-services" className="kicker">Our main services</h2>
         <ul className="mt-5 flex flex-wrap gap-x-8 gap-y-3">
           {services.map((service) => <li key={service.slug}><Link className="quiet-link text-navy" href={`/${service.slug}/`}>{service.name}</Link></li>)}
@@ -48,5 +47,6 @@ export default function OtherServicesPage() {
         <Link className="btn btn-primary mt-7" href="/contact/">Make an enquiry</Link>
       </section>
     </Container>
+    </>
   );
 }

@@ -1,7 +1,7 @@
 import Link from "next/link";
 
-import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { Container } from "@/components/ui/Container";
+import { PageHeading } from "@/components/ui/PageHeading";
 import { ContentImage } from "@/components/ui/ContentImage";
 import { CtaBand } from "@/components/ui/CtaBand";
 import { ServiceCard } from "@/components/ui/ServiceCard";
@@ -56,20 +56,17 @@ export default function ProjectsPage() {
 
   return (
     <>
-      <Container className="py-16 sm:py-28">
-        <Breadcrumbs
-          items={[
-            { name: "Home", href: "/" },
-            { name: "Work", href: "/projects/" },
-          ]}
-        />
-        <p className="rule mb-8" aria-hidden="true" />
-        <h1 className="font-display text-5xl font-light sm:text-6xl">Work</h1>
-        <div className="mt-8 max-w-measure space-y-5 text-base leading-relaxed text-grey-700">
-          <p className="lede text-xl text-grey-600 md:text-2xl">
-            Typical kitchens, bathrooms and interiors in the housing stock we
-            take on.
-          </p>
+      <PageHeading
+        crumbs={[
+          { name: "Home", href: "/" },
+          { name: "Work", href: "/projects/" },
+        ]}
+        kicker="Rooms, not a gallery"
+        title="Work"
+        lede="Typical kitchens, bathrooms and interiors in the housing stock we take on."
+      />
+      <Container className="py-16 sm:py-24">
+        <div className="max-w-measure space-y-5 text-base leading-relaxed text-grey-700">
           <p>
             Named case studies are published only from completed instructions,
             with the client&apos;s agreement. None are published yet, so nothing

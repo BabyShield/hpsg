@@ -5,6 +5,7 @@ import { FeaturedProjects } from "@/components/home/FeaturedProjects";
 import { HousingStrip } from "@/components/home/HousingStrip";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { Container } from "@/components/ui/Container";
+import { EntityRail } from "@/components/ui/EntityRail";
 import { ContentImage } from "@/components/ui/ContentImage";
 import { CtaBand } from "@/components/ui/CtaBand";
 import { FaqAccordion } from "@/components/ui/FaqAccordion";
@@ -96,6 +97,7 @@ export default function HomePage() {
           description: site.homeMetaDescription,
           image: homeHero.src,
           imageAlt: homeHero.alt,
+          speakableSelectors: ["h1", "#speakable-summary"],
         })}
       />
       <JsonLd data={faqSchema(homeFaqs)} />
@@ -109,43 +111,49 @@ export default function HomePage() {
         )}
       />
 
-      <section className="relative min-h-svh overflow-hidden text-bone">
-        <Image
-          src={homeHero.src}
-          alt={homeHero.alt}
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover object-[center_70%]"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-navy/88 via-navy/40 to-navy/15" />
-        <div className="absolute inset-0 bg-gradient-to-r from-navy/45 via-transparent to-transparent" />
-        <Container className="relative flex min-h-svh flex-col justify-end pb-28 pt-28 md:pb-28">
-          <p className="kicker hero-type mb-6 text-gold">Hampstead · Finchley Road</p>
-          <p className="rule mb-7" aria-hidden="true" />
-          <h1 className="hero-type max-w-5xl font-display text-[2.2rem] font-light leading-[1.08] text-bone sm:text-5xl md:text-6xl lg:text-[5.35rem]">
-            <span className="block">Kitchen, bathroom</span>
-            <span className="block">& refurbishment specialists</span>
-            <span className="block">in North West London</span>
-          </h1>
-          <p className="lede hero-type mt-6 max-w-2xl text-xl text-bone/90 md:mt-8 md:text-2xl">
-            Kitchen renovation, bathroom renovation, painting and light
-            refurbishment in period houses, conversions and mansion flats —
-            survey-led, from a Finchley Road office.
-          </p>
-          <div className="mt-10 flex flex-col items-start gap-5 sm:flex-row sm:items-center">
-            <Link href="/contact/" className="btn btn-gold">
-              Request a quote
-            </Link>
-            <a href={`tel:${site.phoneTel}`} className="btn-line text-bone">
-              {site.phoneDisplay}
-            </a>
-          </div>
-          <p className="mt-10 max-w-xl text-sm leading-relaxed text-bone/80">
-            {addressSingleLine}. For work beyond our four main services, explore{" "}
-            <Link href="/other-services/" className="underline underline-offset-4">Other services</Link>.
-          </p>
-        </Container>
+      <section className="relative text-bone">
+        <div className="relative min-h-[calc(100svh-3.5rem)] overflow-hidden lg:min-h-svh">
+          <Image
+            src={homeHero.src}
+            alt={homeHero.alt}
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-[center_70%]"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-navy/92 via-navy/55 to-navy/28" />
+          <div className="absolute inset-0 bg-gradient-to-r from-navy/72 via-navy/24 to-transparent" />
+          <Container className="relative flex min-h-[calc(100svh-3.5rem)] flex-col justify-end pb-16 pt-28 lg:min-h-svh lg:pb-16">
+            <p className="kicker hero-type mb-6 text-gold">Hampstead · Finchley Road</p>
+            <p className="rule mb-7" aria-hidden="true" />
+            <h1 className="hero-type max-w-5xl font-display text-[2.2rem] font-light leading-[1.08] text-bone sm:text-5xl md:text-6xl lg:text-[5.35rem]">
+              <span className="block">Kitchen, bathroom</span>
+              <span className="block">& refurbishment specialists</span>
+              <span className="block">in North West London</span>
+            </h1>
+            <p id="speakable-summary" className="lede hero-type mt-6 max-w-2xl text-xl text-bone/90 md:mt-8 md:text-2xl">
+              Kitchen renovation, bathroom renovation, painting and light
+              refurbishment in period houses, conversions and mansion flats —
+              survey-led, from a Finchley Road office.
+            </p>
+            <div className="mt-10 flex flex-col items-start gap-5 sm:flex-row sm:items-center">
+              <Link href="/contact/" className="btn btn-gold">
+                Request a quote
+              </Link>
+              <a href={`tel:${site.phoneTel}`} className="btn-line text-bone">
+                {site.phoneDisplay}
+              </a>
+            </div>
+            <p className="mt-8 max-w-xl text-sm leading-relaxed text-bone/80">
+              For work beyond the four main services, see{" "}
+              <Link href="/other-services/" className="underline underline-offset-4">
+                Other services
+              </Link>
+              .
+            </p>
+          </Container>
+        </div>
+        <EntityRail />
       </section>
 
       <HousingStrip />
