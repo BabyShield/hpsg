@@ -8,6 +8,7 @@ import { CtaBand } from "@/components/ui/CtaBand";
 import { FaqAccordion } from "@/components/ui/FaqAccordion";
 import { LocalFacts } from "@/components/ui/LocalFacts";
 import { PageHero } from "@/components/ui/PageHero";
+import { RenovationsNote } from "@/components/ui/RenovationsNote";
 import { PhotoTile } from "@/components/ui/PhotoTile";
 import { getAreaFacts } from "@/data/area-facts";
 import { ServiceCard } from "@/components/ui/ServiceCard";
@@ -188,6 +189,7 @@ export function AreaHub({ area }: { area: Area }) {
                 );
               })}
             </ul>
+            <RenovationsNote area={area.slug} />
             <PageContents items={contents} />
           </div>
           <aside className="band-navy p-8 lg:col-span-5 lg:p-10">

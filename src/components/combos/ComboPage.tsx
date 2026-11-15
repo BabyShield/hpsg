@@ -9,6 +9,7 @@ import { FaqAccordion } from "@/components/ui/FaqAccordion";
 import { LocalFacts } from "@/components/ui/LocalFacts";
 import { NumberedList } from "@/components/ui/NumberedList";
 import { PageHero } from "@/components/ui/PageHero";
+import { RenovationsNote } from "@/components/ui/RenovationsNote";
 import { PhotoTile } from "@/components/ui/PhotoTile";
 import { guidesForCombo } from "@/data/guides";
 import { getServiceAreaFacts } from "@/data/service-area-facts";
@@ -212,6 +213,7 @@ export function ComboPage({
                 </Link>
                 .
               </p>
+              <RenovationsNote area={combo.area.slug} service={combo.service.slug} />
               <PageContents items={contents} />
             </div>
             {areaPhotos[combo.area.slug] ? (
