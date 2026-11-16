@@ -1,5 +1,8 @@
 // Four-area lead plan, 15 November 2026: ordinary links on existing pages only.
 const AREA_NAMES: Readonly<Record<string, string>> = {
+  "belsize-park": "Belsize Park",
+  "maida-vale": "Maida Vale",
+  "kentish-town": "Kentish Town",
   hampstead: "Hampstead",
   "st-johns-wood": "St John's Wood",
   "primrose-hill": "Primrose Hill",
