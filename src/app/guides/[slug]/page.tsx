@@ -146,6 +146,17 @@ export default async function GuidePage({
           </section>
         ) : null}
 
+        {guide.slug === "hampstead-garden-suburb-internal-works" ? (
+          <Container className="py-8">
+            <p data-renovations-link="">
+              For further reading, see Hampstead Renovations&apos; guide to{" "}
+              <a href="https://www.hampsteadrenovations.co.uk/guides/hampstead-garden-suburb-refurbishment/" className="quiet-link text-navy" rel="noopener">
+                refurbishment in Hampstead Garden Suburb
+              </a>.
+            </p>
+          </Container>
+        ) : null}
+
         <section className="border-t border-grey-200 py-20 sm:py-24">
           <Container className="grid gap-12 lg:grid-cols-12 lg:gap-16">
             <div className="lg:col-span-6">
